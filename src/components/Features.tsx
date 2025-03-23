@@ -1,0 +1,83 @@
+
+import React from 'react';
+import { ShoppingCart, MessageSquare, TrendingUp, Lightbulb, Clock, Settings } from 'lucide-react';
+
+const FeatureCard = ({ icon, title, description }: { 
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}) => {
+  return (
+    <div className="p-6 rounded-xl border border-border bg-card/40 hover:bg-card/80 backdrop-blur-sm transition-all duration-300 hover:shadow-soft">
+      <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-primary/10 text-primary mb-4">
+        {icon}
+      </div>
+      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-muted-foreground">{description}</p>
+    </div>
+  );
+};
+
+const Features = () => {
+  const features = [
+    {
+      icon: <ShoppingCart className="h-6 w-6" />,
+      title: "Product Recommendations",
+      description: "Intelligently suggest products based on user conversations and browsing behavior."
+    },
+    {
+      icon: <MessageSquare className="h-6 w-6" />,
+      title: "Natural Conversations",
+      description: "Engage customers with human-like chat experiences that understand context and intent."
+    },
+    {
+      icon: <TrendingUp className="h-6 w-6" />,
+      title: "Conversion Optimization",
+      description: "Boost sales with timely assistance, overcoming objections, and guided purchasing."
+    },
+    {
+      icon: <Lightbulb className="h-6 w-6" />,
+      title: "Smart Insights",
+      description: "Gain valuable customer data and insights to improve your product offerings."
+    },
+    {
+      icon: <Clock className="h-6 w-6" />,
+      title: "24/7 Availability",
+      description: "Provide round-the-clock customer support and sales assistance without staffing costs."
+    },
+    {
+      icon: <Settings className="h-6 w-6" />,
+      title: "Easy Integration",
+      description: "Simple setup with your existing e-commerce platform without technical headaches."
+    }
+  ];
+
+  return (
+    <section id="features" className="py-24 relative">
+      {/* Decorative elements */}
+      <div className="absolute right-0 top-1/4 w-1/3 h-1/2 bg-blue-50/50 rounded-l-3xl -z-10" />
+      
+      <div className="container px-6 md:px-12 mx-auto">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything you need to boost sales</h2>
+          <p className="text-lg text-muted-foreground">
+            Intelligent features designed to enhance customer experience and drive conversions
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Features;
