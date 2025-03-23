@@ -4,7 +4,30 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Send, Plus, Paperclip, Maximize2, Minimize2 } from 'lucide-react';
 import MessageBubble from './MessageBubble';
-import ProductCard from './ProductCard';
+
+// Define message types
+interface BaseMessage {
+  id: string;
+  type: 'bot' | 'user';
+  content: string;
+  timestamp: string;
+}
+
+interface BotMessage extends BaseMessage {
+  type: 'bot';
+  productRecommendation?: {
+    id: string;
+    name: string;
+    price: string;
+    image: string;
+  };
+}
+
+interface UserMessage extends BaseMessage {
+  type: 'user';
+}
+
+type Message = BotMessage | UserMessage;
 
 // Example product data
 const exampleProducts = [
@@ -32,17 +55,17 @@ const exampleProducts = [
 ];
 
 // Example conversation
-const initialMessages = [
+const initialMessages: Message[] = [
   {
     id: '1',
-    type: 'bot' as const,
+    type: 'bot',
     content: 'Hello! Welcome to our store. How can I help you today?',
     timestamp: '10:01 AM'
   }
 ];
 
 const ChatInterface = () => {
-  const [messages, setMessages] = useState(initialMessages);
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -60,9 +83,9 @@ const ChatInterface = () => {
     if (inputValue.trim() === '') return;
 
     // Add user message
-    const userMessage = {
+    const userMessage: UserMessage = {
       id: Date.now().toString(),
-      type: 'user' as const,
+      type: 'user',
       content: inputValue,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     };
@@ -75,13 +98,13 @@ const ChatInterface = () => {
     setTimeout(() => {
       setIsTyping(false);
       
-      let botResponse;
+      let botResponse: BotMessage;
       
       // Demo responses based on user input
       if (inputValue.toLowerCase().includes('headphone')) {
         botResponse = {
           id: (Date.now() + 100).toString(),
-          type: 'bot' as const,
+          type: 'bot',
           content: "I found these wireless noise-cancelling headphones that might be perfect for you. They have excellent sound quality and a comfortable fit for all-day wear.",
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
           productRecommendation: exampleProducts[0]
@@ -89,7 +112,7 @@ const ChatInterface = () => {
       } else if (inputValue.toLowerCase().includes('watch') || inputValue.toLowerCase().includes('fitness')) {
         botResponse = {
           id: (Date.now() + 100).toString(),
-          type: 'bot' as const,
+          type: 'bot',
           content: "Our latest smart fitness watch would be a great choice. It tracks all your health metrics and has a 7-day battery life.",
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
           productRecommendation: exampleProducts[1]
@@ -97,7 +120,7 @@ const ChatInterface = () => {
       } else if (inputValue.toLowerCase().includes('speaker')) {
         botResponse = {
           id: (Date.now() + 100).toString(),
-          type: 'bot' as const,
+          type: 'bot',
           content: "I'd recommend our portable Bluetooth speaker. It's waterproof, has amazing sound quality, and the battery lasts up to 20 hours.",
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
           productRecommendation: exampleProducts[2]
@@ -105,7 +128,7 @@ const ChatInterface = () => {
       } else {
         botResponse = {
           id: (Date.now() + 100).toString(),
-          type: 'bot' as const,
+          type: 'bot',
           content: "I'm here to help you find the perfect product. Could you tell me what you're looking for? We have headphones, fitness watches, speakers, and more.",
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         };
@@ -165,7 +188,7 @@ const ChatInterface = () => {
             type={message.type}
             content={message.content}
             timestamp={message.timestamp}
-            productRecommendation={message.productRecommendation}
+            productRecommendation={message.type === 'bot' ? message.productRecommendation : undefined}
           />
         ))}
         
