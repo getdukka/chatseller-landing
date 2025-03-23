@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Send, Plus, Paperclip, Maximize2, Minimize2 } from 'lucide-react';
 import MessageBubble from './MessageBubble';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageToggle from './LanguageToggle';
 
 // Define message types
 interface BaseMessage {
@@ -54,22 +56,25 @@ const exampleProducts = [
   }
 ];
 
-// Example conversation
-const initialMessages: Message[] = [
-  {
-    id: '1',
-    type: 'bot',
-    content: 'Hello! Welcome to our store. How can I help you today?',
-    timestamp: '10:01 AM'
-  }
-];
-
 const ChatInterface = () => {
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const { t, language } = useLanguage();
+  const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Initialize messages with welcome message based on current language
+  useEffect(() => {
+    setMessages([
+      {
+        id: '1',
+        type: 'bot',
+        content: t('welcome'),
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      }
+    ]);
+  }, [language, t]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -101,27 +106,33 @@ const ChatInterface = () => {
       let botResponse: BotMessage;
       
       // Demo responses based on user input
-      if (inputValue.toLowerCase().includes('headphone')) {
+      if (inputValue.toLowerCase().includes('headphone') || 
+          inputValue.toLowerCase().includes('écouteur') || 
+          inputValue.toLowerCase().includes('casque')) {
         botResponse = {
           id: (Date.now() + 100).toString(),
           type: 'bot',
-          content: "I found these wireless noise-cancelling headphones that might be perfect for you. They have excellent sound quality and a comfortable fit for all-day wear.",
+          content: t('headphoneResponse'),
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
           productRecommendation: exampleProducts[0]
         };
-      } else if (inputValue.toLowerCase().includes('watch') || inputValue.toLowerCase().includes('fitness')) {
+      } else if (inputValue.toLowerCase().includes('watch') || 
+                inputValue.toLowerCase().includes('fitness') || 
+                inputValue.toLowerCase().includes('montre')) {
         botResponse = {
           id: (Date.now() + 100).toString(),
           type: 'bot',
-          content: "Our latest smart fitness watch would be a great choice. It tracks all your health metrics and has a 7-day battery life.",
+          content: t('watchResponse'),
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
           productRecommendation: exampleProducts[1]
         };
-      } else if (inputValue.toLowerCase().includes('speaker')) {
+      } else if (inputValue.toLowerCase().includes('speaker') || 
+                inputValue.toLowerCase().includes('haut-parleur') || 
+                inputValue.toLowerCase().includes('enceinte')) {
         botResponse = {
           id: (Date.now() + 100).toString(),
           type: 'bot',
-          content: "I'd recommend our portable Bluetooth speaker. It's waterproof, has amazing sound quality, and the battery lasts up to 20 hours.",
+          content: t('speakerResponse'),
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
           productRecommendation: exampleProducts[2]
         };
@@ -129,7 +140,7 @@ const ChatInterface = () => {
         botResponse = {
           id: (Date.now() + 100).toString(),
           type: 'bot',
-          content: "I'm here to help you find the perfect product. Could you tell me what you're looking for? We have headphones, fitness watches, speakers, and more.",
+          content: t('defaultResponse'),
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         };
       }
@@ -162,22 +173,25 @@ const ChatInterface = () => {
             </div>
           </div>
           <div>
-            <h3 className="font-medium text-sm">ChatSeller Assistant</h3>
-            <p className="text-xs text-muted-foreground">Online</p>
+            <h3 className="font-medium text-sm">{t('chatAssistant')}</h3>
+            <p className="text-xs text-muted-foreground">{t('online')}</p>
           </div>
         </div>
-        <Button 
-          variant="ghost" 
-          size="icon" 
-          className="h-8 w-8"
-          onClick={() => setIsExpanded(!isExpanded)}
-        >
-          {isExpanded ? (
-            <Minimize2 className="h-4 w-4" />
-          ) : (
-            <Maximize2 className="h-4 w-4" />
-          )}
-        </Button>
+        <div className="flex items-center">
+          <LanguageToggle />
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="h-8 w-8 ml-2"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {isExpanded ? (
+              <Minimize2 className="h-4 w-4" />
+            ) : (
+              <Maximize2 className="h-4 w-4" />
+            )}
+          </Button>
+        </div>
       </div>
       
       {/* Messages container */}
@@ -216,7 +230,7 @@ const ChatInterface = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Type your message..."
+            placeholder={t('typeMessage')}
             className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0 rounded-full bg-secondary"
           />
           <Button 

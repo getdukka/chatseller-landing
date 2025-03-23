@@ -2,8 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageToggle from './LanguageToggle';
 
 const Navbar = () => {
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -32,19 +35,20 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            Features
+            {t('features')}
           </a>
           <a href="#demo" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            Demo
+            {t('demo')}
           </a>
           <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            Pricing
+            {t('pricing')}
           </a>
+          <LanguageToggle />
           <Button variant="ghost" className="text-sm">
-            Log in
+            {t('login')}
           </Button>
           <Button className="text-sm group">
-            Try for free <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            {t('tryFree')} <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </nav>
 
@@ -71,27 +75,30 @@ const Navbar = () => {
               className="text-sm font-medium text-foreground py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Features
+              {t('features')}
             </a>
             <a 
               href="#demo" 
               className="text-sm font-medium text-foreground py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Demo
+              {t('demo')}
             </a>
             <a 
               href="#pricing" 
               className="text-sm font-medium text-foreground py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Pricing
+              {t('pricing')}
             </a>
+            <div className="flex items-center py-2">
+              <LanguageToggle />
+            </div>
             <Button variant="ghost" className="justify-start text-sm px-0" onClick={() => setMobileMenuOpen(false)}>
-              Log in
+              {t('login')}
             </Button>
             <Button className="text-sm w-full sm:w-auto" onClick={() => setMobileMenuOpen(false)}>
-              Try for free
+              {t('tryFree')}
             </Button>
           </nav>
         </div>
