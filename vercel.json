@@ -1,0 +1,66 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/dashboard",
+      "destination": "https://dashboard.chatseller.app",
+      "permanent": true
+    },
+    {
+      "source": "/widget",
+      "destination": "https://widget.chatseller.app",
+      "permanent": true
+    },
+    {
+      "source": "/docs",
+      "destination": "https://docs.chatseller.app",
+      "permanent": true
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "https://api.chatseller.app/$1",
+      "permanent": true
+    }
+  ]
+}

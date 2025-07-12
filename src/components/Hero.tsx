@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -20,35 +19,74 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            Now available for all e-commerce platforms
+            Maintenant disponible pour Shopify, WooCommerce et sites personnalisés
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in [animation-delay:200ms]">
-            Transform your online store with AI-powered sales assistance
+            Transformez votre page produit en 
+            <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> vendeur IA autonome</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl animate-fade-in [animation-delay:400ms]">
-            ChatSeller helps you boost conversions, enhance customer experience, and drive sales 24/7 with personalized shopping assistance.
+            Plus qu'un chatbot : <strong>ChatSeller</strong> est un Agent IA Commercial qui répond intelligemment aux questions de vos visiteurs et collecte leurs commandes via conversation naturelle. 
+            <br />
+            <span className="text-blue-600 font-semibold">Conçu pour l'e-commerce africain.</span>
           </p>
           
+          {/* Social Proof Statistics */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8 animate-fade-in [animation-delay:500ms]">
+            <div className="flex items-center text-sm text-muted-foreground">
+              <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
+              <span><strong>2 minutes</strong> d'installation</span>
+            </div>
+            <div className="flex items-center text-sm text-muted-foreground">
+              <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
+              <span><strong>80%+</strong> du trafic mobile pris en charge</span>
+            </div>
+            <div className="flex items-center text-sm text-muted-foreground">
+              <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
+              <span><strong>Essai gratuit</strong> 14 jours</span>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in [animation-delay:600ms]">
-            <Button size="lg" className="group">
-              Get started free
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <Button size="lg" className="group" asChild>
+              <a href="https://dashboard.chatseller.app/register">
+                Démarrer gratuitement
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
-            <Button variant="outline" size="lg">
-              Watch demo
+            <Button variant="outline" size="lg" asChild>
+              <a href="https://widget.chatseller.app">
+                Tester la démo
+              </a>
             </Button>
           </div>
           
+          {/* Trust indicators */}
           <div className="mt-12 px-6 py-6 border rounded-xl bg-white/50 backdrop-blur-sm shadow-sm animate-fade-in [animation-delay:800ms]">
-            <p className="text-sm text-muted-foreground mb-4">Trusted by leading brands</p>
+            <p className="text-sm text-muted-foreground mb-4">Développé en Afrique de l'Ouest, pour l'e-commerce africain</p>
             <div className="flex flex-wrap justify-center gap-8 opacity-70">
-              <div className="h-6 w-24 bg-slate-400/20 rounded" />
-              <div className="h-6 w-20 bg-slate-400/20 rounded" />
-              <div className="h-6 w-28 bg-slate-400/20 rounded" />
-              <div className="h-6 w-24 bg-slate-400/20 rounded" />
-              <div className="h-6 w-20 bg-slate-400/20 rounded" />
+              <div className="flex items-center text-xs text-muted-foreground">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Shopify Compatible
+              </div>
+              <div className="flex items-center text-xs text-muted-foreground">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                WooCommerce Ready
+              </div>
+              <div className="flex items-center text-xs text-muted-foreground">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Sites Personnalisés
+              </div>
+              <div className="flex items-center text-xs text-muted-foreground">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                Mobile-First
+              </div>
+              <div className="flex items-center text-xs text-muted-foreground">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                RGPD Compliant
+              </div>
             </div>
           </div>
         </div>

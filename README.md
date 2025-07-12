@@ -1,69 +1,163 @@
-# Welcome to your Lovable project
+# 🚀 ChatSeller Landing Page
 
-## Project info
+Landing page officielle de **ChatSeller** - L'Agent IA Commercial pour E-commerce.
 
-**URL**: https://lovable.dev/projects/3393ff03-d321-44da-8c18-25bba812b752
+> Transformez votre page produit en vendeur IA autonome qui guide vos visiteurs jusqu'à la commande.
 
-## How can I edit this code?
+## 🌟 Fonctionnalités
 
-There are several ways of editing your application.
+- ✅ **Design Modern** - Interface élégante et responsive
+- ✅ **Mobile-First** - Optimisé pour l'Afrique (80%+ mobile)
+- ✅ **Chat Interactif** - Démo fonctionnelle avec IA
+- ✅ **Multilingue** - Français/Anglais avec détection automatique
+- ✅ **Entrée Vocale** - Support vocal dans le chat
+- ✅ **SEO Optimisé** - Meta tags, Open Graph, Schema.org
+- ✅ **Performance** - Vite + React + Tailwind CSS
 
-**Use Lovable**
+## 🏗 Architecture Technique
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3393ff03-d321-44da-8c18-25bba812b752) and start prompting.
+- **Frontend** : React 18 + TypeScript + Vite
+- **UI** : Tailwind CSS + Radix UI + Lucide Icons
+- **State** : React Query + Context API
+- **Router** : React Router v6
+- **Build** : Vite (ultra-rapide)
+- **Deploy** : Vercel (auto-deploy)
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Déploiement sur Vercel
 
-**Use your preferred IDE**
+### Option 1 : Import depuis GitHub
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Transférer le repo vers getdukka** (recommandé)
+   ```bash
+   # Sur GitHub : Settings → Transfer ownership → getdukka
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Importer sur Vercel**
+   ```bash
+   Vercel Dashboard → Import Project → getdukka/chatseller-landing
+   ```
 
-Follow these steps:
+3. **Configuration automatique**
+   - Framework: Vite ✅
+   - Build Command: `npm run build` ✅
+   - Output Directory: `dist` ✅
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Option 2 : Déploiement local
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+# Installer Vercel CLI
+npm i -g vercel
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Dans le dossier du projet
+vercel
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Suivre les instructions
 ```
 
-**Edit a file directly in GitHub**
+## 🛠 Développement Local
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Cloner le repo
+git clone https://github.com/getdukka/chatseller-landing.git
+cd chatseller-landing
 
-**Use GitHub Codespaces**
+# Installer les dépendances
+npm install
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Lancer le serveur de dev
+npm run dev
 
-## What technologies are used for this project?
+# Build pour production
+npm run build
 
-This project is built with .
+# Preview du build
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🔗 Liens Importantes
 
-## How can I deploy this project?
+- **🌐 Landing Page** : [chatseller.app](https://chatseller.app)
+- **📊 Dashboard** : [dashboard.chatseller.app](https://dashboard.chatseller.app)
+- **🤖 Widget Demo** : [widget.chatseller.app](https://widget.chatseller.app)
+- **📖 Documentation** : [docs.chatseller.app](https://docs.chatseller.app)
+- **⚡ API** : [api.chatseller.app](https://api.chatseller.app)
 
-Simply open [Lovable](https://lovable.dev/projects/3393ff03-d321-44da-8c18-25bba812b752) and click on Share -> Publish.
+## 📁 Structure du Projet
 
-## I want to use a custom domain - is that possible?
+```
+chatseller-landing/
+├── public/           # Assets statiques
+├── src/
+│   ├── components/   # Composants React
+│   │   ├── ui/       # Composants UI réutilisables
+│   │   ├── Hero.tsx      # Section hero
+│   │   ├── Features.tsx  # Section fonctionnalités
+│   │   ├── DemoSection.tsx  # Démo interactive
+│   │   └── Footer.tsx    # Footer
+│   ├── contexts/     # Contextes React (Language)
+│   ├── hooks/        # Hooks personnalisés
+│   ├── pages/        # Pages principales
+│   └── lib/          # Utilitaires
+├── index.html        # Template HTML
+├── package.json      # Dépendances
+├── vercel.json       # Config Vercel
+├── tailwind.config.js # Config Tailwind
+└── vite.config.ts    # Config Vite
+```
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## 🎨 Améliorations Apportées
+
+### SEO & Performance
+- ✅ Meta tags optimisés pour ChatSeller
+- ✅ Open Graph + Twitter Cards
+- ✅ Schema.org structured data
+- ✅ Preload des ressources critiques
+- ✅ Lazy loading des images
+
+### UX & Design
+- ✅ Hero section améliorée avec social proof
+- ✅ Vraies URLs vers dashboard, widget, docs
+- ✅ Footer complet avec contact info
+- ✅ Trust indicators africains
+- ✅ CTAs optimisés pour conversion
+
+### Technique
+- ✅ Configuration Vercel optimisée
+- ✅ Redirections automatiques
+- ✅ Headers de sécurité
+- ✅ Cache optimisé
+- ✅ TypeScript strict
+
+## 🌍 Spécificités Africaines
+
+- **Mobile-First** : 80%+ du trafic mobile en Afrique
+- **Multilingue** : Français/Anglais avec détection automatique
+- **Performance** : Optimisé pour connexions lentes
+- **Local** : Développé à Dakar, Sénégal
+- **Contact** : Support en français et anglais
+
+## 📊 Métriques de Performance
+
+- **Lighthouse Score** : 95+ (objectif)
+- **First Contentful Paint** : < 1.5s
+- **Largest Contentful Paint** : < 2.5s
+- **Cumulative Layout Shift** : < 0.1
+- **Time to Interactive** : < 3s
+
+## 👨‍💻 Développeur
+
+**Ibuka Ndjoli**
+- 🌐 Website: [ibukasharing.com](https://ibukasharing.com)
+- 🐦 Twitter: [@ibukandjoli](https://twitter.com/ibukandjoli)
+- 💼 LinkedIn: [ibukandjoli](https://linkedin.com/in/ibukandjoli)
+- ✉️ Email: ibuka@chatseller.app
+
+## 📄 License
+
+MIT License - Voir [LICENSE](LICENSE) pour plus de détails.
+
+---
+
+**🚀 Prêt pour le lancement !** Cette landing page est optimisée pour convertir vos visiteurs en clients ChatSeller.
+
+Développé avec ❤️ en Afrique de l'Ouest pour l'e-commerce africain.
