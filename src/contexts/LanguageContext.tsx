@@ -177,8 +177,9 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   }, [language]);
 
   const t = (key: string): string => {
-    return translations[language][key] || key;
-  };
+  const langTranslations = translations[language];
+  return (langTranslations as Record<string, string>)[key] || key;
+};
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
