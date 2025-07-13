@@ -21,10 +21,10 @@ const enTranslations = {
   
   // Hero
   "nowAvailable": "Now available for all e-commerce platforms",
-  "heroTitle": "Transform your online store with AI-powered sales assistance",
-  "heroSubtitle": "ChatSeller helps you boost conversions, enhance customer experience, and drive sales 24/7 with personalized shopping assistance.",
-  "getStarted": "Get started free",
-  "watchDemo": "Watch demo",
+  "heroTitle": "Transform your online store into a human-like sales experience.",
+  "heroSubtitle": "ChatSeller is an AI Sales Agent that chats with your customers, answers their questions intelligently, and collects their orders — 24/7.",
+  "getStarted": "Try ChatSeller now",
+  "watchDemo": "Watch it live",
   "trustedBy": "Trusted by leading brands",
   
   // Features
@@ -45,7 +45,7 @@ const enTranslations = {
   
   // Demo Section
   "demoTitle": "See ChatSeller in action",
-  "demoSubtitle": "Experience how our AI assistant guides customers through their shopping journey, answering questions and making personalized product recommendations.",
+  "demoSubtitle": "Experience how our AI Seller guides customers through their shopping journey, answering questions and making personalized product recommendations.",
   "demoTip": "Try asking about headphones, fitness watches or speakers in the demo.",
   "startTrial": "Try ChatSeller now",
   
@@ -92,28 +92,28 @@ const frTranslations = {
   "tryFree": "Essai gratuit",
   
   // Hero
-  "nowAvailable": "Maintenant disponible pour toutes les plateformes e-commerce",
-  "heroTitle": "Transformez votre boutique en ligne avec l'assistance commerciale alimentée par l'IA",
-  "heroSubtitle": "ChatSeller vous aide à augmenter les conversions, améliorer l'expérience client et stimuler les ventes 24/7 avec une assistance personnalisée.",
+  "nowAvailable": "Disponible pour Shopify, WooCommerce et sites personnalisés",
+  "heroTitle": "Le Vendeur IA qui transforme vos visiteurs en clients.",
+  "heroSubtitle": "ChatSeller est un Agent IA Commercial qui discute avec vos clients, répond intelligemment à leurs questions et collecte leurs commandes, 24h/24.",
   "getStarted": "Tester ChatSeller maintenant",
   "watchDemo": "Voir ChatSeller en action",
   "trustedBy": "Utilisé par les grandes marques",
   
   // Features
-  "featuresTitle": "Tout ce dont vous avez besoin pour stimuler vos ventes",
+  "featuresTitle": "Tout ce dont vous avez besoin pour booster vos ventes",
   "featuresSubtitle": "Des fonctionnalités intelligentes conçues pour améliorer l'expérience client et générer des conversions",
   "productRecommendations": "Recommandations de produits",
-  "productRecommendationsDesc": "Suggérez intelligemment des produits basés sur les conversations des utilisateurs et leur comportement de navigation.",
+  "productRecommendationsDesc": "Suggérez intelligemment des produits basés sur les conversations de vos visiteurs et leur comportement de navigation.",
   "naturalConversations": "Conversations naturelles",
-  "naturalConversationsDesc": "Engagez les clients avec des expériences de chat semblables à celles d'un humain qui comprennent le contexte et l'intention.",
+  "naturalConversationsDesc": "Offrez à vos clients des conversations aussi naturelles et pertinentes qu’avec un vrai vendeur.",
   "conversionOptimization": "Optimisation des conversions",
-  "conversionOptimizationDesc": "Augmentez les ventes avec une assistance opportune, surmontez les objections et guidez les achats.",
+  "conversionOptimizationDesc": "Vendez plus en répondant au bon moment, en rassurant et en guidant chaque client jusqu’à l’achat.",
   "smartInsights": "Analyses intelligentes",
   "smartInsightsDesc": "Obtenez des données clients précieuses pour améliorer vos offres de produits.",
   "availability": "Disponibilité 24/7",
   "availabilityDesc": "Fournissez un support client et une assistance commerciale 24/7 sans coûts de personnel.",
   "easyIntegration": "Intégration facile",
-  "easyIntegrationDesc": "Configuration simple avec votre plateforme e-commerce existante sans difficultés techniques.",
+  "easyIntegrationDesc": "Configuration simple en 2 minutes avec votre plateforme e-commerce actuelle sans difficultés techniques.",
   
   // Demo Section
   "demoTitle": "Voir ChatSeller en action",
