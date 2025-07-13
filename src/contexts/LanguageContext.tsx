@@ -17,7 +17,7 @@ const enTranslations = {
   "demo": "Demo",
   "pricing": "Pricing",
   "login": "Log in",
-  "tryFree": "Try for free",
+  "tryFree": "Try Chatseller Now",
   
   // Hero
   "nowAvailable": "Now available for all e-commerce platforms",
@@ -89,7 +89,7 @@ const frTranslations = {
   "demo": "Démo",
   "pricing": "Tarifs",
   "login": "Connexion",
-  "tryFree": "Essai gratuit",
+  "tryFree": "Tester ChatSeller",
   
   // Hero
   "nowAvailable": "Disponible pour Shopify, WooCommerce et sites personnalisés",

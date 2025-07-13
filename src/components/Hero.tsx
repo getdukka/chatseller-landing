@@ -55,7 +55,7 @@ const Hero = () => {
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="https://widget.chatseller.app">
+              <a href="#demo">
                 Voir Chatseller en action
               </a>
             </Button>
