@@ -40,21 +40,21 @@ const exampleProducts = [
     id: '1',
     name: 'Wireless Noise-Cancelling Headphones',
     description: 'Premium wireless headphones with active noise cancellation and 30-hour battery life.',
-    price: '$249.99',
+    price: '39000 FCFA',
     image: '/placeholder.svg'
   },
   {
     id: '2',
     name: 'Smart Fitness Watch',
     description: 'Track your health metrics, workouts, and sleep with this advanced fitness watch.',
-    price: '$179.99',
+    price: '89000 FCFA',
     image: '/placeholder.svg'
   },
   {
     id: '3',
     name: 'Portable Bluetooth Speaker',
     description: 'Waterproof portable speaker with 360° sound and 20-hour battery life.',
-    price: '$89.99',
+    price: '49000 FCFA',
     image: '/placeholder.svg'
   }
 ];

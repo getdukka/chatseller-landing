@@ -47,16 +47,16 @@ const enTranslations = {
   "demoTitle": "See ChatSeller in action",
   "demoSubtitle": "Experience how our AI assistant guides customers through their shopping journey, answering questions and making personalized product recommendations.",
   "demoTip": "Try asking about headphones, fitness watches or speakers in the demo.",
-  "startTrial": "Start your free trial",
+  "startTrial": "Try ChatSeller now",
   
   // Chat Interface
-  "welcome": "Hello! Welcome to our store. How can I help you today? You can type or use voice input.",
+  "welcome": "Hello! My name is Mia. I'm your Commercial Assistant. How can I help you today? You can type or use voice input.",
   "typeMessage": "Type your message...",
   "headphoneResponse": "I found these wireless noise-cancelling headphones that might be perfect for you. They have excellent sound quality and a comfortable fit for all-day wear.",
   "watchResponse": "Our latest smart fitness watch would be a great choice. It tracks all your health metrics and has a 7-day battery life.",
   "speakerResponse": "I'd recommend our portable Bluetooth speaker. It's waterproof, has amazing sound quality, and the battery lasts up to 20 hours.",
   "defaultResponse": "I'm here to help you find the perfect product. Could you tell me what you're looking for? We have headphones, fitness watches, speakers, and more.",
-  "chatAssistant": "ChatSeller Assistant",
+  "chatAssistant": "Mia - Shopping Assistant",
   "online": "Online",
   
   // Language toggle
@@ -95,8 +95,8 @@ const frTranslations = {
   "nowAvailable": "Maintenant disponible pour toutes les plateformes e-commerce",
   "heroTitle": "Transformez votre boutique en ligne avec l'assistance commerciale alimentée par l'IA",
   "heroSubtitle": "ChatSeller vous aide à augmenter les conversions, améliorer l'expérience client et stimuler les ventes 24/7 avec une assistance personnalisée.",
-  "getStarted": "Commencer gratuitement",
-  "watchDemo": "Voir la démo",
+  "getStarted": "Tester ChatSeller maintenant",
+  "watchDemo": "Voir ChatSeller en action",
   "trustedBy": "Utilisé par les grandes marques",
   
   // Features
@@ -117,18 +117,18 @@ const frTranslations = {
   
   // Demo Section
   "demoTitle": "Voir ChatSeller en action",
-  "demoSubtitle": "Découvrez comment notre assistant IA guide les clients dans leur parcours d'achat, répond aux questions et fait des recommandations de produits personnalisées.",
+  "demoSubtitle": "Découvrez comment Chatseller guide les clients dans leur parcours d'achat, répond aux questions et fait des recommandations de produits personnalisées.",
   "demoTip": "Essayez de demander des informations sur les écouteurs, les montres de fitness ou les haut-parleurs dans la démo.",
-  "startTrial": "Commencez votre essai gratuit",
+  "startTrial": "Tester ChatSeller maintenant",
   
   // Chat Interface
-  "welcome": "Bonjour ! Bienvenue dans notre boutique. Comment puis-je vous aider aujourd'hui ? Vous pouvez taper ou utiliser l'entrée vocale.",
-  "typeMessage": "Tapez votre message...",
+  "welcome": "Bonjour ! Je suis Mia, votre Assistante d'achat. Comment puis-je vous aider aujourd'hui ? Vous pouvez répondre par écrit ou utiliser le micro.",
+  "typeMessage": "Ecrivez votre message...",
   "headphoneResponse": "J'ai trouvé ces écouteurs sans fil à réduction de bruit qui pourraient être parfaits pour vous. Ils ont une excellente qualité sonore et un ajustement confortable pour une utilisation toute la journée.",
   "watchResponse": "Notre dernière montre fitness intelligente serait un excellent choix. Elle suit toutes vos données de santé et a une autonomie de 7 jours.",
   "speakerResponse": "Je vous recommande notre haut-parleur Bluetooth portable. Il est étanche, a une qualité sonore incroyable et la batterie dure jusqu'à 20 heures.",
   "defaultResponse": "Je suis là pour vous aider à trouver le produit parfait. Pouvez-vous me dire ce que vous recherchez ? Nous avons des écouteurs, des montres de fitness, des haut-parleurs et plus encore.",
-  "chatAssistant": "Assistant ChatSeller",
+  "chatAssistant": "Mia - Assistante d'achat",
   "online": "En ligne",
   
   // Language toggle

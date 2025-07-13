@@ -14,13 +14,13 @@ const Footer = () => {
               ChatSeller<span className="text-primary">.</span>
             </div>
             <p className="text-muted-foreground text-sm mb-4">
-              Agent IA Commercial pour e-commerce. Transformez votre page produit en vendeur autonome qui guide vos visiteurs jusqu'à la commande.
+              Agent IA Commercial pour e-commerce. Transformez votre page produit en vendeur autonome qui guide vos visiteurs jusqu'à l'achat.
             </p>
             <div className="flex space-x-4">
-              <a href="https://twitter.com/ibukandjoli" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/getdukka" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://www.linkedin.com/in/ibukandjoli/" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/getdukka/" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
               </a>
               <a href="https://github.com/getdukka" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
@@ -39,7 +39,6 @@ const Footer = () => {
               <li><a href="#demo" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Démo Interactive</a></li>
               <li><a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Tarifs</a></li>
               <li><a href="https://widget.chatseller.app" className="text-sm text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">Tester le Widget</a></li>
-              <li><a href="https://docs.chatseller.app" className="text-sm text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">Documentation</a></li>
             </ul>
           </div>
           
@@ -47,11 +46,10 @@ const Footer = () => {
           <div>
             <h3 className="font-medium mb-4">Entreprise</h3>
             <ul className="space-y-2">
-              <li><a href="https://ibukasharing.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">À propos</a></li>
-              <li><a href="https://ibukasharing.com/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">Blog</a></li>
+              <li><a href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">À propos</a></li>
+              <li><a href="/news" className="text-sm text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">Actualités</a></li>
               <li><a href="https://dashboard.chatseller.app" className="text-sm text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">Dashboard</a></li>
-              <li><a href="mailto:ibuka@chatseller.app" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
-              <li><a href="https://github.com/getdukka" className="text-sm text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">Open Source</a></li>
+              <li><a href="mailto:support@chatseller.app" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
             </ul>
           </div>
           
@@ -63,15 +61,10 @@ const Footer = () => {
               <li><a href="https://docs.chatseller.app/integration" className="text-sm text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">Guide d'Installation</a></li>
               <li><a href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Confidentialité</a></li>
               <li><a href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Conditions d'utilisation</a></li>
-              <li><a href="/gdpr" className="text-sm text-muted-foreground hover:text-foreground transition-colors">RGPD</a></li>
             </ul>
             
             {/* Contact Info */}
             <div className="mt-6 space-y-2">
-              <div className="flex items-center text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 mr-2 flex-shrink-0" />
-                <span>Dakar, Sénégal</span>
-              </div>
               <div className="flex items-center text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 mr-2 flex-shrink-0" />
                 <a href="mailto:hello@chatseller.app" className="hover:text-foreground transition-colors">
@@ -84,14 +77,14 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-            © {currentYear} ChatSeller. Tous droits réservés. Développé avec ❤️ en Afrique de l'Ouest par{' '}
-            <a href="https://ibukasharing.com" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">
-              Ibuka Ndjoli
+            © {currentYear} ChatSeller. Tous droits réservés. Un produit de {' '}
+            <a href="https://getdukka.com" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">
+              Dukka
             </a>.
           </p>
           
           <div className="flex items-center space-x-4">
-            <span className="text-xs text-muted-foreground">Alimenté par GPT-4o-mini</span>
+            <span className="text-xs text-muted-foreground">Alimenté par l'IA</span>
             <div className="flex items-center">
               <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
               <a href="https://api.chatseller.app/health" className="text-xs text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">

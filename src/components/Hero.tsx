@@ -19,76 +19,50 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            Maintenant disponible pour Shopify, WooCommerce et sites personnalisés
+            Disponible pour Shopify, WooCommerce et sites personnalisés
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in [animation-delay:200ms]">
-            Transformez votre page produit en 
-            <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> vendeur IA autonome</span>
+            Le
+            <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Vendeur IA</span> qui transforme vos visiteurs en clients.
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl animate-fade-in [animation-delay:400ms]">
-            Plus qu'un chatbot : <strong>ChatSeller</strong> est un Agent IA Commercial qui répond intelligemment aux questions de vos visiteurs et collecte leurs commandes via conversation naturelle. 
-            <br />
-            <span className="text-blue-600 font-semibold">Conçu pour l'e-commerce africain.</span>
+            ChatSeller est un Agent IA Commercial qui discute avec vos clients, répond intelligemment à leurs questions et collecte leurs commandes, 24h/24. 
           </p>
           
           {/* Social Proof Statistics */}
           <div className="flex flex-wrap justify-center gap-6 mb-8 animate-fade-in [animation-delay:500ms]">
             <div className="flex items-center text-sm text-muted-foreground">
               <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-              <span><strong>2 minutes</strong> d'installation</span>
+              <span>Installation en <strong>2 minutes</strong></span>
             </div>
             <div className="flex items-center text-sm text-muted-foreground">
               <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-              <span><strong>80%+</strong> du trafic mobile pris en charge</span>
+              <span><strong>3 jours</strong> d'essai gratuit</span>
             </div>
             <div className="flex items-center text-sm text-muted-foreground">
               <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-              <span><strong>Essai gratuit</strong> 14 jours</span>
+              <span><strong>Carte bancaire</strong> non exigée</span>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in [animation-delay:600ms]">
             <Button size="lg" className="group" asChild>
               <a href="https://dashboard.chatseller.app/register">
-                Démarrer gratuitement
+                Tester Chatseller maintenant
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
               <a href="https://widget.chatseller.app">
-                Tester la démo
+                Voir Chatseller en action
               </a>
             </Button>
           </div>
           
-          {/* Trust indicators */}
-          <div className="mt-12 px-6 py-6 border rounded-xl bg-white/50 backdrop-blur-sm shadow-sm animate-fade-in [animation-delay:800ms]">
-            <p className="text-sm text-muted-foreground mb-4">Développé en Afrique de l'Ouest, pour l'e-commerce africain</p>
-            <div className="flex flex-wrap justify-center gap-8 opacity-70">
-              <div className="flex items-center text-xs text-muted-foreground">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                Shopify Compatible
-              </div>
-              <div className="flex items-center text-xs text-muted-foreground">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                WooCommerce Ready
-              </div>
-              <div className="flex items-center text-xs text-muted-foreground">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                Sites Personnalisés
-              </div>
-              <div className="flex items-center text-xs text-muted-foreground">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                Mobile-First
-              </div>
-              <div className="flex items-center text-xs text-muted-foreground">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                RGPD Compliant
-              </div>
-            </div>
-          </div>
+          {/* Ajouter ici une capture de l'interface de chat de ChatSeller, avec Chatseller en action, sans oublier de laisser un espace haut pour ne pas trop coller aux boutons CTA */}
+
         </div>
       </div>
     </section>

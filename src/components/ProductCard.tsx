@@ -31,11 +31,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-2 transition-opacity duration-300">
           <Button variant="secondary" size="sm" className="h-8">
             <Eye className="h-4 w-4 mr-1" />
-            View
+            Voir
           </Button>
           <Button size="sm" className="h-8">
             <ShoppingCart className="h-4 w-4 mr-1" />
-            Add
+            Ajouer
           </Button>
         </div>
       </div>
@@ -44,7 +44,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <p className="text-muted-foreground text-xs mt-1 line-clamp-2">{description}</p>
         <div className="mt-2 flex items-center justify-between">
           <span className="text-primary font-semibold">{price}</span>
-          <span className="text-xs text-muted-foreground">In stock</span>
+          <span className="text-xs text-muted-foreground">En stock</span>
         </div>
       </div>
     </div>
