@@ -38,7 +38,7 @@ const Features = () => {
     {
       icon: <Lightbulb className="h-6 w-6" />,
       title: "Analyses intelligentes",
-      description: "btenez des données clients précieuses pour améliorer vos offres de produits ou services."
+      description: "Obtenez des données clients précieuses pour améliorer vos offres de produits ou services."
     },
     {
       icon: <Clock className="h-6 w-6" />,
@@ -48,7 +48,7 @@ const Features = () => {
     {
       icon: <Settings className="h-6 w-6" />,
       title: "Integration facile",
-      description: "Configuration simple en 2 minutes avec votre boutique en ligne actuelle sans difficultés techniques."
+      description: "Intégrez Chatseller en 2 minutes sur votre boutique en ligne, sans difficultés techniques."
     }
   ];
 
