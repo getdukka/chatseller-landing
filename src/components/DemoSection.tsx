@@ -1,4 +1,4 @@
-
+// src/components/DemoSection.tsx
 import React from 'react';
 import ChatInterface from './ChatInterface';
 import { ArrowRight } from 'lucide-react';

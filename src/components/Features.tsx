@@ -1,4 +1,4 @@
-
+// src/components/Features.tsx
 import React from 'react';
 import { ShoppingCart, MessageSquare, TrendingUp, Lightbulb, Clock, Settings } from 'lucide-react';
 
@@ -22,33 +22,33 @@ const Features = () => {
   const features = [
     {
       icon: <ShoppingCart className="h-6 w-6" />,
-      title: "Product Recommendations",
-      description: "Intelligently suggest products based on user conversations and browsing behavior."
+      title: "Recommandations de produits",
+      description: "Suggérez intelligemment des produits basés sur les conversations de vos visiteurs et leur comportement de navigation."
     },
     {
       icon: <MessageSquare className="h-6 w-6" />,
-      title: "Natural Conversations",
-      description: "Engage customers with human-like chat experiences that understand context and intent."
+      title: "Conversations naturelles",
+      description: "Offrez à vos clients des conversations aussi naturelles et pertinentes qu’avec un vrai vendeur."
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
-      title: "Conversion Optimization",
-      description: "Boost sales with timely assistance, overcoming objections, and guided purchasing."
+      title: "Optimisation des conversions",
+      description: "Vendez plus en répondant au bon moment, en rassurant et en guidant chaque client jusqu’à l’achat."
     },
     {
       icon: <Lightbulb className="h-6 w-6" />,
-      title: "Smart Insights",
-      description: "Gain valuable customer data and insights to improve your product offerings."
+      title: "Analyses intelligentes",
+      description: "btenez des données clients précieuses pour améliorer vos offres de produits ou services."
     },
     {
       icon: <Clock className="h-6 w-6" />,
-      title: "24/7 Availability",
-      description: "Provide round-the-clock customer support and sales assistance without staffing costs."
+      title: "Disponibilité 24/7",
+      description: "Fournissez un support client et une assistance commerciale 24/7 sans coûts de personnel."
     },
     {
       icon: <Settings className="h-6 w-6" />,
-      title: "Easy Integration",
-      description: "Simple setup with your existing e-commerce platform without technical headaches."
+      title: "Integration facile",
+      description: "Configuration simple en 2 minutes avec votre boutique en ligne actuelle sans difficultés techniques."
     }
   ];
 
@@ -59,9 +59,9 @@ const Features = () => {
       
       <div className="container px-6 md:px-12 mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything you need to boost sales</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Tout ce dont vous avez besoin pour booster vos ventes</h2>
           <p className="text-lg text-muted-foreground">
-            Intelligent features designed to enhance customer experience and drive conversions
+            Des fonctionnalités intelligentes conçues pour améliorer l'expérience client et générer des conversions
           </p>
         </div>
         

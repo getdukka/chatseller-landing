@@ -77,7 +77,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-            © {currentYear} ChatSeller. Tous droits réservés. Un produit de {' '}
+            © {currentYear} ChatSeller. Tous droits réservés. Créé par {' '}
             <a href="https://getdukka.com" className="text-primary hover:text-primary/80 transition-colors" target="_blank" rel="noopener noreferrer">
               Dukka
             </a>.

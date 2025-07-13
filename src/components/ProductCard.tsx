@@ -1,4 +1,4 @@
-
+// src/components/ProductCard.tsx
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart, Eye } from 'lucide-react';

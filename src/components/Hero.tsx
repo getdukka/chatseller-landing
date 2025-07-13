@@ -1,3 +1,4 @@
+// src/components/Hero.tsx
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -19,7 +20,7 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            Disponible pour Shopify, WooCommerce et sites personnalisés
+            Intégrable sur n'importe quelle boutique en ligne
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in [animation-delay:200ms]">
