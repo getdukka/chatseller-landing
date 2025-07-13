@@ -29,7 +29,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl animate-fade-in [animation-delay:400ms]">
-            ChatSeller est un Agent IA Commercial qui discute avec vos clients, répond intelligemment à leurs questions et collecte leurs commandes, 24h/24. 
+            ChatSeller est un Agent IA qui discute avec vos clients, répond intelligemment à leurs questions et collecte leurs commandes, 24h/24. 
           </p>
           
           {/* Social Proof Statistics */}

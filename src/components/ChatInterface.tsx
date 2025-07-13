@@ -38,24 +38,24 @@ type Message = BotMessage | UserMessage;
 const exampleProducts = [
   {
     id: '1',
-    name: 'Wireless Noise-Cancelling Headphones',
-    description: 'Premium wireless headphones with active noise cancellation and 30-hour battery life.',
+    name: 'Casque Sans Fil à Réduction de Bruit',
+    description: 'Casque audio haut de gamme sans fil avec réduction active du bruit et 30 heures d’autonomie.',
     price: '39000 FCFA',
-    image: '/placeholder.svg'
+    image: '/products/casque-sans-fil.webp' 
   },
   {
     id: '2',
-    name: 'Smart Fitness Watch',
-    description: 'Track your health metrics, workouts, and sleep with this advanced fitness watch.',
+    name: 'Montre Connectée Fitness',
+    description: 'Suivez vos données de santé, vos entraînements et votre sommeil avec cette montre fitness avancée.',
     price: '89000 FCFA',
-    image: '/placeholder.svg'
+    image: '/products/montre-connectee.avif'
   },
   {
     id: '3',
-    name: 'Portable Bluetooth Speaker',
-    description: 'Waterproof portable speaker with 360° sound and 20-hour battery life.',
+    name: 'Enceinte Bluetooth Portable',
+    description: 'Enceinte portable étanche avec son à 360° et 20 heures d’autonomie.',
     price: '49000 FCFA',
-    image: '/placeholder.svg'
+    image: '/products/enceinte-bluetooth.png'
   }
 ];
 
