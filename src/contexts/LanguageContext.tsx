@@ -122,7 +122,7 @@ const frTranslations = {
   "startTrial": "Tester ChatSeller maintenant",
   
   // Chat Interface
-  "welcome": "Bonjour ! Je suis Mia, votre Assistante d'achat. Comment puis-je vous aider aujourd'hui ? Vous pouvez répondre par écrit ou utiliser le micro.",
+  "welcome": "Bonjour 👋🏼 Je suis Mia, votre Assistante d'achat. Comment puis-je vous aider aujourd'hui ? Vous pouvez répondre par écrit ou utiliser le micro.",
   "typeMessage": "Ecrivez votre message...",
   "headphoneResponse": "J'ai trouvé ces écouteurs sans fil à réduction de bruit qui pourraient être parfaits pour vous. Ils ont une excellente qualité sonore et un ajustement confortable pour une utilisation toute la journée.",
   "watchResponse": "Notre dernière montre fitness intelligente serait un excellent choix. Elle suit toutes vos données de santé et a une autonomie de 7 jours.",

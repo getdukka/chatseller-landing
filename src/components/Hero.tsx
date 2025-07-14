@@ -5,9 +5,9 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
+    <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-visible">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-50/60 to-transparent -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-50/60 to-white -z-10" />
       
       {/* Decorative circles */}
       <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl -z-10" />
@@ -48,7 +48,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in [animation-delay:600ms]">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-12 animate-fade-in [animation-delay:600ms]">
             <Button size="lg" className="group" asChild>
               <a href="https://dashboard.chatseller.app/register">
                 Tester Chatseller maintenant
@@ -61,9 +61,17 @@ const Hero = () => {
               </a>
             </Button>
           </div>
-          
-          {/* Ajouter ici une capture de l'interface de chat de ChatSeller, avec Chatseller en action, sans oublier de laisser un espace haut pour ne pas trop coller aux boutons CTA */}
-
+        </div>
+      </div>
+      
+      {/* Overlapping Image - clean version without effects */}
+      <div className="relative z-10 mt-2 animate-fade-in [animation-delay:800ms]">
+        <div className="max-w-3xl mx-auto px-6">
+          <img 
+            src="/images/hero.webp" 
+            alt="Interface ChatSeller - Mia en conversation avec un client" 
+            className="w-full h-auto"
+          />
         </div>
       </div>
     </section>

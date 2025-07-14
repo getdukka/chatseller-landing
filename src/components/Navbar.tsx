@@ -1,4 +1,4 @@
-
+// src/components/Navbar.tsx
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronRight, ShoppingCart, Store } from 'lucide-react';
@@ -47,12 +47,16 @@ const Navbar = () => {
             {t('pricing')}
           </a>
           <LanguageToggle />
-          <Button variant="ghost" className="text-sm">
-            {t('login')}
+          <Button variant="ghost" className="text-sm" asChild>
+            <a href="https://dashboard.chatseller.app/login">
+              {t('login')}
+            </a>
           </Button>
-          <Button className="text-sm group relative overflow-hidden">
-            {t('tryFree')} <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            <span className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 transform translate-x-full group-hover:translate-x-0 transition-all duration-1000"></span>
+          <Button className="text-sm group relative overflow-hidden" asChild>
+            <a href="https://dashboard.chatseller.app/register">
+              {t('tryFree')} <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <span className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0 opacity-0 group-hover:opacity-100 transform translate-x-full group-hover:translate-x-0 transition-all duration-1000"></span>
+            </a>
           </Button>
         </nav>
 
@@ -98,11 +102,15 @@ const Navbar = () => {
             >
               {t('pricing')}
             </a>
-            <Button variant="ghost" className="justify-start text-base py-2" onClick={() => setMobileMenuOpen(false)}>
-              {t('login')}
+            <Button variant="ghost" className="justify-start text-base py-2" onClick={() => setMobileMenuOpen(false)} asChild>
+              <a href="https://dashboard.chatseller.app/login">
+                {t('login')}
+              </a>
             </Button>
-            <Button className="text-base w-full" onClick={() => setMobileMenuOpen(false)}>
-              {t('tryFree')}
+            <Button className="text-base w-full" onClick={() => setMobileMenuOpen(false)} asChild>
+              <a href="https://dashboard.chatseller.app/register">
+                {t('tryFree')}
+              </a>
             </Button>
           </nav>
         </div>
