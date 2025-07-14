@@ -12,10 +12,14 @@ import FAQSection from '../components/FAQSection';
 import UrgencyFOMO from '../components/UrgencyFOMO';
 import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
+import MobileFix from '../components/MobileFix';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
+      {/* Composant de correction mobile */}
+      <MobileFix />
+      
       <Navbar />
       <main className="flex-1">
         {/* Section 1: Hero - Accroche principale (CONSERVÉ) */}
