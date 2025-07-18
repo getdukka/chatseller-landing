@@ -216,11 +216,11 @@ const ComparisonSection = () => {
           
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
             Pourquoi choisir 
-            <span className="text-gradient bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> ChatSeller</span> ?
+            <span className="text-gradient bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> ChatSeller</span>
           </h2>
           
           <p className="text-lg text-muted-foreground animate-fade-in [animation-delay:400ms]">
-            Comparaison honnête entre ChatSeller et les autres solutions du marché
+            Comparaison honnête entre ChatSeller et les autres options disponibles sur le marché
           </p>
         </div>
         
@@ -301,7 +301,7 @@ const ComparisonSection = () => {
                     feature="Mobile-first"
                     traditional={<FeatureIcon icon={<X />} isAvailable={false} />}
                     chatbots="Standard"
-                    chatseller="100% Optimisé pour mobile"
+                    chatseller="Fonctionne sur telephone"
                     isHighlight={true}
                   />
                   <ComparisonRow
@@ -350,7 +350,7 @@ const ComparisonSection = () => {
         {/* Why ChatSeller Wins */}
         <div className="max-w-4xl mx-auto mb-16 animate-fade-in [animation-delay:1000ms]">
           <h3 className="text-2xl font-bold text-center mb-8">
-            Pourquoi ChatSeller surpasse la concurrence ?
+            Voici pourquoi ChatSeller surpasse la concurrence
           </h3>
           
           <div className="grid md:grid-cols-2 gap-8">

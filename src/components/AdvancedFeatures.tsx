@@ -42,38 +42,38 @@ const AdvancedFeatures = () => {
   const features = [
     {
       icon: <Brain className="h-6 w-6" />,
-      title: "Intelligence Conversationnelle",
-      description: "Agent IA formé sur vos produits, qui répond comme un vrai commercial expérimenté.",
+      title: "Réponses instantanées et naturelles",
+      description: "Votre vendeur IA est formé sur vos produits et répond comme un vrai commercial expérimenté.",
       metric: "92% de questions résolues"
     },
     {
       icon: <ShoppingCart className="h-6 w-6" />,
-      title: "Collecte de Commandes",
-      description: "Collecte naturellement nom, téléphone, adresse dans la conversation. Fini les formulaires statiques.",
+      title: "Prise de Commandes en direct",
+      description: "Il collecte naturellement nom, téléphone, adresse dans la conversation et crée la commande.",
       metric: "+63% de commandes finalisées"
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
-      title: "Upsell Intelligent",
-      description: "Propose automatiquement des produits complémentaires basés sur les préférences du client.",
+      title: "Suggestion de produits en plus",
+      description: "Il propose automatiquement des produits complémentaires basés sur les préférences du client.",
       metric: "+34% de panier moyen"
     },
     {
       icon: <BarChart3 className="h-6 w-6" />,
-      title: "Analytics Avancées",
-      description: "Tableau de bord complet pour suivre vos conversations, vos conversions et vos revenus en temps réel.",
+      title: "Suivi des ventes en temps réel ",
+      description: "Vous disposez d'un tableau de bord complet pour suivre vos conversations et vos ventes en temps réel.",
       metric: "Visibilité complète ROI"
     },
     {
       icon: <Zap className="h-6 w-6" />,
       title: "Installation Express",
-      description: "Intégration en 2 minutes sur Shopify, WooCommerce, Wix ou tout site personnalisé.",
+      description: "Vous pouvez intégrer Chatseller en 2 minutes sur votre boutique Shopify, WooCommerce, Wix ou autre.",
       metric: "2 min d'installation"
     },
     {
       icon: <Smartphone className="h-6 w-6" />,
-      title: "Mobile-First",
-      description: "Interface parfaitement adaptée aux Smartphones pour une expérience utilisateur optimale.",
+      title: "100% adapté aux smartphones",
+      description: "L'interface de Chatseller est parfaitement adaptée aux Smartphones pour une expérience utilisateur optimale.",
       metric: "100% optimisé pour mobile"
     }
   ];
@@ -96,7 +96,7 @@ const AdvancedFeatures = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground animate-fade-in [animation-delay:400ms]">
-            Des fonctionnalités intelligentes conçues pour maximiser vos conversions et revenus
+            Toutes les fonctions qu’il vous faut pour vendre plus, plus vite, sans rester collé à votre téléphone.
           </p>
         </div>
         

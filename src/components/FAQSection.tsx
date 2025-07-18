@@ -97,7 +97,7 @@ const FAQSection = () => {
       icon: <Zap className="w-5 h-5" />,
       questions: [
         {
-          question: "ChatSeller fonctionne-t-il sur Shopify, WooCommerce et Wix ?",
+          question: "ChatSeller fonctionne-t-il sur Shopify ?",
           answer: (
             <div>
               <p className="mb-3">
@@ -161,21 +161,21 @@ const FAQSection = () => {
           icon: <Shield className="w-5 h-5" />
         },
         {
-          question: "Comment l'IA apprend-elle sur mes produits ?",
+          question: "Comment Chatseller apprend-il sur mes produits ?",
           answer: (
             <div>
               <p className="mb-3">
-                <strong>Formation simple et rapide de votre agent IA :</strong>
+                Votre Vendeur IA utilise la base de connaissances que vous lui fournissez :
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Import automatique :</strong> Connectez votre catalogue produit</li>
-                <li><strong>Documents PDF/Word :</strong> Uploadez vos guides, FAQ, politiques</li>
-                <li><strong>Formation manuelle :</strong> Saisissez les infos importantes</li>
+                <li><strong>Documents PDF/Word :</strong> Importez vos guides, FAQ, politiques</li>
+                <li><strong>Ajout manuel :</strong> Saisissez manuellement les infos importantes</li>
                 <li><strong>Apprentissage continu :</strong> L'IA s'améliore avec chaque conversation</li>
-                <li><strong>Mise à jour facile :</strong> Modifiez les connaissances depuis le dashboard</li>
+                <li><strong>Mise à jour facile :</strong> Modifiez la base de connaissances depuis votre tableau de bord</li>
               </ul>
               <p className="mt-3 text-sm text-blue-600">
-                🧠 Plus vous l'utilisez, plus l'IA devient experte sur vos produits et clients.
+                🧠 Plus vous l'utilisez, plus votre vendeur IA devient expert sur vos produits et clients.
               </p>
             </div>
           ),
@@ -195,14 +195,14 @@ const FAQSection = () => {
                 <strong>Les résultats sont immédiats :</strong>
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Jour 1 :</strong> Agent IA opérationnel et conversations actives</li>
+                <li><strong>Jour 1 :</strong> Vendeur IA opérationnel et conversations actives</li>
                 <li><strong>Semaine 1 :</strong> +40% d'engagement visiteurs en moyenne</li>
                 <li><strong>Semaine 2-3 :</strong> +65% de taux de conversion observé</li>
-                <li><strong>Mois 1 :</strong> ROI positif garanti ou remboursement</li>
-                <li><strong>Mois 2-3 :</strong> Optimisation complète, +147% conversion</li>
+                <li><strong>Mois 1 :</strong> ROI positif garanti</li>
+                <li><strong>Mois 2-3 :</strong> Optimisation complète</li>
               </ul>
               <p className="mt-3 text-sm text-green-600">
-                📈 <strong>Résultat typique :</strong> +2,847€ de revenus supplémentaires dès le premier mois (pour 1000 visiteurs/mois).
+                📈 <strong>Résultat typique :</strong> Environ 2,800€ de revenus supplémentaires dès le premier mois (pour 1000 visiteurs/mois).
               </p>
             </div>
           ),
@@ -216,10 +216,10 @@ const FAQSection = () => {
                 <strong>Non, ChatSeller complète et optimise votre équipe :</strong>
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Première ligne :</strong> L'IA gère les questions répétitives 24h/24</li>
-                <li><strong>Qualification :</strong> L'IA qualifie les leads avant de les transférer</li>
+                <li><strong>Première ligne :</strong> Votre vendeur IA gère les questions répétitives 24h/24</li>
+                <li><strong>Qualification :</strong> Il qualifie les potentiels clients avant de les transférer</li>
                 <li><strong>Gain de temps :</strong> Votre équipe se concentre sur les ventes complexes</li>
-                <li><strong>Escalade intelligente :</strong> Transfert automatique si besoin humain</li>
+                <li><strong>Escalade intelligente :</strong> Au besoin, l'IA bascule automatiquement vers un humain</li>
                 <li><strong>Formation équipe :</strong> Analytics pour améliorer vos vendeurs</li>
               </ul>
               <p className="mt-3 text-sm text-blue-600">
@@ -234,7 +234,7 @@ const FAQSection = () => {
           answer: (
             <div>
               <p className="mb-3">
-                <strong>Absolument ! Contrôle total sur votre agent :</strong>
+                <strong>Absolument ! Vous avez le contrôle total sur votre vendeur IA :</strong>
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Personnalité :</strong> Professionnel, décontracté, expert, amical...</li>
@@ -252,21 +252,21 @@ const FAQSection = () => {
           icon: <Users className="w-5 h-5" />
         },
         {
-          question: "Que se passe-t-il si l'IA ne sait pas répondre ?",
+          question: "Que se passe-t-il si le vendeur IA n'a pas la réponse à une question ?",
           answer: (
             <div>
               <p className="mb-3">
-                <strong>Système de fallback intelligent :</strong>
+                <strong>Un système de fallback intelligent est intégré pour cela :</strong>
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Admission honnête :</strong> "Je vais chercher cette information pour vous"</li>
-                <li><strong>Collecte contact :</strong> Récupère nom/email pour suivi humain</li>
+                <li><strong>Collecte contact :</strong> Récupère nom/telephone pour suivi humain</li>
                 <li><strong>Notification équipe :</strong> Votre équipe reçoit la question</li>
-                <li><strong>Base apprentissage :</strong> La question enrichit la base IA</li>
-                <li><strong>Réponse rapide :</strong> Votre équipe répond sous 2h en moyenne</li>
+                <li><strong>Base apprentissage :</strong> La question enrichit la base de connaissances</li>
+                <li><strong>Réponse rapide :</strong> Votre équipe répond à la question</li>
               </ul>
               <p className="mt-3 text-sm text-orange-600">
-                🔄 Chaque question non résolue améliore l'IA pour les prochains clients.
+                🔄 Chaque question non résolue améliore le vendeur IA pour les prochains clients.
               </p>
             </div>
           ),
@@ -286,35 +286,28 @@ const FAQSection = () => {
                 <strong>Prix 100% transparent, aucune commission :</strong>
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Prix fixe :</strong> 0€ (Starter) ou 29€/mois (Pro), c'est tout</li>
+                <li><strong>Prix fixe :</strong> 0€ (Starter) ou 14€/mois (Pro), c'est tout</li>
                 <li><strong>Aucune commission :</strong> 0% sur vos ventes, 100% pour vous</li>
                 <li><strong>Pas de frais cachés :</strong> Installation, mises à jour, support inclus</li>
                 <li><strong>Pas de limite :</strong> Vendez autant que vous voulez</li>
                 <li><strong>Facture simple :</strong> Un seul prélèvement mensuel</li>
               </ul>
               <p className="mt-3 text-sm text-green-600">
-                💰 <strong>Exemple :</strong> Si vous générez +5,000€/mois grâce à ChatSeller, vous payez toujours 29€/mois.
+                💰 <strong>Exemple :</strong> Si vous générez +5,000€/mois grâce à ChatSeller, vous payez toujours 14€/mois.
               </p>
             </div>
           ),
           icon: <CreditCard className="w-5 h-5" />
         },
         {
-          question: "Le plan gratuit est-il vraiment gratuit à vie ?",
+          question: "Le plan gratuit est-il gratuit à vie ?",
           answer: (
             <div>
               <p className="mb-3">
-                <strong>Oui, gratuit à vie avec de vraies fonctionnalités :</strong>
+                Non, le plan gratuit est limité à 3 jours. Il vous permet de tester Chatseller et décider si l'investissement en vaut le coup.
               </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li><strong>100 conversations/mois :</strong> Suffisant pour tester et petites boutiques</li>
-                <li><strong>Agent IA complet :</strong> Même intelligence que les plans payants</li>
-                <li><strong>Pas de carte bancaire :</strong> Inscription sans aucun moyen de paiement</li>
-                <li><strong>Support inclus :</strong> Email support même en gratuit</li>
-                <li><strong>Upgrade simple :</strong> Passez au Pro quand vous voulez</li>
-              </ul>
               <p className="mt-3 text-sm text-blue-600">
-                🎁 Nous sommes confiants que vous allez adorer ChatSeller et vouloir upgrader naturellement.
+                🎁 Nous sommes confiants que vous allez adorer ChatSeller et vouloir passer naturellement au plan payant.
               </p>
             </div>
           ),
@@ -325,10 +318,10 @@ const FAQSection = () => {
           answer: (
             <div>
               <p className="mb-3">
-                <strong>Liberté totale, aucun engagement :</strong>
+                <strong>Absolument ! Vous avez une liberté totale, et aucun engagement n'est requis :</strong>
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Annulation 1 clic :</strong> Depuis votre dashboard, immédiat</li>
+                <li><strong>Annulation en 1 clic :</strong> Depuis votre tableau de bord</li>
                 <li><strong>Aucun préavis :</strong> Pas de période de préavis obligatoire</li>
                 <li><strong>Prorata :</strong> Remboursement au prorata si annulation</li>
                 <li><strong>Export données :</strong> Récupérez vos conversations et analytics</li>
@@ -354,15 +347,15 @@ const FAQSection = () => {
                   <li>Réponses automatiques basiques</li>
                   <li>FAQ statique</li>
                   <li>Pas de collecte de commandes</li>
-                  <li>Pas d'upsell intelligent</li>
+                  <li>Pas de recommandation de produits</li>
                 </ul>
               </div>
               <div className="bg-green-50 p-4 rounded-lg">
                 <h5 className="font-semibold text-green-900 mb-2">ChatSeller :</h5>
                 <ul className="list-disc pl-6 space-y-1 text-sm">
-                  <li>Conversations naturelles avec IA GPT-4</li>
+                  <li>Conversations naturelles</li>
                   <li>Collecte vraiment les commandes</li>
-                  <li>Upsell intelligent et contextuel</li>
+                  <li>Recommandation intelligente de produits</li>
                   <li>Apprentissage sur vos produits spécifiques</li>
                   <li>Analytics de conversion avancées</li>
                 </ul>
@@ -401,7 +394,7 @@ const FAQSection = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground animate-fade-in [animation-delay:400ms]">
-            Tout ce que vous devez savoir avant d'ajouter notre Vendeur IA sur votre site. 
+            Tout ce que vous devez savoir avant d'ajouter votre Vendeur IA sur votre boutique en ligne. 
           </p>
         </div>
         

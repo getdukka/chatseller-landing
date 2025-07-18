@@ -62,11 +62,11 @@ const ProblemSolution = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
-            Pourquoi <span className="text-red-600">7 visiteurs sur 10</span> quittent sans acheter ?
+            <span className="text-red-600">7 clients sur 10</span> quittent votre boutique sans acheter
           </h2>
           
           <p className="text-lg text-muted-foreground mb-12 animate-fade-in [animation-delay:400ms]">
-            Les boutiques en ligne perdent des clients et des ventes potentiels chaque jour à cause d'une expérience d'achat passive et impersonnelle.
+            Parce qu’ils ont des questions, des doutes, et qu’il n’y a personne pour les aider et les rassurer.
           </p>
           
           {/* Problem Stats */}
@@ -80,13 +80,13 @@ const ProblemSolution = () => {
             <StatCard 
               value="2-3%" 
               label="Taux de conversion moyen" 
-              trend="sur la majorité des sites e-commerce" 
+              trend="Sur la majorité des sites e-commerce" 
               type="problem"
             />
             <StatCard 
               value="68%" 
               label="Questions restées sans réponse" 
-              trend="parce qu'il n'y a pas de vendeur en ligne" 
+              trend="Parce qu'il n'y a pas de vendeur en ligne" 
               type="problem"
             />
           </div>
@@ -99,7 +99,7 @@ const ProblemSolution = () => {
               </div>
               <div className="text-left">
                 <h3 className="font-semibold text-gray-900 mb-2">Aucune assistance en ligne</h3>
-                <p className="text-gray-600">Vos visiteurs voient vos produits mais n'ont personne pour les conseiller, répondre à leurs doutes ou les rassurer avant l'achat.</p>
+                <p className="text-gray-600">Vos visiteurs sont seuls face à vos produits. Personne pour les conseiller ou les rassurer.</p>
               </div>
             </div>
             
@@ -109,7 +109,7 @@ const ProblemSolution = () => {
               </div>
               <div className="text-left">
                 <h3 className="font-semibold text-gray-900 mb-2">Questions sans réponses</h3>
-                <p className="text-gray-600">Vos potentiels clients ont des questions sur la taille, la livraison, la garantie... mais personne n'est là pour y répondre immédiatement.</p>
+                <p className="text-gray-600">Les clients ont des questions. Tant qu’on ne leur répond pas, ils hésitent et abandonnent leur achat.</p>
               </div>
             </div>
             
@@ -119,7 +119,7 @@ const ProblemSolution = () => {
               </div>
               <div className="text-left">
                 <h3 className="font-semibold text-gray-900 mb-2">Expérience impersonnelle</h3>
-                <p className="text-gray-600">Certains potentiels clients ont besoin de parler à quelqu'un avant d'acheter, mais votre boutique en ligne statique n'offre pas cette possibilité.</p>
+                <p className="text-gray-600">Beaucoup de clients préfèrent parler à quelqu’un avant d’acheter. Votre boutique actuelle ne leur offre pas cette option.</p>
               </div>
             </div>
             
@@ -129,7 +129,7 @@ const ProblemSolution = () => {
               </div>
               <div className="text-left">
                 <h3 className="font-semibold text-gray-900 mb-2">Revenus perdus chaque jour</h3>
-                <p className="text-gray-600">Chaque visiteur qui part sans acheter représente un manque à gagner. Sur 1000 visiteurs, seulement 20-30 achètent réellement.</p>
+                <p className="text-gray-600">Chaque visiteur qui part sans acheter, c’est de l’argent qui s’envole. Sur 1000 visiteurs, vous perdez en moyenne 730 ventes.</p>
               </div>
             </div>
           </div>
@@ -152,17 +152,18 @@ const ProblemSolution = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
-            Transformez chaque visiteur en un <span className="text-green-600">client potentiel</span>
+            Transformez chaque visiteur en <span className="text-green-600">client potentiel</span>
           </h2>
           
           <p className="text-lg text-muted-foreground mb-12 animate-fade-in [animation-delay:400ms]">
-            ChatSeller ajoute un vendeur IA intelligent sur votre boutique en ligne qui engage proactivement vos visiteurs, répond à leurs questions, et les guide jusqu'à l'achat, dans une conversation naturelle.
+            Avec ChatSeller, vos clients vivent la même expérience qu’en boutique physique :
+ils sont accueillis, conseillés, rassurés, et passent commande directement… sans jamais rester seuls.
           </p>
           
           {/* Solution Stats */}
           <div className="grid md:grid-cols-3 gap-6 mb-12 animate-fade-in [animation-delay:600ms]">
             <StatCard 
-              value="4-6x" 
+              value="4 à 6 fois" 
               label="Plus de ventes en moyenne" 
               trend="constaté chez nos clients" 
               type="solution"
@@ -189,7 +190,7 @@ const ProblemSolution = () => {
               </div>
               <div className="text-left">
                 <h3 className="font-semibold text-gray-900 mb-2">Agent IA conversationnel</h3>
-                <p className="text-gray-600">Votre visiteur discute naturellement avec l'IA comme avec un vrai vendeur qui connaît parfaitement vos produits.</p>
+                <p className="text-gray-600">Vos clients discutent avec votre vendeur IA, comme avec un vrai vendeur qui connaît vos produits. </p>
               </div>
             </div>
             
@@ -198,8 +199,8 @@ const ProblemSolution = () => {
                 <TrendingUp className="h-5 w-5" />
               </div>
               <div className="text-left">
-                <h3 className="font-semibold text-gray-900 mb-2">Collecte de commandes intelligente</h3>
-                <p className="text-gray-600">L'IA collecte nom, téléphone, adresse et finalise la commande directement dans la conversation. Fini les formulaires statiques</p>
+                <h3 className="font-semibold text-gray-900 mb-2">Prise de commande en direct</h3>
+                <p className="text-gray-600">Nom, adresse, téléphone, produit : tout est récupéré directement dans la conversation. Plus besoin de formulaires.</p>
               </div>
             </div>
             
@@ -209,7 +210,7 @@ const ProblemSolution = () => {
               </div>
               <div className="text-left">
                 <h3 className="font-semibold text-gray-900 mb-2">Ventes additionnelles automatiques</h3>
-                <p className="text-gray-600">L'IA propose intelligemment des produits complémentaires pour augmenter le panier moyen de +34% en moyenne.</p>
+                <p className="text-gray-600">Votre vendeur IA suggère des produits en plus pour booster le panier moyen et augmenter vos ventes.</p>
               </div>
             </div>
             
@@ -219,7 +220,7 @@ const ProblemSolution = () => {
               </div>
               <div className="text-left">
                 <h3 className="font-semibold text-gray-900 mb-2">Disponible 24h/24, 7j/7</h3>
-                <p className="text-gray-600">Vos clients ont un vendeur pro à leur disposition à toute heure, ce qui augmente leur satisfaction et vos ventes nocturnes.</p>
+                <p className="text-gray-600">Vos clients ont un vendeur pro à leur disposition, même la nuit, ce qui augmente leur satisfaction et vos ventes.</p>
               </div>
             </div>
           </div>
@@ -228,12 +229,12 @@ const ProblemSolution = () => {
           <div className="animate-fade-in [animation-delay:1000ms]">
             <Button size="lg" className="group">
               <a href="https://dashboard.chatseller.app/register" className="flex items-center">
-                Transformer mes visiteurs en clients
+                Tester l'expérience Chatseller
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
             <p className="text-sm text-muted-foreground mt-3">
-              Installation en 2 minutes • Essai gratuit 3 jours • Aucune carte bancaire requise
+              Installation en 2 minutes • Essai gratuit de 3 jours • Aucune carte bancaire requise
             </p>
           </div>
         </div>

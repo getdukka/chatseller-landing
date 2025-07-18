@@ -92,7 +92,7 @@ const frTranslations = {
   "tryFree": "Tester ChatSeller",
   
   // Hero
-  "nowAvailable": "Disponible pour Shopify, WooCommerce et sites personnalisés",
+  "nowAvailable": "Intégrable sur n'importe quelle boutique en ligne",
   "heroTitle": "Le Vendeur IA qui transforme vos visiteurs en clients.",
   "heroSubtitle": "ChatSeller est un Agent IA Commercial qui discute avec vos clients, répond intelligemment à leurs questions et collecte leurs commandes, 24h/24.",
   "getStarted": "Tester ChatSeller maintenant",
@@ -117,7 +117,7 @@ const frTranslations = {
   
   // Demo Section
   "demoTitle": "Voir ChatSeller en action",
-  "demoSubtitle": "Découvrez comment Chatseller guide les clients dans leur parcours d'achat, répond aux questions et fait des recommandations de produits personnalisées.",
+  "demoSubtitle": "Regardez comment ChatSeller transforme une visite en achat, en discutant naturellement avec chaque client.",
   "demoTip": "Essayez de demander des informations sur les écouteurs, les montres de fitness ou les haut-parleurs dans la démo.",
   "startTrial": "Tester ChatSeller maintenant",
   
