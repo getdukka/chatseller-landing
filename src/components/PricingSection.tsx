@@ -1,4 +1,4 @@
-// src/components/PricingSection.tsx
+// src/components/PricingSection.tsx - TARIFS CORRIGÉS SELON SPÉCIFICATIONS
 import React, { useState } from 'react';
 import { 
   Check, 
@@ -25,7 +25,8 @@ const PricingCard = ({
   ctaText, 
   ctaLink, 
   badge,
-  savings
+  savings,
+  hasTrial = false
 }: {
   plan: string;
   price: string;
@@ -38,6 +39,7 @@ const PricingCard = ({
   ctaLink: string;
   badge?: string;
   savings?: string;
+  hasTrial?: boolean;
 }) => {
   return (
     <div className={`relative p-8 rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:shadow-xl ${
@@ -55,12 +57,12 @@ const PricingCard = ({
         </div>
       )}
       
-      {/* Savings Badge */}
-      {savings && (
+      {/* Trial Badge */}
+      {hasTrial && (
         <div className="absolute -top-2 -right-2">
           <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
             <Gift className="w-3 h-3 mr-1" />
-            {savings}
+            7 jours gratuits
           </div>
         </div>
       )}
@@ -105,14 +107,13 @@ const PricingCard = ({
 
 const ComparisonTable = () => {
   const features = [
-    { feature: "Conversations par mois", starter: "100", pro: "Illimitées", enterprise: "Illimitées" },
+    { feature: "Conversations par mois", starter: "Illimitées", pro: "Illimitées", enterprise: "Illimitées" },
     { feature: "Agents IA", starter: "1", pro: "3 spécialisés", enterprise: "Illimités" },
     { feature: "Base de connaissance", starter: "10 documents", pro: "Illimitée", enterprise: "Illimitée" },
     { feature: "Chat widget personnalisable", starter: "✓", pro: "✓", enterprise: "✓" },
     { feature: "Analytics de base", starter: "✓", pro: "✓", enterprise: "✓" },
     { feature: "Upsell automatique", starter: "✗", pro: "✓", enterprise: "✓" },
     { feature: "Analytics avancées", starter: "✗", pro: "✓", enterprise: "✓" },
-    { feature: "Intégrations Zapier", starter: "✗", pro: "✓", enterprise: "✓" },
     { feature: "Support prioritaire", starter: "✗", pro: "✓", enterprise: "✓" },
     { feature: "API complète", starter: "✗", pro: "✗", enterprise: "✓" },
     { feature: "White-label", starter: "✗", pro: "✗", enterprise: "✓" },
@@ -151,10 +152,10 @@ const ROICalculator = () => {
   const [averageOrder, setAverageOrder] = useState(85);
   
   const currentRevenue = (visitors * (currentConversion / 100) * averageOrder);
-  const newConversion = currentConversion * 7; // ChatSeller améliore de 300% en moyenne
+  const newConversion = Math.min(currentConversion * 4, 18); // ChatSeller améliore x4 en moyenne, max 18%
   const newRevenue = (visitors * (newConversion / 100) * averageOrder);
   const additionalRevenue = newRevenue - currentRevenue;
-  const monthlyProfit = additionalRevenue - 14; // Coût plan Pro
+  const monthlyProfit = additionalRevenue - 14; // Coût plan Starter
   
   return (
     <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 max-w-4xl mx-auto">
@@ -231,10 +232,10 @@ const ROICalculator = () => {
       
       <div className="text-center mt-6">
         <div className="text-2xl font-bold text-primary mb-2">
-          ROI: {Math.round((monthlyProfit / 29) * 100)}% par mois
+          ROI: {Math.round((monthlyProfit / 14) * 100)}% par mois
         </div>
         <p className="text-muted-foreground text-sm">
-          ChatSeller se rembourse en {Math.ceil(29 / (monthlyProfit > 0 ? monthlyProfit : 1))} jour(s)
+          ChatSeller se rembourse en {Math.ceil(14 / (monthlyProfit > 0 ? monthlyProfit : 1))} jour(s)
         </p>
       </div>
     </div>
@@ -253,7 +254,7 @@ const PricingSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center px-4 py-2 mb-6 border border-green-200 rounded-full bg-green-50 text-sm font-medium text-green-700 animate-fade-in">
             <Gift className="w-4 h-4 mr-2" />
-            Offre de lancement : -50% sur tous les plans
+            Essai gratuit disponible sur le plan Starter
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
@@ -262,11 +263,11 @@ const PricingSection = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground animate-fade-in [animation-delay:400ms]">
-            Commencez gratuitement et évoluez selon vos besoins. Aucun engagement, annulation en 1 clic.
+            Commencez avec 7 jours gratuits sur le plan Starter. Aucun engagement, annulation en 1 clic.
           </p>
         </div>
         
-        {/* Pricing Cards */}
+        {/* ✅ PRICING CARDS CORRIGÉS */}
         <div className="grid md:grid-cols-3 gap-8 mb-16 animate-fade-in [animation-delay:600ms]">
           <PricingCard
             plan="Starter"
@@ -276,21 +277,23 @@ const PricingSection = () => {
             features={[
               "7 jours d'essai gratuit",
               "1 agent IA intelligent",
+              "Conversations illimitées",
               "Base de connaissance (10 documents)",
               "Chat widget personnalisable",
               "Analytics de base",
-              "Support email/whatsapp",
+              "Support email",
               "Installation en 2 minutes",
               "Compatible tous sites"
             ]}
             notIncluded={[
               "Upsell automatique",
               "Analytics avancées",
-              "Intégrations Zapier",
+              "Support prioritaire"
             ]}
             ctaText="Commencer l'essai gratuit"
             ctaLink="https://dashboard.chatseller.app/register?plan=starter"
             badge="7 jours gratuits"
+            hasTrial={true}
           />
           
           <PricingCard
@@ -299,16 +302,15 @@ const PricingSection = () => {
             period="mois"
             description="Pour les e-commerçants sérieux"
             features={[
-              "7 jours d'essai gratuit",
-              "Conversations illimitées",
+              "Tout du plan Starter",
               "3 agents IA spécialisés",
               "Base de connaissance illimitée",
               "Upsell automatique intelligent",
               "Analytics avancées & ROI",
-              "Intégrations Zapier",
               "Support prioritaire",
               "Formation personnalisée",
-              "Bilingue (FR/EN)"
+              "Bilingue (FR/EN)",
+              "API accès complet"
             ]}
             isPopular={true}
             ctaText="Démarrer le plan Pro"
@@ -324,7 +326,7 @@ const PricingSection = () => {
             features={[
               "Tout du plan Professional",
               "Agents IA illimités",
-              "White-label complet",
+              "White-label complet", 
               "API complète & webhooks",
               "Intégrations sur mesure",
               "Support dédié 24/7",
@@ -366,14 +368,14 @@ const PricingSection = () => {
         <div className="grid md:grid-cols-3 gap-6 mt-16 animate-fade-in [animation-delay:800ms]">
           <div className="text-center p-6 bg-white/60 rounded-xl border border-gray-200">
             <Computer className="w-8 h-8 text-green-500 mx-auto mb-3" />
-            <h4 className="font-semibold mb-2">Tester gratuitement</h4>
-            <p className="text-sm text-muted-foreground">Pendant 3 jours</p>
+            <h4 className="font-semibold mb-2">Essai gratuit Starter</h4>
+            <p className="text-sm text-muted-foreground">7 jours pour tester sans risque</p>
           </div>
           
           <div className="text-center p-6 bg-white/60 rounded-xl border border-gray-200">
             <Star className="w-8 h-8 text-yellow-500 mx-auto mb-3" />
-            <h4 className="font-semibold mb-2">4.9/5 étoiles</h4>
-            <p className="text-sm text-muted-foreground">Note moyenne de nos clients</p>
+            <h4 className="font-semibold mb-2">4.8/5 étoiles</h4>
+            <p className="text-sm text-muted-foreground">Note moyenne de nos testeurs</p>
           </div>
           
           <div className="text-center p-6 bg-white/60 rounded-xl border border-gray-200">
@@ -382,32 +384,6 @@ const PricingSection = () => {
             <p className="text-sm text-muted-foreground">Prêt à vendre immédiatement</p>
           </div>
         </div>
-        
-        {/* Final CTA 
-        <div className="text-center mt-16 animate-fade-in [animation-delay:1000ms]">
-          <div className="bg-gradient-to-r from-primary/10 to-purple-100/50 rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Prêt à transformer vos visiteurs en clients ?</h3>
-            <p className="text-muted-foreground mb-6">
-              Rejoignez les 347 e-commerçants qui ont choisi ChatSeller ce mois-ci
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="group">
-                <a href="https://dashboard.chatseller.app/register" className="flex items-center">
-                  Commencer l'essai gratuit
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg">
-                <a href="mailto:support@chatseller.app" className="flex items-center">
-                  Parler à un expert
-                </a>
-              </Button>
-            </div>
-            <p className="text-sm text-muted-foreground mt-4">
-              ✅ Aucune carte bancaire • ✅ Annulation en 1 clic • ✅ Support en français
-            </p>
-          </div>
-        </div>*/}
       </div>
     </section>
   );
