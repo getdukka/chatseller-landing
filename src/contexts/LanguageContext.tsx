@@ -121,7 +121,7 @@ const translations: Record<Language, Translations> = {
     demo: 'Démo',
     pricing: 'Tarifs',
     login: 'Connexion',
-    tryFree: 'Essayer gratuitement',
+    tryFree: 'Créer mon Vendeur IA',
     switchToFrench: 'FR',
     switchToEnglish: 'EN',
     
@@ -232,7 +232,7 @@ const translations: Record<Language, Translations> = {
     demo: 'Demo',
     pricing: 'Pricing',
     login: 'Login',
-    tryFree: 'Try for free',
+    tryFree: 'Create my AI Seller',
     switchToFrench: 'FR',
     switchToEnglish: 'EN',
     

@@ -23,7 +23,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
     {
       id: '1',
       type: 'bot',
-      content: "Bonjour ! Je suis Mia, votre conseillère commerciale IA chez ChatSeller. Je peux vous expliquer comment notre solution peut transformer votre boutique en ligne. Que souhaitez-vous savoir ? 😊",
+      content: "Bonjour ! Je suis Habib, Conseiller Commerciale chez ChatSeller. Je peux vous expliquer comment notre solution peut transformer vos visiteurs en acheteurs. Que souhaitez-vous savoir ? 😊",
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     }
   ]);
@@ -73,14 +73,14 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
         botResponse = {
           id: (Date.now() + 100).toString(),
           type: 'bot',
-          content: "ChatSeller s'installe en 2 minutes sur votre site ! Notre IA répond aux questions de vos clients 24h/24, les conseille et collecte leurs commandes directement dans la conversation. Résultat : +147% de conversion en moyenne ! Souhaitez-vous voir une démo ?",
+          content: "ChatSeller s'installe en 2 minutes sur votre site ! Votre Vendeur IA répond aux questions de vos clients 24h/24, les conseille et collecte leurs commandes directement dans la conversation. Résultat : +147% de conversion en moyenne ! Souhaitez-vous voir une démo ?",
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         };
       } else if (input.includes('installation') || input.includes('installer') || input.includes('intégrer')) {
         botResponse = {
           id: (Date.now() + 100).toString(),
           type: 'bot',
-          content: "L'installation est ultra-simple ! 1) Créez votre compte 2) Configurez votre agent IA 3) Copiez un petit code sur votre site. C'est tout ! Compatible Shopify, WooCommerce, Wix et sites personnalisés. Voulez-vous commencer votre essai gratuit ?",
+          content: "L'installation est ultra-simple ! 1) Créez votre compte Chatseller 2) Configurez votre Vendeur IA 3) Copiez un petit code sur votre site. C'est tout ! Chatseller est compatible avec Shopify, WooCommerce, Wix et sites personnalisés. Voulez-vous commencer votre essai gratuit ?",
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         };
       } else if (input.includes('démo') || input.includes('demo') || input.includes('test') || input.includes('essai')) {
@@ -122,8 +122,8 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
               <span className="text-sm font-bold">M</span>
             </div>
             <div>
-              <div className="font-semibold">Mia - Conseillère ChatSeller</div>
-              <div className="text-xs opacity-90">Conseillère commerciale IA</div>
+              <div className="font-semibold">Habib - Conseiller ChatSeller</div>
+              <div className="text-xs opacity-90">Conseiller Chatseller</div>
             </div>
           </div>
           <Button variant="ghost" size="icon" onClick={onClose} className="text-white">
@@ -171,12 +171,12 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
         <div className="flex items-center justify-between p-4 border-b bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-t-2xl">
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-              <span className="text-sm font-bold">M</span>
+              <span className="text-sm font-bold">H</span>
             </div>
             {!isMinimized && (
               <div>
-                <div className="font-semibold">Mia - Conseillère ChatSeller</div>
-                <div className="text-xs opacity-90">Conseillère commerciale IA</div>
+                <div className="font-semibold">Habib - Conseiller ChatSeller</div>
+                <div className="text-xs opacity-90">Conseiller Chatseller</div>
               </div>
             )}
           </div>
@@ -235,7 +235,7 @@ const MessageBubble: React.FC<Message> = ({ type, content, timestamp }) => {
       <div className="flex max-w-[80%] items-end space-x-2">
         {type === 'bot' && (
           <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold mb-1">
-            M
+            H
           </div>
         )}
         <div>
@@ -266,7 +266,7 @@ const TypingIndicator = () => {
     <div className="flex justify-start mb-4">
       <div className="flex items-end space-x-2">
         <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
-          M
+          H
         </div>
         <div className="bg-gray-100 px-4 py-2 rounded-2xl">
           <div className="flex space-x-1">

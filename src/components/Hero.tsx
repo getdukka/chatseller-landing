@@ -18,7 +18,7 @@ const Hero = () => {
       
       <div className="container px-6 md:px-12 mx-auto">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center px-3 py-1.5 mb-6 border border-blue-100 rounded-full bg-blue-50 text-xs font-medium text-blue-600 animate-fade-in">
+          <div className="inline-flex items-center px-3 py-1.5 mb-6 border border-blue-100 rounded-full bg-blue-50 text-sm font-medium text-blue-600 animate-fade-in">
             <span className="flex h-2 w-2 mr-2">
               <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
@@ -26,13 +26,13 @@ const Hero = () => {
             Intégrable sur n'importe quelle boutique en ligne
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in [animation-delay:200ms]">
+          <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in [animation-delay:200ms]">
             Le
             <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Vendeur IA</span> qui transforme vos visiteurs en clients.
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl animate-fade-in [animation-delay:400ms]">
-            ChatSeller est un Agent IA qui discute avec vos clients, répond intelligemment à leurs questions et collecte leurs commandes, 24h/24. 
+            Créez un Vendeur IA qui discute avec vos clients, répond intelligemment à leurs questions et collecte leurs commandes, 24h/24. 
           </p>
           
           {/* Social Proof Statistics */}
@@ -54,7 +54,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-12 animate-fade-in [animation-delay:600ms]">
             <Button size="lg" className="group rounded-2xl" asChild>
               <a href="https://dashboard.chatseller.app/register">
-                Tester Chatseller maintenant
+                Créer mon Vendeur IA
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -65,7 +65,7 @@ const Hero = () => {
               onClick={() => setIsChatModalOpen(true)}
             >
               <MessageSquare className="mr-2 h-4 w-4" />
-              Parler à un conseiller
+              Voir Chatseller en action
             </Button>
           </div>
         </div>
@@ -92,12 +92,12 @@ const ConversationAnimation = () => {
   const [currentStep, setCurrentStep] = useState(0);
   
   const conversation = [
-    { type: 'bot', message: "Bonjour ! Je suis Mia, votre conseillère IA. Comment puis-je vous aider aujourd'hui ? 👋", delay: 1000 },
-    { type: 'user', message: "Salut ! Je cherche un casque sans fil de qualité pour le sport.", delay: 2000 },
-    { type: 'bot', message: "Parfait ! Pour le sport, je recommande notre casque SportPro avec résistance IPX7. Quel est votre budget ?", delay: 3000 },
-    { type: 'user', message: "Autour de 80-100€ maximum.", delay: 4000 },
-    { type: 'bot', message: "Excellent ! Le SportPro à 89€ est parfait. Autonomie 12h, étanche, très confortable. Voulez-vous que je prépare votre commande ?", delay: 5000 },
-    { type: 'user', message: "Oui, allons-y !", delay: 6000 }
+    { type: 'bot', message: "Bonjour 👋 Je suis Sally, votre Assistante d'achat. Comment puis-je vous aider aujourd'hui ?", delay: 1000 },
+    { type: 'user', message: "Bonjour Sally ! Pouvez-vous m'expliquer comment la ceinture Mia soulage les douleurs menstruelles?", delay: 2000 },
+    { type: 'bot', message: "Bien sûr ! La ceinture Mia agit de 2 façons : la chaleur liquéfie le sang et facilite son écoulement, et le massage détend vos muscles, ce qui réduit drastiquement la douleur.", delay: 3000 },
+    { type: 'user', message: "Je comprends mieux. Je vais la prendre.", delay: 4000 },
+    { type: 'bot', message: "Excellente décision ! Combien d'exemplaires souhaitez-vous commander ?", delay: 5000 },
+    { type: 'user', message: "Un seul, s'il vous plaît.", delay: 6000 }
   ];
 
   React.useEffect(() => {
@@ -112,10 +112,10 @@ const ConversationAnimation = () => {
       <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-            <span className="text-white text-sm font-bold">M</span>
+            <span className="text-white text-sm font-bold">S</span>
           </div>
           <div>
-            <div className="font-semibold text-sm">Mia - Conseillère IA</div>
+            <div className="font-semibold text-sm">Sally - Assistante d'achat</div>
             <div className="flex items-center text-xs text-gray-500">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-1"></div>
               En ligne

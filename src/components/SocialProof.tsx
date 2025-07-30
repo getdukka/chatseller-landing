@@ -306,7 +306,7 @@ const SocialProof = () => {
           </div>
         </div>
         
-        {/* Secondary Testimonials Grid */}
+        {/* Secondary Testimonials Grid 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 animate-fade-in [animation-delay:1000ms]">
           {testimonials.slice(1, 4).map((testimonial, index) => (
             <div key={index} className="transform scale-90">
@@ -315,7 +315,7 @@ const SocialProof = () => {
           ))}
         </div>
         
-        {/* Companies Section */}
+        {/* Companies Section 
         <div className="text-center mb-12">
           <h3 className="text-xl font-semibold text-gray-700 mb-8 animate-fade-in [animation-delay:1200ms]">
             Ils nous font confiance
@@ -328,7 +328,7 @@ const SocialProof = () => {
           </div>
         </div>
         
-        {/* Video Testimonials CTA */}
+        {/* Video Testimonials CTA 
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 max-w-2xl mx-auto text-center animate-fade-in [animation-delay:1600ms]">
           <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
             <Play className="w-8 h-8" />
@@ -353,7 +353,7 @@ const SocialProof = () => {
               </a>
             </Button>
           </div>
-        </div>
+        </div> */}
         
         {/* Trust Badges */}
         <div className="grid md:grid-cols-3 gap-6 mt-16 animate-fade-in [animation-delay:1800ms]">

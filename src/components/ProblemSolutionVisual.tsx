@@ -259,9 +259,9 @@ const SolutionIllustration = () => (
           <div className="w-4 h-4 bg-white/20 rounded-full flex items-center justify-center">
             <span className="text-xs">M</span>
           </div>
-          <div className="text-xs">Mia - Conseillère IA</div>
+          <div className="text-xs">Anna - Vendeuse IA</div>
         </div>
-        <div className="text-xs">Puis-je vous aider à choisir ?</div>
+        <div className="text-xs">Comment puis-je vous aider ?</div>
         <div className="absolute -bottom-1 left-4 w-2 h-2 bg-primary transform rotate-45"></div>
       </div>
       

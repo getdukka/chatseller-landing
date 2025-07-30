@@ -112,7 +112,7 @@ const DesktopDemo = () => {
           <div className="w-3 h-3 bg-green-400 rounded-full"></div>
         </div>
         <div className="flex-1 bg-white rounded px-3 py-1 text-sm text-gray-600 mx-4">
-          https://monboutique.com/produit/casque-sportpro
+          https://maboutique.com/produit/mia
         </div>
       </div>
 
@@ -130,27 +130,27 @@ const DesktopDemo = () => {
 
           {/* Product Info */}
           <div>
-            <h1 className="text-2xl font-bold mb-4">Casque SportPro Wireless</h1>
+            <h1 className="text-2xl font-bold mb-4">Mia - Coussin Chauffant</h1>
             <div className="flex items-center mb-4">
               <div className="flex text-yellow-400">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-current" />)}
               </div>
               <span className="text-gray-600 ml-2">(127 avis)</span>
             </div>
-            <div className="text-3xl font-bold text-green-600 mb-6">89€</div>
+            <div className="text-3xl font-bold text-green-600 mb-6">49€</div>
             
             <div className="space-y-4 mb-6">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm text-gray-600">Résistant à l'eau IPX7</span>
+                <span className="text-sm text-gray-600">Soulage les règles douloureuses</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm text-gray-600">Autonomie 12h</span>
+                <span className="text-sm text-gray-600">Autonomie 4h</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm text-gray-600">Réduction de bruit active</span>
+                <span className="text-sm text-gray-600">Solution 100% naturelle</span>
               </div>
             </div>
 
@@ -176,10 +176,10 @@ const DesktopDemo = () => {
             <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold">M</span>
+                  <span className="text-sm font-bold">S</span>
                 </div>
                 <div>
-                  <div className="font-semibold">Mia - Conseillère IA</div>
+                  <div className="font-semibold">Sally - Assistante d'achat</div>
                   <div className="text-xs opacity-90">En ligne • Répond en 2 sec</div>
                 </div>
               </div>
@@ -230,14 +230,14 @@ const MobileDemo = () => {
               </svg>
             </div>
             
-            <h2 className="text-lg font-bold mb-2">Casque SportPro</h2>
+            <h2 className="text-lg font-bold mb-2">Mia - Coussin chauffant</h2>
             <div className="flex items-center mb-2">
               <div className="flex text-yellow-400 text-sm">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-3 h-3 fill-current" />)}
               </div>
               <span className="text-gray-600 ml-2 text-xs">(127)</span>
             </div>
-            <div className="text-xl font-bold text-green-600 mb-4">89€</div>
+            <div className="text-xl font-bold text-green-600 mb-4">49€</div>
             
             <Button className="w-full mb-4 text-sm rounded-2xl">
               <ShoppingCart className="w-4 h-4 mr-2" />
@@ -260,10 +260,10 @@ const MobileDemo = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                      <span className="text-xs font-bold">M</span>
+                      <span className="text-xs font-bold">S</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-sm">Mia</div>
+                      <div className="font-semibold text-sm">Sally</div>
                       <div className="text-xs opacity-90">En ligne</div>
                     </div>
                   </div>
@@ -303,19 +303,19 @@ const ChatPreview = () => {
     <div className="space-y-4">
       <div className="flex justify-start">
         <div className="bg-gray-100 px-3 py-2 rounded-2xl max-w-xs">
-          <div className="text-sm">Bonjour ! Je vois que vous regardez notre casque SportPro. Puis-je vous aider ? 😊</div>
+          <div className="text-sm">Bonjour ! Je vois que vous vous intéressez à notre coussin chauffant. Puis-je vous aider ? 😊</div>
         </div>
       </div>
       
       <div className="flex justify-end">
         <div className="bg-blue-500 text-white px-3 py-2 rounded-2xl max-w-xs">
-          <div className="text-sm">Salut ! Il résiste vraiment à l'eau ?</div>
+          <div className="text-sm">Salut ! Soulage-t-elle vraiment les douleurs ?</div>
         </div>
       </div>
       
       <div className="flex justify-start">
         <div className="bg-gray-100 px-3 py-2 rounded-2xl max-w-xs">
-          <div className="text-sm">Absolument ! Il a la certification IPX7, vous pouvez même le rincer à l'eau. Parfait pour le sport ! Voulez-vous que je prépare votre commande ?</div>
+          <div className="text-sm">Absolument ! Le coussin chauffant Mia soulage les douleurs menstruelles grâce à la combinaison de la thermothérapie et de la massothérapie.</div>
         </div>
       </div>
       
