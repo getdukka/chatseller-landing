@@ -270,33 +270,36 @@ const PricingSection = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-16 animate-fade-in [animation-delay:600ms]">
           <PricingCard
             plan="Starter"
-            price="0€"
-            period=""
-            description="Parfait pour tester ChatSeller"
+            price="14€"
+            period="mois"
+            description="Parfait pour débuter avec ChatSeller"
             features={[
-              "3 jours de test gratuit",
+              "7 jours d'essai gratuit",
               "1 agent IA intelligent",
               "Base de connaissance (10 documents)",
               "Chat widget personnalisable",
               "Analytics de base",
               "Support email/whatsapp",
+              "Installation en 2 minutes",
+              "Compatible tous sites"
             ]}
             notIncluded={[
               "Upsell automatique",
               "Analytics avancées",
               "Intégrations Zapier",
             ]}
-            ctaText="Tester gratuitement"
+            ctaText="Commencer l'essai gratuit"
             ctaLink="https://dashboard.chatseller.app/register?plan=starter"
-            badge="Gratuit pendant 3 jours"
+            badge="7 jours gratuits"
           />
           
           <PricingCard
             plan="Professional"
-            price="14€"
+            price="29€"
             period="mois"
             description="Pour les e-commerçants sérieux"
             features={[
+              "7 jours d'essai gratuit",
               "Conversations illimitées",
               "3 agents IA spécialisés",
               "Base de connaissance illimitée",
@@ -311,7 +314,6 @@ const PricingSection = () => {
             ctaText="Démarrer le plan Pro"
             ctaLink="https://dashboard.chatseller.app/register?plan=pro"
             badge="Le plus populaire"
-            savings="-50%"
           />
           
           <PricingCard

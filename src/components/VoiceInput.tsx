@@ -1,124 +1,109 @@
-
-import React, { useState, useEffect } from 'react';
+// src/components/VoiceInput.tsx
+import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { Mic, MicOff, Loader2 } from 'lucide-react';
+import { Mic, MicOff } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 interface VoiceInputProps {
-  onTranscript: (text: string) => void;
+  onTranscript: (transcript: string) => void;
   disabled?: boolean;
 }
 
 const VoiceInput: React.FC<VoiceInputProps> = ({ onTranscript, disabled = false }) => {
   const [isListening, setIsListening] = useState(false);
-  const [isSupported, setIsSupported] = useState(true);
-  const [recognition, setRecognition] = useState<any>(null);
+  const [isSupported, setIsSupported] = useState(false);
+  const recognitionRef = useRef<any>(null);
   const { toast } = useToast();
-  const { language, t } = useLanguage();
 
   useEffect(() => {
-    // Check if browser supports SpeechRecognition
+    // Vérifier le support de Web Speech API
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     
-    if (!SpeechRecognition) {
-      setIsSupported(false);
-      return;
-    }
-
-    const recognitionInstance = new SpeechRecognition();
-    recognitionInstance.continuous = false;
-    recognitionInstance.interimResults = true;
-    recognitionInstance.lang = language === 'en' ? 'en-US' : 'fr-FR';
-
-    recognitionInstance.onresult = (event: any) => {
-      const transcript = Array.from(event.results)
-        .map((result: any) => result[0])
-        .map((result: any) => result.transcript)
-        .join('');
+    if (SpeechRecognition) {
+      setIsSupported(true);
+      recognitionRef.current = new SpeechRecognition();
       
-      if (event.results[0].isFinal) {
+      const recognition = recognitionRef.current;
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = 'fr-FR';
+      
+      recognition.onstart = () => {
+        setIsListening(true);
+      };
+      
+      recognition.onresult = (event: any) => {
+        const transcript = event.results[0][0].transcript;
         onTranscript(transcript);
         setIsListening(false);
-      }
-    };
-
-    recognitionInstance.onerror = (event: any) => {
-      console.error('Speech recognition error', event.error);
-      setIsListening(false);
-      toast({
-        title: t('voiceInputError'),
-        description: t('voiceInputErrorDesc'),
-        variant: 'destructive',
-      });
-    };
-
-    recognitionInstance.onend = () => {
-      setIsListening(false);
-    };
-
-    setRecognition(recognitionInstance);
-
+      };
+      
+      recognition.onerror = (event: any) => {
+        console.error('Speech recognition error:', event.error);
+        setIsListening(false);
+        
+        if (event.error === 'not-allowed') {
+          toast({
+            title: 'Microphone non autorisé',
+            description: 'Veuillez autoriser l\'accès au microphone pour utiliser la saisie vocale.',
+            variant: 'destructive',
+          });
+        } else {
+          toast({
+            title: 'Erreur de reconnaissance vocale',
+            description: 'Impossible de reconnaître votre voix. Veuillez réessayer.',
+            variant: 'destructive',
+          });
+        }
+      };
+      
+      recognition.onend = () => {
+        setIsListening(false);
+      };
+    }
+    
     return () => {
-      if (recognitionInstance) {
-        recognitionInstance.stop();
+      if (recognitionRef.current) {
+        recognitionRef.current.stop();
       }
     };
-  }, [language, onTranscript, toast, t]);
+  }, [onTranscript, toast]);
 
-  useEffect(() => {
-    if (recognition) {
-      recognition.lang = language === 'en' ? 'en-US' : 'fr-FR';
-    }
-  }, [language, recognition]);
-
-  const toggleListening = () => {
-    if (!isSupported) {
-      toast({
-        title: t('voiceInputNotSupported'),
-        description: t('voiceInputNotSupportedDesc'),
-        variant: 'destructive',
-      });
-      return;
-    }
-
-    if (isListening) {
-      recognition.stop();
-      setIsListening(false);
-    } else {
+  const startListening = () => {
+    if (recognitionRef.current && !isListening && !disabled) {
       try {
-        recognition.start();
-        setIsListening(true);
+        recognitionRef.current.start();
       } catch (error) {
-        console.error('Speech recognition error:', error);
+        console.error('Error starting speech recognition:', error);
         toast({
-          title: t('voiceInputError'),
-          description: t('voiceInputErrorDesc'),
+          title: 'Erreur',
+          description: 'Impossible de démarrer la reconnaissance vocale.',
           variant: 'destructive',
         });
       }
     }
   };
 
+  const stopListening = () => {
+    if (recognitionRef.current && isListening) {
+      recognitionRef.current.stop();
+    }
+  };
+
   if (!isSupported) {
-    return null;
+    return null; // Ne pas afficher le bouton si non supporté
   }
 
   return (
-    <Button
-      type="button"
-      variant="ghost"
-      size="icon"
-      className={`h-8 w-8 ${isListening ? 'text-primary animate-pulse' : ''}`}
-      onClick={toggleListening}
+    <Button 
+      variant="ghost" 
+      size="icon" 
+      className={`h-8 w-8 ml-2 ${isListening ? 'text-red-500 animate-pulse' : 'text-muted-foreground'}`}
+      onClick={isListening ? stopListening : startListening}
       disabled={disabled}
-      title={isListening ? t('stopListening') : t('startListening')}
+      title={isListening ? 'Arrêter l\'écoute' : 'Saisie vocale'}
     >
-      {isListening ? (
-        <MicOff className="h-4 w-4" />
-      ) : (
-        <Mic className="h-4 w-4" />
-      )}
+      {isListening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
     </Button>
   );
 };
