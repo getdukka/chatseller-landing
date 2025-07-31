@@ -505,7 +505,7 @@ const ComparisonSection = () => {
         
         {/* ✅ WHY CHATSELLER WINS - OPTIMISÉ MOBILE */}
         <div className="max-w-4xl mx-auto mb-16 animate-fade-in [animation-delay:1000ms]">
-          <h3 className="text-2xl font-bold text-center mb-8">
+          <h3 className="text-2xl font-bold text-center pt-8 mb-8">
             Voici pourquoi ChatSeller surpasse la concurrence
           </h3>
           

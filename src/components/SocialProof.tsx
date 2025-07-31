@@ -21,8 +21,8 @@ const TestimonialCarousel = () => {
   // ✅ TÉMOIGNAGES RÉALISTES DE TESTEURS PAR PAYS
   const testimonials = [
     {
-      text: "J'ai testé ChatSeller sur ma boutique pendant 2 semaines. Les résultats sont impressionnants ! L'IA répond naturellement aux questions de mes clients et j'ai eu 3 nouvelles commandes dès la première semaine.",
-      author: "Marie Dubois",
+      text: "J'ai testé ChatSeller sur ma boutique pendant 2 semaines. Les résultats sont impressionnants ! L'IA répond naturellement aux questions de mes clients et j'ai eu 12 nouvelles commandes dès la première semaine.",
+      author: "Meganne Bihan",
       location: "Lyon, France",
       flag: "🇫🇷",
       avatar: "MD"
@@ -35,7 +35,7 @@ const TestimonialCarousel = () => {
       avatar: "SM"
     },
     {
-      text: "En tant qu'e-commerçant au Sénégal, j'étais sceptique au début. Mais ChatSeller comprend parfaitement le contexte local et répond en français adapté à nos clients. Mes ventes ont augmenté de 40% !",
+      text: "En tant qu'e-commerçant au Sénégal, j'étais sceptique au début. Mais mon Vendeur IA sait des choses sur mes produits que j'ignorais moi-même. C'est hallucinant ! Mes ventes ont augmenté de 40% !",
       author: "Amadou Tall",
       location: "Dakar, Sénégal",
       flag: "🇸🇳", 
@@ -43,20 +43,20 @@ const TestimonialCarousel = () => {
     },
     {
       text: "L'IA de ChatSeller est bluffante ! Elle connaît mes produits mieux que certains de mes employés. Mes clients sont ravis d'avoir des réponses précises instantanément. Je recommande vivement !",
-      author: "Fatou Kouamé",
+      author: "Hortense Kouamé",
       location: "Abidjan, Côte d'Ivoire",
       flag: "🇨🇮",
-      avatar: "FK"
+      avatar: "HK"
     },
     {
-      text: "ChatSeller a dépassé mes attentes. L'installation a pris 5 minutes et dès le lendemain j'avais déjà mes premières conversions. L'IA pose les bonnes questions pour qualifier mes prospects.",
+      text: "ChatSeller a dépassé mes attentes. L'installation a pris 3 minutes et dès le lendemain j'avais déjà mes premières conversions. L'IA pose les bonnes questions pour qualifier mes prospects.",
       author: "Thomas Lemaire", 
       location: "Paris, France",
       flag: "🇫🇷",
       avatar: "TL"
     },
     {
-      text: "Excellente solution ! L'agent IA s'adapte parfaitement à ma clientèle belge et française. Il collècte les informations de commande de manière très naturelle. Mes clients ne se rendent même pas compte que c'est une IA !",
+      text: "Excellente solution ! Le Vendeur IA s'adapte parfaitement à ma clientèle belge et française. Il collècte les informations de commande de manière très naturelle. Mes clients ne se rendent même pas compte que c'est une IA !",
       author: "Valérie Janssens",
       location: "Gand, Belgique",
       flag: "🇧🇪", 
@@ -73,7 +73,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto hero-gradient-bg">
       {/* Carousel Container */}
       <div className="relative">
         <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 mx-4 min-h-[280px]">
@@ -167,7 +167,7 @@ const SocialProof = () => {
   const stats = [
     {
       value: "+50",
-      label: "Testeurs",
+      label: "Early Adopters",
       icon: <Users className="w-6 h-6" />,
       description: "Ont testé ChatSeller en avant-première"
     },
@@ -205,13 +205,18 @@ const SocialProof = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
-            Ce que disent les e-commerçants qui ont 
+            Voici ce que disent les e-commerçants qui ont 
             <span className="text-gradient bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent"> testé ChatSeller</span>
           </h2>
           
           <p className="text-lg text-muted-foreground animate-fade-in [animation-delay:400ms]">
-            Des retours authentiques d'entrepreneurs qui ont testé notre Vendeur IA en avant-première
+            Des retours authentiques d'entrepreneurs qui ont fait l'expérience du Vendeur IA.
           </p>
+        </div>
+
+        {/* Testimonials Carousel */}
+        <div className="mb-16 animate-fade-in [animation-delay:800ms]">
+          <TestimonialCarousel />
         </div>
         
         {/* Stats Grid */}
@@ -225,11 +230,6 @@ const SocialProof = () => {
               description={stat.description}
             />
           ))}
-        </div>
-        
-        {/* Testimonials Carousel */}
-        <div className="mb-16 animate-fade-in [animation-delay:800ms]">
-          <TestimonialCarousel />
         </div>
         
         {/* Call to Action */}
@@ -253,27 +253,6 @@ const SocialProof = () => {
           <p className="text-sm text-muted-foreground mt-4">
             ✅ 7 jours gratuits • ✅ Installation en 2 minutes • ✅ Sans engagement
           </p>
-        </div>
-        
-        {/* Trust Badges */}
-        <div className="grid md:grid-cols-3 gap-6 mt-16 animate-fade-in [animation-delay:1200ms]">
-          <div className="text-center p-6 bg-white/60 rounded-xl border border-gray-200">
-            <Shield className="w-8 h-8 text-green-500 mx-auto mb-3" />
-            <h4 className="font-semibold mb-2">RGPD Compliant</h4>
-            <p className="text-sm text-muted-foreground">Données sécurisées et conformes</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white/60 rounded-xl border border-gray-200">
-            <Globe className="w-8 h-8 text-blue-500 mx-auto mb-3" />
-            <h4 className="font-semibold mb-2">Made in Africa</h4>
-            <p className="text-sm text-muted-foreground">Développé pour le marché africain</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white/60 rounded-xl border border-gray-200">
-            <CheckCircle2 className="w-8 h-8 text-purple-500 mx-auto mb-3" />
-            <h4 className="font-semibold mb-2">Support 24/7</h4>
-            <p className="text-sm text-muted-foreground">Service client réactif FR/EN</p>
-          </div>
         </div>
       </div>
     </section>

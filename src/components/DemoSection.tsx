@@ -1,6 +1,6 @@
-// src/components/DemoSection.tsx - VRAIE EXPÉRIENCE CHATSELLER
+// src/components/DemoSection.tsx - VRAIE EXPÉRIENCE CHATSELLER AVEC MODAL CENTRAL
 import React, { useState } from 'react';
-import { ArrowRight, MessageSquare, ShoppingCart, Star, Smartphone, Monitor, Phone } from 'lucide-react';
+import { ArrowRight, MessageSquare, ShoppingCart, Star, Smartphone, Monitor } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -30,7 +30,7 @@ const DemoSection = () => {
           </p>
           
           <p className="text-muted-foreground mb-8 animate-fade-in [animation-delay:500ms]">
-            {t('demoTip')}
+            Cliquez sur le bouton "Parler à la vendeuse" dans la démo ci-dessous pour tester !
           </p>
         </div>
 
@@ -64,28 +64,21 @@ const DemoSection = () => {
         
         {/* Demo Product Page */}
         <div className="max-w-5xl mx-auto mb-12 animate-fade-in [animation-delay:800ms]">
-          {activeView === 'desktop' ? <DesktopDemo /> : <MobileDemo />}
+          {activeView === 'desktop' ? (
+            <DesktopDemo onChatOpen={() => setIsChatModalOpen(true)} />
+          ) : (
+            <MobileDemo onChatOpen={() => setIsChatModalOpen(true)} />
+          )}
         </div>
         
         {/* Call to Action */}
         <div className="text-center animate-fade-in [animation-delay:1000ms]">
-          <Button 
-            size="lg" 
-            className="group rounded-2xl mb-4"
-            onClick={() => setIsChatModalOpen(true)}
-          >
-            <MessageSquare className="mr-2 h-4 w-4" />
-            Tester le Vendeur IA maintenant
+          <Button size="lg" className="rounded-2xl" asChild>
+            <a href="https://dashboard.chatseller.app/register">
+              Créer mon Vendeur IA
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
           </Button>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-            <Button size="lg" className="rounded-2xl" asChild>
-              <a href="https://dashboard.chatseller.app/register">
-                Créer mon Vendeur IA
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
-          </div>
         </div>
 
         {/* Chat Modal */}
@@ -98,10 +91,8 @@ const DemoSection = () => {
   );
 };
 
-// ✅ COMPOSANT DEMO DESKTOP AVEC VRAIE EXPÉRIENCE
-const DesktopDemo = () => {
-  const [showChat, setShowChat] = useState(false);
-
+// ✅ COMPOSANT DEMO DESKTOP SIMPLIFIÉ
+const DesktopDemo = ({ onChatOpen }: { onChatOpen: () => void }) => {
   return (
     <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
       {/* Browser Bar */}
@@ -162,70 +153,24 @@ const DesktopDemo = () => {
               Ajouter au panier
             </Button>
 
-            {/* ✅ BOUTON NOIR CHATSELLER COMME DEMANDÉ */}
+            {/* ✅ BOUTON NOIR CHATSELLER QUI OUVRE LE MODAL CENTRAL */}
             <Button 
-              onClick={() => setShowChat(!showChat)}
-              className="w-full mb-4 rounded-2xl bg-black hover:bg-gray-800 text-white"
+              onClick={onChatOpen}
+              className="w-full mb-4 rounded-2xl bg-black hover:bg-gray-800 text-white group"
             >
               <MessageSquare className="w-4 h-4 mr-2" />
               💬 Parler à la vendeuse
+              <span className="ml-2 text-xs opacity-75 group-hover:opacity-100">Cliquez pour tester !</span>
             </Button>
           </div>
         </div>
-
-        {/* ✅ CHAT WIDGET CHATSELLER */}
-        {showChat && (
-          <div className="fixed bottom-6 right-6 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-fade-in z-50">
-            <div className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-bold">A</span>
-                  </div>
-                  <div>
-                    <div className="font-semibold">Anna - Vendeuse IA</div>
-                    <div className="text-xs opacity-90 flex items-center">
-                      <div className="w-2 h-2 bg-green-300 rounded-full mr-1 animate-pulse"></div>
-                      En ligne • Répond en 2 sec
-                    </div>
-                  </div>
-                </div>
-                <button 
-                  onClick={() => setShowChat(false)}
-                  className="text-white hover:bg-white/20 rounded p-1"
-                >
-                  ✕
-                </button>
-              </div>
-            </div>
-            
-            <div className="p-4 h-64 overflow-y-auto">
-              <ChatPreview />
-            </div>
-            
-            <div className="p-4 border-t bg-gray-50">
-              <div className="flex space-x-2">
-                <input 
-                  type="text" 
-                  placeholder="Tapez votre message..."
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-pink-500"
-                />
-                <button className="w-8 h-8 bg-pink-500 text-white rounded-full flex items-center justify-center hover:bg-pink-600">
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
 };
 
-// ✅ COMPOSANT DEMO MOBILE AVEC VRAIE EXPÉRIENCE
-const MobileDemo = () => {
-  const [showChat, setShowChat] = useState(false);
-
+// ✅ COMPOSANT DEMO MOBILE SIMPLIFIÉ
+const MobileDemo = ({ onChatOpen }: { onChatOpen: () => void }) => {
   return (
     <div className="max-w-sm mx-auto">
       <div className="bg-gray-900 rounded-t-3xl p-2">
@@ -261,91 +206,15 @@ const MobileDemo = () => {
               Ajouter au panier
             </Button>
 
-            {/* ✅ BOUTON NOIR CHATSELLER */}
+            {/* ✅ BOUTON NOIR CHATSELLER QUI OUVRE LE MODAL CENTRAL */}
             <Button 
-              onClick={() => setShowChat(!showChat)}
-              className="w-full mb-4 text-sm rounded-2xl bg-black hover:bg-gray-800 text-white"
+              onClick={onChatOpen}
+              className="w-full mb-4 text-sm rounded-2xl bg-black hover:bg-gray-800 text-white group"
             >
               <MessageSquare className="w-4 h-4 mr-2" />
               💬 Parler à la vendeuse
             </Button>
           </div>
-
-          {/* ✅ INTERFACE CHAT MOBILE PLEIN ÉCRAN */}
-          {showChat && (
-            <div className="fixed inset-0 bg-white z-50">
-              <div className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                      <span className="text-xs font-bold">A</span>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-sm">Anna</div>
-                      <div className="text-xs opacity-90 flex items-center">
-                        <div className="w-2 h-2 bg-green-300 rounded-full mr-1 animate-pulse"></div>
-                        En ligne
-                      </div>
-                    </div>
-                  </div>
-                  <button 
-                    onClick={() => setShowChat(false)} 
-                    className="text-white bg-white/20 rounded-full w-8 h-8 flex items-center justify-center"
-                  >
-                    ✕
-                  </button>
-                </div>
-              </div>
-              
-              <div className="p-4 h-80 overflow-y-auto">
-                <ChatPreview />
-              </div>
-              
-              <div className="p-4 border-t absolute bottom-0 left-0 right-0 bg-white">
-                <div className="flex space-x-2">
-                  <input 
-                    type="text" 
-                    placeholder="Tapez votre message..."
-                    className="flex-1 px-3 py-2 border border-gray-300 rounded-full text-sm"
-                  />
-                  <button className="w-8 h-8 bg-pink-500 text-white rounded-full flex items-center justify-center">
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// ✅ PRÉVISUALISATION CHAT AVEC CEINTURE CHAUFFANTE
-const ChatPreview = () => {
-  return (
-    <div className="space-y-4">
-      <div className="flex justify-start">
-        <div className="bg-gray-100 px-3 py-2 rounded-2xl max-w-xs">
-          <div className="text-sm">Bonjour ! Je vois que vous vous intéressez à notre ceinture chauffante Mia. Comment puis-je vous aider ? 😊</div>
-        </div>
-      </div>
-      
-      <div className="flex justify-end">
-        <div className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-3 py-2 rounded-2xl max-w-xs">
-          <div className="text-sm">Bonjour ! Est-ce que ça soulage vraiment les douleurs menstruelles ?</div>
-        </div>
-      </div>
-      
-      <div className="flex justify-start">
-        <div className="bg-gray-100 px-3 py-2 rounded-2xl max-w-xs">
-          <div className="text-sm">Absolument ! La ceinture Mia utilise la thermothérapie pour détendre les muscles et réduire l'inflammation. Elle chauffe en 30 secondes et offre 4h d'autonomie. Voulez-vous que je vous aide à passer commande ?</div>
-        </div>
-      </div>
-      
-      <div className="flex justify-center">
-        <div className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-          Cliquez sur "Tester maintenant" pour continuer cette conversation ! 👆
         </div>
       </div>
     </div>

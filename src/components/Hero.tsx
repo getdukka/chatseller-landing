@@ -8,14 +8,15 @@ const Hero = () => {
   const [isChatModalOpen, setIsChatModalOpen] = useState(false);
 
   return (
-    <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
-      {/* ✅ BACKGROUND STYLE CLUELY - AMÉLIORÉ */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-white to-purple-50/60 -z-10" />
+    <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden hero-gradient-bg">
+      {/* ✅ BACKGROUND STYLE CLUELY - VERSION PLUS VISIBLE */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-indigo-50 to-purple-100 -z-20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-white/60 -z-10" />
       
-      {/* ✅ CERCLES DÉCORATIFS PLUS VISIBLES */}
-      <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-br from-blue-100/40 to-purple-100/30 rounded-full blur-3xl -z-10 animate-pulse" />
-      <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-100/40 to-pink-100/30 rounded-full blur-3xl -z-10 animate-pulse" style={{animationDelay: '1s'}} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-blue-50/20 to-purple-50/20 rounded-full blur-3xl -z-10" />
+      {/* ✅ CERCLES DÉCORATIFS BEAUCOUP PLUS VISIBLES */}
+      <div className="absolute top-10 left-10 w-80 h-80 bg-gradient-to-br from-blue-200/60 to-purple-200/50 rounded-full blur-3xl -z-10 animate-pulse" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-br from-purple-200/60 to-pink-200/50 rounded-full blur-3xl -z-10 animate-pulse" style={{animationDelay: '1s'}} />
+      <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-gradient-to-br from-indigo-200/40 to-blue-200/40 rounded-full blur-2xl -z-10 animate-pulse" style={{animationDelay: '2s'}} />
       
       <div className="container px-6 md:px-12 mx-auto relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
@@ -32,8 +33,8 @@ const Hero = () => {
             <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Vendeur IA</span> qui transforme vos visiteurs en clients.
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl animate-fade-in [animation-delay:400ms] leading-relaxed">
-            Créez un Vendeur IA qui discute avec vos clients, répond intelligemment à leurs questions et collecte leurs commandes, 24h/24. 
+          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl animate-fade-in [animation-delay:400ms] leading-relaxed">
+            Plus qu'un chatbot : un vrai commercial IA qui collecte les commandes dans la conversation et booste vos ventes 24h/24. 
           </p>
           
           {/* Social Proof Statistics */}
@@ -99,12 +100,12 @@ const ConversationAnimation = () => {
   const [currentStep, setCurrentStep] = useState(0);
   
   const conversation = [
-    { type: 'bot', message: "Bonjour 👋 Je suis Anna, votre Vendeuse IA. Comment puis-je vous aider aujourd'hui ?", delay: 1000 },
-    { type: 'user', message: "Bonjour Anna ! J'aimerais en savoir plus sur cette ceinture chauffante pour les douleurs menstruelles.", delay: 2000 },
-    { type: 'bot', message: "Excellente question ! Cette ceinture chauffante Mia utilise la thermothérapie pour soulager les douleurs menstruelles. Elle offre 4h d'autonomie et chauffe en 30 secondes. Voulez-vous que je vous aide à passer commande ?", delay: 3000 },
-    { type: 'user', message: "Oui, je suis intéressée ! Quel est le prix ?", delay: 4000 },
-    { type: 'bot', message: "Le prix est de 49€ avec la livraison gratuite ! Pour finaliser votre commande, puis-je avoir votre nom et prénom ?", delay: 5000 },
-    { type: 'user', message: "Bien sûr, je m'appelle Sarah Martin.", delay: 6000 }
+    { type: 'bot', message: "Bonjour 👋 Je suis Anna, Vendeuse chez Amani. Comment puis-je vous aider ?", delay: 1000 },
+    { type: 'user', message: "Bonjour Anna ! J'aimerais savoir comment cette ceinture chauffante soulage les douleurs menstruelles.", delay: 2000 },
+    { type: 'bot', message: "Excellente question ! La ceinture chauffante Mia agit de 2 façons : la chaleur liquéfie le sang et facilite son écoulement, et le massage détend les muscles. La combinaison des deux réduit drastiquement la douleur. Voulez-vous que je vous aide à passer commande ?", delay: 3000 },
+    { type: 'user', message: "Oui, je vais la prendre.", delay: 4000 },
+    { type: 'bot', message: "Excellente décision ☺️ Combien d'exemplaires souhaitez-vous commander ?", delay: 5000 },
+    { type: 'user', message: "Juste un seul, pour l'instant.", delay: 6000 }
   ];
 
   React.useEffect(() => {
@@ -122,7 +123,7 @@ const ConversationAnimation = () => {
             <span className="text-white text-sm font-bold">A</span>
           </div>
           <div>
-            <div className="font-semibold text-sm">Anna - Vendeuse IA</div>
+            <div className="font-semibold text-sm">Anna - Assistante d'achat</div>
             <div className="flex items-center text-xs text-gray-500">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-1 animate-pulse"></div>
               En ligne

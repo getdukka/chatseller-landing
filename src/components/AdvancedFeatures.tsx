@@ -84,19 +84,19 @@ const AdvancedFeatures = () => {
       <div className="absolute right-0 top-1/4 w-1/3 h-1/2 bg-blue-50/50 rounded-l-3xl -z-10" />
       
       <div className="container px-6 md:px-12 mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="inline-flex items-center px-4 py-2 mb-6 border border-primary/20 rounded-full bg-primary/10 text-sm font-medium text-primary animate-fade-in">
             <Zap className="w-4 h-4 mr-2" />
             Plus qu'un chatbot : un vendeur IA complet
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
             Tout ce dont vous avez besoin pour 
             <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> transformer vos visiteurs en clients</span>
           </h2>
           
           <p className="text-lg text-muted-foreground animate-fade-in [animation-delay:400ms]">
-            Toutes les fonctions qu’il vous faut pour vendre plus, plus vite, sans rester collé à votre téléphone.
+            Nous intégrons tout ce qu’il vous faut pour vendre plus, plus vite, sans rester collé à votre téléphone.
           </p>
         </div>
         

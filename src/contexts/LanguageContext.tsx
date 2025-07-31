@@ -194,7 +194,7 @@ const translations: Record<Language, Translations> = {
     
     // Hero Section
     heroTitle: 'Le Vendeur IA qui transforme vos visiteurs en clients.',
-    heroSubtitle: 'Créez un Vendeur IA qui discute avec vos clients, répond intelligemment à leurs questions et collecte leurs commandes, 24h/24.',
+    heroSubtitle: 'Plus qu\'un chatbot : un vrai commercial IA qui collecte les commandes dans la conversation et booste vos ventes 24h/24.',
     heroInstallation: 'Installation en 2 minutes',
     heroTrialDays: '7 jours d\'essai gratuit',
     heroNoCard: 'Carte bancaire non exigée',
@@ -371,7 +371,7 @@ const translations: Record<Language, Translations> = {
     
     // Hero Section
     heroTitle: 'The AI Sales Agent that turns visitors into customers.',
-    heroSubtitle: 'Create an AI Sales Agent that talks to your customers, intelligently answers their questions, and collects their orders, 24/7.',
+    heroSubtitle: 'More than a chatbot: a real AI sales agent that collects orders within the conversation and boosts your sales 24/7.',
     heroInstallation: '2-minute installation',
     heroTrialDays: '7-day free trial',
     heroNoCard: 'No credit card required',
