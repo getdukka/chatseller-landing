@@ -239,7 +239,7 @@ const FAQSection = () => {
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Personnalité :</strong> Professionnel, décontracté, expert, amical...</li>
                 <li><strong>Ton de voix :</strong> Adapté à votre marque et clientèle</li>
-                <li><strong>Avatar :</strong> Photo, nom, titre personnalisables</li>
+                <li><strong>Avatar :</strong> Logo, nom, titre personnalisables</li>
                 <li><strong>Messages types :</strong> Salutations et réponses sur mesure</li>
                 <li><strong>Spécialisation :</strong> Mode, tech, alimentaire, beauté...</li>
                 <li><strong>Couleurs :</strong> Widget aux couleurs de votre marque</li>
@@ -286,14 +286,14 @@ const FAQSection = () => {
                 <strong>Prix 100% transparent, aucune commission :</strong>
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Prix fixe :</strong> 0€ (Starter) ou 14€/mois (Pro), c'est tout</li>
+                <li><strong>Prix fixe :</strong> 14€/mois (Starter) ou 29€/mois (Pro), c'est tout</li>
                 <li><strong>Aucune commission :</strong> 0% sur vos ventes, 100% pour vous</li>
                 <li><strong>Pas de frais cachés :</strong> Installation, mises à jour, support inclus</li>
                 <li><strong>Pas de limite :</strong> Vendez autant que vous voulez</li>
                 <li><strong>Facture simple :</strong> Un seul prélèvement mensuel</li>
               </ul>
               <p className="mt-3 text-sm text-green-600">
-                💰 <strong>Exemple :</strong> Si vous générez +5,000€/mois grâce à ChatSeller, vous payez toujours 14€/mois.
+                💰 <strong>Exemple :</strong> Si vous générez +5,000€/mois grâce à ChatSeller, vous payez toujours 14€ ou 29€ par mois.
               </p>
             </div>
           ),
@@ -304,7 +304,7 @@ const FAQSection = () => {
           answer: (
             <div>
               <p className="mb-3">
-                Non, le plan gratuit est limité à 3 jours. Il vous permet de tester Chatseller et décider si l'investissement en vaut le coup.
+                Non, le plan gratuit est limité à 7 jours. Il vous permet de tester Chatseller et décider si l'investissement en vaut le coup.
               </p>
               <p className="mt-3 text-sm text-blue-600">
                 🎁 Nous sommes confiants que vous allez adorer ChatSeller et vouloir passer naturellement au plan payant.

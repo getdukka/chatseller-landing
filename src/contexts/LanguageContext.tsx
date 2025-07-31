@@ -246,7 +246,7 @@ const translations: Record<Language, Translations> = {
     
     // Demo
     demoTitle: 'Testez ChatSeller en live',
-    demoSubtitle: 'Discutez avec notre Agent IA pour découvrir comment il peut transformer votre boutique',
+    demoSubtitle: 'Discutez avec la Vendeuse IA d\'AMANI, une marque de bien-être féminin',
     demoTip: 'Essayez de lui poser des questions sur les prix, l\'installation ou les fonctionnalités !',
     demoBadge: 'Démo en temps réel',
     demoDesktop: 'Vue Desktop',

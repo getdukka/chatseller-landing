@@ -41,7 +41,7 @@ const ProblemSolutionVisual = () => {
               <ProblemPoint 
                 icon={<TrendingDown className="h-6 w-6 text-red-500" />}
                 title="Taux de conversion faible"
-                description="Seulement 2-3% de conversion moyenne"
+                description="Seulement 2-3% de conversion en moyenne"
               />
             </div>
           </div>
@@ -93,8 +93,8 @@ const ProblemSolutionVisual = () => {
             <div className="space-y-6 text-left order-2 lg:order-1 animate-fade-in [animation-delay:600ms]">
               <SolutionPoint 
                 icon={<Check className="h-6 w-6 text-green-500" />}
-                title="Vendeur IA 24/7"
-                description="Accueille et conseille chaque visiteur"
+                title="Vendeur IA disponible 24/7"
+                description="Accueille, rassure et conseille chaque visiteur"
               />
               <SolutionPoint 
                 icon={<ShoppingCart className="h-6 w-6 text-green-500" />}
@@ -138,7 +138,7 @@ const ProblemSolutionVisual = () => {
           
           {/* Final CTA */}
           <div className="animate-fade-in [animation-delay:1000ms]">
-            <Button size="lg" className="group rounded-2xl">
+            <Button size="lg" className="group rounded-full">
               <a href="https://dashboard.chatseller.app/register" className="flex items-center">
                 Tester ChatSeller 7 jours gratuits
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

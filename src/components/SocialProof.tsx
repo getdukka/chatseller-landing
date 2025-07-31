@@ -22,7 +22,7 @@ const TestimonialCarousel = () => {
   const testimonials = [
     {
       text: "J'ai testé ChatSeller sur ma boutique pendant 2 semaines. Les résultats sont impressionnants ! L'IA répond naturellement aux questions de mes clients et j'ai eu 12 nouvelles commandes dès la première semaine.",
-      author: "Meganne Bihan",
+      author: "Megane Bihan",
       location: "Lyon, France",
       flag: "🇫🇷",
       avatar: "MD"
@@ -238,14 +238,14 @@ const SocialProof = () => {
             <MessageSquare className="w-8 h-8" />
           </div>
           
-          <h3 className="text-2xl font-bold mb-4">Rejoignez les testeurs satisfaits</h3>
+          <h3 className="text-2xl font-bold mb-4">Créez vous aussi votre Vendeur IA dès aujourd'hui</h3>
           <p className="text-muted-foreground mb-6">
-            Découvrez pourquoi les e-commerçants choisissent ChatSeller pour transformer leurs visiteurs en clients
+            Offrez aux visiteurs de votre boutique en ligne une expérience similaire à celle d'une boutique physique.
           </p>
           
           <Button size="lg" className="group rounded-2xl">
             <a href="https://dashboard.chatseller.app/register" className="flex items-center">
-              Je veux tester ChatSeller
+              Créer mon Vendeur IA
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>

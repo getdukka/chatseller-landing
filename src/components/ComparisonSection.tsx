@@ -540,9 +540,9 @@ const ComparisonSection = () => {
                   <Globe className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-purple-900 mb-2">Conçu pour l'Afrique et le monde</h4>
+                  <h4 className="font-semibold text-purple-900 mb-2">Conçu pour tout type d'e-commerce</h4>
                   <p className="text-purple-800 text-sm">
-                    Mobile-first, multilingue FR/EN, adapté aux connexions lentes et au marché africain.
+                    Mobile-first, multilingue FR/EN, adapté aux connexions lentes et à tous les marchés.
                   </p>
                 </div>
               </div>
@@ -568,7 +568,7 @@ const ComparisonSection = () => {
                 <div>
                   <h4 className="font-semibold text-red-900 mb-2">Installation Ultra-Rapide</h4>
                   <p className="text-red-800 text-sm">
-                    2 minutes vs 2 semaines pour la concurrence. ChatSeller est prêt à vendre immédiatement, sans développeur.
+                    En seulement 2 minutes, et sans développeur, votre Vendeur IA est prêt à discuter avec les visiteurs de votre boutique et les transformer en clients.
                   </p>
                 </div>
               </div>

@@ -263,7 +263,7 @@ const PricingSection = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground animate-fade-in [animation-delay:400ms]">
-            Commencez avec 7 jours gratuits sur le plan Starter. Aucun engagement, annulation en 1 clic.
+            Commencez avec 7 jours gratuits sur le plan Starter. Aucun engagement requis.
           </p>
         </div>
         
