@@ -394,7 +394,7 @@ const FAQSection = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground animate-fade-in [animation-delay:400ms]">
-            Tout ce que vous devez savoir avant d'ajouter votre Vendeur IA sur votre boutique en ligne. 
+            Tout ce que vous devez savoir avant d'ajouter votre Vendeur IA sur votre site web. 
           </p>
         </div>
         

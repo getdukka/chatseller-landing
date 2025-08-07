@@ -107,9 +107,9 @@ const PricingCard = ({
 
 const ComparisonTable = () => {
   const features = [
-    { feature: "Conversations par mois", starter: "Illimitées", pro: "Illimitées", enterprise: "Illimitées" },
-    { feature: "Agents IA", starter: "1", pro: "3 spécialisés", enterprise: "Illimités" },
-    { feature: "Base de connaissance", starter: "10 documents", pro: "Illimitée", enterprise: "Illimitée" },
+    { feature: "Crédits messages par mois", starter: "1000", pro: "5000", enterprise: "Illimitées" },
+    { feature: "Vendeurs IA", starter: "1", pro: "3 spécialisés", enterprise: "Illimités" },
+    { feature: "Base de connaissance", starter: "10 documents", pro: "50 documents", enterprise: "Illimitée" },
     { feature: "Chat widget personnalisable", starter: "✓", pro: "✓", enterprise: "✓" },
     { feature: "Analytics de base", starter: "✓", pro: "✓", enterprise: "✓" },
     { feature: "Upsell automatique", starter: "✗", pro: "✓", enterprise: "✓" },
@@ -276,14 +276,14 @@ const PricingSection = () => {
             description="Parfait pour débuter avec ChatSeller"
             features={[
               "7 jours d'essai gratuit",
-              "1 agent IA intelligent",
-              "Conversations illimitées",
+              "1 Vendeur IA intelligent",
+              "1000 crédits messages par mois",
               "Base de connaissance (10 documents)",
               "Chat widget personnalisable",
               "Analytics de base",
               "Support email",
               "Installation en 2 minutes",
-              "Compatible tous sites"
+              "Compatible sur tous les sites"
             ]}
             notIncluded={[
               "Upsell automatique",
@@ -303,14 +303,14 @@ const PricingSection = () => {
             description="Pour les e-commerçants sérieux"
             features={[
               "Tout du plan Starter",
-              "3 agents IA spécialisés",
-              "Base de connaissance illimitée",
+              "3 Vendeurs IA spécialisés",
+              "5000 crédits messages par mois",
+              "Base de connaissance (50 documents)",
               "Upsell automatique intelligent",
               "Analytics avancées & ROI",
-              "Support prioritaire",
-              "Formation personnalisée",
               "Bilingue (FR/EN)",
-              "API accès complet"
+              "Support prioritaire",
+              "Priorité Nouveautés",
             ]}
             isPopular={true}
             ctaText="Démarrer le plan Pro"
@@ -324,8 +324,8 @@ const PricingSection = () => {
             period=""
             description="Pour les grandes entreprises"
             features={[
-              "Tout du plan Professional",
-              "Agents IA illimités",
+              "Tout du plan Pro",
+              "Jusqu'à 10 Vendeurs IA",
               "White-label complet", 
               "API complète & webhooks",
               "Intégrations sur mesure",

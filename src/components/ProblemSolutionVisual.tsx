@@ -104,7 +104,7 @@ const ProblemSolutionVisual = () => {
               <SolutionPoint 
                 icon={<TrendingUp className="h-6 w-6 text-green-500" />}
                 title="Ventes additionnelles"
-                description="+34% de panier moyen automatiquement"
+                description="Recommande des produits complémentaires"
               />
             </div>
             
@@ -140,7 +140,7 @@ const ProblemSolutionVisual = () => {
           <div className="animate-fade-in [animation-delay:1000ms]">
             <Button size="lg" className="group rounded-full">
               <a href="https://dashboard.chatseller.app/register" className="flex items-center">
-                Tester ChatSeller 7 jours gratuits
+                Tester ChatSeller Gratuitement
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
