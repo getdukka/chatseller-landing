@@ -103,7 +103,7 @@ const DesktopDemo = ({ onChatOpen }: { onChatOpen: () => void }) => {
           <div className="w-3 h-3 bg-green-400 rounded-full"></div>
         </div>
         <div className="flex-1 bg-white rounded px-3 py-1 text-sm text-gray-600 mx-4">
-          https://maboutique.com/produit/ceinture-chauffante
+          https://maboutique.com/produit/mia
         </div>
       </div>
 

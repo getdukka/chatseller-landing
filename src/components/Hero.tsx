@@ -36,23 +36,7 @@ const Hero = () => {
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl animate-fade-in [animation-delay:400ms] leading-relaxed">
             Plus qu'un chatbot : un vrai commercial IA qui collecte les commandes dans la conversation et booste vos ventes 24h/24. 
           </p>
-          
-          {/* Social Proof Statistics */}
-          <div className="flex flex-wrap justify-center gap-6 mb-8 animate-fade-in [animation-delay:500ms]">
-            <div className="flex items-center text-sm text-muted-foreground bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-200/50">
-              <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-              <span>Installation en <strong>2 minutes</strong></span>
-            </div>
-            <div className="flex items-center text-sm text-muted-foreground bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-200/50">
-              <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-              <span><strong>7 jours</strong> d'essai gratuit</span>
-            </div>
-            <div className="flex items-center text-sm text-muted-foreground bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-200/50">
-              <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-              <span><strong>Carte bancaire</strong> non exigée</span>
-            </div>
-          </div>
-          
+
           {/* ✅ BOUTONS STYLE CLUELY AVEC BORDURES ARRONDIES */}
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-12 animate-fade-in [animation-delay:600ms]">
             <Button 
@@ -70,11 +54,29 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="group rounded-full px-8 py-4 text-base font-semibold bg-black hover:bg-gray-800 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => setIsChatModalOpen(true)}
+              asChild
             >
+              <a href="#demo">
               <Play className="mr-2 h-4 w-4" />
               Voir ChatSeller en action
+              </a>
             </Button>
+          </div>
+          
+          {/* Social Proof Statistics */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8 animate-fade-in [animation-delay:500ms]">
+            <div className="flex items-center text-sm text-muted-foreground bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-200/50">
+              <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
+              <span>Installation en <strong>2 minutes</strong></span>
+            </div>
+            <div className="flex items-center text-sm text-muted-foreground bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-200/50">
+              <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
+              <span><strong>7 jours</strong> d'essai gratuit</span>
+            </div>
+            <div className="flex items-center text-sm text-muted-foreground bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-200/50">
+              <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
+              <span><strong>Carte bancaire</strong> non exigée</span>
+            </div>
           </div>
         </div>
       </div>
