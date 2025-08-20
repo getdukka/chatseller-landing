@@ -103,11 +103,11 @@ const ConversationAnimation = () => {
   
   const conversation = [
     { type: 'bot', message: "Bonjour 👋 Je suis Anna, Vendeuse chez Amani. Comment puis-je vous aider ?", delay: 1000 },
-    { type: 'user', message: "Bonjour Anna ! J'aimerais savoir comment cette ceinture chauffante soulage les douleurs menstruelles.", delay: 2000 },
+    { type: 'user', message: "Bonjour Anna ! Je veux savoir comment ce coussin chauffant soulage concrètement les douleurs menstruelles.", delay: 2000 },
     { type: 'bot', message: "Excellente question ! La ceinture chauffante Mia agit de 2 façons : la chaleur liquéfie le sang et facilite son écoulement, et le massage détend les muscles. La combinaison des deux réduit drastiquement la douleur. Voulez-vous que je vous aide à passer commande ?", delay: 3000 },
     { type: 'user', message: "Oui, je vais la prendre.", delay: 4000 },
-    { type: 'bot', message: "Excellente décision ☺️ Combien d'exemplaires souhaitez-vous commander ?", delay: 5000 },
-    { type: 'user', message: "Juste un seul, pour l'instant.", delay: 6000 }
+    { type: 'bot', message: "Très bien ☺️ Combien d'exemplaires souhaitez-vous commander ?", delay: 5000 },
+    { type: 'user', message: "Juste un seul.", delay: 6000 }
   ];
 
   React.useEffect(() => {
@@ -125,7 +125,7 @@ const ConversationAnimation = () => {
             <span className="text-white text-sm font-bold">A</span>
           </div>
           <div>
-            <div className="font-semibold text-sm">Anna - Assistante d'achat</div>
+            <div className="font-semibold text-sm">Anna - Vendeuse IA</div>
             <div className="flex items-center text-xs text-gray-500">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-1 animate-pulse"></div>
               En ligne
@@ -163,6 +163,40 @@ const ConversationAnimation = () => {
             </div>
           </div>
         )}
+      </div>
+      
+      {/* ✅ NOUVEAU : Interface de chat réaliste - VERSION CORRIGÉE */}
+      <div className="mt-4 pt-4 border-t border-gray-100">
+        <div className="flex items-center space-x-3 bg-gray-50 rounded-full p-3">
+          <div className="flex-1 relative">
+            <input 
+              type="text" 
+              placeholder="Tapez votre message..." 
+              className="w-full bg-white rounded-full px-4 py-2 text-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent cursor-not-allowed opacity-75"
+              disabled
+            />
+          </div>
+          {/* ✅ ICÔNE MICRO CORRIGÉE */}
+          <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors" disabled>
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+              <path d="M19 10v1a7 7 0 0 1-14 0v-1"/>
+              <path d="M12 18v4"/>
+              <path d="M8 22h8"/>
+            </svg>
+          </button>
+          {/* ✅ ICÔNE ENVOYER CORRIGÉE */}
+          <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all disabled:opacity-75" disabled>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="m12 19 9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+          </button>
+        </div>
+        <div className="text-center mt-2">
+          <span className="text-xs text-gray-400 bg-yellow-50 text-yellow-700 px-2 py-1 rounded-full">
+            💡 Interface réelle de ChatSeller - Testez la démo ci-dessous !
+          </span>
+        </div>
       </div>
     </div>
   );

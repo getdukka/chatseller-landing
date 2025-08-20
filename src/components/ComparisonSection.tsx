@@ -1,4 +1,4 @@
-// src/components/ComparisonSection.tsx - MOBILE OPTIMISÉ
+// src/components/ComparisonSection.tsx
 import React, { useState } from 'react';
 import { 
   Check, 
@@ -518,7 +518,7 @@ const ComparisonSection = () => {
                 <div>
                   <h4 className="font-semibold text-green-900 mb-2">Vraie Intelligence IA</h4>
                   <p className="text-green-800 text-sm">
-                    Contrairement aux chatbots basiques, ChatSeller utilise l'IA pour des conversations naturelles et pertinentes.
+                    Contrairement aux chatbots basiques, ChatSeller utilise l'IA et votre base de connaissances pour des conversations naturelles et pertinentes.
                   </p>
                 </div>
               </div>

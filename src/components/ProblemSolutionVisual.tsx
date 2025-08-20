@@ -166,72 +166,116 @@ const ProblemAnimatedIllustration = () => {
   }, []);
 
   return (
-    <div className="relative bg-gray-100 rounded-2xl p-8 h-96 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-8 h-96 overflow-hidden shadow-lg">
       {/* Site e-commerce basique */}
       <div className="bg-white rounded-lg p-4 h-full shadow-inner relative">
         <div className="flex justify-between items-center mb-4">
-          <div className="text-xs text-gray-400">Ma-Boutique.com</div>
-          <div className="w-6 h-6 bg-gray-200 rounded"></div>
+          <div className="text-xs text-gray-400 flex items-center">
+            <div className="w-2 h-2 bg-gray-300 rounded-full mr-2"></div>
+            Ma-Boutique.com
+          </div>
+          <div className="flex space-x-1">
+            <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+            <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+          </div>
         </div>
         
-        {/* Ceinture chauffante */}
-        <div className="bg-gradient-to-br from-pink-100 to-purple-100 h-32 rounded mb-4 flex items-center justify-center relative">
-          <div className="w-20 h-12 bg-pink-200 rounded-full flex items-center justify-center">
-            <span className="text-pink-600 text-xs">Mia</span>
+        {/* Produit - Ceinture chauffante avec plus de détails */}
+        <div className="bg-gradient-to-br from-pink-100 to-purple-100 h-32 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-50/50 to-purple-50/50"></div>
+          <div className="relative z-10 w-20 h-12 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full flex items-center justify-center shadow-lg">
+            <span className="text-pink-700 text-xs font-bold">Mia</span>
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-400 rounded-full animate-pulse shadow-sm"></div>
+          </div>
+          {/* Effets visuels de chaleur */}
+          <div className="absolute top-2 left-1/2 transform -translate-x-1/2">
+            <div className="flex space-x-1">
+              <div className="w-1 h-3 bg-red-300 rounded-full animate-pulse opacity-60"></div>
+              <div className="w-1 h-4 bg-orange-300 rounded-full animate-pulse opacity-60" style={{animationDelay: '0.2s'}}></div>
+              <div className="w-1 h-3 bg-red-300 rounded-full animate-pulse opacity-60" style={{animationDelay: '0.4s'}}></div>
+            </div>
           </div>
         </div>
         
         <div className="space-y-2 mb-4">
-          <div className="h-3 bg-gray-200 rounded w-3/4"></div>
-          <div className="h-3 bg-gray-200 rounded w-1/2"></div>
+          <div className="h-3 bg-gray-200 rounded w-3/4 animate-pulse"></div>
+          <div className="h-3 bg-gray-200 rounded w-1/2 animate-pulse" style={{animationDelay: '0.1s'}}></div>
         </div>
         
         <div className="flex justify-between items-center mb-4">
-          <div className="text-sm font-semibold">49€</div>
-          <div className="bg-pink-500 text-white px-3 py-1 rounded text-xs">Acheter</div>
+          <div className="text-sm font-semibold text-green-600">49€</div>
+          <div className="bg-pink-500 text-white px-3 py-1 rounded text-xs hover:bg-pink-600 transition-colors cursor-pointer">
+            Acheter
+          </div>
         </div>
 
-        {/* ✅ ANIMATION DU PROBLÈME */}
+        {/* ✅ ANIMATION DU PROBLÈME AMÉLIORÉE */}
         <div className="absolute bottom-4 left-4 right-4">
           {step === 0 && (
-            <div className="bg-yellow-100 border border-yellow-300 rounded p-2 animate-pulse">
-              <div className="flex items-center text-xs text-yellow-700">
-                <AlertCircle className="h-3 w-3 mr-1" />
-                Visiteur arrive...
+            <div className="bg-blue-100 border-l-4 border-blue-400 rounded p-3 animate-bounce shadow-sm">
+              <div className="flex items-center text-xs text-blue-700">
+                <div className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center mr-2 animate-pulse">
+                  👤
+                </div>
+                <span className="font-medium">Nouveau visiteur arrive...</span>
               </div>
             </div>
           )}
           
           {step === 1 && (
-            <div className="bg-orange-100 border border-orange-300 rounded p-2 animate-pulse">
+            <div className="bg-orange-100 border-l-4 border-orange-400 rounded p-3 animate-pulse shadow-sm">
               <div className="text-xs text-orange-700">
-                💭 "Est-ce que ça marche vraiment ?"
+                <div className="flex items-center mb-1">
+                  <div className="w-8 h-8 bg-orange-200 rounded-full flex items-center justify-center mr-2">
+                    🤔
+                  </div>
+                  <span className="font-medium">Questions sans réponses</span>
+                </div>
+                <div className="text-xs opacity-80">"Est-ce que ça marche vraiment ?"</div>
               </div>
             </div>
           )}
           
           {step === 2 && (
-            <div className="bg-red-100 border border-red-300 rounded p-2 animate-pulse">
+            <div className="bg-red-100 border-l-4 border-red-400 rounded p-3 animate-pulse shadow-sm">
               <div className="text-xs text-red-700">
-                😕 "Personne pour m'aider..."
+                <div className="flex items-center mb-1">
+                  <div className="w-8 h-8 bg-red-200 rounded-full flex items-center justify-center mr-2">
+                    😟
+                  </div>
+                  <span className="font-medium">Doutes et hésitations</span>
+                </div>
+                <div className="text-xs opacity-80">"Personne pour m'aider..."</div>
               </div>
             </div>
           )}
           
           {step === 3 && (
-            <div className="bg-gray-100 border border-gray-300 rounded p-2">
+            <div className="bg-gray-100 border-l-4 border-gray-400 rounded p-3 shadow-sm">
               <div className="text-xs text-gray-600">
-                👋 Visiteur parti sans acheter
+                <div className="flex items-center mb-1">
+                  <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2">
+                    👋
+                  </div>
+                  <span className="font-medium">Abandon du panier</span>
+                </div>
+                <div className="text-xs opacity-80">Visiteur parti sans acheter 😞</div>
               </div>
             </div>
           )}
         </div>
       </div>
       
-      {/* Flèche de sortie */}
+      {/* Flèche de sortie améliorée */}
       <div className="absolute top-1/2 -right-8 text-red-500 animate-bounce">
-        <ArrowRight className="h-6 w-6" />
-        <div className="text-xs text-red-600 mt-1 whitespace-nowrap">73% partent</div>
+        <div className="flex items-center">
+          <ArrowRight className="h-6 w-6" />
+          <div className="ml-2">
+            <div className="text-xs text-red-600 font-bold whitespace-nowrap">73% partent</div>
+            <div className="text-xs text-red-500 whitespace-nowrap">sans acheter</div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -249,75 +293,123 @@ const SolutionAnimatedIllustration = () => {
   }, []);
 
   return (
-    <div className="relative bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8 h-96 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8 h-96 overflow-hidden shadow-lg">
       {/* Site avec ChatSeller */}
       <div className="bg-white rounded-lg p-4 h-full shadow-lg relative">
         <div className="flex justify-between items-center mb-4">
-          <div className="text-xs text-gray-600">Ma-Boutique.com</div>
-          <div className="w-6 h-6 bg-green-500 rounded flex items-center justify-center">
-            <Check className="h-4 w-4 text-white" />
+          <div className="text-xs text-gray-600 flex items-center">
+            <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+            Ma-Boutique.com
+          </div>
+          <div className="flex items-center space-x-1">
+            <div className="w-6 h-6 bg-green-500 rounded flex items-center justify-center">
+              <Check className="h-4 w-4 text-white" />
+            </div>
+            <span className="text-xs text-green-600 font-medium">ChatSeller</span>
           </div>
         </div>
         
-        {/* Ceinture chauffante */}
-        <div className="bg-gradient-to-br from-pink-100 to-purple-100 h-20 rounded mb-3 flex items-center justify-center">
-          <div className="w-16 h-10 bg-pink-200 rounded-full flex items-center justify-center">
-            <span className="text-pink-600 text-xs">Mia</span>
+        {/* Produit amélioré */}
+        <div className="bg-gradient-to-br from-pink-100 to-purple-100 h-20 rounded-lg mb-3 flex items-center justify-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-50/50 to-purple-50/50"></div>
+          <div className="relative z-10 w-16 h-10 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full flex items-center justify-center shadow-lg">
+            <span className="text-pink-700 text-xs font-bold">Mia</span>
+          </div>
+          {/* Effets visuels de qualité */}
+          <div className="absolute top-1 right-2">
+            <div className="flex">
+              {[1,2,3,4,5].map(i => (
+                <div key={i} className="w-1 h-1 bg-yellow-400 rounded-full mx-0.5"></div>
+              ))}
+            </div>
           </div>
         </div>
         
         <div className="text-xs font-semibold mb-2">Ceinture Chauffante Mia</div>
         <div className="flex justify-between items-center mb-3">
           <div className="text-sm font-semibold text-green-600">49€</div>
-          <div className="bg-pink-500 text-white px-3 py-1 rounded text-xs">Acheter</div>
+          <div className="bg-pink-500 text-white px-3 py-1 rounded text-xs hover:bg-pink-600 transition-colors">
+            Acheter
+          </div>
         </div>
 
-        {/* ✅ BOUTON CHATSELLER NOIR */}
-        <div className="bg-black text-white px-3 py-2 rounded-lg mb-3 text-center cursor-pointer hover:bg-gray-800 transition-colors">
-          <div className="text-xs">💬 Parler à la vendeuse</div>
+        {/* ✅ BOUTON CHATSELLER AMÉLIORÉ */}
+        <div className="bg-gradient-to-r from-gray-800 to-black text-white px-3 py-2 rounded-lg mb-3 text-center cursor-pointer hover:from-gray-700 hover:to-gray-900 transition-all shadow-md">
+          <div className="text-xs flex items-center justify-center">
+            <MessageSquare className="w-3 h-3 mr-1" />
+            💬 Parler à la vendeuse
+          </div>
         </div>
 
-        {/* ✅ ANIMATION DE LA SOLUTION */}
+        {/* ✅ ANIMATION DE LA SOLUTION AMÉLIORÉE */}
         <div className="absolute bottom-4 left-4 right-4">
           {step === 0 && (
-            <div className="bg-blue-100 border border-blue-300 rounded p-2 animate-pulse">
+            <div className="bg-blue-100 border-l-4 border-blue-400 rounded p-3 animate-pulse shadow-sm">
               <div className="flex items-center text-xs text-blue-700">
-                <Check className="h-3 w-3 mr-1" />
-                Anna accueille le visiteur
+                <div className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center mr-2">
+                  🤖
+                </div>
+                <div>
+                  <div className="font-medium">Anna accueille le visiteur</div>
+                  <div className="text-xs opacity-80">Réponse instantanée</div>
+                </div>
               </div>
             </div>
           )}
           
           {step === 1 && (
-            <div className="bg-purple-100 border border-purple-300 rounded p-2">
+            <div className="bg-purple-100 border-l-4 border-purple-400 rounded p-3 shadow-sm">
               <div className="text-xs text-purple-700">
-                💬 "Bonjour ! Cette ceinture soulage en 5 min !"
+                <div className="flex items-center mb-1">
+                  <div className="w-8 h-8 bg-purple-200 rounded-full flex items-center justify-center mr-2">
+                    💬
+                  </div>
+                  <span className="font-medium">Conseil expert</span>
+                </div>
+                <div className="text-xs opacity-80">"Cette ceinture soulage en 5 min !"</div>
               </div>
             </div>
           )}
           
           {step === 2 && (
-            <div className="bg-yellow-100 border border-yellow-300 rounded p-2">
+            <div className="bg-yellow-100 border-l-4 border-yellow-400 rounded p-3 shadow-sm">
               <div className="text-xs text-yellow-700">
-                📝 Anna collecte nom, téléphone, adresse
+                <div className="flex items-center mb-1">
+                  <div className="w-8 h-8 bg-yellow-200 rounded-full flex items-center justify-center mr-2">
+                    📝
+                  </div>
+                  <span className="font-medium">Collecte informations</span>
+                </div>
+                <div className="text-xs opacity-80">Nom, téléphone, adresse</div>
               </div>
             </div>
           )}
           
           {step === 3 && (
-            <div className="bg-green-100 border border-green-300 rounded p-2 animate-pulse">
+            <div className="bg-green-100 border-l-4 border-green-400 rounded p-3 animate-pulse shadow-sm">
               <div className="text-xs text-green-700">
-                ✅ Commande finalisée !
+                <div className="flex items-center mb-1">
+                  <div className="w-8 h-8 bg-green-200 rounded-full flex items-center justify-center mr-2">
+                    ✅
+                  </div>
+                  <span className="font-medium">Commande finalisée !</span>
+                </div>
+                <div className="text-xs opacity-80">Client satisfait 😊</div>
               </div>
             </div>
           )}
         </div>
       </div>
       
-      {/* Flèche de conversion */}
+      {/* Flèche de conversion améliorée */}
       <div className="absolute top-1/2 -right-8 text-green-500 animate-bounce">
-        <Check className="h-6 w-6" />
-        <div className="text-xs text-green-600 mt-1 whitespace-nowrap">+147% ventes</div>
+        <div className="flex items-center">
+          <Check className="h-6 w-6" />
+          <div className="ml-2">
+            <div className="text-xs text-green-600 font-bold whitespace-nowrap">+147% ventes</div>
+            <div className="text-xs text-green-500 whitespace-nowrap">conversion</div>
+          </div>
+        </div>
       </div>
     </div>
   );

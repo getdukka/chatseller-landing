@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import PlatformsSection from '../components/PlatformsSection';
 import ProblemSolutionVisual from '../components/ProblemSolutionVisual';
 import AdvancedFeatures from '../components/AdvancedFeatures';
 import DemoSection from '../components/DemoSection';
@@ -33,6 +34,9 @@ const Index = () => {
       <main className="flex-1">
         {/* Section 1: Hero - Accroche principale avec animation */}
         <Hero />
+
+        {/* Section 2: Plateformes - Compatibilité avec toutes les plateformes */}
+        <PlatformsSection />
         
         {/* Section 2: Problème/Solution - Version visuelle améliorée */}
         <ProblemSolutionVisual />
