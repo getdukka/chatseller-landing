@@ -1,9 +1,12 @@
-// src/components/ProblemSolutionVisual.tsx - AVEC ANIMATIONS CSS PURES
+// src/components/ProblemSolutionVisual.tsx - AVEC TRADUCTIONS COMPLÈTES
 import React, { useState, useEffect } from 'react';
 import { TrendingDown, TrendingUp, ShoppingCart, MessageSquare, Users, ArrowRight, X, Check, Zap, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ProblemSolutionVisual = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-24 relative bg-gradient-to-b from-white to-gray-50 -mt-20 md:-mt-32 pt-32 md:pt-48">
       <div className="container px-6 md:px-12 mx-auto">
@@ -12,11 +15,11 @@ const ProblemSolutionVisual = () => {
         <div className="text-center max-w-6xl mx-auto mb-20">
           <div className="inline-flex items-center px-4 py-2 mb-8 border border-red-200 rounded-full bg-red-50 text-sm font-medium text-red-700 animate-fade-in">
             <TrendingDown className="w-4 h-4 mr-2" />
-            Le problème de tous les e-commerçants
+            {t('problemBadge')}
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-12 animate-fade-in [animation-delay:200ms]">
-            <span className="text-red-600">73% de vos visiteurs</span> partent sans acheter
+            <span className="text-red-600">{t('problemTitle')}</span> {t('problemPartWithout')}
           </h2>
 
           {/* Visual Problem Illustration */}
@@ -30,18 +33,18 @@ const ProblemSolutionVisual = () => {
             <div className="space-y-6 text-left animate-fade-in [animation-delay:600ms]">
               <ProblemPoint 
                 icon={<X className="h-6 w-6 text-red-500" />}
-                title="Aucune assistance"
-                description="Vos clients sont seuls face à vos produits"
+                title={t('problemNoAssistance')}
+                description={t('problemNoAssistanceDesc')}
               />
               <ProblemPoint 
                 icon={<MessageSquare className="h-6 w-6 text-red-500" />}
-                title="Questions sans réponses"
-                description="68% des questions restent sans réponse"
+                title={t('problemNoAnswers')}
+                description={t('problemNoAnswersDesc')}
               />
               <ProblemPoint 
                 icon={<TrendingDown className="h-6 w-6 text-red-500" />}
-                title="Taux de conversion faible"
-                description="Seulement 2-3% de conversion en moyenne"
+                title={t('problemLowConversion')}
+                description={t('problemLowConversionDesc')}
               />
             </div>
           </div>
@@ -50,19 +53,19 @@ const ProblemSolutionVisual = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-16 animate-fade-in [animation-delay:800ms]">
             <StatCardVisual 
               value="73%" 
-              label="partent sans acheter" 
+              label={t('problemPartWithout')} 
               color="red"
               icon={<TrendingDown className="h-8 w-8" />}
             />
             <StatCardVisual 
               value="68%" 
-              label="questions sans réponse" 
+              label={t('problemNoAnswers')} 
               color="red"
               icon={<MessageSquare className="h-8 w-8" />}
             />
             <StatCardVisual 
               value="2-3%" 
-              label="taux de conversion moyen" 
+              label={t('problemLowConversion')} 
               color="red"
               icon={<ShoppingCart className="h-8 w-8" />}
             />
@@ -80,11 +83,11 @@ const ProblemSolutionVisual = () => {
         <div className="text-center max-w-6xl mx-auto">
           <div className="inline-flex items-center px-4 py-2 mb-8 border border-green-200 rounded-full bg-green-50 text-sm font-medium text-green-700 animate-fade-in">
             <TrendingUp className="w-4 h-4 mr-2" />
-            La solution ChatSeller
+            {t('solutionBadge')}
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-12 animate-fade-in [animation-delay:200ms]">
-            Transformez chaque visiteur en <span className="text-green-600">client</span>
+            {t('problemTransformVisitor')} <span className="text-green-600">{t('problemClient')}</span>
           </h2>
 
           {/* Visual Solution Illustration */}
@@ -93,18 +96,18 @@ const ProblemSolutionVisual = () => {
             <div className="space-y-6 text-left order-2 lg:order-1 animate-fade-in [animation-delay:600ms]">
               <SolutionPoint 
                 icon={<Check className="h-6 w-6 text-green-500" />}
-                title="Vendeur IA disponible 24/7"
-                description="Accueille, rassure et conseille chaque visiteur"
+                title={t('solutionAI247')}
+                description={t('solutionAI247Desc')}
               />
               <SolutionPoint 
                 icon={<ShoppingCart className="h-6 w-6 text-green-500" />}
-                title="Collecte les commandes"
-                description="Récupère nom, téléphone, adresse dans la conversation"
+                title={t('solutionCollectOrders')}
+                description={t('solutionCollectOrdersDesc')}
               />
               <SolutionPoint 
                 icon={<TrendingUp className="h-6 w-6 text-green-500" />}
-                title="Ventes additionnelles"
-                description="Recommande des produits complémentaires"
+                title={t('solutionUpsell')}
+                description={t('solutionUpsellDesc')}
               />
             </div>
             
@@ -118,19 +121,19 @@ const ProblemSolutionVisual = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-16 animate-fade-in [animation-delay:800ms]">
             <StatCardVisual 
               value="4-6x" 
-              label="plus de ventes" 
+              label={t('solutionMoreSales')} 
               color="green"
               icon={<TrendingUp className="h-8 w-8" />}
             />
             <StatCardVisual 
               value="7-18%" 
-              label="nouveau taux conversion" 
+              label={t('solutionNewConversion')} 
               color="green"
               icon={<Zap className="h-8 w-8" />}
             />
             <StatCardVisual 
               value="+147%" 
-              label="revenus en moyenne" 
+              label={t('solutionAdditionalRevenue')} 
               color="green"
               icon={<TrendingUp className="h-8 w-8" />}
             />
@@ -140,12 +143,12 @@ const ProblemSolutionVisual = () => {
           <div className="animate-fade-in [animation-delay:1000ms]">
             <Button size="lg" className="group rounded-full">
               <a href="https://dashboard.chatseller.app/register" className="flex items-center">
-                Tester ChatSeller Gratuitement
+                {t('solutionTestFree')}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
             <p className="text-sm text-muted-foreground mt-3">
-              Installation en 2 minutes • Sans carte bancaire • Annulation en 1 clic
+              {t('solutionInstallInfo')}
             </p>
           </div>
         </div>
@@ -156,6 +159,7 @@ const ProblemSolutionVisual = () => {
 
 // ✅ ANIMATION PROBLÈME : BOUTIQUE CLASSIQUE SANS ASSISTANCE
 const ProblemAnimatedIllustration = () => {
+  const { t } = useLanguage();
   const [step, setStep] = useState(0);
 
   useEffect(() => {
@@ -206,7 +210,7 @@ const ProblemAnimatedIllustration = () => {
         <div className="flex justify-between items-center mb-4">
           <div className="text-sm font-semibold text-green-600">49€</div>
           <div className="bg-pink-500 text-white px-3 py-1 rounded text-xs hover:bg-pink-600 transition-colors cursor-pointer">
-            Acheter
+            {t('addToCart')}
           </div>
         </div>
 
@@ -218,7 +222,7 @@ const ProblemAnimatedIllustration = () => {
                 <div className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center mr-2 animate-pulse">
                   👤
                 </div>
-                <span className="font-medium">Nouveau visiteur arrive...</span>
+                <span className="font-medium">{t('newVisitorArrives')}</span>
               </div>
             </div>
           )}
@@ -230,7 +234,7 @@ const ProblemAnimatedIllustration = () => {
                   <div className="w-8 h-8 bg-orange-200 rounded-full flex items-center justify-center mr-2">
                     🤔
                   </div>
-                  <span className="font-medium">Questions sans réponses</span>
+                  <span className="font-medium">{t('questionsUnanswered')}</span>
                 </div>
                 <div className="text-xs opacity-80">"Est-ce que ça marche vraiment ?"</div>
               </div>
@@ -244,7 +248,7 @@ const ProblemAnimatedIllustration = () => {
                   <div className="w-8 h-8 bg-red-200 rounded-full flex items-center justify-center mr-2">
                     😟
                   </div>
-                  <span className="font-medium">Doutes et hésitations</span>
+                  <span className="font-medium">{t('doubtsHesitations')}</span>
                 </div>
                 <div className="text-xs opacity-80">"Personne pour m'aider..."</div>
               </div>
@@ -258,9 +262,9 @@ const ProblemAnimatedIllustration = () => {
                   <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2">
                     👋
                   </div>
-                  <span className="font-medium">Abandon du panier</span>
+                  <span className="font-medium">{t('cartAbandonment')}</span>
                 </div>
-                <div className="text-xs opacity-80">Visiteur parti sans acheter 😞</div>
+                <div className="text-xs opacity-80">{t('visitorLeft')}</div>
               </div>
             </div>
           )}
@@ -273,7 +277,7 @@ const ProblemAnimatedIllustration = () => {
           <ArrowRight className="h-6 w-6" />
           <div className="ml-2">
             <div className="text-xs text-red-600 font-bold whitespace-nowrap">73% partent</div>
-            <div className="text-xs text-red-500 whitespace-nowrap">sans acheter</div>
+            <div className="text-xs text-red-500 whitespace-nowrap">{t('problemLeaveWithout')}</div>
           </div>
         </div>
       </div>
@@ -283,6 +287,7 @@ const ProblemAnimatedIllustration = () => {
 
 // ✅ ANIMATION SOLUTION : BOUTIQUE AVEC CHATSELLER
 const SolutionAnimatedIllustration = () => {
+  const { t } = useLanguage();
   const [step, setStep] = useState(0);
 
   useEffect(() => {
@@ -329,7 +334,7 @@ const SolutionAnimatedIllustration = () => {
         <div className="flex justify-between items-center mb-3">
           <div className="text-sm font-semibold text-green-600">49€</div>
           <div className="bg-pink-500 text-white px-3 py-1 rounded text-xs hover:bg-pink-600 transition-colors">
-            Acheter
+            {t('addToCart')}
           </div>
         </div>
 
@@ -337,7 +342,7 @@ const SolutionAnimatedIllustration = () => {
         <div className="bg-gradient-to-r from-gray-800 to-black text-white px-3 py-2 rounded-lg mb-3 text-center cursor-pointer hover:from-gray-700 hover:to-gray-900 transition-all shadow-md">
           <div className="text-xs flex items-center justify-center">
             <MessageSquare className="w-3 h-3 mr-1" />
-            💬 Parler à la vendeuse
+            {t('demoTalkToSeller')}
           </div>
         </div>
 
@@ -350,8 +355,8 @@ const SolutionAnimatedIllustration = () => {
                   🤖
                 </div>
                 <div>
-                  <div className="font-medium">Anna accueille le visiteur</div>
-                  <div className="text-xs opacity-80">Réponse instantanée</div>
+                  <div className="font-medium">{t('annaWelcomesVisitor')}</div>
+                  <div className="text-xs opacity-80">{t('instantResponse')}</div>
                 </div>
               </div>
             </div>
@@ -364,7 +369,7 @@ const SolutionAnimatedIllustration = () => {
                   <div className="w-8 h-8 bg-purple-200 rounded-full flex items-center justify-center mr-2">
                     💬
                   </div>
-                  <span className="font-medium">Conseil expert</span>
+                  <span className="font-medium">{t('expertAdvice')}</span>
                 </div>
                 <div className="text-xs opacity-80">"Cette ceinture soulage en 5 min !"</div>
               </div>
@@ -378,7 +383,7 @@ const SolutionAnimatedIllustration = () => {
                   <div className="w-8 h-8 bg-yellow-200 rounded-full flex items-center justify-center mr-2">
                     📝
                   </div>
-                  <span className="font-medium">Collecte informations</span>
+                  <span className="font-medium">{t('collectsInfo')}</span>
                 </div>
                 <div className="text-xs opacity-80">Nom, téléphone, adresse</div>
               </div>
@@ -392,9 +397,9 @@ const SolutionAnimatedIllustration = () => {
                   <div className="w-8 h-8 bg-green-200 rounded-full flex items-center justify-center mr-2">
                     ✅
                   </div>
-                  <span className="font-medium">Commande finalisée !</span>
+                  <span className="font-medium">{t('orderFinalized')}</span>
                 </div>
-                <div className="text-xs opacity-80">Client satisfait 😊</div>
+                <div className="text-xs opacity-80">{t('satisfiedCustomer')}</div>
               </div>
             </div>
           )}
@@ -406,7 +411,7 @@ const SolutionAnimatedIllustration = () => {
         <div className="flex items-center">
           <Check className="h-6 w-6" />
           <div className="ml-2">
-            <div className="text-xs text-green-600 font-bold whitespace-nowrap">+147% ventes</div>
+            <div className="text-xs text-green-600 font-bold whitespace-nowrap">{t('conversionIncrease')}</div>
             <div className="text-xs text-green-500 whitespace-nowrap">conversion</div>
           </div>
         </div>
@@ -415,7 +420,7 @@ const SolutionAnimatedIllustration = () => {
   );
 };
 
-// Composants helper inchangés
+// Composants helper traduits
 const ProblemPoint = ({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) => (
   <div className="flex items-start space-x-4 p-4 bg-red-50 rounded-xl border border-red-100 hover:shadow-md transition-shadow">
     <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">

@@ -1,4 +1,4 @@
-// src/components/PricingSection.tsx - TARIFS CORRIGÉS SELON SPÉCIFICATIONS
+// src/components/PricingSection.tsx - TRADUCTION COMPLÈTE
 import React, { useState } from 'react';
 import { 
   Check, 
@@ -13,6 +13,7 @@ import {
   Computer
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const PricingCard = ({ 
   plan, 
@@ -106,18 +107,75 @@ const PricingCard = ({
 };
 
 const ComparisonTable = () => {
+  const { language } = useLanguage();
+
   const features = [
-    { feature: "Crédits messages par mois", starter: "1000", pro: "5000", enterprise: "Illimitées" },
-    { feature: "Vendeurs IA", starter: "1", pro: "3 spécialisés", enterprise: "Illimités" },
-    { feature: "Base de connaissance", starter: "10 documents", pro: "50 documents", enterprise: "Illimitée" },
-    { feature: "Chat widget personnalisable", starter: "✓", pro: "✓", enterprise: "✓" },
-    { feature: "Analytics de base", starter: "✓", pro: "✓", enterprise: "✓" },
-    { feature: "Upsell automatique", starter: "✗", pro: "✓", enterprise: "✓" },
-    { feature: "Analytics avancées", starter: "✗", pro: "✓", enterprise: "✓" },
-    { feature: "Support prioritaire", starter: "✗", pro: "✓", enterprise: "✓" },
-    { feature: "API complète", starter: "✗", pro: "✗", enterprise: "✓" },
-    { feature: "White-label", starter: "✗", pro: "✗", enterprise: "✓" },
-    { feature: "Formation personnalisée", starter: "✗", pro: "✗", enterprise: "✓" }
+    { 
+      feature: language === 'fr' ? "Crédits messages par mois" : "Message credits per month", 
+      starter: "1000", 
+      pro: "5000", 
+      enterprise: language === 'fr' ? "Illimitées" : "Unlimited" 
+    },
+    { 
+      feature: language === 'fr' ? "Vendeurs IA" : "AI Sales Agents", 
+      starter: "1", 
+      pro: language === 'fr' ? "3 spécialisés" : "3 specialized", 
+      enterprise: language === 'fr' ? "Illimités" : "Unlimited" 
+    },
+    { 
+      feature: language === 'fr' ? "Base de connaissance" : "Knowledge base", 
+      starter: language === 'fr' ? "10 documents" : "10 documents", 
+      pro: language === 'fr' ? "50 documents" : "50 documents", 
+      enterprise: language === 'fr' ? "Illimitée" : "Unlimited" 
+    },
+    { 
+      feature: language === 'fr' ? "Chat widget personnalisable" : "Customizable chat widget", 
+      starter: "✓", 
+      pro: "✓", 
+      enterprise: "✓" 
+    },
+    { 
+      feature: language === 'fr' ? "Analytics de base" : "Basic analytics", 
+      starter: "✓", 
+      pro: "✓", 
+      enterprise: "✓" 
+    },
+    { 
+      feature: language === 'fr' ? "Upsell automatique" : "Automatic upsell", 
+      starter: "✗", 
+      pro: "✓", 
+      enterprise: "✓" 
+    },
+    { 
+      feature: language === 'fr' ? "Analytics avancées" : "Advanced analytics", 
+      starter: "✗", 
+      pro: "✓", 
+      enterprise: "✓" 
+    },
+    { 
+      feature: language === 'fr' ? "Support prioritaire" : "Priority support", 
+      starter: "✗", 
+      pro: "✓", 
+      enterprise: "✓" 
+    },
+    { 
+      feature: language === 'fr' ? "API complète" : "Full API", 
+      starter: "✗", 
+      pro: "✗", 
+      enterprise: "✓" 
+    },
+    { 
+      feature: "White-label", 
+      starter: "✗", 
+      pro: "✗", 
+      enterprise: "✓" 
+    },
+    { 
+      feature: language === 'fr' ? "Formation personnalisée" : "Custom training", 
+      starter: "✗", 
+      pro: "✗", 
+      enterprise: "✓" 
+    }
   ];
 
   return (
@@ -125,7 +183,9 @@ const ComparisonTable = () => {
       <table className="w-full bg-white rounded-xl shadow-lg border border-gray-200">
         <thead>
           <tr className="bg-gray-50 border-b border-gray-200">
-            <th className="px-6 py-4 text-left font-semibold">Fonctionnalités détaillées</th>
+            <th className="px-6 py-4 text-left font-semibold">
+              {language === 'fr' ? 'Fonctionnalités détaillées' : 'Detailed features'}
+            </th>
             <th className="px-6 py-4 text-center font-semibold">Starter</th>
             <th className="px-6 py-4 text-center font-semibold bg-primary/10">Professional</th>
             <th className="px-6 py-4 text-center font-semibold">Enterprise</th>
@@ -147,6 +207,7 @@ const ComparisonTable = () => {
 };
 
 const ROICalculator = () => {
+  const { t } = useLanguage();
   const [visitors, setVisitors] = useState(1000);
   const [currentConversion, setCurrentConversion] = useState(2.5);
   const [averageOrder, setAverageOrder] = useState(85);
@@ -160,12 +221,12 @@ const ROICalculator = () => {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 max-w-4xl mx-auto">
       <h3 className="text-2xl font-bold text-center mb-6">
-        Calculez votre retour sur investissement
+        {t('roiCalculatorTitle')}
       </h3>
       
       <div className="grid md:grid-cols-3 gap-6 mb-8">
         <div>
-          <label className="block text-sm font-medium mb-2">Visiteurs/mois</label>
+          <label className="block text-sm font-medium mb-2">{t('monthlyVisitors')}</label>
           <input 
             type="number" 
             value={visitors}
@@ -174,7 +235,7 @@ const ROICalculator = () => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">Conversion actuelle (%)</label>
+          <label className="block text-sm font-medium mb-2">{t('currentConversion')}</label>
           <input 
             type="number" 
             value={currentConversion}
@@ -184,7 +245,7 @@ const ROICalculator = () => {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">Panier moyen (€)</label>
+          <label className="block text-sm font-medium mb-2">{t('averageCart')}</label>
           <input 
             type="number" 
             value={averageOrder}
@@ -196,33 +257,33 @@ const ROICalculator = () => {
       
       <div className="grid md:grid-cols-2 gap-8">
         <div className="bg-white rounded-xl p-6 shadow-md">
-          <h4 className="font-semibold text-gray-600 mb-4">Situation actuelle</h4>
+          <h4 className="font-semibold text-gray-600 mb-4">{t('currentSituation')}</h4>
           <div className="space-y-3">
             <div className="flex justify-between">
-              <span>Conversions/mois:</span>
+              <span>{t('conversionsMonth')}</span>
               <span className="font-semibold">{Math.round(visitors * (currentConversion / 100))}</span>
             </div>
             <div className="flex justify-between">
-              <span>Revenus/mois:</span>
+              <span>{t('revenueMonth')}</span>
               <span className="font-semibold">{Math.round(currentRevenue).toLocaleString()}€</span>
             </div>
           </div>
         </div>
         
         <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6">
-          <h4 className="font-semibold text-green-700 mb-4">Avec ChatSeller</h4>
+          <h4 className="font-semibold text-green-700 mb-4">{t('withChatseller')}</h4>
           <div className="space-y-3">
             <div className="flex justify-between">
-              <span>Nouveau taux conversion:</span>
+              <span>{t('newConversionRate')}</span>
               <span className="font-semibold text-green-700">{newConversion.toFixed(1)}%</span>
             </div>
             <div className="flex justify-between">
-              <span>Nouveaux revenus/mois:</span>
+              <span>{t('newRevenue')}</span>
               <span className="font-semibold text-green-700">{Math.round(newRevenue).toLocaleString()}€</span>
             </div>
             <div className="border-t border-green-200 pt-3">
               <div className="flex justify-between text-lg font-bold text-green-700">
-                <span>Profit net supplémentaire:</span>
+                <span>{t('additionalProfit')}</span>
                 <span>+{Math.round(monthlyProfit).toLocaleString()}€/mois</span>
               </div>
             </div>
@@ -232,10 +293,10 @@ const ROICalculator = () => {
       
       <div className="text-center mt-6">
         <div className="text-2xl font-bold text-primary mb-2">
-          ROI: {Math.round((monthlyProfit / 14) * 100)}% par mois
+          {t('roiPerMonth').replace('%', Math.round((monthlyProfit / 14) * 100).toString())}
         </div>
         <p className="text-muted-foreground text-sm">
-          ChatSeller se rembourse en {Math.ceil(14 / (monthlyProfit > 0 ? monthlyProfit : 1))} jour(s)
+          {t('paybackTime').replace('jour(s)', Math.ceil(14 / (monthlyProfit > 0 ? monthlyProfit : 1)).toString())}
         </p>
       </div>
     </div>
@@ -243,6 +304,7 @@ const ROICalculator = () => {
 };
 
 const PricingSection = () => {
+  const { t, language } = useLanguage();
   const [showComparison, setShowComparison] = useState(false);
 
   return (
@@ -254,89 +316,88 @@ const PricingSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center px-4 py-2 mb-6 border border-green-200 rounded-full bg-green-50 text-sm font-medium text-green-700 animate-fade-in">
             <Gift className="w-4 h-4 mr-2" />
-            Essai gratuit disponible sur le plan Starter
+            {t('pricingBadge')}
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
-            Choisissez le plan parfait pour 
-            <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> booster vos ventes</span>
+            {t('pricingTitle')}
           </h2>
           
           <p className="text-lg text-muted-foreground animate-fade-in [animation-delay:400ms]">
-            Commencez avec 7 jours gratuits sur le plan Starter. Aucun engagement requis.
+            {t('pricingSubtitle')}
           </p>
         </div>
         
-        {/* ✅ PRICING CARDS CORRIGÉS */}
+        {/* ✅ PRICING CARDS AVEC TRADUCTION */}
         <div className="grid md:grid-cols-3 gap-8 mb-16 animate-fade-in [animation-delay:600ms]">
           <PricingCard
-            plan="Starter"
+            plan={t('starterPlan')}
             price="14€"
-            period="mois"
-            description="Parfait pour débuter avec ChatSeller"
+            period={language === 'fr' ? 'mois' : 'month'}
+            description={t('starterDesc')}
             features={[
-              "7 jours d'essai gratuit",
-              "1 Vendeur IA intelligent",
-              "1000 crédits messages par mois",
-              "Base de connaissance (10 documents)",
-              "Chat widget personnalisable",
-              "Analytics de base",
-              "Support email",
-              "Installation en 2 minutes",
-              "Compatible sur tous les sites"
+              t('freeTrial'),
+              language === 'fr' ? "1 Vendeur IA intelligent" : "1 Intelligent AI Sales Agent",
+              language === 'fr' ? "1000 crédits messages par mois" : "1000 message credits per month",
+              language === 'fr' ? "Base de connaissance (10 documents)" : "Knowledge base (10 documents)",
+              language === 'fr' ? "Chat widget personnalisable" : "Customizable chat widget",
+              language === 'fr' ? "Analytics de base" : "Basic analytics",
+              language === 'fr' ? "Support email" : "Email support",
+              t('installMinutes'),
+              language === 'fr' ? "Compatible sur tous les sites" : "Compatible with all websites"
             ]}
             notIncluded={[
-              "Upsell automatique",
-              "Analytics avancées",
-              "Support prioritaire"
+              language === 'fr' ? "Upsell automatique" : "Automatic upsell",
+              language === 'fr' ? "Analytics avancées" : "Advanced analytics",
+              language === 'fr' ? "Support prioritaire" : "Priority support"
             ]}
-            ctaText="Commencer l'essai gratuit"
+            ctaText={t('startTrial7Days')}
             ctaLink="https://dashboard.chatseller.app/register?plan=starter"
-            badge="7 jours gratuits"
+            badge={t('freeTrial')}
             hasTrial={true}
           />
           
           <PricingCard
-            plan="Professional"
+            plan={t('proPlan')}
             price="29€"
-            period="mois"
-            description="Pour les e-commerçants sérieux"
+            period={language === 'fr' ? 'mois' : 'month'}
+            description={t('proDesc')}
             features={[
-              "Tout du plan Starter",
-              "3 Vendeurs IA spécialisés",
-              "5000 crédits messages par mois",
-              "Base de connaissance (50 documents)",
-              "Upsell automatique intelligent",
-              "Analytics avancées & ROI",
-              "Bilingue (FR/EN)",
-              "Support prioritaire",
-              "Priorité Nouveautés",
+              language === 'fr' ? "Tout du plan Starter" : "Everything in Starter",
+              language === 'fr' ? "3 Vendeurs IA spécialisés" : "3 Specialized AI Sales Agents",
+              language === 'fr' ? "5000 crédits messages par mois" : "5000 message credits per month",
+              language === 'fr' ? "Base de connaissance (50 documents)" : "Knowledge base (50 documents)",
+              language === 'fr' ? "Upsell automatique intelligent" : "Intelligent automatic upsell",
+              language === 'fr' ? "Analytics avancées & ROI" : "Advanced analytics & ROI",
+              language === 'fr' ? "Bilingue (FR/EN)" : "Bilingual (FR/EN)",
+              language === 'fr' ? "Support prioritaire" : "Priority support",
+              language === 'fr' ? "Priorité Nouveautés" : "Feature Priority",
             ]}
             isPopular={true}
-            ctaText="Démarrer le plan Pro"
+            ctaText={language === 'fr' ? "Démarrer le plan Pro" : "Start Pro plan"}
             ctaLink="https://dashboard.chatseller.app/register?plan=pro"
-            badge="Le plus populaire"
+            badge={t('mostPopular')}
           />
           
           <PricingCard
-            plan="Enterprise"
-            price="Sur mesure"
+            plan={t('enterprisePlan')}
+            price={language === 'fr' ? "Sur mesure" : "Custom"}
             period=""
-            description="Pour les grandes entreprises"
+            description={t('enterpriseDesc')}
             features={[
-              "Tout du plan Pro",
-              "Jusqu'à 10 Vendeurs IA",
-              "White-label complet", 
-              "API complète & webhooks",
-              "Intégrations sur mesure",
-              "Support dédié 24/7",
-              "Formation équipe complète",
-              "SLA garanti 99.9%",
-              "Conformité RGPD avancée"
+              language === 'fr' ? "Tout du plan Pro" : "Everything in Pro",
+              language === 'fr' ? "Jusqu'à 10 Vendeurs IA" : "Up to 10 AI Sales Agents",
+              language === 'fr' ? "White-label complet" : "Complete white-label", 
+              language === 'fr' ? "API complète & webhooks" : "Full API & webhooks",
+              language === 'fr' ? "Intégrations sur mesure" : "Custom integrations",
+              language === 'fr' ? "Support dédié 24/7" : "Dedicated 24/7 support",
+              language === 'fr' ? "Formation équipe complète" : "Complete team training",
+              language === 'fr' ? "SLA garanti 99.9%" : "99.9% SLA guarantee",
+              language === 'fr' ? "Conformité RGPD avancée" : "Advanced GDPR compliance"
             ]}
-            ctaText="Nous contacter"
+            ctaText={t('contactUs')}
             ctaLink="mailto:enterprise@chatseller.app"
-            badge="Solution sur mesure"
+            badge={t('customSolution')}
           />
         </div>
         
@@ -347,7 +408,10 @@ const PricingSection = () => {
             onClick={() => setShowComparison(!showComparison)}
             className="group"
           >
-            {showComparison ? 'Masquer' : 'Voir'} la comparaison détaillée
+            {showComparison 
+              ? (language === 'fr' ? 'Masquer' : 'Hide') 
+              : (language === 'fr' ? 'Voir' : 'Show')
+            } {language === 'fr' ? 'la comparaison détaillée' : 'detailed comparison'}
             <ArrowRight className={`ml-2 h-4 w-4 transition-transform ${showComparison ? 'rotate-90' : ''}`} />
           </Button>
         </div>
@@ -368,20 +432,28 @@ const PricingSection = () => {
         <div className="grid md:grid-cols-3 gap-6 mt-16 animate-fade-in [animation-delay:800ms]">
           <div className="text-center p-6 bg-white/60 rounded-xl border border-gray-200">
             <Computer className="w-8 h-8 text-green-500 mx-auto mb-3" />
-            <h4 className="font-semibold mb-2">Essai gratuit Starter</h4>
-            <p className="text-sm text-muted-foreground">7 jours pour tester sans risque</p>
+            <h4 className="font-semibold mb-2">
+              {language === 'fr' ? 'Essai gratuit Starter' : 'Free Starter trial'}
+            </h4>
+            <p className="text-sm text-muted-foreground">
+              {language === 'fr' ? '7 jours pour tester sans risque' : '7 days to test risk-free'}
+            </p>
           </div>
           
           <div className="text-center p-6 bg-white/60 rounded-xl border border-gray-200">
             <Star className="w-8 h-8 text-yellow-500 mx-auto mb-3" />
             <h4 className="font-semibold mb-2">4.8/5 étoiles</h4>
-            <p className="text-sm text-muted-foreground">Note moyenne de nos testeurs</p>
+            <p className="text-sm text-muted-foreground">
+              {language === 'fr' ? 'Note moyenne de nos testeurs' : 'Average rating from our testers'}
+            </p>
           </div>
           
           <div className="text-center p-6 bg-white/60 rounded-xl border border-gray-200">
             <Zap className="w-8 h-8 text-blue-500 mx-auto mb-3" />
-            <h4 className="font-semibold mb-2">Installation 2 min</h4>
-            <p className="text-sm text-muted-foreground">Prêt à vendre immédiatement</p>
+            <h4 className="font-semibold mb-2">{t('installMinutes')}</h4>
+            <p className="text-sm text-muted-foreground">
+              {language === 'fr' ? 'Prêt à vendre immédiatement' : 'Ready to sell immediately'}
+            </p>
           </div>
         </div>
       </div>

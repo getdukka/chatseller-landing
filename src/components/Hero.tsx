@@ -1,10 +1,12 @@
-// src/components/Hero.tsx - STYLE CLUELY AVEC BACKGROUND AMÉLIORÉ
+// src/components/Hero.tsx - AVEC TRADUCTIONS ET BADGE BETA
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2, MessageSquare, Mic, Send, Play } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 import ChatModal from './ChatModal';
 
 const Hero = () => {
+  const { t } = useLanguage();
   const [isChatModalOpen, setIsChatModalOpen] = useState(false);
 
   return (
@@ -25,16 +27,23 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            Intégrable sur n'importe quelle boutique en ligne
+            {t('heroIntegrableEverywhere')}
+            {/* ✅ BADGE BETA AJOUTÉ */}
+            <span className="ml-3 px-2 py-1 text-xs font-bold bg-orange-500 text-white rounded-full animate-pulse">
+              {t('betaBadge')}
+            </span>
           </div>
           
           <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in [animation-delay:200ms]">
-            Le
-            <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Vendeur IA</span> qui transforme vos visiteurs en clients.
+            {t('heroTitle')}{' '}
+            <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              {t('heroTitleVendeurIA')}
+            </span>{' '}
+            {t('heroTitleEnd')}
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl animate-fade-in [animation-delay:400ms] leading-relaxed">
-            Plus qu'un chatbot : un vrai commercial IA qui collecte les commandes dans la conversation et booste vos ventes 24h/24. 
+            {t('heroSubtitle')}
           </p>
 
           {/* ✅ BOUTONS STYLE CLUELY AVEC BORDURES ARRONDIES */}
@@ -45,12 +54,11 @@ const Hero = () => {
               asChild
             >
               <a href="https://dashboard.chatseller.app/register">
-                Créer mon Vendeur IA
+                {t('heroCreateAI')}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
             
-            {/* ✅ BOUTON NOIR AVEC TEXTE BLANC COMME DEMANDÉ */}
             <Button 
               size="lg" 
               className="group rounded-full px-8 py-4 text-base font-semibold bg-black hover:bg-gray-800 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300"
@@ -58,7 +66,7 @@ const Hero = () => {
             >
               <a href="#demo">
               <Play className="mr-2 h-4 w-4" />
-              Voir ChatSeller en action
+              {t('heroSeeInAction')}
               </a>
             </Button>
           </div>
@@ -67,15 +75,15 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center gap-6 mb-8 animate-fade-in [animation-delay:500ms]">
             <div className="flex items-center text-sm text-muted-foreground bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-200/50">
               <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-              <span>Installation en <strong>2 minutes</strong></span>
+              <span>{t('heroInstallation')}</span>
             </div>
             <div className="flex items-center text-sm text-muted-foreground bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-200/50">
               <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-              <span><strong>7 jours</strong> d'essai gratuit</span>
+              <span>{t('heroTrialDays')}</span>
             </div>
             <div className="flex items-center text-sm text-muted-foreground bg-white/50 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-200/50">
               <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-              <span><strong>Carte bancaire</strong> non exigée</span>
+              <span>{t('heroNoCard')}</span>
             </div>
           </div>
         </div>
@@ -184,11 +192,6 @@ const ConversationAnimation = () => {
           <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-2 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all disabled:opacity-75" disabled>
             <Send className="w-5 h-5" />
           </button>
-        </div>
-        <div className="text-center mt-2">
-          <span className="text-xs text-gray-400 bg-yellow-50 text-yellow-700 px-2 py-1 rounded-full">
-            💡 Interface réelle de ChatSeller - Testez la démo ci-dessous !
-          </span>
         </div>
       </div>
     </div>

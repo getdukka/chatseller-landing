@@ -1,9 +1,10 @@
-// src/components/Navbar.tsx - NAVBAR AVEC DÉTECTION AUTH
+// src/components/Navbar.tsx - NAVBAR AVEC NOUVEAU LOGO ET BY DUKKA EN BLEU
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronRight, Store } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from './LanguageToggle';
+import ConversationIcon from './ConversationIcon';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useAuth } from '@/hooks/useSupabase';
 
@@ -32,9 +33,14 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-12 flex items-center justify-between">
-        <a href="/" className="flex items-center">
-          <Store className="h-6 w-6 text-primary mr-2" />
-          <span className="font-display text-xl font-bold tracking-tight">ChatSeller<span className="text-primary">.</span></span>
+        <a href="/" className="flex flex-col items-start">
+          <div className="flex items-center">
+            <ConversationIcon className="h-6 w-6 text-primary mr-2" />
+            <span className="font-display text-xl font-bold tracking-tight">
+              ChatSeller<span className="text-primary">.</span>
+            </span>
+          </div>
+          <span className="text-xs text-primary ml-8 -mt-1 font-medium">by Dukka</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -47,6 +53,9 @@ const Navbar = () => {
           </a>
           <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             {t('pricing')}
+          </a>
+          <a href="/support" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            {t('support')}
           </a>
           <LanguageToggle />
           
@@ -122,6 +131,13 @@ const Navbar = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('pricing')}
+            </a>
+            <a 
+              href="/support" 
+              className="text-base font-medium text-foreground py-2 border-b border-border"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('support')}
             </a>
             
             {/* ✅ MENU MOBILE CONDITIONNEL */}

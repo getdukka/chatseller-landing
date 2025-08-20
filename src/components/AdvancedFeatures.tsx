@@ -1,4 +1,4 @@
-// src/components/AdvancedFeatures.tsx
+// src/components/AdvancedFeatures.tsx - AVEC TRADUCTIONS COMPLÈTES
 import React from 'react';
 import { 
   Brain, 
@@ -6,11 +6,9 @@ import {
   TrendingUp, 
   BarChart3, 
   Zap, 
-  Smartphone,
-  Play,
-  MessageSquare
+  Smartphone
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const FeatureCard = ({ 
   icon, 
@@ -39,42 +37,44 @@ const FeatureCard = ({
 };
 
 const AdvancedFeatures = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: <Brain className="h-6 w-6" />,
-      title: "Réponses instantanées et naturelles",
-      description: "Votre vendeur IA est formé sur vos produits et répond comme un vrai commercial expérimenté.",
-      metric: "92% de questions résolues"
+      title: t('instantResponses'),
+      description: t('instantResponsesDesc'),
+      metric: t('questionsResolved')
     },
     {
       icon: <ShoppingCart className="h-6 w-6" />,
-      title: "Prise de Commandes en direct",
-      description: "Il collecte naturellement nom, téléphone, adresse dans la conversation et crée la commande.",
-      metric: "+63% de commandes finalisées"
+      title: t('orderCollection'),
+      description: t('orderCollectionDesc'),
+      metric: t('ordersFinalized')
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
-      title: "Suggestion de produits en plus",
-      description: "Il propose automatiquement des produits complémentaires basés sur les préférences du client.",
-      metric: "+34% de panier moyen"
+      title: t('productSuggestions'),
+      description: t('productSuggestionsDesc'),
+      metric: t('averageBasket')
     },
     {
       icon: <BarChart3 className="h-6 w-6" />,
-      title: "Suivi des ventes en temps réel ",
-      description: "Vous disposez d'un tableau de bord complet pour suivre vos conversations et vos ventes en temps réel.",
-      metric: "Visibilité complète ROI"
+      title: t('realTimeTracking'),
+      description: t('realTimeTrackingDesc'),
+      metric: t('completeVisibility')
     },
     {
       icon: <Zap className="h-6 w-6" />,
-      title: "Installation Express",
-      description: "Vous pouvez intégrer Chatseller en 2 minutes sur votre boutique Shopify, WooCommerce, Wix ou autre.",
-      metric: "2 min d'installation"
+      title: t('expressInstall'),
+      description: t('expressInstallDesc'),
+      metric: t('installTime')
     },
     {
       icon: <Smartphone className="h-6 w-6" />,
-      title: "100% adapté aux smartphones",
-      description: "L'interface de Chatseller est parfaitement adaptée aux Smartphones pour une expérience utilisateur optimale.",
-      metric: "100% optimisé pour mobile"
+      title: t('mobileOptimized'),
+      description: t('mobileOptimizedDesc'),
+      metric: t('mobileOptimizedStat')
     }
   ];
 
@@ -87,16 +87,15 @@ const AdvancedFeatures = () => {
         <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="inline-flex items-center px-4 py-2 mb-6 border border-primary/20 rounded-full bg-primary/10 text-sm font-medium text-primary animate-fade-in">
             <Zap className="w-4 h-4 mr-2" />
-            Plus qu'un chatbot : un vendeur IA complet
+            {t('featuresBadge')}
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
-            Tout ce dont vous avez besoin pour 
-            <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> transformer vos visiteurs en clients</span>
+            {t('featuresTitle')}
           </h2>
           
           <p className="text-lg text-muted-foreground animate-fade-in [animation-delay:400ms]">
-            Nous intégrons tout ce qu’il vous faut pour vendre plus, plus vite, sans rester collé à votre téléphone.
+            {t('featuresSubtitle')}
           </p>
         </div>
         

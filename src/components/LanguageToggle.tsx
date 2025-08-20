@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Globe } from 'lucide-react';
+import { FrenchFlag, UKFlag } from './Flags';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const LanguageToggle: React.FC = () => {
@@ -14,10 +14,19 @@ const LanguageToggle: React.FC = () => {
       variant="ghost" 
       size="sm" 
       onClick={() => setLanguage(language === 'en' ? 'fr' : 'en')}
-      className={`rounded-full flex items-center ${isMobile ? 'px-2' : 'px-3'}`}
+      className={`rounded-full flex items-center hover:bg-gray-100 transition-colors ${isMobile ? 'px-2' : 'px-3'}`}
     >
-      <Globe className="h-4 w-4 mr-1" />
-      {t(language === 'en' ? 'switchToFrench' : 'switchToEnglish')}
+      {language === 'fr' ? (
+        <>
+          <UKFlag className="w-4 h-4 mr-1.5" />
+          <span className="text-sm font-medium">EN</span>
+        </>
+      ) : (
+        <>
+          <FrenchFlag className="w-4 h-4 mr-1.5" />
+          <span className="text-sm font-medium">FR</span>
+        </>
+      )}
     </Button>
   );
 };

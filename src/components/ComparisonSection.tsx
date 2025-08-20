@@ -188,7 +188,7 @@ const MobileComparisonCards = () => {
       features: {
         engagement: { available: true, text: "Conversation naturelle" },
         collecte: { available: true, text: "Automatique dans chat" },
-        ia: { available: true, text: "GPT-4o avancée" },
+        ia: { available: true, text: "GPT-4o - Claude 4" },
         upsell: { available: true, text: "+34% panier moyen" },
         support: { available: true, text: "24/7 en FR/EN" },
         mobile: { available: true, text: "Mobile-first" },
@@ -202,7 +202,7 @@ const MobileComparisonCards = () => {
   const featureNames = {
     engagement: "Engagement visiteur",
     collecte: "Collecte commandes", 
-    ia: "Intelligence IA",
+    ia: "Modèle IA",
     upsell: "Upsell automatique",
     support: "Assistance 24/7",
     mobile: "Mobile-first",
@@ -332,7 +332,7 @@ const ComparisonSection = () => {
       name: "ChatSeller",
       type: "Agent IA Commercial",
       pros: [
-        "Conversations naturelles avec IA GPT-4o",
+        "Conversations naturelles avec IA",
         "Collecte vraiment les commandes",
         "Upsell intelligent +34% panier",
         "Installation en 2 minutes",
@@ -429,10 +429,10 @@ const ComparisonSection = () => {
                     isHighlight={true}
                   />
                   <ComparisonRow
-                    feature="Intelligence IA"
+                    feature="Modèle IA"
                     traditional={<FeatureIcon icon={<X />} isAvailable={false} />}
                     chatbots="Limitée"
-                    chatseller="GPT-4o - Claude 3"
+                    chatseller="GPT-4o - Claude 4"
                   />
                   <ComparisonRow
                     feature="Upsell automatique"
