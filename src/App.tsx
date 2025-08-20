@@ -10,7 +10,7 @@ import { useEffect } from "react";
 // Pages
 import Index from "./pages/Index";
 import Support from "./pages/Support";
-import About from "./pages/about";
+import About from "./pages/about"
 import Terms from "./pages/terms";
 import Privacy from "./pages/privacy";
 import NotFound from "./pages/NotFound";
