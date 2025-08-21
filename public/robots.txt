@@ -1,14 +1,35 @@
+# Robots.txt pour ChatSeller
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://chatseller.app/sitemap.xml
+
+# Optimisations spécifiques
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
-User-agent: Twitterbot
-Allow: /
+# Bloquer certains bots agressifs
+User-agent: AhrefsBot
+Disallow: /
 
-User-agent: facebookexternalhit
-Allow: /
+User-agent: MJ12bot
+Disallow: /
 
-User-agent: *
-Allow: /
+# Fichiers à ne pas indexer
+Disallow: /api/
+Disallow: /_next/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Cache et assets
+Allow: /static/
+Allow: /_next/static/
+Allow: /favicon.ico
+Allow: /robots.txt
+Allow: /sitemap.xml

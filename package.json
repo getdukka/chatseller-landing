@@ -1,13 +1,18 @@
 {
   "name": "chatseller-landing",
+  "private": true,
   "version": "1.0.0",
-  "description": "Landing page officielle ChatSeller - Agent IA Commercial pour E-commerce",
+  "description": "ChatSeller - Le vendeur IA qui transforme vos visiteurs en clients",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build && npm run generate:sitemap",
     "build-check": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "generate:sitemap": "node scripts/generateSitemap.js",
+    "prebuild": "npm run generate:sitemap",
+    "analyze": "npm run build && npx vite-bundle-analyzer dist/assets/*.js",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
@@ -50,9 +55,10 @@
     "react": "^18.2.0",
     "react-day-picker": "^8.9.1",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.45.4",
     "react-resizable-panels": "^0.0.55",
-    "react-router-dom": "^6.8.1",
+    "react-router-dom": "^6.15.0",
     "recharts": "^2.8.0",
     "sonner": "^1.0.3",
     "tailwind-merge": "^2.0.0",
@@ -63,16 +69,34 @@
     "@types/node": "^20.5.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.15",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3",
     "tailwindcss-animate": "^1.0.7",
     "terser": "^5.43.1",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-bundle-analyzer": "^0.7.0"
   },
   "keywords": [
+    "vendeur IA",
+    "AI seller",
+    "agent IA commercial",
+    "chatbot e-commerce",
+    "intelligence artificielle",
+    "conversational AI",
+    "Shopify IA",
+    "WooCommerce chatbot",
+    "ChatSeller",
+    "Dukka",
+    "Sénégal",
+    "startup IA",
     "chatseller",
     "agent-ia",
     "ecommerce",
@@ -84,15 +108,15 @@
     "senegal"
   ],
   "author": {
-    "name": "Ibuka Ndjoli",
-    "email": "ibuka@chatseller.app",
-    "url": "https://ibukasharing.com"
+    "name": "Dukka",
+    "email": "support@chatseller.app",
+    "url": "https://getdukka.com"
   },
+  "homepage": "https://chatseller.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/getdukka/chatseller-landing.git"
   },
-  "homepage": "https://chatseller.app",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0",

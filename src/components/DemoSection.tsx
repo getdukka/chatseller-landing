@@ -92,7 +92,7 @@ const DemoSection = () => {
 // ✅ COMPOSANT DEMO DESKTOP PROPRE
 const DesktopDemo = () => {
   const [isChatModalOpen, setIsChatModalOpen] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
@@ -128,29 +128,53 @@ const DesktopDemo = () => {
             </div>
           </div>
 
-          {/* Product Info */}
+          {/* Product Info - VERSION TRADUITE */}
           <div>
-            <h1 className="text-2xl font-bold mb-4">Mia - Ceinture Chauffante Menstruelle</h1>
+            <h1 className="text-2xl font-bold mb-4">
+              {language === 'fr' ? 
+                "Mia - Ceinture Chauffante Menstruelle" : 
+                "Mia - Menstrual Heating Belt"
+              }
+            </h1>
             <div className="flex items-center mb-4">
               <div className="flex text-yellow-400">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-current" />)}
               </div>
-              <span className="text-gray-600 ml-2">(127 avis)</span>
+              <span className="text-gray-600 ml-2">
+                {language === 'fr' ? "(127 avis)" : "(127 reviews)"}
+              </span>
             </div>
-            <div className="text-3xl font-bold text-green-600 mb-6">49€</div>
+            <div className="text-3xl font-bold text-green-600 mb-6">
+              {language === 'fr' ? "49€" : "$55"}
+            </div>
             
             <div className="space-y-4 mb-6">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm text-gray-600">Soulage les règles douloureuses naturellement</span>
+                <span className="text-sm text-gray-600">
+                  {language === 'fr' ? 
+                    "Soulage les règles douloureuses naturellement" : 
+                    "Naturally relieves menstrual pain"
+                  }
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm text-gray-600">Autonomie 4h • Chauffe en 30 secondes</span>
+                <span className="text-sm text-gray-600">
+                  {language === 'fr' ? 
+                    "Autonomie 4h • Chauffe en 30 secondes" : 
+                    "4h battery • Heats in 30 seconds"
+                  }
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm text-gray-600">Garantie 2 ans • Livraison gratuite</span>
+                <span className="text-sm text-gray-600">
+                  {language === 'fr' ? 
+                    "Garantie 2 ans • Livraison gratuite" : 
+                    "2-year warranty • Free delivery"
+                  }
+                </span>
               </div>
             </div>
 
@@ -196,7 +220,7 @@ const DesktopDemo = () => {
 // ✅ COMPOSANT DEMO MOBILE PROPRE
 const MobileDemo = () => {
   const [isChatModalOpen, setIsChatModalOpen] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="max-w-sm mx-auto">
@@ -218,14 +242,23 @@ const MobileDemo = () => {
               </div>
             </div>
             
-            <h2 className="text-lg font-bold mb-2">Mia - Ceinture chauffante</h2>
+            <h2 className="text-lg font-bold mb-2">
+              {language === 'fr' ? 
+                "Mia - Ceinture chauffante" : 
+                "Mia - Heating belt"
+              }
+            </h2>
             <div className="flex items-center mb-2">
               <div className="flex text-yellow-400 text-sm">
                 {[1,2,3,4,5].map(i => <Star key={i} className="w-3 h-3 fill-current" />)}
               </div>
-              <span className="text-gray-600 ml-2 text-xs">(127)</span>
+              <span className="text-gray-600 ml-2 text-xs">
+                {language === 'fr' ? "(127)" : "(127)"}
+              </span>
             </div>
-            <div className="text-xl font-bold text-green-600 mb-4">49€</div>
+            <div className="text-xl font-bold text-green-600 mb-4">
+              {language === 'fr' ? "49€" : "$55"}
+            </div>
             
             {/* Bouton Ajouter au panier mobile */}
             <Button className="w-full mb-3 text-sm rounded-2xl bg-pink-500 hover:bg-pink-600">
