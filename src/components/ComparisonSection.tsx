@@ -134,7 +134,7 @@ const CompetitorCard = ({
       
       {isChatseller && (
         <div className="mt-6">
-          <Button className="w-full group">
+          <Button className="w-full group rounded-full">
             <a href="https://dashboard.chatseller.app/register" className="flex items-center justify-center w-full">
               Choisir ChatSeller
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -350,7 +350,7 @@ const ComparisonSection = () => {
         language === 'fr' ? "Peut nécessiter un temps d'adaptation" : "May require adaptation time",
         language === 'fr' ? "Nouveau sur le marché" : "New to the market"
       ],
-      price: language === 'fr' ? "19€/mois" : "$14/month",
+      price: language === 'fr' ? "19€/mois" : "$22/month",
       isChatseller: true
     }
   ];
@@ -383,7 +383,7 @@ const ComparisonSection = () => {
             <div className="bg-gray-100 p-1 rounded-lg">
               <button
                 onClick={() => setActiveTab('table')}
-                className={`px-6 py-2 rounded-md font-medium transition-all duration-300 ${
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                   activeTab === 'table'
                     ? 'bg-white text-primary shadow-sm'
                     : 'text-gray-600 hover:text-gray-900'
@@ -393,7 +393,7 @@ const ComparisonSection = () => {
               </button>
               <button
                 onClick={() => setActiveTab('cards')}
-                className={`px-6 py-2 rounded-md font-medium transition-all duration-300 ${
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                   activeTab === 'cards'
                     ? 'bg-white text-primary shadow-sm'
                     : 'text-gray-600 hover:text-gray-900'

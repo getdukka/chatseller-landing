@@ -94,7 +94,7 @@ const PricingCard = ({
       </div>
       
       <Button 
-        className={`w-full group ${isPopular ? '' : 'variant-outline'}`}
+        className={`w-full group ${isPopular ? '' : 'variant-outline'} rounded-full`}
         size="lg"
       >
         <a href={ctaLink} className="flex items-center justify-center w-full">

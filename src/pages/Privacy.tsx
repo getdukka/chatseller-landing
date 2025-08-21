@@ -68,7 +68,7 @@ const Privacy = () => {
                       <h3 className="font-semibold text-gray-900 mb-2">
                         {language === 'fr' ? "Entreprise" : "Company"}
                       </h3>
-                      <p className="text-gray-700">TEKKI GROUP</p>
+                      <p className="text-gray-700">DUKKA</p>
                       <p className="text-gray-700">{language === 'fr' ? "Produit : ChatSeller (par Dukka)" : "Product: ChatSeller (by Dukka)"}</p>
                     </div>
                     <div>
@@ -76,7 +76,7 @@ const Privacy = () => {
                         <MapPin className="w-4 h-4 mr-2" />
                         {language === 'fr' ? "Adresse" : "Address"}
                       </h3>
-                      <p className="text-gray-700">Ouest-Foire</p>
+                      <p className="text-gray-700">Cité Keur Gui</p>
                       <p className="text-gray-700">Dakar, {language === 'fr' ? "SÉNÉGAL" : "SENEGAL"}</p>
                     </div>
                     <div>

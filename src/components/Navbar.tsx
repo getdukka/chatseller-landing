@@ -63,7 +63,7 @@ const Navbar = () => {
           {!loading && (
             <>
               {isLoggedIn ? (
-                <Button className="text-sm group relative overflow-hidden rounded-2xl" asChild>
+                <Button className="text-sm group relative overflow-hidden rounded-full" asChild>
                   <a href="https://dashboard.chatseller.app">
                     {t('accessDashboard')}
                     <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -72,12 +72,12 @@ const Navbar = () => {
                 </Button>
               ) : (
                 <>
-                  <Button variant="ghost" className="text-sm" asChild>
+                  <Button variant="ghost" className="text-sm rounded-full" asChild>
                     <a href="https://dashboard.chatseller.app/login">
                       {t('login')}
                     </a>
                   </Button>
-                  <Button className="text-sm group relative overflow-hidden rounded-2xl" asChild>
+                  <Button className="text-sm group relative overflow-hidden rounded-full" asChild>
                     <a href="https://dashboard.chatseller.app/register">
                       {t('tryFree')} 
                       <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />

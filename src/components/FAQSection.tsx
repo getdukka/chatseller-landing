@@ -75,13 +75,13 @@ const ContactCTA = () => {
             {t('contactTeam')}
           </p>
           <div className="flex flex-wrap gap-3">
-            <Button size="sm" className="group">
+            <Button size="sm" className="group rounded-full">
               <a href="mailto:support@chatseller.app" className="flex items-center">
                 {t('contactEmail')}
                 <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" className="rounded-full">
               <a href="https://cal.com/chatseller/demo" className="flex items-center">
                 {t('bookDemo')}
               </a>

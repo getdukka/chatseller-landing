@@ -283,7 +283,95 @@ interface Translations {
   orderFinalized: string;
   satisfiedCustomer: string;
   conversionIncrease: string;
+
+  // ===================
+  // SUPPORT PAGE TRANSLATIONS
+  // ===================
+  
+  // Support Page Header
+  supportPageTitle: string;
+  supportPageSubtitle: string;
+  supportBackToHome: string;
+  supportSearchPlaceholder: string;
+  
+  // Support Stats
+  supportResponseTime: string;
+  supportAvailability: string;
+  supportResolutionRate: string;
+  supportAverageResponseTime: string;
+  supportAvailable247: string;
+  supportProblemsResolved: string;
+  
+  // Support Categories
+  supportAllCategories: string;
+  supportInstallation: string;
+  supportConfiguration: string;
+  supportBilling: string;
+  supportTechnical: string;
+  
+  // FAQ Section
+  supportFaqTitle: string;
+  supportNoResultsTitle: string;
+  supportNoResultsDesc: string;
+  
+  // FAQ Questions & Answers - Installation
+  faqShopifyInstallQ: string;
+  faqShopifyInstallA: string;
+  faqWooCommerceQ: string;
+  faqWooCommerceA: string;
+  faqCustomHtmlQ: string;
+  faqCustomHtmlA: string;
+  
+  // FAQ Questions & Answers - Configuration  
+  faqPersonalityQ: string;
+  faqPersonalityA: string;
+  faqLearningQ: string;
+  faqLearningA: string;
+  
+  // FAQ Questions & Answers - Technical
+  faqWidgetNotShowingQ: string;
+  faqWidgetNotShowingA: string;
+  faqSlowSiteQ: string;
+  faqSlowSiteA: string;
+  
+  // FAQ Questions & Answers - Billing
+  faqBillingHowQ: string;
+  faqBillingHowA: string;
+  faqChangePlanQ: string;
+  faqChangePlanA: string;
+  
+  // Contact Form
+  supportContactTitle: string;
+  supportContactSuccess: string;
+  supportContactSuccessDesc: string;
+  supportContactError: string;
+  supportContactSendAnother: string;
+  supportContactFullName: string;
+  supportContactEmail: string;
+  supportContactCategory: string;
+  supportContactSubject: string;
+  supportContactMessage: string;
+  supportContactMessagePlaceholder: string;
+  supportContactSendButton: string;
+  supportContactSending: string;
+  supportContactUrgentHelp: string;
+  
+  // Contact Categories
+  contactCategoryGeneral: string;
+  contactCategoryTechnical: string;
+  contactCategoryBilling: string;
+  contactCategoryFeature: string;
+  contactCategoryBug: string;
+  
+  // Common Support Terms
+  supportTags: string;
+  supportMinutes: string;
+  supportHours: string;
+  supportDays: string;
+  supportAIVendor: string; // pour remplacer "Agent IA" par "Vendeur IA" ou "AI Seller"
 }
+
+
 
 const translations: Record<Language, Translations> = {
   fr: {
@@ -317,9 +405,9 @@ const translations: Record<Language, Translations> = {
     platformsTitle: 'Installez Chatseller sur n\'importe quel site',
     platformsSubtitle: 'En seulement 2 minutes, intégrez votre Vendeur IA sur votre plateforme préférée',
     platformsCompatible: 'Compatible avec toutes les plateformes',
-    platformsInstallTime: 'Installation moyenne',
-    platformsCompatibility: 'Compatible',
-    platformsInstallCost: 'Frais d\'installation',
+    platformsInstallTime: 'Temps d\'installation',
+    platformsCompatibility: 'Compatible avec votre site',
+    platformsInstallCost: 'Pour démarrer',
     platformsMinInstall: '2 min',
     platformsFullCompatible: '100%',
     platformsZeroFees: '0€',
@@ -565,7 +653,264 @@ const translations: Record<Language, Translations> = {
     collectsInfo: 'Collecte informations',
     orderFinalized: 'Commande finalisée !',
     satisfiedCustomer: 'Client satisfait 😊',
-    conversionIncrease: '+147% ventes'
+    conversionIncrease: '+147% ventes',
+
+  // ===================
+    // SUPPORT PAGE TRANSLATIONS FR
+    // ===================
+    
+    // Support Page Header
+    supportPageTitle: "Centre d'aide ChatSeller",
+    supportPageSubtitle: "Trouvez rapidement les réponses à vos questions ou contactez notre équipe support",
+    supportBackToHome: "Retour à l'accueil",
+    supportSearchPlaceholder: "Rechercher dans la documentation...",
+    
+    // Support Stats
+    supportResponseTime: "2 minutes",
+    supportAvailability: "24/7",
+    supportResolutionRate: "98%",
+    supportAverageResponseTime: "Temps de réponse moyen",
+    supportAvailable247: "Support disponible",
+    supportProblemsResolved: "Problèmes résolus",
+    
+    // Support Categories
+    supportAllCategories: "Tous",
+    supportInstallation: "Installation", 
+    supportConfiguration: "Configuration",
+    supportBilling: "Facturation",
+    supportTechnical: "Technique",
+    
+    // FAQ Section
+    supportFaqTitle: "Questions fréquentes",
+    supportNoResultsTitle: "Aucun résultat trouvé",
+    supportNoResultsDesc: "Essayez d'autres mots-clés ou contactez notre support",
+    
+    // FAQ Questions & Answers - Installation
+    faqShopifyInstallQ: "Comment installer ChatSeller sur mon site Shopify ?",
+    faqShopifyInstallA: `L'installation sur Shopify est très simple :
+      
+1. **Connectez-vous** à votre Dashboard ChatSeller
+2. **Créez votre Vendeur IA** avec vos informations produit
+3. **Copiez le code d'intégration** fourni
+4. Dans Shopify Admin → **Boutique en ligne** → **Thèmes** → **Actions** → **Modifier le code**
+5. Ouvrez **theme.liquid** et collez le code avant </head>
+6. **Sauvegardez** - Votre Vendeur IA est actif !
+
+⏱️ **Temps total : 2-3 minutes maximum**
+
+Need help? Contactez-nous via le formulaire ci-dessous.`,
+
+    faqWooCommerceQ: "ChatSeller fonctionne-t-il sur WooCommerce ?",
+    faqWooCommerceA: `Oui ! ChatSeller est parfaitement compatible avec WooCommerce :
+
+**Méthode 1 - Plugin (Recommandée)**
+1. Téléchargez notre plugin WordPress depuis le Dashboard
+2. Installez via **Extensions** → **Ajouter** → **Téléverser**
+3. Activez et configurez avec votre clé API
+
+**Méthode 2 - Code manuel**
+1. Copiez le code d'intégration depuis votre Dashboard
+2. Allez dans **Apparence** → **Éditeur de thème**
+3. Ajoutez le code dans **functions.php** ou dans un fichier de template
+
+✅ **Compatible avec toutes les versions WooCommerce 3.0+**`,
+
+    faqCustomHtmlQ: "Puis-je installer ChatSeller sur un site HTML personnalisé ?",
+    faqCustomHtmlA: `Absolument ! ChatSeller fonctionne sur n'importe quel site web :
+
+**Installation universelle :**
+1. Copiez le code JavaScript depuis votre Dashboard
+2. Collez-le dans la section &lt;head&gt; ou avant &lt;/body&gt;
+3. Le widget s'affiche automatiquement
+
+**Personnalisation avancée :**
+- Position du bouton configurable
+- Couleurs et design adaptables
+- Intégration avec votre panier existant
+- API disponible pour développeurs
+
+💡 **Fonctionne avec :** HTML, PHP, React, Vue, Angular, etc.`,
+
+    // FAQ Questions & Answers - Configuration
+    faqPersonalityQ: "Comment personnaliser la personnalité de mon Vendeur IA ?",
+    faqPersonalityA: `Vous avez un contrôle total sur votre Vendeur IA :
+
+**Dans le Dashboard → Configuration Vendeur :**
+
+**1. Personnalité de base**
+- Ton : Professionnel, Amical, Expert, Décontracté
+- Style : Direct, Consultant, Storytelling, Technique
+
+**2. Messages personnalisés**
+- Message d'accueil
+- Réponses aux objections courantes
+- Messages de relance
+
+**3. Connaissances produits**
+- Importez vos fiches produits
+- Ajoutez vos FAQ
+- Configurez les arguments de vente
+
+**4. Objectifs commerciaux**
+- Priorités de vente
+- Produits à pousser
+- Seuils de négociation
+
+💡 **Conseil :** Testez différentes personnalités avec notre simulateur intégré !`,
+
+    faqLearningQ: "Comment le Vendeur IA apprend-il sur mes produits ?",
+    faqLearningA: `Le Vendeur IA se forme sur vos produits via plusieurs méthodes :
+
+**1. Import automatique**
+- Connectez votre catalogue (Shopify, WooCommerce, etc.)
+- Synchronisation automatique des nouveaux produits
+- Mise à jour des prix et stock en temps réel
+
+**2. Base de connaissances**
+- Uploadez vos documents PDF/Word
+- FAQ existantes
+- Guides d'utilisation
+- Politiques de retour/garantie
+
+**3. Apprentissage continu**
+- L'IA analyse les conversations
+- Améliore ses réponses automatiquement
+- Vous signale les questions récurrentes
+
+**4. Configuration manuelle**
+- Ajoutez des informations spécifiques
+- Définissez les arguments de vente
+- Configurez les réponses aux objections
+
+📈 **Résultat :** Un Vendeur de plus en plus expert sur VOS produits`,
+
+    // FAQ Questions & Answers - Technical
+    faqWidgetNotShowingQ: "Que faire si le widget ne s'affiche pas ?",
+    faqWidgetNotShowingA: `Voici comment diagnostiquer et résoudre le problème :
+
+**Vérifications de base :**
+1. ✅ Le code est-il correctement installé ?
+2. ✅ Pas d'erreurs dans la console navigateur (F12)
+3. ✅ Votre plan est-il actif ?
+4. ✅ Le Vendeur IA est-il activé ?
+
+**Solutions courantes :**
+
+**Shopify :** Videz le cache (Boutique en ligne → Préférences → Purger le cache)
+
+**WordPress :** Désactivez temporairement les plugins de cache (WP Rocket, W3 Total Cache)
+
+**Sites personnalisés :** Vérifiez qu'il n'y a pas de conflit JavaScript
+
+**Bloqueurs de pub :** Ajoutez widget.chatseller.app à la liste blanche
+
+**Toujours pas résolu ?**
+Contactez-nous avec :
+- URL de votre site
+- Navigateur utilisé
+- Capture d'écran de la console (F12)
+
+⚡ **Support prioritaire pour les clients Pro/Enterprise**`,
+
+    faqSlowSiteQ: "ChatSeller ralentit-il mon site web ?",
+    faqSlowSiteA: `Non ! ChatSeller est optimisé pour la performance :
+
+**Optimisations techniques :**
+- ⚡ **Chargement asynchrone** : N'impacte pas le temps de chargement
+- 🪶 **Script léger** : Seulement 45kb compressé
+- 🚀 **CDN global** : Livraison ultra-rapide depuis le serveur le plus proche
+- 💾 **Cache intelligent** : Le widget se charge instantanément après la première visite
+
+**Tests de performance :**
+- **Page Speed** : Aucun impact sur le score Google
+- **Time to Interactive** : +0.1s maximum
+- **Lighthouse** : Score maintenu
+
+**Monitoring inclus :**
+- Surveillance 24/7 de la performance
+- Alertes automatiques en cas de problème
+- Optimisations continues
+
+🎯 **Résultat :** Plus de conversions SANS ralentir votre site`,
+
+    // FAQ Questions & Answers - Billing
+    faqBillingHowQ: "Comment fonctionne la facturation de ChatSeller ?",
+    faqBillingHowA: `Facturation simple et transparente :
+
+**Plans disponibles :**
+- **Starter** : 19€/mois - 1000 messages
+- **Professional** : 29€/mois - 5000 messages  
+- **Enterprise** : Sur mesure - Illimité
+
+**Ce qui est inclus :**
+✅ **Tous les plans :** Pas de commission sur vos ventes
+✅ **Pas de frais cachés** : Prix fixe mensuel
+✅ **7 jours gratuits** sur le plan Starter
+✅ **Annulation en 1 clic** à tout moment
+
+**Méthodes de paiement :**
+- Carte bancaire (Visa, Mastercard)
+
+**Facturation :**
+- Prélèvement automatique le même jour chaque mois
+- Facture envoyée par email
+- Historique dans votre Dashboard
+
+💡 **Garantie** : Satisfait ou remboursé sous 30 jours`,
+
+    faqChangePlanQ: "Puis-je changer de plan à tout moment ?",
+    faqChangePlanA: `Oui, vous avez une flexibilité totale :
+
+**Upgrade (Starter → Pro/Enterprise) :**
+- ✅ **Immédiat** : Nouvelles fonctionnalités activées instantanément
+- ✅ **Prorata** : Vous payez seulement la différence jusqu'à la fin du mois
+- ✅ **Sans interruption** : Votre Vendeur IA reste actif
+
+**Downgrade (Pro → Starter) :**
+- 📅 **Fin de période** : Changement effectif au prochain cycle
+- 💾 **Données conservées** : Aucune perte d'historique
+- ⚠️ **Limites appliquées** : Fonctions avancées désactivées
+
+**Annulation :**
+- 🔴 **En 1 clic** depuis votre Dashboard
+- 📱 **Aucun préavis** requis
+- 💸 **Remboursement prorata** si annulation en cours de mois
+
+**Réactivation :**
+- ✅ **Instantanée** : Reprenez où vous vous étiez arrêté
+- 📊 **Historique préservé** : Toutes vos données sont sauvegardées
+
+🎯 **Aucun engagement, liberté totale !**`,
+
+    // Contact Form
+    supportContactTitle: "Contactez le support",
+    supportContactSuccess: "Message envoyé !",
+    supportContactSuccessDesc: "Notre équipe vous répondra sous 2h en moyenne. Vous devriez recevoir un email de confirmation sous peu.",
+    supportContactError: "Une erreur est survenue lors de l'envoi.",
+    supportContactSendAnother: "Envoyer un autre message",
+    supportContactFullName: "Nom complet",
+    supportContactEmail: "Email",
+    supportContactCategory: "Catégorie",
+    supportContactSubject: "Sujet",
+    supportContactMessage: "Message",
+    supportContactMessagePlaceholder: "Décrivez votre problème ou question en détail...",
+    supportContactSendButton: "Envoyer le message",
+    supportContactSending: "Envoi en cours...",
+    supportContactUrgentHelp: "Besoin d'aide urgente ?",
+    
+    // Contact Categories
+    contactCategoryGeneral: "Question générale",
+    contactCategoryTechnical: "Problème technique",
+    contactCategoryBilling: "Facturation",
+    contactCategoryFeature: "Demande de fonctionnalité",
+    contactCategoryBug: "Signaler un bug",
+    
+    // Common Support Terms
+    supportTags: "mots-clés",
+    supportMinutes: "minutes",
+    supportHours: "heures", 
+    supportDays: "jours",
+    supportAIVendor: "Vendeur IA",
   },
   
   en: {
@@ -599,9 +944,9 @@ const translations: Record<Language, Translations> = {
     platformsTitle: 'Install Chatseller on any website',
     platformsSubtitle: 'In just 2 minutes, integrate your AI Seller on your favorite platform',
     platformsCompatible: 'Compatible with all platforms',
-    platformsInstallTime: 'Average installation',
-    platformsCompatibility: 'Compatible',
-    platformsInstallCost: 'Installation fees',
+    platformsInstallTime: 'Installation time',
+    platformsCompatibility: 'Compatible with your site',
+    platformsInstallCost: 'To start',
     platformsMinInstall: '2 min',
     platformsFullCompatible: '100%',
     platformsZeroFees: '$0',
@@ -847,7 +1192,264 @@ const translations: Record<Language, Translations> = {
     collectsInfo: 'Collects information',
     orderFinalized: 'Order finalized!',
     satisfiedCustomer: 'Satisfied customer 😊',
-    conversionIncrease: '+147% sales'
+    conversionIncrease: '+147% sales',
+
+  // ===================
+    // SUPPORT PAGE TRANSLATIONS EN
+    // ===================
+    
+    // Support Page Header
+    supportPageTitle: "ChatSeller Help Center",
+    supportPageSubtitle: "Find answers to your questions quickly or contact our support team",
+    supportBackToHome: "Back to home",
+    supportSearchPlaceholder: "Search documentation...",
+    
+    // Support Stats
+    supportResponseTime: "2 minutes",
+    supportAvailability: "24/7",
+    supportResolutionRate: "98%",
+    supportAverageResponseTime: "Average response time",
+    supportAvailable247: "Support available",
+    supportProblemsResolved: "Problems resolved",
+    
+    // Support Categories
+    supportAllCategories: "All",
+    supportInstallation: "Installation",
+    supportConfiguration: "Configuration", 
+    supportBilling: "Billing",
+    supportTechnical: "Technical",
+    
+    // FAQ Section
+    supportFaqTitle: "Frequently asked questions",
+    supportNoResultsTitle: "No results found",
+    supportNoResultsDesc: "Try other keywords or contact our support",
+    
+    // FAQ Questions & Answers - Installation
+    faqShopifyInstallQ: "How to install ChatSeller on my Shopify store?",
+    faqShopifyInstallA: `Installing on Shopify is very simple:
+      
+1. **Log in** to your ChatSeller Dashboard
+2. **Create your AI Seller** with your product information
+3. **Copy the integration code** provided
+4. In Shopify Admin → **Online Store** → **Themes** → **Actions** → **Edit code**
+5. Open **theme.liquid** and paste the code before </head>
+6. **Save** - Your AI Seller is active!
+
+⏱️ **Total time: 2-3 minutes maximum**
+
+Need help? Contact us via the form below.`,
+
+    faqWooCommerceQ: "Does ChatSeller work with WooCommerce?",
+    faqWooCommerceA: `Yes! ChatSeller is perfectly compatible with WooCommerce:
+
+**Method 1 - Plugin (Recommended)**
+1. Download our WordPress plugin from the Dashboard
+2. Install via **Plugins** → **Add New** → **Upload**
+3. Activate and configure with your API key
+
+**Method 2 - Manual code**
+1. Copy the integration code from your Dashboard
+2. Go to **Appearance** → **Theme Editor**
+3. Add the code in **functions.php** or in a template file
+
+✅ **Compatible with all WooCommerce 3.0+ versions**`,
+
+    faqCustomHtmlQ: "Can I install ChatSeller on a custom HTML site?",
+    faqCustomHtmlA: `Absolutely! ChatSeller works on any website:
+
+**Universal installation:**
+1. Copy the JavaScript code from your Dashboard
+2. Paste it in the &lt;head&gt; section or before &lt;/body&gt;
+3. The widget appears automatically
+
+**Advanced customization:**
+- Configurable button position
+- Adaptable colors and design
+- Integration with your existing cart
+- API available for developers
+
+💡 **Works with:** HTML, PHP, React, Vue, Angular, etc.`,
+
+    // FAQ Questions & Answers - Configuration
+    faqPersonalityQ: "How to customize my AI Seller's personality?",
+    faqPersonalityA: `You have full control over your AI Seller:
+
+**In Dashboard → Seller Configuration:**
+
+**1. Basic personality**
+- Tone: Professional, Friendly, Expert, Casual
+- Style: Direct, Consultant, Storytelling, Technical
+
+**2. Custom messages**
+- Welcome message
+- Common objection responses
+- Follow-up messages
+
+**3. Product knowledge**
+- Import your product sheets
+- Add your FAQs
+- Configure sales arguments
+
+**4. Commercial objectives**
+- Sales priorities
+- Products to promote
+- Negotiation thresholds
+
+💡 **Tip:** Test different personalities with our integrated simulator!`,
+
+    faqLearningQ: "How does the AI Seller learn about my products?",
+    faqLearningA: `The AI Seller learns about your products through several methods:
+
+**1. Automatic import**
+- Connect your catalog (Shopify, WooCommerce, etc.)
+- Automatic synchronization of new products
+- Real-time price and stock updates
+
+**2. Knowledge base**
+- Upload your PDF/Word documents
+- Existing FAQs
+- User guides
+- Return/warranty policies
+
+**3. Continuous learning**
+- AI analyzes conversations
+- Automatically improves responses
+- Reports recurring questions
+
+**4. Manual configuration**
+- Add specific information
+- Define sales arguments
+- Configure objection responses
+
+📈 **Result:** A Seller increasingly expert on YOUR products`,
+
+    // FAQ Questions & Answers - Technical
+    faqWidgetNotShowingQ: "What to do if the widget doesn't appear?",
+    faqWidgetNotShowingA: `Here's how to diagnose and solve the problem:
+
+**Basic checks:**
+1. ✅ Is the code correctly installed?
+2. ✅ No errors in browser console (F12)
+3. ✅ Is your plan active?
+4. ✅ Is the AI Seller activated?
+
+**Common solutions:**
+
+**Shopify:** Clear cache (Online Store → Preferences → Purge cache)
+
+**WordPress:** Temporarily disable cache plugins (WP Rocket, W3 Total Cache)
+
+**Custom sites:** Check for JavaScript conflicts
+
+**Ad blockers:** Add widget.chatseller.app to whitelist
+
+**Still not resolved?**
+Contact us with:
+- Your site URL
+- Browser used
+- Console screenshot (F12)
+
+⚡ **Priority support for Pro/Enterprise customers**`,
+
+    faqSlowSiteQ: "Does ChatSeller slow down my website?",
+    faqSlowSiteA: `No! ChatSeller is optimized for performance:
+
+**Technical optimizations:**
+- ⚡ **Asynchronous loading**: No impact on loading time
+- 🪶 **Lightweight script**: Only 45kb compressed
+- 🚀 **Global CDN**: Ultra-fast delivery from nearest server
+- 💾 **Smart cache**: Widget loads instantly after first visit
+
+**Performance tests:**
+- **Page Speed**: No impact on Google score
+- **Time to Interactive**: +0.1s maximum
+- **Lighthouse**: Score maintained
+
+**Monitoring included:**
+- 24/7 performance monitoring
+- Automatic alerts for issues
+- Continuous optimizations
+
+🎯 **Result:** More conversions WITHOUT slowing your site`,
+
+    // FAQ Questions & Answers - Billing
+    faqBillingHowQ: "How does ChatSeller billing work?",
+    faqBillingHowA: `Simple and transparent billing:
+
+**Available plans:**
+- **Starter**: $22/month - 1000 messages
+- **Professional**: $33/month - 5000 messages  
+- **Enterprise**: Custom - Unlimited
+
+**What's included:**
+✅ **All plans:** No commission on your sales
+✅ **No hidden fees:** Fixed monthly price
+✅ **7 days free** on Starter plan
+✅ **Cancel in 1 click** anytime
+
+**Payment methods:**
+- Credit card (Visa, Mastercard)
+
+**Billing:**
+- Automatic payment same day each month
+- Invoice sent by email
+- History in your Dashboard
+
+💡 **Guarantee:** Satisfied or refunded within 30 days`,
+
+    faqChangePlanQ: "Can I change plans anytime?",
+    faqChangePlanA: `Yes, you have total flexibility:
+
+**Upgrade (Starter → Pro/Enterprise):**
+- ✅ **Immediate**: New features activated instantly
+- ✅ **Prorated**: You only pay the difference until month end
+- ✅ **No interruption**: Your AI Seller stays active
+
+**Downgrade (Pro → Starter):**
+- 📅 **End of period**: Change effective next cycle
+- 💾 **Data preserved**: No history loss
+- ⚠️ **Limits applied**: Advanced features disabled
+
+**Cancellation:**
+- 🔴 **1 click** from your Dashboard
+- 📱 **No notice** required
+- 💸 **Prorated refund** if cancelled mid-month
+
+**Reactivation:**
+- ✅ **Instant**: Resume where you left off
+- 📊 **History preserved**: All your data is saved
+
+🎯 **No commitment, total freedom!**`,
+
+    // Contact Form
+    supportContactTitle: "Contact support",
+    supportContactSuccess: "Message sent!",
+    supportContactSuccessDesc: "Our team will respond within 2h on average. You should receive a confirmation email shortly.",
+    supportContactError: "An error occurred while sending.",
+    supportContactSendAnother: "Send another message",
+    supportContactFullName: "Full name",
+    supportContactEmail: "Email",
+    supportContactCategory: "Category",
+    supportContactSubject: "Subject",
+    supportContactMessage: "Message",
+    supportContactMessagePlaceholder: "Describe your problem or question in detail...",
+    supportContactSendButton: "Send message",
+    supportContactSending: "Sending...",
+    supportContactUrgentHelp: "Need urgent help?",
+    
+    // Contact Categories
+    contactCategoryGeneral: "General question",
+    contactCategoryTechnical: "Technical problem",
+    contactCategoryBilling: "Billing",
+    contactCategoryFeature: "Feature request",
+    contactCategoryBug: "Report bug",
+    
+    // Common Support Terms
+    supportTags: "keywords",
+    supportMinutes: "minutes",
+    supportHours: "hours",
+    supportDays: "days", 
+    supportAIVendor: "AI Seller",
   }
 };
 
