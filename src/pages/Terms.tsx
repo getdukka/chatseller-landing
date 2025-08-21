@@ -239,7 +239,7 @@ const Terms = () => {
                       </h3>
                     </div>
                     <div className="space-y-3 text-blue-800">
-                      <div><strong>{language === 'fr' ? "Prix :" : "Price:"}</strong> {language === 'fr' ? "14€ par mois" : "$14 per month"}</div>
+                      <div><strong>{language === 'fr' ? "Prix :" : "Price:"}</strong> {language === 'fr' ? "19€ par mois" : "$14 per month"}</div>
                       <div><strong>{language === 'fr' ? "Facturation :" : "Billing:"}</strong> {language === 'fr' ? "Mensuelle, automatique" : "Monthly, automatic"}</div>
                       <div><strong>{language === 'fr' ? "Devise :" : "Currency:"}</strong> {language === 'fr' ? "Euros (EUR)" : "US Dollars (USD)"}</div>
                       <div><strong>TVA :</strong> {language === 'fr' ? "Applicable selon votre localisation" : "Applicable based on your location"}</div>

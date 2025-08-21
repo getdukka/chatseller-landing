@@ -187,7 +187,7 @@ const MobileComparisonCards = () => {
     {
       name: "ChatSeller",
       type: language === 'fr' ? "Agent IA Commercial" : "AI Sales Agent",
-      price: language === 'fr' ? "14€/mois" : "$14/month",
+      price: language === 'fr' ? "19€/mois" : "$14/month",
       isChatseller: true,
       features: {
         engagement: { available: true, text: language === 'fr' ? "Conversation naturelle" : "Natural conversation" },
@@ -350,7 +350,7 @@ const ComparisonSection = () => {
         language === 'fr' ? "Peut nécessiter un temps d'adaptation" : "May require adaptation time",
         language === 'fr' ? "Nouveau sur le marché" : "New to the market"
       ],
-      price: language === 'fr' ? "14€/mois" : "$14/month",
+      price: language === 'fr' ? "19€/mois" : "$14/month",
       isChatseller: true
     }
   ];
@@ -470,8 +470,8 @@ const ComparisonSection = () => {
                   <ComparisonRow
                     feature={language === 'fr' ? "Prix mensuel" : "Monthly price"}
                     traditional={language === 'fr' ? "0€" : "$0"}
-                    chatbots={language === 'fr' ? "+40€" : "+$50"}
-                    chatseller={language === 'fr' ? "14€" : "$14"}
+                    chatbots={language === 'fr' ? "+40€" : "+$45"}
+                    chatseller={language === 'fr' ? "19€" : "$22"}
                   />
                   <ComparisonRow
                     feature={language === 'fr' ? "Taux de conversion" : "Conversion rate"}

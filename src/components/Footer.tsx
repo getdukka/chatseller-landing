@@ -1,3 +1,4 @@
+// src/components/Footer.tsx - COMPLÈTEMENT TRADUIT
 import React from 'react';
 import { Twitter, Linkedin, Mail, MapPin, Shield, Star, Clock, Users } from 'lucide-react';
 import ConversationIcon from './ConversationIcon';
@@ -5,7 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <footer className="bg-white border-t border-border">
@@ -27,7 +28,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Users className="h-4 w-4 text-purple-600" />
-              <span>+55 e-commerçants satisfaits</span>
+              <span>{t('footerTestedApproved')}</span>
             </div>
           </div>
         </div>
@@ -49,8 +50,10 @@ const Footer = () => {
               <span className="text-xs text-primary ml-8 -mt-3 font-medium">by Dukka</span>
             </div>
             <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-              Agent IA Commercial pour e-commerce. Transformez votre page produit en vendeur autonome 
-              qui accueille vos visiteurs, réponds à leurs questions et collecte leurs commandes.
+              {language === 'fr' ? 
+                "Agent IA Commercial pour e-commerce. Transformez votre page produit en vendeur autonome qui accueille vos visiteurs, réponds à leurs questions et collecte leurs commandes." :
+                "AI Sales Agent for e-commerce. Transform your product page into an autonomous seller that welcomes your visitors, answers their questions and collects their orders."
+              }
             </p>
             <div className="flex space-x-3">
               <a 
@@ -120,7 +123,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  À propos
+                  {language === 'fr' ? "À propos" : "About"}
                 </a>
               </li>
               <li>
@@ -130,7 +133,7 @@ const Footer = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  Actualités
+                  {language === 'fr' ? "Actualités" : "News"}
                 </a>
               </li>
               <li>

@@ -190,8 +190,8 @@ const DesktopDemo = () => {
                 onClick={() => setIsChatModalOpen(true)}
                 className="w-full mb-4 rounded-2xl bg-black hover:bg-gray-800 text-white group relative overflow-hidden"
               >
-                <MessageSquare className="w-4 h-4 mr-2" />
-                💬 {t('demoTalkToSeller')}
+                <MessageSquare className="w-4 h-4 mr-1" />
+                {t('demoTalkToSeller')}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transform translate-x-full group-hover:translate-x-0 transition-all duration-1000"></div>
               </Button>
               

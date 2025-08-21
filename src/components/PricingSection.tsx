@@ -206,8 +206,9 @@ const ComparisonTable = () => {
   );
 };
 
+// ✅ ROI CALCULATOR AVEC TRADUCTION CORRIGÉE
 const ROICalculator = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [visitors, setVisitors] = useState(1000);
   const [currentConversion, setCurrentConversion] = useState(2.5);
   const [averageOrder, setAverageOrder] = useState(85);
@@ -216,7 +217,9 @@ const ROICalculator = () => {
   const newConversion = Math.min(currentConversion * 4, 18); // ChatSeller améliore x4 en moyenne, max 18%
   const newRevenue = (visitors * (newConversion / 100) * averageOrder);
   const additionalRevenue = newRevenue - currentRevenue;
-  const monthlyProfit = additionalRevenue - 14; // Coût plan Starter
+  const monthlyProfit = additionalRevenue - (language === 'fr' ? 19 : 20); // Coût plan Starter
+  const roiPercent = Math.round((monthlyProfit / (language === 'fr' ? 19 : 20)) * 100);
+  const paybackDays = Math.ceil((language === 'fr' ? 19 : 20) / (monthlyProfit > 0 ? monthlyProfit / 30 : 1));
   
   return (
     <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 max-w-4xl mx-auto">
@@ -265,7 +268,12 @@ const ROICalculator = () => {
             </div>
             <div className="flex justify-between">
               <span>{t('revenueMonth')}</span>
-              <span className="font-semibold">{Math.round(currentRevenue).toLocaleString()}€</span>
+              <span className="font-semibold">
+                {language === 'fr' ? 
+                  `${Math.round(currentRevenue).toLocaleString()}€` : 
+                  `$${Math.round(currentRevenue).toLocaleString()}`
+                }
+              </span>
             </div>
           </div>
         </div>
@@ -279,24 +287,41 @@ const ROICalculator = () => {
             </div>
             <div className="flex justify-between">
               <span>{t('newRevenue')}</span>
-              <span className="font-semibold text-green-700">{Math.round(newRevenue).toLocaleString()}€</span>
+              <span className="font-semibold text-green-700">
+                {language === 'fr' ? 
+                  `${Math.round(newRevenue).toLocaleString()}€` : 
+                  `$${Math.round(newRevenue).toLocaleString()}`
+                }
+              </span>
             </div>
             <div className="border-t border-green-200 pt-3">
               <div className="flex justify-between text-lg font-bold text-green-700">
                 <span>{t('additionalProfit')}</span>
-                <span>+{Math.round(monthlyProfit).toLocaleString()}€/mois</span>
+                <span>
+                  {language === 'fr' ? 
+                    `+${Math.round(monthlyProfit).toLocaleString()}€/mois` : 
+                    `+$${Math.round(monthlyProfit).toLocaleString()}/month`
+                  }
+                </span>
               </div>
             </div>
           </div>
         </div>
       </div>
       
+      {/* ✅ SECTION CORRIGÉE AVEC TRADUCTION APPROPRIÉE */}
       <div className="text-center mt-6">
         <div className="text-2xl font-bold text-primary mb-2">
-          {t('roiPerMonth').replace('%', Math.round((monthlyProfit / 14) * 100).toString())}
+          {language === 'fr' ? 
+            `ROI: ${roiPercent}% par mois` : 
+            `ROI: ${roiPercent}% per month`
+          }
         </div>
         <p className="text-muted-foreground text-sm">
-          {t('paybackTime').replace('jour(s)', Math.ceil(14 / (monthlyProfit > 0 ? monthlyProfit : 1)).toString())}
+          {language === 'fr' ? 
+            `ChatSeller se rembourse en ${paybackDays} jour${paybackDays > 1 ? 's' : ''}` : 
+            `ChatSeller pays for itself in ${paybackDays} day${paybackDays > 1 ? 's' : ''}`
+          }
         </p>
       </div>
     </div>
@@ -332,7 +357,7 @@ const PricingSection = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-16 animate-fade-in [animation-delay:600ms]">
           <PricingCard
             plan={t('starterPlan')}
-            price="14€"
+            price="19€"
             period={language === 'fr' ? 'mois' : 'month'}
             description={t('starterDesc')}
             features={[
@@ -442,7 +467,9 @@ const PricingSection = () => {
           
           <div className="text-center p-6 bg-white/60 rounded-xl border border-gray-200">
             <Star className="w-8 h-8 text-yellow-500 mx-auto mb-3" />
-            <h4 className="font-semibold mb-2">4.8/5 étoiles</h4>
+            <h4 className="font-semibold mb-2">
+              {language === 'fr' ? '4.8/5 étoiles' : '4.8/5 stars'}
+              </h4>
             <p className="text-sm text-muted-foreground">
               {language === 'fr' ? 'Note moyenne de nos testeurs' : 'Average rating from our testers'}
             </p>

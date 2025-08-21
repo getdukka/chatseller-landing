@@ -212,7 +212,7 @@ Contactez-nous avec :
       answer: `Facturation simple et transparente :
 
 **Plans disponibles :**
-- **Starter** : 14€/mois - 1000 messages
+- **Starter** : 19€/mois - 1000 messages
 - **Professional** : 29€/mois - 5000 messages  
 - **Enterprise** : Sur mesure - Illimité
 

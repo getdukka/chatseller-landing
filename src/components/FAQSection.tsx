@@ -358,7 +358,7 @@ const FAQSection = () => {
                 </strong>
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>{language === 'fr' ? "Prix fixe" : "Fixed price"} :</strong> {language === 'fr' ? "14€/mois (Starter) ou 29€/mois (Pro), c'est tout" : "$14/month (Starter) or $29/month (Pro), that's it"}</li>
+                <li><strong>{language === 'fr' ? "Prix fixe" : "Fixed price"} :</strong> {language === 'fr' ? "19€/mois (Starter) ou 29€/mois (Pro), c'est tout" : "$14/month (Starter) or $29/month (Pro), that's it"}</li>
                 <li><strong>{language === 'fr' ? "Aucune commission" : "No commission"} :</strong> {language === 'fr' ? "0% sur vos ventes, 100% pour vous" : "0% on your sales, 100% for you"}</li>
                 <li><strong>{language === 'fr' ? "Pas de frais cachés" : "No hidden fees"} :</strong> {language === 'fr' ? "Installation, mises à jour, support inclus" : "Installation, updates, support included"}</li>
                 <li><strong>{language === 'fr' ? "Pas de limite" : "No limits"} :</strong> {language === 'fr' ? "Vendez autant que vous voulez" : "Sell as much as you want"}</li>
@@ -367,7 +367,7 @@ const FAQSection = () => {
               <p className="mt-3 text-sm text-green-600">
                 💰 <strong>
                   {language === 'fr' ? 
-                    "Exemple : Si vous générez +5,000€/mois grâce à ChatSeller, vous payez toujours 14€ ou 29€ par mois." :
+                    "Exemple : Si vous générez +5,000€/mois grâce à ChatSeller, vous payez toujours 19€ ou 29€ par mois." :
                     "Example: If you generate +$5,000/month thanks to ChatSeller, you still pay $14 or $29 per month."
                   }
                 </strong>
