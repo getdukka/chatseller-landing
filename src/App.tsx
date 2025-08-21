@@ -1,4 +1,4 @@
-// App.tsx
+// App.tsx - IMPORTS CORRIGÉS
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,12 +7,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { useEffect } from "react";
 
-// Pages
+// Pages - IMPORTS CORRIGÉS AVEC CASSE EXACTE
 import Index from "./pages/Index";
 import Support from "./pages/Support";
-import About from "./pages/about"
-import Terms from "./pages/terms";
-import Privacy from "./pages/privacy";
+import About from "./pages/About";
+import Terms from "./pages/Terms.tsx";
+import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

@@ -1,4 +1,4 @@
-// src/components/Hero.tsx - AVEC TRADUCTIONS ET BADGE BETA
+// src/components/Hero.tsx - MESSAGES CHAT TRADUITS
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2, MessageSquare, Mic, Send, Play } from 'lucide-react';
@@ -89,7 +89,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* ✅ ANIMATION CONVERSATION AMÉLIORÉE */}
+      {/* ✅ ANIMATION CONVERSATION AMÉLIORÉE AVEC TRADUCTIONS */}
       <div className="relative z-10 mt-8 animate-fade-in [animation-delay:800ms]">
         <div className="max-w-3xl mx-auto px-6">
           <ConversationAnimation />
@@ -105,17 +105,25 @@ const Hero = () => {
   );
 };
 
-// ✅ ANIMATION CONVERSATION AMÉLIORÉE
+// ✅ ANIMATION CONVERSATION AVEC TRADUCTIONS COMPLÈTES
 const ConversationAnimation = () => {
   const [currentStep, setCurrentStep] = useState(0);
+  const { language } = useLanguage();
   
-  const conversation = [
+  const conversation = language === 'fr' ? [
     { type: 'bot', message: "Bonjour 👋 Je suis Anna, Vendeuse chez Amani. Comment puis-je vous aider ?", delay: 1000 },
     { type: 'user', message: "Bonjour Anna ! Je veux savoir comment ce coussin chauffant soulage concrètement les douleurs menstruelles.", delay: 2000 },
     { type: 'bot', message: "Excellente question ! La ceinture chauffante Mia agit de 2 façons : la chaleur liquéfie le sang et facilite son écoulement, et le massage détend les muscles. La combinaison des deux réduit drastiquement la douleur. Voulez-vous que je vous aide à passer commande ?", delay: 3000 },
     { type: 'user', message: "Oui, je vais la prendre.", delay: 4000 },
     { type: 'bot', message: "Très bien ☺️ Combien d'exemplaires souhaitez-vous commander ?", delay: 5000 },
     { type: 'user', message: "Juste un seul.", delay: 6000 }
+  ] : [
+    { type: 'bot', message: "Hello 👋 I'm Anna, Sales Agent at Amani. How can I help you?", delay: 1000 },
+    { type: 'user', message: "Hi Anna! I want to know how this heating belt specifically relieves menstrual pain.", delay: 2000 },
+    { type: 'bot', message: "Great question! The Mia heating belt works in 2 ways: heat liquefies blood and facilitates flow, and massage relaxes muscles. The combination drastically reduces pain. Would you like me to help you place an order?", delay: 3000 },
+    { type: 'user', message: "Yes, I'll take it.", delay: 4000 },
+    { type: 'bot', message: "Perfect ☺️ How many would you like to order?", delay: 5000 },
+    { type: 'user', message: "Just one.", delay: 6000 }
   ];
 
   React.useEffect(() => {
@@ -123,7 +131,7 @@ const ConversationAnimation = () => {
       setCurrentStep((prev) => (prev + 1) % conversation.length);
     }, 3500);
     return () => clearInterval(timer);
-  }, []);
+  }, [conversation.length]);
 
   return (
     <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 mx-auto max-w-2xl">
@@ -133,10 +141,12 @@ const ConversationAnimation = () => {
             <span className="text-white text-sm font-bold">A</span>
           </div>
           <div>
-            <div className="font-semibold text-sm">Anna - Vendeuse IA</div>
+            <div className="font-semibold text-sm">
+              {language === 'fr' ? "Anna - Vendeuse IA" : "Anna - AI Sales Agent"}
+            </div>
             <div className="flex items-center text-xs text-gray-500">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-1 animate-pulse"></div>
-              En ligne
+              {language === 'fr' ? "En ligne" : "Online"}
             </div>
           </div>
         </div>
@@ -173,13 +183,13 @@ const ConversationAnimation = () => {
         )}
       </div>
       
-      {/* ✅ NOUVEAU : Interface de chat réaliste - VERSION LUCIDE REACT */}
+      {/* ✅ NOUVEAU : Interface de chat réaliste - VERSION LUCIDE REACT TRADUITE */}
       <div className="mt-4 pt-4 border-t border-gray-100">
         <div className="flex items-center space-x-3 bg-gray-50 rounded-full p-3">
           <div className="flex-1 relative">
             <input 
               type="text" 
-              placeholder="Tapez votre message..." 
+              placeholder={language === 'fr' ? "Tapez votre message..." : "Type your message..."}
               className="w-full bg-white rounded-full px-4 py-2 text-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent cursor-not-allowed opacity-75"
               disabled
             />

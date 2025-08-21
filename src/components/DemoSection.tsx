@@ -1,4 +1,4 @@
-// src/components/DemoSection.tsx 
+// src/components/DemoSection.tsx - AVEC TRADUCTIONS COMPLÈTES
 import React, { useState } from 'react';
 import { ArrowRight, MessageSquare, ShoppingCart, Star, Smartphone, Monitor, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -17,20 +17,20 @@ const DemoSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center px-4 py-2 mb-6 border border-blue-200 rounded-full bg-blue-50 text-sm font-medium text-blue-700 animate-fade-in">
             <Play className="w-4 h-4 mr-2" />
-            {t('demo')} en temps réel
+            {t('demoBadge')}
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
-            Testez ChatSeller en live
+            {t('demoTitle')}
           </h2>
           
           <p className="text-lg text-muted-foreground mb-8 animate-fade-in [animation-delay:400ms]">
-            Discutez avec Anna, la Vendeuse IA d'AMANI, spécialisée en bien-être féminin
+            {t('demoSubtitle')}
           </p>
           
           <p className="text-muted-foreground mb-8 animate-fade-in [animation-delay:500ms]">
             <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
-              💡 Cliquez sur "Parler à la vendeuse" dans la démo ci-dessous !
+              💡 {t('demoTip')}
             </span>
           </p>
         </div>
@@ -47,7 +47,7 @@ const DemoSection = () => {
               }`}
             >
               <Monitor className="w-4 h-4 mr-2" />
-              Vue Desktop
+              {t('demoDesktop')}
             </button>
             <button
               onClick={() => setActiveView('mobile')}
@@ -58,7 +58,7 @@ const DemoSection = () => {
               }`}
             >
               <Smartphone className="w-4 h-4 mr-2" />
-              Vue Mobile
+              {t('demoMobile')}
             </button>
           </div>
         </div>
@@ -76,12 +76,12 @@ const DemoSection = () => {
         <div className="text-center animate-fade-in [animation-delay:1000ms]">
           <Button size="lg" className="rounded-2xl" asChild>
             <a href="https://dashboard.chatseller.app/register">
-              Créer mon Vendeur IA
+              {t('createMyAI')}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
           <p className="text-sm text-gray-500 mt-3">
-            Installation en 2 minutes • 7 jours gratuits • Sans engagement
+            {t('installMinutes')} • {t('freeTrialDays')} • {t('noCardRequired')}
           </p>
         </div>
       </div>
@@ -92,6 +92,7 @@ const DemoSection = () => {
 // ✅ COMPOSANT DEMO DESKTOP PROPRE
 const DesktopDemo = () => {
   const [isChatModalOpen, setIsChatModalOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
@@ -156,7 +157,7 @@ const DesktopDemo = () => {
             {/* Bouton Ajouter au panier */}
             <Button className="w-full mb-4 rounded-2xl bg-pink-500 hover:bg-pink-600">
               <ShoppingCart className="w-4 h-4 mr-2" />
-              Ajouter au panier
+              {t('addToCart')}
             </Button>
 
             {/* ✅ BOUTON CHATSELLER DANS LA ZONE DE DÉMO */}
@@ -166,7 +167,7 @@ const DesktopDemo = () => {
                 className="w-full mb-4 rounded-2xl bg-black hover:bg-gray-800 text-white group relative overflow-hidden"
               >
                 <MessageSquare className="w-4 h-4 mr-2" />
-                💬 Parler à la vendeuse
+                💬 {t('demoTalkToSeller')}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transform translate-x-full group-hover:translate-x-0 transition-all duration-1000"></div>
               </Button>
               
@@ -195,6 +196,7 @@ const DesktopDemo = () => {
 // ✅ COMPOSANT DEMO MOBILE PROPRE
 const MobileDemo = () => {
   const [isChatModalOpen, setIsChatModalOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <div className="max-w-sm mx-auto">
@@ -203,7 +205,7 @@ const MobileDemo = () => {
           {/* Mobile Status Bar */}
           <div className="bg-black text-white px-4 py-2 text-xs flex justify-between">
             <span>9:41</span>
-            <span>🔶 🔋100%</span>
+            <span>📶 🔋100%</span>
           </div>
 
           {/* Mobile Product Page */}
@@ -228,7 +230,7 @@ const MobileDemo = () => {
             {/* Bouton Ajouter au panier mobile */}
             <Button className="w-full mb-3 text-sm rounded-2xl bg-pink-500 hover:bg-pink-600">
               <ShoppingCart className="w-4 h-4 mr-2" />
-              Ajouter au panier
+              {t('addToCart')}
             </Button>
 
             {/* ✅ BOUTON CHATSELLER MOBILE */}
@@ -237,7 +239,7 @@ const MobileDemo = () => {
               className="w-full mb-4 text-sm rounded-2xl bg-black hover:bg-gray-800 text-white group"
             >
               <MessageSquare className="w-4 h-4 mr-2" />
-              💬 Parler à la vendeuse
+              💬 {t('demoTalkToSeller')}
             </Button>
           </div>
         </div>

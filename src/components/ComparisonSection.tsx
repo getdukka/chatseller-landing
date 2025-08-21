@@ -1,4 +1,4 @@
-// src/components/ComparisonSection.tsx
+// src/components/ComparisonSection.tsx - AVEC TRADUCTIONS COMPLÈTES
 import React, { useState } from 'react';
 import { 
   Check, 
@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ComparisonRow = ({ 
   feature, 
@@ -72,6 +73,8 @@ const CompetitorCard = ({
   price: string;
   isChatseller?: boolean;
 }) => {
+  const { t } = useLanguage();
+  
   return (
     <div className={`p-6 rounded-xl border backdrop-blur-sm transition-all duration-300 hover:shadow-lg relative ${
       isChatseller 
@@ -82,7 +85,7 @@ const CompetitorCard = ({
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <div className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
             <Crown className="w-4 h-4 mr-1" />
-            Recommandé
+            {t('mostPopular')}
           </div>
         </div>
       )}
@@ -146,69 +149,70 @@ const CompetitorCard = ({
 // ✅ COMPOSANT MOBILE CARDS AU LIEU DU TABLEAU
 const MobileComparisonCards = () => {
   const [activeCard, setActiveCard] = useState(0);
+  const { t, language } = useLanguage();
   
   const solutions = [
     {
-      name: "E-commerce Classique",
-      type: "Boutique traditionnelle",
-      price: "0€/mois",
+      name: t('traditionalEcommerce'),
+      type: language === 'fr' ? "Boutique traditionnelle" : "Traditional shop",
+      price: language === 'fr' ? "0€/mois" : "$0/month",
       features: {
-        engagement: { available: false, text: "Aucune interaction" },
-        collecte: { available: false, text: "Formulaires statiques" },
-        ia: { available: false, text: "Aucune IA" },
-        upsell: { available: false, text: "Manuel uniquement" },
-        support: { available: false, text: "Aucun support auto" },
+        engagement: { available: false, text: language === 'fr' ? "Aucune interaction" : "No interaction" },
+        collecte: { available: false, text: language === 'fr' ? "Formulaires statiques" : "Static forms" },
+        ia: { available: false, text: language === 'fr' ? "Aucune IA" : "No AI" },
+        upsell: { available: false, text: language === 'fr' ? "Manuel uniquement" : "Manual only" },
+        support: { available: false, text: language === 'fr' ? "Aucun support auto" : "No auto support" },
         mobile: { available: false, text: "Standard" },
-        installation: { available: false, text: "Complexe" },
+        installation: { available: false, text: language === 'fr' ? "Complexe" : "Complex" },
         conversion: { available: false, text: "2-3%" },
-        roi: { available: false, text: "Faible" }
+        roi: { available: false, text: language === 'fr' ? "Faible" : "Low" }
       }
     },
     {
-      name: "Chatbots Basiques",
+      name: t('basicChatbots'),
       type: "Zendesk, Intercom, Crisp",
-      price: "+40€/mois",
+      price: language === 'fr' ? "+40€/mois" : "+$50/month",
       features: {
-        engagement: { available: true, text: "Basique" },
-        collecte: { available: false, text: "Pas de collecte" },
-        ia: { available: true, text: "Limitée" },
-        upsell: { available: false, text: "Non disponible" },
-        support: { available: true, text: "Basique" },
+        engagement: { available: true, text: language === 'fr' ? "Basique" : "Basic" },
+        collecte: { available: false, text: language === 'fr' ? "Pas de collecte" : "No collection" },
+        ia: { available: true, text: language === 'fr' ? "Limitée" : "Limited" },
+        upsell: { available: false, text: language === 'fr' ? "Non disponible" : "Not available" },
+        support: { available: true, text: language === 'fr' ? "Basique" : "Basic" },
         mobile: { available: true, text: "Standard" },
-        installation: { available: false, text: "Complexe" },
+        installation: { available: false, text: language === 'fr' ? "Complexe" : "Complex" },
         conversion: { available: true, text: "3-4%" },
-        roi: { available: true, text: "Moyen" }
+        roi: { available: true, text: language === 'fr' ? "Moyen" : "Medium" }
       }
     },
     {
       name: "ChatSeller",
-      type: "Agent IA Commercial",
-      price: "14€/mois",
+      type: language === 'fr' ? "Agent IA Commercial" : "AI Sales Agent",
+      price: language === 'fr' ? "14€/mois" : "$14/month",
       isChatseller: true,
       features: {
-        engagement: { available: true, text: "Conversation naturelle" },
-        collecte: { available: true, text: "Automatique dans chat" },
+        engagement: { available: true, text: language === 'fr' ? "Conversation naturelle" : "Natural conversation" },
+        collecte: { available: true, text: language === 'fr' ? "Automatique dans chat" : "Automatic in chat" },
         ia: { available: true, text: "GPT-4o - Claude 4" },
-        upsell: { available: true, text: "+34% panier moyen" },
-        support: { available: true, text: "24/7 en FR/EN" },
+        upsell: { available: true, text: language === 'fr' ? "+34% panier moyen" : "+34% average cart" },
+        support: { available: true, text: "24/7 FR/EN" },
         mobile: { available: true, text: "Mobile-first" },
-        installation: { available: true, text: "2 minutes" },
+        installation: { available: true, text: language === 'fr' ? "2 minutes" : "2 minutes" },
         conversion: { available: true, text: "7-18%" },
-        roi: { available: true, text: "x40 en 3 mois" }
+        roi: { available: true, text: language === 'fr' ? "x40 en 3 mois" : "x40 in 3 months" }
       }
     }
   ];
 
   const featureNames = {
-    engagement: "Engagement visiteur",
-    collecte: "Collecte commandes", 
-    ia: "Modèle IA",
-    upsell: "Upsell automatique",
-    support: "Assistance 24/7",
+    engagement: language === 'fr' ? "Engagement visiteur" : "Visitor engagement",
+    collecte: language === 'fr' ? "Collecte commandes" : "Order collection", 
+    ia: language === 'fr' ? "Modèle IA" : "AI Model",
+    upsell: language === 'fr' ? "Upsell automatique" : "Automatic upsell",
+    support: language === 'fr' ? "Assistance 24/7" : "24/7 Support",
     mobile: "Mobile-first",
     installation: "Installation",
-    conversion: "Taux conversion",
-    roi: "ROI moyen"
+    conversion: language === 'fr' ? "Taux conversion" : "Conversion rate",
+    roi: "ROI"
   };
 
   return (
@@ -271,7 +275,7 @@ const MobileComparisonCards = () => {
           <div className="mt-6">
             <Button className="w-full group">
               <a href="https://dashboard.chatseller.app/register" className="flex items-center justify-center w-full">
-                Commencer avec ChatSeller
+                {t('createMyAI')}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -285,6 +289,7 @@ const MobileComparisonCards = () => {
 const ComparisonSection = () => {
   const [activeTab, setActiveTab] = useState<'table' | 'cards'>('table');
   const isMobile = useIsMobile();
+  const { t, language } = useLanguage();
 
   // ✅ FORCER L'AFFICHAGE MOBILE SUR PETITS ÉCRANS
   React.useEffect(() => {
@@ -295,57 +300,57 @@ const ComparisonSection = () => {
 
   const competitors = [
     {
-      name: "E-commerce Classique",
-      type: "Boutique traditionnelle",
+      name: t('traditionalEcommerce'),
+      type: language === 'fr' ? "Boutique traditionnelle" : "Traditional shop",
       pros: [
-        "Contrôle total du design",
-        "Pas d'abonnement mensuel",
-        "Interface familière"
+        language === 'fr' ? "Contrôle total du design" : "Full design control",
+        language === 'fr' ? "Pas d'abonnement mensuel" : "No monthly subscription",
+        language === 'fr' ? "Interface familière" : "Familiar interface"
       ],
       cons: [
-        "Aucune interaction client",
-        "Taux conversion 2-3% seulement",
-        "Abandon panier 73%",
-        "Aucun support automatique",
-        "Ventes limitées"
+        language === 'fr' ? "Aucune interaction client" : "No customer interaction",
+        language === 'fr' ? "Taux conversion 2-3% seulement" : "Only 2-3% conversion rate",
+        language === 'fr' ? "Abandon panier 73%" : "73% cart abandonment",
+        language === 'fr' ? "Aucun support automatique" : "No automatic support",
+        language === 'fr' ? "Ventes limitées" : "Limited sales"
       ],
-      price: "0€/mois"
+      price: language === 'fr' ? "0€/mois" : "$0/month"
     },
     {
-      name: "Chatbots Basiques",
+      name: t('basicChatbots'),
       type: "Zendesk, Intercom, Crisp",
       pros: [
-        "Réponses automatiques rapides",
-        "Interface de chat simple",
-        "Support multilingue basique"
+        language === 'fr' ? "Réponses automatiques rapides" : "Fast automatic responses",
+        language === 'fr' ? "Interface de chat simple" : "Simple chat interface",
+        language === 'fr' ? "Support multilingue basique" : "Basic multilingual support"
       ],
       cons: [
-        "Réponses robotiques et limitées",
-        "Aucune collecte de commandes",
-        "Pas d'upsell intelligent",
-        "Configuration complexe",
-        "Prix élevés (+40€/mois)"
+        language === 'fr' ? "Réponses robotiques et limitées" : "Robotic and limited responses",
+        language === 'fr' ? "Aucune collecte de commandes" : "No order collection",
+        language === 'fr' ? "Pas d'upsell intelligent" : "No intelligent upselling",
+        language === 'fr' ? "Configuration complexe" : "Complex configuration",
+        language === 'fr' ? "Prix élevés (+40€/mois)" : "High prices (+$50/month)"
       ],
-      price: "+40€/mois"
+      price: language === 'fr' ? "+40€/mois" : "+$50/month"
     },
     {
       name: "ChatSeller",
-      type: "Agent IA Commercial",
+      type: language === 'fr' ? "Agent IA Commercial" : "AI Sales Agent",
       pros: [
-        "Conversations naturelles avec IA",
-        "Collecte vraiment les commandes",
-        "Upsell intelligent +34% panier",
-        "Installation en 2 minutes",
-        "Support en français & anglais",
-        "Analytics de conversion avancées",
+        language === 'fr' ? "Conversations naturelles avec IA" : "Natural AI conversations",
+        language === 'fr' ? "Collecte vraiment les commandes" : "Actually collects orders",
+        language === 'fr' ? "Upsell intelligent +34% panier" : "Smart upselling +34% cart",
+        language === 'fr' ? "Installation en 2 minutes" : "2-minute installation",
+        language === 'fr' ? "Support en français & anglais" : "French & English support",
+        language === 'fr' ? "Analytics de conversion avancées" : "Advanced conversion analytics",
         "Mobile-first",
-        "RGPD compliant"
+        language === 'fr' ? "RGPD compliant" : "GDPR compliant"
       ],
       cons: [
-        "Peut nécessiter un temps d'adaptation",
-        "Nouveau sur le marché"
+        language === 'fr' ? "Peut nécessiter un temps d'adaptation" : "May require adaptation time",
+        language === 'fr' ? "Nouveau sur le marché" : "New to the market"
       ],
-      price: "14€/mois",
+      price: language === 'fr' ? "14€/mois" : "$14/month",
       isChatseller: true
     }
   ];
@@ -359,16 +364,16 @@ const ComparisonSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center px-4 py-2 mb-6 border border-purple-200 rounded-full bg-purple-50 text-sm font-medium text-purple-700 animate-fade-in">
             <Star className="w-4 h-4 mr-2" />
-            Comparaison objective et transparente
+            {t('comparisonBadge')}
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in [animation-delay:200ms]">
-            Pourquoi choisir 
+            {t('comparisonTitle')}
             <span className="text-gradient bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> ChatSeller</span>
           </h2>
           
           <p className="text-lg text-muted-foreground animate-fade-in [animation-delay:400ms]">
-            Comparaison honnête entre ChatSeller et les autres options disponibles sur le marché
+            {t('comparisonSubtitle')}
           </p>
         </div>
         
@@ -384,7 +389,7 @@ const ComparisonSection = () => {
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
-                Tableau comparatif
+                {t('comparisonTable')}
               </button>
               <button
                 onClick={() => setActiveTab('cards')}
@@ -394,7 +399,7 @@ const ComparisonSection = () => {
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
-                Comparaison détaillée
+                {t('detailedComparison')}
               </button>
             </div>
           </div>
@@ -407,77 +412,79 @@ const ComparisonSection = () => {
               <table className="w-full bg-white rounded-xl shadow-lg border border-gray-200">
                 <thead>
                   <tr className="bg-gray-50 border-b border-gray-200">
-                    <th className="px-6 py-4 text-left font-semibold text-gray-900">Critère</th>
-                    <th className="px-6 py-4 text-center font-semibold text-gray-900">E-commerce Classique</th>
-                    <th className="px-6 py-4 text-center font-semibold text-gray-900">Chatbots Basiques</th>
+                    <th className="px-6 py-4 text-left font-semibold text-gray-900">
+                      {language === 'fr' ? 'Critère' : 'Criteria'}
+                    </th>
+                    <th className="px-6 py-4 text-center font-semibold text-gray-900">{t('traditionalEcommerce')}</th>
+                    <th className="px-6 py-4 text-center font-semibold text-gray-900">{t('basicChatbots')}</th>
                     <th className="px-6 py-4 text-center font-semibold bg-primary/10 text-primary">ChatSeller</th>
                   </tr>
                 </thead>
                 <tbody>
                   <ComparisonRow
-                    feature="Engagement visiteur"
+                    feature={language === 'fr' ? "Engagement visiteur" : "Visitor engagement"}
                     traditional={<FeatureIcon icon={<X />} isAvailable={false} />}
-                    chatbots="Basique"
+                    chatbots={language === 'fr' ? "Basique" : "Basic"}
                     chatseller={<FeatureIcon icon={<Check />} isAvailable={true} />}
                     isHighlight={true}
                   />
                   <ComparisonRow
-                    feature="Collecte commandes"
-                    traditional="Formulaires statiques"
+                    feature={language === 'fr' ? "Collecte commandes" : "Order collection"}
+                    traditional={language === 'fr' ? "Formulaires statiques" : "Static forms"}
                     chatbots={<FeatureIcon icon={<X />} isAvailable={false} />}
-                    chatseller="Conversation naturelle"
+                    chatseller={language === 'fr' ? "Conversation naturelle" : "Natural conversation"}
                     isHighlight={true}
                   />
                   <ComparisonRow
-                    feature="Modèle IA"
+                    feature={language === 'fr' ? "Modèle IA" : "AI Model"}
                     traditional={<FeatureIcon icon={<X />} isAvailable={false} />}
-                    chatbots="Limitée"
+                    chatbots={language === 'fr' ? "Limitée" : "Limited"}
                     chatseller="GPT-4o - Claude 4"
                   />
                   <ComparisonRow
-                    feature="Upsell automatique"
+                    feature={language === 'fr' ? "Upsell automatique" : "Automatic upselling"}
                     traditional={<FeatureIcon icon={<X />} isAvailable={false} />}
                     chatbots={<FeatureIcon icon={<X />} isAvailable={false} />}
-                    chatseller="+34% de vente upsell"
+                    chatseller={language === 'fr' ? "+34% de vente upsell" : "+34% upsell sales"}
                     isHighlight={true}
                   />
                   <ComparisonRow
-                    feature="Assistance 24/7"
+                    feature={language === 'fr' ? "Assistance 24/7" : "24/7 Support"}
                     traditional={<FeatureIcon icon={<X />} isAvailable={false} />}
-                    chatbots="Basique"
-                    chatseller="En français & Anglais"
+                    chatbots={language === 'fr' ? "Basique" : "Basic"}
+                    chatseller={language === 'fr' ? "En français & Anglais" : "In French & English"}
                   />
                   <ComparisonRow
                     feature="Mobile-first"
                     traditional={<FeatureIcon icon={<X />} isAvailable={false} />}
                     chatbots="Standard"
-                    chatseller="Fonctionne sur téléphone"
+                    chatseller={language === 'fr' ? "Fonctionne sur téléphone" : "Works on mobile"}
                     isHighlight={true}
                   />
                   <ComparisonRow
                     feature="Installation"
-                    traditional="Complexe"
-                    chatbots="Complexe"
-                    chatseller="En 2 minutes"
+                    traditional={language === 'fr' ? "Complexe" : "Complex"}
+                    chatbots={language === 'fr' ? "Complexe" : "Complex"}
+                    chatseller={language === 'fr' ? "En 2 minutes" : "In 2 minutes"}
                   />
                   <ComparisonRow
-                    feature="Prix mensuel"
-                    traditional="0€"
-                    chatbots="+40€"
-                    chatseller="14€"
+                    feature={language === 'fr' ? "Prix mensuel" : "Monthly price"}
+                    traditional={language === 'fr' ? "0€" : "$0"}
+                    chatbots={language === 'fr' ? "+40€" : "+$50"}
+                    chatseller={language === 'fr' ? "14€" : "$14"}
                   />
                   <ComparisonRow
-                    feature="Taux de conversion"
+                    feature={language === 'fr' ? "Taux de conversion" : "Conversion rate"}
                     traditional="2-3%"
                     chatbots="3-4%"
                     chatseller="7-18%"
                     isHighlight={true}
                   />
                   <ComparisonRow
-                    feature="ROI moyen"
-                    traditional="Faible"
-                    chatbots="Moyen"
-                    chatseller="x40 en 3 mois"
+                    feature={language === 'fr' ? "ROI moyen" : "Average ROI"}
+                    traditional={language === 'fr' ? "Faible" : "Low"}
+                    chatbots={language === 'fr' ? "Moyen" : "Medium"}
+                    chatseller={language === 'fr' ? "x40 en 3 mois" : "x40 in 3 months"}
                     isHighlight={true}
                   />
                 </tbody>
@@ -506,7 +513,7 @@ const ComparisonSection = () => {
         {/* ✅ WHY CHATSELLER WINS - OPTIMISÉ MOBILE */}
         <div className="max-w-4xl mx-auto mb-16 animate-fade-in [animation-delay:1000ms]">
           <h3 className="text-2xl font-bold text-center pt-8 mb-8">
-            Voici pourquoi ChatSeller surpasse la concurrence
+            {t('whyWinsTitle')}
           </h3>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -516,9 +523,9 @@ const ComparisonSection = () => {
                   <MessageSquare className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-green-900 mb-2">Vraie Intelligence IA</h4>
+                  <h4 className="font-semibold text-green-900 mb-2">{t('trueAI')}</h4>
                   <p className="text-green-800 text-sm">
-                    Contrairement aux chatbots basiques, ChatSeller utilise l'IA et votre base de connaissances pour des conversations naturelles et pertinentes.
+                    {t('trueAIDesc')}
                   </p>
                 </div>
               </div>
@@ -528,9 +535,9 @@ const ComparisonSection = () => {
                   <ShoppingCart className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-blue-900 mb-2">Collecte Vraiment les Commandes</h4>
+                  <h4 className="font-semibold text-blue-900 mb-2">{t('realOrderCollection')}</h4>
                   <p className="text-blue-800 text-sm">
-                    ChatSeller collecte naturellement le nom, le téléphone, l'adresse de vos clients et finalise les commandes dans la conversation.
+                    {t('realOrderCollectionDesc')}
                   </p>
                 </div>
               </div>
@@ -540,9 +547,9 @@ const ComparisonSection = () => {
                   <Globe className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-purple-900 mb-2">Conçu pour tout type d'e-commerce</h4>
+                  <h4 className="font-semibold text-purple-900 mb-2">{t('designedForWorld')}</h4>
                   <p className="text-purple-800 text-sm">
-                    Mobile-first, multilingue FR/EN, adapté aux connexions lentes et à tous les marchés.
+                    {t('designedForWorldDesc')}
                   </p>
                 </div>
               </div>
@@ -554,9 +561,9 @@ const ComparisonSection = () => {
                   <TrendingUp className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-orange-900 mb-2">Upsell Intelligent</h4>
+                  <h4 className="font-semibold text-orange-900 mb-2">{t('smartUpsell')}</h4>
                   <p className="text-orange-800 text-sm">
-                    +34% de panier moyen grâce aux recommandations intelligentes basées sur le contexte de la conversation.
+                    {t('smartUpsellDesc')}
                   </p>
                 </div>
               </div>
@@ -566,9 +573,9 @@ const ComparisonSection = () => {
                   <Zap className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-red-900 mb-2">Installation Ultra-Rapide</h4>
+                  <h4 className="font-semibold text-red-900 mb-2">{t('ultraFastInstall')}</h4>
                   <p className="text-red-800 text-sm">
-                    En seulement 2 minutes, et sans développeur, votre Vendeur IA est prêt à discuter avec les visiteurs de votre boutique et les transformer en clients.
+                    {t('ultraFastInstallDesc')}
                   </p>
                 </div>
               </div>
@@ -578,9 +585,9 @@ const ComparisonSection = () => {
                   <Shield className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Investissement rentable</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">{t('profitableInvestment')}</h4>
                   <p className="text-gray-700 text-sm">
-                    ChatSeller se rembourse au bout de 3 mois avec un ROI moyen de +187%.
+                    {t('profitableInvestmentDesc')}
                   </p>
                 </div>
               </div>
