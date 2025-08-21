@@ -28,10 +28,10 @@ const Hero = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
             {t('heroIntegrableEverywhere')}
-            {/* ✅ BADGE BETA AJOUTÉ */}
+            {/* ✅ BADGE BETA AJOUTÉ 
             <span className="ml-3 px-2 py-1 text-xs font-bold bg-orange-500 text-white rounded-full animate-pulse">
               {t('betaBadge')}
-            </span>
+            </span>*/}
           </div>
           
           <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in [animation-delay:200ms]">
