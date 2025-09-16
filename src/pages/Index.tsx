@@ -1,17 +1,16 @@
-// src/pages/Index.tsx
+// src/pages/Index.tsx 
 import React, { useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import PlatformsSection from '../components/PlatformsSection';
-import ProblemSolutionVisual from '../components/ProblemSolutionVisual';
-import AdvancedFeatures from '../components/AdvancedFeatures';
-import DemoSection from '../components/DemoSection';
-import SocialProof from '../components/SocialProof';
-import ComparisonSection from '../components/ComparisonSection';
-import PricingSection from '../components/PricingSection';
-import FAQSection from '../components/FAQSection';
-import UrgencyFOMO from '../components/UrgencyFOMO';
-import FinalCTA from '../components/FinalCTA';
+import NewNavbar from '@/components/NewNavBar';
+import NewHero from '../components/NewHero';
+import NewProblemSolutionSection from '@/components/NewProblemSolutionSection';
+import NewDemoSection from '@/components/NewDemoSection';
+import NewHowItWorksSection from '../components/NewHowItWorksSection';
+import NewFeaturesSection from '../components/NewFeaturesSection';
+import NewCaseStudiesSection from '../components/NewCaseStudiesSection';
+import NewTestimonials from '@/components/NewTestimonials';
+import NewPricingSection from '../components/NewPricingSection';
+import NewFAQSection from '../components/NewFAQSection';
+import NewFinalCTASection from '@/components/NewFinalCTASection';
 import Footer from '../components/Footer';
 import MobileFix from '../components/MobileFix';
 
@@ -23,6 +22,15 @@ const Index = () => {
       window.history.replaceState(null, '', window.location.pathname);
       window.scrollTo(0, 0);
     }
+
+    // Track page view pour analytics
+    if (typeof window !== 'undefined' && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: 'page_view',
+        page_title: 'ChatSeller - Vendeur IA pour marques beauté',
+        page_location: window.location.href
+      });
+    }
   }, []);
 
   return (
@@ -30,40 +38,37 @@ const Index = () => {
       {/* Composant de correction mobile */}
       <MobileFix />
       
-      <Navbar />
+      <NewNavbar />
       <main className="flex-1">
-        {/* Section 1: Hero - Accroche principale avec animation */}
-        <Hero />
+        {/* Section 1: Hero avec A/B test et focus conversion */}
+        <NewHero />
+        
+        {/* Section 2: Problème/Solution - 73% partent sans acheter */}
+        <NewProblemSolutionSection />
+        
+        {/* Section 3: Demo - Vidéo de démonstration */}
+        <NewDemoSection />
+        
+        {/* Section 4: Comment ça marche - 3 étapes simples */}
+        <NewHowItWorksSection />
 
-        {/* Section 2: Plateformes - Compatibilité avec toutes les plateformes */}
-        <PlatformsSection />
+        {/* Section 5: Fonctionnalités orientées conversion */}
+        <NewFeaturesSection />
+
+        {/* Section 6: Études de cas avec preuves chiffrées */}
+        <NewCaseStudiesSection />
+
+        {/* Section 7: Témoignages clients */}
+        <NewTestimonials />
         
-        {/* Section 2: Problème/Solution - Version visuelle améliorée */}
-        <ProblemSolutionVisual />
+        {/* Section 8: Pricing ROI-first (garder l'ancien temporairement) */}
+        <NewPricingSection />
         
-        {/* Section 3: Fonctionnalités avancées - Montrer la solution */}
-        <AdvancedFeatures />
-        
-        {/* Section 4: Démo interactive - Prouver que ça marche */}
-        <DemoSection />
-        
-        {/* Section 5: Preuves sociales - Rassurer avec témoignages */}
-        <SocialProof />
-        
-        {/* Section 6: Comparaison - Justifier le choix ChatSeller */}
-        <ComparisonSection />
-        
-        {/* Section 7: Pricing - Présenter l'offre avec ROI */}
-        <PricingSection />
-        
-        {/* Section 8: FAQ - Lever les dernières objections */}
-        <FAQSection />
-        
-        {/* Section 9: Urgence/FOMO - Créer l'urgence d'achat 
-        <UrgencyFOMO />*/}
-        
-        {/* Section 10: CTA Final - Dernière chance de conversion 
-        <FinalCTA />*/}
+        {/* Section 9: FAQ - Questions fréquentes sur Chatseller */}
+        <NewFAQSection />
+
+        {/* Section 10: CTA Final*/}
+        <NewFinalCTASection />
       </main>
       <Footer />
     </div>

@@ -61,6 +61,7 @@
     "react-router-dom": "^6.15.0",
     "recharts": "^2.8.0",
     "sonner": "^1.0.3",
+    "styled-jsx": "^5.1.7",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.7.0"

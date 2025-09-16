@@ -10,6 +10,9 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  compiler: {
+    styledJsx: true
+  },
 }
 
 module.exports = nextConfig

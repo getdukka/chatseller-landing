@@ -5,7 +5,7 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/placeholder.svg',
-  '/favicon.ico'
+  '/fav.svg'
 ];
 
 // Install the service worker and cache assets

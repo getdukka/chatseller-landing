@@ -12,24 +12,30 @@ const ConversationIcon: React.FC<ConversationIconProps> = ({ className = "w-6 h-
     fill="none" 
     xmlns="http://www.w3.org/2000/svg"
   >
-    {/* Première bulle de chat (plus grande, bleue foncée) */}
+    {/* Première bulle de chat (plus grande, rose vif) */}
     <path 
-      d="M15 25 C15 15, 25 10, 40 10 C55 10, 65 15, 65 25 C65 35, 65 45, 65 55 C65 65, 55 70, 40 70 C35 70, 30 69, 25 67 L15 75 L20 65 C17 60, 15 50, 15 40 Z" 
-      fill="#2563eb"
-      opacity="0.9"
+      d="M12 22 C12 12, 22 5, 42 5 C62 5, 72 12, 72 22 C72 32, 72 42, 72 52 C72 62, 62 69, 42 69 C36 69, 30 68, 24 66 L12 76 L18 66 C14 61, 12 52, 12 42 Z" 
+      fill="#ec4899"
+      stroke="#be185d"
+      strokeWidth="1"
     />
     
-    {/* Deuxième bulle de chat (plus petite, bleue claire) */}
+    {/* Deuxième bulle de chat (plus petite, violet vif) */}
     <path 
-      d="M40 15 C40 10, 50 5, 65 5 C80 5, 90 10, 90 20 C90 30, 90 35, 90 45 C90 55, 80 60, 65 60 C60 60, 55 59, 50 57 L40 65 L45 55 C42 50, 40 40, 40 30 Z" 
-      fill="#3b82f6"
-      opacity="0.8"
+      d="M35 12 C35 7, 45 2, 65 2 C85 2, 95 7, 95 17 C95 27, 95 32, 95 42 C95 52, 85 57, 65 57 C59 57, 53 56, 47 54 L35 62 L41 54 C37 49, 35 42, 35 32 Z" 
+      fill="#a855f7"
+      stroke="#7c3aed"
+      strokeWidth="1"
     />
     
-    {/* Points de conversation dans la première bulle */}
-    <circle cx="35" cy="35" r="2.5" fill="white" opacity="0.9"/>
-    <circle cx="45" cy="35" r="2.5" fill="white" opacity="0.7"/>
-    <circle cx="55" cy="35" r="2.5" fill="white" opacity="0.5"/>
+    {/* Points de conversation plus visibles et plus gros */}
+    <circle cx="32" cy="32" r="3.5" fill="white" stroke="#be185d" strokeWidth="0.5"/>
+    <circle cx="42" cy="32" r="3.5" fill="white" stroke="#be185d" strokeWidth="0.5"/>
+    <circle cx="52" cy="32" r="3.5" fill="white" stroke="#be185d" strokeWidth="0.5"/>
+    
+    {/* Point dans la deuxième bulle pour équilibrer */}
+    <circle cx="65" cy="27" r="3" fill="white" stroke="#7c3aed" strokeWidth="0.5"/>
+    <circle cx="75" cy="32" r="2.5" fill="white" stroke="#7c3aed" strokeWidth="0.5"/>
   </svg>
 );
 

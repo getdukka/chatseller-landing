@@ -1,4 +1,4 @@
-// src/contexts/LanguageContext.tsx - TRADUCTION COMPLÈTE DE TOUTE LA LANDING PAGE
+// src/contexts/LanguageContext.tsx 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'fr' | 'en';
@@ -14,6 +14,12 @@ interface Translations {
   switchToEnglish: string;
   accessDashboard: string;
   support: string;
+
+  // Navigation beauté
+  newNavSolution: string;
+  newNavResults: string;
+  newNavTestimonials: string;
+  newNavCTABeauty: string;
   
   // Hero Section
   heroTitle: string;
@@ -29,6 +35,14 @@ interface Translations {
   heroCreateAI: string;
   heroIntegrableEverywhere: string;
   betaBadge: string;
+
+  // Hero Section beauté
+  beautySectorSpecialized: string;
+  newHeroTitleBeauty: string;
+  newHeroTitleBeautyAlt: string;
+  newHeroSubtitleBeauty: string;
+  beautyBrandsAlreadyTesting: string;
+  averageConversionBeauty: string;
   
   // Platforms Section
   platformsTitle: string;
@@ -70,6 +84,32 @@ interface Translations {
   solutionMoreSales: string;
   solutionNewConversion: string;
   solutionAdditionalRevenue: string;
+
+  // NOUVELLES CLÉS - Problem/Solution fusionnée
+  beforeChatSeller: string;
+  afterChatSeller: string;
+  currentStoreProblems: string;
+  optimizedStoreWithAI: string;
+  lostFrustratedCustomers: string;
+  lowConversionsOnly: string;
+  dailyAbandonedCarts: string;
+  instantExpertAdvice: string;
+  higherConversions4x: string;
+  immediateVisibleROI: string;
+  chatSellerImpactMetrics: string;
+  conversionRate: string;
+  questionsAnswered: string;
+  averageROIReturn: string;
+  paybackIn3Days: string;
+  yourCurrentStore: string;
+  customersAloneWithQuestions: string;
+  yourOptimizedStore: string;
+  expertBeautyAI247: string;
+  adaptedSensitiveSkin: string;
+  whenSeeResults: string;
+  compatibleOtherProducts: string;
+  leaveWithoutBuying73: string;
+  averageConversions267: string;
   
   // Features
   featuresTitle: string;
@@ -148,6 +188,7 @@ interface Translations {
   approvalDesc: string;
   averageInstall: string;
   averageInstallDesc: string;
+  socialProofBeautyDesc: string;
   
   // Pricing
   pricingTitle: string;
@@ -369,6 +410,139 @@ interface Translations {
   supportHours: string;
   supportDays: string;
   supportAIVendor: string; // pour remplacer "Agent IA" par "Vendeur IA" ou "AI Seller"
+
+  // ===================
+  // LANDING PAGE REFONTE - NOUVELLES CLÉS
+  // ===================
+  
+  // HERO SECTION REFONTE
+  newHeroTitle: string;
+  newHeroSubtitle: string;
+  newHeroCTAPrimary: string;
+  newHeroCTASecondary: string;
+  newHeroTrialPeriod: string;
+  
+  // SOCIAL PROOF
+  socialProofNewTitle: string;
+  socialProofConversions: string;
+  socialProofROIRecovered: string;
+  socialProofAdviceAvailable: string;
+  socialProofDays: string;
+  
+  // PROBLEM SECTION  
+  problemSectionTitle: string;
+  problemSectionDescription: string;
+  problemVisitorsLeave: string;
+  problemNoGuidance: string;
+  problemNoReassurance: string;
+  problemAbandonedCarts: string;
+  
+  // SOLUTION SECTION
+  solutionSectionTitle: string;
+  solutionBenefit1Title: string;
+  solutionBenefit1Desc: string;
+  solutionBenefit2Title: string;
+  solutionBenefit2Desc: string;
+  solutionBenefit3Title: string;
+  solutionBenefit3Desc: string;
+  
+  // CASE STUDIES
+  caseStudiesTitle: string;
+  caseStudiesSubtitle: string;
+  caseStudy1Brand: string;
+  caseStudy1Result: string;
+  caseStudy1Metric: string;
+  caseStudy1Description: string;
+  caseStudy2Brand: string;
+  caseStudy2Result: string;
+  caseStudy2Metric: string;
+  caseStudy2Description: string;
+  caseStudy3Brand: string;
+  caseStudy3Result: string;
+  caseStudy3Metric: string;
+  caseStudy3Description: string;
+  caseStudiesCTA: string;
+  caseStudiesTimeframe: string;
+  
+  // HOW IT WORKS
+  howItWorksTitle: string;
+  howItWorksStep1Title: string;
+  howItWorksStep1Desc: string;
+  howItWorksStep2Title: string;
+  howItWorksStep2Desc: string;
+  howItWorksStep3Title: string;
+  howItWorksStep3Desc: string;
+  
+  // FEATURES REFONTE
+  featuresNewTitle: string;
+  featuresNewSubtitle: string;
+  feature1NewTitle: string;
+  feature1NewDesc: string;
+  feature2NewTitle: string;
+  feature2NewDesc: string;
+  feature3NewTitle: string;
+  feature3NewDesc: string;
+  feature4NewTitle: string;
+  feature4NewDesc: string;
+  
+  // PRICING REFONTE
+  pricingNewTitle: string;
+  pricingNewSubtitle: string;
+  pricingROINote: string;
+  pricingStarterNew: string;
+  pricingStarterPrice: string;
+  pricingStarterDesc: string;
+  pricingGrowth: string;
+  pricingGrowthPrice: string;
+  pricingGrowthDesc: string;
+  pricingPerformance: string;
+  pricingPerformancePrice: string;
+  pricingPerformanceDesc: string;
+  pricingConversationsLimit: string;
+  
+  // FAQ REFONTE
+  faqNewTitle: string;
+  faqInstallationQ: string;
+  faqInstallationA: string;
+  faqTrainingTimeQ: string;
+  faqTrainingTimeA: string;
+  faqTrialQ: string;
+  faqTrialA: string;
+  faqResultsQ: string;
+  faqResultsA: string;
+  faqHumanReplacementQ: string;
+  faqHumanReplacementA: string;
+  
+  // CLOSING SECTION
+  closingTitle: string;
+  closingCTAPrimary: string;
+  closingCTASecondary: string;
+  
+  // METRICS & LABELS
+  conversionIncrease400: string;
+  conversionIncrease200: string;
+  days14Trial: string;
+  oneClickInstall: string;
+  beautySector: string;
+  realTimeResults: string;
+  step3Simple: string;
+  averageROI: string;
+
+  // Chat Input & Actions
+  chatInputPlaceholder: string;
+  testYourAiChat: string;
+  saleCompleted: string;
+  onlineStatus: string;
+  
+  // AI Advisor Names & Roles
+  aiAdvisorNameFr: string;
+  aiAdvisorNameEn: string;
+  aiAdvisorRoleFr: string;
+  aiAdvisorRoleEn: string;
+  
+  // Brand Names for Chat Demo
+  chatBrandFr: string;
+  chatBrandEn: string;
 }
 
 
@@ -385,6 +559,12 @@ const translations: Record<Language, Translations> = {
     switchToEnglish: 'EN',
     accessDashboard: 'Accéder au Dashboard',
     support: 'Support',
+
+    // Navigation beauté
+    newNavSolution: 'Notre Solution',
+    newNavResults: 'Résultats Clients',
+    newNavTestimonials: 'Témoignages',
+    newNavCTABeauty: 'Booster mes ventes beauté',
     
     // Hero Section
     heroTitle: 'Le',
@@ -400,6 +580,14 @@ const translations: Record<Language, Translations> = {
     heroCreateAI: 'Créer mon Vendeur IA',
     heroIntegrableEverywhere: 'Intégrable sur n\'importe quelle boutique en ligne',
     betaBadge: 'BETA',
+
+    // Hero Section beauté
+    beautySectorSpecialized: 'Spécialisé beauté',
+    newHeroTitleBeauty: 'Transformez 3x plus de visiteurs en clientes avec votre Conseillère Beauté IA',
+    newHeroTitleBeautyAlt: 'Multipliez vos conversions par 3 avec une Conseillère Beauté IA disponible 24/7',
+    newHeroSubtitleBeauty: 'Offrez à vos clientes en ligne la même expérience qu\'en boutique grâce à une conseillère IA formée sur vos produits, qui les guide et les rassure pour qu\'elles achètent en toute confiance.',
+    beautyBrandsAlreadyTesting: 'Déjà adopté par +10 marques beauté',
+    averageConversionBeauty: '+267% conversions moyennes',
     
     // Platforms Section
     platformsTitle: 'Installez Chatseller sur n\'importe quel site',
@@ -441,6 +629,35 @@ const translations: Record<Language, Translations> = {
     solutionMoreSales: 'plus de ventes',
     solutionNewConversion: 'nouveau taux conversion',
     solutionAdditionalRevenue: 'revenus en moyenne',
+
+    // Social Proof
+    socialProofBeautyDesc: 'Des marques beauté françaises et belges qui multiplient leurs ventes grâce à leurs conseillères IA expertes disponibles 24/7.',
+    
+    // Problem/Solution fusionnée
+    beforeChatSeller: 'Avant ChatSeller',
+    afterChatSeller: 'Avec ChatSeller',
+    currentStoreProblems: 'Votre boutique actuelle',
+    optimizedStoreWithAI: 'Votre boutique optimisée',
+    lostFrustratedCustomers: 'Clients perdus et frustrés',
+    lowConversionsOnly: 'Conversions faibles (2-3%)',
+    dailyAbandonedCarts: 'Paniers abandonnés quotidiennement',
+    instantExpertAdvice: 'Conseils experts instantanés',
+    higherConversions4x: 'Conversions 4x supérieures',
+    immediateVisibleROI: 'ROI visible immédiatement',
+    chatSellerImpactMetrics: 'L\'impact ChatSeller sur vos métriques beauté',
+    conversionRate: 'Taux de conversion',
+    questionsAnswered: 'Questions répondues',
+    averageROIReturn: 'Retour sur investissement moyen',
+    paybackIn3Days: 'ChatSeller se rembourse en 3 jours',
+    yourCurrentStore: 'Votre boutique actuelle',
+    customersAloneWithQuestions: 'Vos clients sont seuls face à leurs questions',
+    yourOptimizedStore: 'Votre boutique optimisée',
+    expertBeautyAI247: 'Conseillère IA experte beauté disponible 24/7',
+    adaptedSensitiveSkin: 'Adapté à ma peau sensible ?',
+    whenSeeResults: 'Quand voir les premiers résultats ?',
+    compatibleOtherProducts: 'Compatible avec mes autres soins ?',
+    leaveWithoutBuying73: '73% partent sans acheter',
+    averageConversions267: '+267% de conversions moyennes',
     
     // Features
     featuresTitle: 'Tout ce dont vous avez besoin pour transformer vos visiteurs en clients',
@@ -570,7 +787,7 @@ const translations: Record<Language, Translations> = {
     footerSystemsOperational: 'Systèmes opérationnels',
     footerAllRightsReserved: 'Tous droits réservés. Créé par',
     footerCreatedBy: 'Créé par',
-    footerRevolutionizing: 'DUKKA • Révolutionner l\'e-commerce en Afrique',
+    footerRevolutionizing: 'DUKKA • Révolutionner l\'e-commerce',
     footerAbout: 'À propos',
     footerSupport: 'Support & FAQ',
     footerDemo: 'Démo Interactive',
@@ -579,7 +796,7 @@ const translations: Record<Language, Translations> = {
     footerTestWidget: 'Tester le Widget',
     footerDocumentation: 'Documentation',
     footerDashboard: 'Dashboard',
-    footerDukka: 'Dukka Platform',
+    footerDukka: 'Dukka',
     footerPrivacyPolicy: 'Confidentialité',
     footerTermsOfUse: 'Conditions d\'utilisation',
     footerGdprCompliant: 'Conforme RGPD',
@@ -911,6 +1128,135 @@ Contactez-nous avec :
     supportHours: "heures", 
     supportDays: "jours",
     supportAIVendor: "Vendeur IA",
+
+    // LANDING PAGE REFONTE - FR
+    newHeroTitle: "Augmentez vos ventes de 200 à 400% grâce à un vendeur IA qui conseille vos clients comme en boutique",
+    newHeroSubtitle: "ChatSeller transforme vos visiteurs en acheteurs en répondant à leurs questions, en les rassurant et en recommandant les bons produits, comme une esthéticienne disponible 24/7.",
+    newHeroCTAPrimary: "Créer ma Conseillère IA",
+    newHeroCTASecondary: "Voir les résultats clients",
+    newHeroTrialPeriod: "14 jours gratuits",
+    
+    // SOCIAL PROOF
+    socialProofNewTitle: "Déjà adopté par des marques e-commerce qui multiplient leurs ventes avec ChatSeller",
+    socialProofConversions: "Conversions moyennes",
+    socialProofROIRecovered: "Retour sur investissement",
+    socialProofAdviceAvailable: "Conseil disponible",
+    socialProofDays: "jours",
+    
+    // PROBLEM SECTION
+    problemSectionTitle: "73% de vos visiteurs quittent votre site sans acheter",
+    problemSectionDescription: "La majorité de vos prospects hésitent parce qu'ils n'ont pas de réponses à leurs questions, pas de conseils personnalisés ni de réassurance au moment de passer commande. Résultat : panier abandonné, opportunité perdue.",
+    problemVisitorsLeave: "73% partent sans acheter",
+    problemNoGuidance: "Pas de conseils personnalisés",
+    problemNoReassurance: "Aucune réassurance",
+    problemAbandonedCarts: "Paniers abandonnés",
+    
+    // SOLUTION SECTION
+    solutionSectionTitle: "Transformez chaque visiteur en client",
+    solutionBenefit1Title: "Un vendeur IA formé sur vos produits",
+    solutionBenefit1Desc: "Il répond comme une conseillère beauté en magasin, connaît votre catalogue et adapte ses recommandations.",
+    solutionBenefit2Title: "Réponses personnalisées en temps réel",
+    solutionBenefit2Desc: "Rassure, guide et convertit chaque visiteur avec des conseils adaptés à ses besoins spécifiques.",
+    solutionBenefit3Title: "Conversions et paniers boostés",
+    solutionBenefit3Desc: "+200% à +400% de ventes constatées grâce aux recommandations intelligentes et à la réassurance.",
+    
+    // CASE STUDIES
+    caseStudiesTitle: "Des résultats concrets pour les marques de beauté",
+    caseStudiesSubtitle: "Découvrez comment nos clients ont multiplié leurs ventes avec ChatSeller",
+    caseStudy1Brand: "6C No Filter",
+    caseStudy1Result: "2,2% → 7%",
+    caseStudy1Metric: "+218% de conversions",
+    caseStudy1Description: "Marque de cosmétiques naturels - Taux de conversion multiplié par 3 en 14 jours",
+    caseStudy2Brand: "Amani Wellness",
+    caseStudy2Result: "1,8% → 5,2%",
+    caseStudy2Metric: "+289% de conversions",
+    caseStudy2Description: "Soins anti-âge premium - Panier moyen augmenté de 45% grâce aux recommandations IA",
+    caseStudy3Brand: "Xclusiv Products",
+    caseStudy3Result: "2,5% → 6,8%",
+    caseStudy3Metric: "+172% de conversions",
+    caseStudy3Description: "Maquillage haut de gamme - ROI de l'abonnement récupéré en 3 jours",
+    caseStudiesCTA: "Voir toutes les études de cas",
+    caseStudiesTimeframe: "en 14 jours",
+    
+    // HOW IT WORKS
+    howItWorksTitle: "Installez votre vendeur IA en 3 étapes",
+    howItWorksStep1Title: "Connectez votre boutique Shopify ou WooCommerce",
+    howItWorksStep1Desc: "Installation en 1 clic, aucune compétence technique requise.",
+    howItWorksStep2Title: "Formez votre vendeur IA sur votre marque et vos produits",
+    howItWorksStep2Desc: "Donnez-lui accès à votre catalogue et vos FAQ, il apprend automatiquement.",
+    howItWorksStep3Title: "Activez votre vendeur IA et commencez à vendre",
+    howItWorksStep3Desc: "Suivez vos conversations et conversions depuis votre dashboard.",
+    
+    // FEATURES REFONTE
+    featuresNewTitle: "Tout ce dont vous avez besoin pour convertir plus",
+    featuresNewSubtitle: "Un système complet pour transformer vos visiteurs en clients fidèles",
+    feature1NewTitle: "Conseiller IA 24/7 formé sur vos produits",
+    feature1NewDesc: "Il connaît votre catalogue mieux que quiconque et conseille comme un expert beauté.",
+    feature2NewTitle: "Recommandations intelligentes & upsells",
+    feature2NewDesc: "Augmentez automatiquement vos paniers moyens avec des suggestions pertinentes.",
+    feature3NewTitle: "Dashboard clair & précis",
+    feature3NewDesc: "Suivez vos conversions et vos ventes générées en temps réel avec des métriques détaillées.",
+    feature4NewTitle: "Intégration native Shopify & WooCommerce",
+    feature4NewDesc: "Aucune ligne de code nécessaire, installation en un clic sur votre plateforme.",
+    
+    // PRICING REFONTE
+    pricingNewTitle: "Un coût qui se rembourse dès la première vente gagnée",
+    pricingNewSubtitle: "Choisissez le plan adapté à votre volume de trafic",
+    pricingROINote: "En moyenne, une seule vente gagnée rembourse votre abonnement ChatSeller",
+    pricingStarterNew: "Starter",
+    pricingStarterPrice: "49€",
+    pricingStarterDesc: "Parfait pour commencer",
+    pricingGrowth: "Growth",
+    pricingGrowthPrice: "149€",
+    pricingGrowthDesc: "Pour les boutiques en croissance",
+    pricingPerformance: "Performance",
+    pricingPerformancePrice: "299€",
+    pricingPerformanceDesc: "Maximum de conversions et reporting avancé",
+    pricingConversationsLimit: "conversations/mois",
+    
+    // FAQ REFONTE
+    faqNewTitle: "Questions fréquentes",
+    faqInstallationQ: "Est-ce compliqué à installer ?",
+    faqInstallationA: "Non, une installation en un clic sur Shopify ou WooCommerce. Aucune compétence technique requise.",
+    faqTrainingTimeQ: "Combien de temps pour former mon vendeur IA ?",
+    faqTrainingTimeA: "Quelques minutes suffisent : il apprend vos produits et FAQ automatiquement depuis votre catalogue.",
+    faqTrialQ: "Puis-je tester avant de payer ?",
+    faqTrialA: "Oui, 14 jours gratuits sans engagement ni carte bancaire. Vous pouvez annuler à tout moment.",
+    faqResultsQ: "Comment mesurer les résultats ?",
+    faqResultsA: "Votre dashboard montre en temps réel les conversions générées, les ventes attribuées et le ROI de ChatSeller.",
+    faqHumanReplacementQ: "Est-ce que ChatSeller remplace un conseiller humain ?",
+    faqHumanReplacementA: "Non, il l'assiste et assure la disponibilité 24/7. Votre équipe peut prendre le relais à tout moment.",
+    
+    // CLOSING SECTION
+    closingTitle: "Rejoignez les marques beauté qui multiplient déjà leurs ventes avec ChatSeller",
+    closingCTAPrimary: "Essayez gratuitement 14 jours",
+    closingCTASecondary: "Voir une démo",
+    
+    // METRICS & LABELS
+    conversionIncrease400: "+400% de conversions",
+    conversionIncrease200: "+200% de ventes",
+    days14Trial: "14 jours gratuits",
+    oneClickInstall: "Installation en 2min",
+    beautySector: "Secteur beauté",
+    realTimeResults: "Résultats temps réel",
+    step3Simple: "3 étapes simples",
+    averageROI: "ROI moyen immédiat",
+
+    // Chat Input & Actions
+    chatInputPlaceholder: "Posez votre question beauté...",
+    testYourAiChat: "Tester votre chat IA",
+    saleCompleted: "Vente réalisée !",
+    onlineStatus: "En ligne",
+    
+    // AI Advisor Names & Roles
+    aiAdvisorNameFr: "Léa",
+    aiAdvisorNameEn: "Sophie",
+    aiAdvisorRoleFr: "Conseillère Beauté IA",
+    aiAdvisorRoleEn: "AI Beauty Advisor",
+    
+    // Brand Names for Chat Demo
+    chatBrandFr: "Lumière Skin",
+    chatBrandEn: "Pure Glow",
   },
   
   en: {
@@ -924,6 +1270,12 @@ Contactez-nous avec :
     switchToEnglish: 'EN',
     accessDashboard: 'Access Dashboard',
     support: 'Support',
+
+    // Navigation beauté
+    newNavSolution: 'Our Solution',
+    newNavResults: 'Client Results', 
+    newNavTestimonials: 'Testimonials',
+    newNavCTABeauty: 'Boost my beauty sales',
     
     // Hero Section
     heroTitle: 'The',
@@ -939,6 +1291,14 @@ Contactez-nous avec :
     heroCreateAI: 'Create my AI Seller',
     heroIntegrableEverywhere: 'Integrable on any online store',
     betaBadge: 'BETA',
+
+    // Hero Section beauté
+    beautySectorSpecialized: 'Beauty specialized',
+    newHeroTitleBeauty: 'Turn 3x more visitors into customers with your AI Beauty Advisor',
+    newHeroTitleBeautyAlt: '3x your conversions with an AI Beauty Advisor that feels human.',
+    newHeroSubtitleBeauty: 'Give your online customers the same experience as in-store with an AI advisor trained on your products, who guides and reassures them so they can buy with complete confidence.',
+    beautyBrandsAlreadyTesting: 'Already trusted by 10+ beauty brands',
+    averageConversionBeauty: '+267% average conversions',
     
     // Platforms Section
     platformsTitle: 'Install Chatseller on any website',
@@ -980,6 +1340,35 @@ Contactez-nous avec :
     solutionMoreSales: 'more sales',
     solutionNewConversion: 'new conversion rate',
     solutionAdditionalRevenue: 'average revenue',
+
+    // Social Proof
+    socialProofBeautyDesc: 'French and Belgian beauty brands multiplying their sales thanks to their expert AI advisors available 24/7.',
+    
+    // Problem/Solution fusionnée
+    beforeChatSeller: 'Before ChatSeller',
+    afterChatSeller: 'With ChatSeller',
+    currentStoreProblems: 'Your current store',
+    optimizedStoreWithAI: 'Your optimized store',
+    lostFrustratedCustomers: 'Lost and frustrated customers',
+    lowConversionsOnly: 'Low conversions (2-3%)',
+    dailyAbandonedCarts: 'Daily abandoned carts',
+    instantExpertAdvice: 'Instant expert advice',
+    higherConversions4x: '4x higher conversions',
+    immediateVisibleROI: 'Immediate visible ROI',
+    chatSellerImpactMetrics: 'ChatSeller impact on your beauty metrics',
+    conversionRate: 'Conversion rate',
+    questionsAnswered: 'Questions answered',
+    averageROIReturn: 'Average return on investment',
+    paybackIn3Days: 'ChatSeller pays for itself in 3 days',
+    yourCurrentStore: 'Your current store',
+    customersAloneWithQuestions: 'Your customers are alone with their questions',
+    yourOptimizedStore: 'Your optimized store',
+    expertBeautyAI247: 'Expert beauty AI advisor available 24/7',
+    adaptedSensitiveSkin: 'Suitable for sensitive skin?',
+    whenSeeResults: 'When will I see results?',
+    compatibleOtherProducts: 'Compatible with my other products?',
+    leaveWithoutBuying73: '73% leave without buying',
+    averageConversions267: '+267% average conversions',
     
     // Features
     featuresTitle: 'Everything you need to turn visitors into customers',
@@ -1058,6 +1447,7 @@ Contactez-nous avec :
     approvalDesc: 'Recommend ChatSeller',
     averageInstall: 'Installation',
     averageInstallDesc: 'Average installation time',
+
     
     // Pricing
     pricingTitle: 'Choose the perfect plan to boost your sales',
@@ -1109,7 +1499,7 @@ Contactez-nous avec :
     footerSystemsOperational: 'Systems operational',
     footerAllRightsReserved: 'All rights reserved. Created by',
     footerCreatedBy: 'Created by',
-    footerRevolutionizing: 'DUKKA • Revolutionizing e-commerce in Africa',
+    footerRevolutionizing: 'DUKKA • Revolutionizing e-commerce',
     footerAbout: 'About',
     footerSupport: 'Support & FAQ',
     footerDemo: 'Interactive Demo',
@@ -1118,7 +1508,7 @@ Contactez-nous avec :
     footerTestWidget: 'Test Widget',
     footerDocumentation: 'Documentation',
     footerDashboard: 'Dashboard',
-    footerDukka: 'Dukka Platform',
+    footerDukka: 'Dukka',
     footerPrivacyPolicy: 'Privacy',
     footerTermsOfUse: 'Terms of use',
     footerGdprCompliant: 'GDPR Compliant',
@@ -1450,6 +1840,136 @@ Contact us with:
     supportHours: "hours",
     supportDays: "days", 
     supportAIVendor: "AI Seller",
+
+    // LANDING PAGE REFONTE - EN
+    newHeroTitle: "Increase your sales by 200 to 400% with an AI sales agent that advises your customers like in a store",
+    newHeroSubtitle: "ChatSeller turns your visitors into buyers by answering their questions, reassuring them and recommending the right products, like a beautician available 24/7.",
+    newHeroCTAPrimary: "Create my AI Advisor",
+    newHeroCTASecondary: "See client results",
+    newHeroTrialPeriod: "14 days free",
+    
+    // SOCIAL PROOF
+    socialProofNewTitle: "Already adopted by e-commerce brands who multiply their sales with ChatSeller",
+    socialProofConversions: "Average conversions",
+    socialProofROIRecovered: "Return on investment",
+    socialProofAdviceAvailable: "Advice available",
+    socialProofDays: "days",
+
+    
+    // PROBLEM SECTION
+    problemSectionTitle: "73% of your visitors leave your site without buying",
+    problemSectionDescription: "Most of your prospects hesitate because they don't have answers to their questions, no personalized advice, and no reassurance when placing an order. Result: abandoned cart, lost opportunity.",
+    problemVisitorsLeave: "73% leave without buying",
+    problemNoGuidance: "No personalized advice",
+    problemNoReassurance: "No reassurance",
+    problemAbandonedCarts: "Abandoned carts",
+    
+    // SOLUTION SECTION
+    solutionSectionTitle: "Turn every visitor into a customer",
+    solutionBenefit1Title: "AI sales agent trained on your products",
+    solutionBenefit1Desc: "It responds like a beauty advisor in store, knows your catalog and adapts its recommendations.",
+    solutionBenefit2Title: "Personalized responses in real time",
+    solutionBenefit2Desc: "Reassures, guides and converts every visitor with advice tailored to their specific needs.",
+    solutionBenefit3Title: "Boosted conversions and baskets",
+    solutionBenefit3Desc: "+200% to +400% sales observed thanks to intelligent recommendations and reassurance.",
+    
+    // CASE STUDIES
+    caseStudiesTitle: "Concrete results for beauty brands",
+    caseStudiesSubtitle: "Discover how our clients have multiplied their sales with ChatSeller",
+    caseStudy1Brand: "6C No Filter",
+    caseStudy1Result: "2.2% → 7%",
+    caseStudy1Metric: "+218% conversions",
+    caseStudy1Description: "Natural cosmetics brand - Conversion rate tripled in 14 days",
+    caseStudy2Brand: "Amani Wellness",
+    caseStudy2Result: "1.8% → 5.2%",
+    caseStudy2Metric: "+289% conversions",
+    caseStudy2Description: "Premium anti-aging care - Average basket increased by 45% thanks to AI recommendations",
+    caseStudy3Brand: "Belle Éclat",
+    caseStudy3Result: "2.5% → 6.8%",
+    caseStudy3Metric: "+172% conversions",
+    caseStudy3Description: "High-end makeup - Subscription ROI recovered in 3 days",
+    caseStudiesCTA: "See all case studies",
+    caseStudiesTimeframe: "in 14 days",
+    
+    // HOW IT WORKS
+    howItWorksTitle: "Install your AI sales agent in 3 steps",
+    howItWorksStep1Title: "Connect your Shopify or WooCommerce store",
+    howItWorksStep1Desc: "1-click installation, no technical skills required.",
+    howItWorksStep2Title: "Train your AI sales agent on your brand and your products",
+    howItWorksStep2Desc: "Gives it access to your catalog and FAQ, it learns automatically.",
+    howItWorksStep3Title: "Activate your AI Seller and start converting",
+    howItWorksStep3Desc: "Track your conversations and conversions on your dashboard.",
+    
+    // FEATURES REFONTE
+    featuresNewTitle: "Everything you need to convert more",
+    featuresNewSubtitle: "A complete system to turn your visitors into loyal customers",
+    feature1NewTitle: "24/7 AI advisor trained on your products",
+    feature1NewDesc: "It knows your catalog better than anyone and advises like a beauty expert.",
+    feature2NewTitle: "Smart recommendations & upsells",
+    feature2NewDesc: "Automatically increase your average baskets with relevant suggestions.",
+    feature3NewTitle: "Clear & precise dashboard",
+    feature3NewDesc: "Track your conversions and generated sales in real time with detailed metrics.",
+    feature4NewTitle: "Native Shopify & WooCommerce integration",
+    feature4NewDesc: "No code required, one-click installation on your platform.",
+    
+    // PRICING REFONTE
+    pricingNewTitle: "A cost that pays for itself from the first sale won",
+    pricingNewSubtitle: "Choose the plan adapted to your traffic volume",
+    pricingROINote: "On average, a single sale won pays back your ChatSeller subscription",
+    pricingStarterNew: "Starter",
+    pricingStarterPrice: "$59",
+    pricingStarterDesc: "Perfect to start converting more",
+    pricingGrowth: "Growth",
+    pricingGrowthPrice: "$179",
+    pricingGrowthDesc: "For growing stores",
+    pricingPerformance: "Performance",
+    pricingPerformancePrice: "$359",
+    pricingPerformanceDesc: "Maximum conversions and advanced reporting",
+    pricingConversationsLimit: "conversations/month",
+    
+    // FAQ REFONTE
+    faqNewTitle: "Frequently asked questions",
+    faqInstallationQ: "Is it complicated to install?",
+    faqInstallationA: "No, one-click installation on Shopify or WooCommerce. No technical skills required.",
+    faqTrainingTimeQ: "How long to train my AI sales agent?",
+    faqTrainingTimeA: "A few minutes are enough: it learns your products and FAQ automatically from your catalog.",
+    faqTrialQ: "Can I test before paying?",
+    faqTrialA: "Yes, 14 days free with no commitment or credit card. You can cancel anytime.",
+    faqResultsQ: "How to measure results?",
+    faqResultsA: "Your dashboard shows in real time the generated conversions, attributed sales and ChatSeller ROI.",
+    faqHumanReplacementQ: "Does ChatSeller replace a human advisor?",
+    faqHumanReplacementA: "No, it assists them and ensures 24/7 availability. Your team can take over anytime.",
+    
+    // CLOSING SECTION
+    closingTitle: "Join the beauty brands already multiplying their sales with ChatSeller",
+    closingCTAPrimary: "Try free for 14 days",
+    closingCTASecondary: "See a demo",
+    
+    // METRICS & LABELS
+    conversionIncrease400: "+400% conversions",
+    conversionIncrease200: "+200% sales",
+    days14Trial: "14 days free",
+    oneClickInstall: "2-minute install",
+    beautySector: "Beauty sector",
+    realTimeResults: "Real-time results",
+    step3Simple: "3 simple steps",
+    averageROI: "Immediate average ROI",
+
+    // Chat Input & Actions
+    chatInputPlaceholder: "Ask your beauty question...",
+    testYourAiChat: "Test your AI chat",
+    saleCompleted: "Sale completed!",
+    onlineStatus: "Online",
+    
+    // AI Advisor Names & Roles
+    aiAdvisorNameFr: "Léa",
+    aiAdvisorNameEn: "Sophie", 
+    aiAdvisorRoleFr: "Conseillère Beauté IA",
+    aiAdvisorRoleEn: "AI Beauty Advisor",
+    
+    // Brand Names for Chat Demo
+    chatBrandFr: "Lumière Skin",
+    chatBrandEn: "Pure Glow",
   }
 };
 

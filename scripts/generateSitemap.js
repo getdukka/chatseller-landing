@@ -126,7 +126,7 @@ Disallow: /node_modules/
 # Cache et assets
 Allow: /static/
 Allow: /_next/static/
-Allow: /favicon.ico
+Allow: /fav.svg
 Allow: /robots.txt
 Allow: /sitemap.xml
 `;
