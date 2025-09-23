@@ -220,17 +220,17 @@ const BeautyFAQItem = ({
 // Contact CTA spécialisé beauté
 const BeautyContactCTA = ({ language }: { language: string }) => {
   return (
-    <div className="bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 rounded-3xl p-8 md:p-12 border border-rose-200 shadow-xl max-w-5xl mx-auto">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <div className="bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 border border-rose-200 shadow-xl max-w-5xl mx-auto">
+      <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
         
         {/* Left side - Content */}
         <div>
-          <div className="flex items-center space-x-3 mb-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-rose-500 to-pink-500 rounded-2xl flex items-center justify-center text-white shadow-lg">
-              <MessageCircle className="w-8 h-8" />
+          <div className="flex items-center space-x-3 mb-4 sm:mb-6">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-rose-500 to-pink-500 rounded-xl sm:rounded-2xl flex items-center justify-center text-white shadow-lg">
+              <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
                 {language === 'fr' ? 
                   'Une question sur votre Chatseller ?' :
                   'A question about Chatseller?'}
@@ -238,91 +238,97 @@ const BeautyContactCTA = ({ language }: { language: string }) => {
             </div>
           </div>
           
-          <p className="text-gray-700 mb-8 text-lg leading-relaxed">
+          <p className="text-gray-700 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
             {language === 'fr' ? 
               'Notre équipe d\'experts est là pour vous accompagner. Nous connaissons les spécificités de votre secteur et vous aidons à optimiser vos conversions.' :
               'Our experts team is here to support you. We know the specifics of your industry and we help you optimize your conversions.'}
           </p>
           
-          <div className="grid md:grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div className="flex items-center text-sm text-gray-700">
-              <CheckCircle2 className="w-5 h-5 text-green-500 mr-3" />
+              <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
               <span className="font-semibold">
                 {language === 'fr' ? 'Réponse sous 2h' : 'Response within 2h'}
               </span>
             </div>
             <div className="flex items-center text-sm text-gray-700">
-              <CheckCircle2 className="w-5 h-5 text-green-500 mr-3" />
+              <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
               <span className="font-semibold">
                 {language === 'fr' ? 'Expertise secteur beauté' : 'Beauty industry expertise'}
               </span>
             </div>
             <div className="flex items-center text-sm text-gray-700">
-              <CheckCircle2 className="w-5 h-5 text-green-500 mr-3" />
+              <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
               <span className="font-semibold">
                 {language === 'fr' ? 'Support en français' : 'English support'}
               </span>
             </div>
             <div className="flex items-center text-sm text-gray-700">
-              <CheckCircle2 className="w-5 h-5 text-green-500 mr-3" />
+              <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
               <span className="font-semibold">
                 {language === 'fr' ? 'Conseil ROI personnalisé' : 'Personalized ROI advice'}
               </span>
             </div>
           </div>
 
-          {/* Contact methods */}
-          <div className="flex flex-col sm:flex-row gap-3 text-sm text-gray-600">
+          {/* Contact methods - Responsive */}
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 text-sm text-gray-600">
             <div className="flex items-center">
-              <Phone className="w-4 h-4 mr-2 text-rose-500" />
+              <Phone className="w-4 h-4 mr-2 text-rose-500 flex-shrink-0" />
               <span className="font-medium">+33 6 61 22 33 38</span>
             </div>
             <div className="flex items-center">
-              <MessageCircle className="w-4 h-4 mr-2 text-purple-500" />
+              <MessageCircle className="w-4 h-4 mr-2 text-purple-500 flex-shrink-0" />
               <span className="font-medium">support@chatseller.app</span>
             </div>
           </div>
         </div>
         
-        {/* Right side - Actions */}
-        <div className="space-y-4">
+        {/* Right side - Actions - MOBILE OPTIMISÉ */}
+        <div className="space-y-3 sm:space-y-4">
           <Button 
             size="lg" 
-            className="w-full group rounded-2xl py-4 text-base font-semibold bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300"
+            className="w-full group rounded-xl sm:rounded-2xl py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-semibold bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300"
             asChild
           >
             <a href="mailto:support@chatseller.app">
-              {language === 'fr' ? 'Poser ma question par email' : 'Ask my question by email'}
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <span className="truncate">
+                {language === 'fr' ? 'Poser ma question par email' : 'Ask my question by email'}
+              </span>
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 flex-shrink-0" />
             </a>
           </Button>
           
           <Button 
             size="lg" 
             variant="outline"
-            className="w-full group rounded-2xl py-4 text-base font-semibold border-2 border-purple-300 hover:border-purple-400 hover:bg-purple-50 text-purple-700 transition-all duration-300"
+            className="w-full group rounded-xl sm:rounded-2xl py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-semibold border-2 border-purple-300 hover:border-purple-400 hover:bg-purple-50 text-purple-700 transition-all duration-300"
             asChild
           >
             <a href="https://cal.com/chatseller/demo-beaute">
-              {language === 'fr' ? 'Réserver une démo beauté' : 'Book a beauty demo'}
-              <Sparkles className="ml-2 h-4 w-4" />
+              <span className="truncate">
+                {language === 'fr' ? 'Réserver une démo beauté' : 'Book a beauty demo'}
+              </span>
+              <Sparkles className="ml-2 h-4 w-4 flex-shrink-0" />
             </a>
           </Button>
 
           <Button 
             size="lg" 
             variant="ghost"
-            className="w-full group rounded-2xl py-4 text-base font-semibold text-gray-700 hover:text-rose-600 hover:bg-rose-50 transition-all duration-300"
+            className="w-full group rounded-xl sm:rounded-2xl py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base font-semibold text-gray-700 hover:text-rose-600 hover:bg-rose-50 transition-all duration-300"
             asChild
           >
             <a href="https://dashboard.chatseller.app/register">
-              {language === 'fr' ? 'Essayer gratuitement pendant 14 jours' : 'Try it fot free for 14 days'}
-              <CheckCircle2 className="ml-2 h-4 w-4" />
+              <span className="truncate">
+                {language === 'fr' ? 'Essayer gratuitement 14 jours' : 'Try free for 14 days'}
+              </span>
+              <CheckCircle2 className="ml-2 h-4 w-4 flex-shrink-0" />
             </a>
           </Button>
 
-          {/* Garantie */}
-          <div className="text-center mt-6 p-4 bg-white/60 rounded-xl border border-green-200">
+          {/* Garantie - Mobile optimisée */}
+          <div className="text-center mt-4 sm:mt-6 p-3 sm:p-4 bg-white/60 rounded-xl border border-green-200">
             <div className="text-green-700 font-bold text-sm mb-1">
               {language === 'fr' ? '🛡️ Conversions Garanties' : '🛡️ Guaranteed Conversions'}
             </div>

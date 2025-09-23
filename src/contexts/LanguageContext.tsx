@@ -1134,7 +1134,7 @@ Contactez-nous avec :
     newHeroSubtitle: "ChatSeller transforme vos visiteurs en acheteurs en répondant à leurs questions, en les rassurant et en recommandant les bons produits, comme une esthéticienne disponible 24/7.",
     newHeroCTAPrimary: "Créer ma Conseillère IA",
     newHeroCTASecondary: "Voir les résultats clients",
-    newHeroTrialPeriod: "14 jours gratuits",
+    newHeroTrialPeriod: "14 jours d'essai gratuits",
     
     // SOCIAL PROOF
     socialProofNewTitle: "Déjà adopté par des marques e-commerce qui multiplient leurs ventes avec ChatSeller",
@@ -1235,7 +1235,7 @@ Contactez-nous avec :
     // METRICS & LABELS
     conversionIncrease400: "+400% de conversions",
     conversionIncrease200: "+200% de ventes",
-    days14Trial: "14 jours gratuits",
+    days14Trial: "14 jours d'essai gratuits",
     oneClickInstall: "Installation en 2min",
     beautySector: "Secteur beauté",
     realTimeResults: "Résultats temps réel",
@@ -1846,7 +1846,7 @@ Contact us with:
     newHeroSubtitle: "ChatSeller turns your visitors into buyers by answering their questions, reassuring them and recommending the right products, like a beautician available 24/7.",
     newHeroCTAPrimary: "Create my AI Advisor",
     newHeroCTASecondary: "See client results",
-    newHeroTrialPeriod: "14 days free",
+    newHeroTrialPeriod: "14 days free trial",
     
     // SOCIAL PROOF
     socialProofNewTitle: "Already adopted by e-commerce brands who multiply their sales with ChatSeller",
@@ -1948,7 +1948,7 @@ Contact us with:
     // METRICS & LABELS
     conversionIncrease400: "+400% conversions",
     conversionIncrease200: "+200% sales",
-    days14Trial: "14 days free",
+    days14Trial: "14 days free trial",
     oneClickInstall: "2-minute install",
     beautySector: "Beauty sector",
     realTimeResults: "Real-time results",

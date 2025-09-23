@@ -2,7 +2,7 @@
   "name": "chatseller-landing",
   "private": true,
   "version": "1.0.0",
-  "description": "ChatSeller - Le vendeur IA qui transforme vos visiteurs en clients",
+  "description": "ChatSeller - Multipliez vos conversions par 3 avec une Conseillère IA disponible 24/7",
   "type": "module",
   "scripts": {
     "dev": "vite",

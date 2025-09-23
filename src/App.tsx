@@ -48,20 +48,20 @@ const AppRoutes = () => {
     switch (location.pathname) {
       case '/':
         return {
-          title: "ChatSeller - Vendeur IA qui transforme vos visiteurs en clients",
-          description: "🚀 Agent IA commercial révolutionnaire pour e-commerce. Dialogue avec vos visiteurs et collecte leurs commandes automatiquement. +147% de conversion. Essai gratuit 7 jours.",
-          keywords: "vendeur IA, agent IA commercial, chatbot e-commerce, intelligence artificielle vente, Shopify IA, WooCommerce chatbot"
+          title: "ChatSeller - Multipliez vos conversions par 3 avec une Conseillère IA disponible 24/7",
+          description: "Le premier Agent IA spécialement conçu pour les marques dans le secteur de la beauté. Offrez à vos client.e.s en ligne la même expérience qu'en boutique avec une conseillère IA formée sur vos produits.",
+          keywords: "Agent IA, agent IA commercial, Conseillère IA, Conseillère Beauté IA, chatbot e-commerce, intelligence artificielle vente, Shopify IA, WooCommerce chatbot"
         };
       case '/about':
         return {
-          title: "À propos de ChatSeller - L'histoire de notre Vendeur IA | Dukka",
-          description: "Découvrez l'histoire de ChatSeller, développé en Afrique par Dukka. Notre mission : transformer chaque site e-commerce en vendeur IA performant.",
-          keywords: "ChatSeller histoire, Dukka, startup IA Afrique, Sénégal, Ibuka Ndjoli"
+          title: "À propos de ChatSeller - Le premier Agent IA spécialement conçu pour les marques beauté",
+          description: "Offrez à vos client.e.s en ligne la même expérience qu'en boutique avec une conseillère IA formée sur vos produits. ChatSeller révolutionne l'e-commerce beauté.",
+          keywords: "ChatSeller histoire, Dukka, startup IA, e-commerce beauté, chatbot IA, Marques beauté"
         };
       case '/terms':
         return {
           title: "Conditions d'utilisation - ChatSeller | Terms of Service",
-          description: "Conditions générales d'utilisation du service ChatSeller. Essai gratuit 7 jours, tarification transparente, résiliation libre.",
+          description: "Conditions générales d'utilisation du service ChatSeller. Essai gratuit 14 jours, tarification transparente, résiliation libre.",
           keywords: "conditions utilisation ChatSeller, terms of service, SaaS"
         };
       case '/privacy':

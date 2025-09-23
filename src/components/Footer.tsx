@@ -127,7 +127,7 @@ const Footer = () => {
             {/* Social links beauté */}
             <div className="flex space-x-3">
               <a 
-                href="https://instagram.com/chateller" 
+                href="https://instagram.com/chatseller_app" 
                 className="w-10 h-10 bg-white/60 backdrop-blur-sm border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:text-rose-600 hover:border-rose-300 hover:bg-rose-50 transition-all duration-300 shadow-sm" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -135,7 +135,7 @@ const Footer = () => {
                 <Instagram className="h-4 w-4" />
               </a>
               <a 
-                href="https://www.linkedin.com/company/chatseller/" 
+                href="https://www.linkedin.com/company/getdukka/" 
                 className="w-10 h-10 bg-white/60 backdrop-blur-sm border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:text-rose-600 hover:border-rose-300 hover:bg-rose-50 transition-all duration-300 shadow-sm" 
                 target="_blank" 
                 rel="noopener noreferrer"

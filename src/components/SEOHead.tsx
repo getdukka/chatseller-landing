@@ -31,12 +31,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   // 🎯 TITRES ET DESCRIPTIONS OPTIMISÉS
   const defaultTitle = language === 'fr' ? 
-    "ChatSeller - Vendeur IA qui transforme vos visiteurs en clients | Agent Commercial Intelligence Artificielle" :
-    "ChatSeller - AI Seller that turns visitors into customers | Artificial Intelligence Sales Agent";
+    "ChatSeller - Multipliez vos conversions par 3 avec une Conseillère IA disponible 24/7 | Agent Commercial Intelligence Artificielle" :
+    "ChatSeller - Multiply Your Conversions by 3 with a 24/7 AI Advisor | AI Sales Agent";
 
   const defaultDescription = language === 'fr' ? 
-    "🚀 ChatSeller : Le vendeur IA révolutionnaire qui booste vos ventes e-commerce. Agent commercial intelligent qui dialogue avec vos visiteurs et collecte leurs commandes automatiquement. +147% de conversion. Essai gratuit 7 jours. Compatible Shopify, WooCommerce, Wix." :
-    "🚀 ChatSeller: The revolutionary AI seller that boosts your e-commerce sales. Intelligent sales agent that chats with your visitors and automatically collects their orders. +147% conversion. 7-day free trial. Compatible with Shopify, WooCommerce, Wix.";
+    "🚀 ChatSeller : Le premier Agent IA spécialement conçu pour les marques Shopify et WooCommerce dans le secteur de la beauté. Offrez à vos client.e.s en ligne la même expérience qu'en boutique avec une conseillère IA formée sur vos produits." :
+    "🚀 ChatSeller: The first AI Agent specially designed for Shopify and WooCommerce brands in the beauty sector. Provide your online customers with the same experience as in-store with an AI advisor trained on your products.";
 
   const siteUrl = "https://chatseller.app";
   const currentUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
@@ -66,7 +66,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
       {/* 🏢 MÉTADONNÉES ENTREPRISE */}
-      <meta name="author" content="TEKKI GROUP - Dukka" />
+      <meta name="author" content="Dukka" />
       <meta name="publisher" content="ChatSeller by Dukka" />
       <meta name="copyright" content="© 2025 ChatSeller. All rights reserved." />
       <meta name="application-name" content="ChatSeller" />
@@ -80,18 +80,18 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="ChatSeller - Vendeur IA Commercial" />
+      <meta property="og:image:alt" content="ChatSeller - Agents IA pour Marques Beauté" />
       <meta property="og:locale" content={language === 'fr' ? 'fr_FR' : 'en_US'} />
       <meta property="og:locale:alternate" content={language === 'fr' ? 'en_US' : 'fr_FR'} />
       
       {/* 🐦 TWITTER CARDS */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@getdukka" />
-      <meta name="twitter:creator" content="@getdukka" />
+      <meta name="twitter:site" content="@chatseller_app" />
+      <meta name="twitter:creator" content="@chatseller_app" />
       <meta name="twitter:title" content={title || defaultTitle} />
       <meta name="twitter:description" content={description || defaultDescription} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content="ChatSeller - AI Sales Agent" />
+      <meta name="twitter:image:alt" content="ChatSeller - AI Agent for Beauty Brands" />
       
       {/* 💼 LINKEDIN */}
       <meta property="linkedin:owner" content="getdukka" />
@@ -148,16 +148,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+221-77-000-0000",
+            "telephone": "+33695903221",
             "contactType": "customer service",
             "email": "support@chatseller.app",
             "availableLanguage": ["French", "English"]
           },
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Ouest-Foire",
-            "addressLocality": "Dakar",
-            "addressCountry": "SN"
+            "streetAddress": "Montpellier, France",
+            "addressLocality": "Montpellier",
+            "addressCountry": "FR"
           }
         })}
       </script>
@@ -167,15 +167,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "ChatSeller AI Sales Agent",
-          "description": "Agent IA commercial pour e-commerce qui transforme les visiteurs en clients",
+          "name": "ChatSeller AI Agent for Beauty Brands",
+          "description": "Multipliez vos conversions par 3 avec une Conseillère Beauté IA disponible 24/7",
           "brand": {
             "@type": "Brand",
             "name": "ChatSeller"
           },
           "offers": {
             "@type": "Offer",
-            "price": "14.00",
+            "price": "49.00",
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock",
             "validFrom": "2025-01-01",
