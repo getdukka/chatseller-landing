@@ -1,4 +1,4 @@
-// src/components/Navbar.tsx - NAVBAR AVEC NOUVEAU LOGO ET BY DUKKA EN BLEU
+// src/components/Navbar.tsx 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronRight } from 'lucide-react';

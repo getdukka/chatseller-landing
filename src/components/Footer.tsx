@@ -163,32 +163,32 @@ const Footer = () => {
             </h3>
             <ul className="space-y-4">
               <li>
-                <a href="#features" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
+                <a href="/about" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
                   {language === 'fr' ? 'L\'IA Experte Beauté' : 'AI Beauty Expert'}
                 </a>
               </li>
               <li>
-                <a href="#how-it-works" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
+                <a href="/index#how-it-works" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
                   {language === 'fr' ? 'Comment ça marche' : 'How it works'}
                 </a>
               </li>
               <li>
-                <a href="#case-studies" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
+                <a href="/index#case-studies" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
                   {language === 'fr' ? 'Marques clientes' : 'Client brands'}
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
+                <a href="/index/#pricing" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
                   {language === 'fr' ? 'Tarifs' : 'Pricing'}
                 </a>
               </li>
               <li>
                 <a 
-                  href="#faq" 
+                  href="/index/#faq" 
                   className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group" 
                   target="_blank" 
                   rel="noopener noreferrer"
