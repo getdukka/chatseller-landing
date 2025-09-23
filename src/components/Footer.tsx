@@ -1,4 +1,4 @@
-// src/components/Footer.tsx
+// src/components/Footer.tsx 
 import React from 'react';
 import { Twitter, Linkedin, Mail, MapPin, Shield, Star, Clock, Users, Heart, Sparkles, CheckCircle, Award, Globe, Instagram } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -6,6 +6,29 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { language } = useLanguage();
+
+  // Fonction pour naviguer vers les sections de la page d'accueil
+  const navigateToHomeSection = (sectionId: string) => {
+    const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
+    
+    if (isHomePage) {
+      // Si on est déjà sur la page d'accueil, scroller vers la section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // Si on est sur une autre page, naviguer vers l'accueil avec l'ancre
+      window.location.href = `/#${sectionId}`;
+    }
+  };
 
   return (
     <footer className="bg-gradient-to-b from-white via-rose-50/30 to-purple-50/30 border-t border-rose-200/50 relative overflow-hidden">
@@ -155,7 +178,7 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Solution Beauté */}
+          {/* Solution Beauté - LIENS CORRIGÉS */}
           <div>
             <h3 className="font-bold mb-6 text-gray-900 text-lg flex items-center">
               <Sparkles className="w-5 h-5 text-rose-500 mr-2" />
@@ -169,33 +192,40 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/index#how-it-works" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
+                <button 
+                  onClick={() => navigateToHomeSection('how-it-works')}
+                  className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group cursor-pointer"
+                >
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
                   {language === 'fr' ? 'Comment ça marche' : 'How it works'}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="/index#case-studies" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
+                <button 
+                  onClick={() => navigateToHomeSection('case-studies')}
+                  className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group cursor-pointer"
+                >
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
                   {language === 'fr' ? 'Marques clientes' : 'Client brands'}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="/index/#pricing" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
+                <button 
+                  onClick={() => navigateToHomeSection('pricing')}
+                  className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group cursor-pointer"
+                >
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
                   {language === 'fr' ? 'Tarifs' : 'Pricing'}
-                </a>
+                </button>
               </li>
               <li>
-                <a 
-                  href="/index/#faq" 
-                  className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <button 
+                  onClick={() => navigateToHomeSection('faq')}
+                  className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group cursor-pointer"
                 >
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
                   {language === 'fr' ? 'FAQ' : 'FAQ'}
-                </a>
+                </button>
               </li>
             </ul>
           </div>

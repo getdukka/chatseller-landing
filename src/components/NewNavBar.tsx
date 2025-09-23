@@ -25,18 +25,26 @@ const NewNavbar = () => {
     };
   }, []);
 
-  // Fonction de scroll fluide vers les sections
+  // Fonction de scroll fluide vers les sections - CORRIGÉE
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offset = 80; // Hauteur du navbar fixe
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+    const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
+    
+    if (isHomePage) {
+      // Si on est déjà sur la page d'accueil, scroller vers la section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 80; // Hauteur du navbar fixe
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // Si on est sur une autre page, naviguer vers l'accueil avec l'ancre
+      window.location.href = `/#${sectionId}`;
     }
     setMobileMenuOpen(false);
   };
@@ -342,7 +350,7 @@ const NewNavbar = () => {
               <div className="flex justify-center items-center space-x-4 text-xs text-gray-400">
                 <span className="flex items-center">
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-1 animate-pulse"></div>
-                  {language === 'fr' ? '14 jours d\'essai gratuits' : '14 days free trial'}
+                  {language === 'fr' ? '14 jours gratuits' : '14 days free'}
                 </span>
                 <span className="flex items-center">
                   <Star className="w-3 h-3 mr-1 text-yellow-500" />
