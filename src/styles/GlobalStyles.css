@@ -1,17 +1,65 @@
-/* src/styles/GlobalStyles.css - Correctifs Mobile */
+/* src/styles/GlobalStyles.css 
 
-/* Fix pour empêcher le défilement horizontal sur mobile */
-html, body {
+/* ✅ CORRECTION BACKGROUND BLEU - Définir backgrounds cohérents */
+html {
+  background: linear-gradient(135deg, 
+    rgba(219, 234, 254, 0.4) 0%,     /* blue-100 with opacity */
+    rgba(238, 242, 255, 0.3) 25%,    /* indigo-50 with opacity */
+    rgba(255, 255, 255, 0.5) 50%,    /* white with opacity */
+    rgba(243, 232, 255, 0.3) 75%,    /* purple-100 with opacity */
+    rgba(251, 207, 232, 0.2) 100%    /* pink-100 with opacity */
+  ) !important;
+  
+  /* Fallback pour anciens navigateurs */
+  background-color: #fef7ff !important; /* rose-50 comme fallback */
+  
   overflow-x: hidden !important;
   width: 100% !important;
   max-width: 100vw !important;
 }
 
-/* Conteneur principal - empêche le débordement */
+body {
+  background: inherit !important; /* Hérite du background HTML */
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ✅ CORRECTION OVER-SCROLL iOS Safari */
+@supports (-webkit-overflow-scrolling: touch) {
+  html, body {
+    background: linear-gradient(135deg, 
+      #fef7ff 0%,     /* rose-50 */
+      #fff7ed 25%,    /* orange-50 */
+      #ffffff 50%,    /* white */
+      #faf5ff 75%,    /* purple-50 */
+      #fef7ff 100%    /* rose-50 */
+    ) !important;
+    
+    /* Fixed background pour iOS */
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    
+    /* Empêche le rubber band sur iOS */
+    overscroll-behavior-y: none !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  /* Couleur de status bar iOS cohérente */
+  body {
+    background-color: #fef7ff !important;
+  }
+}
+
+/* Fix pour empêcher le défilement horizontal sur mobile */
 #root, .app {
   overflow-x: hidden !important;
   width: 100% !important;
   max-width: 100vw !important;
+  background: transparent !important; /* Laisse transparaître le background HTML */
 }
 
 /* Fix pour tous les conteneurs principaux */
@@ -70,6 +118,23 @@ section {
     max-width: 100vw !important;
   }
   
+  /* ✅ BACKGROUND MOBILE SPÉCIFIQUE */
+  html {
+    background: linear-gradient(180deg, 
+      #fef7ff 0%,     /* rose-50 */
+      #ffffff 30%,    /* white */
+      #faf5ff 70%,    /* purple-50 */
+      #fef7ff 100%    /* rose-50 */
+    ) !important;
+    
+    /* Empeche le bounce sur iOS */
+    overscroll-behavior: none !important;
+  }
+  
+  body {
+    background: inherit !important;
+  }
+  
   .container {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -119,6 +184,9 @@ section {
     overflow-x: hidden !important;
     width: 100% !important;
     position: relative !important;
+    
+    /* ✅ BACKGROUND WEBKIT SPÉCIFIQUE */
+    background: #fef7ff !important; /* Couleur unie pour webkit */
   }
 }
 
@@ -140,7 +208,7 @@ section {
   overflow-x: hidden !important;
 }
 
-/* ✅ HERO SECTION BACKGROUND STYLE CLUELY */
+/* ✅ HERO SECTION BACKGROUND STYLE HARMONISÉ */
 .hero-gradient-bg {
   background: linear-gradient(135deg, 
     rgba(219, 234, 254, 0.8) 0%,     /* blue-100 with opacity */
@@ -151,7 +219,7 @@ section {
   ) !important;
   
   /* Fallback pour les navigateurs plus anciens */
-  background-color: #f8fafc !important;
+  background-color: #fef7ff !important; /* Cohérent avec le background global */
 }
 
 /* ✅ ANIMATION DOUCE POUR LES CERCLES DÉCORATIFS */
@@ -170,7 +238,7 @@ section {
   }
 }
 
-/* ✅ RESPONSIVE - BACKGROUND MOBILE */
+/* ✅ RESPONSIVE - BACKGROUND MOBILE HÉRO */
 @media (max-width: 768px) {
   .hero-gradient-bg {
     background: linear-gradient(180deg, 
@@ -181,15 +249,48 @@ section {
   }
 }
 
+/* ✅ LOGOS MARQUEE ANIMATIONS */
 @keyframes marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 40s linear infinite; /* Durée augmentée pour meilleur espacement */
 }
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+/* ✅ LOGOS BRANDS - Fix pour éviter le blur/flicker */
+.brand-logo img {
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* ✅ CORRECTION NAVBAR - Évite les problèmes de z-index avec le background */
+.navbar, header[class*="fixed"] {
+  isolation: isolate !important; /* Crée un nouveau contexte de stacking */
+}
+
+/* ✅ AMÉLIORATION PERFORMANCES - Optimise le rendering */
+.animate-fade-in, 
+.animate-bounce, 
+.animate-pulse,
+[class*="animate-"] {
+  will-change: auto !important; /* Optimise les animations */
+}
+
+/* ✅ CORRECTION STATUS BAR iOS (si utilisé dans une WebView) */
+@media (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    padding-top: env(safe-area-inset-top) !important;
+  }
+  
+  /* Status bar couleur cohérente */
+  meta[name="theme-color"] {
+    content: #fef7ff !important;
+  }
 }

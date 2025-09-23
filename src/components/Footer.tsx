@@ -344,15 +344,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-center lg:text-left">
               <p className="text-sm text-gray-600 mb-2">
-                © {currentYear} ChatSeller. {language === 'fr' ? 'Tous droits réservés - Un produit de' : 'All rights reserved - A product of'} {' '}
-                <a 
-                  href="https://getdukka.com" 
-                  className="text-rose-600 hover:text-rose-700 transition-colors font-semibold" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  Dukka
-                </a>.
+                © {currentYear} ChatSeller. {language === 'fr' ? 'Tous droits réservés' : 'All rights reserved'} {' '}
               </p>
               <p className="text-xs text-gray-500">
                 {language === 'fr' ? 

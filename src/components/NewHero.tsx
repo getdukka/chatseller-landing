@@ -1,4 +1,4 @@
-// src/components/NewHero.tsx
+// src/components/NewHero.tsx - VERSION FINALE CORRIGÉE
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2, TrendingUp, Play, Sparkles, Send, ShoppingCart, Star, Heart, Zap } from 'lucide-react';
@@ -41,7 +41,8 @@ const NewHero = () => {
       <div className="absolute top-1/3 right-1/4 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-gradient-to-br from-pink-400/20 to-rose-400/10 rounded-full blur-2xl -z-10 animate-bounce" style={{animationDelay: '2s'}} />
       
       <div className="container px-4 sm:px-6 md:px-8 lg:px-12 mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+        {/* CORRECTION: Grid avec alignement amélioré pour tablette */}
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start lg:items-center">
           
           {/* Left Column - Contenu Premium */}
           <div className="text-center lg:text-left">
@@ -125,15 +126,15 @@ const NewHero = () => {
             </div>
           </div>
           
-          {/* Right Column - Chat Interface Beauté Premium - Responsive */}
-          <div className="animate-fade-in [animation-delay:800ms] mt-8 lg:mt-0">
+          {/* Right Column - Chat Interface Beauté Premium - CORRECTION POSITION */}
+          <div className="animate-fade-in [animation-delay:800ms] mt-8 lg:mt-0 lg:-mt-12 xl:-mt-16">
             <BeautyHeroChatInterface onDemoClick={() => setIsChatModalOpen(true)} />
           </div>
         </div>
         
-        {/* Logos défilants des marques beauté - Style chatseller.app */}
+        {/* Logos défilants des marques beauté - CORRECTION ESPACEMENT */}
         <div className="mt-12 sm:mt-16 animate-fade-in [animation-delay:1000ms]">
-          <BeautyBrandsMarquee />
+          <BeautyBrandsMarqueeFixed />
         </div>
       </div>
       
@@ -470,8 +471,8 @@ const BeautyHeroChatInterface = ({ onDemoClick }: { onDemoClick: () => void }) =
   );
 };
 
-// Composant logos défilants avec assets statiques - Version corrigée
-const BeautyBrandsMarquee = () => {
+// NOUVEAU COMPOSANT LOGOS CORRIGÉ - Espacement optimisé
+const BeautyBrandsMarqueeFixed = () => {
   return (
     <div className="w-full overflow-hidden py-6 sm:py-8">
       <style dangerouslySetInnerHTML={{
@@ -486,7 +487,7 @@ const BeautyBrandsMarquee = () => {
           }
           
           .brands-marquee {
-            animation: marquee-right-to-left 35s linear infinite;
+            animation: marquee-right-to-left 40s linear infinite;
           }
           
           .brands-marquee-container:hover .brands-marquee {
@@ -507,10 +508,10 @@ const BeautyBrandsMarquee = () => {
       
       <div className="brands-marquee-container">
         <div className="flex brands-marquee">
-          {/* Premier set de logos */}
-          <div className="flex items-center space-x-8 sm:space-x-32 min-w-full">
+          {/* Premier set de logos - ESPACEMENT CORRIGÉ */}
+          <div className="flex items-center space-x-12 sm:space-x-16 md:space-x-20 lg:space-x-24 xl:space-x-32 min-w-full">
             {beautyBrandsLogos.map((brand, index) => (
-              <StaticBrandLogo 
+              <OptimizedBrandLogo 
                 key={`first-${index}`}
                 logoPath={brand.logoPath}
                 name={brand.name}
@@ -518,10 +519,10 @@ const BeautyBrandsMarquee = () => {
             ))}
           </div>
           
-          {/* Deuxième set pour effet continu */}
-          <div className="flex items-center space-x-8 sm:space-x-32 min-w-full">
+          {/* Deuxième set pour effet continu - ESPACEMENT CORRIGÉ */}
+          <div className="flex items-center space-x-12 sm:space-x-16 md:space-x-20 lg:space-x-24 xl:space-x-32 min-w-full">
             {beautyBrandsLogos.map((brand, index) => (
-              <StaticBrandLogo 
+              <OptimizedBrandLogo 
                 key={`second-${index}`}
                 logoPath={brand.logoPath}
                 name={brand.name}
@@ -534,8 +535,8 @@ const BeautyBrandsMarquee = () => {
   );
 };
 
-// Composant logo statique avec fallback 
-const StaticBrandLogo = ({ 
+// NOUVEAU COMPOSANT LOGO OPTIMISÉ - Tailles responsives corrigées
+const OptimizedBrandLogo = ({ 
   logoPath, 
   name 
 }: { 
@@ -544,28 +545,28 @@ const StaticBrandLogo = ({
 }) => {
   const [logoError, setLogoError] = useState(false);
   
-  // Construction du chemin public - CORRIGÉ
+  // Construction du chemin public
   const publicLogoPath = `/images/brand-logos/${logoPath}`;
   
   // Fallback avec initiales si logo introuvable
   if (logoError) {
     const initials = name.split(' ').map(word => word[0]).join('').slice(0, 2).toUpperCase();
     return (
-      <div className="flex items-center justify-center w-32 sm:w-36 md:w-40 h-16 sm:h-20 md:h-24 bg-gray-100 rounded-lg border brand-logo cursor-pointer">
-        <span className="text-gray-600 font-bold text-base sm:text-lg md:text-xl">{initials}</span>
+      <div className="flex items-center justify-center w-20 h-12 sm:w-28 sm:h-16 md:w-32 md:h-18 lg:w-36 lg:h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg border brand-logo cursor-pointer shadow-sm flex-shrink-0">
+        <span className="text-gray-600 font-bold text-sm sm:text-base md:text-lg">{initials}</span>
       </div>
     );
   }
 
   return (
-    <div className="flex items-center justify-center w-32 sm:w-36 md:w-40 h-16 sm:h-20 md:h-24 cursor-pointer brand-logo">
+    <div className="flex items-center justify-center w-20 h-12 sm:w-28 sm:h-16 md:w-32 md:h-18 lg:w-36 lg:h-20 cursor-pointer brand-logo flex-shrink-0">
       <img 
         src={publicLogoPath}
         alt={`${name} logo`}
         className="max-w-full max-h-full object-contain"
         style={{ 
-          maxWidth: '128px', // Augmenté pour mobile
-          maxHeight: '64px'  // Augmenté pour mobile
+          maxWidth: '100%', // Utilise toute la largeur du container
+          maxHeight: '100%'  // Utilise toute la hauteur du container
         }}
         onError={() => setLogoError(true)}
         loading="lazy"
