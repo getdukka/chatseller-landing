@@ -44,8 +44,8 @@ const NotFound = () => {
           
           <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">
             {language === 'fr' ? 
-              'Cette page beauté n\'existe pas' : 
-              'This beauty page doesn\'t exist'}
+              'Cette page n\'existe pas' : 
+              'This page doesn\'t exist'}
           </h1>
           
           <p className="text-gray-600 mb-8 text-sm sm:text-base leading-relaxed">
@@ -125,8 +125,8 @@ const NotFound = () => {
           <div className="mt-8 p-4 bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl border border-rose-200">
             <p className="text-sm text-gray-600 mb-3">
               {language === 'fr' ? 
-                'Vous êtes une marque beauté ? Découvrez ChatSeller' :
-                'Are you a beauty brand? Discover ChatSeller'}
+                'Vous êtes une marque beauté ? Testez ChatSeller gratuitement' :
+                'Are you a beauty brand? Try ChatSeller for free'}
             </p>
             <Button 
               size="sm" 
@@ -135,7 +135,7 @@ const NotFound = () => {
             >
               <a href="https://dashboard.chatseller.app/register">
                 <Sparkles className="w-4 h-4 mr-2" />
-                {language === 'fr' ? 'Essai gratuit 14 jours' : '14-day free trial'}
+                {language === 'fr' ? 'Essai gratuit de 14 jours' : '14-day free trial'}
               </a>
             </Button>
           </div>

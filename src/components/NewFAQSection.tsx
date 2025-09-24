@@ -307,7 +307,7 @@ const BeautyContactCTA = ({ language }: { language: string }) => {
           >
             <a href="https://cal.com/chatseller/demo-beaute">
               <span className="truncate">
-                {language === 'fr' ? 'Réserver une démo beauté' : 'Book a beauty demo'}
+                {language === 'fr' ? 'Réserver une démo' : 'Book a demo'}
               </span>
               <Sparkles className="ml-2 h-4 w-4 flex-shrink-0" />
             </a>

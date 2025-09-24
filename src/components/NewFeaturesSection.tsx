@@ -313,7 +313,7 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
       badge: 'bg-gradient-to-r from-purple-600 to-pink-600'
     },
     features: [
-      language === 'fr' ? 'Analyse de 2000+ ingrédients cosmétiques' : 'Analysis of 2000+ cosmetic ingredients',
+      language === 'fr' ? 'Analyse de +2000 ingrédients cosmétiques' : 'Analysis of 2000+ cosmetic ingredients',
       language === 'fr' ? 'Diagnostic précis des types de peau' : 'Accurate skin type diagnosis',
       language === 'fr' ? 'Recommandations selon l\'âge et besoins' : 'Recommendations by age and needs',
       language === 'fr' ? 'Connaissance des contre-indications' : 'Knowledge of contraindications'
@@ -321,7 +321,7 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
     metric: language === 'fr' ? '+94% questions résolues' : '+94% questions solved',
     visual: <BeautyExpertiseVisual language={language} />,
     stats: {
-      primary: '2000+',
+      primary: '+2000',
       primaryLabel: language === 'fr' ? 'Ingrédients' : 'Ingredients',
       secondary: '94%',
       secondaryLabel: language === 'fr' ? 'Précision' : 'Accuracy'
@@ -331,8 +331,8 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
     icon: <Heart className="h-7 w-7" />,
     title: language === 'fr' ? 'Conseils Ultra-Personnalisés' : 'Ultra-Personalized Advice',
     description: language === 'fr' ? 
-      'Diagnostic beauté instantané avec recommandations adaptées au profil unique de chaque cliente' :
-      'Instant beauty diagnosis with recommendations tailored to each customer\'s unique profile',
+      'Diagnostic instantané avec recommandations adaptées au profil unique de chaque cliente' :
+      'Instant diagnosis with recommendations tailored to each customer\'s unique profile',
     colorClasses: {
       gradient: 'from-rose-500 via-pink-500 to-rose-600',
       bg: 'from-rose-50/80 via-pink-50/50 to-rose-50/80',
@@ -357,7 +357,7 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
   },
   {
     icon: <ShoppingCart className="h-7 w-7" />,
-    title: language === 'fr' ? 'Vente Intelligente Beauté' : 'Smart Beauty Sales',
+    title: language === 'fr' ? 'Vente Intelligente' : 'Smart Sales',
     description: language === 'fr' ? 
       'Recommandations produits contextuelles qui augmentent le panier avec subtilité et pertinence' :
       'Contextual product recommendations that increase cart value with subtlety and relevance',
@@ -385,10 +385,10 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
   },
   {
     icon: <BarChart3 className="h-7 w-7" />,
-    title: language === 'fr' ? 'Analytics Beauté Avancés' : 'Advanced Beauty Analytics',
+    title: language === 'fr' ? 'Analytics Avancés' : 'Advanced Analytics',
     description: language === 'fr' ? 
-      'Insights précieux sur vos clients beauté : préférences, tendances et opportunités de croissance' :
-      'Valuable insights on your beauty customers: preferences, trends and growth opportunities',
+      'Insights précieux sur vos clients : préférences, tendances et opportunités de croissance' :
+      'Valuable insights on your customers: preferences, trends and growth opportunities',
     colorClasses: {
       gradient: 'from-blue-500 via-cyan-500 to-blue-600',
       bg: 'from-blue-50/80 via-cyan-50/50 to-blue-50/80',

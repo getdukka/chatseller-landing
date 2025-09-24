@@ -60,8 +60,8 @@ const NewCaseStudiesSection = () => {
             </h3>
             <p className="text-gray-600">
               {language === 'fr' ? 
-                'Métriques consolidées sur 7 marques dans le secteur de la beauté' :
-                'Consolidated metrics across 7 brands in the beauty sector'}
+                'Métriques consolidées sur 10 marques dans le secteur de la beauté' :
+                'Consolidated metrics across 10 brands in the beauty sector'}
             </p>
           </div>
           
@@ -151,7 +151,7 @@ const realBeautyCaseStudies = [
       en: "Hair care"
     },
     challenge: {
-      fr: "Clients hésitant sur le choix de routine capillaire selon leur type de cheveux",
+      fr: "Clientes hésitant sur le choix de routine capillaire selon leur type de cheveux",
       en: "Customers hesitating on hair routine choice according to their hair type"
     },
     solution: {
@@ -251,7 +251,7 @@ const RealBrandCard: React.FC<RealBrandCardProps> = ({
       <div className="mt-4 text-center">
         <div className="inline-flex items-center px-3 py-1 bg-green-100 border border-green-200 rounded-full text-xs font-semibold text-green-700">
           <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-          {language === 'fr' ? 'En test bêta' : 'Beta testing'}
+          {language === 'fr' ? 'En bêta test' : 'Beta testing'}
         </div>
       </div>
     </div>

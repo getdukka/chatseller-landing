@@ -253,7 +253,7 @@ const getStepsData = (language: 'fr' | 'en') => [
     features: [
       language === 'fr' ? 'Plugin Shopify natif (1 clic)' : 'Native Shopify plugin (1 click)',
       language === 'fr' ? 'Extension WooCommerce automatique' : 'Automatic WooCommerce extension',
-      language === 'fr' ? 'Import catalogue produits beauté' : 'Beauty product catalog import',
+      language === 'fr' ? 'Import catalogue produits' : 'Product catalog import',
       language === 'fr' ? 'Configuration des paramètres de base' : 'Basic settings configuration'
     ],
     timeEstimate: language === 'fr' ? '2 minutes' : '2 minutes',
@@ -275,7 +275,7 @@ const getStepsData = (language: 'fr' | 'en') => [
       language === 'fr' ? 'Import automatique de votre site web' : 'Automatic website import',
       language === 'fr' ? 'Upload fichiers PDF, CSV, DOCX' : 'Upload PDF, CSV, DOCX files',
       language === 'fr' ? 'Ajout de connaissances par texte libre' : 'Add knowledge via free text',
-      language === 'fr' ? 'Formation spécialisée secteur beauté' : 'Beauty industry specialized training'
+      language === 'fr' ? 'Formation spécialisée sur votre secteur' : 'Industry specialized training'
     ],
     timeEstimate: language === 'fr' ? '3 minutes' : '3 minutes',
     difficulty: language === 'fr' ? 'Simple' : 'Simple'
@@ -384,9 +384,9 @@ const InstallationVisual = ({ language }: { language: string }) => (
       
       {/* Stats import */}
       <div className="bg-blue-100 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center">
-        <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-1">247</div>
+        <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-1">47</div>
         <div className="text-xs sm:text-sm text-blue-700 font-medium">
-          {language === 'fr' ? 'produits beauté importés' : 'beauty products imported'}
+          {language === 'fr' ? 'produits importés' : 'products imported'}
         </div>
       </div>
     </div>
@@ -413,7 +413,7 @@ const TrainingVisual = ({ language }: { language: string }) => (
           <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 flex-shrink-0" />
           <div className="flex-1 min-w-0">
             <div className="text-xs sm:text-sm font-medium truncate">
-              {language === 'fr' ? 'Site web analysé' : 'Website analyzed'}
+              {language === 'fr' ? 'Site web indexé' : 'Website indexed'}
             </div>
             <div className="text-xs text-gray-500 truncate">beaute-premium.com</div>
           </div>
@@ -435,7 +435,7 @@ const TrainingVisual = ({ language }: { language: string }) => (
           <Upload className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0" />
           <div className="flex-1 min-w-0">
             <div className="text-xs sm:text-sm font-medium truncate">
-              {language === 'fr' ? 'Connaissances beauté ajoutées' : 'Beauty knowledge added'}
+              {language === 'fr' ? 'Connaissances ajoutées' : 'Knowledge added'}
             </div>
             <div className="text-xs text-gray-500 truncate">
               {language === 'fr' ? 'Types de peau, ingrédients...' : 'Skin types, ingredients...'}
@@ -456,15 +456,15 @@ const TrainingVisual = ({ language }: { language: string }) => (
         </div>
         <div className="text-xs text-gray-600 text-center">
           {language === 'fr' ? 
-            'Apprentissage des spécificités beauté en cours...' :
-            'Learning beauty specifics in progress...'}
+            'Apprentissage des spécificités de votre marque en cours...' :
+            'Learning your brand specifics in progress...'}
         </div>
       </div>
       
       {/* Expertise acquise */}
       <div className="grid grid-cols-2 gap-2 sm:gap-3">
         <div className="bg-purple-100 rounded-lg p-2 sm:p-3 text-center">
-          <div className="text-base sm:text-lg font-bold text-purple-600">2000+</div>
+          <div className="text-base sm:text-lg font-bold text-purple-600">+2000</div>
           <div className="text-xs text-purple-700">
             {language === 'fr' ? 'Ingrédients' : 'Ingredients'}
           </div>

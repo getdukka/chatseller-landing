@@ -1,4 +1,4 @@
-// src/components/NewSocialProof.tsx - SOCIAL PROOF BEAUTÉ AVEC VRAIES MARQUES BETA
+// src/components/NewSocialProof.tsx 
 import React from 'react';
 import { CheckCircle, Sparkles, TrendingUp, Star, Heart } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';

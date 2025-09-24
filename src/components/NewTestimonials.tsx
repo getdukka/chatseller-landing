@@ -56,7 +56,7 @@ const NewTestimonials = () => {
           
           <p className="text-xl text-gray-600 animate-fade-in [animation-delay:400ms]">
             {language === 'fr' ? 
-              'Découvrez comment nos clients atteignent des résultats exceptionnels grâce à leur conseillère IA beauté' :
+              'Découvrez comment nos clients atteignent des résultats exceptionnels grâce à leur conseillère IA' :
               'Discover how our clients achieve exceptional results with their AI beauty advisor'}
           </p>
         </div>
