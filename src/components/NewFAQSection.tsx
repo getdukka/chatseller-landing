@@ -59,7 +59,7 @@ const NewFAQSection = () => {
           
           <p className="text-xl text-gray-600 animate-fade-in [animation-delay:400ms]">
             {language === 'fr' ? 
-              'Découvrez comment ChatSeller transforme spécifiquement les boutiques des marques beauté et répond à vos besoins spécifiques.' :
+              'Découvrez comment ChatSeller transforme spécifiquement les boutiques en ligne des marques beauté et répond à vos besoins spécifiques.' :
               'Discover how ChatSeller specifically transforms beauty brand stores and meets your specific needs.'}
           </p>
         </div>
@@ -100,34 +100,6 @@ const NewFAQSection = () => {
           </div>
         </div>
 
-        {/* Stats rapides beauté */}
-        <div className="grid md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto animate-fade-in [animation-delay:800ms]">
-          <div className="text-center p-6 bg-white/70 backdrop-blur-sm rounded-2xl border border-rose-100 shadow-lg">
-            <div className="text-3xl font-bold text-rose-600 mb-2">2 min</div>
-            <div className="text-sm text-gray-600 font-medium">
-              {language === 'fr' ? 'Installation moyenne' : 'Average installation'}
-            </div>
-          </div>
-          <div className="text-center p-6 bg-white/70 backdrop-blur-sm rounded-2xl border border-purple-100 shadow-lg">
-            <div className="text-3xl font-bold text-purple-600 mb-2">2000+</div>
-            <div className="text-sm text-gray-600 font-medium">
-              {language === 'fr' ? 'Ingrédients connus' : 'Known ingredients'}
-            </div>
-          </div>
-          <div className="text-center p-6 bg-white/70 backdrop-blur-sm rounded-2xl border border-green-100 shadow-lg">
-            <div className="text-3xl font-bold text-green-600 mb-2">24/7</div>
-            <div className="text-sm text-gray-600 font-medium">
-              {language === 'fr' ? 'Conseils disponibles' : 'Available advice'}
-            </div>
-          </div>
-          <div className="text-center p-6 bg-white/70 backdrop-blur-sm rounded-2xl border border-blue-100 shadow-lg">
-            <div className="text-3xl font-bold text-blue-600 mb-2">267%</div>
-            <div className="text-sm text-gray-600 font-medium">
-              {language === 'fr' ? 'Conversions moyennes' : 'Average conversions'}
-            </div>
-          </div>
-        </div>
-        
         {/* Contact CTA beauté */}
         <div className="animate-fade-in [animation-delay:1000ms]">
           <BeautyContactCTA language={language} />
@@ -275,7 +247,7 @@ const BeautyContactCTA = ({ language }: { language: string }) => {
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 text-sm text-gray-600">
             <div className="flex items-center">
               <Phone className="w-4 h-4 mr-2 text-rose-500 flex-shrink-0" />
-              <span className="font-medium">+33 6 61 22 33 38</span>
+              <span className="font-medium">+221 76 782 68 04</span>
             </div>
             <div className="flex items-center">
               <MessageCircle className="w-4 h-4 mr-2 text-purple-500 flex-shrink-0" />
@@ -330,12 +302,12 @@ const BeautyContactCTA = ({ language }: { language: string }) => {
           {/* Garantie - Mobile optimisée */}
           <div className="text-center mt-4 sm:mt-6 p-3 sm:p-4 bg-white/60 rounded-xl border border-green-200">
             <div className="text-green-700 font-bold text-sm mb-1">
-              {language === 'fr' ? '🛡️ Conversions Garanties' : '🛡️ Guaranteed Conversions'}
+              {language === 'fr' ? '🛡️ Essai Gratuit' : '🛡️ Free Trial'}
             </div>
             <div className="text-xs text-green-600">
-              {language === 'fr' ? 
-                'Remboursé si pas d\'amélioration en 30 jours' :
-                'Refunded if no improvement in 30 days'}
+              {language === 'fr' ?
+                '14 jours gratuits, annulation en 1 clic' :
+                '14 days free, cancel with 1 click'}
             </div>
           </div>
         </div>
@@ -347,92 +319,136 @@ const BeautyContactCTA = ({ language }: { language: string }) => {
 // Données FAQ spécialisées beauté
 const getBeautyFAQData = (language: 'fr' | 'en') => [
   {
-    question: language === 'fr' ? 
+    question: language === 'fr' ?
       'ChatSeller comprend-elle vraiment les spécificités de la beauté ?' :
       'Does ChatSeller really understand beauty specifics?',
-    answer: language === 'fr' ? 
-      'Absolument ! ChatSeller a été <strong>spécialement formée pour le secteur beauté</strong>. Elle maîtrise plus de <strong>2000+ ingrédients cosmétiques</strong>, connaît les différents types de peau (mixte, sensible, mature, etc.), comprend les routines de soins et sait conseiller les bonnes teintes selon la carnation. Nos clientes beauté voient en moyenne <strong>+267% d\'augmentation de conversions</strong> car l\'IA répond aux questions techniques spécifiques : compatibilité produits, ordre d\'application, contre-indications, etc.' :
-      'Absolutely! ChatSeller has been <strong>specially trained for the beauty industry</strong>. It masters over <strong>2000+ cosmetic ingredients</strong>, knows different skin types (combination, sensitive, mature, etc.), understands skincare routines and knows how to recommend the right shades according to skin tone. Our beauty customers see an average <strong>+267% increase in conversions</strong> because the AI answers specific technical questions: product compatibility, application order, contraindications, etc.',
+    answer: language === 'fr' ?
+      'Oui ! ChatSeller est <strong>formée sur votre catalogue produits</strong> et peut être enrichie avec vos connaissances spécifiques. Elle comprend les différents types de peau (mixte, sensible, mature, etc.), les routines de soins et peut conseiller les bonnes teintes selon la carnation. Votre Conseillère IA répond aux questions techniques de vos clientes : compatibilité produits, ordre d\'application, conseils d\'utilisation personnalisés, etc. Plus vous l\'enrichissez avec vos fiches produits et guides, plus elle devient experte de votre marque.' :
+      'Yes! ChatSeller is <strong>trained on your product catalog</strong> and can be enriched with your specific knowledge. It understands different skin types (combination, sensitive, mature, etc.), skincare routines and can recommend the right shades according to skin tone. Your AI Advisor answers your customers\' technical questions: product compatibility, application order, personalized usage advice, etc. The more you enrich it with your product sheets and guides, the more it becomes an expert of your brand.',
     icon: <Brain className="w-5 h-5" />,
     category: language === 'fr' ? 'Expertise Beauté' : 'Beauty Expertise',
     categoryId: 'expertise',
     featured: true
   },
   {
-    question: language === 'fr' ? 
+    question: language === 'fr' ?
       'Combien de temps pour former l\'IA à mon catalogue de produits ?' :
       'How long to train AI on my product catalog?',
-    answer: language === 'fr' ? 
-      '<strong>Seulement 3 minutes !</strong> ChatSeller importe automatiquement votre catalogue produits depuis Shopify ou WooCommerce. Vous pouvez ensuite enrichir la formation en ajoutant vos fiches techniques PDF, vos guides d\'utilisation ou du texte libre sur vos spécificités (gamme bio, vegan, made in France, etc.). L\'IA apprend instantanément et commence à conseiller vos clientes immédiatement.' :
-      '<strong>Only 3 minutes!</strong> ChatSeller automatically imports your product catalog from Shopify or WooCommerce. You can then enrich the training by adding your PDF technical sheets, usage guides or free text about your specifics (organic range, vegan, made in France, etc.). The AI learns instantly and starts advising your customers immediately.',
+    answer: language === 'fr' ?
+      '<strong>Quelques minutes seulement !</strong> ChatSeller importe automatiquement votre catalogue produits depuis Shopify ou WooCommerce. Vous pouvez ensuite enrichir la formation en ajoutant vos fiches techniques PDF, vos guides d\'utilisation ou du texte libre sur les spécificités de vos produits. Votre Conseillère IA apprend instantanément et commence à conseiller vos clientes immédiatement.' :
+      '<strong>Only a few minutes!</strong> ChatSeller automatically imports your product catalog from Shopify or WooCommerce. You can then enrich the training by adding your PDF technical sheets, usage guides or free text about your product specifics. Your AI Advisor learns instantly and starts advising your customers immediately.',
     icon: <Clock className="w-5 h-5" />,
     category: language === 'fr' ? 'Formation IA' : 'AI Training',
     categoryId: 'formation'
   },
   {
-    question: language === 'fr' ? 
-      'Quand vais-je voir mes premières conversions supplémentaires ?' :
-      'When will I see my first additional conversions?',
-    answer: language === 'fr' ? 
-      '<strong>Dès l\'activation !</strong> Nos marques beauté voient généralement leurs premières ventes supplémentaires <strong>dans les 24-48h</strong> suivant l\'installation. Pourquoi ? Parce que votre Agent IA répond immédiatement aux questions qui faisaient partir vos clientes : "Convient-il aux peaux sensibles ?", "Quelle teinte choisir ?", "Est-il compatible avec mes autres soins ?". En levant ces objections 24/7, vos conversions décollent naturellement.' :
-      '<strong>From activation!</strong> Our beauty brands generally see their first additional sales <strong>within 24-48 hours</strong> after installation. Why? Because your AI Agent immediately answers the questions that made your customers leave: "Is it suitable for sensitive skin?", "Which shade to choose?", "Is it compatible with my other treatments?". By removing these objections 24/7, your conversions naturally take off.',
+    question: language === 'fr' ?
+      'Comment ChatSeller va-t-elle m\'aider à convertir mes visiteurs ?' :
+      'How will ChatSeller help me convert my visitors?',
+    answer: language === 'fr' ?
+      '<strong>En répondant aux questions qui font généralement partir vos clientes.</strong> Votre Conseillère IA est disponible 24/7 pour répondre immédiatement aux questions techniques : "Convient-il aux peaux sensibles ?", "Quelle teinte choisir ?", "Est-il compatible avec mes autres soins ?". Au lieu d\'abandonner leur panier par manque de réponse, vos clientes obtiennent l\'information dont elles ont besoin pour acheter en confiance. Votre Conseillère IA peut également recommander des produits complémentaires adaptés à leur besoin.' :
+      '<strong>By answering the questions that generally make your customers leave.</strong> Your AI Advisor is available 24/7 to immediately answer technical questions: "Is it suitable for sensitive skin?", "Which shade to choose?", "Is it compatible with my other treatments?". Instead of abandoning their cart for lack of answer, your customers get the information they need to buy with confidence. Your AI Advisor can also recommend complementary products adapted to their needs.',
     icon: <TrendingUp className="w-5 h-5" />,
     category: language === 'fr' ? 'Résultats' : 'Results',
     categoryId: 'resultats',
     featured: true
   },
   {
-    question: language === 'fr' ? 
-      'L\'installation sur Shopify/WooCommerce est-elle vraiment simple ?' :
-      'Is installation on Shopify/WooCommerce really simple?',
-    answer: language === 'fr' ? 
-      'Oui, <strong>2 minutes chrono !</strong> Pour Shopify : vous installez notre app native depuis l\'App Store Shopify en 1 clic. Pour WooCommerce : vous téléchargez notre extension depuis WordPress et l\'activez. <strong>Aucune compétence technique requise</strong>. Le widget apparaît automatiquement sur votre boutique et votre Agent IA commence à converser avec vos clientes. Si vous avez le moindre souci, notre support en français vous accompagne en 2h maximum.' :
-      'Yes, <strong>2 minutes flat!</strong> For Shopify: you install our native app from the Shopify App Store in 1 click. For WooCommerce: you download our extension from WordPress and activate it. <strong>No technical skills required</strong>. The widget automatically appears on your store and your AI Agent starts conversing with your customers. If you have any problem, our support in English helps you within 2 hours maximum.',
+    question: language === 'fr' ?
+      'ChatSeller fonctionne-t-il avec ma boutique ?' :
+      'Does ChatSeller work with my store?',
+    answer: language === 'fr' ?
+      'Oui, <strong>si vous avez une boutique Shopify ou WooCommerce</strong>. L\'installation prend 2 minutes et ne nécessite aucune compétence technique : vous copiez-collez simplement le code du widget ChatSeller dans votre boutique. Nous travaillons actuellement sur une app Shopify et un plugin WordPress pour rendre l\'installation encore plus simple. Si vous utilisez une autre plateforme, <a href="mailto:support@chatseller.app" class="text-rose-600 font-semibold hover:underline">contactez-nous</a> pour vérifier la compatibilité.' :
+      'Yes, <strong>if you have a Shopify or WooCommerce store</strong>. Installation takes 2 minutes and requires no technical skills: you simply copy-paste the ChatSeller widget code into your store. We are currently working on a Shopify app and WordPress plugin to make installation even simpler. If you use another platform, <a href="mailto:support@chatseller.app" class="text-rose-600 font-semibold hover:underline">contact us</a> to check compatibility.',
     icon: <Zap className="w-5 h-5" />,
     category: language === 'fr' ? 'Installation' : 'Installation',
     categoryId: 'installation'
   },
   {
-    question: language === 'fr' ? 
-      'ChatSeller va-t-elle remplacer mon équipe ou mon service client ?' :
-      'Will ChatSeller replace my team or customer service?',
-    answer: language === 'fr' ? 
-      '<strong>Absolument pas !</strong> ChatSeller <strong>complète et renforce votre équipe</strong>. Votre Agent IA gère les questions techniques répétitives (ingrédients, utilisation, compatibilité) 24/7, ce qui libère votre équipe pour les cas complexes et la relation client haut de gamme. Les marques beauté que nous servons nous disent que ChatSeller a permis à leur équipe de se concentrer sur la création de contenu, les partenariats influenceurs et le développement produit plutôt que de répondre 50 fois par jour aux mêmes questions techniques.' :
-      '<strong>Absolutely not!</strong> ChatSeller <strong>complements and strengthens your team</strong>. Your AI Agent handles repetitive technical questions (ingredients, usage, compatibility) 24/7, which frees up your team for complex cases and high-end customer relations. The beauty brands that we serve tell us that ChatSeller allowed their team to focus on content creation, influencer partnerships and product development rather than answering the same technical questions 50 times a day.',
+    question: language === 'fr' ?
+      'ChatSeller va-t-il remplacer mon service client ?' :
+      'Will ChatSeller replace my customer service?',
+    answer: language === 'fr' ?
+      '<strong>Non, ChatSeller est une conseillère de vente, pas un support client.</strong> Elle répond aux questions sur les produits, conseille vos clientes et les aide à choisir les bons produits pour leurs besoins. Pour les questions complexes (suivi de commande, réclamations, retours...), vos clientes peuvent toujours vous contacter directement. ChatSeller libère votre temps en gérant les questions produits répétitives 24/7, vous permettant de vous concentrer sur la création, le développement et les relations clients à forte valeur ajoutée.' :
+      '<strong>No, ChatSeller is a sales advisor, not customer support.</strong> It answers questions about products, advises your customers and helps them choose the right products for their needs. For complex questions (order tracking, complaints, returns...), your customers can always contact you directly. ChatSeller frees up your time by handling repetitive product questions 24/7, allowing you to focus on creation, development and high-value customer relationships.',
     icon: <Users className="w-5 h-5" />,
-    category: language === 'fr' ? 'Équipe' : 'Team',
-    categoryId: 'equipe'
+    category: language === 'fr' ? 'Fonctionnement' : 'How it works',
+    categoryId: 'fonctionnement'
   },
   {
-    question: language === 'fr' ? 
+    question: language === 'fr' ?
       'Mes données et celles de mes clientes sont-elles sécurisées ?' :
       'Are my data and my customers\' data secured?',
-    answer: language === 'fr' ? 
-      '<strong>Sécurité maximale garantie !</strong> Vos données et celles de vos clientes sont hébergées en <strong>Europe (RGPD compliant)</strong> avec chiffrement bout-en-bout. ChatSeller ne stocke aucune donnée personnelle sensible et respecte strictement les réglementations cosmétiques européennes. Nous avons une <strong>certification SOC2 Type II</strong> et offrons un DPA (Data Processing Agreement) pour les marques qui en ont besoin. Vos formules et secrets de fabrication restent 100% confidentiels.' :
-      '<strong>Maximum security guaranteed!</strong> Your beauty catalogs and customer data are hosted in <strong>Europe (GDPR compliant)</strong> with end-to-end encryption. ChatSeller does not store any sensitive personal data and strictly respects European cosmetic regulations. We have <strong>SOC2 Type II certification</strong> and offer a DPA (Data Processing Agreement) for brands that need it. Your formulas and manufacturing secrets remain 100% confidential.',
+    answer: language === 'fr' ?
+      '<strong>Oui, vos données sont protégées.</strong> ChatSeller respecte les standards de sécurité et de confidentialité des données. Vos informations produits et les conversations avec vos clientes sont traitées de manière sécurisée. Nous ne partageons jamais vos données avec des tiers. Vos formules et informations propriétaires restent confidentielles et ne sont utilisées que pour former votre Agent IA personnel.' :
+      '<strong>Yes, your data is protected.</strong> ChatSeller respects data security and privacy standards. Your product information and conversations with your customers are processed securely. We never share your data with third parties. Your formulas and proprietary information remain confidential and are only used to train your personal AI Agent.',
     icon: <Lock className="w-5 h-5" />,
     category: language === 'fr' ? 'Sécurité' : 'Security',
     categoryId: 'securite'
   },
   {
-    question: language === 'fr' ? 
-      'Que se passe-t-il si je ne suis pas satisfaite des résultats ?' :
-      'What happens if I\'m not satisfied with the results?',
-    answer: language === 'fr' ? 
-      'Nous offrons une <strong>garantie "conversion ou remboursé" de 30 jours</strong>. Si ChatSeller n\'augmente pas vos conversions de manière mesurable dans les 30 premiers jours, nous vous remboursons intégralement, sans question. De plus, vous commencez par <strong>14 jours d\'essai gratuit sans carte bancaire</strong> pour tester en conditions réelles. Notre taux de satisfaction des marques beauté est de 96% car les résultats parlent d\'eux-mêmes !' :
-      'We offer a <strong>"conversion or money back" 30-day guarantee</strong>. If ChatSeller doesn\'t measurably increase your conversions within the first 30 days, we\'ll give you a full refund, no questions asked. Plus, you start with <strong>14 days free trial without credit card</strong> to test in real conditions. Our beauty brands satisfaction rate is 96% because the results speak for themselves!',
+    question: language === 'fr' ?
+      'Combien de temps pour voir des résultats ?' :
+      'How long to see results?',
+    answer: language === 'fr' ?
+      'Votre Conseillère commence à interagir avec vos clientes <strong>dès l\'activation</strong>. Les premières conversations ont lieu immédiatement. Pour mesurer l\'impact sur vos ventes, comptez généralement <strong>1-2 semaines d\'utilisation</strong>. C\'est le temps nécessaire pour que suffisamment de clientes interagissent avec votre Agent IA et que vous puissiez analyser les données de performance dans votre dashboard.' :
+      'Your Advisor starts interacting with your customers <strong>from activation</strong>. The first conversations happen immediately. To measure the impact on your sales, generally count <strong>1-2 weeks of use</strong>. This is the time needed for enough customers to interact with your AI Agent and for you to analyze performance data in your dashboard.',
+    icon: <Clock className="w-5 h-5" />,
+    category: language === 'fr' ? 'Résultats' : 'Results',
+    categoryId: 'resultats'
+  },
+  {
+    question: language === 'fr' ?
+      'Est-ce que ça fonctionne sur WhatsApp ?' :
+      'Does it work on WhatsApp?',
+    answer: language === 'fr' ?
+      '<strong>Pas encore, mais c\'est notre priorité !</strong> L\'intégration WhatsApp est en développement et sera disponible prochainement. En rejoignant ChatSeller aujourd\'hui, vous serez parmi les premiers à y avoir accès dès sa sortie. Pour l\'instant, votre Conseillère IA est disponible directement sur votre boutique en ligne via notre widget de chat, accessible 24/7 pour toutes vos clientes.' :
+      '<strong>Not yet, but it\'s our priority!</strong> WhatsApp integration is in development and will be available soon. By joining ChatSeller today, you will be among the first to have access when it launches. For now, your AI Advisor is available directly on your online store via our chat widget, accessible 24/7 for all your customers.',
+    icon: <MessageCircle className="w-5 h-5" />,
+    category: language === 'fr' ? 'Fonctionnement' : 'How it works',
+    categoryId: 'fonctionnement'
+  },
+  {
+    question: language === 'fr' ?
+      'Puis-je personnaliser les réponses de ma Conseillère ?' :
+      'Can I customize my Advisor\'s responses?',
+    answer: language === 'fr' ?
+      '<strong>Oui !</strong> Votre Conseillère se forme automatiquement sur votre catalogue et le contenu de votre site. Vous pouvez aussi ajouter des informations spécifiques dans votre Base de connaissances : fiches produits détaillées, guides d\'utilisation, routines de soins, etc. Vous pouvez également définir le ton de communication (professionnel, amical, expert) et lui apprendre les particularités de votre marque. Plus vous enrichissez sa base de connaissances, plus ses réponses seront précises et alignées avec votre identité de marque.' :
+      '<strong>Yes!</strong> Your Advisor automatically trains on your catalog and website content. You can also add specific information to your Knowledge Base: detailed product sheets, usage guides, skincare routines, etc. You can also define the communication tone (professional, friendly, expert) and teach it your brand\'s particularities. The more you enrich its knowledge base, the more precise its responses will be and aligned with your brand identity.',
+    icon: <Sparkles className="w-5 h-5" />,
+    category: language === 'fr' ? 'Formation IA' : 'AI Training',
+    categoryId: 'formation'
+  },
+  {
+    question: language === 'fr' ?
+      'Comment je vous contacte si j\'ai besoin d\'aide ?' :
+      'How do I contact you if I need help?',
+    answer: language === 'fr' ?
+      'Notre équipe est disponible par <strong>email</strong> (<a href="mailto:support@chatseller.app" class="text-rose-600 font-semibold hover:underline">support@chatseller.app</a>) et par <strong>WhatsApp</strong> (<a href="https://wa.me/221767826804" class="text-rose-600 font-semibold hover:underline">+221 76 782 68 04</a>). Si vous faites partie de nos 100 premiers utilisateurs, vous avez aussi accès à un accompagnement personnalisé. Nous répondons en français et en anglais, généralement sous 24h. Pour les plans Growth et Performance, vous bénéficiez d\'un support prioritaire avec des temps de réponse encore plus rapides.' :
+      'Our team is available by <strong>email</strong> (<a href="mailto:support@chatseller.app" class="text-rose-600 font-semibold hover:underline">support@chatseller.app</a>) and by <strong>WhatsApp</strong> (<a href="https://wa.me/221767826804" class="text-rose-600 font-semibold hover:underline">+221 76 782 68 04</a>). If you are among our first 100 users, you also have access to personalized support. We respond in French and English, generally within 24h. For Growth and Performance plans, you benefit from priority support with even faster response times.',
+    icon: <Phone className="w-5 h-5" />,
+    category: language === 'fr' ? 'Support' : 'Support',
+    categoryId: 'support'
+  },
+  {
+    question: language === 'fr' ?
+      'Puis-je tester ChatSeller avant de m\'engager ?' :
+      'Can I test ChatSeller before committing?',
+    answer: language === 'fr' ?
+      'Oui ! Vous pouvez commencer par un <strong>essai gratuit de 14 jours sans carte bancaire</strong> pour tester ChatSeller en conditions réelles sur votre boutique. Vous pouvez annuler à tout moment en 1 clic depuis votre dashboard, sans engagement. Cela vous permet de voir concrètement comment l\'Agent IA répond aux questions de vos clientes et l\'impact sur votre taux de conversion avant de vous abonner.' :
+      'Yes! You can start with a <strong>14-day free trial without credit card</strong> to test ChatSeller in real conditions on your store. You can cancel at any time with 1 click from your dashboard, no commitment. This allows you to concretely see how the AI Agent answers your customers\' questions and the impact on your conversion rate before subscribing.',
     icon: <Shield className="w-5 h-5" />,
     category: language === 'fr' ? 'Garantie' : 'Guarantee',
     categoryId: 'garantie',
     featured: true
   },
   {
-    question: language === 'fr' ? 
-      'Ma Conseillère IA peut-elle conseiller selon le type de peau de mes clientes ?' :
-      'Can my AI Advisor advise according to my customers\' skin type?',
-    answer: language === 'fr' ? 
-      '<strong>Bien sûr !</strong> ChatSeller maîtrise <strong>12 profils de peau différents</strong> : normale, sèche, grasse, mixte, sensible, mature, acnéique, rosacée, etc. Votre Conseillère IA pose les bonnes questions pour identifier le type de peau ("Avez-vous des brillances en zone T ?", "Ressentez-vous des tiraillements ?") puis recommande les produits adaptés de votre gamme. Elle connaît aussi les ingrédients à éviter selon chaque type (parfums pour peaux sensibles, huiles comédogènes pour peaux grasses, etc.).' :
-      '<strong>Of course!</strong> ChatSeller masters <strong>12 different skin profiles</strong>: normal, dry, oily, combination, sensitive, mature, acneic, rosacea, etc. Your AI Advisor the right questions to identify the skin type ("Do you have shine in the T-zone?", "Do you feel tightness?") then recommends suitable products from your range. It also knows ingredients to avoid for each type (fragrances for sensitive skin, comedogenic oils for oily skin, etc.).',
+    question: language === 'fr' ?
+      'Ma Conseillère IA peut-elle vraiment conseiller sur la beauté africaine ?' :
+      'Can my AI Advisor really advise on African beauty?',
+    answer: language === 'fr' ?
+      '<strong>Absolument.</strong> ChatSeller a été spécifiquement conçu pour la beauté africaine. Notre base de connaissances inclut les types de peau et cheveux africains, les problématiques spécifiques (hyperpigmentation, cheveux texturés, etc.), et les ingrédients locaux (karité, baobab, touloucouna...). Vous pouvez enrichir votre Agent IA avec vos propres connaissances sur vos produits, vos formulations et les besoins spécifiques de vos clientes. Votre Conseillère sera aussi pertinente qu\'une vraie experte beauté africaine.' :
+      '<strong>Absolutely.</strong> ChatSeller has been specifically designed for African beauty. Our knowledge base includes African skin and hair types, specific issues (hyperpigmentation, textured hair, etc.), and local ingredients (shea butter, baobab, touloucouna...). You can enrich your AI Agent with your own knowledge about your products, your formulations and the specific needs of your customers. Your Advisor will be as relevant as a real African beauty expert.',
     icon: <Heart className="w-5 h-5" />,
     category: language === 'fr' ? 'Expertise Beauté' : 'Beauty Expertise',
     categoryId: 'expertise'
@@ -465,6 +481,16 @@ const getCategories = (language: 'fr' | 'en') => [
     id: 'formation',
     name: language === 'fr' ? 'Formation IA' : 'AI Training',
     icon: <Clock className="w-4 h-4" />
+  },
+  {
+    id: 'fonctionnement',
+    name: language === 'fr' ? 'Fonctionnement' : 'How it works',
+    icon: <Users className="w-4 h-4" />
+  },
+  {
+    id: 'support',
+    name: language === 'fr' ? 'Support' : 'Support',
+    icon: <Phone className="w-4 h-4" />
   },
   {
     id: 'garantie',

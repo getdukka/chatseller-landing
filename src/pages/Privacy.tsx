@@ -83,9 +83,9 @@ const Privacy = () => {
                         <p><strong>{language === 'fr' ? "Entreprise :" : "Company:"}</strong> DUKKA</p>
                         <p><strong>{language === 'fr' ? "Produit :" : "Product:"}</strong> ChatSeller</p>
                         <p className="text-sm text-rose-600 font-medium">
-                          {language === 'fr' ? 
-                            "🎯 Spécialisé pour marques beauté en France & Belgique" :
-                            "🎯 Specialized for beauty brands in France & Belgium"
+                          {language === 'fr' ?
+                            "🎯 Spécialisé pour marques beauté en Afrique" :
+                            "🎯 Specialized for beauty brands in Africa"
                           }
                         </p>
                       </div>

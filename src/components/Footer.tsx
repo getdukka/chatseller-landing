@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="flex items-center space-x-3 text-sm text-gray-700">
               <div className="w-10 h-10 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg">
                 <Heart className="h-5 w-5 text-white" />
@@ -64,35 +64,21 @@ const Footer = () => {
                   {language === 'fr' ? 'Spécialisé Beauté' : 'Beauty Specialized'}
                 </div>
                 <div className="text-xs text-gray-600">
-                  {language === 'fr' ? '2000+ ingrédients maîtrisés' : '2000+ ingredients mastered'}
+                  {language === 'fr' ? 'Solutions pour marques beauté' : 'Solutions for beauty brands'}
                 </div>
               </div>
             </div>
-            
+
             <div className="flex items-center space-x-3 text-sm text-gray-700">
               <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex items-center justify-center shadow-lg">
                 <Clock className="h-5 w-5 text-white" />
               </div>
               <div className="text-left">
                 <div className="font-semibold text-gray-900">
-                  {language === 'fr' ? 'Support 24/7' : '24/7 Support'}
+                  {language === 'fr' ? 'Support rapide' : 'Quick support'}
                 </div>
                 <div className="text-xs text-gray-600">
-                  {language === 'fr' ? 'Experts beauté disponibles' : 'Beauty experts available'}
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-3 text-sm text-gray-700">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg">
-                <Award className="h-5 w-5 text-white" />
-              </div>
-              <div className="text-left">
-                <div className="font-semibold text-gray-900">
-                  {language === 'fr' ? 'Testé & Approuvé' : 'Tested & Approved'}
-                </div>
-                <div className="text-xs text-gray-600">
-                  {language === 'fr' ? 'Par 50+ marques beauté' : 'By 50+ beauty brands'}
+                  {language === 'fr' ? 'Assistance disponible' : 'Assistance available'}
                 </div>
               </div>
             </div>
@@ -125,28 +111,12 @@ const Footer = () => {
             </div>
             
             <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-              {language === 'fr' ? 
-                "Le premier Agent IA spécialement conçu pour les marques Shopify et WooCommerce dans le secteur de la beauté. Offrez à vos client.e.s en ligne la même expérience qu'en boutique avec une conseillère IA formée sur vos produits." :
-                "The first AI Agent specially designed for Shopify and WooCommerce brands in the beauty sector. Give your online customers the same experience as in-store with an AI advisor trained on your products."
+              {language === 'fr' ?
+                "La Conseillère IA qui vend pour les marques beauté. Offrez à vos clientes en ligne la même attention qu'en boutique physique, et augmentez vos ventes." :
+                "The AI Advisor that sells for beauty brands. Give your online customers the same attention as in a physical store, and increase your sales."
               }
             </p>
-            
-            {/* Stats rapides */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-rose-100 shadow-sm">
-                <div className="text-lg font-bold text-rose-600">+267%</div>
-                <div className="text-xs text-gray-600">
-                  {language === 'fr' ? 'Conversions' : 'Conversions'}
-                </div>
-              </div>
-              <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-purple-100 shadow-sm">
-                <div className="text-lg font-bold text-purple-600">96%</div>
-                <div className="text-xs text-gray-600">
-                  {language === 'fr' ? 'Satisfaction' : 'Satisfaction'}
-                </div>
-              </div>
-            </div>
-            
+
             {/* Social links beauté */}
             <div className="flex space-x-3">
               <a 
@@ -374,14 +344,6 @@ const Footer = () => {
                 <div className="flex items-center space-x-1">
                   <Shield className="w-3 h-3 text-green-600" />
                   <span className="text-xs text-gray-500">RGPD</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <Star className="w-3 h-3 text-yellow-500" />
-                  <span className="text-xs text-gray-500">ISO 27001</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <CheckCircle className="w-3 h-3 text-blue-600" />
-                  <span className="text-xs text-gray-500">SOC2</span>
                 </div>
               </div>
             </div>

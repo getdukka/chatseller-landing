@@ -135,7 +135,7 @@ const Terms = () => {
                         <div className="space-y-2 text-gray-700">
                           <div className="flex items-center">
                             <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-                            <span>{language === 'fr' ? "Marques beauté France & Belgique" : "Beauty brands France & Belgium"}</span>
+                            <span>{language === 'fr' ? "Marques beauté en Afrique" : "Beauty brands in Africa"}</span>
                           </div>
                           <div className="flex items-center">
                             <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
@@ -204,13 +204,13 @@ const Terms = () => {
                         <div className="flex items-start">
                           <CheckCircle2 className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700 text-sm">
-                            {language === 'fr' ? "Analyse de 2000+ ingrédients cosmétiques" : "Analysis of 2000+ cosmetic ingredients"}
+                            {language === 'fr' ? "Expertise beauté africaine et ingrédients locaux" : "African beauty expertise and local ingredients"}
                           </span>
                         </div>
                         <div className="flex items-start">
                           <CheckCircle2 className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700 text-sm">
-                            {language === 'fr' ? "Diagnostic précis des types de peau" : "Accurate skin type diagnosis"}
+                            {language === 'fr' ? "Diagnostic précis des types de peau et cheveux" : "Accurate skin and hair type diagnosis"}
                           </span>
                         </div>
                         <div className="flex items-start">
@@ -265,25 +265,25 @@ const Terms = () => {
                   <div className="bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl p-6 border border-emerald-200">
                     <h4 className="font-bold text-emerald-800 mb-3 flex items-center">
                       <CheckCircle2 className="w-5 h-5 mr-2" />
-                      {language === 'fr' ? "Résultats prouvés" : "Proven results"}
+                      {language === 'fr' ? "Avantages clés" : "Key benefits"}
                     </h4>
                     <div className="grid grid-cols-3 gap-4 text-center">
                       <div>
-                        <div className="text-2xl font-bold text-emerald-700">+267%</div>
+                        <div className="text-2xl font-bold text-emerald-700">24/7</div>
                         <div className="text-xs text-emerald-600 font-medium">
-                          {language === 'fr' ? "Conversions moyennes" : "Average conversions"}
+                          {language === 'fr' ? "Disponibilité" : "Availability"}
                         </div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-emerald-700">3 jours</div>
+                        <div className="text-2xl font-bold text-emerald-700">14 jours</div>
                         <div className="text-xs text-emerald-600 font-medium">
-                          {language === 'fr' ? "ROI visible" : "Visible ROI"}
+                          {language === 'fr' ? "Essai gratuit" : "Free trial"}
                         </div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-emerald-700">94%</div>
+                        <div className="text-2xl font-bold text-emerald-700">+10</div>
                         <div className="text-xs text-emerald-600 font-medium">
-                          {language === 'fr' ? "Satisfaction client" : "Customer satisfaction"}
+                          {language === 'fr' ? "Marques bêta" : "Beta brands"}
                         </div>
                       </div>
                     </div>
@@ -378,9 +378,9 @@ const Terms = () => {
                           <div className="flex items-start">
                             <CheckCircle2 className="w-4 h-4 text-green-600 mr-2 mt-0.5" />
                             <span className="text-gray-700 text-sm">
-                              {language === 'fr' ? 
-                                "Basé en France ou Belgique" :
-                                "Based in France or Belgium"
+                              {language === 'fr' ?
+                                "Basé en Afrique (Sénégal, Côte d'Ivoire, etc.)" :
+                                "Based in Africa (Senegal, Ivory Coast, etc.)"
                               }
                             </span>
                           </div>
@@ -520,7 +520,7 @@ const Terms = () => {
                           <li>• {language === 'fr' ? "Factures compatibles comptabilité entreprise" : "Business accounting compatible invoices"}</li>
                         </ul>
                         <ul className="space-y-2 text-amber-800 text-sm">
-                          <li>• {language === 'fr' ? "TVA française/belge incluse si applicable" : "French/Belgian VAT included if applicable"}</li>
+                          <li>• {language === 'fr' ? "TVA incluse si applicable selon le pays" : "VAT included if applicable by country"}</li>
                           <li>• {language === 'fr' ? "Résiliation possible à tout moment" : "Cancellation possible at any time"}</li>
                           <li>• {language === 'fr' ? "Service actif jusqu'à fin de période payée" : "Service active until end of paid period"}</li>
                         </ul>
@@ -641,7 +641,7 @@ const Terms = () => {
                       <div className="flex items-start space-x-3">
                         <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5" />
                         <div>
-                          <span className="font-semibold">{language === 'fr' ? "Horaires :" : "Hours:"}</span> {language === 'fr' ? "9h-19h, France/Belgique" : "9am-7pm, France/Belgium"}
+                          <span className="font-semibold">{language === 'fr' ? "Horaires :" : "Hours:"}</span> {language === 'fr' ? "9h-19h, Dakar (GMT)" : "9am-7pm, Dakar (GMT)"}
                         </div>
                       </div>
                     </div>

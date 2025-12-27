@@ -60,21 +60,21 @@ const About = () => {
               {/* Stats beauté */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 max-w-2xl mx-auto animate-fade-in [animation-delay:600ms]">
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-rose-600">+267%</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-rose-600">14</div>
                   <div className="text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'Conversions beauté' : 'Beauty conversions'}
+                    {language === 'fr' ? 'jours d\'essai gratuit' : 'days free trial'}
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-purple-600">+2000</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-purple-600">24/7</div>
                   <div className="text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'Ingrédients connus' : 'Known ingredients'}
+                    {language === 'fr' ? 'Disponibilité' : 'Availability'}
                   </div>
                 </div>
                 <div className="text-center col-span-2 sm:col-span-1">
                   <div className="text-2xl sm:text-3xl font-bold text-pink-600">+10</div>
                   <div className="text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'Marques beauté' : 'Beauty brands'}
+                    {language === 'fr' ? 'Marques bêta' : 'Beta brands'}
                   </div>
                 </div>
               </div>
@@ -117,9 +117,9 @@ const About = () => {
                           {language === 'fr' ? "La révélation beauté" : "The beauty revelation"}
                         </h4>
                         <blockquote className="text-rose-800 italic text-sm sm:text-base leading-relaxed">
-                          {language === 'fr' ? 
-                            "\"Les marques beauté étaient celles qui obtenaient les MEILLEURS résultats avec ChatSeller. +267% de conversions en moyenne ! Elles avaient des questions très spécifiques sur les ingrédients, les types de peau, les routines... Et notre IA généraliste ne pouvait pas rivaliser avec l'expertise d'une vraie conseillère beauté.\"" :
-                            "\"Beauty brands were the ones getting the BEST results with ChatSeller. +267% conversions on average! They had very specific questions about ingredients, skin types, routines... And our generalist AI couldn't compete with the expertise of a real beauty advisor.\""
+                          {language === 'fr' ?
+                            "\"Les marques beauté étaient celles qui obtenaient les MEILLEURS résultats avec ChatSeller. Elles avaient des questions très spécifiques sur les ingrédients, les types de peau, les routines... Et notre IA généraliste ne pouvait pas rivaliser avec l'expertise d'une vraie conseillère beauté.\"" :
+                            "\"Beauty brands were the ones getting the BEST results with ChatSeller. They had very specific questions about ingredients, skin types, routines... And our generalist AI couldn't compete with the expertise of a real beauty advisor.\""
                           }
                         </blockquote>
                       </div>
@@ -170,13 +170,13 @@ const About = () => {
                       </h4>
                     </div>
                     <p className="text-gray-800 font-medium text-sm sm:text-base leading-relaxed">
-                      {language === 'fr' ? 
-                        "C'est ainsi qu'est née notre spécialisation : une Conseillère IA qui maîtrise +2000 ingrédients cosmétiques, comprend 12 types de peau différents, et sait créer des routines beauté personnalisées. " :
-                        "This is how our specialization was born: an AI Advisor who masters 2000+ cosmetic ingredients, understands 12 different skin types, and knows how to create personalized beauty routines. "}
+                      {language === 'fr' ?
+                        "C'est ainsi qu'est née notre spécialisation : une Conseillère IA qui comprend les différents types de peau et cheveux, et sait créer des routines beauté personnalisées adaptées aux besoins spécifiques de chaque cliente. " :
+                        "This is how our specialization was born: an AI Advisor who understands different skin and hair types, and knows how to create personalized beauty routines adapted to each customer's specific needs. "}
                       <span className="text-rose-600 font-bold">
-                        {language === 'fr' ? 
-                          "Pour que chaque marque beauté puisse offrir l'expertise d'une esthéticienne diplômée, 24h/24." :
-                          "So every beauty brand can offer the expertise of a certified beautician, 24/7."
+                        {language === 'fr' ?
+                          "Pour que chaque marque beauté puisse offrir l'expertise d'une conseillère qualifiée, 24h/24." :
+                          "So every beauty brand can offer the expertise of a qualified advisor, 24/7."
                         }
                       </span>
                     </p>
@@ -235,15 +235,15 @@ const About = () => {
                     {language === 'fr' ? "Notre Vision" : "Our Vision"}
                   </h3>
                   <p className="text-purple-800 font-medium mb-4 text-sm sm:text-base">
-                    {language === 'fr' ? 
+                    {language === 'fr' ?
                       "L'avenir de la beauté est conversationnel et expert." :
                       "The future of beauty is conversational and expert."
                     }
                   </p>
                   <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                    {language === 'fr' ? 
-                      "D'ici 2028, chaque site beauté aura sa conseillère IA spécialisée, exactement comme chaque institut a ses esthéticiennes. Nous serons le leader européen de cette transformation." :
-                      "By 2028, every beauty site will have its specialized AI advisor, just like every salon has its beauticians. We will be the European leader of this transformation."
+                    {language === 'fr' ?
+                      "D'ici 2028, chaque site beauté aura sa conseillère IA spécialisée, exactement comme chaque institut a ses esthéticiennes. Nous serons le leader africain de cette transformation." :
+                      "By 2028, every beauty site will have its specialized AI advisor, just like every salon has its beauticians. We will be the African leader of this transformation."
                     }
                   </p>
                 </div>
@@ -263,9 +263,9 @@ const About = () => {
                         <strong>
                           {language === 'fr' ? "Expertise approfondie :" : "Deep expertise:"}
                         </strong>{" "}
-                        {language === 'fr' ? 
-                          "+2000 ingrédients cosmétiques maîtrisés" :
-                          "2000+ cosmetic ingredients mastered"
+                        {language === 'fr' ?
+                          "Ingrédients cosmétiques et beauté africaine" :
+                          "Cosmetic ingredients and African beauty"
                         }
                       </span>
                     </div>
@@ -275,16 +275,16 @@ const About = () => {
                         <strong>
                           {language === 'fr' ? "Personnalisation :" : "Personalization:"}
                         </strong>{" "}
-                        {language === 'fr' ? "12 types de peau reconnus" : "12 skin types recognized"}
+                        {language === 'fr' ? "Différents types de peau et cheveux" : "Different skin and hair types"}
                       </span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700 text-sm sm:text-base">
                         <strong>
-                          {language === 'fr' ? "Performance :" : "Performance:"}
+                          {language === 'fr' ? "Disponibilité :" : "Availability:"}
                         </strong>{" "}
-                        {language === 'fr' ? "+267% de conversions moyennes" : "+267% average conversions"}
+                        {language === 'fr' ? "Conseillère IA 24/7" : "AI Advisor 24/7"}
                       </span>
                     </div>
                   </div>
@@ -297,34 +297,75 @@ const About = () => {
         {/* Team Section - Adapté beauté */}
         <section className="py-16 sm:py-20 bg-gradient-to-b from-rose-50/50 to-white">
           <div className="container px-4 sm:px-6 md:px-12 mx-auto">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-gray-900">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">
                 {language === 'fr' ? "L'équipe derrière ChatSeller" : "The team behind ChatSeller"}
               </h2>
-              
-              <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-rose-100 max-w-2xl mx-auto">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-rose-100 via-pink-100 to-purple-100 rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold text-rose-600 mx-auto mb-6 shadow-lg">
-                  IN
-                </div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Ibuka Ndjoli</h3>
-                <p className="text-rose-600 font-semibold mb-4 text-sm sm:text-base">
-                  {language === 'fr' ? "Fondateur & CEO" : "Founder & CEO"}
-                </p>
-                <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-6">
-                  {language === 'fr' ? 
-                    "Entrepreneur passionné basé au Sénégal, Ibuka a fondé Dukka avec la vision de révolutionner l'e-commerce grâce à l'IA. La spécialisation beauté de ChatSeller reflète sa conviction que l'expertise sectorielle est clé pour créer de vraies solutions transformantes." :
-                    "Passionate entrepreneur based in Senegal, Ibuka founded Dukka with the vision of revolutionizing e-commerce through AI. ChatSeller's beauty specialization reflects his conviction that sector expertise is key to creating truly transformative solutions."
-                  }
-                </p>
-                
-                <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-4 border border-rose-200">
-                  <p className="text-rose-700 font-medium text-sm sm:text-base">
-                    {language === 'fr' ? 
-                      "\"Nous avons choisi de nous spécialiser dans la beauté car c'est un secteur où l'expertise et le conseil personnalisé font toute la différence. Chaque femme est unique, ses besoins beauté aussi.\"" :
-                      "\"We chose to specialize in beauty because it's a sector where expertise and personalized advice make all the difference. Every woman is unique, so are her beauty needs.\""
+
+              <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
+                {/* Ibuka - CEO */}
+                <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-rose-100 text-center">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-rose-100 via-pink-100 to-purple-100 rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold text-rose-600 mx-auto mb-4 shadow-lg">
+                    IN
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Ibuka Ndjoli</h3>
+                  <p className="text-rose-600 font-semibold mb-4 text-sm sm:text-base">
+                    {language === 'fr' ? "Fondateur & CEO" : "Founder & CEO"}
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-sm mb-4">
+                    {language === 'fr' ?
+                      "Entrepreneur passionné basé au Sénégal, Ibuka a fondé Dukka avec la vision de révolutionner l'e-commerce grâce à l'IA. Il pilote la stratégie et le développement de ChatSeller pour les marques beauté africaines." :
+                      "Passionate entrepreneur based in Senegal, Ibuka founded Dukka with the vision of revolutionizing e-commerce through AI. He leads the strategy and development of ChatSeller for African beauty brands."
                     }
                   </p>
                 </div>
+
+                {/* Julia - CTO */}
+                <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-purple-100 text-center">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-purple-100 via-violet-100 to-indigo-100 rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold text-purple-600 mx-auto mb-4 shadow-lg">
+                    JT
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Julia</h3>
+                  <p className="text-purple-600 font-semibold mb-4 text-sm sm:text-base">
+                    {language === 'fr' ? "CTO & Lead Dev" : "CTO & Lead Dev"}
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-sm mb-4">
+                    {language === 'fr' ?
+                      "Experte en IA et développement logiciel, Julia conçoit et maintient l'architecture technique de ChatSeller. Elle s'assure que notre Conseillère IA offre des performances optimales et une expérience fluide à chaque interaction." :
+                      "Expert in AI and software development, Julia designs and maintains ChatSeller's technical architecture. She ensures our AI Advisor delivers optimal performance and a smooth experience with every interaction."
+                    }
+                  </p>
+                </div>
+
+                {/* David - CMO */}
+                <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-emerald-100 text-center">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-emerald-100 via-green-100 to-teal-100 rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold text-emerald-600 mx-auto mb-4 shadow-lg">
+                    DM
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">David</h3>
+                  <p className="text-emerald-600 font-semibold mb-4 text-sm sm:text-base">
+                    {language === 'fr' ? "CMO" : "CMO"}
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-sm mb-4">
+                    {language === 'fr' ?
+                      "Spécialiste du marketing digital et de la beauté, David comprend les enjeux des marques africaines. Il accompagne nos clients dans leur croissance et développe notre présence auprès des marques beauté sur le continent." :
+                      "Digital marketing and beauty specialist, David understands the challenges of African brands. He supports our clients' growth and develops our presence among beauty brands across the continent."
+                    }
+                  </p>
+                </div>
+              </div>
+
+              {/* Quote section */}
+              <div className="mt-12 bg-gradient-to-r from-rose-50 to-pink-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-rose-200 max-w-3xl mx-auto">
+                <p className="text-rose-700 font-medium text-center text-sm sm:text-base italic">
+                  {language === 'fr' ?
+                    "\"Nous avons choisi de nous spécialiser dans la beauté car c'est un secteur où l'expertise et le conseil personnalisé font toute la différence. Chaque femme est unique, ses besoins beauté aussi.\"" :
+                    "\"We chose to specialize in beauty because it's a sector where expertise and personalized advice make all the difference. Every woman is unique, so are her beauty needs.\""
+                  }
+                </p>
+                <p className="text-rose-600 font-semibold text-center mt-3 text-sm">
+                  — Ibuka Ndjoli, {language === 'fr' ? "Fondateur" : "Founder"}
+                </p>
               </div>
             </div>
           </div>
@@ -350,30 +391,30 @@ const About = () => {
               
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
                 <div className="text-center p-4 sm:p-6 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-rose-100">
-                  <div className="text-2xl sm:text-3xl font-bold text-rose-600 mb-2">267%</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-rose-600 mb-2">+10</div>
                   <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'Conversions moyennes' : 'Average conversions'}
+                    {language === 'fr' ? 'Marques bêta' : 'Beta brands'}
                   </div>
                 </div>
-                
+
                 <div className="text-center p-4 sm:p-6 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-purple-100">
-                  <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-2">+10</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-2">14</div>
                   <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'Marques beauté' : 'Beauty brands'}
+                    {language === 'fr' ? 'jours d\'essai gratuit' : 'days free trial'}
                   </div>
                 </div>
-                
+
                 <div className="text-center p-4 sm:p-6 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-emerald-100">
-                  <div className="text-2xl sm:text-3xl font-bold text-emerald-600 mb-2">+2000</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-emerald-600 mb-2">2</div>
                   <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'Ingrédients maitrisés' : 'Ingredients mastered'}
+                    {language === 'fr' ? 'pays (Sénégal, CI)' : 'countries (Senegal, CI)'}
                   </div>
                 </div>
-                
+
                 <div className="text-center p-4 sm:p-6 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-blue-100">
                   <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">24/7</div>
                   <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'Support expert' : 'Expert support'}
+                    {language === 'fr' ? 'Disponibilité' : 'Availability'}
                   </div>
                 </div>
               </div>
@@ -389,17 +430,17 @@ const About = () => {
                     <div className="flex items-center mb-4">
                       <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-rose-600 mr-3" />
                       <h4 className="text-lg sm:text-xl font-bold text-gray-900">
-                        {language === 'fr' ? "Expansion européenne" : "European expansion"}
+                        {language === 'fr' ? "Expansion africaine" : "African expansion"}
                       </h4>
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                      {language === 'fr' ? 
-                        "Extension à l'Allemagne, l'Italie et l'Espagne avec des spécialisations locales (marques de luxe italien, soins naturels allemands...)." :
-                        "Expansion to Germany, Italy and Spain with local specializations (Italian luxury brands, German natural care...)."
+                      {language === 'fr' ?
+                        "Après notre lancement au Sénégal et en Côte d'Ivoire, nous étendons ChatSeller dans toute l'Afrique francophone puis anglophone, en nous adaptant aux spécificités locales de chaque marché beauté." :
+                        "After our launch in Senegal and Ivory Coast, we're expanding ChatSeller across French-speaking then English-speaking Africa, adapting to the local specificities of each beauty market."
                       }
                     </p>
                   </div>
-                  
+
                   <div className="p-6 sm:p-8 bg-white rounded-2xl shadow-lg border border-purple-100">
                     <div className="flex items-center mb-4">
                       <Brain className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600 mr-3" />
@@ -408,9 +449,9 @@ const About = () => {
                       </h4>
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                      {language === 'fr' ? 
-                        "Analyse visuelle des problèmes de peau, recommandations de routines saisonnières, intégration avec les tendances beauté en temps réel." :
-                        "Visual analysis of skin problems, seasonal routine recommendations, integration with real-time beauty trends."
+                      {language === 'fr' ?
+                        "Analyse visuelle des problèmes de peau, recommandations de routines personnalisées, expertise approfondie sur les ingrédients locaux africains (karité, baobab, touloucouna...)." :
+                        "Visual analysis of skin problems, personalized routine recommendations, deep expertise on local African ingredients (shea butter, baobab, touloucouna...)."
                       }
                     </p>
                   </div>
@@ -454,9 +495,9 @@ const About = () => {
                 <div className="flex items-center justify-center mt-6 text-sm text-gray-600">
                   <Star className="w-4 h-4 text-yellow-500 mr-2" />
                   <span className="font-medium">
-                    {language === 'fr' ? 
-                      "Déjà adopté par +10 marques beauté en France & Belgique" :
-                      "Already adopted by 10+ beauty brands in France & Belgium"
+                    {language === 'fr' ?
+                      "Programme bêta : +10 marques beauté convaincues en Afrique" :
+                      "Beta program: 10+ beauty brands convinced in Africa"
                     }
                   </span>
                 </div>

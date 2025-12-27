@@ -1,6 +1,6 @@
 // src/components/NewPricingSection.tsx - VERSION BEAUTÉ CONVERSION-FOCUSED
 import React, { useState } from 'react';
-import { Check, ArrowRight, Calculator, TrendingUp, Zap, Crown, Heart, Sparkles, CreditCard, Users, Globe, BarChart3, Shield, HelpCircle, ChevronDown, ChevronUp, MessageSquare } from 'lucide-react';
+import { Check, ArrowRight, Calculator, TrendingUp, Zap, Crown, Heart, Sparkles, CreditCard, Users, Globe, BarChart3, Shield, HelpCircle, MessageSquare } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
@@ -27,14 +27,14 @@ const NewPricingSection = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight animate-fade-in [animation-delay:200ms]">
             {language === 'fr' ? 
-              'Un prix qui s\'auto-finance dès la première vente' :
-              'A price that pays for itself from the first sale'}
+              'Un investissement qui se rembourse dès la première vente' :
+              'An investment that pays for itself from the first sale'}
           </h2>
           
           <p className="text-xl text-gray-600 mb-8 animate-fade-in [animation-delay:400ms]">
             {language === 'fr' ? 
-              'Choisissez un plan basé sur votre volume de conversations. Upgrade/downgrade à tout moment.' :
-              'Choose a plan based on your conversation volume. Upgrade/downgrade anytime.'}
+              'Une seule vente supplémentaire par mois suffit à rentabiliser ChatSeller. Combien de ventes perdez-vous actuellement faute de répondre à temps ?' :
+              'Just one additional sale per month is enough to make ChatSeller profitable. How many sales are you currently losing due to delayed responses?'}
           </p>
 
           {/* Toggle mensuel/annuel */}
@@ -71,15 +71,13 @@ const NewPricingSection = () => {
           {/* Plan Starter */}
           <BeautyPricingCard
             name="Starter"
-            monthlyPrice={49}
-            yearlyPrice={Math.round(49 * 12 * 0.85 / 12)}
+            monthlyPrice={45}
+            yearlyPrice={Math.round(45 * 12 * 0.85 / 12)}
             billingPeriod={billingPeriod}
             tag={language === 'fr' ? 'Idéal pour démarrer et prouver le ROI' : 'Perfect to start and prove ROI'}
             roiBadge={language === 'fr' ? '1 vente = abonnement remboursé' : '1 sale = subscription paid'}
+            fcfaPrice="29 500"
             features={getStarterFeatures(language)}
-            overage={language === 'fr' ? 
-              '+0,02€/conversation au-delà, plafonné à +50€/mois' : 
-              '+€0.02/conversation beyond, capped at +€50/month'}
             cta={language === 'fr' ? 'Essayer gratuitement 14 jours' : 'Try free for 14 days'}
             ctaLink="https://dashboard.chatseller.app/register?plan=starter"
             language={language}
@@ -88,15 +86,13 @@ const NewPricingSection = () => {
           {/* Plan Growth - Le plus populaire */}
           <BeautyPricingCard
             name="Growth"
-            monthlyPrice={149}
-            yearlyPrice={Math.round(149 * 12 * 0.85 / 12)}
+            monthlyPrice={145}
+            yearlyPrice={Math.round(145 * 12 * 0.85 / 12)}
             billingPeriod={billingPeriod}
             tag={language === 'fr' ? 'Pour les boutiques en croissance' : 'For growing beauty stores'}
             roiBadge={language === 'fr' ? '~3 ventes = abonnement remboursé' : '~3 sales = subscription paid'}
+            fcfaPrice="95 000"
             features={getGrowthFeatures(language)}
-            overage={language === 'fr' ? 
-              '+0,015€/conversation, plafonné à +150€/mois' : 
-              '+€0.015/conversation, capped at +€150/month'}
             cta={language === 'fr' ? 'Commencer avec Growth' : 'Start with Growth'}
             ctaLink="https://dashboard.chatseller.app/register?plan=growth"
             featured={true}
@@ -111,8 +107,8 @@ const NewPricingSection = () => {
             billingPeriod={billingPeriod}
             tag={language === 'fr' ? 'Maximum de conversions & reporting avancé' : 'Maximum conversions & advanced reporting'}
             roiBadge={language === 'fr' ? 'Configuré selon vos objectifs' : 'Configured to your goals'}
+            fcfaPrice="196 000"
             features={getPerformanceFeatures(language)}
-            overage={language === 'fr' ? 'Conversations illimitées (fair-use)' : 'Unlimited conversations (fair-use)'}
             cta={language === 'fr' ? 'Contacter notre équipe' : 'Contact our team'}
             ctaLink="mailto:enterprise@chatseller.app"
             language={language}
@@ -154,6 +150,87 @@ const NewPricingSection = () => {
           </div>
         </div>
 
+        {/* Section de justification de valeur - Comparaison vendeuse physique */}
+        <div className="max-w-4xl mx-auto mb-20 animate-fade-in [animation-delay:750ms]">
+          <div className="bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 border-2 border-rose-200 rounded-2xl p-8 md:p-12 shadow-lg">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-md mb-4">
+                <span className="text-3xl">💡</span>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                {language === 'fr' ?
+                  'Une question de perspective' :
+                  'A matter of perspective'}
+              </h3>
+            </div>
+
+            <div className="space-y-4 text-center">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                {language === 'fr' ?
+                  'Combien paierez-vous chaque mois une excellente vendeuse en boutique physique qui augmente vos ventes jour après jour ?' :
+                  'How much would you pay each month for an excellent salesperson in a physical store who increases your sales day after day?'}
+              </p>
+
+              <div className="flex items-center justify-center space-x-4 py-4">
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-rose-600">
+                    {language === 'fr' ? '+200 000' : '+200,000'}
+                  </div>
+                  <div className="text-sm text-gray-600 mt-1">
+                    {language === 'fr' ? 'FCFA / mois' : 'FCFA / month'}
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    {language === 'fr' ? '(Salaire vendeuse)' : '(Salesperson salary)'}
+                  </div>
+                </div>
+
+                <div className="text-2xl text-gray-400">→</div>
+
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-emerald-600">
+                    {language === 'fr' ? '29 500' : '29,500'}
+                  </div>
+                  <div className="text-sm text-gray-600 mt-1">
+                    {language === 'fr' ? 'FCFA / mois' : 'FCFA / month'}
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    {language === 'fr' ? '(ChatSeller Starter)' : '(ChatSeller Starter)'}
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur rounded-xl p-6 mt-6">
+                <p className="text-base md:text-lg text-gray-800 font-medium leading-relaxed">
+                  {language === 'fr' ?
+                    'ChatSeller, c\'est cette vendeuse d\'exception pour votre boutique en ligne. Elle ne dort jamais, ne se fatigue jamais, et répond instantanément à toutes vos clientes, 24h/24.' :
+                    'ChatSeller is that exceptional salesperson for your online store. She never sleeps, never gets tired, and instantly responds to all your customers, 24/7.'}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm">
+                <div className="flex items-center bg-white/60 px-4 py-2 rounded-full">
+                  <Check className="w-4 h-4 text-emerald-500 mr-2" />
+                  <span className="text-gray-700 font-medium">
+                    {language === 'fr' ? 'Toujours disponible' : 'Always available'}
+                  </span>
+                </div>
+                <div className="flex items-center bg-white/60 px-4 py-2 rounded-full">
+                  <Check className="w-4 h-4 text-emerald-500 mr-2" />
+                  <span className="text-gray-700 font-medium">
+                    {language === 'fr' ? 'Jamais de congés' : 'Never on vacation'}
+                  </span>
+                </div>
+                <div className="flex items-center bg-white/60 px-4 py-2 rounded-full">
+                  <Check className="w-4 h-4 text-emerald-500 mr-2" />
+                  <span className="text-gray-700 font-medium">
+                    {language === 'fr' ? 'Expertise constante' : 'Constant expertise'}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* ROI Calculator beauté */}
         <div className="mb-20 animate-fade-in [animation-delay:800ms]">
           <BeautyROICalculator language={language} />
@@ -163,11 +240,6 @@ const NewPricingSection = () => {
         <div className="mb-16 animate-fade-in [animation-delay:900ms]">
           <BeautyAddOnsSection language={language} />
         </div>*/}
-
-        {/* FAQ Pricing spécialisée */}
-        <div className="mb-16 animate-fade-in [animation-delay:1000ms]">
-          <PricingFAQ language={language} />
-        </div>
 
         {/* Guarantee section beauté */}
         <div className="text-center animate-fade-in [animation-delay:1100ms]">
@@ -182,8 +254,8 @@ const NewPricingSection = () => {
             </h3>
             <p className="text-gray-700 mb-8 text-lg leading-relaxed">
               {language === 'fr' ? 
-                'Si ChatSeller n\'augmente pas vos conversions dans les 30 premiers jours, nous vous remboursons intégralement. Aucune question posée.' :
-                'If ChatSeller doesn\'t increase your conversions in the first 30 days, we\'ll give you a full refund. No questions asked.'}
+                'Si ChatSeller ne vous convient pas, nous vous remboursons intégralement. Aucune question posée.' :
+                'If ChatSeller does not suit you, we will refund you in full. No questions asked.'}
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
               <div className="flex items-center">
@@ -220,8 +292,8 @@ interface BeautyPricingCardProps {
   billingPeriod: 'monthly' | 'yearly';
   tag: string;
   roiBadge: string;
+  fcfaPrice?: string;
   features: string[];
-  overage: string;
   cta: string;
   ctaLink: string;
   featured?: boolean;
@@ -236,8 +308,8 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
   billingPeriod,
   tag,
   roiBadge,
+  fcfaPrice,
   features,
-  overage,
   cta,
   ctaLink,
   featured = false,
@@ -277,23 +349,22 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
       <div className="text-center mb-8">
         <h3 className="text-2xl font-bold mb-2 text-gray-900">{name}</h3>
         <div className="mb-4">
-          {isEnterprise ? (
-            <div>
-              <span className="text-4xl font-bold text-gray-900">Sur mesure</span>
-            </div>
-          ) : (
-            <div>
-              <span className="text-4xl md:text-5xl font-bold text-gray-900">{price}€</span>
-              <span className="text-gray-600 ml-1">
-                /{language === 'fr' ? 'mois' : 'month'}
-              </span>
-              {billingPeriod === 'yearly' && (
-                <div className="text-sm text-green-600 font-medium mt-1">
-                  {language === 'fr' ? 'Facturé annuellement' : 'Billed annually'}
-                </div>
-              )}
-            </div>
-          )}
+          <div>
+            <span className="text-4xl md:text-5xl font-bold text-gray-900">{price}€</span>
+            <span className="text-gray-600 ml-1">
+              /{language === 'fr' ? 'mois' : 'month'}
+            </span>
+            {fcfaPrice && (
+              <div className="text-sm text-gray-500 font-medium mt-2">
+                {language === 'fr' ? '≈ ' : '≈ '}{fcfaPrice} FCFA/mois
+              </div>
+            )}
+            {billingPeriod === 'yearly' && (
+              <div className="text-sm text-green-600 font-medium mt-1">
+                {language === 'fr' ? 'Facturé annuellement' : 'Billed annually'}
+              </div>
+            )}
+          </div>
         </div>
         <p className="text-gray-600 text-sm leading-relaxed">{tag}</p>
       </div>
@@ -324,13 +395,6 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
         ))}
       </div>
 
-      {/* Overage info */}
-      <div className="bg-gray-50 rounded-xl p-4 mb-8">
-        <div className="text-xs font-semibold text-gray-600 mb-1">
-          {language === 'fr' ? 'Au-delà du quota:' : 'Beyond quota:'}
-        </div>
-        <div className="text-sm text-gray-700 font-medium">{overage}</div>
-      </div>
       
       {/* CTA */}
       <Button 
@@ -359,7 +423,7 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
   const [averageOrder, setAverageOrder] = useState(85);
   const [plan, setPlan] = useState('growth');
 
-  const planPrices = { starter: 49, growth: 149, performance: 299 };
+  const planPrices = { starter: 45, growth: 145, performance: 299 };
   const conversionBoosts = { starter: 2.4, growth: 3.2, performance: 4.1 };
 
   const currentRevenue = visitors * (conversion / 100) * averageOrder;
@@ -444,8 +508,8 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
                 onChange={(e) => setPlan(e.target.value)}
                 className="w-full px-4 py-4 border border-gray-300 rounded-xl text-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent bg-white"
               >
-                <option value="starter">Starter - {language === 'fr' ? '49€/mois' : '49€/month'}</option>
-                <option value="growth">Growth - {language === 'fr' ? '149€/mois' : '149€/month'}</option>
+                <option value="starter">Starter - {language === 'fr' ? '45€/mois' : '45€/month'}</option>
+                <option value="growth">Growth - {language === 'fr' ? '145€/mois' : '145€/month'}</option>
                 <option value="performance">Performance - {language === 'fr' ? '299€/mois' : '299€/month'}</option>
               </select>
             </div>
@@ -607,110 +671,39 @@ const BeautyAddOnsSection = ({ language }: { language: string }) => {
   );
 };
 
-// FAQ Pricing spécialisée beauté
-const PricingFAQ = ({ language }: { language: string }) => {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
-  
-  const faqs = [
-    {
-      question: language === 'fr' ? 
-        'Pourquoi facturer par "conversations" ?' :
-        'Why charge per "conversations"?',
-      answer: language === 'fr' ? 
-        'Parce que c\'est corrélé à la valeur : plus d\'échanges qualifiés avec vos client.e.s = plus de ventes. Une conversation = un échange engagé (≥1 réponse qualifiée) dans une fenêtre de 24h.' :
-        'Because it\'s correlated to value: more qualified exchanges with your customers = more sales. One conversation = an engaged exchange (≥1 qualified response) in a 24h window.'
-    },
-    {
-      question: language === 'fr' ? 
-        'Que se passe-t-il si je dépasse mon quota ?' :
-        'What happens if I exceed my quota?',
-      answer: language === 'fr' ? 
-        'Vous continuez à servir vos client.e.s : un petit overage s\'applique, plafonné chaque mois pour éviter les mauvaises surprises. Nous vous prévenons avant d\'atteindre la limite.' :
-        'You continue serving your customers: a small overage applies, capped each month to avoid bad surprises. We warn you before reaching the limit.'
-    },
-    {
-      question: language === 'fr' ? 
-        'Une vente suffit-elle vraiment à rembourser l\'abonnement ?' :
-        'Is one sale really enough to pay for the subscription?',
-      answer: language === 'fr' ? 
-        'Dans la majorité des cas oui, surtout dans le secteur de la beauté où le panier moyen est élevé. Utilisez notre simulateur ci-dessus selon votre trafic et votre panier moyen pour vérifier.' :
-        'In most cases yes, especially in the beauty sector where the average cart is high. Use our simulator above according to your traffic and average cart to verify.'
-    },
-    {
-      question: language === 'fr' ? 
-        'Puis-je changer de plan à tout moment ?' :
-        'Can I change plans at any time?',
-      answer: language === 'fr' ? 
-        'Oui, upgrade/downgrade en 1 clic depuis votre dashboard. La facturation est ajustée au prorata automatiquement.' :
-        'Yes, upgrade/downgrade with 1 click from your dashboard. Billing is automatically prorated.'
-    }
-  ];
-
-  return (
-    <div className="max-w-4xl mx-auto">
-      <div className="text-center mb-10">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
-          {language === 'fr' ? 'Questions fréquentes sur les tarifs' : 'Frequently asked questions about pricing'}
-        </h3>
-      </div>
-
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <div key={index} className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-            <button
-              className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
-              onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
-            >
-              <span className="font-semibold text-gray-900">{faq.question}</span>
-              {openFAQ === index ? 
-                <ChevronUp className="w-5 h-5 text-gray-500" /> : 
-                <ChevronDown className="w-5 h-5 text-gray-500" />
-              }
-            </button>
-            {openFAQ === index && (
-              <div className="px-6 pb-4 text-gray-600 leading-relaxed">
-                {faq.answer}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-// Features par plan avec traductions
+// Features par plan avec traductions - Simplifiées pour les marques beauté
 const getStarterFeatures = (language: string) => [
-  language === 'fr' ? 'Jusqu\'à 1 000 conversations/mois' : 'Up to 1,000 conversations/month',
-  language === 'fr' ? '1 site (Shopify ou WooCommerce)' : '1 site (Shopify or WooCommerce)',
-  language === 'fr' ? '1 langue (Français ou Anglais)' : '1 language (English or French)',
-  language === 'fr' ? 'Agent IA formé à votre catalogue' : 'AI Agent trained on your catalog',
-  language === 'fr' ? 'Recommandations produits automatisé' : 'Automated product recommendations',
-  language === 'fr' ? 'Dashboard conversions & ventes (temps réel)' : 'Conversions & sales dashboard (real-time)',
-  language === 'fr' ? 'Événements GA4 / Meta (base)' : 'GA4 / Meta events (basic)',
-  language === 'fr' ? 'Support email' : 'Email support'
+  language === 'fr' ? 'Conversations illimitées' : 'Unlimited conversations',
+  language === 'fr' ? '1 boutique Shopify ou WooCommerce' : '1 Shopify or WooCommerce store',
+  language === 'fr' ? '1 Conseillère IA formée sur votre catalogue' : '1 AI Seller trained on your catalog',
+  language === 'fr' ? '50 fichiers en Base de connaissances' : '50 files in Knowledge Base',
+  language === 'fr' ? 'Recommandations produits intelligentes' : 'Smart product recommendations',
+  language === 'fr' ? 'Dashboard de suivi des performances' : 'Performance tracking dashboard',
+  language === 'fr' ? 'Support en français' : 'French support'
 ];
 
 const getGrowthFeatures = (language: string) => [
-  language === 'fr' ? 'Jusqu\'à 10 000 conversations/mois' : 'Up to 10,000 conversations/month',
-  language === 'fr' ? 'Multi-langue' : 'Multi-language',
-  language === 'fr' ? 'Playbooks beauté prêts à utiliser' : 'Ready-to-use beauty playbooks',
-  language === 'fr' ? 'Tracking upsells & panier moyen (AOV)' : 'Upsells & average cart tracking (AOV)',
-  language === 'fr' ? 'Analytics avancées & attribution assistée' : 'Advanced analytics & assisted attribution',
-  language === 'fr' ? 'Intégrations GA4/Meta complètes' : 'Complete GA4/Meta integrations',
-  language === 'fr' ? 'Exports CSV / Webhooks / API' : 'CSV exports / Webhooks / API',
-  language === 'fr' ? 'A/B testing des conversations' : 'Conversation A/B testing',
+  language === 'fr' ? 'Conversations illimitées' : 'Unlimited conversations',
+  language === 'fr' ? 'Jusqu\'à 3 boutiques Shopify ou WooCommerce' : 'Up to 3 Shopify or WooCommerce stores',
+  language === 'fr' ? '1 Conseillère IA formée sur votre catalogue' : '1 AI Seller trained on your catalog',
+  language === 'fr' ? '200 fichiers en Base de connaissances' : '200 files in Knowledge Base',
+  language === 'fr' ? 'Recommandations produits intelligentes' : 'Smart product recommendations',
+  language === 'fr' ? 'Dashboard de suivi des performances' : 'Performance tracking dashboard',
+  language === 'fr' ? 'Multi-langue (Français, Anglais, etc.)' : 'Multi-language (French, English, etc.)',
+  language === 'fr' ? 'Analytics avancées & exports CSV' : 'Advanced analytics & CSV exports',
   language === 'fr' ? 'Support prioritaire' : 'Priority support'
 ];
 
 const getPerformanceFeatures = (language: string) => [
   language === 'fr' ? 'Conversations illimitées (fair-use)' : 'Unlimited conversations (fair-use)',
-  language === 'fr' ? 'Multi-sites & environnements' : 'Multi-sites & environments',
-  language === 'fr' ? 'Reporting exécutif & attribution avancée' : 'Executive reporting & advanced attribution',
-  language === 'fr' ? 'Intégrations CRM sur mesure (API/webhooks)' : 'Custom CRM integrations (API/webhooks)',
-  language === 'fr' ? 'White-label & SSO' : 'White-label & SSO',
-  language === 'fr' ? 'SLA 99,9% & Success Manager dédié' : '99.9% SLA & dedicated Success Manager',
-  language === 'fr' ? 'Onboarding personnalisé & accès bêtas' : 'Personalized onboarding & beta access'
+  language === 'fr' ? 'Boutiques illimitées' : 'Unlimited stores',
+  language === 'fr' ? 'Conseillères IA formées sur votre catalogue' : 'AI Sellers trained on your catalog',
+  language === 'fr' ? 'Fichiers illimités en Base de connaissances' : 'Unlimited files in Knowledge Base',
+  language === 'fr' ? 'Recommandations produits intelligentes' : 'Smart product recommendations',
+  language === 'fr' ? 'Dashboard de suivi des performances avancé' : 'Advanced performance tracking dashboard',
+  language === 'fr' ? 'Multi-langue & personnalisation complète' : 'Multi-language & full customization',
+  language === 'fr' ? 'Intégrations CRM sur mesure (API/Webhooks)' : 'Custom CRM integrations (API/Webhooks)',
+  language === 'fr' ? 'Success Manager dédié & support 24/7' : 'Dedicated Success Manager & 24/7 support'
 ];
 
 export default NewPricingSection;

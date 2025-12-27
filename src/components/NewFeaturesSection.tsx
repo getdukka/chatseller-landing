@@ -303,8 +303,8 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
     icon: <Brain className="h-7 w-7" />,
     title: language === 'fr' ? 'Expertise Beauté Complète' : 'Complete Beauty Expertise',
     description: language === 'fr' ? 
-      'Votre IA maîtrise ingrédients, types de peau, routines et tendances beauté pour conseiller comme une experte' :
-      'Your AI masters ingredients, skin types, routines and beauty trends to advise like an expert',
+      'Votre Conseillère IA maîtrise ingrédients, types de peau, routines et tendances beauté pour conseiller comme une experte' :
+      'Your AI Advisor masters ingredients, skin types, routines and beauty trends to advise like an expert',
     colorClasses: {
       gradient: 'from-purple-500 via-pink-500 to-purple-600',
       bg: 'from-purple-50/80 via-pink-50/50 to-purple-50/80',
@@ -483,7 +483,7 @@ const PersonalizedAdviceVisual = ({ language }: { language: 'fr' | 'en' }) => (
           </div>
           <div>
             <div className="text-sm font-medium">
-              {language === 'fr' ? 'Marie L., 28 ans' : 'Marie L., 28 years old'}
+              {language === 'fr' ? 'Maguette B., 28 ans' : 'Maguette B., 28 years old'}
             </div>
             <div className="text-xs text-gray-600">
               {language === 'fr' ? 'Peau mixte, sensible' : 'Combination skin, sensitive'}
@@ -496,7 +496,7 @@ const PersonalizedAdviceVisual = ({ language }: { language: 'fr' | 'en' }) => (
             <div className="font-bold text-rose-600">
               {language === 'fr' ? 'Routine' : 'Routine'}
             </div>
-            <div>{language === 'fr' ? 'Anti-âge préventif' : 'Preventive anti-aging'}</div>
+            <div>{language === 'fr' ? 'Soin capillaire naturel' : 'Natural hair care'}</div>
           </div>
           <div className="bg-white/50 rounded p-1">
             <div className="font-bold text-rose-600">Budget</div>
@@ -510,9 +510,9 @@ const PersonalizedAdviceVisual = ({ language }: { language: 'fr' | 'en' }) => (
           {language === 'fr' ? 'Recommandation IA' : 'AI Recommendation'}
         </div>
         <div className="text-xs text-gray-700">
-          {language === 'fr' ? 
-            '"Sérum Vitamine C le matin + Crème hydratante hypoallergénique."' :
-            '"Vitamin C serum in the morning + Hypoallergenic moisturizer."'}
+          {language === 'fr' ?
+            '"Masque Ricin & Hibiscus 2x/semaine + Huile Activatrice quotidienne."' :
+            '"Castor & Hibiscus Mask 2x/week + Daily Activating Oil."'}
         </div>
       </div>
     </div>
@@ -529,10 +529,10 @@ const SmartSalesVisual = ({ language }: { language: 'fr' | 'en' }) => (
       <div className="bg-emerald-100/50 rounded-lg p-3">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center space-x-2">
-            <span className="text-sm">🧴</span>
+            <span className="text-sm">🌺</span>
             <div>
               <div className="text-sm font-medium">
-                {language === 'fr' ? 'Sérum Hydratant' : 'Hydrating Serum'}
+                {language === 'fr' ? 'Gommage Papaye' : 'Papaya Exfoliator'}
               </div>
               <div className="text-xs text-gray-600">
                 {language === 'fr' ? 'Produit principal' : 'Main product'}
@@ -545,29 +545,29 @@ const SmartSalesVisual = ({ language }: { language: 'fr' | 'en' }) => (
         <div className="space-y-1">
           <div className="bg-white/60 rounded p-2 flex items-center justify-between">
             <div className="flex items-center space-x-1">
-              <span className="text-xs">🧼</span>
+              <span className="text-xs">🌿</span>
               <span className="text-xs font-medium">
-                {language === 'fr' ? 'Nettoyant doux' : 'Gentle cleanser'}
+                {language === 'fr' ? 'Masque Ricin & Hibiscus' : 'Castor & Hibiscus Mask'}
               </span>
             </div>
-            <span className="text-xs font-bold">+18€</span>
+            <span className="text-xs font-bold">+23€</span>
           </div>
-          
+
           <div className="bg-white/60 rounded p-2 flex items-center justify-between">
             <div className="flex items-center space-x-1">
-              <span className="text-xs">☀️</span>
+              <span className="text-xs">✨</span>
               <span className="text-xs font-medium">
-                {language === 'fr' ? 'Crème SPF' : 'SPF Cream'}
+                {language === 'fr' ? 'Huile Activatrice Pousse' : 'Growth Activating Oil'}
               </span>
             </div>
-            <span className="text-xs font-bold">+25€</span>
+            <span className="text-xs font-bold">+15€</span>
           </div>
         </div>
         
         <div className="border-t border-emerald-200 pt-2 mt-2">
           <div className="flex justify-between text-xs">
             <span>{language === 'fr' ? 'Total suggéré:' : 'Suggested total:'}</span>
-            <span className="font-bold text-emerald-600">85€ (+102%)</span>
+            <span className="font-bold text-emerald-600">80€ (+90%)</span>
           </div>
         </div>
       </div>

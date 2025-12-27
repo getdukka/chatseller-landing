@@ -9,7 +9,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { useAuth } from '@/hooks/useSupabase';
 
 const Navbar = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const isMobile = useIsMobile();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -45,17 +45,23 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
+          <a href="#problem" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            {language === 'fr' ? 'Problème' : 'Problem'}
+          </a>
+          <a href="#problem-solution" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            {language === 'fr' ? 'Solution' : 'Solution'}
+          </a>
+          <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            {language === 'fr' ? 'Comment ça marche' : 'How it works'}
+          </a>
           <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             {t('features')}
-          </a>
-          <a href="#demo" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            {t('demo')}
           </a>
           <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             {t('pricing')}
           </a>
-          <a href="/support" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            {t('support')}
+          <a href="#faq" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            FAQ
           </a>
           <LanguageToggle />
           
@@ -111,33 +117,47 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-sm border-t">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-3">
-            <a 
-              href="#features" 
+            <a
+              href="#problem"
+              className="text-base font-medium text-foreground py-2 border-b border-border"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {language === 'fr' ? 'Problème' : 'Problem'}
+            </a>
+            <a
+              href="#problem-solution"
+              className="text-base font-medium text-foreground py-2 border-b border-border"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {language === 'fr' ? 'Solution' : 'Solution'}
+            </a>
+            <a
+              href="#how-it-works"
+              className="text-base font-medium text-foreground py-2 border-b border-border"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {language === 'fr' ? 'Comment ça marche' : 'How it works'}
+            </a>
+            <a
+              href="#features"
               className="text-base font-medium text-foreground py-2 border-b border-border"
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('features')}
             </a>
-            <a 
-              href="#demo" 
-              className="text-base font-medium text-foreground py-2 border-b border-border"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {t('demo')}
-            </a>
-            <a 
-              href="#pricing" 
+            <a
+              href="#pricing"
               className="text-base font-medium text-foreground py-2 border-b border-border"
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('pricing')}
             </a>
-            <a 
-              href="/support" 
+            <a
+              href="#faq"
               className="text-base font-medium text-foreground py-2 border-b border-border"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {t('support')}
+              FAQ
             </a>
             
             {/* ✅ MENU MOBILE CONDITIONNEL */}

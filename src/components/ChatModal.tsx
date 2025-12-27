@@ -17,6 +17,7 @@ interface Message {
   content: string;
   timestamp: string;
   products?: BeautyProduct[];
+  suggestions?: string[];
 }
 
 interface BeautyProduct {
@@ -36,7 +37,12 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
       id: '1',
       type: 'bot',
       content: getWelcomeMessage(language),
-      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      suggestions: language === 'fr' ? [
+        'J\'ai une perte de cheveux aux tempes 😟'
+      ] : [
+        'I have hair loss at the temples 😟'
+      ]
     }
   ]);
   const [inputValue, setInputValue] = useState('');
@@ -52,13 +58,14 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
     scrollToBottom();
   }, [messages]);
 
-  const addMessage = (content: string, type: 'bot' | 'user', products?: BeautyProduct[]) => {
+  const addMessage = (content: string, type: 'bot' | 'user', products?: BeautyProduct[], suggestions?: string[]) => {
     const newMessage: Message = {
       id: Date.now().toString(),
       type,
       content,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      products
+      products,
+      suggestions
     };
     setMessages(prev => [...prev, newMessage]);
   };
@@ -73,15 +80,153 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
     });
   };
 
-  const getCamilleResponse = (userInput: string): { response: string, products?: BeautyProduct[] } => {
+  const getAntaResponse = (userInput: string): { response: string, products?: BeautyProduct[], suggestions?: string[] } => {
     const input = userInput.toLowerCase();
-    
-    // Salutations et présentation
+
+    // Étape 1: Message d'accueil
     if (input.includes('bonjour') || input.includes('salut') || input.includes('hello') || input.includes('hi') || input.includes('coucou')) {
       return {
         response: language === 'fr' ?
-          'Bonjour ! Ravie de faire votre connaissance 😊 Je suis **Camille**, votre conseillère beauté personnelle. Je connais parfaitement tous nos produits et j\'adore aider nos clientes à révéler leur beauté naturelle. Dites-moi, que recherchez-vous aujourd\'hui ? Un nouveau fond de teint, des soins visage, ou peut-être un conseil maquillage complet ?' :
-          'Hello! Delighted to meet you 😊 I\'m **Sophia**, your personal beauty advisor. I know all our products perfectly and love helping our customers reveal their natural beauty. Tell me, what are you looking for today? A new foundation, facial care, or perhaps complete makeup advice?'
+          'Bonjour ! Je suis **Anta**, votre conseillère capillaire. Je vais prendre le temps de comprendre vos besoins pour vous orienter vers les meilleurs soins naturels pour vos cheveux. Que puis-je faire pour vous aujourd\'hui ?' :
+          'Hello! I\'m **Anta**, your hair care advisor. I\'ll take the time to understand your needs to guide you to the best natural hair care. What can I do for you today?',
+        suggestions: language === 'fr' ? [
+          'J\'ai une perte de cheveux aux tempes 😟'
+        ] : [
+          'I have hair loss at the temples 😟'
+        ]
+      };
+    }
+
+    // Étape 2: Perte de cheveux aux tempes → Question sur la durée
+    if (input.includes('tempe') || input.includes('perte') || input.includes('tombe') || input.includes('chute') || input.includes('temple') || input.includes('loss') || input.includes('falling') || input.includes('thinning')) {
+      return {
+        response: language === 'fr' ?
+          'Je comprends parfaitement votre inquiétude. La perte de cheveux au niveau des tempes est un problème courant, surtout avec les coiffures trop serrées ou certains traitements chimiques. Depuis combien de temps avez-vous remarqué cette perte de cheveux ?' :
+          'I completely understand your concern. Hair loss at the temples is a common problem, especially with hairstyles that are too tight or certain chemical treatments. How long have you noticed this hair loss?',
+        suggestions: language === 'fr' ? [
+          'C\'est récent (quelques semaines)'
+        ] : [
+          'It\'s recent (a few weeks)'
+        ]
+      };
+    }
+
+    // Étape 3: Durée récente → Question sur les tresses
+    if (input.includes('récent') || input.includes('semaine') || input.includes('recent') || input.includes('week')) {
+      return {
+        response: language === 'fr' ?
+          'D\'accord, je vois. Et est-ce que vous portez souvent des tresses serrées ou des nattes ? Ces coiffures peuvent créer une tension sur les tempes et fragiliser les cheveux.' :
+          'Okay, I see. And do you often wear tight braids or plaits? These hairstyles can create tension on the temples and weaken the hair.',
+        suggestions: language === 'fr' ? [
+          'Oui, je porte des tresses serrées'
+        ] : [
+          'Yes, I wear tight braids'
+        ]
+      };
+    }
+
+    // Étape 4: Tresses serrées → Réversibilité + Question type de cheveux
+    if (input.includes('tresse') || input.includes('natte') || input.includes('serré') || input.includes('braid') || input.includes('tight')) {
+      return {
+        response: language === 'fr' ?
+          'C\'est très certainement la cause principale. La bonne nouvelle, c\'est que dans la majorité des cas, **c\'est réversible** ! Avec les bons soins et en changeant certaines habitudes, vos cheveux peuvent repousser. Est-ce que vos cheveux sont plutôt secs et cassants ?' :
+          'That\'s most likely the main cause. The good news is that in most cases, **it\'s reversible**! With the right care and changing certain habits, your hair can grow back. Is your hair rather dry and brittle?',
+        suggestions: language === 'fr' ? [
+          'Oui, mes cheveux sont secs et cassants'
+        ] : [
+          'Yes, my hair is dry and brittle'
+        ]
+      };
+    }
+
+    // Étape 5: Cheveux secs → Recommandation produit
+    if (input.includes('sec') || input.includes('cassant') || input.includes('abîmé') || input.includes('dry') || input.includes('brittle') || input.includes('damaged')) {
+      const products = language === 'fr' ? [
+        {
+          name: 'Masque Fortifiant Ricin & Hibiscus',
+          price: '23€',
+          description: '100% naturel - Stimule la repousse',
+        }
+      ] : [
+        {
+          name: 'Castor & Hibiscus Strengthening Mask',
+          price: '23€',
+          description: '100% natural - Stimulates regrowth',
+        }
+      ];
+
+      return {
+        response: language === 'fr' ?
+          'Parfait, je vais pouvoir vous conseiller au mieux. Pour votre cas, je recommande notre **Masque Fortifiant Ricin & Hibiscus**. C\'est un soin 100% naturel qui combine l\'huile de ricin (reconnue pour stimuler la pousse) et l\'hibiscus (qui renforce la fibre capillaire). Il nourrit en profondeur les cheveux secs et cassants tout en stimulant la repousse au niveau des tempes.' :
+          'Perfect, I\'ll be able to advise you best. For your case, I recommend our **Castor & Hibiscus Strengthening Mask**. It\'s a 100% natural treatment that combines castor oil (known to stimulate growth) and hibiscus (which strengthens the hair fiber). It deeply nourishes dry and brittle hair while stimulating regrowth at the temples.',
+        products,
+        suggestions: language === 'fr' ? [
+          'Combien de temps pour voir des résultats ?'
+        ] : [
+          'How long to see results?'
+        ]
+      };
+    }
+
+    // Étape 6: Question résultats → Délai + Mode d'emploi
+    if (input.includes('résultat') || input.includes('combien') || input.includes('temps') || input.includes('result') || input.includes('long') || input.includes('time')) {
+      return {
+        response: language === 'fr' ?
+          'Avec un traitement régulier, vous devriez voir les premiers signes de repousse après **6 à 8 semaines**. La clé : la régularité et arrêter les coiffures trop serrées pendant la période de soin. Les follicules ne sont pas morts, ils sont juste en "repos forcé" à cause de la tension mécanique.' :
+          'With regular treatment, you should see the first signs of regrowth after **6 to 8 weeks**. The key: regularity and stopping hairstyles that are too tight during the treatment period. The follicles are not dead, they are just in "forced rest" due to mechanical tension.',
+        suggestions: language === 'fr' ? [
+          'Comment l\'utiliser exactement ?'
+        ] : [
+          'How to use it exactly?'
+        ]
+      };
+    }
+
+    // Étape 7: Mode d'emploi → Instructions complètes + Duo recommandé
+    if (input.includes('utilise') || input.includes('applique') || input.includes('comment') || input.includes('mode') || input.includes('exactement') || input.includes('use') || input.includes('apply') || input.includes('how') || input.includes('exactly')) {
+      const products = language === 'fr' ? [
+        {
+          name: 'Masque Fortifiant Ricin & Hibiscus',
+          price: '23€',
+          description: '100% naturel - Stimule la repousse',
+        },
+        {
+          name: 'Huile Activatrice de Pousse',
+          price: '15€',
+          description: 'Huile légère - Usage quotidien',
+        }
+      ] : [
+        {
+          name: 'Castor & Hibiscus Strengthening Mask',
+          price: '23€',
+          description: '100% natural - Stimulates regrowth',
+        },
+        {
+          name: 'Growth Activating Oil',
+          price: '15€',
+          description: 'Light oil - Daily use',
+        }
+      ];
+
+      return {
+        response: language === 'fr' ?
+          'C\'est très simple ! Appliquez le masque **2 fois par semaine** sur cheveux humides, en insistant bien sur les tempes. Laissez poser **30 minutes minimum** sous une charlotte, puis lavez vos cheveux. Pour maximiser les résultats, je vous conseille aussi notre **Huile Activatrice de Pousse**. Quelques gouttes chaque soir sur les tempes, massez délicatement en mouvements circulaires. Ensemble, ils forment un duo très efficace !' :
+          'It\'s very simple! Apply the mask **twice a week** on damp hair, paying special attention to the temples. Leave on for **at least 30 minutes** under a cap, then wash your hair. To maximize results, I also recommend our **Growth Activating Oil**. A few drops every evening on the temples, massage gently in circular motions. Together, they form a very effective duo!',
+        products,
+        suggestions: language === 'fr' ? [
+          'Je veux commander le duo complet !'
+        ] : [
+          'I want to order the complete duo!'
+        ]
+      };
+    }
+
+    // Étape 8: Commande duo → Message final avec ajout au panier
+    if (input.includes('commander') || input.includes('prend') || input.includes('duo') || input.includes('order') || input.includes('take') || input.includes('buy')) {
+      return {
+        response: language === 'fr' ?
+          'Parfait ! 🎉 J\'ai ajouté les 2 produits à votre commande :\n\n✅ **Masque Fortifiant Ricin & Hibiscus** - 23€\n✅ **Huile Activatrice de Pousse** - 15€\n\n**Total : 38€**\n\nCliquez sur le bouton ci-dessous pour finaliser votre achat. Vous pourrez ajuster les quantités si besoin avant de payer. Livraison sous 48h en France' :
+          'Perfect! 🎉 I\'ve added the 2 products to your order:\n\n✅ **Castor & Hibiscus Strengthening Mask** - 23€\n✅ **Growth Activating Oil** - 15€\n\n**Total: 38€**\n\nClick the button below to complete your purchase. You can adjust quantities if needed before payment. Delivery within 48h in France'
       };
     }
 
@@ -231,12 +376,19 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
       };
     }
 
-    // Réponse par défaut pour les questions non prévues
+    // Réponse par défaut pour les questions non prévues (texte libre)
     const defaultResponse = language === 'fr' ?
-      'Je vous remercie pour cette question intéressante ! 😊\n\nCependant, je dois vous expliquer que je suis une **conseillère IA de démonstration** avec des réponses préprogrammées pour vous donner un aperçu de l\'expérience ChatSeller.\n\n✨ **Pour une vraie consultation beauté personnalisée**, nos vraies conseillères IA intègrent :\n• Toute la connaissance de votre marque\n• Votre catalogue complet\n• L\'expertise spécialisée du secteur beauté\n• Des réponses à TOUTES les questions clients\n\n💄 **Découvrez une vraie démonstration** avec une marque beauté réelle :\n👉 **https://cal.com/chatseller/demo-beaute**\n\n🚀 Là-bas, vous verrez la **puissance réelle** de ChatSeller adaptée aux marques beauté !' :
-      'Thank you for this interesting question! 😊\n\nHowever, I must explain that I\'m a **demonstration AI advisor** with preprogrammed responses to give you a glimpse of the ChatSeller experience.\n\n✨ **For a real personalized beauty consultation**, our real AI advisors integrate:\n• All your brand knowledge\n• Your complete catalog\n• Specialized beauty industry expertise\n• Answers to ALL customer questions\n\n💄 **Discover a real demonstration** with an actual beauty brand:\n👉 **https://cal.com/chatseller/demo-beaute**\n\n🚀 There, you\'ll see the **real power** of ChatSeller adapted for beauty brands!';
+      'Merci pour votre message ! 😊\n\nJe dois vous préciser que ceci est une **démo guidée** pour vous donner un aperçu de l\'expérience ChatSeller. Dans cette démo, je peux vous guider sur le cas d\'usage \"perte de cheveux aux tempes\".\n\n✨ **Sur votre vraie boutique**, l\'IA ChatSeller répond à TOUTES les questions de vos clients :\n• Connaissance complète de vos produits\n• Expertise personnalisée\n• Réponses à n\'importe quelle question capillaire\n• Recommandations sur-mesure\n\n🚀 **Découvrez la puissance complète de ChatSeller** en réservant votre essai gratuit :\n👉 **https://cal.com/chatseller/demo**\n\nPour tester cette démo, cliquez sur la suggestion ci-dessous ! 👇' :
+      'Thank you for your message! 😊\n\nI must clarify that this is a **guided demo** to give you a glimpse of the ChatSeller experience. In this demo, I can guide you on the use case \"temple hair loss\".\n\n✨ **On your real store**, ChatSeller AI answers ALL your customers\' questions:\n• Complete knowledge of your products\n• Personalized expertise\n• Answers to any hair care question\n• Tailored recommendations\n\n🚀 **Discover the full power of ChatSeller** by booking your free trial:\n👉 **https://cal.com/chatseller/demo**\n\nTo test this demo, click on the suggestion below! 👇';
 
-    return { response: defaultResponse };
+    return {
+      response: defaultResponse,
+      suggestions: language === 'fr' ? [
+        'J\'ai une perte de cheveux aux tempes 😟'
+      ] : [
+        'I have hair loss at the temples 😟'
+      ]
+    };
   };
 
   const handleSendMessage = () => {
@@ -249,8 +401,19 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
 
     setTimeout(() => {
       setIsTyping(false);
-      const { response, products } = getCamilleResponse(currentInput);
-      addMessage(response, 'bot', products);
+      const { response, products, suggestions } = getAntaResponse(currentInput);
+      addMessage(response, 'bot', products, suggestions);
+    }, 1200 + Math.random() * 800);
+  };
+
+  const handleQuickReply = (suggestion: string) => {
+    addMessage(suggestion, 'user');
+    setIsTyping(true);
+
+    setTimeout(() => {
+      setIsTyping(false);
+      const { response, products, suggestions } = getAntaResponse(suggestion);
+      addMessage(response, 'bot', products, suggestions);
     }, 1200 + Math.random() * 800);
   };
 
@@ -266,7 +429,12 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
         id: '1',
         type: 'bot',
         content: getWelcomeMessage(language),
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        suggestions: language === 'fr' ? [
+          'J\'ai une perte de cheveux aux tempes 😟'
+        ] : [
+          'I have hair loss at the temples 😟'
+        ]
       }
     ]);
     setInputValue('');
@@ -282,14 +450,14 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
         <div className="bg-gradient-to-r from-rose-500 via-pink-500 to-purple-500 text-white p-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-              <span className="text-lg font-bold">C</span>
+              <span className="text-lg font-bold">A</span>
             </div>
             <div>
               <div className="font-bold text-lg">
-                {language === 'fr' ? 'Camille' : 'Sophia'}
+                {language === 'fr' ? 'Anta' : 'Anta'}
               </div>
               <div className="text-sm opacity-90">
-                {language === 'fr' ? 'Conseillère Beauté IA' : 'AI Beauty Advisor'}
+                {language === 'fr' ? 'Conseillère Capillaire IA' : 'AI Hair Care Advisor'}
               </div>
             </div>
           </div>
@@ -309,10 +477,23 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
 
+        {/* Badge Démo Guidée */}
+        <div className="bg-gradient-to-r from-purple-50 to-pink-50 border-b border-purple-200 px-4 py-3">
+          <div className="flex items-center justify-center space-x-2 text-sm">
+            <Sparkles className="w-4 h-4 text-purple-600" />
+            <span className="font-semibold text-purple-800">
+              {language === 'fr' ? '💡 Démo Guidée' : '💡 Guided Demo'}
+            </span>
+            <span className="text-purple-600 text-xs">
+              {language === 'fr' ? '- Sur votre site, l\'IA répond à TOUTES les questions' : '- On your site, AI answers ALL questions'}
+            </span>
+          </div>
+        </div>
+
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 h-[calc(100vh-140px)] bg-gradient-to-b from-gray-50 to-white">
+        <div className="flex-1 overflow-y-auto p-4 h-[calc(100vh-200px)] bg-gradient-to-b from-gray-50 to-white">
           {messages.map((message) => (
-            <BeautyMessageBubble key={message.id} {...message} language={language} />
+            <BeautyMessageBubble key={message.id} {...message} language={language} onQuickReply={handleQuickReply} />
           ))}
           {isTyping && <BeautyTypingIndicator language={language} />}
           <div ref={messagesEndRef} />
@@ -326,7 +507,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder={language === 'fr' ? 'Posez votre question beauté...' : 'Ask your beauty question...'}
+                placeholder={language === 'fr' ? 'Posez votre question capillaire...' : 'Ask your hair care question...'}
                 className="rounded-full border-gray-300 pr-4 pl-4 py-3 focus:border-rose-400 focus:ring-rose-400"
               />
             </div>
@@ -351,14 +532,14 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
         <div className="bg-gradient-to-r from-rose-500 via-pink-500 to-purple-500 text-white p-6 flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-              <span className="text-lg font-bold">C</span>
+              <span className="text-lg font-bold">A</span>
             </div>
             <div>
               <div className="font-bold text-lg">
-                {language === 'fr' ? 'Camille' : 'Sophia'}
+                {language === 'fr' ? 'Anta' : 'Anta'}
               </div>
               <div className="text-sm opacity-90">
-                {language === 'fr' ? 'Conseillère Beauté IA' : 'AI Beauty Advisor'}
+                {language === 'fr' ? 'Conseillère Capillaire IA' : 'AI Hair Care Advisor'}
               </div>
             </div>
           </div>
@@ -378,10 +559,23 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
 
+        {/* Badge Démo Guidée */}
+        <div className="bg-gradient-to-r from-purple-50 to-pink-50 border-b border-purple-200 px-6 py-3">
+          <div className="flex items-center justify-center space-x-2 text-sm">
+            <Sparkles className="w-4 h-4 text-purple-600" />
+            <span className="font-semibold text-purple-800">
+              {language === 'fr' ? '💡 Démo Guidée' : '💡 Guided Demo'}
+            </span>
+            <span className="text-purple-600 text-xs">
+              {language === 'fr' ? '- Sur votre site, l\'IA répond à TOUTES les questions' : '- On your site, AI answers ALL questions'}
+            </span>
+          </div>
+        </div>
+
         {/* Messages avec style capture */}
         <div className="flex-1 overflow-y-auto p-6 bg-gradient-to-b from-gray-50 to-white">
           {messages.map((message) => (
-            <BeautyMessageBubble key={message.id} {...message} language={language} />
+            <BeautyMessageBubble key={message.id} {...message} language={language} onQuickReply={handleQuickReply} />
           ))}
           {isTyping && <BeautyTypingIndicator language={language} />}
           <div ref={messagesEndRef} />
@@ -395,7 +589,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder={language === 'fr' ? 'Posez votre question beauté...' : 'Ask your beauty question...'}
+                placeholder={language === 'fr' ? 'Posez votre question capillaire...' : 'Ask your hair care question...'}
                 className="rounded-full border-gray-300 px-4 py-3 focus:border-rose-400 focus:ring-rose-400"
               />
             </div>
@@ -414,7 +608,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
 };
 
 // Composant message beauté modernisé
-const BeautyMessageBubble: React.FC<Message & { language: string }> = ({ type, content, timestamp, products, language }) => {
+const BeautyMessageBubble: React.FC<Message & { language: string; onQuickReply: (suggestion: string) => void }> = ({ type, content, timestamp, products, suggestions, language, onQuickReply }) => {
   const formatText = (text: string): React.ReactNode => {
     const parts = text.split(/(\*\*[^*]+\*\*)/g);
     return parts.map((part, index) => {
@@ -430,7 +624,7 @@ const BeautyMessageBubble: React.FC<Message & { language: string }> = ({ type, c
       <div className="flex max-w-[85%] items-start space-x-3">
         {type === 'bot' && (
           <div className="w-10 h-10 bg-gradient-to-br from-rose-500 to-pink-500 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0 mt-1">
-            C
+            A
           </div>
         )}
         <div className="flex-1">
@@ -450,15 +644,27 @@ const BeautyMessageBubble: React.FC<Message & { language: string }> = ({ type, c
           {products && products.length > 0 && (
             <div className="mt-3 space-y-2">
               {products.map((product, index) => (
-                <div 
+                <div
                   key={index}
                   className="flex items-center justify-between bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-3 cursor-pointer hover:from-rose-100 hover:to-pink-100 transition-all duration-300 group border border-rose-200"
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-rose-300 to-pink-300 rounded-lg flex items-center justify-center">
-                      <Sparkles className="w-5 h-5 text-white" />
+                    <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center overflow-hidden border border-rose-100 flex-shrink-0">
+                      <img
+                        src={`/images/products/${product.name.toLowerCase().includes('masque') ? 'masque-ricin-hibiscus.png' : product.name.toLowerCase().includes('huile') ? 'huile-pousse.png' : 'serum.png'}`}
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          const parent = target.parentElement;
+                          if (parent) {
+                            parent.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-rose-300 to-pink-300 flex items-center justify-center"><svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg></div>';
+                          }
+                        }}
+                      />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <div className="text-sm font-semibold text-gray-800">{product.name}</div>
                       <div className="text-xs text-gray-600">{product.description}</div>
                       {product.shade && (
@@ -481,7 +687,22 @@ const BeautyMessageBubble: React.FC<Message & { language: string }> = ({ type, c
               ))}
             </div>
           )}
-          
+
+          {/* Quick Replies - Suggestions de réponses */}
+          {suggestions && suggestions.length > 0 && type === 'bot' && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {suggestions.map((suggestion, index) => (
+                <button
+                  key={index}
+                  onClick={() => onQuickReply(suggestion)}
+                  className="inline-flex items-center px-4 py-2 bg-white border-2 border-rose-300 text-rose-700 rounded-full text-sm font-medium hover:bg-rose-50 hover:border-rose-400 transition-all duration-200 shadow-sm hover:shadow-md"
+                >
+                  {suggestion}
+                </button>
+              ))}
+            </div>
+          )}
+
           <div className="text-xs text-gray-400 mt-2">{timestamp}</div>
         </div>
       </div>
@@ -495,12 +716,12 @@ const BeautyTypingIndicator = ({ language }: { language: string }) => {
     <div className="flex justify-start mb-4">
       <div className="flex items-start space-x-3">
         <div className="w-10 h-10 bg-gradient-to-br from-rose-500 to-pink-500 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
-          C
+          A
         </div>
         <div className="bg-white border border-gray-200 px-4 py-3 rounded-2xl rounded-bl-md shadow-sm">
           <div className="flex space-x-1 items-center">
             <div className="text-xs text-gray-500 mr-2">
-              {language === 'fr' ? 'Camille écrit' : 'Sophia is typing'}
+              {language === 'fr' ? 'Anta écrit' : 'Anta is typing'}
             </div>
             <div className="w-2 h-2 bg-rose-400 rounded-full animate-bounce"></div>
             <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
@@ -515,8 +736,8 @@ const BeautyTypingIndicator = ({ language }: { language: string }) => {
 // Messages de bienvenue améliorés
 const getWelcomeMessage = (language: string) => {
   return language === 'fr' ?
-    'Bonjour ! Je suis **Camille**, votre conseillère beauté chez Belle Étoile. Comment puis-je vous aider dans votre routine beauté aujourd\'hui ? ✨' :
-    'Hello! I\'m **Sophia**, your beauty advisor at Pure Radiance. How can I help you with your beauty routine today? ✨';
+    'Bonjour ! Je suis **Anta**, votre conseillère capillaire chez Nywele. Comment puis-je vous aider avec vos cheveux aujourd\'hui ? ✨' :
+    'Hello! I\'m **Anta**, your hair care advisor at Nywele. How can I help you with your hair today? ✨';
 };
 
 export default ChatModal;

@@ -55,7 +55,22 @@ interface Translations {
   platformsFullCompatible: string;
   platformsZeroFees: string;
   
-  // Problem-Solution
+  // Beauty Problem Section (NEW)
+  beautyProblemTitle: string;
+  beautyProblemSubtitle: string;
+  beautyFrustration1Title: string;
+  beautyFrustration1Quote: string;
+  beautyFrustration1Description: string;
+  beautyFrustration2Title: string;
+  beautyFrustration2Quote: string;
+  beautyFrustration2Description: string;
+  beautyFrustration3Title: string;
+  beautyFrustration3Quote: string;
+  beautyFrustration3Description: string;
+  beautyProblemConclusion: string;
+  beautyProblemConclusionSub: string;
+
+  // Problem-Solution (OLD)
   problemTitle: string;
   problemSubtitle: string;
   problemBadge: string;
@@ -582,9 +597,9 @@ const translations: Record<Language, Translations> = {
     betaBadge: 'BETA',
 
     // Hero Section beauté
-    beautySectorSpecialized: 'Spécialisé beauté',
-    newHeroTitleBeauty: 'Transformez 3x plus de visiteurs en clientes avec votre Conseillère Beauté IA',
-    newHeroTitleBeautyAlt: 'Multipliez vos conversions par 3 avec une Conseillère Beauté IA disponible 24/7',
+    beautySectorSpecialized: 'Essai gratuit 14 jours',
+    newHeroTitleBeauty: 'Libérez-vous de WhatsApp. Votre Conseillère IA vend pour vous 24h/24.',
+    newHeroTitleBeautyAlt: 'Votre Conseillère IA Beauté disponible 24/7 pour vos clientes en ligne',
     newHeroSubtitleBeauty: 'Offrez à vos clientes en ligne la même expérience qu\'en boutique grâce à une conseillère IA formée sur vos produits, qui les guide et les rassure pour qu\'elles achètent en toute confiance.',
     beautyBrandsAlreadyTesting: 'Déjà adopté par +10 marques beauté',
     averageConversionBeauty: '+267% conversions moyennes',
@@ -600,7 +615,26 @@ const translations: Record<Language, Translations> = {
     platformsFullCompatible: '100%',
     platformsZeroFees: '0€',
     
-    // Problem-Solution
+    // Beauty Problem Section (NEW)
+    beautyProblemTitle: 'Vos clientes ont besoin de conseils. Mais vous n\'avez pas le temps.',
+    beautyProblemSubtitle: 'Contrairement aux autres secteurs, vos clientes ne veulent pas juste acheter un produit. Elles viennent avec leur situation personnelle et attendent une vraie consultation avant de passer à l\'achat.',
+
+    beautyFrustration1Title: 'Les heures perdues',
+    beautyFrustration1Quote: 'Je perds 3-4 heures par jour sur WhatsApp',
+    beautyFrustration1Description: 'Vos clientes vous envoient des messages à toute heure. Les mêmes questions reviennent sans cesse : "C\'est adapté à ma peau sensible ?", "Ça marche sur les peaux noires ?", "Quelle routine pour mes cheveux crépus ?"',
+
+    beautyFrustration2Title: 'Les ventes perdues',
+    beautyFrustration2Quote: 'Quand je réponds 2 heures après, elles ont déjà acheté ailleurs',
+    beautyFrustration2Description: 'Une cliente qui pose une question est prête à acheter. Mais si vous ne répondez pas immédiatement, elle va voir la concurrence ou se déplace en boutique physique où elle aura un conseil en direct.',
+
+    beautyFrustration3Title: 'L\'expertise qui manque',
+    beautyFrustration3Quote: 'Je ne suis pas dermatologue, parfois je ne sais pas quoi conseiller',
+    beautyFrustration3Description: 'Les questions sont de plus en plus techniques : compatibilité d\'ingrédients, routines personnalisées, problèmes de peau spécifiques. Difficile de tout maîtriser.',
+
+    beautyProblemConclusion: 'Vous passez plus de temps à répondre aux messages qu\'à développer votre marque.',
+    beautyProblemConclusionSub: 'Et malgré tout, vous perdez des ventes.',
+
+    // Problem-Solution (OLD)
     problemTitle: '73% de vos visiteurs',
     problemSubtitle: 'Parce qu\'ils ont des questions, des doutes, et qu\'il n\'y a personne pour les aider et les rassurer.',
     problemBadge: 'Le problème de tous les e-commerçants',
@@ -1133,7 +1167,7 @@ Contactez-nous avec :
     newHeroTitle: "Augmentez vos ventes de 200 à 400% grâce à un vendeur IA qui conseille vos clients comme en boutique",
     newHeroSubtitle: "ChatSeller transforme vos visiteurs en acheteurs en répondant à leurs questions, en les rassurant et en recommandant les bons produits, comme une esthéticienne disponible 24/7.",
     newHeroCTAPrimary: "Créer ma Conseillère IA",
-    newHeroCTASecondary: "Voir les résultats clients",
+    newHeroCTASecondary: "Voir comment ça marche",
     newHeroTrialPeriod: "14 jours d'essai gratuits",
     
     // SOCIAL PROOF
@@ -1293,9 +1327,9 @@ Contactez-nous avec :
     betaBadge: 'BETA',
 
     // Hero Section beauté
-    beautySectorSpecialized: 'Beauty specialized',
-    newHeroTitleBeauty: 'Turn 3x more visitors into customers with your AI Beauty Advisor',
-    newHeroTitleBeautyAlt: '3x your conversions with an AI Beauty Advisor that feels human.',
+    beautySectorSpecialized: '14-day free trial',
+    newHeroTitleBeauty: 'Free\u00A0yourself\u00A0from\u00A0WhatsApp. Your AI Advisor sells for you 24/7.',
+    newHeroTitleBeautyAlt: 'Your AI Beauty Advisor available 24/7 for your customers online.',
     newHeroSubtitleBeauty: 'Give your online customers the same experience as in-store with an AI advisor trained on your products, who guides and reassures them so they can buy with complete confidence.',
     beautyBrandsAlreadyTesting: 'Already trusted by 10+ beauty brands',
     averageConversionBeauty: '+267% average conversions',
@@ -1310,7 +1344,26 @@ Contactez-nous avec :
     platformsMinInstall: '2 min',
     platformsFullCompatible: '100%',
     platformsZeroFees: '$0',
-    
+
+    // Beauty Problem Section (NEW)
+    beautyProblemTitle: 'Your customers need advice. But you don\'t have time.',
+    beautyProblemSubtitle: 'Unlike other sectors, your customers don\'t just want to buy a product. They come with their personal situation and expect real consultation before making a purchase.',
+
+    beautyFrustration1Title: 'Lost hours',
+    beautyFrustration1Quote: 'I lose 3-4 hours a day on WhatsApp',
+    beautyFrustration1Description: 'Your customers send you messages at all hours. The same questions keep coming back: "Is it suitable for my sensitive skin?", "Does it work on dark skin?", "What routine for my curly hair?"',
+
+    beautyFrustration2Title: 'Lost sales',
+    beautyFrustration2Quote: 'When I respond 2 hours later, they\'ve already bought elsewhere',
+    beautyFrustration2Description: 'A customer who asks a question is ready to buy. But if you don\'t respond immediately, she goes to the competition or goes to a physical store where she will get direct advice.',
+
+    beautyFrustration3Title: 'Missing expertise',
+    beautyFrustration3Quote: 'I\'m not a dermatologist, sometimes I don\'t know what to recommend',
+    beautyFrustration3Description: 'Questions are increasingly technical: ingredient compatibility, personalized routines, specific skin problems. Difficult to master everything.',
+
+    beautyProblemConclusion: 'You spend more time answering questions than growing your business.',
+    beautyProblemConclusionSub: 'And despite everything, you lose sales.',
+
     // Problem-Solution
     problemTitle: '73% of your visitors',
     problemSubtitle: 'Because they have questions, doubts, and there\'s no one to help and reassure them.',
@@ -1845,7 +1898,7 @@ Contact us with:
     newHeroTitle: "Increase your sales by 200 to 400% with an AI sales agent that advises your customers like in a store",
     newHeroSubtitle: "ChatSeller turns your visitors into buyers by answering their questions, reassuring them and recommending the right products, like a beautician available 24/7.",
     newHeroCTAPrimary: "Create my AI Advisor",
-    newHeroCTASecondary: "See client results",
+    newHeroCTASecondary: "See how it works",
     newHeroTrialPeriod: "14 days free trial",
     
     // SOCIAL PROOF

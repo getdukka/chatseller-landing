@@ -1,7 +1,7 @@
 // src/components/NewHero.tsx - VERSION FINALE CORRIGÉE
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle2, TrendingUp, Play, Sparkles, Send, ShoppingCart, Star, Heart, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Play, Sparkles, Send, ShoppingCart, Star, Heart, Zap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ChatModal from './ChatModal';
 
@@ -47,13 +47,9 @@ const NewHero = () => {
           {/* Left Column - Contenu Premium */}
           <div className="text-center lg:text-left">
             
-            {/* Badge secteur beauté premium - Responsive */}
-            <div className="inline-flex items-center px-3 sm:px-4 md:px-6 py-2 sm:py-3 mb-6 sm:mb-8 border border-rose-200/60 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 text-xs sm:text-sm font-semibold text-rose-700 animate-fade-in shadow-sm backdrop-blur-sm">
-              <Heart className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-rose-600" />
-              <span className="mr-2 sm:mr-3">{t('beautySectorSpecialized')}</span>
-              <span className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-2 sm:px-3 py-1 rounded-full text-xs font-bold animate-pulse">
-                {t('conversionIncrease400')}
-              </span>
+            {/* Social Proof Badge avec photos des testeurs - Responsive */}
+            <div className="mb-6 sm:mb-8 animate-fade-in flex justify-center lg:justify-start">
+              <SocialProofBadge />
             </div>
             
             {/* Titre principal premium avec A/B test - Responsive */}
@@ -79,16 +75,16 @@ const NewHero = () => {
                 </a>
               </Button>
               
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="outline"
                 className="group rounded-full px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold border-2 border-rose-300 hover:border-rose-400 hover:bg-rose-50 transition-all duration-300 transform hover:scale-105"
                 onClick={() => {
                   handleCTAClick('secondary');
-                  document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' });
+                  document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                <TrendingUp className="mr-2 h-4 w-4 sm:h-5 sm:w-5 text-rose-600" />
+                <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5 text-rose-600" />
                 <span className="text-sm sm:text-base md:text-lg">{t('newHeroCTASecondary')}</span>
               </Button>
             </div>
@@ -108,34 +104,18 @@ const NewHero = () => {
                 <span className="font-medium">{t('beautySector')}</span>
               </div>
             </div>
-            
-            {/* Stats Beta Testeurs Beauté - Responsive */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 text-xs sm:text-sm text-gray-500 animate-fade-in [animation-delay:700ms]">
-              <div className="flex items-center">
-                <div className="flex -space-x-1 sm:-space-x-2 mr-2 sm:mr-3">
-                  <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full border-2 border-white"></div>
-                  <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-purple-400 to-rose-500 rounded-full border-2 border-white"></div>
-                  <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full border-2 border-white"></div>
-                </div>
-                <span className="font-medium">{t('beautyBrandsAlreadyTesting')}</span>
-              </div>
-              <div className="flex items-center">
-                <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-1 sm:mr-2" />
-                <span className="font-medium">{t('averageConversionBeauty')}</span>
-              </div>
-            </div>
           </div>
           
           {/* Right Column - Chat Interface Beauté Premium - CORRECTION POSITION */}
-          <div className="animate-fade-in [animation-delay:800ms] mt-8 lg:mt-0 lg:-mt-12 xl:-mt-16">
+          <div className="animate-fade-in [animation-delay:800ms] mt-8 lg:mt-0 2xl:-mt-12">
             <BeautyHeroChatInterface onDemoClick={() => setIsChatModalOpen(true)} />
           </div>
         </div>
-        
-        {/* Logos défilants des marques beauté - CORRECTION ESPACEMENT */}
-        <div className="mt-12 sm:mt-16 animate-fade-in [animation-delay:1000ms]">
+
+        {/* Logos défilants des marques beauté - TEMPORAIREMENT MASQUÉ */}
+        {/* <div className="mt-12 sm:mt-16 animate-fade-in [animation-delay:1000ms]">
           <BeautyBrandsMarqueeFixed />
-        </div>
+        </div> */}
       </div>
       
       {/* Modal de chat */}
@@ -185,9 +165,77 @@ const BeautyABTestHeadline = () => {
   const variantB = t('newHeroTitleBeautyAlt');
 
   return (
-    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 sm:mb-8 animate-fade-in [animation-delay:200ms] bg-gradient-to-r from-gray-900 via-rose-800 to-purple-900 bg-clip-text text-transparent leading-tight">
+    <h1 className="text-4xl sm:text-4xl md:text-7xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 sm:mb-8 animate-fade-in [animation-delay:200ms] bg-gradient-to-r from-gray-900 via-rose-800 to-purple-900 bg-clip-text text-transparent leading-tight">
       {variant === 'A' ? variantA : variantB}
     </h1>
+  );
+};
+
+// Composant Social Proof Badge avec photos des fondateurs/fondatrices
+const SocialProofBadge = () => {
+  const { language } = useLanguage();
+  const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
+
+  // Photos des fondateurs/fondatrices de marques beauté en bêta test
+  const betaFounders = [
+    { name: 'Fatou', photo: 'fatou.jpg' },
+    { name: 'Moussa', photo: 'moussa.jpg' },
+    { name: 'Aminata', photo: 'aminata.jpg' },
+    { name: 'Cissé', photo: 'fatou-cisse.jpg' }
+  ];
+
+  const handleImageError = (index: number) => {
+    setImageErrors(prev => ({ ...prev, [index]: true }));
+  };
+
+  return (
+    <div className="inline-flex items-center space-x-3 sm:space-x-4">
+      {/* Photos empilées des fondateurs */}
+      <div className="flex -space-x-2 sm:-space-x-3">
+        {betaFounders.map((founder, index) => {
+          const initial = founder.name.charAt(0);
+          const showFallback = imageErrors[index];
+
+          return (
+            <div
+              key={founder.name}
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white bg-gradient-to-br from-rose-400 to-pink-500 overflow-hidden shadow-md"
+              style={{ zIndex: betaFounders.length - index }}
+              title={founder.name}
+            >
+              {!showFallback ? (
+                <img
+                  src={`/images/testimonials/${founder.photo}`}
+                  alt={founder.name}
+                  className="w-full h-full object-cover"
+                  onError={() => handleImageError(index)}
+                  loading="lazy"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center text-white text-xs sm:text-sm font-bold">
+                  {initial}
+                </div>
+              )}
+            </div>
+          );
+        })}
+        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white bg-gradient-to-br from-purple-500 to-rose-600 flex items-center justify-center text-white text-xs sm:text-sm font-bold shadow-md" style={{ zIndex: 0 }}>
+          +10
+        </div>
+      </div>
+
+      {/* Texte et étoiles */}
+      <div className="flex flex-col">
+        <div className="flex items-center space-x-0.5 sm:space-x-1 mb-0.5">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
+          ))}
+        </div>
+        <span className="text-xs sm:text-sm text-gray-700 font-semibold">
+          {language === 'fr' ? '+10 marques beauté en bêta test' : '+10 beauty brands in beta'}
+        </span>
+      </div>
+    </div>
   );
 };
 
@@ -202,97 +250,201 @@ const BeautyHeroChatInterface = ({ onDemoClick }: { onDemoClick: () => void }) =
     fr: [
       {
         type: 'ai' as const,
-        avatar: 'C',
-        name: 'Camille',
+        avatar: 'A',
+        name: 'Aïcha',
         role: 'Conseillère Beauté IA',
-        message: 'Bonjour ! Je suis Camille, votre conseillère beauté chez Belle Étoile. Comment puis-je vous aider dans votre routine beauté aujourd\'hui ?',
-        timestamp: '14:23'
+        message: 'Bonjour ! Je suis Aïcha, votre conseillère beauté. Comment puis-je vous aider aujourd\'hui ?',
+        timestamp: '10:15'
       },
       {
         type: 'user' as const,
-        message: 'Salut ! Je cherche un fond de teint pour peau mixte, carnation claire. Que me proposez-vous ?',
-        timestamp: '14:24'
+        message: 'Bonjour Aïcha ! J\'ai les genoux et les coudes très foncés, ça me complexe beaucoup. Vous avez quelque chose pour ça ?',
+        timestamp: '10:16'
       },
       {
         type: 'ai' as const,
-        avatar: 'C',
-        name: 'Camille',
+        avatar: 'A',
+        name: 'Aïcha',
         role: 'Conseillère Beauté IA',
-        message: 'Alors, pour une carnation claire et peau mixte, je recommande notre **Fond de Teint Éclat Naturel** en teinte "Porcelaine". Il contient de l\'acide salicylique pour les zones grasses.',
-        timestamp: '14:24',
+        message: 'Je comprends tout à fait, c\'est une préoccupation très courante et vous n\'êtes pas seule ! Avant de vous conseiller, j\'aimerais mieux comprendre votre situation. Depuis combien de temps avez-vous remarqué cet assombrissement ?',
+        timestamp: '10:17'
+      },
+      {
+        type: 'user' as const,
+        message: 'Ça fait des années en fait. J\'ai essayé plusieurs produits mais rien ne marche vraiment',
+        timestamp: '10:18'
+      },
+      {
+        type: 'ai' as const,
+        avatar: 'A',
+        name: 'Aïcha',
+        role: 'Conseillère Beauté IA',
+        message: 'D\'accord, je vois. Et est-ce que votre peau est plutôt sensible, ou vous n\'avez jamais eu de réactions particulières aux soins ?',
+        timestamp: '10:19'
+      },
+      {
+        type: 'user' as const,
+        message: 'Ma peau est un peu sensible oui. Les produits trop agressifs me donnent des irritations',
+        timestamp: '10:20'
+      },
+      {
+        type: 'ai' as const,
+        avatar: 'A',
+        name: 'Aïcha',
+        role: 'Conseillère Beauté IA',
+        message: 'Merci pour ces précisions, c\'est important ! Pour votre cas, je vous recommande notre **Lait Unifiant au Curcuma & Karité**. Il est 100% naturel et formulé spécialement pour les peaux sensibles. Le curcuma est reconnu pour son action éclaircissante douce, et le beurre de karité nourrit en profondeur sans irriter.',
+        timestamp: '10:21',
         products: [
-          { name: 'Fond de Teint Éclat Naturel', price: '42€', image: '💄', shade: 'Porcelaine' },
-          { name: 'Poudre Matifiante', price: '28€', image: '✨', shade: 'Transparente' }
+          { name: 'Lait Unifiant Curcuma & Karité', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' }
         ]
       },
       {
         type: 'user' as const,
-        message: 'Super ! Et pour fixer le tout sans effet poudré ?',
-        timestamp: '14:25'
+        message: 'Le curcuma, ça ne tache pas la peau en jaune ?',
+        timestamp: '10:22'
       },
       {
         type: 'ai' as const,
-        avatar: 'C',
-        name: 'Camille',
+        avatar: 'A',
+        name: 'Aïcha',
         role: 'Conseillère Beauté IA',
-        message: 'Je vous conseille notre **Spray Fixateur Invisible** ! Il fixe pendant 12h sans alourdir. Parfait après votre fond de teint pour un fini naturel.',
-        timestamp: '14:25',
+        message: 'Contente que vous posiez la question 😊 Non, notre formule est conçue pour éviter ce problème. Le curcuma est infusé dans le karité, pas appliqué pur. Il pénètre dans la peau sans laisser de traces. Beaucoup de nos clientes avaient la même inquiétude et sont aujourd\'hui ravies du résultat !',
+        timestamp: '10:23'
+      },
+      {
+        type: 'user' as const,
+        message: 'Ok ça me rassure. Je l\'utilise comment exactement ?',
+        timestamp: '10:24'
+      },
+      {
+        type: 'ai' as const,
+        avatar: 'A',
+        name: 'Aïcha',
+        role: 'Conseillère Beauté IA',
+        message: 'C\'est très simple : appliquez le lait chaque soir après la douche sur les zones concernées (genoux, coudes, et vous pouvez aussi l\'utiliser sur les aisselles ou les entre-cuisses si besoin). Massez jusqu\'à absorption complète. Les premiers résultats apparaissent généralement après 2-3 semaines d\'utilisation régulière.',
+        timestamp: '10:25'
+      },
+      {
+        type: 'user' as const,
+        message: 'D\'accord parfait ! Je vais le prendre',
+        timestamp: '10:26'
+      },
+      {
+        type: 'ai' as const,
+        avatar: 'A',
+        name: 'Aïcha',
+        role: 'Conseillère Beauté IA',
+        message: 'Excellent choix ! Pour maximiser les résultats, je vous conseille d\'ajouter notre **Gommage Doux à la Papaye**. Utilisé une fois par semaine avant le lait, il élimine les cellules mortes et permet au lait de mieux pénétrer. Ensemble, ils forment un duo très efficace pour unifier le teint.',
+        timestamp: '10:27',
         products: [
-          { name: 'Spray Fixateur Invisible', price: '35€', image: '💦', shade: '' }
+          { name: 'Lait Unifiant Curcuma & Karité', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' },
+          { name: 'Gommage Doux à la Papaye', price: '13€', image: '/images/products/gommage-papaye.png', shade: '' }
         ]
       },
       {
         type: 'user' as const,
-        message: 'Génial ! Je prends les trois. Comment on procède ?',
-        timestamp: '14:26'
+        message: 'Ah oui bonne idée ! Je prends les deux alors',
+        timestamp: '10:28'
       }
     ],
     en: [
       {
         type: 'ai' as const,
-        avatar: 'S',
-        name: 'Sophia',
+        avatar: 'A',
+        name: 'Aïcha',
         role: 'AI Beauty Advisor',
-        message: 'Hello! I\'m Sophia, your beauty advisor at Pure Radiance. How can I help you with your beauty routine today?',
-        timestamp: '2:23 PM'
+        message: 'Hello! I\'m Aïcha, your beauty advisor. How can I help you today?',
+        timestamp: '10:15'
       },
       {
         type: 'user' as const,
-        message: 'Hi! I\'m looking for a foundation for combination skin, fair complexion. Do you have something?',
-        timestamp: '2:24 PM'
+        message: 'Hi Aïcha! My knees and elbows are very dark, it makes me self-conscious. Do you have something for that?',
+        timestamp: '10:16'
       },
       {
         type: 'ai' as const,
-        avatar: 'S',
-        name: 'Sophia',
+        avatar: 'A',
+        name: 'Aïcha',
         role: 'AI Beauty Advisor',
-        message: 'Perfect! For fair complexion and combination skin, I recommend our **Natural Glow Foundation** in "Porcelain" shade. It contains salicylic acid for oily areas.',
-        timestamp: '2:24 PM',
+        message: 'I completely understand, it\'s a very common concern and you\'re not alone! Before recommending anything, I\'d like to better understand your situation. How long have you noticed this darkening?',
+        timestamp: '10:17'
+      },
+      {
+        type: 'user' as const,
+        message: 'It\'s been years actually. I\'ve tried several products but nothing really works',
+        timestamp: '10:18'
+      },
+      {
+        type: 'ai' as const,
+        avatar: 'A',
+        name: 'Aïcha',
+        role: 'AI Beauty Advisor',
+        message: 'Okay, I see. And is your skin rather sensitive, or have you never had any particular reactions to skincare products?',
+        timestamp: '10:19'
+      },
+      {
+        type: 'user' as const,
+        message: 'My skin is a bit sensitive yes. Products that are too harsh give me irritation',
+        timestamp: '10:20'
+      },
+      {
+        type: 'ai' as const,
+        avatar: 'A',
+        name: 'Aïcha',
+        role: 'AI Beauty Advisor',
+        message: 'Thank you for those details, that\'s important! For your case, I recommend our **Turmeric & Shea Brightening Lotion**. It\'s 100% natural and specially formulated for sensitive skin. Turmeric is known for its gentle brightening action, and shea butter deeply nourishes without irritation.',
+        timestamp: '10:21',
         products: [
-          { name: 'Natural Glow Foundation', price: '$48', image: '💄', shade: 'Porcelain' },
-          { name: 'Mattifying Powder', price: '$32', image: '✨', shade: 'Translucent' }
+          { name: 'Turmeric & Shea Brightening Lotion', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' }
         ]
       },
       {
         type: 'user' as const,
-        message: 'Great! And to set everything without a powdery effect?',
-        timestamp: '2:25 PM'
+        message: 'Doesn\'t turmeric stain the skin yellow?',
+        timestamp: '10:22'
       },
       {
         type: 'ai' as const,
-        avatar: 'S',
-        name: 'Sophia',
+        avatar: 'A',
+        name: 'Aïcha',
         role: 'AI Beauty Advisor',
-        message: 'I recommend our **Invisible Setting Spray**! It sets for 12h without weighing down. Perfect after your foundation for a natural finish.',
-        timestamp: '2:25 PM',
+        message: 'Glad you asked 😊 No, our formula is designed to avoid that problem. The turmeric is infused in shea butter, not applied pure. It penetrates the skin without leaving traces. Many of our customers had the same concern and are now delighted with the results!',
+        timestamp: '10:23'
+      },
+      {
+        type: 'user' as const,
+        message: 'Ok that\'s reassuring. How exactly do I use it?',
+        timestamp: '10:24'
+      },
+      {
+        type: 'ai' as const,
+        avatar: 'A',
+        name: 'Aïcha',
+        role: 'AI Beauty Advisor',
+        message: 'It\'s very simple: apply the lotion every evening after showering on the affected areas (knees, elbows, and you can also use it on underarms or inner thighs if needed). Massage until completely absorbed. The first results generally appear after 2-3 weeks of regular use.',
+        timestamp: '10:25'
+      },
+      {
+        type: 'user' as const,
+        message: 'Alright perfect! I\'ll take it',
+        timestamp: '10:26'
+      },
+      {
+        type: 'ai' as const,
+        avatar: 'A',
+        name: 'Aïcha',
+        role: 'AI Beauty Advisor',
+        message: 'Excellent choice! To maximize results, I recommend adding our **Papaya Gentle Scrub**. Used once a week before the lotion, it removes dead cells and allows the lotion to penetrate better. Together, they form a very effective duo for evening out your skin tone.',
+        timestamp: '10:27',
         products: [
-          { name: 'Invisible Setting Spray', price: '$38', image: '💦', shade: '' }
+          { name: 'Turmeric & Shea Brightening Lotion', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' },
+          { name: 'Papaya Gentle Scrub', price: '13€', image: '/images/products/gommage-papaye.png', shade: '' }
         ]
       },
       {
         type: 'user' as const,
-        message: 'Awesome! I\'ll take all three. How do we proceed?',
-        timestamp: '2:26 PM'
+        message: 'Ah yes good idea! I\'ll take both then',
+        timestamp: '10:28'
       }
     ]
   };
@@ -323,6 +475,17 @@ const BeautyHeroChatInterface = ({ onDemoClick }: { onDemoClick: () => void }) =
 
   return (
     <div className="relative">
+      {/* Animation CSS pour le bouton */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes subtle-shake {
+            0%, 100% { transform: translateX(0) scale(1); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-1px) scale(1.05); }
+            20%, 40%, 60%, 80% { transform: translateX(1px) scale(1.05); }
+          }
+        `
+      }} />
+
       {/* Chat Interface Premium Beauté - Responsive */}
       <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-rose-100 overflow-hidden max-w-sm sm:max-w-md lg:max-w-lg mx-auto backdrop-blur-sm">
         
@@ -379,13 +542,24 @@ const BeautyHeroChatInterface = ({ onDemoClick }: { onDemoClick: () => void }) =
                 {msg.products && (
                   <div className="mt-3 sm:mt-4 space-y-2 sm:space-y-3">
                     {msg.products.map((product, prodIndex) => (
-                      <div 
+                      <div
                         key={prodIndex}
                         className="flex items-center justify-between bg-gradient-to-r from-rose-50 to-pink-50 rounded-lg sm:rounded-xl p-2 sm:p-3 cursor-pointer hover:from-rose-100 hover:to-pink-100 transition-all duration-300 group border border-rose-100"
                         onClick={onDemoClick}
                       >
                         <div className="flex items-center space-x-2 sm:space-x-3">
-                          <span className="text-base sm:text-xl">{product.image}</span>
+                          <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-lg overflow-hidden bg-white border border-rose-100">
+                            <img
+                              src={product.image}
+                              alt={product.name}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                const target = e.target as HTMLImageElement;
+                                target.style.display = 'none';
+                                target.parentElement!.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-rose-200 to-pink-200 flex items-center justify-center text-2xl">✨</div>';
+                              }}
+                            />
+                          </div>
                           <div>
                             <div className="text-xs sm:text-sm font-semibold text-gray-800">{product.name}</div>
                             <div className="text-xs text-rose-600 font-bold">{product.price}</div>
@@ -437,34 +611,39 @@ const BeautyHeroChatInterface = ({ onDemoClick }: { onDemoClick: () => void }) =
                 }
               }}
             />
-            <Button 
+            <Button
               size="sm"
               onClick={onDemoClick}
-              className="bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 rounded-full p-2 sm:p-3 shadow-lg hover:shadow-xl transition-all duration-200"
+              className="bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 rounded-full p-2 sm:p-3 shadow-lg hover:shadow-xl transition-all duration-200 animate-pulse hover:animate-none relative"
+              style={{
+                animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite, subtle-shake 3s ease-in-out infinite'
+              }}
             >
               <Send className="w-3 h-3 sm:w-4 sm:h-4" />
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-rose-400 to-pink-400 blur-md opacity-50 animate-pulse -z-10"></div>
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Éléments flottants de conversion beauté - MASQUÉS SUR MOBILE ET TABLETTE */}
+      {/* Éléments flottants crédibles - MASQUÉS SUR MOBILE ET TABLETTE */}
       <div className="absolute -right-6 top-1/4 animate-bounce hidden xl:block">
         <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-3 rounded-xl shadow-xl text-sm font-bold backdrop-blur-sm border border-green-300">
-          {language === 'fr' ? '+267% conversions beauté' : '+267% beauty conversions'}
+          {language === 'fr' ? 'Réponse instantanée' : 'Instant Response'}
         </div>
       </div>
       
       <div className="absolute -left-6 bottom-1/3 animate-bounce hidden xl:block" style={{animationDelay: '0.5s'}}>
         <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-3 rounded-xl shadow-xl text-sm font-bold backdrop-blur-sm border border-blue-300">
-          {language === 'fr' ? 'Commande finalisée !' : 'Order completed!'}
+          {language === 'fr' ? 'Disponible 24h/7' : 'Available 24/7'}
         </div>
       </div>
 
       <div className="absolute -right-4 bottom-1/4 animate-pulse hidden xl:block">
         <div className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-3 py-2 rounded-lg shadow-lg text-xs font-semibold">
           <Heart className="w-3 h-3 inline mr-1" />
-          {language === 'fr' ? 'Conseil personnalisé' : 'Personal advice'}
+          {language === 'fr' ? 'Conseil personnalisé' : 'Personalized advice'}
         </div>
       </div>
     </div>
@@ -508,21 +687,21 @@ const BeautyBrandsMarqueeFixed = () => {
       
       <div className="brands-marquee-container">
         <div className="flex brands-marquee">
-          {/* Premier set de logos - ESPACEMENT CORRIGÉ */}
-          <div className="flex items-center space-x-12 sm:space-x-16 md:space-x-20 lg:space-x-24 xl:space-x-32 min-w-full">
+          {/* Premier set de logos - ESPACEMENT AUGMENTÉ POUR PETITS ÉCRANS */}
+          <div className="flex items-center space-x-20 sm:space-x-24 md:space-x-28 lg:space-x-32 xl:space-x-40 min-w-full">
             {beautyBrandsLogos.map((brand, index) => (
-              <OptimizedBrandLogo 
+              <OptimizedBrandLogo
                 key={`first-${index}`}
                 logoPath={brand.logoPath}
                 name={brand.name}
               />
             ))}
           </div>
-          
-          {/* Deuxième set pour effet continu - ESPACEMENT CORRIGÉ */}
-          <div className="flex items-center space-x-12 sm:space-x-16 md:space-x-20 lg:space-x-24 xl:space-x-32 min-w-full">
+
+          {/* Deuxième set pour effet continu - ESPACEMENT AUGMENTÉ POUR PETITS ÉCRANS */}
+          <div className="flex items-center space-x-20 sm:space-x-24 md:space-x-28 lg:space-x-32 xl:space-x-40 min-w-full">
             {beautyBrandsLogos.map((brand, index) => (
-              <OptimizedBrandLogo 
+              <OptimizedBrandLogo
                 key={`second-${index}`}
                 logoPath={brand.logoPath}
                 name={brand.name}

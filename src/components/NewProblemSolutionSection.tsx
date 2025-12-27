@@ -1,6 +1,6 @@
-// src/components/NewProblemSolutionSection.tsx 
-import React, { useState, useEffect } from 'react';
-import { X, Check, TrendingDown, TrendingUp, MessageSquare, ShoppingCart, Sparkles, Heart, Brain, Zap } from 'lucide-react';
+// src/components/NewProblemSolutionSection.tsx
+import React, { useState } from 'react';
+import { X, Check, TrendingDown, MessageSquare, Sparkles, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ChatModal from './ChatModal';
 
@@ -67,21 +67,16 @@ const NewProblemSolutionSection = () => {
 
         {/* Comparaison Avant/Après style chatseller.app */}
         <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-          
+
           {/* AVANT - Problème (Left Column) */}
           <div className="relative">
             <BeforeCard />
           </div>
-          
+
           {/* APRÈS - Solution (Right Column) */}
           <div className="relative">
             <AfterCard isChatOpen={isChatOpen} setIsChatOpen={setIsChatOpen} />
           </div>
-        </div>
-
-        {/* Stats comparatifs - PLEINE LARGEUR */}
-        <div className="mt-20">
-          <ComparisonStats />
         </div>
       </div>
       
@@ -122,7 +117,7 @@ const BeforeCard = () => {
             <div className="w-3 h-3 bg-green-400 rounded-full"></div>
           </div>
           <div className="flex-1 bg-white rounded px-3 py-1 text-sm text-gray-600">
-            beaute-premium.com
+            nywele-africa.com
           </div>
         </div>
 
@@ -130,44 +125,49 @@ const BeforeCard = () => {
         <div className="p-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-gray-100 rounded-xl aspect-square flex items-center justify-center p-4">
-              <img 
-                src="/images/products/serum.png" 
-                alt="Sérum Anti-Rides Premium" 
+              <img
+                src="/images/products/masque-ricin-hibiscus.png"
+                alt="Masque Fortifiant Ricin & Hibiscus"
                 className="w-full h-full object-contain"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/images/products/serum.png';
+                }}
               />
             </div>
-            
+
             <div className="space-y-4">
-              <h4 className="text-xl font-bold">{language === 'fr' ? 'Sérum Anti-Rides Premium' : 'Premium Anti-Wrinkle Serum '}</h4>
-              <div className="text-2xl font-bold text-purple-600">89€</div>
+              <h4 className="text-xl font-bold">{language === 'fr' ? 'Masque Fortifiant Ricin & Hibiscus' : 'Castor & Hibiscus Strengthening Mask'}</h4>
+              <div className="text-2xl font-bold text-rose-600">23€</div>
               <div className="space-y-2 text-sm text-gray-600">
-                <p>• {language === 'fr' ? 'Formule avancée' : 'Advanced formula'}</p>
-                <p>• {language === 'fr' ? 'Résultats visibles' : 'Visible results'}</p>
-                <p>• {language === 'fr' ? 'Ingrédients premium' : 'Premium Ingredients'}</p>
+                <p>• {language === 'fr' ? '100% naturel pour cheveux fragilisés' : '100% natural for damaged hair'}</p>
+                <p>• {language === 'fr' ? 'Stimule la repousse des cheveux' : 'Stimulates hair regrowth'}</p>
+                <p>• {language === 'fr' ? 'Ricin + Hibiscus' : 'Castor Oil + Hibiscus'}</p>
               </div>
-              
-              <button className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold">
+
+              <button className="w-full bg-black text-white py-3 rounded-lg font-semibold">
                 {language === 'fr' ? 'Ajouter au panier' : 'Add to cart'}
               </button>
             </div>
           </div>
-          
-          {/* Questions clients plus naturelles */}
+
+          {/* Questions clients réalistes cheveux */}
           <div className="mt-6 space-y-3">
-            <QuestionBubble text="J'ai la peau sensible, est-il adapté ?" unanswered />
-            <QuestionBubble text="Quand vais-je voir les premiers résultats ?" unanswered />
-            <QuestionBubble text="Puis-je l'utiliser avec mes autres soins ?" unanswered />
+            <QuestionBubble text={language === 'fr' ? 'Ça marche pour la perte de cheveux aux tempes ?' : 'Does it work for temple hair loss?'} unanswered />
+            <QuestionBubble text={language === 'fr' ? 'C\'est réversible si c\'est dû aux tresses ?' : 'Is it reversible if caused by braids?'} unanswered />
+            <QuestionBubble text={language === 'fr' ? 'Combien de temps pour voir la repousse ?' : 'How long to see regrowth?'} unanswered />
           </div>
         </div>
-        
-        {/* Résultat problématique */}
+
+        {/* Résultat problématique - Stat véridique */}
         <div className="bg-red-50 border-t border-red-200 p-4 text-center">
           <div className="flex items-center justify-center text-red-700 font-semibold">
             <TrendingDown className="w-5 h-5 mr-2" />
             <span>
-              {language === 'fr' ? '73% partent sans acheter' : '73% leave without buying'}
+              {language === 'fr' ? '70% d\'abandon de panier' : '70% cart abandonment'}
             </span>
           </div>
+          <p className="text-xs text-red-600 mt-1">{language === 'fr' ? '(moyenne e-commerce)' : '(e-commerce average)'}</p>
         </div>
       </div>
 
@@ -193,9 +193,20 @@ const BeforeCard = () => {
 // Carte "APRÈS" - Solution
 const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsChatOpen: (value: boolean) => void; }) => {
   const { language } = useLanguage();
-  
+
   return (
     <div className="relative">
+      {/* Animation CSS pour le bouton "Parler à la Vendeuse" */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes seller-shake {
+            0%, 100% { transform: translateY(0) scale(1); }
+            10%, 30%, 50%, 70%, 90% { transform: translateY(-2px) scale(1.02); }
+            20%, 40%, 60%, 80% { transform: translateY(2px) scale(1.02); }
+          }
+        `
+      }} />
+
       {/* Header */}
       <div className="text-center mb-8">
         <div className="inline-flex items-center px-4 py-2 bg-emerald-100 border border-emerald-200 rounded-full text-sm font-semibold text-emerald-700 mb-4">
@@ -206,7 +217,7 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
           {language === 'fr' ? 'Votre boutique en ligne améliorée' : 'Your enhanced online store'}
         </h3>
         <p className="text-gray-600">
-          {language === 'fr' ? 'Votre Conseillère Beauté IA répond, guide et rassure vos clients' : 'Your Beauty AI Advisor  answers, guides and reassures your customers'}
+          {language === 'fr' ? 'Votre Vendeuse IA répond, guide et rassure vos clients' : 'Your AI Seller answers, guides and reassures your customers'}
         </p>
       </div>
 
@@ -221,185 +232,93 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
             <div className="w-3 h-3 bg-green-400 rounded-full"></div>
           </div>
           <div className="flex-1 bg-white rounded px-3 py-1 text-sm text-gray-600">
-            beaute-premium.com
+            nywele-africa.com
           </div>
         </div>
 
         {/* Page produit avec ChatSeller et vraie image */}
         <div className="p-6">
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl aspect-square flex items-center justify-center p-4">
-              <img 
-                src="/images/products/serum.png" 
-                alt="Sérum Anti-Rides Premium" 
+            <div className="bg-gradient-to-br from-rose-100 to-pink-100 rounded-xl aspect-square flex items-center justify-center p-4">
+              <img
+                src="/images/products/masque-ricin-hibiscus.png"
+                alt="Masque Fortifiant Ricin & Hibiscus"
                 className="w-full h-full object-contain"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/images/products/serum.png';
+                }}
               />
             </div>
-            
+
             <div className="space-y-4">
-              <h4 className="text-xl font-bold">{language === 'fr' ? 'Sérum Anti-Rides Premium' : 'Premium Anti-Wrinkle Serum '}</h4>
-              <div className="text-2xl font-bold text-purple-600">89€</div>
+              <h4 className="text-xl font-bold">{language === 'fr' ? 'Masque Fortifiant Ricin & Hibiscus' : 'Castor & Hibiscus Strengthening Mask'}</h4>
+              <div className="text-2xl font-bold text-rose-600">23€</div>
               <div className="space-y-2 text-sm text-gray-600">
-                <p>• {language === 'fr' ? 'Formule avancée' : 'Advanced formula'}</p>
-                <p>• {language === 'fr' ? 'Résultats visibles' : 'Visible results'}</p>
-                <p>• {language === 'fr' ? 'Ingrédients premium' : 'Premium Ingredients'}</p>
+                <p>• {language === 'fr' ? '100% naturel pour cheveux fragilisés' : '100% natural for damaged hair'}</p>
+                <p>• {language === 'fr' ? 'Stimule la repousse des cheveux' : 'Stimulates hair regrowth'}</p>
+                <p>• {language === 'fr' ? 'Ricin + Hibiscus' : 'Castor Oil + Hibiscus'}</p>
               </div>
-              
-              <button className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold">
+
+              <button className="w-full bg-black text-white py-3 rounded-lg font-semibold">
                 {language === 'fr' ? 'Ajouter au panier' : 'Add to cart'}
               </button>
-              
-              <button 
-                className="w-full bg-rose-500 text-white py-2 rounded-lg font-medium text-sm flex items-center justify-center hover:bg-rose-600 transition-colors duration-200"
+
+              <button
+                className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 rounded-lg font-medium text-sm flex items-center justify-center hover:from-rose-600 hover:to-pink-600 transition-all duration-200 shadow-md relative animate-pulse hover:animate-none"
                 onClick={() => setIsChatOpen(true)}
+                style={{
+                  animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite, seller-shake 3s ease-in-out infinite'
+                }}
               >
-                <MessageSquare className="w-4 h-4 mr-2" />
-                {language === 'fr' ? 'Parler à la Conseillère Beauté' : 'Talk to the beauty Advisor'}
+                <MessageCircle className="w-4 h-4 mr-2" />
+                {language === 'fr' ? 'Parler à la Vendeuse' : 'Talk to the Seller'}
+                {/* Glow effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-rose-400 to-pink-400 blur-md opacity-50 animate-pulse -z-10"></div>
               </button>
             </div>
           </div>
-          
-          {/* Réponses de l'IA alignées avec les questions */}
+
+          {/* Réponses de l'IA alignées avec les questions cheveux */}
           <div className="mt-6 space-y-3">
-            <AnswerBubble text={language === 'fr' ? 
-              'Oui, formulé sans parfum, testé dermatologiquement pour peaux sensibles' : 
-              'Yes, fragrance-free formula, dermatologically tested for sensitive skin'} />
-            <AnswerBubble text={language === 'fr' ? 
-              'Premiers effets visibles dès 2 semaines, résultats optimaux en 6-8 semaines' : 
-              'First visible effects from 2 weeks, optimal results in 6-8 weeks'} />
-            <AnswerBubble text={language === 'fr' ? 
-              'Compatible avec tous soins, appliquer le soir après nettoyage' : 
-              'Compatible with all treatments, apply in the evening after cleansing'} />
+            <AnswerBubble text={language === 'fr' ?
+              'Oui, le ricin stimule la circulation au niveau des follicules' :
+              'Yes, Castor oil stimulates circulation at the follicle level'} />
+            <AnswerBubble text={language === 'fr' ?
+              'Oui, c\'est réversible, avec un soin régulier' :
+              'Yes, it\'s reversible, with regular care'} />
+            <AnswerBubble text={language === 'fr' ?
+              'Vous verrez les premiers signes de repousse dès 6 à 8 semaines' :
+              'You\'ll see the first signs of regrowth from 6 to 8 weeks'} />
           </div>
         </div>
-        
-        {/* Résultat positif */}
+
+        {/* Résultat positif - Bénéfice réaliste */}
         <div className="bg-emerald-50 border-t border-emerald-200 p-4 text-center">
           <div className="flex items-center justify-center text-emerald-700 font-semibold">
-            <TrendingUp className="w-5 h-5 mr-2" />
+            <Sparkles className="w-5 h-5 mr-2" />
             <span>
-              {language === 'fr' ? '+267% de conversions moyennes' : '+267% average conversions'}
+              {language === 'fr' ? 'Conseil instantané 24h/24' : 'Instant advice 24/7'}
             </span>
           </div>
+          <p className="text-xs text-emerald-600 mt-1">{language === 'fr' ? 'Vos clientes ne sont plus jamais seules' : 'Your customers are never alone'}</p>
         </div>
       </div>
 
-      {/* Bénéfices */}
+      {/* Bénéfices réalistes */}
       <div className="mt-6 space-y-3">
-        <BenefitPoint 
+        <BenefitPoint
           icon="💬"
-          text={language === 'fr' ? 'Conseils experts instantanés' : 'Instant expert advice'}
+          text={language === 'fr' ? 'Réponses instantanées 24h/24' : 'Instant responses 24/7'}
         />
-        <BenefitPoint 
-          icon="📈"
-          text={language === 'fr' ? 'Conversions 4x supérieures' : '4x higher conversions'}
+        <BenefitPoint
+          icon="🎯"
+          text={language === 'fr' ? 'Conseils personnalisés pour chaque cliente' : 'Personalized advice for each customer'}
         />
-        <BenefitPoint 
-          icon="💰"
-          text={language === 'fr' ? 'ROI visible immédiatement' : 'Immediate visible ROI'}
+        <BenefitPoint
+          icon="✨"
+          text={language === 'fr' ? 'Expertise capillaire toujours disponible' : 'Hair care expertise always available'}
         />
-      </div>
-    </div>
-  );
-};
-
-// Stats comparatifs - PLEINE LARGEUR
-const ComparisonStats = () => {
-  const { language } = useLanguage();
-  
-  return (
-    <div className="w-full">
-      {/* Titre centré */}
-      <div className="text-center mb-16">
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-          {language === 'fr' ? 'L\'impact de ChatSeller sur les performances de votre marque' : 'ChatSeller impact on your brand performance'}
-        </h3>
-      </div>
-      
-      {/* Stats en 3 colonnes sur toute la largeur */}
-      <div className="grid md:grid-cols-3 gap-8 mb-16">
-        <StatComparisonFullWidth 
-          label={language === 'fr' ? 'Taux de conversion' : 'Conversion rate'}
-          before="2.3%"
-          after="7.1%"
-          improvement="+267%"
-          color="emerald"
-        />
-        
-        <StatComparisonFullWidth 
-          label={language === 'fr' ? 'Panier moyen' : 'Average cart'}
-          before="67€"
-          after="98€"
-          improvement="+46%"
-          color="blue"
-        />
-        
-        <StatComparisonFullWidth 
-          label={language === 'fr' ? 'Questions répondues' : 'Questions answered'}
-          before="12%"
-          after="94%"
-          improvement="+683%"
-          color="purple"
-        />
-      </div>
-      
-      {/* ROI section - Pleine largeur */}
-      <div className="text-center p-8 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-2xl border border-emerald-200">
-        <div className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
-          {language === 'fr' ? 'Retour sur investissement moyen' : 'Average return on investment'}
-        </div>
-        <div className="text-4xl md:text-6xl font-bold text-emerald-600 mb-2">387%</div>
-        <div className="text-sm md:text-base text-gray-600">
-          {language === 'fr' ? 'ChatSeller se rembourse en 3 jours' : 'ChatSeller pays for itself in 3 days'}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// Composant stat individual pour pleine largeur
-const StatComparisonFullWidth = ({ 
-  label, 
-  before, 
-  after, 
-  improvement, 
-  color 
-}: { 
-  label: string; 
-  before: string; 
-  after: string; 
-  improvement: string;
-  color: 'emerald' | 'blue' | 'purple';
-}) => {
-  const colorClasses = {
-    emerald: 'text-emerald-600 bg-emerald-100 border-emerald-200',
-    blue: 'text-blue-600 bg-blue-100 border-blue-200',
-    purple: 'text-purple-600 bg-purple-100 border-purple-200'
-  };
-
-  const iconColorClasses = {
-    emerald: 'bg-emerald-500',
-    blue: 'bg-blue-500', 
-    purple: 'bg-purple-500'
-  };
-
-  return (
-    <div className="text-center p-8 bg-white rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
-      {/* Icône */}
-      <div className={`w-16 h-16 ${iconColorClasses[color]} rounded-full flex items-center justify-center mx-auto mb-6`}>
-        <div className="w-8 h-8 bg-white rounded-full"></div>
-      </div>
-      
-      <div className="text-sm md:text-base font-medium text-gray-600 mb-6">{label}</div>
-      
-      <div className="flex items-center justify-center space-x-4 mb-6">
-        <div className="text-xl md:text-2xl font-bold text-gray-400">{before}</div>
-        <div className="text-gray-400 text-lg">→</div>
-        <div className={`text-3xl md:text-4xl font-bold ${colorClasses[color].split(' ')[0]}`}>{after}</div>
-      </div>
-      
-      <div className={`inline-block px-4 py-2 rounded-full text-sm md:text-base font-bold ${colorClasses[color]}`}>
-        {improvement}
       </div>
     </div>
   );

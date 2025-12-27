@@ -1,7 +1,7 @@
 // src/components/NewNavbar.tsx 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronRight, Sparkles, TrendingUp, Star, Play, Zap, Gift, CreditCard } from 'lucide-react';
+import { Menu, X, ChevronRight, Sparkles, TrendingDown, Star, Zap, Gift, CreditCard, HelpCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from './LanguageToggle';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -51,40 +51,40 @@ const NewNavbar = () => {
 
   const navigationItems = [
     {
+      label: language === 'fr' ? 'Problème' : 'Problem',
+      sectionId: 'problem',
+      icon: <TrendingDown className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
+      description: language === 'fr' ? 'Les défis des marques beauté' : 'Challenges for beauty brands'
+    },
+    {
       label: language === 'fr' ? 'Solution' : 'Solution',
       sectionId: 'problem-solution',
       icon: <Sparkles className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? 'Comment nous résolvons vos défis' : 'How we solve your challenges'
+      description: language === 'fr' ? 'Comment ChatSeller vous aide' : 'How ChatSeller helps you'
     },
     {
-      label: language === 'fr' ? 'Démo' : 'Demo',
-      sectionId: 'demo',
-      icon: <Play className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? 'Voir ChatSeller en action' : 'See ChatSeller in action'
-    },
-    {
-      label: language === 'fr' ? 'Installation' : 'Setup',
+      label: language === 'fr' ? 'Comment ça marche' : 'How it works',
       sectionId: 'how-it-works',
       icon: <Zap className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? '7 minutes pour être opérationnel' : '7 minutes to get operational'
+      description: language === 'fr' ? '3 étapes simples en 5 minutes' : '3 simple steps in 5 minutes'
     },
     {
-      label: language === 'fr' ? 'Bénéfices' : 'Benefits',
+      label: language === 'fr' ? 'Fonctionnalités' : 'Features',
       sectionId: 'features',
       icon: <Gift className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
       description: language === 'fr' ? 'Fonctionnalités spécialisées beauté' : 'Specialized beauty features'
     },
     {
-      label: language === 'fr' ? 'Résultats' : 'Results',
-      sectionId: 'case-studies',
-      icon: <TrendingUp className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? 'Success stories de marques beauté' : 'Beauty brands success stories'
-    },
-    {
       label: language === 'fr' ? 'Tarifs' : 'Pricing',
       sectionId: 'pricing',
       icon: <CreditCard className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? 'Plans qui s\'autofinancent' : 'Self-financing plans'
+      description: language === 'fr' ? 'Plans adaptés aux marques beauté' : 'Plans for beauty brands'
+    },
+    {
+      label: 'FAQ',
+      sectionId: 'faq',
+      icon: <HelpCircle className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
+      description: language === 'fr' ? 'Questions fréquentes' : 'Frequently asked questions'
     }
   ];
 
@@ -196,21 +196,21 @@ const NewNavbar = () => {
         <nav className="hidden lg:flex xl:hidden items-center space-x-4">
           {/* Navigation réduite pour tablette */}
           <button
-            onClick={() => scrollToSection('demo')}
+            onClick={() => scrollToSection('problem-solution')}
             className="text-sm font-medium text-gray-700 hover:text-rose-600 transition-colors duration-200 flex items-center group"
           >
-            {language === 'fr' ? 'Démo' : 'Demo'}
-            <Play className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+            {language === 'fr' ? 'Solution' : 'Solution'}
+            <Sparkles className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
-          
+
           <button
             onClick={() => scrollToSection('how-it-works')}
             className="text-sm font-medium text-gray-700 hover:text-rose-600 transition-colors duration-200 flex items-center group"
           >
-            {language === 'fr' ? 'Installation' : 'Setup'}
+            {language === 'fr' ? 'Comment ça marche' : 'How it works'}
             <Zap className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
-          
+
           <button
             onClick={() => scrollToSection('pricing')}
             className="text-sm font-medium text-gray-700 hover:text-rose-600 transition-colors duration-200 flex items-center group"
@@ -218,7 +218,7 @@ const NewNavbar = () => {
             {language === 'fr' ? 'Tarifs' : 'Pricing'}
             <CreditCard className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
-          
+
           <LanguageToggle />
           
           {/* CTAs pour tablette */}
@@ -343,7 +343,7 @@ const NewNavbar = () => {
             {/* Info mobile */}
             <div className="mt-6 pt-4 border-t border-rose-100 text-center">
               <div className="text-xs text-gray-500 mb-2">
-                {language === 'fr' ? 
+                {language === 'fr' ?
                   'Spécialisé pour les marques beauté' :
                   'Specialized for beauty brands'}
               </div>
@@ -354,7 +354,7 @@ const NewNavbar = () => {
                 </span>
                 <span className="flex items-center">
                   <Star className="w-3 h-3 mr-1 text-yellow-500" />
-                  {language === 'fr' ? '+267% conversions' : '+267% conversions'}
+                  {language === 'fr' ? '+10 marques bêta' : '+10 beta brands'}
                 </span>
               </div>
             </div>

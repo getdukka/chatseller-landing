@@ -1,13 +1,14 @@
-// src/pages/Index.tsx 
+// src/pages/Index.tsx
 import React, { useEffect } from 'react';
 import NewNavbar from '@/components/NewNavBar';
 import NewHero from '../components/NewHero';
+import NewBeautyProblemSection from '@/components/NewBeautyProblemSection';
 import NewProblemSolutionSection from '@/components/NewProblemSolutionSection';
-import NewDemoSection from '@/components/NewDemoSection';
+// import NewDemoSection from '@/components/NewDemoSection'; // MASQUÉ: En attente du contenu
 import NewHowItWorksSection from '../components/NewHowItWorksSection';
 import NewFeaturesSection from '../components/NewFeaturesSection';
-import NewCaseStudiesSection from '../components/NewCaseStudiesSection';
-import NewTestimonials from '@/components/NewTestimonials';
+// import NewCaseStudiesSection from '../components/NewCaseStudiesSection'; // MASQUÉ: Faux contenu
+// import NewTestimonials from '@/components/NewTestimonials'; // MASQUÉ: Faux contenu
 import NewPricingSection from '../components/NewPricingSection';
 import NewFAQSection from '../components/NewFAQSection';
 import NewFinalCTASection from '@/components/NewFinalCTASection';
@@ -37,37 +38,40 @@ const Index = () => {
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       {/* Composant de correction mobile */}
       <MobileFix />
-      
+
       <NewNavbar />
       <main className="flex-1">
         {/* Section 1: Hero avec A/B test et focus conversion */}
         <NewHero />
-        
-        {/* Section 2: Problème/Solution - 73% partent sans acheter */}
+
+        {/* Section 2: Problème des marques beauté - 3 frustrations */}
+        <NewBeautyProblemSection />
+
+        {/* Section 3: Problème/Solution - 73% partent sans acheter */}
         <NewProblemSolutionSection />
-        
-        {/* Section 3: Demo - Vidéo de démonstration */}
-        <NewDemoSection />
-        
-        {/* Section 4: Comment ça marche - 3 étapes simples */}
+
+        {/* Section 4: Demo - Vidéo de démonstration - MASQUÉ: En attente du contenu */}
+        {/* <NewDemoSection /> */}
+
+        {/* Section 5: Comment ça marche - 3 étapes simples */}
         <NewHowItWorksSection />
 
-        {/* Section 5: Fonctionnalités orientées conversion */}
+        {/* Section 6: Fonctionnalités orientées conversion */}
         <NewFeaturesSection />
 
-        {/* Section 6: Études de cas avec preuves chiffrées */}
-        <NewCaseStudiesSection />
+        {/* Section 7: Études de cas avec preuves chiffrées - MASQUÉ: Faux contenu, en attente du vrai */}
+        {/* <NewCaseStudiesSection /> */}
 
-        {/* Section 7: Témoignages clients */}
-        <NewTestimonials />
-        
-        {/* Section 8: Pricing ROI-first (garder l'ancien temporairement) */}
+        {/* Section 8: Témoignages clients - MASQUÉ: Faux contenu, en attente du vrai */}
+        {/* <NewTestimonials /> */}
+
+        {/* Section 9: Pricing ROI-first */}
         <NewPricingSection />
-        
-        {/* Section 9: FAQ - Questions fréquentes sur Chatseller */}
+
+        {/* Section 10: FAQ - Questions fréquentes sur Chatseller */}
         <NewFAQSection />
 
-        {/* Section 10: CTA Final*/}
+        {/* Section 11: CTA Final */}
         <NewFinalCTASection />
       </main>
       <Footer />

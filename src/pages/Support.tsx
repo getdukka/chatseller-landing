@@ -414,9 +414,9 @@ const SupportPage = () => {
                   {language === 'fr' ? 'Contactez nos experts' : 'Contact our experts'}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  {language === 'fr' ? 
-                    'Support dédié aux marques beauté France & Belgique' : 
-                    'Dedicated support for beauty brands France & Belgium'}
+                  {language === 'fr' ?
+                    'Support dédié aux marques beauté en Afrique' :
+                    'Dedicated support for beauty brands in Africa'}
                 </p>
               </div>
               
