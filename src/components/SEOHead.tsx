@@ -31,8 +31,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   // 🎯 TITRES ET DESCRIPTIONS OPTIMISÉS
   const defaultTitle = language === 'fr' ? 
-    "ChatSeller - Multipliez vos conversions par 3 avec une Conseillère IA disponible 24/7 | Agent Commercial Intelligence Artificielle" :
-    "ChatSeller - Multiply Your Conversions by 3 with a 24/7 AI Advisor | AI Sales Agent";
+    "ChatSeller - Libérez-vous de WhatsApp. Votre Conseillère IA vend pour vous 24h/24 | Agent Commercial Intelligence Artificielle" :
+    "ChatSeller";
 
   const defaultDescription = language === 'fr' ? 
     "🚀 ChatSeller : Le premier Agent IA spécialement conçu pour les marques Shopify et WooCommerce dans le secteur de la beauté. Offrez à vos client.e.s en ligne la même expérience qu'en boutique avec une conseillère IA formée sur vos produits." :
@@ -168,7 +168,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "ChatSeller AI Agent for Beauty Brands",
-          "description": "Multipliez vos conversions par 3 avec une Conseillère Beauté IA disponible 24/7",
+          "description": "Libérez-vous de WhatsApp. Votre Conseillère IA vend pour vous 24h/24.",
           "brand": {
             "@type": "Brand",
             "name": "ChatSeller"

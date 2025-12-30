@@ -1,6 +1,6 @@
 // src/components/Footer.tsx 
 import React from 'react';
-import { Twitter, Linkedin, Mail, MapPin, Shield, Star, Clock, Users, Heart, Sparkles, CheckCircle, Award, Globe, Instagram } from 'lucide-react';
+import { Linkedin, Shield, Users, Sparkles, Globe, Instagram } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
@@ -36,55 +36,6 @@ const Footer = () => {
       {/* Decorative elements beauté */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-rose-300/10 to-pink-300/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-purple-300/10 to-rose-300/5 rounded-full blur-3xl -z-10" />
-
-      {/* Trust badges section beauté */}
-      <div className="border-b border-rose-100/50">
-        <div className="container px-6 md:px-12 mx-auto py-8">
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12 text-center">
-            <div className="flex items-center space-x-3 text-sm text-gray-700">
-              <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center shadow-lg">
-                <Shield className="h-5 w-5 text-white" />
-              </div>
-              <div className="text-left">
-                <div className="font-semibold text-gray-900">
-                  {language === 'fr' ? 'RGPD Compliant' : 'GDPR Compliant'}
-                </div>
-                <div className="text-xs text-gray-600">
-                  {language === 'fr' ? 'Données hébergées en Europe' : 'Data hosted in Europe'}
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-3 text-sm text-gray-700">
-              <div className="w-10 h-10 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg">
-                <Heart className="h-5 w-5 text-white" />
-              </div>
-              <div className="text-left">
-                <div className="font-semibold text-gray-900">
-                  {language === 'fr' ? 'Spécialisé Beauté' : 'Beauty Specialized'}
-                </div>
-                <div className="text-xs text-gray-600">
-                  {language === 'fr' ? 'Solutions pour marques beauté' : 'Solutions for beauty brands'}
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-3 text-sm text-gray-700">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex items-center justify-center shadow-lg">
-                <Clock className="h-5 w-5 text-white" />
-              </div>
-              <div className="text-left">
-                <div className="font-semibold text-gray-900">
-                  {language === 'fr' ? 'Support rapide' : 'Quick support'}
-                </div>
-                <div className="text-xs text-gray-600">
-                  {language === 'fr' ? 'Assistance disponible' : 'Assistance available'}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Main footer content */}
       <div className="container px-6 md:px-12 mx-auto py-16">
@@ -172,11 +123,11 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => navigateToHomeSection('case-studies')}
+                  onClick={() => navigateToHomeSection('features')}
                   className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group cursor-pointer"
                 >
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
-                  {language === 'fr' ? 'Marques clientes' : 'Client brands'}
+                  {language === 'fr' ? 'Fonctionnalités' : 'Features'}
                 </button>
               </li>
               <li>
@@ -209,7 +160,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href="https://apps.shopify.com/chatseller" 
+                  href="https://docs.chatseller.app/shopify" 
                   className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -220,7 +171,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://wordpress.org/plugins/chatseller" 
+                  href="https://docs.chatseller.app/wordpress" 
                   className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -241,13 +192,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/integrations/ga4" className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group">
+                <a href="https://docs.chatseller.app/google-analytics" className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group">
                   <div className="w-2 h-2 bg-purple-300 rounded-full mr-3 group-hover:bg-purple-500 transition-colors"></div>
                   Google Analytics 4
                 </a>
               </li>
               <li>
-                <a href="/integrations/meta" className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group">
+                <a href="/integrations/https://docs.chatseller.app/meta" className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group">
                   <div className="w-2 h-2 bg-purple-300 rounded-full mr-3 group-hover:bg-purple-500 transition-colors"></div>
                   Meta Pixel
                 </a>

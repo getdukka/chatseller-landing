@@ -88,43 +88,6 @@ const NewFinalCTASection = () => {
             </div>
           </div>
         </div>
-
-        {/* Social Proof Section - Simplifié avec uniquement la vraie stat */}
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-12 text-center animate-fade-in [animation-delay:1000ms]">
-
-            {/* Beta brands count */}
-            <div className="flex flex-col items-center mb-8">
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-4">
-                <Heart className="w-10 h-10 text-pink-300" />
-              </div>
-              <div className="text-5xl md:text-6xl font-bold text-white mb-3">+10</div>
-              <div className="text-xl text-white/90 font-medium">
-                {language === 'fr' ? 'marques beauté convaincues' : 'beauty brands convinced'}
-              </div>
-            </div>
-
-            <p className="text-lg text-white/80 mb-8">
-              {language === 'fr' ?
-                'Rejoignez notre programme bêta et bénéficiez d\'un accompagnement personnalisé pour optimiser vos conversions.' :
-                'Join our beta program and benefit from personalized support to optimize your conversions.'}
-            </p>
-
-            {/* Final CTA */}
-            <Button
-              size="lg"
-              className="group bg-white text-rose-600 hover:bg-gray-50 rounded-2xl px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-white/20 transition-all duration-300 transform hover:scale-105"
-              asChild
-            >
-              <a href="https://dashboard.chatseller.app/register">
-                {language === 'fr' ?
-                  'Commencer mon essai gratuit maintenant' :
-                  'Start my free trial now'}
-                <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );

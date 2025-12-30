@@ -308,7 +308,7 @@ const About = () => {
                   <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-rose-100 via-pink-100 to-purple-100 rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold text-rose-600 mx-auto mb-4 shadow-lg">
                     IN
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Ibuka Ndjoli</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Ibuka</h3>
                   <p className="text-rose-600 font-semibold mb-4 text-sm sm:text-base">
                     {language === 'fr' ? "Fondateur & CEO" : "Founder & CEO"}
                   </p>

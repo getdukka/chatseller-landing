@@ -1,18 +1,16 @@
 // src/components/NewNavbar.tsx 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronRight, Sparkles, TrendingDown, Star, Zap, Gift, CreditCard, HelpCircle } from 'lucide-react';
+import { Menu, X, ChevronRight, Sparkles, Star, Zap, Gift, CreditCard } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from './LanguageToggle';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { useAuth } from '@/hooks/useSupabase';
 
 const NewNavbar = () => {
   const { language } = useLanguage();
   const isMobile = useIsMobile();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { isLoggedIn, loading } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,12 +49,6 @@ const NewNavbar = () => {
 
   const navigationItems = [
     {
-      label: language === 'fr' ? 'Problème' : 'Problem',
-      sectionId: 'problem',
-      icon: <TrendingDown className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? 'Les défis des marques beauté' : 'Challenges for beauty brands'
-    },
-    {
       label: language === 'fr' ? 'Solution' : 'Solution',
       sectionId: 'problem-solution',
       icon: <Sparkles className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
@@ -79,12 +71,6 @@ const NewNavbar = () => {
       sectionId: 'pricing',
       icon: <CreditCard className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
       description: language === 'fr' ? 'Plans adaptés aux marques beauté' : 'Plans for beauty brands'
-    },
-    {
-      label: 'FAQ',
-      sectionId: 'faq',
-      icon: <HelpCircle className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? 'Questions fréquentes' : 'Frequently asked questions'
     }
   ];
 
@@ -138,58 +124,39 @@ const NewNavbar = () => {
           ))}
           
           <LanguageToggle />
-          
+
           {/* CTAs BEAUTÉ OPTIMISÉS - Responsive */}
-          {!loading && (
-            <>
-              {isLoggedIn ? (
-                <Button 
-                  className={`group relative overflow-hidden rounded-full bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 transition-all duration-300 whitespace-nowrap ${
-                    isScrolled ? 'text-xs px-3 py-2' : 'text-sm px-4 py-2 2xl:px-6 2xl:py-3'
-                  }`} 
-                  asChild
-                >
-                  <a href="https://dashboard.chatseller.app">
-                    {language === 'fr' ? 'Dashboard' : 'Dashboard'}
-                    <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transform translate-x-full group-hover:translate-x-0 transition-all duration-1000"></span>
-                  </a>
-                </Button>
-              ) : (
-                <div className="flex items-center space-x-2 2xl:space-x-3">
-                  <Button 
-                    variant="ghost" 
-                    className={`rounded-full hover:bg-rose-50 text-gray-700 hover:text-rose-600 transition-all duration-200 whitespace-nowrap ${
-                      isScrolled ? 'text-xs px-2 py-1.5' : 'text-sm px-3 py-2 2xl:px-4 2xl:py-2'
-                    }`} 
-                    asChild
-                  >
-                    <a href="https://dashboard.chatseller.app/login">
-                      {language === 'fr' ? 'Connexion' : 'Login'}
-                    </a>
-                  </Button>
-                  
-                  <Button 
-                    className={`group relative overflow-hidden rounded-full bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap ${
-                      isScrolled ? 'text-xs px-3 py-2' : 'text-sm px-4 py-2 2xl:px-6 2xl:py-3'
-                    }`} 
-                    asChild
-                  >
-                    <a href="https://dashboard.chatseller.app/register">
-                      <span className="hidden 2xl:inline">
-                        {language === 'fr' ? 'Créer ma conseillère IA' : 'Create my AI advisor'}
-                      </span>
-                      <span className="inline 2xl:hidden">
-                        {language === 'fr' ? 'Créer IA' : 'Create AI'}
-                      </span>
-                      <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                      <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transform translate-x-full group-hover:translate-x-0 transition-all duration-1000"></span>
-                    </a>
-                  </Button>
-                </div>
-              )}
-            </>
-          )}
+          <div className="flex items-center space-x-2 2xl:space-x-3">
+            <Button
+              variant="ghost"
+              className={`rounded-full hover:bg-rose-50 text-gray-700 hover:text-rose-600 transition-all duration-200 whitespace-nowrap ${
+                isScrolled ? 'text-xs px-2 py-1.5' : 'text-sm px-3 py-2 2xl:px-4 2xl:py-2'
+              }`}
+              asChild
+            >
+              <a href="https://dashboard.chatseller.app/login">
+                {language === 'fr' ? 'Connexion' : 'Login'}
+              </a>
+            </Button>
+
+            <Button
+              className={`group relative overflow-hidden rounded-full bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap ${
+                isScrolled ? 'text-xs px-3 py-2' : 'text-sm px-4 py-2 2xl:px-6 2xl:py-3'
+              }`}
+              asChild
+            >
+              <a href="https://dashboard.chatseller.app/register">
+                <span className="hidden 2xl:inline">
+                  {language === 'fr' ? 'Créer ma conseillère IA' : 'Create my AI advisor'}
+                </span>
+                <span className="inline 2xl:hidden">
+                  {language === 'fr' ? 'Créer IA' : 'Create AI'}
+                </span>
+                <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transform translate-x-full group-hover:translate-x-0 transition-all duration-1000"></span>
+              </a>
+            </Button>
+          </div>
         </nav>
 
         {/* Navigation Tablette - NOUVEAU MENU SIMPLIFIÉ POUR TABLETTES */}
@@ -220,37 +187,19 @@ const NewNavbar = () => {
           </button>
 
           <LanguageToggle />
-          
+
           {/* CTAs pour tablette */}
-          {!loading && (
-            <>
-              {isLoggedIn ? (
-                <Button 
-                  className={`group relative overflow-hidden rounded-full bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 transition-all duration-300 ${
-                    isScrolled ? 'text-xs px-3 py-2' : 'text-sm px-4 py-2'
-                  }`} 
-                  asChild
-                >
-                  <a href="https://dashboard.chatseller.app">
-                    Dashboard
-                    <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </a>
-                </Button>
-              ) : (
-                <Button 
-                  className={`group relative overflow-hidden rounded-full bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300 ${
-                    isScrolled ? 'text-xs px-3 py-2' : 'text-sm px-4 py-2'
-                  }`} 
-                  asChild
-                >
-                  <a href="https://dashboard.chatseller.app/register">
-                    {language === 'fr' ? 'Essai gratuit' : 'Free trial'}
-                    <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </a>
-                </Button>
-              )}
-            </>
-          )}
+          <Button
+            className={`group relative overflow-hidden rounded-full bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300 ${
+              isScrolled ? 'text-xs px-3 py-2' : 'text-sm px-4 py-2'
+            }`}
+            asChild
+          >
+            <a href="https://dashboard.chatseller.app/register">
+              {language === 'fr' ? 'Essai gratuit' : 'Free trial'}
+              <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+          </Button>
         </nav>
 
         {/* Mobile menu button - NOUVEAU BREAKPOINT */}
@@ -301,44 +250,28 @@ const NewNavbar = () => {
             ))}
             
             {/* CTAs Mobile */}
-            {!loading && (
-              <>
-                {isLoggedIn ? (
-                  <Button 
-                    className="w-full rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-base py-4 mt-4" 
-                    onClick={() => setMobileMenuOpen(false)} 
-                    asChild
-                  >
-                    <a href="https://dashboard.chatseller.app">
-                      {language === 'fr' ? 'Accéder au Dashboard' : 'Access Dashboard'}
-                    </a>
-                  </Button>
-                ) : (
-                  <div className="flex flex-col space-y-3 mt-4">
-                    <Button 
-                      variant="ghost" 
-                      className="justify-start text-base py-3 hover:bg-rose-50 rounded-xl" 
-                      onClick={() => setMobileMenuOpen(false)} 
-                      asChild
-                    >
-                      <a href="https://dashboard.chatseller.app/login">
-                        {language === 'fr' ? 'Se connecter' : 'Login'}
-                      </a>
-                    </Button>
-                    
-                    <Button 
-                      className="w-full text-base py-4 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg" 
-                      onClick={() => setMobileMenuOpen(false)} 
-                      asChild
-                    >
-                      <a href="https://dashboard.chatseller.app/register">
-                        {language === 'fr' ? 'Créer ma conseillère IA' : 'Create my AI advisor'}
-                      </a>
-                    </Button>
-                  </div>
-                )}
-              </>
-            )}
+            <div className="flex flex-col space-y-3 mt-4">
+              <Button
+                variant="ghost"
+                className="justify-start text-base py-3 hover:bg-rose-50 rounded-xl"
+                onClick={() => setMobileMenuOpen(false)}
+                asChild
+              >
+                <a href="https://dashboard.chatseller.app/login">
+                  {language === 'fr' ? 'Se connecter' : 'Login'}
+                </a>
+              </Button>
+
+              <Button
+                className="w-full text-base py-4 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg"
+                onClick={() => setMobileMenuOpen(false)}
+                asChild
+              >
+                <a href="https://dashboard.chatseller.app/register">
+                  {language === 'fr' ? 'Créer ma conseillère IA' : 'Create my AI advisor'}
+                </a>
+              </Button>
+            </div>
             
             {/* Info mobile */}
             <div className="mt-6 pt-4 border-t border-rose-100 text-center">
