@@ -226,7 +226,7 @@ const Footer = () => {
                   className="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-300 flex items-center group"
                 >
                   <div className="w-2 h-2 bg-blue-300 rounded-full mr-3 group-hover:bg-blue-500 transition-colors"></div>
-                  {language === 'fr' ? 'Expert beauté' : 'Beauty expert'}
+                  {language === 'fr' ? 'Conseils stratégiques' : 'Strategic advice'}
                 </a>
               </li>
               <li>
