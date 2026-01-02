@@ -600,7 +600,7 @@ const translations: Record<Language, Translations> = {
     beautySectorSpecialized: 'Essai gratuit 14 jours',
     newHeroTitleBeauty: 'Libérez-vous de WhatsApp. Votre Conseillère IA vend pour vous 24h/24.',
     newHeroTitleBeautyAlt: 'Ne laissez plus aucune vente vous échapper. Votre IA vend pour vous 24h/24',
-    newHeroSubtitleBeauty: 'Transformez chaque visiteur hésitant en acheteur fidèle grâce à une Vendeuse IA formée sur vos produits qui conseille vos clientes, lève leurs doutes et collecte les commandes automatiquement.',
+    newHeroSubtitleBeauty: 'Transformez chaque visiteur hésitant en acheteur fidèle grâce à une Conseillère IA formée sur vos produits qui conseille vos clientes, lève leurs doutes et collecte les commandes automatiquement.',
     beautyBrandsAlreadyTesting: 'Déjà adopté par +10 marques beauté',
     averageConversionBeauty: '+267% conversions moyennes',
     
@@ -1330,7 +1330,7 @@ Contactez-nous avec :
     beautySectorSpecialized: '14-day free trial',
     newHeroTitleBeauty: 'Free\u00A0yourself\u00A0from\u00A0WhatsApp. Your AI Advisor sells for you 24/7.',
     newHeroTitleBeautyAlt: 'Don\'t let any sale slip away. Your AI sells for you 24/7.',
-    newHeroSubtitleBeauty: 'Turn every hesitant visitor into a buyer with an AI seller trained on your products that advises your customers, reassures them, and collects orders automatically.',
+    newHeroSubtitleBeauty: 'Turn every hesitant visitor into a buyer with an AI Advisor trained on your products that advises your customers, reassures them, and collects orders automatically.',
     beautyBrandsAlreadyTesting: 'Already trusted by 10+ beauty brands',
     averageConversionBeauty: '+267% average conversions',
     
