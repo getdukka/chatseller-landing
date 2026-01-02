@@ -56,11 +56,6 @@ const NewBeautyProblemSection = () => {
 
         {/* En-tête de section avec badge */}
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
-          {/* Badge animé */}
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6 animate-fade-in">
-            <MessageCircle className="w-4 h-4 text-rose-300" />
-            <span className="text-sm font-semibold text-white/90">Le problème que vivent les marques beauté</span>
-          </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in [animation-delay:200ms]">
             {t('beautyProblemTitle')}

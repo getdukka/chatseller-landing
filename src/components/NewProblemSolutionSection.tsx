@@ -60,8 +60,8 @@ const NewProblemSolutionSection = () => {
           </h2>
           <p className="text-xl text-gray-600">
             {language === 'fr' ? 
-              'Découvrez comment ChatSeller vous permet de leur offrir cette expérience premium' :
-              'Discover how ChatSeller allows you to offer them this premium experience'}
+              'Remplacez le silence de votre site par un accompagnement expert qui convertit vos visiteurs en clientes fidèles.' :
+              'Replace your site\'s silence with expert guidance that turns visitors into loyal customers.'}
           </p>
         </div>
 
@@ -179,11 +179,11 @@ const BeforeCard = () => {
         />
         <PainPoint 
           icon="📉"
-          text={language === 'fr' ? 'Conversions faibles (2-3%)' : 'Low conversions (2-3%)'}
+          text={language === 'fr' ? 'Ventes perdues par manque de réactivité' : 'Sales lost due to slow response times'}
         />
         <PainPoint 
           icon="💸"
-          text={language === 'fr' ? 'Paniers abandonnés quotidiennement' : 'Daily abandoned carts'}
+          text={language === 'fr' ? 'Paniers abandonnés par simple hésitation' : 'Carts abandoned due to hesitation'}
         />
       </div>
     </div>
@@ -272,7 +272,7 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
                 }}
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
-                {language === 'fr' ? 'Parler à la Vendeuse' : 'Talk to the Seller'}
+                {language === 'fr' ? 'Parler à notre conseillère' : 'Chat with our advisor'}
                 {/* Glow effect */}
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-rose-400 to-pink-400 blur-md opacity-50 animate-pulse -z-10"></div>
               </button>
@@ -309,15 +309,15 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
       <div className="mt-6 space-y-3">
         <BenefitPoint
           icon="💬"
-          text={language === 'fr' ? 'Réponses instantanées 24h/24' : 'Instant responses 24/7'}
+          text={language === 'fr' ? 'Chaque cliente accueillie et guidée' : 'Every customer welcomed and guided'}
         />
         <BenefitPoint
           icon="🎯"
-          text={language === 'fr' ? 'Conseils personnalisés pour chaque cliente' : 'Personalized advice for each customer'}
+          text={language === 'fr' ? 'Taux de conversion boosté par l\'IA' : 'Conversion rate boosted by AI'}
         />
         <BenefitPoint
           icon="✨"
-          text={language === 'fr' ? 'Expertise capillaire toujours disponible' : 'Hair care expertise always available'}
+          text={language === 'fr' ? 'Clients rassurés et paniers validés' : 'Confident customers and completed checkouts'}
         />
       </div>
     </div>

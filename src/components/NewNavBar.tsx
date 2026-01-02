@@ -147,7 +147,7 @@ const NewNavbar = () => {
             >
               <a href="https://dashboard.chatseller.app/register">
                 <span className="hidden 2xl:inline">
-                  {language === 'fr' ? 'Créer ma conseillère IA' : 'Create my AI advisor'}
+                  {language === 'fr' ? 'Essayer gratuitement' : 'Try it now for Free'}
                 </span>
                 <span className="inline 2xl:hidden">
                   {language === 'fr' ? 'Créer IA' : 'Create AI'}
@@ -268,7 +268,7 @@ const NewNavbar = () => {
                 asChild
               >
                 <a href="https://dashboard.chatseller.app/register">
-                  {language === 'fr' ? 'Créer ma conseillère IA' : 'Create my AI advisor'}
+                  {language === 'fr' ? 'Essayer gratuitement' : 'Try it now for Free'}
                 </a>
               </Button>
             </div>

@@ -49,7 +49,7 @@ const NewFinalCTASection = () => {
               asChild
             >
               <a href="https://dashboard.chatseller.app/register">
-                {language === 'fr' ? 'Créer ma Conseillère IA' : 'Create my AI Advisor'}
+                {language === 'fr' ? 'Essayer gratuitement (14 jours)' : 'Try it now for free'}
                 <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -61,7 +61,7 @@ const NewFinalCTASection = () => {
               asChild
             >
               <a href="https://cal.com/chatseller/demo-beaute">
-                {language === 'fr' ? 'Voir une démo' : 'See a demo'}
+                {language === 'fr' ? 'Réserver une démo' : 'Book a demo'}
               </a>
             </Button>
           </div>
@@ -71,7 +71,7 @@ const NewFinalCTASection = () => {
             <div className="flex items-center">
               <CheckCircle className="w-5 h-5 mr-2 text-green-300" />
               <span className="font-medium">
-                {language === 'fr' ? '30 jours gratuits sans engagement' : '30 days free without commitment'}
+                {language === 'fr' ? '14 jours gratuits sans engagement' : '14 days free without commitment'}
               </span>
             </div>
             <div className="flex items-center">

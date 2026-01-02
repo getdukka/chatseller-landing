@@ -160,7 +160,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href="https://docs.chatseller.app/shopify" 
+                  href="#" 
                   className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -171,7 +171,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://docs.chatseller.app/wordpress" 
+                  href="#" 
                   className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -182,7 +182,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://docs.chatseller.app/integrations" 
+                  href="#" 
                   className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group"
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -192,13 +192,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://docs.chatseller.app/google-analytics" className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group">
+                <a href="#" className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group">
                   <div className="w-2 h-2 bg-purple-300 rounded-full mr-3 group-hover:bg-purple-500 transition-colors"></div>
                   Google Analytics 4
                 </a>
               </li>
               <li>
-                <a href="/integrations/https://docs.chatseller.app/meta" className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group">
+                <a href="#" className="text-sm text-gray-600 hover:text-purple-600 transition-colors duration-300 flex items-center group">
                   <div className="w-2 h-2 bg-purple-300 rounded-full mr-3 group-hover:bg-purple-500 transition-colors"></div>
                   Meta Pixel
                 </a>
