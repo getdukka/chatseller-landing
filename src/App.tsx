@@ -48,7 +48,7 @@ const AppRoutes = () => {
     switch (location.pathname) {
       case '/':
         return {
-          title: "ChatSeller - Libérez-vous de WhatsApp. Votre Conseillère IA vend pour vous 24h/24.",
+          title: "ChatSeller - Ne laissez plus aucune vente vous échapper. Votre IA vend pour vous 24h/24",
           description: "Le premier Agent IA spécialement conçu pour les marques dans le secteur de la beauté. Offrez à vos client.e.s en ligne la même expérience qu'en boutique avec une conseillère IA formée sur vos produits.",
           keywords: "Agent IA, agent IA commercial, Conseillère IA, Conseillère Beauté IA, chatbot e-commerce, intelligence artificielle vente, Shopify IA, WooCommerce chatbot"
         };

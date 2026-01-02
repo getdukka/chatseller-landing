@@ -26,17 +26,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   
   // 🎯 MOTS-CLÉS STRATÉGIQUES PAR LANGUE
   const defaultKeywords = language === 'fr' ? 
-    "vendeur IA, agent IA commercial, chatbot e-commerce, intelligence artificielle vente, IA conversationnelle, automatisation vente, Shopify IA, WooCommerce chatbot, augmenter conversion, vente automatique, assistant virtuel, bot commercial, IA marketing, e-commerce automation, vendeur virtuel, agent conversationnel, ChatSeller, Dukka, Sénégal, Afrique, startup IA" :
-    "AI seller, AI sales agent, e-commerce chatbot, artificial intelligence sales, conversational AI, sales automation, Shopify AI, WooCommerce chatbot, increase conversion, automatic sales, virtual assistant, commercial bot, AI marketing, e-commerce automation, virtual seller, conversational agent, ChatSeller, Dukka, Senegal, Africa, AI startup";
+    "vendeur IA, agent IA, Agent IA commercial, Conseillère IA, chatbot e-commerce, intelligence artificielle vente, IA conversationnelle, automatisation vente, Shopify IA, WooCommerce chatbot, augmenter conversion, vente automatique, assistant virtuel, bot commercial, IA marketing, e-commerce automation, vendeur virtuel, agent conversationnel, ChatSeller, Dukka, Sénégal, Afrique, startup IA" :
+    "AI seller, AI agent, Commercial AI Agent, AI Advisor, e-commerce chatbot, sales artificial intelligence, conversational AI, sales automation, Shopify AI, WooCommerce chatbot, increase conversion, automatic selling, virtual assistant, commercial bot, marketing AI, e-commerce automation, virtual seller, conversational agent, ChatSeller, Dukka, Senegal, Africa, AI startup";
 
   // 🎯 TITRES ET DESCRIPTIONS OPTIMISÉS
   const defaultTitle = language === 'fr' ? 
-    "ChatSeller - Libérez-vous de WhatsApp. Votre Conseillère IA vend pour vous 24h/24 | Agent Commercial Intelligence Artificielle" :
+    "ChatSeller - Ne laissez plus aucune vente vous échapper. Votre IA vend pour vous 24h/24" :
     "ChatSeller";
 
   const defaultDescription = language === 'fr' ? 
-    "🚀 ChatSeller : Le premier Agent IA spécialement conçu pour les marques Shopify et WooCommerce dans le secteur de la beauté. Offrez à vos client.e.s en ligne la même expérience qu'en boutique avec une conseillère IA formée sur vos produits." :
-    "🚀 ChatSeller: The first AI Agent specially designed for Shopify and WooCommerce brands in the beauty sector. Provide your online customers with the same experience as in-store with an AI advisor trained on your products.";
+    "🚀 ChatSeller : Le premier Agent IA spécialement conçu pour les marques Shopify et WooCommerce dans le secteur de la beauté. Ne laissez plus aucune vente vous échapper. Votre IA vend pour vous 24h/24" :
+    "🚀 ChatSeller: The first AI Agent specially designed for Shopify and WooCommerce brands in the beauty sector. Don't miss any sales. Your AI sells for you 24/7";
 
   const siteUrl = "https://chatseller.app";
   const currentUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
@@ -80,7 +80,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="ChatSeller - Agents IA pour Marques Beauté" />
+      <meta property="og:image:alt" content="ChatSeller - L'Agent IA qui vend pour les Marques Beauté 24h/24" />
       <meta property="og:locale" content={language === 'fr' ? 'fr_FR' : 'en_US'} />
       <meta property="og:locale:alternate" content={language === 'fr' ? 'en_US' : 'fr_FR'} />
       
@@ -91,7 +91,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:title" content={title || defaultTitle} />
       <meta name="twitter:description" content={description || defaultDescription} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content="ChatSeller - AI Agent for Beauty Brands" />
+      <meta name="twitter:image:alt" content="ChatSeller - The AI Agent that sells for Beauty brands 24/7" />
       
       {/* 💼 LINKEDIN */}
       <meta property="linkedin:owner" content="getdukka" />
@@ -108,7 +108,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           "operatingSystem": "Web",
           "offers": {
             "@type": "Offer",
-            "price": "14",
+            "price": "45.00",
             "priceCurrency": "EUR",
             "priceValidUntil": "2025-12-31",
             "availability": "https://schema.org/InStock"
@@ -118,7 +118,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             "name": "Dukka",
             "url": "https://getdukka.com",
             "sameAs": [
-              "https://twitter.com/getdukka",
+              "https://twitter.com/ChatsellerApp",
               "https://linkedin.com/company/getdukka"
             ]
           },
@@ -142,22 +142,22 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           "url": siteUrl,
           "logo": `${siteUrl}/logo.png`,
           "sameAs": [
-            "https://twitter.com/getdukka",
+            "https://twitter.com/ChatsellerApp",
             "https://linkedin.com/company/getdukka",
-            "https://github.com/getdukka"
+            "https://instagram.com/chatseller"
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+33695903221",
+            "telephone": "++221767826804",
             "contactType": "customer service",
             "email": "support@chatseller.app",
             "availableLanguage": ["French", "English"]
           },
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Montpellier, France",
-            "addressLocality": "Montpellier",
-            "addressCountry": "FR"
+            "streetAddress": "Dakar, SENEGAL",
+            "addressLocality": "Dakar",
+            "addressCountry": "SN"
           }
         })}
       </script>
@@ -167,15 +167,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          "name": "ChatSeller AI Agent for Beauty Brands",
-          "description": "Libérez-vous de WhatsApp. Votre Conseillère IA vend pour vous 24h/24.",
+          "name": "ChatSeller",
+          "description": "Ne laissez plus aucune vente vous échapper. Votre IA vend pour vous 24h/24",
           "brand": {
             "@type": "Brand",
             "name": "ChatSeller"
           },
           "offers": {
             "@type": "Offer",
-            "price": "49.00",
+            "price": "45.00",
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock",
             "validFrom": "2025-01-01",

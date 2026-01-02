@@ -225,45 +225,6 @@ const NewPricingSection = () => {
         <div className="mb-20 animate-fade-in [animation-delay:800ms]">
           <BeautyROICalculator language={language} />
         </div>
-
-        {/* Guarantee section beauté */}
-        <div className="text-center animate-fade-in [animation-delay:1100ms]">
-          <div className="bg-gradient-to-r from-emerald-50 via-green-50 to-emerald-50 rounded-3xl p-8 border border-emerald-200 max-w-3xl mx-auto shadow-sm">
-            <div className="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <Check className="h-10 w-10" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">
-              {language === 'fr' ? 
-                'Conversion garantie ou remboursée' :
-                'Guaranteed conversion or your money back'}
-            </h3>
-            <p className="text-gray-700 mb-8 text-lg leading-relaxed">
-              {language === 'fr' ? 
-                'Si ChatSeller ne booste pas vos ventes comme promis, nous vous remboursons intégralement le premier mois. Aucune question posée.' :
-                'If ChatSeller does not boost your sales as promised, we will refund you in full for the first month. No questions asked.'}
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
-              <div className="flex items-center">
-                <Check className="h-4 w-4 text-green-500 mr-2" />
-                <span className="font-medium">
-                  {language === 'fr' ? 'Sans engagement' : 'No commitment'}
-                </span>
-              </div>
-              <div className="flex items-center">
-                <Check className="h-4 w-4 text-green-500 mr-2" />
-                <span className="font-medium">
-                  {language === 'fr' ? 'Support WhatsApp inclus' : 'WhatsApp support included'}
-                </span>
-              </div>
-              <div className="flex items-center">
-                <Check className="h-4 w-4 text-green-500 mr-2" />
-                <span className="font-medium">
-                  {language === 'fr' ? 'Données exportables' : 'Exportable data'}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

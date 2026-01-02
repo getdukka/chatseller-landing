@@ -49,7 +49,7 @@ const NewFinalCTASection = () => {
               asChild
             >
               <a href="https://dashboard.chatseller.app/register">
-                {language === 'fr' ? 'Essayer gratuitement (14 jours)' : 'Try it now for free'}
+                {language === 'fr' ? 'Lancer mon essai gratuit' : 'Start my free trial'}
                 <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -77,7 +77,7 @@ const NewFinalCTASection = () => {
             <div className="flex items-center">
               <Zap className="w-5 h-5 mr-2 text-yellow-300" />
               <span className="font-medium">
-                {language === 'fr' ? 'Installation en 5 minutes' : '5-minute installation'}
+                {language === 'fr' ? 'Installation en 2 minutes' : '2-minute installation'}
               </span>
             </div>
             <div className="flex items-center">
