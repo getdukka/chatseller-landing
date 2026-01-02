@@ -1,6 +1,6 @@
 // src/components/NewPricingSection.tsx - VERSION BEAUTÉ CONVERSION-FOCUSED
 import React, { useState } from 'react';
-import { Check, ArrowRight, Calculator, TrendingUp, Zap, Crown, Heart, Sparkles, CreditCard, Users, Globe, BarChart3, Shield, HelpCircle, MessageSquare } from 'lucide-react';
+import { Check, ArrowRight, TrendingUp, Sparkles, Zap, Crown, CreditCard, MessageSquare, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
@@ -74,7 +74,7 @@ const NewPricingSection = () => {
             monthlyPrice={45}
             yearlyPrice={Math.round(45 * 12 * 0.85 / 12)}
             billingPeriod={billingPeriod}
-            tag={language === 'fr' ? 'Idéal pour démarrer et prouver le ROI' : 'Perfect to start and prove ROI'}
+            tag={language === 'fr' ? 'L’essentiel pour automatiser vos conseils et arrêter de perdre des ventes' : 'Essential to automate advice and stop losing sales'}
             roiBadge={language === 'fr' ? '1 vente = abonnement remboursé' : '1 sale = subscription paid'}
             fcfaPrice="29 500"
             features={getStarterFeatures(language)}
@@ -89,7 +89,7 @@ const NewPricingSection = () => {
             monthlyPrice={145}
             yearlyPrice={Math.round(145 * 12 * 0.85 / 12)}
             billingPeriod={billingPeriod}
-            tag={language === 'fr' ? 'Pour les boutiques en croissance' : 'For growing beauty stores'}
+            tag={language === 'fr' ? 'Boostez votre panier moyen avec l’Upsell intelligent et l’ajout au panier' : 'Boost AOV with smart upsells and automated cart addition'}
             roiBadge={language === 'fr' ? '~3 ventes = abonnement remboursé' : '~3 sales = subscription paid'}
             fcfaPrice="95 000"
             features={getGrowthFeatures(language)}
@@ -105,7 +105,7 @@ const NewPricingSection = () => {
             monthlyPrice={299}
             yearlyPrice={Math.round(299 * 12 * 0.85 / 12)}
             billingPeriod={billingPeriod}
-            tag={language === 'fr' ? 'Maximum de conversions & reporting avancé' : 'Maximum conversions & advanced reporting'}
+            tag={language === 'fr' ? 'La puissance maximale pour les marques leaders : CRM, Analytics & VIP support' : 'Maximum power for leading brands: CRM, Analytics & VIP support'}
             roiBadge={language === 'fr' ? 'Configuré selon vos objectifs' : 'Configured to your goals'}
             fcfaPrice="196 000"
             features={getPerformanceFeatures(language)}
@@ -128,23 +128,13 @@ const NewPricingSection = () => {
             <div className="flex items-center">
               <Zap className="w-4 h-4 text-blue-500 mr-2" />
               <span className="font-medium">
-                {language === 'fr' ? 'Installation 1 clic' : '1-click installation'}
+                {language === 'fr' ? 'Installation en 5 min' : '5-min installation'}
               </span>
             </div>
             <div className="flex items-center">
               <CreditCard className="w-4 h-4 text-purple-500 mr-2" />
               <span className="font-medium">
-                {language === 'fr' ? 'Annulation en 1 clic' : '1-click cancellation'}
-              </span>
-            </div>
-          </div>
-          
-          <div className="mt-4 text-center">
-            <div className="inline-block bg-gradient-to-r from-rose-100 to-pink-100 border border-rose-200 rounded-xl px-6 py-3">
-              <span className="text-rose-700 font-bold text-lg">
-                {language === 'fr' ? 
-                  '💎 1 vente gagnée = abonnement remboursé' :
-                  '💎 1 sale gained = subscription paid'}
+                {language === 'fr' ? 'Annulation à tout moment' : 'Cancel anytime'}
               </span>
             </div>
           </div>
@@ -199,7 +189,7 @@ const NewPricingSection = () => {
                 </div>
               </div>
 
-              <div className="bg-white/80 backdrop-blur rounded-xl p-6 mt-6">
+              <div className="bg-white/80 backdrop-blur rounded-xl p-6 mt-6 border border-rose-100">
                 <p className="text-base md:text-lg text-gray-800 font-medium leading-relaxed">
                   {language === 'fr' ?
                     'ChatSeller, c\'est cette vendeuse d\'exception pour votre boutique en ligne. Elle ne dort jamais, ne se fatigue jamais, et répond instantanément à toutes vos clientes, 24h/24.' :
@@ -236,14 +226,9 @@ const NewPricingSection = () => {
           <BeautyROICalculator language={language} />
         </div>
 
-        {/* Add-ons section 
-        <div className="mb-16 animate-fade-in [animation-delay:900ms]">
-          <BeautyAddOnsSection language={language} />
-        </div>*/}
-
         {/* Guarantee section beauté */}
         <div className="text-center animate-fade-in [animation-delay:1100ms]">
-          <div className="bg-gradient-to-r from-emerald-50 via-green-50 to-emerald-50 rounded-3xl p-8 border border-emerald-200 max-w-3xl mx-auto">
+          <div className="bg-gradient-to-r from-emerald-50 via-green-50 to-emerald-50 rounded-3xl p-8 border border-emerald-200 max-w-3xl mx-auto shadow-sm">
             <div className="w-20 h-20 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
               <Check className="h-10 w-10" />
             </div>
@@ -254,26 +239,26 @@ const NewPricingSection = () => {
             </h3>
             <p className="text-gray-700 mb-8 text-lg leading-relaxed">
               {language === 'fr' ? 
-                'Si ChatSeller ne vous convient pas, nous vous remboursons intégralement. Aucune question posée.' :
-                'If ChatSeller does not suit you, we will refund you in full. No questions asked.'}
+                'Si ChatSeller ne booste pas vos ventes comme promis, nous vous remboursons intégralement le premier mois. Aucune question posée.' :
+                'If ChatSeller does not boost your sales as promised, we will refund you in full for the first month. No questions asked.'}
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
               <div className="flex items-center">
                 <Check className="h-4 w-4 text-green-500 mr-2" />
                 <span className="font-medium">
-                  {language === 'fr' ? 'Aucun engagement' : 'No commitment'}
+                  {language === 'fr' ? 'Sans engagement' : 'No commitment'}
+                </span>
+              </div>
+              <div className="flex items-center">
+                <Check className="h-4 w-4 text-green-500 mr-2" />
+                <span className="font-medium">
+                  {language === 'fr' ? 'Support WhatsApp inclus' : 'WhatsApp support included'}
                 </span>
               </div>
               <div className="flex items-center">
                 <Check className="h-4 w-4 text-green-500 mr-2" />
                 <span className="font-medium">
                   {language === 'fr' ? 'Données exportables' : 'Exportable data'}
-                </span>
-              </div>
-              <div className="flex items-center">
-                <Check className="h-4 w-4 text-green-500 mr-2" />
-                <span className="font-medium">
-                  {language === 'fr' ? 'Support français inclus' : 'English support included'}
                 </span>
               </div>
             </div>
@@ -284,7 +269,7 @@ const NewPricingSection = () => {
   );
 };
 
-// Composant carte pricing beauté optimisé
+// Composant carte pricing beauté
 interface BeautyPricingCardProps {
   name: string;
   monthlyPrice: number;
@@ -326,7 +311,6 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
         : 'border-gray-200 bg-white/80 backdrop-blur-sm hover:bg-white'
     }`}>
       
-      {/* Badge le plus populaire */}
       {featured && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <div className="bg-gradient-to-r from-rose-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-bold flex items-center shadow-lg">
@@ -336,7 +320,6 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
         </div>
       )}
       
-      {/* Réduction annuelle */}
       {billingPeriod === 'yearly' && !isEnterprise && (
         <div className="absolute -top-2 -right-2">
           <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
@@ -345,7 +328,6 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
         </div>
       )}
       
-      {/* Header plan */}
       <div className="text-center mb-8">
         <h3 className="text-2xl font-bold mb-2 text-gray-900">{name}</h3>
         <div className="mb-4">
@@ -359,17 +341,11 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
                 {language === 'fr' ? '≈ ' : '≈ '}{fcfaPrice} FCFA/mois
               </div>
             )}
-            {billingPeriod === 'yearly' && (
-              <div className="text-sm text-green-600 font-medium mt-1">
-                {language === 'fr' ? 'Facturé annuellement' : 'Billed annually'}
-              </div>
-            )}
           </div>
         </div>
-        <p className="text-gray-600 text-sm leading-relaxed">{tag}</p>
+        <p className="text-gray-600 text-sm leading-relaxed min-h-[40px]">{tag}</p>
       </div>
 
-      {/* Badge ROI prominant */}
       <div className={`rounded-2xl p-4 mb-8 text-center ${
         featured 
           ? 'bg-gradient-to-r from-emerald-100 to-green-100 border-2 border-emerald-300' 
@@ -381,7 +357,6 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
         <div className="text-lg font-bold text-emerald-600">{roiBadge}</div>
       </div>
       
-      {/* Features spécialisées beauté */}
       <div className="space-y-4 mb-8">
         {features.map((feature, index) => (
           <div key={index} className="flex items-start space-x-3">
@@ -395,8 +370,6 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
         ))}
       </div>
 
-      
-      {/* CTA */}
       <Button 
         className={`w-full group rounded-2xl py-4 text-base font-semibold transition-all duration-300 ${
           featured 
@@ -416,7 +389,6 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
   );
 };
 
-// ROI Calculator spécialisé beauté
 const BeautyROICalculator = ({ language }: { language: string }) => {
   const [visitors, setVisitors] = useState(2500);
   const [conversion, setConversion] = useState(2.8);
@@ -440,24 +412,21 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
       <div className="text-center mb-10">
         <h3 className="text-3xl font-bold text-gray-900 mb-4">
           {language === 'fr' ? 
-            'Calculez votre ROI avec ChatSeller' :
-            'Calculate your ROI with ChatSeller'}
+            'Simulez vos ventes avec ChatSeller' :
+            'Simulate your sales with ChatSeller'}
         </h3>
         <p className="text-gray-600 text-lg">
           {language === 'fr' ? 
-            'Estimez les ventes supplémentaires générées par votre Agent IA' :
-            'Estimate additional sales generated by your AI Agent'}
+            'Estimez les revenus supplémentaires générés par votre Conseillère IA' :
+            'Estimate additional revenue generated by your AI Advisor'}
         </p>
       </div>
       
       <div className="grid lg:grid-cols-2 gap-12">
-        
-        {/* Inputs spécialisés beauté */}
         <div className="space-y-6">
           <h4 className="font-bold text-gray-800 mb-6 text-xl">
-            {language === 'fr' ? 'Votre boutique en ligne actuelle' : 'Your current online store'}
+            {language === 'fr' ? 'Statistiques de votre boutique' : 'Store Statistics'}
           </h4>
-          
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-semibold mb-3 text-gray-700">
@@ -467,11 +436,9 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
                 type="number" 
                 value={visitors}
                 onChange={(e) => setVisitors(parseInt(e.target.value) || 0)}
-                className="w-full px-4 py-4 border border-gray-300 rounded-xl text-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent bg-white"
-                placeholder="2500"
+                className="w-full px-4 py-4 border border-gray-300 rounded-xl text-lg focus:ring-2 focus:ring-rose-500 bg-white"
               />
             </div>
-            
             <div>
               <label className="block text-sm font-semibold mb-3 text-gray-700">
                 {language === 'fr' ? 'Taux de conversion actuel (%)' : 'Current conversion rate (%)'}
@@ -481,128 +448,59 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
                 value={conversion}
                 step="0.1"
                 onChange={(e) => setConversion(parseFloat(e.target.value) || 0)}
-                className="w-full px-4 py-4 border border-gray-300 rounded-xl text-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent bg-white"
-                placeholder="2.8"
+                className="w-full px-4 py-4 border border-gray-300 rounded-xl text-lg focus:ring-2 focus:ring-rose-500 bg-white"
               />
             </div>
-            
             <div>
               <label className="block text-sm font-semibold mb-3 text-gray-700">
-                {language === 'fr' ? 'Panier moyen actuel (€)' : 'Current average order (€)'}
+                {language === 'fr' ? 'Panier moyen (€)' : 'Average order (€)'}
               </label>
               <input 
                 type="number" 
                 value={averageOrder}
                 onChange={(e) => setAverageOrder(parseInt(e.target.value) || 0)}
-                className="w-full px-4 py-4 border border-gray-300 rounded-xl text-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent bg-white"
-                placeholder="85"
+                className="w-full px-4 py-4 border border-gray-300 rounded-xl text-lg focus:ring-2 focus:ring-rose-500 bg-white"
               />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-3 text-gray-700">
-                {language === 'fr' ? 'Plan ChatSeller choisi' : 'Selected ChatSeller plan'}
-              </label>
-              <select 
-                value={plan}
-                onChange={(e) => setPlan(e.target.value)}
-                className="w-full px-4 py-4 border border-gray-300 rounded-xl text-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent bg-white"
-              >
-                <option value="starter">Starter - {language === 'fr' ? '45€/mois' : '45€/month'}</option>
-                <option value="growth">Growth - {language === 'fr' ? '145€/mois' : '145€/month'}</option>
-                <option value="performance">Performance - {language === 'fr' ? '299€/mois' : '299€/month'}</option>
-              </select>
             </div>
           </div>
         </div>
         
-        {/* Results avec design beauté */}
         <div>
           <h4 className="font-bold text-gray-800 mb-6 text-xl">
-            {language === 'fr' ? 'Résultats avec ChatSeller' : 'Results with ChatSeller'}
+            {language === 'fr' ? 'Ventes prévisionnelles' : 'Sales Forecast'}
           </h4>
-          
           <div className="space-y-6">
-            
-            {/* Revenus comparés */}
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-gray-600 font-medium">
-                  {language === 'fr' ? 'Revenus actuels/mois:' : 'Current revenue/month:'}
-                </span>
+                <span className="text-gray-600 font-medium">Revenus actuels/mois:</span>
                 <span className="font-bold text-lg">{Math.round(currentRevenue).toLocaleString()}€</span>
               </div>
               <div className="flex justify-between items-center mb-4">
-                <span className="text-gray-600 font-medium">
-                  {language === 'fr' ? 'Nouveaux revenus/mois:' : 'New revenue/month:'}
-                </span>
+                <span className="text-gray-600 font-medium">Nouveaux revenus:</span>
                 <span className="font-bold text-green-600 text-xl">{Math.round(newRevenue).toLocaleString()}€</span>
               </div>
-              <div className="border-t border-gray-200 pt-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-green-700 font-semibold">
-                    {language === 'fr' ? 'Conversion:' : 'Conversion:'}
-                  </span>
-                  <span className="font-bold text-green-600">
-                    {conversion.toFixed(1)}% → {newConversion.toFixed(1)}%
-                  </span>
-                </div>
+              <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
+                <span className="text-green-700 font-semibold">Boost Conversion:</span>
+                <span className="font-bold text-green-600">{conversion.toFixed(1)}% → {newConversion.toFixed(1)}%</span>
               </div>
             </div>
 
-            {/* Profit net */}
             <div className="bg-gradient-to-r from-emerald-100 to-green-100 border-2 border-emerald-300 rounded-2xl p-6">
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-emerald-700 font-semibold">
-                  {language === 'fr' ? 'Revenus supplémentaires:' : 'Additional revenue:'}
-                </span>
-                <span className="font-bold text-emerald-600 text-xl">+{Math.round(additionalRevenue).toLocaleString()}€</span>
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-emerald-700 font-bold text-lg">Profit net mensuel:</span>
+                <span className="text-2xl font-bold text-emerald-600">+{Math.round(monthlyProfit).toLocaleString()}€</span>
               </div>
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-emerald-700 font-semibold">
-                  {language === 'fr' ? 'Coût ChatSeller:' : 'ChatSeller cost:'}
-                </span>
-                <span className="text-emerald-600 font-bold">-{planCost}€</span>
-              </div>
-              <div className="border-t border-emerald-300 pt-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-emerald-700 font-bold text-lg">
-                    {language === 'fr' ? 'Profit net mensuel:' : 'Net monthly profit:'}
-                  </span>
-                  <span className="text-2xl font-bold text-emerald-600">+{Math.round(monthlyProfit).toLocaleString()}€</span>
-                </div>
-              </div>
+              <div className="text-emerald-600 text-sm">Après déduction du coût de ChatSeller</div>
             </div>
 
-            {/* ROI et temps de retour */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="text-center bg-rose-600 text-white rounded-2xl p-6">
-                <div className="text-3xl font-bold mb-2">{roiPercent}%</div>
-                <div className="text-rose-100 text-sm font-medium">
-                  {language === 'fr' ? 'ROI mensuel' : 'Monthly ROI'}
-                </div>
+              <div className="text-center bg-rose-600 text-white rounded-2xl p-6 shadow-md">
+                <div className="text-3xl font-bold mb-1">{roiPercent}%</div>
+                <div className="text-rose-100 text-xs font-medium uppercase">ROI Mensuel</div>
               </div>
-              
-              <div className="text-center bg-purple-600 text-white rounded-2xl p-6">
-                <div className="text-3xl font-bold mb-2">{paybackDays}</div>
-                <div className="text-purple-100 text-sm font-medium">
-                  {language === 'fr' ? 'jours pour se rembourser' : 'days to pay back'}
-                </div>
-              </div>
-            </div>
-
-            {/* Message de motivation */}
-            <div className="bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-200 rounded-2xl p-6 text-center">
-              <div className="text-green-700 font-bold text-lg mb-2">
-                {monthlyProfit > 1000 ? '🚀' : monthlyProfit > 500 ? '💎' : '✨'}
-                {language === 'fr' ? 
-                  ` ${monthlyProfit > 1000 ? 'Excellente' : monthlyProfit > 500 ? 'Très bonne' : 'Belle'} opportunité !` :
-                  ` ${monthlyProfit > 1000 ? 'Excellent' : monthlyProfit > 500 ? 'Very good' : 'Great'} opportunity !`}
-              </div>
-              <div className="text-sm text-black">
-                {language === 'fr' ? 
-                  'Commencez votre essai gratuit de 14 jours dès maintenant' :
-                  'Start your 14-day free trial now'}
+              <div className="text-center bg-purple-600 text-white rounded-2xl p-6 shadow-md">
+                <div className="text-3xl font-bold mb-1">{paybackDays}</div>
+                <div className="text-purple-100 text-xs font-medium uppercase">Jours pour se rembourser</div>
               </div>
             </div>
           </div>
@@ -612,98 +510,35 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
   );
 };
 
-// Section Add-ons beauté
-const BeautyAddOnsSection = ({ language }: { language: string }) => {
-  const addOns = [
-    {
-      name: language === 'fr' ? 'WhatsApp Business' : 'WhatsApp Business',
-      price: '29€',
-      description: language === 'fr' ? 
-        'Votre Conseillère IA directement sur WhatsApp' :
-        'Your AI Advisor directly on WhatsApp',
-      icon: <MessageSquare className="w-6 h-6" />
-    },
-    {
-      name: language === 'fr' ? 'Domaines supplémentaires' : 'Additional domains',
-      price: '19€',
-      description: language === 'fr' ? 
-        'Ajoutez un site web ou domaine supplémentaire' :
-        'Add an additional website or domain',
-      icon: <Globe className="w-6 h-6" />
-    },
-    {
-      name: language === 'fr' ? 'Agents multi-persona' : 'Multi-persona agents',
-      price: '10€',
-      description: language === 'fr' ? 
-        'Ajoutez un Agent IA supplementaire avec une personnalité différente' :
-        'Add an additional AI Agent with a different personality',
-      icon: <Users className="w-6 h-6" />
-    }
-  ];
-
-  return (
-    
-    {/*<div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 md:p-12 max-w-5xl mx-auto">
-      <div className="text-center mb-10">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
-          {language === 'fr' ? 'Options supplémentaires' : 'Additional options'}
-        </h3>
-        <p className="text-gray-600">
-          {language === 'fr' ? 
-            'Personnalisez davantage l\'expérience de vos client.e.s'
-            'Further customize your customers\' experience'}
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-6">
-        {addOns.map((addon, index) => (
-          <div key={index} className="text-center p-6 border border-gray-200 rounded-2xl hover:shadow-lg transition-shadow">
-            <div className="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-              {addon.icon}
-            </div>
-            <h4 className="font-semibold text-gray-900 mb-2">{addon.name}</h4>
-            <div className="text-2xl font-bold text-rose-600 mb-2">{addon.price}/mois</div>
-            <p className="text-sm text-gray-600">{addon.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>*/}
-  );
-};
-
-// Features par plan avec traductions - Simplifiées pour les marques beauté
+// Features par plan - RÉÉCRITURE ICP BEAUTÉ
 const getStarterFeatures = (language: string) => [
-  language === 'fr' ? 'Conversations illimitées' : 'Unlimited conversations',
   language === 'fr' ? '1 boutique Shopify ou WooCommerce' : '1 Shopify or WooCommerce store',
-  language === 'fr' ? '1 Conseillère IA formée sur votre catalogue' : '1 AI Seller trained on your catalog',
-  language === 'fr' ? '50 fichiers en Base de connaissances' : '50 files in Knowledge Base',
-  language === 'fr' ? 'Recommandations produits intelligentes' : 'Smart product recommendations',
-  language === 'fr' ? 'Dashboard de suivi des performances' : 'Performance tracking dashboard',
+  language === 'fr' ? 'Conseillère IA formée sur votre site' : 'AI Advisor trained on your store',
+  language === 'fr' ? '50 fichiers de connaissances (PDF, CSV...)' : '50 Knowledge files (PDF, CSV...)',
+  language === 'fr' ? 'Intervention humaine en temps réel' : 'Real-time human intervention',
+  language === 'fr' ? 'Cartes produits interactives' : 'Interactive product cards',
+  language === 'fr' ? 'Analytics de base (Ventes & Messages)' : 'Basic analytics (Sales & Messages)',
   language === 'fr' ? 'Support en français' : 'French support'
 ];
 
 const getGrowthFeatures = (language: string) => [
-  language === 'fr' ? 'Conversations illimitées' : 'Unlimited conversations',
-  language === 'fr' ? 'Jusqu\'à 3 boutiques Shopify ou WooCommerce' : 'Up to 3 Shopify or WooCommerce stores',
-  language === 'fr' ? '1 Conseillère IA formée sur votre catalogue' : '1 AI Seller trained on your catalog',
-  language === 'fr' ? '200 fichiers en Base de connaissances' : '200 files in Knowledge Base',
-  language === 'fr' ? 'Recommandations produits intelligentes' : 'Smart product recommendations',
-  language === 'fr' ? 'Dashboard de suivi des performances' : 'Performance tracking dashboard',
-  language === 'fr' ? 'Multi-langue (Français, Anglais, etc.)' : 'Multi-language (French, English, etc.)',
-  language === 'fr' ? 'Analytics avancées & exports CSV' : 'Advanced analytics & CSV exports',
-  language === 'fr' ? 'Support prioritaire' : 'Priority support'
+  language === 'fr' ? 'Jusqu\'à 3 boutiques incluses' : 'Up to 3 included stores',
+  language === 'fr' ? '200 fichiers de connaissances' : '200 Knowledge files',
+  language === 'fr' ? 'Upsell Intelligent (Routines complètes)' : 'Smart Upsells (Routine building)',
+  language === 'fr' ? 'Ajout au panier automatique par l\'IA' : 'Automatic Add-to-Cart by AI',
+  language === 'fr' ? 'Analytics avancées & Insights clients' : 'Advanced analytics & Customer insights',
+  language === 'fr' ? 'Multi-langue (Français, Anglais...)' : 'Multi-language (FR, EN...)',
+  language === 'fr' ? 'Support prioritaire 7j/7' : '7/7 Priority support'
 ];
 
 const getPerformanceFeatures = (language: string) => [
-  language === 'fr' ? 'Conversations illimitées (fair-use)' : 'Unlimited conversations (fair-use)',
-  language === 'fr' ? 'Boutiques illimitées' : 'Unlimited stores',
-  language === 'fr' ? 'Conseillères IA formées sur votre catalogue' : 'AI Sellers trained on your catalog',
-  language === 'fr' ? 'Fichiers illimités en Base de connaissances' : 'Unlimited files in Knowledge Base',
-  language === 'fr' ? 'Recommandations produits intelligentes' : 'Smart product recommendations',
-  language === 'fr' ? 'Dashboard de suivi des performances avancé' : 'Advanced performance tracking dashboard',
-  language === 'fr' ? 'Multi-langue & personnalisation complète' : 'Multi-language & full customization',
-  language === 'fr' ? 'Intégrations CRM sur mesure (API/Webhooks)' : 'Custom CRM integrations (API/Webhooks)',
-  language === 'fr' ? 'Success Manager dédié & support 24/7' : 'Dedicated Success Manager & 24/7 support'
+  language === 'fr' ? 'Boutiques & Fichiers illimités' : 'Unlimited stores & files',
+  language === 'fr' ? 'Intégrations CRM & Marketing sur mesure' : 'Custom CRM & Marketing integrations',
+  language === 'fr' ? 'Success Manager dédié (Optimisation ROI)' : 'Dedicated Success Manager (ROI Optimization)',
+  language === 'fr' ? 'Personnalisation Widget complète' : 'Full widget customization',
+  language === 'fr' ? 'Accès API & Webhooks' : 'API & Webhooks access',
+  language === 'fr' ? 'Formation d\'équipe incluse' : 'Team training included',
+  language === 'fr' ? 'Support VIP 24/7' : '24/7 VIP Support'
 ];
 
 export default NewPricingSection;

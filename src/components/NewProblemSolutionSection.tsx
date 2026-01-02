@@ -217,7 +217,7 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
           {language === 'fr' ? 'Votre boutique en ligne améliorée' : 'Your enhanced online store'}
         </h3>
         <p className="text-gray-600">
-          {language === 'fr' ? 'Votre Vendeuse IA répond, guide et rassure vos clients' : 'Your AI Seller answers, guides and reassures your customers'}
+          {language === 'fr' ? 'Votre Conseillère IA répond, guide et rassure vos clients' : 'Your AI Advisor answers, guides and reassures your customers'}
         </p>
       </div>
 

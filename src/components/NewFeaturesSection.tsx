@@ -171,22 +171,22 @@ const DesktopClickableLayout = ({
 // Header content réutilisable
 const HeaderContent = ({ language }: { language: string }) => (
   <>
-    <div className="inline-flex items-center px-6 py-3 mb-8 border border-rose-200 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 text-sm font-semibold text-rose-700 animate-fade-in">
+    <div className="inline-flex items-center px-6 py-3 mb-4 border border-rose-200 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 text-sm font-semibold text-rose-700 animate-fade-in">
       <Sparkles className="w-4 h-4 mr-2" />
-      {language === 'fr' ? 'Fonctionnalités Spécialisées Beauté' : 'Specialized Beauty Features'}
+      {language === 'fr' ? 'Expertise Beauté Native' : 'Native Beauty Expertise'}
       <Heart className="w-4 h-4 ml-2" />
     </div>
     
     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight animate-fade-in [animation-delay:200ms]">
       {language === 'fr' ? 
-        'Votre conseillère IA maîtrise tous les codes de votre secteur' : 
-        'Your AI advisor masters all the codes of your industry'}
+        'Une expertise beauté professionnelle, combinée à la puissance de l\'IA' : 
+        'Professional beauty expertise, combined with the power of AI'}
     </h2>
     
     <p className="text-lg text-gray-600 animate-fade-in [animation-delay:400ms]">
       {language === 'fr' ? 
-        'ChatSeller transforme votre site en boutique de luxe avec une expertise beauté pointue, pour le bonheur de vos clientes.' :
-        'ChatSeller transforms your site into a luxury boutique with expert beauty knowledge to delight your customers.'}
+        'Plus qu\'un simple chatbot, ChatSeller agit comme une experte certifiée. De l\'analyse des ingrédients au diagnostic de peau, elle guide vos clientes avec une précision chirurgicale pour déclencher l\'achat.' :
+        'More than just a chatbot, ChatSeller acts like a certified expert. From ingredient analysis to skin diagnosis, it guides your customers with surgical precision to trigger purchases.'}
     </p>
   </>
 );
@@ -303,8 +303,8 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
     icon: <Brain className="h-7 w-7" />,
     title: language === 'fr' ? 'Expertise Beauté Complète' : 'Complete Beauty Expertise',
     description: language === 'fr' ? 
-      'Votre Conseillère IA maîtrise ingrédients, types de peau, routines et tendances beauté pour conseiller comme une experte' :
-      'Your AI Advisor masters ingredients, skin types, routines and beauty trends to advise like an expert',
+      'Votre Conseillère IA maîtrise ingrédients, types de peau, routines et tendances beauté pour conseiller comme une experte certifiée' :
+      'Your AI Advisor masters ingredients, skin types, routines and beauty trends to advise like a certified expert',
     colorClasses: {
       gradient: 'from-purple-500 via-pink-500 to-purple-600',
       bg: 'from-purple-50/80 via-pink-50/50 to-purple-50/80',
@@ -331,8 +331,8 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
     icon: <Heart className="h-7 w-7" />,
     title: language === 'fr' ? 'Conseils Ultra-Personnalisés' : 'Ultra-Personalized Advice',
     description: language === 'fr' ? 
-      'Diagnostic instantané avec recommandations adaptées au profil unique de chaque cliente' :
-      'Instant diagnosis with recommendations tailored to each customer\'s unique profile',
+      'Diagnostic instantané avec conseils et recommandations adaptés au profil unique de chaque cliente' :
+      'Instant diagnosis with tailored advice and recommendations for each customer\'s unique profile',
     colorClasses: {
       gradient: 'from-rose-500 via-pink-500 to-rose-600',
       bg: 'from-rose-50/80 via-pink-50/50 to-rose-50/80',
@@ -486,7 +486,7 @@ const PersonalizedAdviceVisual = ({ language }: { language: 'fr' | 'en' }) => (
               {language === 'fr' ? 'Maguette B., 28 ans' : 'Maguette B., 28 years old'}
             </div>
             <div className="text-xs text-gray-600">
-              {language === 'fr' ? 'Peau mixte, sensible' : 'Combination skin, sensitive'}
+              {language === 'fr' ? 'Cheveux très secs et fragiles' : 'Very dry and fragile hair'}
             </div>
           </div>
         </div>
