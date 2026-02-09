@@ -23,22 +23,22 @@ const NewFinalCTASection = () => {
           <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 mb-8 animate-fade-in">
             <Sparkles className="w-4 h-4 text-white" />
             <span className="text-sm font-semibold text-white">
-              {language === 'fr' ? '+10 marques beauté nous font déjà confiance' : '+10 beauty brands already trust us'}
+              {language === 'fr' ? 'Prête en 5 minutes, sans compétence technique' : 'Ready in 5 minutes, no technical skills'}
             </span>
           </div>
 
           {/* Main Headline */}
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight animate-fade-in [animation-delay:200ms]">
             {language === 'fr' ?
-              'Prête à libérer votre temps et augmenter vos ventes ?' :
-              'Ready to free up your time and increase your sales?'}
+              'Prêt à laisser votre vendeuse experte vendre pour vous ?' :
+              'Ready to let your expert salesperson sell for you?'}
           </h2>
 
           {/* Subheadline with key benefits */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed animate-fade-in [animation-delay:400ms]">
             {language === 'fr' ?
-              'Rejoignez les marques beauté qui font confiance à ChatSeller pour accueillir, conseiller et convertir leurs clientes 24h/24.' :
-              'Join the beauty brands that trust ChatSeller to welcome, advise and convert their customers 24/7.'}
+              'Elle répondra aux questions, rassurera vos clientes et collectera les ventes 24h/24, même pendant que vous dormez.' :
+              'She will answer questions, reassure your customers and collect sales 24/7, even while you sleep.'}
           </p>
 
           {/* Main CTA Buttons */}
@@ -49,7 +49,7 @@ const NewFinalCTASection = () => {
               asChild
             >
               <a href="https://dashboard.chatseller.app/register">
-                {language === 'fr' ? 'Lancer mon essai gratuit' : 'Start my free trial'}
+                {language === 'fr' ? 'Créer ma conseillère IA' : 'Create my AI advisor'}
                 <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -61,7 +61,7 @@ const NewFinalCTASection = () => {
               asChild
             >
               <a href="https://cal.com/chatseller/demo-beaute">
-                {language === 'fr' ? 'Réserver une démo' : 'Book a demo'}
+                {language === 'fr' ? 'Voir une démo' : 'See a demo'}
               </a>
             </Button>
           </div>

@@ -54,14 +54,14 @@ const NewProblemSolutionSection = () => {
         {/* Header avec nouveau titre beauté */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-            {language === 'fr' ? 
-              'Vos clientes méritent la même attention en ligne qu\'en boutique physique' : 
-              'Your customers deserve the same attention online as in physical stores'}
+            {language === 'fr' ?
+              'Et si votre meilleure vendeuse était déjà sur votre boutique ?' :
+              'What if your best salesperson was already on your store?'}
           </h2>
           <p className="text-xl text-gray-600">
-            {language === 'fr' ? 
-              'Remplacez le silence de votre site par un accompagnement expert qui convertit vos visiteurs en clientes fidèles.' :
-              'Replace your site\'s silence with expert guidance that turns visitors into loyal customers.'}
+            {language === 'fr' ?
+              'ChatSeller accompagne vos clientes exactement là où la décision se prend : sur la page produit.' :
+              'ChatSeller guides your customers exactly where the decision happens: on the product page.'}
           </p>
         </div>
 

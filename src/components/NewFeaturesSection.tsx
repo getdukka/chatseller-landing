@@ -173,20 +173,20 @@ const HeaderContent = ({ language }: { language: string }) => (
   <>
     <div className="inline-flex items-center px-6 py-3 mb-4 border border-rose-200 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 text-sm font-semibold text-rose-700 animate-fade-in">
       <Sparkles className="w-4 h-4 mr-2" />
-      {language === 'fr' ? 'Expertise Beauté Native' : 'Native Beauty Expertise'}
+      {language === 'fr' ? 'Ce que votre conseillère sait faire' : 'What your advisor can do'}
       <Heart className="w-4 h-4 ml-2" />
     </div>
-    
+
     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight animate-fade-in [animation-delay:200ms]">
-      {language === 'fr' ? 
-        'Une expertise beauté professionnelle, combinée à la puissance de l\'IA' : 
-        'Professional beauty expertise, combined with the power of AI'}
+      {language === 'fr' ?
+        'Elle conseille, rassure et vend. Exactement comme vous le feriez.' :
+        'She advises, reassures and sells. Exactly like you would.'}
     </h2>
-    
+
     <p className="text-lg text-gray-600 animate-fade-in [animation-delay:400ms]">
-      {language === 'fr' ? 
-        'Plus qu\'un simple chatbot, ChatSeller agit comme une experte certifiée. De l\'analyse des ingrédients au diagnostic de peau, elle guide vos clientes avec une précision chirurgicale pour déclencher l\'achat.' :
-        'More than just a chatbot, ChatSeller acts like a certified expert. From ingredient analysis to skin diagnosis, it guides your customers with surgical precision to trigger purchases.'}
+      {language === 'fr' ?
+        'Votre conseillère IA maîtrise vos produits, comprend les besoins de vos clientes et les guide vers l\'achat. Le tout, 24h/24.' :
+        'Your AI advisor masters your products, understands your customers\' needs and guides them to purchase. All of this, 24/7.'}
     </p>
   </>
 );

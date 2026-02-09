@@ -68,13 +68,14 @@ const NewPricingSection = () => {
         {/* Grille des plans beauté */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16 max-w-7xl mx-auto animate-fade-in [animation-delay:600ms]">
           
-          {/* Plan Starter */}
+          {/* Plan Conseiller (ex-Starter) */}
           <BeautyPricingCard
-            name="Starter"
+            name={language === 'fr' ? 'Conseiller' : 'Advisor'}
             monthlyPrice={45}
             yearlyPrice={Math.round(45 * 12 * 0.85 / 12)}
             billingPeriod={billingPeriod}
-            tag={language === 'fr' ? 'L’essentiel pour automatiser vos conseils et arrêter de perdre des ventes' : 'Essential to automate advice and stop losing sales'}
+            subtitle={language === 'fr' ? 'Commencez à vendre' : 'Start selling'}
+            tag={language === 'fr' ? 'Votre conseillère IA répond à toutes les questions et guide vers l\'achat, 24h/24.' : 'Your AI advisor answers all questions and guides to purchase, 24/7.'}
             roiBadge={language === 'fr' ? '1 vente = abonnement remboursé' : '1 sale = subscription paid'}
             fcfaPrice="29 500"
             features={getStarterFeatures(language)}
@@ -83,33 +84,35 @@ const NewPricingSection = () => {
             language={language}
           />
 
-          {/* Plan Growth - Le plus populaire */}
+          {/* Plan Vendre (ex-Growth) - Le plus populaire */}
           <BeautyPricingCard
-            name="Growth"
+            name={language === 'fr' ? 'Vendre' : 'Sell'}
             monthlyPrice={145}
             yearlyPrice={Math.round(145 * 12 * 0.85 / 12)}
             billingPeriod={billingPeriod}
-            tag={language === 'fr' ? 'Boostez votre panier moyen avec l’Upsell intelligent et l’ajout au panier' : 'Boost AOV with smart upsells and automated cart addition'}
+            subtitle={language === 'fr' ? 'Boostez votre panier moyen' : 'Boost your AOV'}
+            tag={language === 'fr' ? 'En plus : Upsell intelligent, ajout au panier automatique et analytics avancées.' : 'Plus: Smart upsells, auto add-to-cart and advanced analytics.'}
             roiBadge={language === 'fr' ? '~3 ventes = abonnement remboursé' : '~3 sales = subscription paid'}
             fcfaPrice="95 000"
             features={getGrowthFeatures(language)}
-            cta={language === 'fr' ? 'Commencer avec Growth' : 'Start with Growth'}
+            cta={language === 'fr' ? 'Booster mes ventes' : 'Boost my sales'}
             ctaLink="https://dashboard.chatseller.app/register?plan=growth"
             featured={true}
             language={language}
           />
 
-          {/* Plan Performance */}
+          {/* Plan Optimiser (ex-Performance) */}
           <BeautyPricingCard
-            name="Performance"
+            name={language === 'fr' ? 'Optimiser' : 'Optimize'}
             monthlyPrice={299}
             yearlyPrice={Math.round(299 * 12 * 0.85 / 12)}
             billingPeriod={billingPeriod}
-            tag={language === 'fr' ? 'La puissance maximale pour les marques leaders : CRM, Analytics & VIP support' : 'Maximum power for leading brands: CRM, Analytics & VIP support'}
-            roiBadge={language === 'fr' ? 'Configuré selon vos objectifs' : 'Configured to your goals'}
+            subtitle={language === 'fr' ? 'Scalez votre business' : 'Scale your business'}
+            tag={language === 'fr' ? 'En plus : CRM intégré, Success Manager dédié et personnalisation complète.' : 'Plus: Integrated CRM, dedicated Success Manager and full customization.'}
+            roiBadge={language === 'fr' ? 'ROI configuré selon vos objectifs' : 'ROI configured to your goals'}
             fcfaPrice="196 000"
             features={getPerformanceFeatures(language)}
-            cta={language === 'fr' ? 'Contacter notre équipe' : 'Contact our team'}
+            cta={language === 'fr' ? 'Parler à un expert' : 'Talk to an expert'}
             ctaLink="mailto:enterprise@chatseller.app"
             language={language}
             isEnterprise={true}
@@ -236,6 +239,7 @@ interface BeautyPricingCardProps {
   monthlyPrice: number;
   yearlyPrice: number;
   billingPeriod: 'monthly' | 'yearly';
+  subtitle?: string;
   tag: string;
   roiBadge: string;
   fcfaPrice?: string;
@@ -252,6 +256,7 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
   monthlyPrice,
   yearlyPrice,
   billingPeriod,
+  subtitle,
   tag,
   roiBadge,
   fcfaPrice,
@@ -290,7 +295,10 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
       )}
       
       <div className="text-center mb-8">
-        <h3 className="text-2xl font-bold mb-2 text-gray-900">{name}</h3>
+        <h3 className="text-2xl font-bold mb-1 text-gray-900">{name}</h3>
+        {subtitle && (
+          <p className="text-sm font-medium text-rose-600 mb-2">{subtitle}</p>
+        )}
         <div className="mb-4">
           <div>
             <span className="text-4xl md:text-5xl font-bold text-gray-900">{price}€</span>
@@ -354,10 +362,10 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
   const [visitors, setVisitors] = useState(2500);
   const [conversion, setConversion] = useState(2.8);
   const [averageOrder, setAverageOrder] = useState(85);
-  const [plan, setPlan] = useState('growth');
+  const [plan, setPlan] = useState('vendre');
 
-  const planPrices = { starter: 45, growth: 145, performance: 299 };
-  const conversionBoosts = { starter: 2.4, growth: 3.2, performance: 4.1 };
+  const planPrices = { conseiller: 45, vendre: 145, optimiser: 299 };
+  const conversionBoosts = { conseiller: 2.4, vendre: 3.2, optimiser: 4.1 };
 
   const currentRevenue = visitors * (conversion / 100) * averageOrder;
   const newConversion = Math.min(conversion * conversionBoosts[plan as keyof typeof conversionBoosts], 15);
@@ -471,34 +479,34 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
   );
 };
 
-// Features par plan - RÉÉCRITURE ICP BEAUTÉ
+// Features par plan - Orientées VALEUR BUSINESS
 const getStarterFeatures = (language: string) => [
+  language === 'fr' ? 'Conseillère IA experte de vos produits' : 'AI Advisor expert on your products',
+  language === 'fr' ? 'Réponses instantanées 24h/24, 7j/7' : 'Instant responses 24/7',
+  language === 'fr' ? 'Cartes produits cliquables dans le chat' : 'Clickable product cards in chat',
+  language === 'fr' ? 'Reprise de conversation par un humain' : 'Human takeover anytime',
+  language === 'fr' ? 'Tableau de bord des conversations' : 'Conversations dashboard',
   language === 'fr' ? '1 boutique Shopify ou WooCommerce' : '1 Shopify or WooCommerce store',
-  language === 'fr' ? 'Conseillère IA formée sur votre site' : 'AI Advisor trained on your store',
-  language === 'fr' ? '50 fichiers de connaissances (PDF, CSV...)' : '50 Knowledge files (PDF, CSV...)',
-  language === 'fr' ? 'Intervention humaine en temps réel' : 'Real-time human intervention',
-  language === 'fr' ? 'Cartes produits interactives' : 'Interactive product cards',
-  language === 'fr' ? 'Analytics de base (Ventes & Messages)' : 'Basic analytics (Sales & Messages)',
   language === 'fr' ? 'Support en français' : 'French support'
 ];
 
 const getGrowthFeatures = (language: string) => [
-  language === 'fr' ? 'Jusqu\'à 3 boutiques incluses' : 'Up to 3 included stores',
-  language === 'fr' ? '200 fichiers de connaissances' : '200 Knowledge files',
-  language === 'fr' ? 'Upsell Intelligent (Routines complètes)' : 'Smart Upsells (Routine building)',
-  language === 'fr' ? 'Ajout au panier automatique par l\'IA' : 'Automatic Add-to-Cart by AI',
-  language === 'fr' ? 'Analytics avancées & Insights clients' : 'Advanced analytics & Customer insights',
-  language === 'fr' ? 'Multi-langue (Français, Anglais...)' : 'Multi-language (FR, EN...)',
-  language === 'fr' ? 'Support prioritaire 7j/7' : '7/7 Priority support'
+  language === 'fr' ? 'Tout ce qui est inclus dans Conseiller' : 'Everything in Advisor plan',
+  language === 'fr' ? 'Upsell intelligent (ventes additionnelles)' : 'Smart upsells (additional sales)',
+  language === 'fr' ? 'Ajout au panier automatique par l\'IA' : 'Automatic add-to-cart by AI',
+  language === 'fr' ? 'Analytics avancées & insights clients' : 'Advanced analytics & customer insights',
+  language === 'fr' ? 'Multi-langue (FR, EN, et plus)' : 'Multi-language (FR, EN, and more)',
+  language === 'fr' ? 'Jusqu\'à 3 boutiques connectées' : 'Up to 3 connected stores',
+  language === 'fr' ? 'Support prioritaire 7j/7' : 'Priority support 7/7'
 ];
 
 const getPerformanceFeatures = (language: string) => [
-  language === 'fr' ? 'Boutiques & Fichiers illimités' : 'Unlimited stores & files',
+  language === 'fr' ? 'Tout ce qui est inclus dans Vendre' : 'Everything in Sell plan',
+  language === 'fr' ? 'Success Manager dédié (optimisation ROI)' : 'Dedicated Success Manager (ROI optimization)',
   language === 'fr' ? 'Intégrations CRM & Marketing sur mesure' : 'Custom CRM & Marketing integrations',
-  language === 'fr' ? 'Success Manager dédié (Optimisation ROI)' : 'Dedicated Success Manager (ROI Optimization)',
-  language === 'fr' ? 'Personnalisation Widget complète' : 'Full widget customization',
+  language === 'fr' ? 'Personnalisation complète du widget' : 'Full widget customization',
   language === 'fr' ? 'Accès API & Webhooks' : 'API & Webhooks access',
-  language === 'fr' ? 'Formation d\'équipe incluse' : 'Team training included',
+  language === 'fr' ? 'Boutiques & fichiers illimités' : 'Unlimited stores & files',
   language === 'fr' ? 'Support VIP 24/7' : '24/7 VIP Support'
 ];
 

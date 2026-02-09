@@ -1,45 +1,45 @@
 // src/components/NewBeautyProblemSection.tsx
 import { useState } from 'react';
-import { Clock, TrendingDown, AlertCircle, MessageCircle } from 'lucide-react';
+import { HelpCircle, List, ShieldQuestion, MessageCircle, AlertCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const NewBeautyProblemSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-  const frustrations = [
+  const customerQuestions = [
     {
-      icon: Clock,
-      iconColor: 'text-orange-400',
-      iconBg: 'bg-gradient-to-br from-orange-500/20 to-amber-500/10',
-      accentColor: 'from-orange-500 to-amber-500',
-      glowColor: 'shadow-orange-500/50',
+      icon: HelpCircle,
+      iconColor: 'text-rose-400',
+      iconBg: 'bg-gradient-to-br from-rose-500/20 to-pink-500/10',
+      accentColor: 'from-rose-500 to-pink-500',
+      glowColor: 'shadow-rose-500/50',
       title: t('beautyFrustration1Title'),
       quote: t('beautyFrustration1Quote'),
       description: t('beautyFrustration1Description'),
-      emoji: '⏰'
+      emoji: '🤔'
     },
     {
-      icon: TrendingDown,
-      iconColor: 'text-red-400',
-      iconBg: 'bg-gradient-to-br from-red-500/20 to-rose-500/10',
-      accentColor: 'from-red-500 to-rose-500',
-      glowColor: 'shadow-red-500/50',
+      icon: List,
+      iconColor: 'text-purple-400',
+      iconBg: 'bg-gradient-to-br from-purple-500/20 to-violet-500/10',
+      accentColor: 'from-purple-500 to-violet-500',
+      glowColor: 'shadow-purple-500/50',
       title: t('beautyFrustration2Title'),
       quote: t('beautyFrustration2Quote'),
       description: t('beautyFrustration2Description'),
-      emoji: '📉'
+      emoji: '📋'
     },
     {
-      icon: AlertCircle,
+      icon: ShieldQuestion,
       iconColor: 'text-amber-400',
-      iconBg: 'bg-gradient-to-br from-amber-500/20 to-yellow-500/10',
-      accentColor: 'from-amber-500 to-yellow-500',
+      iconBg: 'bg-gradient-to-br from-amber-500/20 to-orange-500/10',
+      accentColor: 'from-amber-500 to-orange-500',
       glowColor: 'shadow-amber-500/50',
       title: t('beautyFrustration3Title'),
       quote: t('beautyFrustration3Quote'),
       description: t('beautyFrustration3Description'),
-      emoji: '🤷‍♀️'
+      emoji: '🧐'
     }
   ];
 
@@ -65,9 +65,9 @@ const NewBeautyProblemSection = () => {
           </p>
         </div>
 
-        {/* Les 3 frustrations - 3 colonnes sur desktop, empilées sur mobile */}
+        {/* Les 3 questions clients - 3 colonnes sur desktop, empilées sur mobile */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16 md:mb-20 max-w-7xl mx-auto">
-          {frustrations.map((frustration, index) => (
+          {customerQuestions.map((question, index) => (
             <div
               key={index}
               className="group relative bg-white/5 backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:bg-white/10 animate-fade-in"
@@ -76,43 +76,43 @@ const NewBeautyProblemSection = () => {
               onMouseLeave={() => setHoveredCard(null)}
             >
               {/* Glow effect on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-r ${frustration.accentColor} opacity-0 group-hover:opacity-10 rounded-2xl sm:rounded-3xl transition-opacity duration-500 blur-xl`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-r ${question.accentColor} opacity-0 group-hover:opacity-10 rounded-2xl sm:rounded-3xl transition-opacity duration-500 blur-xl`}></div>
 
               {/* Content wrapper */}
               <div className="relative z-10">
                 {/* Header avec icône et emoji */}
                 <div className="flex items-start justify-between mb-4">
-                  <div className={`flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 ${frustration.iconBg} rounded-2xl backdrop-blur-sm border border-white/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 ${hoveredCard === index ? `shadow-2xl ${frustration.glowColor}` : 'shadow-lg'}`}>
-                    <frustration.icon className={`w-7 h-7 sm:w-8 sm:h-8 ${frustration.iconColor}`} />
+                  <div className={`flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 ${question.iconBg} rounded-2xl backdrop-blur-sm border border-white/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 ${hoveredCard === index ? `shadow-2xl ${question.glowColor}` : 'shadow-lg'}`}>
+                    <question.icon className={`w-7 h-7 sm:w-8 sm:h-8 ${question.iconColor}`} />
                   </div>
                   <span className="text-3xl sm:text-4xl group-hover:scale-125 transition-transform duration-300">
-                    {frustration.emoji}
+                    {question.emoji}
                   </span>
                 </div>
 
                 {/* Titre avec gradient */}
-                <h3 className={`text-xl sm:text-2xl font-bold mb-4 bg-gradient-to-r ${frustration.accentColor} bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 origin-left`}>
-                  {frustration.title}
+                <h3 className={`text-xl sm:text-2xl font-bold mb-4 bg-gradient-to-r ${question.accentColor} bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 origin-left`}>
+                  {question.title}
                 </h3>
 
                 {/* Citation avec style chat bubble */}
                 <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border-l-4 border-gradient rounded-2xl p-4 sm:p-5 mb-5 group-hover:bg-white/15 transition-all duration-300" style={{borderImageSlice: 1, borderImageSource: `linear-gradient(to bottom, var(--tw-gradient-stops))`}}>
-                  <div className={`absolute -left-1 top-0 bottom-0 w-1 bg-gradient-to-b ${frustration.accentColor} rounded-full`}></div>
+                  <div className={`absolute -left-1 top-0 bottom-0 w-1 bg-gradient-to-b ${question.accentColor} rounded-full`}></div>
                   <div className="flex items-start space-x-3">
-                    <MessageCircle className={`w-5 h-5 ${frustration.iconColor} flex-shrink-0 mt-0.5`} />
+                    <MessageCircle className={`w-5 h-5 ${question.iconColor} flex-shrink-0 mt-0.5`} />
                     <p className="text-sm sm:text-base font-semibold text-white italic leading-relaxed">
-                      "{frustration.quote}"
+                      "{question.quote}"
                     </p>
                   </div>
                 </div>
 
                 {/* Description */}
                 <p className="text-sm sm:text-base text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                  {frustration.description}
+                  {question.description}
                 </p>
 
                 {/* Ligne décorative animée */}
-                <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${frustration.accentColor} rounded-full transition-all duration-500 ${hoveredCard === index ? 'w-full' : 'w-0'}`}></div>
+                <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${question.accentColor} rounded-full transition-all duration-500 ${hoveredCard === index ? 'w-full' : 'w-0'}`}></div>
               </div>
             </div>
           ))}
@@ -145,7 +145,7 @@ const NewBeautyProblemSection = () => {
               {/* Icon badge */}
               <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
                 <AlertCircle className="w-5 h-5 text-white" />
-                <span className="text-sm font-bold text-white">Résultat</span>
+                <span className="text-sm font-bold text-white">{language === 'fr' ? 'Conséquence' : 'Consequence'}</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 sm:mb-6 leading-tight group-hover:scale-105 transition-transform duration-300 origin-left">

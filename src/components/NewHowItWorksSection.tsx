@@ -25,15 +25,15 @@ const NewHowItWorksSection = () => {
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-900 leading-tight animate-fade-in [animation-delay:200ms]">
-            {language === 'fr' ? 
-              'Créez, formez et activez votre Conseillère IA en 5 minutes' :
-              'Create, train, and activate your AI Advisor in 5 minutes'}
+            {language === 'fr' ?
+              'Connecter. Créer. Vendre. En 5 minutes.' :
+              'Connect. Create. Sell. In 5 minutes.'}
           </h2>
-          
+
           <p className="text-lg sm:text-xl text-gray-600 animate-fade-in [animation-delay:400ms]">
-            {language === 'fr' ? 
-              'Pas besoin d\'être technique. De l\'installation à la première conversation, tout est simple.' :
-              'No technical skills needed. From installation to first conversation, everything is easy.'}
+            {language === 'fr' ?
+              'Votre conseillère IA sera prête à vendre pour vous avant même que vous ayez fini votre café.' :
+              'Your AI advisor will be ready to sell for you before you even finish your coffee.'}
           </p>
         </div>
 
@@ -95,25 +95,25 @@ const NewHowItWorksSection = () => {
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-rose-600 mb-1 sm:mb-2">2min</div>
                 <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                  {language === 'fr' ? 'Installation' : 'Installation'}
+                  {language === 'fr' ? 'Connecter' : 'Connect'}
                 </div>
               </div>
-              
+
               <div className="text-lg sm:text-xl md:text-2xl text-gray-400 rotate-90 sm:rotate-0">+</div>
-              
+
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 mb-1 sm:mb-2">2min</div>
                 <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                  {language === 'fr' ? 'Formation IA' : 'AI Training'}
+                  {language === 'fr' ? 'Créer' : 'Create'}
                 </div>
               </div>
-              
+
               <div className="text-lg sm:text-xl md:text-2xl text-gray-400 rotate-90 sm:rotate-0">+</div>
-              
+
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-pink-600 mb-1 sm:mb-2">1min</div>
                 <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                  {language === 'fr' ? 'Activation' : 'Activation'}
+                  {language === 'fr' ? 'Vendre' : 'Sell'}
                 </div>
               </div>
               
@@ -239,11 +239,11 @@ const BeautyStepContent = ({
 // Données des étapes avec traductions complètes
 const getStepsData = (language: 'fr' | 'en') => [
   {
-    shortTitle: language === 'fr' ? 'Installation' : 'Install',
-    title: language === 'fr' ? 'Installation ChatSeller' : 'ChatSeller Installation',
+    shortTitle: language === 'fr' ? 'Connecter' : 'Connect',
+    title: language === 'fr' ? 'Connectez votre boutique' : 'Connect your store',
     description: language === 'fr' ?
-      'Installez ChatSeller sur votre boutique Shopify ou WooCommerce en quelques clics. Notre Widget importe automatiquement votre catalogue de produits.' :
-      'Install ChatSeller on your Shopify or WooCommerce store in just a few clicks. Our Widget automatically imports your product catalog.',
+      'Reliez ChatSeller à votre boutique Shopify ou WooCommerce. Vos produits sont automatiquement importés et votre conseillère les connaîtra instantanément.' :
+      'Link ChatSeller to your Shopify or WooCommerce store. Your products are automatically imported and your advisor will know them instantly.',
     icon: <Settings className="h-6 w-6 sm:h-8 sm:w-8" />,
     colorClasses: {
       text: 'text-blue-600',
@@ -251,20 +251,20 @@ const getStepsData = (language: 'fr' | 'en') => [
       bgDark: 'bg-blue-500'
     },
     features: [
-      language === 'fr' ? 'Widget copier-coller simple' : 'Simple copy-paste widget',
-      language === 'fr' ? 'Compatible Shopify & WordPress' : 'Compatible with Shopify & WordPress',
-      language === 'fr' ? 'Import catalogue produits automatique' : 'Automatic product catalog import',
-      language === 'fr' ? 'Configuration des paramètres de base' : 'Basic settings configuration'
+      language === 'fr' ? 'Connexion en un clic à Shopify/WooCommerce' : 'One-click Shopify/WooCommerce connection',
+      language === 'fr' ? 'Import automatique de tous vos produits' : 'Automatic import of all your products',
+      language === 'fr' ? 'Synchronisation des prix et stocks' : 'Price and stock synchronization',
+      language === 'fr' ? 'Aucune compétence technique requise' : 'No technical skills required'
     ],
     timeEstimate: language === 'fr' ? '2 minutes' : '2 minutes',
     difficulty: language === 'fr' ? 'Très facile' : 'Very easy'
   },
   {
-    shortTitle: language === 'fr' ? 'Formation' : 'Training',
-    title: language === 'fr' ? 'Formation de votre Conseillère IA' : 'Training your AI Advisor',
-    description: language === 'fr' ? 
-      'Votre Conseillère IA se forme automatiquement à partir de votre site, vos fiches produits et vos FAQ. Vous pouvez ajouter des informations spécifiques à votre marque pour qu\'elle réponde exactement comme vous le feriez.' :
-      'Your AI Advisor trains automatically from your website, product sheets, and FAQs. You can add brand-specific information so she responds exactly as you would.',
+    shortTitle: language === 'fr' ? 'Créer' : 'Create',
+    title: language === 'fr' ? 'Créez votre conseillère experte' : 'Create your expert advisor',
+    description: language === 'fr' ?
+      'Donnez une personnalité à votre conseillère et formez-la sur vos produits. Elle apprend automatiquement tout ce qu\'elle doit savoir pour conseiller vos clientes comme vous le feriez.' :
+      'Give your advisor a personality and train her on your products. She automatically learns everything she needs to advise your customers just like you would.',
     icon: <Brain className="h-6 w-6 sm:h-8 sm:w-8" />,
     colorClasses: {
       text: 'text-purple-600',
@@ -272,20 +272,20 @@ const getStepsData = (language: 'fr' | 'en') => [
       bgDark: 'bg-purple-500'
     },
     features: [
-      language === 'fr' ? 'Import automatique de votre site web' : 'Automatic website import',
-      language === 'fr' ? 'Upload fichiers PDF, CSV, DOCX' : 'Upload PDF, CSV, DOCX files',
-      language === 'fr' ? 'Ajout de connaissances par texte libre' : 'Add knowledge via free text',
-      language === 'fr' ? 'Formation spécialisée sur votre secteur' : 'Industry specialized training'
+      language === 'fr' ? 'Personnalisez son nom et sa personnalité' : 'Customize her name and personality',
+      language === 'fr' ? 'Formation automatique sur vos produits' : 'Automatic training on your products',
+      language === 'fr' ? 'Ajoutez vos connaissances métier' : 'Add your business knowledge',
+      language === 'fr' ? 'Elle maîtrise votre catalogue en minutes' : 'She masters your catalog in minutes'
     ],
     timeEstimate: language === 'fr' ? '2 minutes' : '2 minutes',
     difficulty: language === 'fr' ? 'Simple' : 'Simple'
   },
   {
-    shortTitle: language === 'fr' ? 'Activation' : 'Activate',
-    title: language === 'fr' ? 'Activation sur votre boutique' : 'Activation on your store',
-    description: language === 'fr' ? 
-      'Testez votre Conseillère IA dans le Playground, puis activez-la d\'un clic. Le widget apparaît instantanément et commence à à accueillir, conseiller et convertir vos visiteurs' :
-      'Test your AI Advisor in the Playground, then activate it with one click. The widget appears instantly and starts welcoming, advising, and converting your visitors.',
+    shortTitle: language === 'fr' ? 'Vendre' : 'Sell',
+    title: language === 'fr' ? 'Laissez-la vendre pour vous' : 'Let her sell for you',
+    description: language === 'fr' ?
+      'Activez votre conseillère et regardez-la transformer vos visiteurs en clientes. Elle répond aux questions, recommande les bons produits et collecte les commandes pendant que vous dormez.' :
+      'Activate your advisor and watch her turn visitors into customers. She answers questions, recommends the right products, and collects orders while you sleep.',
     icon: <Zap className="h-6 w-6 sm:h-8 sm:w-8" />,
     colorClasses: {
       text: 'text-green-600',
@@ -293,10 +293,10 @@ const getStepsData = (language: 'fr' | 'en') => [
       bgDark: 'bg-green-500'
     },
     features: [
-      language === 'fr' ? 'Test complet dans le Playground' : 'Complete testing in Playground',
-      language === 'fr' ? 'Personnalisation apparence widget' : 'Widget appearance customization',
-      language === 'fr' ? 'Activation instantanée en un clic' : 'Instant one-click activation',
-      language === 'fr' ? 'Début des conversions immédiates' : 'Immediate conversions start'
+      language === 'fr' ? 'Disponible 24h/24, 7j/7' : 'Available 24/7',
+      language === 'fr' ? 'Répond instantanément à chaque cliente' : 'Responds instantly to every customer',
+      language === 'fr' ? 'Recommande les produits adaptés' : 'Recommends the right products',
+      language === 'fr' ? 'Collecte les commandes automatiquement' : 'Collects orders automatically'
     ],
     timeEstimate: language === 'fr' ? '1 minute' : '1 minute',
     difficulty: language === 'fr' ? 'Instantané' : 'Instant'

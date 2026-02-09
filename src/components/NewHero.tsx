@@ -6,7 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import ChatModal from './ChatModal';
 
 const NewHero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isChatModalOpen, setIsChatModalOpen] = useState(false);
 
   // Tracking events
@@ -91,13 +91,14 @@ const NewHero = () => {
             
             {/* Social Proof Premium Beauté - Responsive */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-6 md:gap-8 mb-8 sm:mb-10 animate-fade-in [animation-delay:500ms]">
+              {/* Badge 14 jours d'essai */}
+              <div className="flex items-center text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-3 rounded-full border border-rose-200/50 shadow-sm">
+                <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-rose-500 mr-2" />
+                <span className="font-medium">{language === 'fr' ? '14 jours d\'essai gratuits' : '14-day free trial'}</span>
+              </div>
               <div className="flex items-center text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-3 rounded-full border border-rose-200/50 shadow-sm">
                 <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-2" />
                 <span className="font-medium">{t('days14Trial')}</span>
-              </div>
-              <div className="flex items-center text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-3 rounded-full border border-rose-200/50 shadow-sm">
-                <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-amber-500 mr-2" />
-                <span className="font-medium">{t('oneClickInstall')}</span>
               </div>
               <div className="flex items-center text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-3 rounded-full border border-rose-200/50 shadow-sm">
                 <Star className="w-3 h-3 sm:w-4 sm:h-4 text-purple-500 mr-2" />
@@ -232,7 +233,7 @@ const SocialProofBadge = () => {
           ))}
         </div>
         <span className="text-xs sm:text-sm text-gray-700 font-semibold">
-          {language === 'fr' ? '+10 marques beauté en bêta test' : '+10 beauty brands in beta'}
+          {language === 'fr' ? 'Déjà utilisé par +10 marques beauté | +150% de conversion en moyenne' : 'Already used by 10+ beauty brands | +150% conversion on average'}
         </span>
       </div>
     </div>
@@ -627,25 +628,7 @@ const BeautyHeroChatInterface = ({ onDemoClick }: { onDemoClick: () => void }) =
         </div>
       </div>
 
-      {/* Éléments flottants crédibles - MASQUÉS SUR MOBILE ET TABLETTE */}
-      <div className="absolute -right-6 top-1/4 animate-bounce hidden xl:block">
-        <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-3 rounded-xl shadow-xl text-sm font-bold backdrop-blur-sm border border-green-300">
-          {language === 'fr' ? 'Réponse instantanée' : 'Instant Response'}
-        </div>
-      </div>
-      
-      <div className="absolute -left-6 bottom-1/3 animate-bounce hidden xl:block" style={{animationDelay: '0.5s'}}>
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-3 rounded-xl shadow-xl text-sm font-bold backdrop-blur-sm border border-blue-300">
-          {language === 'fr' ? 'Disponible 24h/7' : 'Available 24/7'}
-        </div>
-      </div>
-
-      <div className="absolute -right-4 bottom-1/4 animate-pulse hidden xl:block">
-        <div className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-3 py-2 rounded-lg shadow-lg text-xs font-semibold">
-          <Heart className="w-3 h-3 inline mr-1" />
-          {language === 'fr' ? 'Conseil personnalisé' : 'Personalized advice'}
-        </div>
-      </div>
+      {/* Badges flottants supprimés pour ne pas détourner l'attention */}
     </div>
   );
 };

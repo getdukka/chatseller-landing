@@ -536,6 +536,7 @@ interface Translations {
   // METRICS & LABELS
   conversionIncrease400: string;
   conversionIncrease200: string;
+  conversionBoost: string;
   days14Trial: string;
   oneClickInstall: string;
   beautySector: string;
@@ -598,9 +599,9 @@ const translations: Record<Language, Translations> = {
 
     // Hero Section beauté
     beautySectorSpecialized: 'Essai gratuit 14 jours',
-    newHeroTitleBeauty: 'Libérez-vous de WhatsApp. Votre Conseillère IA vend pour vous 24h/24.',
-    newHeroTitleBeautyAlt: 'Ne laissez plus aucune vente vous échapper. Votre IA vend pour vous 24h/24',
-    newHeroSubtitleBeauty: 'Transformez chaque visiteur hésitant en acheteur fidèle grâce à une Conseillère IA formée sur vos produits qui conseille vos clientes, lève leurs doutes et collecte les commandes automatiquement.',
+    newHeroTitleBeauty: 'Votre vendeuse experte en beauté, disponible 24h/24 sur votre site.',
+    newHeroTitleBeautyAlt: 'Votre meilleure vendeuse est une IA. Elle conseille, rassure et convertit 24h/24.',
+    newHeroSubtitleBeauty: 'Elle répond aux questions spécifiques, rassure sur le choix, recommande les bonnes routines et vend directement dans la conversation. Ne laissez plus vos clientes hésiter seules devant un produit.',
     beautyBrandsAlreadyTesting: 'Déjà adopté par +10 marques beauté',
     averageConversionBeauty: '+267% conversions moyennes',
     
@@ -616,23 +617,23 @@ const translations: Record<Language, Translations> = {
     platformsZeroFees: '0€',
     
     // Beauty Problem Section (NEW)
-    beautyProblemTitle: 'Vos clientes veulent acheter maintenant. Mais il n\'y a personne pour les guider.',
-    beautyProblemSubtitle: 'Contrairement aux autres secteurs, vos clientes ne veulent pas juste acheter un produit. Elles viennent avec leur situation personnelle et attendent un accompagnement sur-mesure pour être rassurées avant de passer à l\'achat.',
+    beautyProblemTitle: 'Vos clientes veulent acheter. Elles ont juste besoin d\'être rassurées.',
+    beautyProblemSubtitle: 'Chaque jour, des clientes prêtes à acheter quittent votre site parce qu\'elles n\'ont pas trouvé de réponse à leur question. Voici ce qu\'elles se demandent...',
 
-    beautyFrustration1Title: 'Le "silence" qui tue la vente',
-    beautyFrustration1Quote: 'Elle m\'a contacté sur WhatsApp, mais j\'étais occupée. Quand j\'ai répondu 10 minutes plus tard, elle était déjà partie.',
-    beautyFrustration1Description: 'Sur internet, la cliente n\'attend pas. Si elle ne trouve personne pour répondre à sa question sur votre site, elle s\'en va. Un bouton WhatsApp vers un compte injoignable est le meilleur moyen de perdre une vente au profit d\'un concurrent plus réactif.',
+    beautyFrustration1Title: '"Est-ce adapté à MA peau ?"',
+    beautyFrustration1Quote: 'J\'ai la peau mixte avec des taches. Est-ce que ce sérum va marcher pour moi ou aggraver mes problèmes ?',
+    beautyFrustration1Description: 'Vos clientes ont des peaux uniques : grasses, sèches, sensibles, sujettes à l\'hyperpigmentation... Elles veulent être sûres que votre produit est fait pour ELLES avant d\'acheter.',
 
-    beautyFrustration2Title: 'Le piège de WhatsApp',
-    beautyFrustration2Quote: 'Je passe 2 à 3h par jour à répéter que notre crème convient aux peaux grasses, au lieu de développer ma marque.',
-    beautyFrustration2Description: 'Répondre manuellement et chaque jour aux mêmes questions sur vos produits, ce n\'est pas faire grandir votre marque. C\'est s\'épuiser. Votre temps doit être consacré au développement de votre marque, pas à répondre à 50 messages identiques par jour sur WhatsApp ou en DM.',
+    beautyFrustration2Title: '"Quelle routine choisir ?"',
+    beautyFrustration2Quote: 'Je vois plein de produits mais je ne sais pas par où commencer. Dans quel ordre les appliquer ?',
+    beautyFrustration2Description: 'Face à votre catalogue, vos clientes sont perdues. Elles ont besoin d\'un guide qui leur dit exactement quoi prendre et comment l\'utiliser pour leurs besoins.',
 
-    beautyFrustration3Title: 'La peur du mauvais conseil',
-    beautyFrustration3Quote: 'J\'ai peur que mon assistante donne un mauvais conseil technique et que ça nous retombe dessus.',
-    beautyFrustration3Description: 'La beauté est technique. Ingrédients, routines complexes, types de peaux/cheveux spécifiques... Il est difficile de former une équipe qui répond avec la précision d\'une experte 24h/24. Une seule erreur peut nuire à votre image de marque et faire fuir vos clientes.',
+    beautyFrustration3Title: '"C\'est vraiment efficace ?"',
+    beautyFrustration3Quote: 'J\'ai déjà essayé des produits similaires sans résultat. Comment je sais que celui-ci va marcher ?',
+    beautyFrustration3Description: 'Vos clientes ont été déçues avant. Elles cherchent des preuves, des explications sur les ingrédients, des témoignages. Sans ça, elles n\'osent pas acheter.',
 
-    beautyProblemConclusion: 'Et si vous pouviez offrir à chaque cliente de votre site l\'expérience personnalisée qu\'elle attend, sans y passer vos journées ?',
-    beautyProblemConclusionSub: 'C\'est exactement ce que fait ChatSeller...',
+    beautyProblemConclusion: 'Sans réponse immédiate, elles quittent votre site et achètent chez un concurrent.',
+    beautyProblemConclusionSub: 'ChatSeller répond à toutes ces questions instantanément, 24h/24.',
 
     // Problem-Solution (OLD)
     problemTitle: '73% de vos visiteurs',
@@ -1166,7 +1167,7 @@ Contactez-nous avec :
     // LANDING PAGE REFONTE - FR
     newHeroTitle: "Augmentez vos ventes de 200 à 400% grâce à un vendeur IA qui conseille vos clients comme en boutique",
     newHeroSubtitle: "ChatSeller transforme vos visiteurs en acheteurs en répondant à leurs questions, en les rassurant et en recommandant les bons produits, comme une esthéticienne disponible 24/7.",
-    newHeroCTAPrimary: "Essayer gratuitement",
+    newHeroCTAPrimary: "Créer ma conseillère IA",
     newHeroCTASecondary: "Voir comment ça marche",
     newHeroTrialPeriod: "14 jours d'essai gratuits",
     
@@ -1269,6 +1270,7 @@ Contactez-nous avec :
     // METRICS & LABELS
     conversionIncrease400: "+400% de conversions",
     conversionIncrease200: "+200% de ventes",
+    conversionBoost: "+150% de conversion en moyenne",
     days14Trial: "14 jours d'essai gratuits",
     oneClickInstall: "Installation en 2min",
     beautySector: "Secteur beauté",
@@ -1328,9 +1330,9 @@ Contactez-nous avec :
 
     // Hero Section beauté
     beautySectorSpecialized: '14-day free trial',
-    newHeroTitleBeauty: 'Free\u00A0yourself\u00A0from\u00A0WhatsApp. Your AI Advisor sells for you 24/7.',
-    newHeroTitleBeautyAlt: 'Don\'t let any sale slip away. Your AI sells for you 24/7.',
-    newHeroSubtitleBeauty: 'Turn every hesitant visitor into a buyer with an AI Advisor trained on your products that advises your customers, reassures them, and collects orders automatically.',
+    newHeroTitleBeauty: 'Your expert beauty salesperson, available 24/7 on your website.',
+    newHeroTitleBeautyAlt: 'Your best salesperson is an AI. It advises, reassures and converts 24/7.',
+    newHeroSubtitleBeauty: 'She answers specific questions, reassures about the right choice, recommends the best routines and sells directly in the conversation. Don\'t let your customers hesitate alone in front of a product.',
     beautyBrandsAlreadyTesting: 'Already trusted by 10+ beauty brands',
     averageConversionBeauty: '+267% average conversions',
     
@@ -1346,23 +1348,23 @@ Contactez-nous avec :
     platformsZeroFees: '$0',
 
     // Beauty Problem Section (NEW)
-    beautyProblemTitle: 'Your customers are ready to buy. Don\'t leave them standing in an empty shop.',
-    beautyProblemSubtitle: 'Unlike other industries, beauty customers aren’t just looking for a product. They come with unique concerns and expect tailored advice to feel confident before checking out.',
+    beautyProblemTitle: 'Your customers want to buy. They just need reassurance.',
+    beautyProblemSubtitle: 'Every day, customers ready to buy leave your site because they couldn\'t find answers to their questions. Here\'s what they\'re asking...',
 
-    beautyFrustration1Title: 'The \'Silence\' that kills the sale',
-    beautyFrustration1Quote: 'She messaged me on WhatsApp, but I was busy. By the time I replied 10 minutes later, she was already gone.',
-    beautyFrustration1Description: 'Online, customers don’t wait. If no one is there to answer their questions instantly, they leave. A WhatsApp button leading to an unresponsive account is the fastest way to lose a sale to a more reactive competitor.',
+    beautyFrustration1Title: '"Is this right for MY skin?"',
+    beautyFrustration1Quote: 'I have combination skin with dark spots. Will this serum work for me or make my problems worse?',
+    beautyFrustration1Description: 'Your customers have unique skin: oily, dry, sensitive, prone to hyperpigmentation... They want to be sure your product is made for THEM before buying.',
 
-    beautyFrustration2Title: 'The WhatsApp trap',
-    beautyFrustration2Quote: 'I spend 2 to 3 hours a day repeating that our cream is for oily skin, instead of actually growing my brand.',
-    beautyFrustration2Description: 'Manually answering the same product questions every single day isn’t scaling—it’s burnout. Your time should be spent building your business, not responding to 50 identical DMs or WhatsApp messages.',
+    beautyFrustration2Title: '"Which routine should I choose?"',
+    beautyFrustration2Quote: 'I see so many products but don\'t know where to start. In what order should I apply them?',
+    beautyFrustration2Description: 'Faced with your catalog, your customers are lost. They need a guide to tell them exactly what to get and how to use it for their specific needs.',
 
-    beautyFrustration3Title: 'The fear of bad advice',
-    beautyFrustration3Quote: 'I’m worried my assistant might give the wrong technical advice and it’ll come back to haunt us.',
-    beautyFrustration3Description: 'Beauty is technical. Ingredients, complex routines, specific skin and hair types... It’s hard to train a team to respond with expert-level precision 24/7. One wrong recommendation can damage your brand’s reputation and drive customers away.',
+    beautyFrustration3Title: '"Does this really work?"',
+    beautyFrustration3Quote: 'I\'ve tried similar products before with no results. How do I know this one will actually work?',
+    beautyFrustration3Description: 'Your customers have been disappointed before. They\'re looking for proof, explanations about ingredients, testimonials. Without that, they won\'t dare to buy.',
 
-    beautyProblemConclusion: 'What if you could give every visitor the personalized experience they expect, without spending your entire day on it?',
-    beautyProblemConclusionSub: 'That’s exactly what ChatSeller does...',
+    beautyProblemConclusion: 'Without an immediate answer, they leave your site and buy from a competitor.',
+    beautyProblemConclusionSub: 'ChatSeller answers all these questions instantly, 24/7.',
 
     // Problem-Solution
     problemTitle: '73% of your visitors',
@@ -2001,6 +2003,7 @@ Contact us with:
     // METRICS & LABELS
     conversionIncrease400: "+400% conversions",
     conversionIncrease200: "+200% sales",
+    conversionBoost: "+150% conversion on average",
     days14Trial: "14 days free trial",
     oneClickInstall: "2-minute install",
     beautySector: "Beauty sector",
