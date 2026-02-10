@@ -81,7 +81,7 @@ const NewHero = () => {
                 className="group rounded-full px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold border-2 border-rose-300 hover:border-rose-400 hover:bg-rose-50 transition-all duration-300 transform hover:scale-105"
                 onClick={() => {
                   handleCTAClick('secondary');
-                  document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' });
+                  document.getElementById('problem-solution')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5 text-rose-600" />

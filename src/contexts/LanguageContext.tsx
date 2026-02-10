@@ -599,9 +599,9 @@ const translations: Record<Language, Translations> = {
 
     // Hero Section beauté
     beautySectorSpecialized: 'Essai gratuit 14 jours',
-    newHeroTitleBeauty: 'Transformez l\'hésitation de vos clients en achats, directement sur votre boutique.',
-    newHeroTitleBeautyAlt: 'Votre vendeuse experte en beauté, disponible 24h/24 sur votre site.',
-    newHeroSubtitleBeauty: 'Grâce à une Vendeuse IA intégrée à votre boutique, vos clientes obtiennent des réponses instantanées, des recommandations personnalisées et peuvent acheter directement dans la conversation.',
+    newHeroTitleBeauty: 'Transformez les visiteurs hésitants de votre boutique en acheteurs',
+    newHeroTitleBeautyAlt: 'Votre vendeuse experte en beauté, disponible 24h/24 sur votre boutique.',
+    newHeroSubtitleBeauty: 'Intégrez une Vendeuse IA experte de vos produits : elle conseille vos clientes, recommande la routine idéale et vend directement dans la conversation. Résultat : +150% de ventes en moyenne.',
     beautyBrandsAlreadyTesting: 'Déjà adopté par +10 marques beauté',
     averageConversionBeauty: '+267% conversions moyennes',
     
@@ -1330,9 +1330,9 @@ Contactez-nous avec :
 
     // Hero Section beauté
     beautySectorSpecialized: '14-day free trial',
-    newHeroTitleBeauty: 'Turn customer hesitation into purchases, right on your store.',
-    newHeroTitleBeautyAlt: 'Your expert beauty salesperson, available 24/7 on your website.',
-    newHeroSubtitleBeauty: 'With an AI Salesperson integrated into your store, your customers get instant answers, personalized recommendations and can buy directly in the conversation.',
+    newHeroTitleBeauty: 'Turn hesitant visitors into buyers on your store',
+    newHeroTitleBeautyAlt: 'Your expert beauty salesperson, available 24/7 on your store.',
+    newHeroSubtitleBeauty: 'Integrate an AI Salesperson who knows your products: she advises your customers, recommends the ideal routine and sells directly in the conversation. Result: +150% sales on average.',
     beautyBrandsAlreadyTesting: 'Already trusted by 10+ beauty brands',
     averageConversionBeauty: '+267% average conversions',
     
