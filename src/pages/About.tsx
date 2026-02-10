@@ -53,7 +53,7 @@ const About = () => {
               <p className="text-lg sm:text-xl text-gray-700 mb-8 animate-fade-in [animation-delay:400ms] leading-relaxed max-w-3xl mx-auto">
                 {language === 'fr' ? 
                   "Nous croyons que chaque marque beauté mérite d'avoir sa propre Vendeuse IA experte, capable de guider et convertir ses clientes 24/7 comme le ferait la meilleure esthéticienne en institut." :
-                  "We believe every beauty brand deserves to have its own expert AI advisor, capable of guiding and converting customers 24/7 just like the best beautician in a salon would."
+                  "We believe every beauty brand deserves to have its own expert AI Salesperson, capable of guiding and converting customers 24/7 just like the best beautician in a salon would."
                 }
               </p>
               
@@ -172,7 +172,7 @@ const About = () => {
                     <p className="text-gray-800 font-medium text-sm sm:text-base leading-relaxed">
                       {language === 'fr' ?
                         "C'est ainsi qu'est née notre spécialisation : une Vendeuse IA qui comprend les différents types de peau et cheveux, et sait créer des routines beauté personnalisées adaptées aux besoins spécifiques de chaque cliente. " :
-                        "This is how our specialization was born: an AI Advisor who understands different skin and hair types, and knows how to create personalized beauty routines adapted to each customer's specific needs. "}
+                        "This is how our specialization was born: an AI Salesperson who understands different skin and hair types, and knows how to create personalized beauty routines adapted to each customer's specific needs. "}
                       <span className="text-rose-600 font-bold">
                         {language === 'fr' ?
                           "Pour que chaque marque beauté puisse offrir l'expertise d'une conseillère qualifiée, 24h/24." :
@@ -243,7 +243,7 @@ const About = () => {
                   <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                     {language === 'fr' ?
                       "D'ici 2028, chaque site beauté aura sa Vendeuse IA spécialisée, exactement comme chaque institut a ses esthéticiennes. Nous serons le leader africain de cette transformation." :
-                      "By 2028, every beauty site will have its specialized AI advisor, just like every salon has its beauticians. We will be the African leader of this transformation."
+                      "By 2028, every beauty site will have its specialized AI Salesperson, just like every salon has its beauticians. We will be the African leader of this transformation."
                     }
                   </p>
                 </div>
@@ -284,7 +284,7 @@ const About = () => {
                         <strong>
                           {language === 'fr' ? "Disponibilité :" : "Availability:"}
                         </strong>{" "}
-                        {language === 'fr' ? "Vendeuse IA 24/7" : "AI Advisor 24/7"}
+                        {language === 'fr' ? "Vendeuse IA 24/7" : "AI Salesperson 24/7"}
                       </span>
                     </div>
                   </div>
@@ -332,7 +332,7 @@ const About = () => {
                   <p className="text-gray-700 leading-relaxed text-sm mb-4">
                     {language === 'fr' ?
                       "Experte en IA et développement logiciel, Julia conçoit et maintient l'architecture technique de ChatSeller. Elle s'assure que notre Vendeuse IA offre des performances optimales et une expérience fluide à chaque interaction." :
-                      "Expert in AI and software development, Julia designs and maintains ChatSeller's technical architecture. She ensures our AI Advisor delivers optimal performance and a smooth experience with every interaction."
+                      "Expert in AI and software development, Julia designs and maintains ChatSeller's technical architecture. She ensures our AI Salesperson delivers optimal performance and a smooth experience with every interaction."
                     }
                   </p>
                 </div>
@@ -470,7 +470,7 @@ const About = () => {
                   <p className="text-gray-700 mb-6 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
                     {language === 'fr' ? 
                       "Rejoignez les marques beauté qui ont choisi ChatSeller pour offrir l'expertise d'une Vendeuse IA à leurs clientes et booster leurs conversions." :
-                      "Join the beauty brands that chose ChatSeller to offer AI advisor expertise to their customers and boost their conversions."
+                      "Join the beauty brands that chose ChatSeller to offer AI Salesperson expertise to their customers and boost their conversions."
                     }
                   </p>
                 </div>

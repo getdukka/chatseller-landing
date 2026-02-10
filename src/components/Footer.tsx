@@ -187,6 +187,17 @@ const Footer = () => {
                   {language === 'fr' ? 'Contacter l\'équipe' : 'Contact the team'}
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://docs.chatseller.app"
+                  className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
+                  Documentation
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -212,6 +223,12 @@ const Footer = () => {
                 <a href="/legal" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
                   {language === 'fr' ? 'Mentions Légales' : 'Legal Notice'}
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group">
+                  <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
+                  {language === 'fr' ? 'À Propos' : 'About'}
                 </a>
               </li>
             </ul>
