@@ -56,9 +56,9 @@ const NewHero = () => {
             <BeautyABTestHeadline />
             
             {/* Sous-titre premium - Responsive */}
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-3xl animate-fade-in [animation-delay:400ms] leading-relaxed">
-              {t('newHeroSubtitleBeauty')}
-            </p>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-3xl animate-fade-in [animation-delay:400ms] leading-relaxed"
+               dangerouslySetInnerHTML={{ __html: t('newHeroSubtitleBeauty') }}
+            />
 
             {/* CTAs Premium - Responsive */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto mb-8 sm:mb-12 animate-fade-in [animation-delay:600ms]">

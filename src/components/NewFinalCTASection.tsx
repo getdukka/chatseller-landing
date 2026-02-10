@@ -37,8 +37,8 @@ const NewFinalCTASection = () => {
           {/* Subheadline with key benefits */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed animate-fade-in [animation-delay:400ms]">
             {language === 'fr' ?
-              'Elle répondra aux questions, rassurera vos clientes et collectera les ventes 24h/24, même pendant que vous dormez.' :
-              'She will answer questions, reassure your customers and collect sales 24/7, even while you sleep.'}
+              'Elle répondra aux questions, rassurera vos clientes et collectera les ventes 24h/24.' :
+              'She will answer questions, reassure your customers and collect sales 24/7.'}
           </p>
 
           {/* Main CTA Buttons */}

@@ -117,7 +117,7 @@ const BeforeCard = () => {
             <div className="w-3 h-3 bg-green-400 rounded-full"></div>
           </div>
           <div className="flex-1 bg-white rounded px-3 py-1 text-sm text-gray-600">
-            nywele-africa.com
+            nywele-cosmetics.com
           </div>
         </div>
 
@@ -232,7 +232,7 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
             <div className="w-3 h-3 bg-green-400 rounded-full"></div>
           </div>
           <div className="flex-1 bg-white rounded px-3 py-1 text-sm text-gray-600">
-            nywele-africa.com
+            nywele-cosmetics.com
           </div>
         </div>
 

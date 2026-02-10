@@ -33,8 +33,8 @@ const NewPricingSection = () => {
           
           <p className="text-xl text-gray-600 mb-8 animate-fade-in [animation-delay:400ms]">
             {language === 'fr' ? 
-              'Une seule vente supplémentaire par mois suffit à rentabiliser ChatSeller. Combien de ventes perdez-vous actuellement faute de répondre à temps ?' :
-              'Just one additional sale per month is enough to make ChatSeller profitable. How many sales are you currently losing due to delayed responses?'}
+              'Une seule vente supplémentaire par mois suffit à rentabiliser ChatSeller.' :
+              'Just one additional sale per month is enough to make ChatSeller profitable.'}
           </p>
 
           {/* Toggle mensuel/annuel */}
@@ -167,10 +167,10 @@ const NewPricingSection = () => {
               <div className="flex items-center justify-center space-x-4 py-4">
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-rose-600">
-                    {language === 'fr' ? '+200 000' : '+200,000'}
+                    {language === 'fr' ? '1 800€' : '€1,800'}
                   </div>
                   <div className="text-sm text-gray-600 mt-1">
-                    {language === 'fr' ? 'FCFA / mois' : 'FCFA / month'}
+                    {language === 'fr' ? '/ mois' : '/ month'}
                   </div>
                   <div className="text-xs text-gray-500 mt-1">
                     {language === 'fr' ? '(Salaire vendeuse)' : '(Salesperson salary)'}
@@ -181,13 +181,13 @@ const NewPricingSection = () => {
 
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-emerald-600">
-                    {language === 'fr' ? '29 500' : '29,500'}
+                    {language === 'fr' ? '45€' : '€45'}
                   </div>
                   <div className="text-sm text-gray-600 mt-1">
-                    {language === 'fr' ? 'FCFA / mois' : 'FCFA / month'}
+                    {language === 'fr' ? '/ mois' : '/ month'}
                   </div>
                   <div className="text-xs text-gray-500 mt-1">
-                    {language === 'fr' ? '(ChatSeller Starter)' : '(ChatSeller Starter)'}
+                    {language === 'fr' ? '(ChatSeller Conseiller)' : '(ChatSeller Advisor)'}
                   </div>
                 </div>
               </div>
@@ -195,8 +195,8 @@ const NewPricingSection = () => {
               <div className="bg-white/80 backdrop-blur rounded-xl p-6 mt-6 border border-rose-100">
                 <p className="text-base md:text-lg text-gray-800 font-medium leading-relaxed">
                   {language === 'fr' ?
-                    'ChatSeller, c\'est cette vendeuse d\'exception pour votre boutique en ligne. Elle ne dort jamais, ne se fatigue jamais, et répond instantanément à toutes vos clientes, 24h/24.' :
-                    'ChatSeller is that exceptional salesperson for your online store. She never sleeps, never gets tired, and instantly responds to all your customers, 24/7.'}
+                    'ChatSeller, c\'est cette vendeuse d\'exception pour votre boutique en ligne. Elle maîtrise vos produits, ne se fatigue jamais, et répond instantanément à toutes vos clientes, 24h/24.' :
+                    'ChatSeller is that exceptional salesperson for your online store. She masters your products, never gets tired, and instantly responds to all your customers, 24/7.'}
                 </p>
               </div>
 
@@ -365,7 +365,7 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
   const [plan, setPlan] = useState('vendre');
 
   const planPrices = { conseiller: 45, vendre: 145, optimiser: 299 };
-  const conversionBoosts = { conseiller: 2.4, vendre: 3.2, optimiser: 4.1 };
+  const conversionBoosts = { conseiller: 2.0, vendre: 2.5, optimiser: 3.2 };
 
   const currentRevenue = visitors * (conversion / 100) * averageOrder;
   const newConversion = Math.min(conversion * conversionBoosts[plan as keyof typeof conversionBoosts], 15);

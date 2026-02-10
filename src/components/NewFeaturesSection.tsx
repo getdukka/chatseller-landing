@@ -173,7 +173,7 @@ const HeaderContent = ({ language }: { language: string }) => (
   <>
     <div className="inline-flex items-center px-6 py-3 mb-4 border border-rose-200 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 text-sm font-semibold text-rose-700 animate-fade-in">
       <Sparkles className="w-4 h-4 mr-2" />
-      {language === 'fr' ? 'Ce que votre conseillère sait faire' : 'What your advisor can do'}
+      {language === 'fr' ? 'Ce que votre Vendeuse IA sait faire' : 'What your AI Salesperson can do'}
       <Heart className="w-4 h-4 ml-2" />
     </div>
 
@@ -185,8 +185,8 @@ const HeaderContent = ({ language }: { language: string }) => (
 
     <p className="text-lg text-gray-600 animate-fade-in [animation-delay:400ms]">
       {language === 'fr' ?
-        'Votre Vendeuse IA maîtrise vos produits, comprend les besoins de vos clientes et les guide vers l\'achat. Le tout, 24h/24.' :
-        'Your AI advisor masters your products, understands your customers\' needs and guides them to purchase. All of this, 24/7.'}
+        'Votre Vendeuse IA maîtrise vos produits, comprend les besoins de vos clientes et les guide vers l\'achat, 24h/24.' :
+        'Your AI Salesperson masters your products, understands your customers\' needs and guides them to purchase, 24/7.'}
     </p>
   </>
 );
