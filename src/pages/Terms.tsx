@@ -482,7 +482,7 @@ const Terms = () => {
                     <div className="space-y-4 text-purple-800">
                       <div className="text-center py-4">
                         <div className="text-4xl font-bold text-purple-600">30</div>
-                        <div className="text-purple-700">{language === 'fr' ? "jours satisfait ou remboursé" : "days satisfied or refunded"}</div>
+                        <div className="text-purple-700">{language === 'fr' ? "jours pour annuler, sans engagement" : "days to cancel, no commitment"}</div>
                       </div>
                       <div className="space-y-3">
                         <div className="flex items-center">

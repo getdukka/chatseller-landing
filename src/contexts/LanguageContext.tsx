@@ -1108,7 +1108,7 @@ Contactez-nous avec :
 - Facture envoyée par email
 - Historique dans votre Dashboard
 
-💡 **Garantie** : Satisfait ou remboursé sous 30 jours`,
+💡 **Garantie** : Annulation en 1 clic, sans engagement`,
 
     faqChangePlanQ: "Puis-je changer de plan à tout moment ?",
     faqChangePlanA: `Oui, vous avez une flexibilité totale :
@@ -1592,7 +1592,7 @@ Contactez-nous avec :
     annaHowItWorks: 'Excellent question! Mia combines 3 scientifically proven technologies:\n\n🔥 **Thermotherapy**: Heat (45°C) dilates blood vessels and relaxes muscles\n💆 **Massage therapy**: Vibrations block pain signals to the brain\n🌸 **Relaxation**: The combined effect reduces stress and anxiety\n\nResult: 92% of our customers feel relief from the first use!',
     annaBattery: 'Mia has a 4-hour battery life and charges in 2h via USB-C! ⚡ It heats up in just 30 seconds. Perfect for use at home, office or on the go. Its high-quality lithium battery lasts for years.',
     annaDelivery: '🚚 Free delivery throughout Senegal within 48-72h! We also deliver to Côte d\'Ivoire, Mali, Burkina Faso (+€5). Discreet package, SMS tracking. Our delivery drivers are trained for confidentiality.',
-    annaWarranty: '🛡️ You are 100% protected! 2-year manufacturer warranty + 30 days satisfied or refunded. If Mia doesn\'t suit you, free return and full refund, no questions asked!',
+    annaWarranty: '🛡️ You are 100% protected! 2-year manufacturer warranty + cancel anytime in 1 click. If Mia doesn\'t suit you, free return and full refund, no questions asked!',
     annaReviews: '🌟 Our customers love Mia! 4.8/5 stars, over 850 positive reviews. Fatou (Dakar): \'Mia changed my life!\'. Aïcha (Thiès): \'No more anti-inflammatories!\'. 94% recommend to their friends.',
     annaSafety: 'Mia is 100% safe! CE certified, controlled temperature (45°C max), automatic shut-off after 4h. Over 850 women use it without problems. No side effects unlike medications.',
     annaPain: 'I understand perfectly! 75% of women in Senegal suffer from \'unbearable\' menstrual pain. Mia was specially designed after a study with 50 Senegalese women. It acts on the source of pain, not just symptoms.',
@@ -1840,7 +1840,7 @@ Contact us with:
 - Invoice sent by email
 - History in your Dashboard
 
-💡 **Guarantee:** Satisfied or refunded within 30 days`,
+💡 **Guarantee:** Cancel in 1 click, no commitment`,
 
     faqChangePlanQ: "Can I change plans anytime?",
     faqChangePlanA: `Yes, you have total flexibility:

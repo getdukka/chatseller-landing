@@ -91,10 +91,10 @@ const NewHero = () => {
             
             {/* Social Proof Premium Beauté - Responsive */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-6 md:gap-8 mb-8 sm:mb-10 animate-fade-in [animation-delay:500ms]">
-              {/* Badge 14 jours d'essai */}
+              {/* Badge aucun paiement requis */}
               <div className="flex items-center text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-3 rounded-full border border-rose-200/50 shadow-sm">
                 <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-rose-500 mr-2" />
-                <span className="font-medium">{language === 'fr' ? '14 jours d\'essai gratuits' : '14-day free trial'}</span>
+                <span className="font-medium">{language === 'fr' ? 'Aucun paiement requis' : 'No payment required'}</span>
               </div>
               <div className="flex items-center text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-3 rounded-full border border-rose-200/50 shadow-sm">
                 <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-2" />
@@ -227,7 +227,7 @@ const SocialProofBadge = () => {
 
       {/* Texte et étoiles */}
       <div className="flex flex-col">
-        <div className="flex items-center space-x-0.5 sm:space-x-1 mb-0.5">
+        <div className="hidden sm:flex items-center space-x-0.5 sm:space-x-1 mb-0.5">
           {[...Array(5)].map((_, i) => (
             <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-yellow-400" />
           ))}
