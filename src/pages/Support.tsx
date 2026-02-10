@@ -80,8 +80,8 @@ const SupportPage = () => {
         'Comment installer ChatSeller sur ma boutique Shopify beauté ?' :
         'How do I install ChatSeller on my Shopify beauty store?',
       answer: language === 'fr' ? 
-        `**Installation en 2 minutes :**\n\n1. Connectez-vous à votre **Dashboard ChatSeller**\n2. Allez dans "Intégrations" > "Shopify"\n3. Cliquez sur "Connecter ma boutique Shopify"\n4. Autorisez ChatSeller à accéder à votre boutique\n5. Votre conseillère beauté IA est **automatiquement installée** !\n\n*Votre widget apparaîtra immédiatement sur toutes les pages produits beauté.*` :
-        `**2-minute installation:**\n\n1. Log into your **ChatSeller Dashboard**\n2. Go to "Integrations" > "Shopify"\n3. Click "Connect my Shopify store"\n4. Authorize ChatSeller to access your store\n5. Your AI beauty advisor is **automatically installed**!\n\n*Your widget will immediately appear on all beauty product pages.*`,
+        `**Installation en 2 minutes :**\n\n1. Connectez-vous à votre **Dashboard ChatSeller**\n2. Allez dans "Intégrations" > "Shopify"\n3. Cliquez sur "Connecter ma boutique Shopify"\n4. Autorisez ChatSeller à accéder à votre boutique\n5. Votre Vendeuse IA est **automatiquement installée** !\n\n*Votre widget apparaîtra immédiatement sur toutes les pages produits beauté.*` :
+        `**2-minute installation:**\n\n1. Log into your **ChatSeller Dashboard**\n2. Go to "Integrations" > "Shopify"\n3. Click "Connect my Shopify store"\n4. Authorize ChatSeller to access your store\n5. Your AI Salesperson is **automatically installed**!\n\n*Your widget will immediately appear on all beauty product pages.*`,
       tags: language === 'fr' ? 
         ['shopify', 'installation', 'beauté', 'automatique'] :
         ['shopify', 'installation', 'beauty', 'automatic']
@@ -92,8 +92,8 @@ const SupportPage = () => {
         'ChatSeller fonctionne-t-il avec WooCommerce pour les marques beauté ?' :
         'Does ChatSeller work with WooCommerce for beauty brands?',
       answer: language === 'fr' ? 
-        `**Parfaitement compatible avec WooCommerce :**\n\n1. Téléchargez notre **plugin WooCommerce** depuis le dashboard\n2. Installez le plugin dans votre admin WordPress\n3. Entrez votre **clé API ChatSeller**\n4. Configurez les pages où afficher la conseillère\n5. Votre IA beauté est opérationnelle !\n\n*Compatible avec tous les thèmes beauté et cosmétiques WooCommerce.*` :
-        `**Perfectly compatible with WooCommerce:**\n\n1. Download our **WooCommerce plugin** from the dashboard\n2. Install the plugin in your WordPress admin\n3. Enter your **ChatSeller API key**\n4. Configure which pages to display the advisor\n5. Your beauty AI is operational!\n\n*Compatible with all WooCommerce beauty and cosmetics themes.*`,
+        `**Parfaitement compatible avec WooCommerce :**\n\n1. Téléchargez notre **plugin WooCommerce** depuis le dashboard\n2. Installez le plugin dans votre admin WordPress\n3. Entrez votre **clé API ChatSeller**\n4. Configurez les pages où afficher la Vendeuse IA\n5. Votre Vendeuse IA est opérationnelle !\n\n*Compatible avec tous les thèmes beauté et cosmétiques WooCommerce.*` :
+        `**Perfectly compatible with WooCommerce:**\n\n1. Download our **WooCommerce plugin** from the dashboard\n2. Install the plugin in your WordPress admin\n3. Enter your **ChatSeller API key**\n4. Configure which pages to display the AI Salesperson\n5. Your AI Salesperson is operational!\n\n*Compatible with all WooCommerce beauty and cosmetics themes.*`,
       tags: language === 'fr' ? 
         ['woocommerce', 'plugin', 'wordpress', 'beauté'] :
         ['woocommerce', 'plugin', 'wordpress', 'beauty']
@@ -102,7 +102,7 @@ const SupportPage = () => {
       category: 'configuration',
       question: language === 'fr' ? 
         'Comment configurer ma Vendeuse IA pour qu\'elle connaisse mes produits beauté ?' :
-        'How do I configure my AI advisor to know my beauty products?',
+        'How do I configure my AI Salesperson to know my beauty products?',
       answer: language === 'fr' ? 
         `**Configuration automatique + personnalisation :**\n\n**Automatique :**\n• ChatSeller **importe automatiquement** tous vos produits\n• Analyse les descriptions, ingrédients, bénéfices\n• Reconnaît les catégories (skincare, maquillage, parfums...)\n\n**Personnalisation avancée :**\n• Ajoutez des **conseils d'utilisation** spécifiques\n• Définissez les **types de peau** compatibles\n• Configurez les **routines beauté** recommandées\n• Ajoutez des **contre-indications** si nécessaire` :
         `**Automatic configuration + customization:**\n\n**Automatic:**\n• ChatSeller **automatically imports** all your products\n• Analyzes descriptions, ingredients, benefits\n• Recognizes categories (skincare, makeup, fragrances...)\n\n**Advanced customization:**\n• Add specific **usage advice**\n• Define compatible **skin types**\n• Configure recommended **beauty routines**\n• Add **contraindications** if necessary`,
@@ -113,8 +113,8 @@ const SupportPage = () => {
     {
       category: 'configuration',
       question: language === 'fr' ? 
-        'Comment personnaliser le ton de ma conseillère beauté IA ?' :
-        'How do I customize the tone of my AI beauty advisor?',
+        'Comment personnaliser le ton de ma Vendeuse IA ?' :
+        'How do I customize the tone of my AI Salesperson?',
       answer: language === 'fr' ? 
         `**Personnalisation complète du ton :**\n\n**Dans "Configuration" > "Personnalité" :**\n• **Style de conseil :** Professionnel, Amical, Expert, Tendance\n• **Niveau d'expertise :** Débutant, Intermédiaire, Expert\n• **Approche vente :** Subtile, Directe, Consultative\n• **Vocabulaire :** Technique, Accessible, Luxe, Naturel\n\n**Exemples pré-configurés pour beauté :**\n• "Esthéticienne experte et bienveillante"\n• "Conseillère beauté branchée et moderne"\n• "Experte cosmétiques naturels et bio"` :
         `**Complete tone customization:**\n\n**In "Configuration" > "Personality":**\n• **Advice style:** Professional, Friendly, Expert, Trendy\n• **Expertise level:** Beginner, Intermediate, Expert\n• **Sales approach:** Subtle, Direct, Consultative\n• **Vocabulary:** Technical, Accessible, Luxury, Natural\n\n**Pre-configured examples for beauty:**\n• "Expert and caring beautician"\n• "Trendy and modern beauty advisor"\n• "Natural and organic cosmetics expert"`,
@@ -162,7 +162,7 @@ const SupportPage = () => {
       category: 'technical',
       question: language === 'fr' ? 
         'Que faire si ma Vendeuse IA ne répond pas correctement aux questions beauté ?' :
-        'What if my AI advisor doesn\'t respond correctly to beauty questions?',
+        'What if my AI Salesperson doesn\'t respond correctly to beauty questions?',
       answer: language === 'fr' ? 
         `**Amélioration continue de l'IA :**\n\n**Diagnostic automatique :**\n• Analysez les **conversations** dans votre dashboard\n• Identifiez les **questions mal comprises**\n• Consultez les **métriques de satisfaction**\n\n**Amélioration rapide :**\n• Ajoutez des **réponses personnalisées** dans "Base de connaissances"\n• Enrichissez les **descriptions produits**\n• Contactez notre équipe pour un **fine-tuning** gratuit\n• Formation IA mise à jour **chaque semaine**\n\n**Support expert :**\n• **Chat en direct** avec nos experts IA beauté\n• **Audit gratuit** de votre configuration` :
         `**Continuous AI improvement:**\n\n**Automatic diagnosis:**\n• Analyze **conversations** in your dashboard\n• Identify **misunderstood questions**\n• Check **satisfaction metrics**\n\n**Quick improvement:**\n• Add **custom answers** in "Knowledge base"\n• Enrich **product descriptions**\n• Contact our team for free **fine-tuning**\n• AI training updated **every week**\n\n**Expert support:**\n• **Live chat** with our beauty AI experts\n• **Free audit** of your configuration`,
@@ -176,8 +176,8 @@ const SupportPage = () => {
         'Quels sont les prix ChatSeller pour une marque beauté ?' :
         'What are ChatSeller prices for a beauty brand?',
       answer: language === 'fr' ? 
-        `**Plans adaptés aux marques beauté :**\n\n**Starter (29€/mois) :**\n• Jusqu'à **1 000 conversations/mois**\n• Intégration Shopify/WooCommerce\n• Base de connaissances beauté\n\n**Growth (99€/mois) :**\n• Jusqu'à **10 000 conversations/mois**\n• Analytics avancés\n• Personnalisation complète\n• Support prioritaire\n\n**Pro (299€/mois) :**\n• **Conversations illimitées**\n• Multi-boutiques\n• API personnalisée\n• Success manager dédié\n\n**✨ 14 jours gratuits pour toutes les marques beauté**` :
-        `**Plans adapted for beauty brands:**\n\n**Starter (€29/month):**\n• Up to **1,000 conversations/month**\n• Shopify/WooCommerce integration\n• Beauty knowledge base\n\n**Growth (€99/month):**\n• Up to **10,000 conversations/month**\n• Advanced analytics\n• Complete customization\n• Priority support\n\n**Pro (€299/month):**\n• **Unlimited conversations**\n• Multi-store\n• Custom API\n• Dedicated success manager\n\n**✨ 14 days free for all beauty brands**`,
+        `**Plans adaptés aux marques beauté :**\n\n**Conseiller (45€/mois) :**\n• Jusqu'à **1 000 conversations/mois**\n• Intégration Shopify/WooCommerce\n• Base de connaissances beauté\n\n**Vendre (145€/mois) :**\n• Jusqu'à **10 000 conversations/mois**\n• Analytics avancés\n• Personnalisation complète\n• Support prioritaire\n\n**Optimiser (299€/mois) :**\n• **Conversations illimitées**\n• Multi-boutiques\n• API personnalisée\n• Success manager dédié\n\n**✨ 14 jours gratuits pour toutes les marques beauté**` :
+        `**Plans adapted for beauty brands:**\n\n**Advisor (€45/month):**\n• Up to **1,000 conversations/month**\n• Shopify/WooCommerce integration\n• Beauty knowledge base\n\n**Sell (€145/month):**\n• Up to **10,000 conversations/month**\n• Advanced analytics\n• Complete customization\n• Priority support\n\n**Optimize (€299/month):**\n• **Unlimited conversations**\n• Multi-store\n• Custom API\n• Dedicated success manager\n\n**✨ 14 days free for all beauty brands**`,
       tags: language === 'fr' ? 
         ['prix', 'plans', 'facturation', 'beauté'] :
         ['pricing', 'plans', 'billing', 'beauty']
@@ -188,8 +188,8 @@ const SupportPage = () => {
         'Puis-je changer de plan ou annuler mon abonnement ?' :
         'Can I change plans or cancel my subscription?',
       answer: language === 'fr' ? 
-        `**Flexibilité totale :**\n\n**Changement de plan :**\n• **Upgrade immédiat** : Paiement au prorata\n• **Downgrade** : Effectif au prochain cycle\n• **Pas de frais** de changement\n• **Historique préservé**\n\n**Annulation :**\n• **Annulation immédiate** depuis le dashboard\n• **Pas d'engagement** minimum\n• **Export des données** disponible\n• **Réactivation simple** possible\n\n**Garantie satisfaction :**\n• **Remboursement intégral** sous 30 jours\n• **Migration gratuite** depuis d'autres solutions` :
-        `**Total flexibility:**\n\n**Plan changes:**\n• **Immediate upgrade**: Pro-rated payment\n• **Downgrade**: Effective next cycle\n• **No change fees**\n• **History preserved**\n\n**Cancellation:**\n• **Immediate cancellation** from dashboard\n• **No minimum commitment**\n• **Data export** available\n• **Simple reactivation** possible\n\n**Satisfaction guarantee:**\n• **Full refund** within 30 days\n• **Free migration** from other solutions`,
+        `**Flexibilité totale :**\n\n**Changement de plan :**\n• **Upgrade immédiat** : Paiement au prorata\n• **Downgrade** : Effectif au prochain cycle\n• **Pas de frais** de changement\n• **Historique préservé**\n\n**Annulation :**\n• **Annulation immédiate** depuis le dashboard\n• **Pas d'engagement** minimum\n• **Export des données** disponible\n• **Réactivation simple** possible\n\n**Garantie satisfaction :**\n• **Annulation en 1 clic** depuis le dashboard\n• **Migration gratuite** depuis d'autres solutions` :
+        `**Total flexibility:**\n\n**Plan changes:**\n• **Immediate upgrade**: Pro-rated payment\n• **Downgrade**: Effective next cycle\n• **No change fees**\n• **History preserved**\n\n**Cancellation:**\n• **Immediate cancellation** from dashboard\n• **No minimum commitment**\n• **Data export** available\n• **Simple reactivation** possible\n\n**Satisfaction guarantee:**\n• **Cancel in 1 click** from dashboard\n• **Free migration** from other solutions`,
       tags: language === 'fr' ? 
         ['annulation', 'changement', 'flexibilité', 'remboursement'] :
         ['cancellation', 'changes', 'flexibility', 'refund']
@@ -286,8 +286,8 @@ const SupportPage = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               {language === 'fr' ? 
-                'Assistance experte pour optimiser votre Vendeuse IA et maximiser vos conversions' : 
-                'Expert assistance to optimize your AI advisor and maximize your conversions'}
+                'Assistance experte pour optimiser votre Vendeuse IA et maximiser vos conversions' :
+                'Expert assistance to optimize your AI Salesperson and maximize your conversions'}
             </p>
             
             {/* Search Bar */}
@@ -296,8 +296,8 @@ const SupportPage = () => {
               <Input
                 type="text"
                 placeholder={language === 'fr' ? 
-                  'Rechercher dans la documentation (ex: "installation Shopify", "Formation Vendeuse IA"...)' : 
-                  'Search the docs (e.g. "Shopify installation", "AI Advisor training"...)'}
+                  'Rechercher dans la documentation (ex: "installation Shopify", "Formation Vendeuse IA"...)' :
+                  'Search the docs (e.g. "Shopify installation", "AI Salesperson training"...)'}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-12 pr-4 py-4 text-lg rounded-2xl border-rose-200 focus:border-rose-400 focus:ring-rose-100"
