@@ -599,8 +599,8 @@ const translations: Record<Language, Translations> = {
 
     // Hero Section beauté
     beautySectorSpecialized: 'Essai gratuit 14 jours',
-    newHeroTitleBeauty: 'Votre vendeuse experte en beauté, disponible 24h/24 sur votre site.',
-    newHeroTitleBeautyAlt: 'Votre meilleure vendeuse est une IA. Elle conseille, rassure et convertit 24h/24.',
+    newHeroTitleBeauty: 'Transformez l\'hésitation de vos clients en achats, directement sur votre boutique.',
+    newHeroTitleBeautyAlt: 'Votre vendeuse experte en beauté, disponible 24h/24 sur votre site.',
     newHeroSubtitleBeauty: 'Elle répond aux questions spécifiques, rassure sur le choix, recommande les bonnes routines et vend directement dans la conversation. Ne laissez plus vos clientes hésiter seules devant un produit.',
     beautyBrandsAlreadyTesting: 'Déjà adopté par +10 marques beauté',
     averageConversionBeauty: '+267% conversions moyennes',
@@ -1330,8 +1330,8 @@ Contactez-nous avec :
 
     // Hero Section beauté
     beautySectorSpecialized: '14-day free trial',
-    newHeroTitleBeauty: 'Your expert beauty salesperson, available 24/7 on your website.',
-    newHeroTitleBeautyAlt: 'Your best salesperson is an AI. It advises, reassures and converts 24/7.',
+    newHeroTitleBeauty: 'Turn customer hesitation into purchases, right on your store.',
+    newHeroTitleBeautyAlt: 'Your expert beauty salesperson, available 24/7 on your website.',
     newHeroSubtitleBeauty: 'She answers specific questions, reassures about the right choice, recommends the best routines and sells directly in the conversation. Don\'t let your customers hesitate alone in front of a product.',
     beautyBrandsAlreadyTesting: 'Already trusted by 10+ beauty brands',
     averageConversionBeauty: '+267% average conversions',
