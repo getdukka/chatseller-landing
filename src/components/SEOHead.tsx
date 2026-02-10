@@ -29,8 +29,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "AI Salesperson, AI beauty salesperson, beauty e-commerce chatbot, conversational AI sales, beauty sales automation, Shopify AI, WooCommerce chatbot, increase store sales, automatic selling 24/7, AI beauty advisor, ChatSeller, beauty brands, skincare AI, Africa e-commerce";
 
   const defaultTitle = language === 'fr' ?
-    "ChatSeller - Vendeuse IA pour boutiques beauté | +150% de ventes" :
-    "ChatSeller - AI Salesperson for beauty stores | +150% sales increase";
+    "ChatSeller - Vendeuse IA pour marques beauté | +150% de ventes en moyenne" :
+    "ChatSeller - AI Salesperson for beauty brands | +150% sales increase on average";
 
   const defaultDescription = language === 'fr' ?
     "Intégrez une Vendeuse IA experte de vos produits sur votre boutique Shopify ou WooCommerce. Elle conseille vos clientes, recommande les bons produits et vend 24h/24. +150% de ventes en moyenne. Essai gratuit 14 jours." :
@@ -78,7 +78,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={language === 'fr' ? "ChatSeller - Vendeuse IA pour boutiques beauté" : "ChatSeller - AI Salesperson for beauty stores"} />
+      <meta property="og:image:alt" content={language === 'fr' ? "ChatSeller - Vendeuse IA pour marques beauté" : "ChatSeller - AI Salesperson for beauty brands"} />
       <meta property="og:locale" content={language === 'fr' ? 'fr_FR' : 'en_US'} />
       <meta property="og:locale:alternate" content={language === 'fr' ? 'en_US' : 'fr_FR'} />
 
@@ -89,7 +89,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:title" content={title || defaultTitle} />
       <meta name="twitter:description" content={description || defaultDescription} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content={language === 'fr' ? "ChatSeller - Vendeuse IA pour boutiques beauté" : "ChatSeller - AI Salesperson for beauty stores"} />
+      <meta name="twitter:image:alt" content={language === 'fr' ? "ChatSeller - Vendeuse IA pour marques beauté" : "ChatSeller - AI Salesperson for beauty brands"} />
 
       {/* LINKEDIN */}
       <meta property="linkedin:owner" content="getdukka" />
@@ -167,8 +167,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           "@type": "Product",
           "name": "ChatSeller",
           "description": language === 'fr' ?
-            "Vendeuse IA pour boutiques beauté. Elle conseille vos clientes, recommande les bons produits et vend 24h/24. +150% de ventes en moyenne." :
-            "AI Salesperson for beauty stores. She advises your customers, recommends the right products and sells 24/7. +150% sales on average.",
+            "Vendeuse IA pour marques beauté. Elle conseille vos clientes, recommande les bons produits et vend 24h/24. +150% de ventes en moyenne." :
+            "AI Salesperson for beauty brands. She advises your customers, recommends the right products and sells 24/7. +150% sales on average.",
           "brand": {
             "@type": "Brand",
             "name": "ChatSeller"

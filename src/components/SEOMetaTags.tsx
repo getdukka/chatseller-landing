@@ -11,7 +11,7 @@ const SEOMetaTags = () => {
 
   const seoData = {
     fr: {
-      title: "ChatSeller - Vendeuse IA pour boutiques beauté | +150% de ventes",
+      title: "ChatSeller - Vendeuse IA pour marques beauté | +150% de ventes en moyenne",
       description: "Intégrez une Vendeuse IA experte de vos produits sur votre boutique Shopify ou WooCommerce. Elle conseille vos clientes, recommande les bons produits et vend 24h/24. +150% de ventes en moyenne. Essai gratuit 14 jours.",
       keywords: "Vendeuse IA, vendeuse IA beauté, chatbot e-commerce beauté, IA conversationnelle vente, Shopify IA, WooCommerce chatbot, augmenter ventes boutique, conseillère beauté IA, ChatSeller",
       ogTitle: "ChatSeller - Votre Vendeuse IA experte beauté, disponible 24h/24",
@@ -19,7 +19,7 @@ const SEOMetaTags = () => {
       author: "ChatSeller by Dukka"
     },
     en: {
-      title: "ChatSeller - AI Salesperson for beauty stores | +150% sales increase",
+      title: "ChatSeller - AI Salesperson for beauty brands | +150% sales increase on average",
       description: "Integrate an AI Salesperson who knows your products on your Shopify or WooCommerce store. She advises your customers, recommends the right products and sells 24/7. +150% sales on average. 14-day free trial.",
       keywords: "AI Salesperson, AI beauty salesperson, beauty e-commerce chatbot, conversational AI sales, Shopify AI, WooCommerce chatbot, increase store sales, AI beauty advisor, ChatSeller",
       ogTitle: "ChatSeller - Your expert AI beauty Salesperson, available 24/7",

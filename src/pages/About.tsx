@@ -1,14 +1,12 @@
-// src/pages/About.tsx 
+// src/pages/About.tsx
 import React from 'react';
 import NewNavbar from '@/components/NewNavBar';
 import Footer from '../components/Footer';
-import { 
-  Heart, 
-  Target, 
-  Eye, 
-  Zap, 
-  Globe, 
-  Users,
+import {
+  Heart,
+  Target,
+  Eye,
+  Globe,
   ArrowRight,
   CheckCircle2,
   Store,
@@ -16,9 +14,8 @@ import {
   Brain,
   TrendingUp,
   Lightbulb,
-  Award,
   ShoppingCart,
-  Star
+  CheckCircle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -29,35 +26,35 @@ const About = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <NewNavbar />
-      
+
       <main className="flex-1 pt-20">
-        {/* Hero Section - Thème Beauté */}
+        {/* Hero Section */}
         <section className="py-20 sm:py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-rose-50/80 via-pink-50/50 to-white -z-10" />
           <div className="absolute top-1/4 right-1/3 w-80 h-80 sm:w-96 sm:h-96 bg-gradient-to-br from-rose-200/30 to-pink-200/20 rounded-full blur-3xl -z-10" />
           <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-purple-200/20 to-rose-200/15 rounded-full blur-2xl -z-10" />
-          
+
           <div className="container px-4 sm:px-6 md:px-12 mx-auto">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 border border-rose-200 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 text-sm font-semibold text-rose-700 animate-fade-in">
                 <Heart className="w-4 h-4 mr-2" />
-                {language === 'fr' ? "Les Agents IA spécialisés des marques beauté" : "The specialized AI Agents for beauty brands"}
+                {language === 'fr' ? "La Vendeuse IA des Marques Beauté" : "The AI Salesperson for Beauty Brands"}
                 <Sparkles className="w-4 h-4 ml-2" />
               </div>
-              
+
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 animate-fade-in [animation-delay:200ms] leading-tight">
                 {language === 'fr' ? "À Propos de" : "About"}
                 <span className="bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 bg-clip-text text-transparent"> ChatSeller</span>
               </h1>
-              
+
               <p className="text-lg sm:text-xl text-gray-700 mb-8 animate-fade-in [animation-delay:400ms] leading-relaxed max-w-3xl mx-auto">
-                {language === 'fr' ? 
-                  "Nous croyons que chaque marque beauté mérite d'avoir sa propre Vendeuse IA experte, capable de guider et convertir ses clientes 24/7 comme le ferait la meilleure esthéticienne en institut." :
-                  "We believe every beauty brand deserves to have its own expert AI Salesperson, capable of guiding and converting customers 24/7 just like the best beautician in a salon would."
+                {language === 'fr' ?
+                  "Les clientes des marques beauté veulent être conseillées, guidées, accompagnées. Sur une boutique en ligne, elles sont seules face aux produits et à leurs doutes. ChatSeller transforme cette expérience statique en une conversation experte et personnalisée, comme en boutique physique." :
+                  "Beauty brand customers want to be advised, guided, and supported. On an online store, they're left alone with products and their doubts. ChatSeller transforms this static experience into an expert, personalized conversation, just like in a physical store."
                 }
               </p>
-              
-              {/* Stats beauté */}
+
+              {/* Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 max-w-2xl mx-auto animate-fade-in [animation-delay:600ms]">
                 <div className="text-center">
                   <div className="text-2xl sm:text-3xl font-bold text-rose-600">14</div>
@@ -74,7 +71,7 @@ const About = () => {
                 <div className="text-center col-span-2 sm:col-span-1">
                   <div className="text-2xl sm:text-3xl font-bold text-pink-600">+10</div>
                   <div className="text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'Marques bêta' : 'Beta brands'}
+                    {language === 'fr' ? 'Marques convaincues' : 'Convinced brands'}
                   </div>
                 </div>
               </div>
@@ -82,7 +79,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Origin Story - Version beauté */}
+        {/* Origin Story */}
         <section className="py-16 sm:py-20 bg-gradient-to-b from-white to-rose-50/30">
           <div className="container px-4 sm:px-6 md:px-12 mx-auto">
             <div className="max-w-5xl mx-auto">
@@ -90,7 +87,7 @@ const About = () => {
                 <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-gray-900">
                   {language === 'fr' ? "Comment ChatSeller s'est spécialisé dans la beauté" : "How ChatSeller specialized in beauty"}
                 </h2>
-                
+
                 <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-rose-100">
                   <div className="flex items-start space-x-4 sm:space-x-6 mb-6 sm:mb-8">
                     <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-rose-500 to-pink-500 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -101,14 +98,14 @@ const About = () => {
                         {language === 'fr' ? "L'histoire de notre pivot beauté" : "The story of our beauty pivot"}
                       </h3>
                       <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                        {language === 'fr' ? 
+                        {language === 'fr' ?
                           "ChatSeller a été initialement développé par Dukka comme une solution d'IA conversationnelle généraliste pour l'e-commerce. Mais en échangeant avec nos premiers utilisateurs, nous avons découvert quelque chose de fascinant..." :
                           "ChatSeller was initially developed by Dukka as a generalist conversational AI solution for e-commerce. But by talking with our first users, we discovered something fascinating..."
                         }
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-rose-200 mb-6 sm:mb-8">
                     <div className="flex items-start space-x-3 sm:space-x-4">
                       <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8 text-rose-600 flex-shrink-0 mt-1" />
@@ -125,7 +122,7 @@ const About = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
                     <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-4 sm:p-6 border border-purple-200">
                       <div className="flex items-center mb-3">
@@ -136,14 +133,14 @@ const About = () => {
                       </div>
                       <p className="text-purple-700 text-sm leading-relaxed">
                         <em>
-                          {language === 'fr' ? 
+                          {language === 'fr' ?
                             "\"Nos clientes ont des questions très pointues : 'Ce sérum convient-il aux peaux sensibles avec de la rosacée ?' 'Puis-je l'associer à mes soins à la vitamine C ?' Une IA généraliste ne peut pas répondre avec cette expertise.\"" :
                             "\"Our customers have very specific questions: 'Is this serum suitable for sensitive skin with rosacea?' 'Can I combine it with my vitamin C treatments?' A generalist AI can't respond with this expertise.\""
                           }
                         </em>
                       </p>
                     </div>
-                    
+
                     <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl p-4 sm:p-6 border border-emerald-200">
                       <div className="flex items-center mb-3">
                         <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600 mr-3" />
@@ -153,7 +150,7 @@ const About = () => {
                       </div>
                       <p className="text-emerald-700 text-sm leading-relaxed">
                         <em>
-                          {language === 'fr' ? 
+                          {language === 'fr' ?
                             "\"Si on créait une IA qui maîtrise VRAIMENT la beauté - tous les ingrédients, tous les types de peau, toutes les routines - on pourrait révolutionner l'expérience d'achat beauté en ligne !\"" :
                             "\"If we created an AI that REALLY masters beauty - all ingredients, all skin types, all routines - we could revolutionize the online beauty shopping experience!\""
                           }
@@ -161,7 +158,7 @@ const About = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="text-center bg-gradient-to-r from-rose-100 via-pink-100 to-purple-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-rose-200">
                     <div className="flex items-center justify-center mb-3">
                       <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-rose-600 mr-3" />
@@ -187,7 +184,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Mission, Vision, Values - Version beauté */}
+        {/* Mission, Vision, Values */}
         <section className="py-16 sm:py-20">
           <div className="container px-4 sm:px-6 md:px-12 mx-auto">
             <div className="max-w-6xl mx-auto">
@@ -196,13 +193,13 @@ const About = () => {
                   {language === 'fr' ? "Notre mission" : "Our mission"}
                 </h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  {language === 'fr' ? 
+                  {language === 'fr' ?
                     "Transformer l'expérience d'achat beauté en ligne grâce à l'expertise IA" :
                     "Transform the online beauty shopping experience through AI expertise"
                   }
                 </p>
               </div>
-              
+
               <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
                 {/* Mission */}
                 <div className="text-center p-6 sm:p-8 bg-gradient-to-b from-rose-50 to-pink-50 rounded-2xl sm:rounded-3xl border border-rose-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -213,13 +210,13 @@ const About = () => {
                     {language === 'fr' ? "Notre Mission" : "Our Mission"}
                   </h3>
                   <p className="text-rose-800 font-medium mb-4 text-sm sm:text-base">
-                    {language === 'fr' ? 
+                    {language === 'fr' ?
                       "\"Démocratiser l'expertise beauté pour toutes les marques.\"" :
                       "\"Democratize beauty expertise for all brands.\""
                     }
                   </p>
                   <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                    {language === 'fr' ? 
+                    {language === 'fr' ?
                       "Permettre à chaque marque beauté, des startups aux grandes enseignes, d'offrir à leurs clientes le niveau de conseil d'une esthéticienne experte diplômée. Parce que chaque femme mérite des conseils beauté personnalisés." :
                       "Enable every beauty brand, from startups to major retailers, to offer their customers the level of advice of an expert certified beautician. Because every woman deserves personalized beauty advice."
                     }
@@ -248,7 +245,7 @@ const About = () => {
                   </p>
                 </div>
 
-                {/* Spécialisation beauté */}
+                {/* Spécialisation */}
                 <div className="text-center p-6 sm:p-8 bg-gradient-to-b from-emerald-50 to-green-50 rounded-2xl sm:rounded-3xl border border-emerald-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-green-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <Sparkles className="w-8 h-8" />
@@ -294,7 +291,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Team Section - Adapté beauté */}
+        {/* Team Section */}
         <section className="py-16 sm:py-20 bg-gradient-to-b from-rose-50/50 to-white">
           <div className="container px-4 sm:px-6 md:px-12 mx-auto">
             <div className="max-w-6xl mx-auto">
@@ -305,9 +302,11 @@ const About = () => {
               <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
                 {/* Ibuka - CEO */}
                 <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-rose-100 text-center">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-rose-100 via-pink-100 to-purple-100 rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold text-rose-600 mx-auto mb-4 shadow-lg">
-                    IN
-                  </div>
+                  <img
+                    src="/images/team/ibuka.webp"
+                    alt="Ibuka - Fondateur & CEO"
+                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover mx-auto mb-4 shadow-lg border-2 border-rose-200"
+                  />
                   <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Ibuka</h3>
                   <p className="text-rose-600 font-semibold mb-4 text-sm sm:text-base">
                     {language === 'fr' ? "Fondateur & CEO" : "Founder & CEO"}
@@ -320,36 +319,40 @@ const About = () => {
                   </p>
                 </div>
 
-                {/* Julia - CTO */}
+                {/* Jeremie - CTO */}
                 <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-purple-100 text-center">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-purple-100 via-violet-100 to-indigo-100 rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold text-purple-600 mx-auto mb-4 shadow-lg">
-                    JT
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Julia</h3>
+                  <img
+                    src="/images/team/jeremie.webp"
+                    alt="Jeremie - CTO & Lead Dev"
+                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover mx-auto mb-4 shadow-lg border-2 border-purple-200"
+                  />
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Jeremie</h3>
                   <p className="text-purple-600 font-semibold mb-4 text-sm sm:text-base">
                     {language === 'fr' ? "CTO & Lead Dev" : "CTO & Lead Dev"}
                   </p>
                   <p className="text-gray-700 leading-relaxed text-sm mb-4">
                     {language === 'fr' ?
-                      "Experte en IA et développement logiciel, Julia conçoit et maintient l'architecture technique de ChatSeller. Elle s'assure que notre Vendeuse IA offre des performances optimales et une expérience fluide à chaque interaction." :
-                      "Expert in AI and software development, Julia designs and maintains ChatSeller's technical architecture. She ensures our AI Salesperson delivers optimal performance and a smooth experience with every interaction."
+                      "Expert en IA et développement logiciel, Jeremie conçoit et maintient l'architecture technique de ChatSeller. Il s'assure que notre Vendeuse IA offre des performances optimales et une expérience fluide à chaque interaction." :
+                      "Expert in AI and software development, Jeremie designs and maintains ChatSeller's technical architecture. He ensures our AI Salesperson delivers optimal performance and a smooth experience with every interaction."
                     }
                   </p>
                 </div>
 
-                {/* David - CMO */}
+                {/* Yacine - CMO */}
                 <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-emerald-100 text-center">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-emerald-100 via-green-100 to-teal-100 rounded-full flex items-center justify-center text-2xl sm:text-3xl font-bold text-emerald-600 mx-auto mb-4 shadow-lg">
-                    DM
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">David</h3>
+                  <img
+                    src="/images/team/julia.webp"
+                    alt="Yacine - CMO"
+                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover mx-auto mb-4 shadow-lg border-2 border-emerald-200"
+                  />
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Yacine</h3>
                   <p className="text-emerald-600 font-semibold mb-4 text-sm sm:text-base">
                     {language === 'fr' ? "CMO" : "CMO"}
                   </p>
                   <p className="text-gray-700 leading-relaxed text-sm mb-4">
                     {language === 'fr' ?
-                      "Spécialiste du marketing digital et de la beauté, David comprend les enjeux des marques africaines. Il accompagne nos clients dans leur croissance et développe notre présence auprès des marques beauté sur le continent." :
-                      "Digital marketing and beauty specialist, David understands the challenges of African brands. He supports our clients' growth and develops our presence among beauty brands across the continent."
+                      "Spécialiste du marketing digital et de la beauté, Yacine comprend les enjeux des marques africaines. Elle accompagne nos clients dans leur croissance et développe notre présence auprès des marques beauté sur le continent." :
+                      "Digital marketing and beauty specialist, Yacine understands the challenges of African brands. She supports our clients' growth and develops our presence among beauty brands across the continent."
                     }
                   </p>
                 </div>
@@ -371,60 +374,16 @@ const About = () => {
           </div>
         </section>
 
-        {/* Achievements & Future - Beauté */}
+        {/* Future plans */}
         <section className="py-16 sm:py-20">
           <div className="container px-4 sm:px-6 md:px-12 mx-auto">
             <div className="max-w-5xl mx-auto">
-              
-              {/* Achievements */}
-              <div className="text-center mb-12 sm:mb-16">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
-                  {language === 'fr' ? "Nos réalisations" : "Our achievements"}
-                </h2>
-                <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                  {language === 'fr' ? 
-                    "ChatSeller transforme l'expérience d'achat des clientes des marques beauté" :
-                    "ChatSeller transforms the shopping experience for beauty brand customers"
-                  }
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
-                <div className="text-center p-4 sm:p-6 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-rose-100">
-                  <div className="text-2xl sm:text-3xl font-bold text-rose-600 mb-2">+10</div>
-                  <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'Marques bêta' : 'Beta brands'}
-                  </div>
-                </div>
 
-                <div className="text-center p-4 sm:p-6 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-purple-100">
-                  <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-2">14</div>
-                  <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'jours d\'essai gratuit' : 'days free trial'}
-                  </div>
-                </div>
-
-                <div className="text-center p-4 sm:p-6 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-emerald-100">
-                  <div className="text-2xl sm:text-3xl font-bold text-emerald-600 mb-2">2</div>
-                  <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'pays (Sénégal, CI)' : 'countries (Senegal, CI)'}
-                  </div>
-                </div>
-
-                <div className="text-center p-4 sm:p-6 bg-white rounded-xl sm:rounded-2xl shadow-lg border border-blue-100">
-                  <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2">24/7</div>
-                  <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                    {language === 'fr' ? 'Disponibilité' : 'Availability'}
-                  </div>
-                </div>
-              </div>
-              
-              {/* Future plans */}
               <div className="mb-12 sm:mb-16">
                 <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-gray-900">
                   {language === 'fr' ? "L'avenir de ChatSeller" : "The future of ChatSeller"}
                 </h3>
-                
+
                 <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
                   <div className="p-6 sm:p-8 bg-white rounded-2xl shadow-lg border border-rose-100">
                     <div className="flex items-center mb-4">
@@ -457,7 +416,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* CTA Final */}
               <div className="text-center bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-rose-200 shadow-xl">
                 <div className="mb-6">
@@ -465,39 +424,39 @@ const About = () => {
                     <ShoppingCart className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">
-                    {language === 'fr' ? "Prêt à transformer votre marque beauté ?" : "Ready to transform your beauty brand?"}
+                    {language === 'fr' ? "Prêt à laisser votre vendeuse experte vendre pour vous ?" : "Ready to let your expert salesperson sell for you?"}
                   </h3>
                   <p className="text-gray-700 mb-6 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-                    {language === 'fr' ? 
-                      "Rejoignez les marques beauté qui ont choisi ChatSeller pour offrir l'expertise d'une Vendeuse IA à leurs clientes et booster leurs conversions." :
-                      "Join the beauty brands that chose ChatSeller to offer AI Salesperson expertise to their customers and boost their conversions."
+                    {language === 'fr' ?
+                      "Elle répondra aux questions, rassurera vos clientes et collectera les ventes 24h/24." :
+                      "She will answer questions, reassure your customers and collect sales 24/7."
                     }
                   </p>
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                   <Button size="lg" className="group bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300" asChild>
                     <a href="https://dashboard.chatseller.app/register" className="flex items-center">
                       <Sparkles className="w-5 h-5 mr-2" />
-                      {language === 'fr' ? "Essai gratuit 14 jours" : "14-day free trial"}
+                      {language === 'fr' ? "Créer ma Vendeuse IA" : "Create my AI Salesperson"}
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </a>
                   </Button>
-                  
+
                   <Button variant="outline" size="lg" className="border-2 border-purple-300 hover:border-purple-400 hover:bg-purple-50 text-purple-700" asChild>
-                    <a href="mailto:support@chatseller.app" className="flex items-center">
+                    <a href="https://cal.com/chatseller/demo-beaute" className="flex items-center">
                       <Heart className="w-5 h-5 mr-2" />
-                      {language === 'fr' ? "Parler à un expert" : "Talk to an expert"}
+                      {language === 'fr' ? "Voir une démo" : "See a demo"}
                     </a>
                   </Button>
                 </div>
-                
+
                 <div className="flex items-center justify-center mt-6 text-sm text-gray-600">
-                  <Star className="w-4 h-4 text-yellow-500 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
                   <span className="font-medium">
                     {language === 'fr' ?
-                      "Programme bêta : +10 marques beauté convaincues en Afrique" :
-                      "Beta program: 10+ beauty brands convinced in Africa"
+                      "+10 marques beauté africaines déjà convaincues" :
+                      "10+ African beauty brands already convinced"
                     }
                   </span>
                 </div>
@@ -506,7 +465,7 @@ const About = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
