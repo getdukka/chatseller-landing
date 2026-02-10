@@ -49,7 +49,7 @@ const NewFinalCTASection = () => {
               asChild
             >
               <a href="https://dashboard.chatseller.app/register">
-                {language === 'fr' ? 'Créer ma conseillère IA' : 'Create my AI advisor'}
+                {language === 'fr' ? 'Créer ma Vendeuse IA' : 'Create my AI Salesperson'}
                 <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>

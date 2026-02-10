@@ -32,7 +32,7 @@ const NewHowItWorksSection = () => {
 
           <p className="text-lg sm:text-xl text-gray-600 animate-fade-in [animation-delay:400ms]">
             {language === 'fr' ?
-              'Votre conseillère IA sera prête à vendre pour vous avant même que vous ayez fini votre café.' :
+              'Votre Vendeuse IA sera prête à vendre pour vous avant même que vous ayez fini votre café.' :
               'Your AI advisor will be ready to sell for you before you even finish your coffee.'}
           </p>
         </div>
@@ -448,7 +448,7 @@ const TrainingVisual = ({ language }: { language: string }) => (
       {/* Progression formation */}
       <div className="space-y-2 sm:space-y-3">
         <div className="flex justify-between text-xs sm:text-sm font-medium text-purple-700">
-          <span>{language === 'fr' ? 'Formation de la Conseillère IA' : 'AI Advisor Training'}</span>
+          <span>{language === 'fr' ? 'Formation de la Vendeuse IA' : 'AI Salesperson Training'}</span>
           <span>87%</span>
         </div>
         <div className="w-full bg-purple-200 rounded-full h-2 sm:h-3">

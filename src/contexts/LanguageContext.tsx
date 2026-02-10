@@ -687,7 +687,7 @@ const translations: Record<Language, Translations> = {
     yourCurrentStore: 'Votre boutique actuelle',
     customersAloneWithQuestions: 'Vos clients sont seuls face à leurs questions',
     yourOptimizedStore: 'Votre boutique optimisée',
-    expertBeautyAI247: 'Conseillère IA experte beauté disponible 24/7',
+    expertBeautyAI247: 'Vendeuse IA experte beauté disponible 24/7',
     adaptedSensitiveSkin: 'Adapté à ma peau sensible ?',
     whenSeeResults: 'Quand voir les premiers résultats ?',
     compatibleOtherProducts: 'Compatible avec mes autres soins ?',
@@ -1167,7 +1167,7 @@ Contactez-nous avec :
     // LANDING PAGE REFONTE - FR
     newHeroTitle: "Augmentez vos ventes de 200 à 400% grâce à un vendeur IA qui conseille vos clients comme en boutique",
     newHeroSubtitle: "ChatSeller transforme vos visiteurs en acheteurs en répondant à leurs questions, en les rassurant et en recommandant les bons produits, comme une esthéticienne disponible 24/7.",
-    newHeroCTAPrimary: "Créer ma conseillère IA",
+    newHeroCTAPrimary: "Créer ma Vendeuse IA",
     newHeroCTASecondary: "Voir comment ça marche",
     newHeroTrialPeriod: "14 jours d'essai gratuits",
     
@@ -1899,7 +1899,7 @@ Contact us with:
     // LANDING PAGE REFONTE - EN
     newHeroTitle: "Increase your sales by 200 to 400% with an AI sales agent that advises your customers like in a store",
     newHeroSubtitle: "ChatSeller turns your visitors into buyers by answering their questions, reassuring them and recommending the right products, like a beautician available 24/7.",
-    newHeroCTAPrimary: "Create my AI Advisor",
+    newHeroCTAPrimary: "Create my AI Salesperson",
     newHeroCTASecondary: "See how it works",
     newHeroTrialPeriod: "14 days free trial",
     

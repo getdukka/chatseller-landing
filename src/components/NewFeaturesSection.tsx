@@ -185,7 +185,7 @@ const HeaderContent = ({ language }: { language: string }) => (
 
     <p className="text-lg text-gray-600 animate-fade-in [animation-delay:400ms]">
       {language === 'fr' ?
-        'Votre conseillère IA maîtrise vos produits, comprend les besoins de vos clientes et les guide vers l\'achat. Le tout, 24h/24.' :
+        'Votre Vendeuse IA maîtrise vos produits, comprend les besoins de vos clientes et les guide vers l\'achat. Le tout, 24h/24.' :
         'Your AI advisor masters your products, understands your customers\' needs and guides them to purchase. All of this, 24/7.'}
     </p>
   </>
@@ -303,7 +303,7 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
     icon: <Brain className="h-7 w-7" />,
     title: language === 'fr' ? 'Expertise Beauté Complète' : 'Complete Beauty Expertise',
     description: language === 'fr' ? 
-      'Votre Conseillère IA maîtrise ingrédients, types de peau, routines et tendances beauté pour conseiller comme une experte certifiée' :
+      'Votre Vendeuse IA maîtrise ingrédients, types de peau, routines et tendances beauté pour conseiller comme une experte certifiée' :
       'Your AI Advisor masters ingredients, skin types, routines and beauty trends to advise like a certified expert',
     colorClasses: {
       gradient: 'from-purple-500 via-pink-500 to-purple-600',

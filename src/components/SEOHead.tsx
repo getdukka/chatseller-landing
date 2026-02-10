@@ -26,7 +26,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   
   // 🎯 MOTS-CLÉS STRATÉGIQUES PAR LANGUE
   const defaultKeywords = language === 'fr' ? 
-    "vendeur IA, agent IA, Agent IA commercial, Conseillère IA, chatbot e-commerce, intelligence artificielle vente, IA conversationnelle, automatisation vente, Shopify IA, WooCommerce chatbot, augmenter conversion, vente automatique, assistant virtuel, bot commercial, IA marketing, e-commerce automation, vendeur virtuel, agent conversationnel, ChatSeller, Dukka, Sénégal, Afrique, startup IA" :
+    "vendeur IA, agent IA, Agent IA commercial, Vendeuse IA, chatbot e-commerce, intelligence artificielle vente, IA conversationnelle, automatisation vente, Shopify IA, WooCommerce chatbot, augmenter conversion, vente automatique, assistant virtuel, bot commercial, IA marketing, e-commerce automation, vendeur virtuel, agent conversationnel, ChatSeller, Dukka, Sénégal, Afrique, startup IA" :
     "AI seller, AI agent, Commercial AI Agent, AI Advisor, e-commerce chatbot, sales artificial intelligence, conversational AI, sales automation, Shopify AI, WooCommerce chatbot, increase conversion, automatic selling, virtual assistant, commercial bot, marketing AI, e-commerce automation, virtual seller, conversational agent, ChatSeller, Dukka, Senegal, Africa, AI startup";
 
   // 🎯 TITRES ET DESCRIPTIONS OPTIMISÉS

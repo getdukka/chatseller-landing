@@ -51,7 +51,7 @@ const Terms = () => {
               
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 {language === 'fr' ? 
-                  "Les conditions qui régissent l'utilisation de ChatSeller, votre conseillère IA spécialisée pour marques beauté." :
+                  "Les conditions qui régissent l'utilisation de ChatSeller, votre Vendeuse IA spécialisée pour marques beauté." :
                   "The terms that govern the use of ChatSeller, your specialized AI advisor for beauty brands."
                 }
               </p>
@@ -118,7 +118,7 @@ const Terms = () => {
                         </h3>
                         <p className="text-gray-700">
                           {language === 'fr' ? 
-                            "ChatSeller - Conseillère IA beauté experte pour marques cosmétiques, parfums, soins et maquillage" :
+                            "ChatSeller - Vendeuse IA beauté experte pour marques cosmétiques, parfums, soins et maquillage" :
                             "ChatSeller - Expert beauty AI advisor for cosmetics, fragrance, skincare and makeup brands"
                           }
                         </p>

@@ -113,7 +113,7 @@ const realBeautyCaseStudies = [
       en: "Frequent questions about natural ingredients and compatibility with sensitive skin"
     },
     solution: {
-      fr: "Conseillère IA experte en cosmétiques naturels répondant aux préoccupations ingrédients",
+      fr: "Vendeuse IA experte en cosmétiques naturels répondant aux préoccupations ingrédients",
       en: "AI advisor expert in natural cosmetics addressing ingredient concerns"
     },
     result: {

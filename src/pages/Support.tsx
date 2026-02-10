@@ -101,7 +101,7 @@ const SupportPage = () => {
     {
       category: 'configuration',
       question: language === 'fr' ? 
-        'Comment configurer ma conseillère IA pour qu\'elle connaisse mes produits beauté ?' :
+        'Comment configurer ma Vendeuse IA pour qu\'elle connaisse mes produits beauté ?' :
         'How do I configure my AI advisor to know my beauty products?',
       answer: language === 'fr' ? 
         `**Configuration automatique + personnalisation :**\n\n**Automatique :**\n• ChatSeller **importe automatiquement** tous vos produits\n• Analyse les descriptions, ingrédients, bénéfices\n• Reconnaît les catégories (skincare, maquillage, parfums...)\n\n**Personnalisation avancée :**\n• Ajoutez des **conseils d'utilisation** spécifiques\n• Définissez les **types de peau** compatibles\n• Configurez les **routines beauté** recommandées\n• Ajoutez des **contre-indications** si nécessaire` :
@@ -161,7 +161,7 @@ const SupportPage = () => {
     {
       category: 'technical',
       question: language === 'fr' ? 
-        'Que faire si ma conseillère IA ne répond pas correctement aux questions beauté ?' :
+        'Que faire si ma Vendeuse IA ne répond pas correctement aux questions beauté ?' :
         'What if my AI advisor doesn\'t respond correctly to beauty questions?',
       answer: language === 'fr' ? 
         `**Amélioration continue de l'IA :**\n\n**Diagnostic automatique :**\n• Analysez les **conversations** dans votre dashboard\n• Identifiez les **questions mal comprises**\n• Consultez les **métriques de satisfaction**\n\n**Amélioration rapide :**\n• Ajoutez des **réponses personnalisées** dans "Base de connaissances"\n• Enrichissez les **descriptions produits**\n• Contactez notre équipe pour un **fine-tuning** gratuit\n• Formation IA mise à jour **chaque semaine**\n\n**Support expert :**\n• **Chat en direct** avec nos experts IA beauté\n• **Audit gratuit** de votre configuration` :
@@ -286,7 +286,7 @@ const SupportPage = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               {language === 'fr' ? 
-                'Assistance experte pour optimiser votre conseillère IA et maximiser vos conversions' : 
+                'Assistance experte pour optimiser votre Vendeuse IA et maximiser vos conversions' : 
                 'Expert assistance to optimize your AI advisor and maximize your conversions'}
             </p>
             
@@ -296,7 +296,7 @@ const SupportPage = () => {
               <Input
                 type="text"
                 placeholder={language === 'fr' ? 
-                  'Rechercher dans la documentation (ex: "installation Shopify", "Formation Conseillère IA"...)' : 
+                  'Rechercher dans la documentation (ex: "installation Shopify", "Formation Vendeuse IA"...)' : 
                   'Search the docs (e.g. "Shopify installation", "AI Advisor training"...)'}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}

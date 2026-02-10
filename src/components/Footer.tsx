@@ -63,8 +63,8 @@ const Footer = () => {
             
             <p className="text-gray-600 text-sm mb-6 leading-relaxed">
               {language === 'fr' ?
-                "La Conseillère IA qui vend pour les marques beauté. Offrez à vos clientes en ligne la même attention qu'en boutique physique, et augmentez vos ventes." :
-                "The AI Advisor that sells for beauty brands. Give your online customers the same attention as in a physical store, and increase your sales."
+                "La Vendeuse IA qui vend pour les marques beauté. Offrez à vos clientes en ligne la même attention qu'en boutique physique, et augmentez vos ventes." :
+                "The AI Salesperson that sells for beauty brands. Give your online customers the same attention as in a physical store, and increase your sales."
               }
             </p>
 
