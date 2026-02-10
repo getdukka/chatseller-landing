@@ -48,20 +48,20 @@ const AppRoutes = () => {
     switch (location.pathname) {
       case '/':
         return {
-          title: "ChatSeller - Ne laissez plus aucune vente vous échapper. Votre IA vend pour vous 24h/24",
-          description: "Le premier Agent IA spécialement conçu pour les marques dans le secteur de la beauté. Offrez à vos client.e.s en ligne la même expérience qu'en boutique avec une Vendeuse IA formée sur vos produits.",
-          keywords: "Agent IA, agent IA commercial, Vendeuse IA, Conseillère Beauté IA, chatbot e-commerce, intelligence artificielle vente, Shopify IA, WooCommerce chatbot"
+          title: "ChatSeller - Vendeuse IA pour boutiques beauté | +150% de ventes",
+          description: "Intégrez une Vendeuse IA experte de vos produits sur votre boutique Shopify ou WooCommerce. Elle conseille vos clientes, recommande les bons produits et vend 24h/24. +150% de ventes en moyenne. Essai gratuit 14 jours.",
+          keywords: "Vendeuse IA, vendeuse IA beauté, chatbot e-commerce beauté, IA conversationnelle vente, Shopify IA, WooCommerce chatbot, ChatSeller, marques beauté"
         };
       case '/about':
         return {
-          title: "À propos de ChatSeller - Le premier Agent IA spécialement conçu pour les marques beauté",
-          description: "Offrez à vos client.e.s en ligne la même expérience qu'en boutique avec une Vendeuse IA formée sur vos produits. ChatSeller révolutionne l'e-commerce beauté.",
-          keywords: "ChatSeller histoire, Dukka, startup IA, e-commerce beauté, chatbot IA, Marques beauté"
+          title: "À propos de ChatSeller - Vendeuse IA pour boutiques beauté",
+          description: "ChatSeller intègre une Vendeuse IA experte de vos produits sur votre boutique en ligne. Elle conseille, recommande et vend 24h/24. +150% de ventes en moyenne.",
+          keywords: "ChatSeller histoire, Dukka, startup IA, e-commerce beauté, Vendeuse IA, marques beauté"
         };
       case '/terms':
         return {
           title: "Conditions d'utilisation - ChatSeller | Terms of Service",
-          description: "Conditions générales d'utilisation du service ChatSeller. Essai gratuit 14 jours, tarification transparente, résiliation libre.",
+          description: "Conditions générales d'utilisation du service ChatSeller. Essai gratuit 14 jours, tarification transparente, annulation en 1 clic.",
           keywords: "conditions utilisation ChatSeller, terms of service, SaaS"
         };
       case '/privacy':
@@ -73,7 +73,7 @@ const AppRoutes = () => {
       case '/support':
         return {
           title: "Support & FAQ - ChatSeller | Aide et assistance",
-          description: "Centre d'aide ChatSeller. FAQ, guides d'installation, support technique. Réponses à toutes vos questions sur notre vendeur IA.",
+          description: "Centre d'aide ChatSeller. FAQ, guides d'installation, support technique. Réponses à toutes vos questions sur votre Vendeuse IA.",
           keywords: "support ChatSeller, FAQ, aide, installation"
         };
       default:
