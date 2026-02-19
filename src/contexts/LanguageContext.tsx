@@ -559,6 +559,54 @@ interface Translations {
   // Brand Names for Chat Demo
   chatBrandFr: string;
   chatBrandEn: string;
+
+  // ===================
+  // NOUVELLES SECTIONS LANDING (Fév 2026)
+  // ===================
+
+  // VISUAL DEMO SECTION
+  visualDemoTitle: string;
+  visualDemoSubtitle: string;
+  visualDemoStep1Title: string;
+  visualDemoStep1Desc: string;
+  visualDemoStep2Title: string;
+  visualDemoStep2Desc: string;
+  visualDemoStep3Title: string;
+  visualDemoStep3Desc: string;
+  visualDemoStep4Title: string;
+  visualDemoStep4Desc: string;
+  visualDemoCTA: string;
+
+  // BUSINESS PROOF SECTION
+  businessProofTitle: string;
+  businessProofSubtitle: string;
+  businessProofKpi1Value: string;
+  businessProofKpi1Label: string;
+  businessProofKpi1Desc: string;
+  businessProofKpi2Value: string;
+  businessProofKpi2Label: string;
+  businessProofKpi2Desc: string;
+  businessProofKpi3Value: string;
+  businessProofKpi3Label: string;
+  businessProofKpi3Desc: string;
+  businessProofKpi4Value: string;
+  businessProofKpi4Label: string;
+  businessProofKpi4Desc: string;
+
+  // DIFFERENTIATION SECTION
+  differentiationTitle: string;
+  differentiationSubtitle: string;
+  differentiationCol1Header: string;
+  differentiationCol2Header: string;
+  differentiationRow1Classic: string;
+  differentiationRow1ChatSeller: string;
+  differentiationRow2Classic: string;
+  differentiationRow2ChatSeller: string;
+  differentiationRow3Classic: string;
+  differentiationRow3ChatSeller: string;
+  differentiationRow4Classic: string;
+  differentiationRow4ChatSeller: string;
+  differentiationCTA: string;
 }
 
 
@@ -1293,8 +1341,52 @@ Contactez-nous avec :
     // Brand Names for Chat Demo
     chatBrandFr: "Lumière Skin",
     chatBrandEn: "Pure Glow",
+
+    // VISUAL DEMO SECTION
+    visualDemoTitle: 'De la question à l\'achat en quelques messages',
+    visualDemoSubtitle: 'Votre Vendeuse IA guide chaque cliente depuis sa première question jusqu\'à la confirmation de commande.',
+    visualDemoStep1Title: 'La cliente pose une question',
+    visualDemoStep1Desc: 'Sur une fiche produit, la cliente hésite et pose une question sur son type de peau. La Vendeuse IA répond immédiatement, 24h/24.',
+    visualDemoStep2Title: 'L\'IA recommande le bon produit',
+    visualDemoStep2Desc: 'En analysant le profil et les besoins, votre Vendeuse IA recommande le produit le plus adapté avec une explication claire et rassurante.',
+    visualDemoStep3Title: 'La carte produit apparaît',
+    visualDemoStep3Desc: 'Le produit recommandé s\'affiche directement dans le chat avec son prix, sa photo et un bouton d\'achat — sans quitter la conversation.',
+    visualDemoStep4Title: 'La vente est confirmée',
+    visualDemoStep4Desc: 'La cliente achète en confiance. La Vendeuse IA confirme la commande et peut proposer des produits complémentaires pour augmenter le panier.',
+    visualDemoCTA: 'Essayer gratuitement',
+
+    // BUSINESS PROOF SECTION
+    businessProofTitle: 'Des résultats mesurables, dès les premières semaines',
+    businessProofSubtitle: 'Les marques qui utilisent ChatSeller voient des résultats concrets sur leurs ventes. Voici ce que vous pouvez attendre.',
+    businessProofKpi1Value: '+150%',
+    businessProofKpi1Label: 'Taux de conversion',
+    businessProofKpi1Desc: 'En moyenne sur les boutiques utilisant ChatSeller',
+    businessProofKpi2Value: '+35%',
+    businessProofKpi2Label: 'Panier moyen',
+    businessProofKpi2Desc: 'Grâce aux recommandations personnalisées et à l\'upsell intelligent',
+    businessProofKpi3Value: '24/7',
+    businessProofKpi3Label: 'Disponible en permanence',
+    businessProofKpi3Desc: 'Votre Vendeuse IA répond même quand vous dormez ou êtes en déplacement',
+    businessProofKpi4Value: '5 min',
+    businessProofKpi4Label: 'Installation rapide',
+    businessProofKpi4Desc: 'Intégration Shopify ou WooCommerce sans développeur requis',
+
+    // DIFFERENTIATION SECTION
+    differentiationTitle: 'Pas un chatbot. Une expérience de vente.',
+    differentiationSubtitle: 'Les chatbots répondent aux questions. ChatSeller transforme l\'hésitation en achat.',
+    differentiationCol1Header: 'Chatbot classique',
+    differentiationCol2Header: 'ChatSeller',
+    differentiationRow1Classic: 'Répond aux questions basiques',
+    differentiationRow1ChatSeller: 'Guide la cliente jusqu\'à l\'achat',
+    differentiationRow2Classic: 'Outil de support client',
+    differentiationRow2ChatSeller: 'Canal de vente conversationnel',
+    differentiationRow3Classic: 'Scripts prédéfinis et rigides',
+    differentiationRow3ChatSeller: 'Formée sur votre catalogue exact',
+    differentiationRow4Classic: 'Hors contexte produit',
+    differentiationRow4ChatSeller: 'Intégrée sur vos fiches produits',
+    differentiationCTA: 'Créer ma Vendeuse IA',
   },
-  
+
   en: {
     // Navigation
     features: 'Features',
@@ -2026,6 +2118,50 @@ Contact us with:
     // Brand Names for Chat Demo
     chatBrandFr: "Lumière Skin",
     chatBrandEn: "Pure Glow",
+
+    // VISUAL DEMO SECTION
+    visualDemoTitle: 'From question to purchase in a few messages',
+    visualDemoSubtitle: 'Your AI Salesperson guides every customer from their first question to order confirmation.',
+    visualDemoStep1Title: 'Customer asks a question',
+    visualDemoStep1Desc: 'On a product page, the customer hesitates and asks about their skin type. The AI Salesperson responds instantly, 24/7.',
+    visualDemoStep2Title: 'AI recommends the right product',
+    visualDemoStep2Desc: 'By analyzing the profile and needs, your AI Salesperson recommends the most suitable product with a clear and reassuring explanation.',
+    visualDemoStep3Title: 'Product card appears',
+    visualDemoStep3Desc: 'The recommended product appears directly in the chat with its price, photo, and a buy button — without leaving the conversation.',
+    visualDemoStep4Title: 'Sale is confirmed',
+    visualDemoStep4Desc: 'The customer buys with confidence. The AI Salesperson confirms the order and can suggest complementary products to increase the cart value.',
+    visualDemoCTA: 'Try for free',
+
+    // BUSINESS PROOF SECTION
+    businessProofTitle: 'Measurable results, from the first weeks',
+    businessProofSubtitle: 'Brands using ChatSeller see concrete results on their sales. Here\'s what you can expect.',
+    businessProofKpi1Value: '+150%',
+    businessProofKpi1Label: 'Conversion rate',
+    businessProofKpi1Desc: 'On average across stores using ChatSeller',
+    businessProofKpi2Value: '+35%',
+    businessProofKpi2Label: 'Average cart',
+    businessProofKpi2Desc: 'Through personalized recommendations and smart upsell',
+    businessProofKpi3Value: '24/7',
+    businessProofKpi3Label: 'Always available',
+    businessProofKpi3Desc: 'Your AI Salesperson responds even when you\'re sleeping or traveling',
+    businessProofKpi4Value: '5 min',
+    businessProofKpi4Label: 'Fast setup',
+    businessProofKpi4Desc: 'Shopify or WooCommerce integration — no developer required',
+
+    // DIFFERENTIATION SECTION
+    differentiationTitle: 'Not a chatbot. A sales experience.',
+    differentiationSubtitle: 'Chatbots answer questions. ChatSeller turns hesitation into purchase.',
+    differentiationCol1Header: 'Classic chatbot',
+    differentiationCol2Header: 'ChatSeller',
+    differentiationRow1Classic: 'Answers basic questions',
+    differentiationRow1ChatSeller: 'Guides the customer all the way to purchase',
+    differentiationRow2Classic: 'Customer support tool',
+    differentiationRow2ChatSeller: 'Conversational sales channel',
+    differentiationRow3Classic: 'Predefined and rigid scripts',
+    differentiationRow3ChatSeller: 'Trained on your exact catalog',
+    differentiationRow4Classic: 'Out of product context',
+    differentiationRow4ChatSeller: 'Integrated on your product pages',
+    differentiationCTA: 'Create my AI Salesperson',
   }
 };
 

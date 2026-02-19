@@ -4,8 +4,10 @@ import NewNavbar from '@/components/NewNavBar';
 import NewHero from '../components/NewHero';
 import NewBeautyProblemSection from '@/components/NewBeautyProblemSection';
 import NewProblemSolutionSection from '@/components/NewProblemSolutionSection';
-// import NewDemoSection from '@/components/NewDemoSection'; // MASQUÉ: En attente du contenu
+import NewVisualDemoSection from '@/components/NewVisualDemoSection';
+import NewBusinessProofSection from '@/components/NewBusinessProofSection';
 import NewHowItWorksSection from '../components/NewHowItWorksSection';
+import NewDifferentiationSection from '@/components/NewDifferentiationSection';
 import NewFeaturesSection from '../components/NewFeaturesSection';
 // import NewCaseStudiesSection from '../components/NewCaseStudiesSection'; // MASQUÉ: Faux contenu
 // import NewTestimonials from '@/components/NewTestimonials'; // MASQUÉ: Faux contenu
@@ -47,16 +49,22 @@ const Index = () => {
         {/* Section 2: Problème des marques beauté - 3 frustrations */}
         <NewBeautyProblemSection />
 
-        {/* Section 3: Problème/Solution - 73% partent sans acheter */}
+        {/* Section 3: Problème/Solution - La révélation */}
         <NewProblemSolutionSection />
 
-        {/* Section 4: Demo - Vidéo de démonstration - MASQUÉ: En attente du contenu */}
-        {/* <NewDemoSection /> */}
+        {/* Section 4: Démo visuelle - De la question à l'achat */}
+        <NewVisualDemoSection />
 
-        {/* Section 5: Comment ça marche - 3 étapes simples */}
+        {/* Section 5: Preuve Business - KPIs mesurables */}
+        <NewBusinessProofSection />
+
+        {/* Section 6: Comment ça marche - 3 étapes simples */}
         <NewHowItWorksSection />
 
-        {/* Section 6: Fonctionnalités orientées conversion */}
+        {/* Section 7: Différenciation - Pas un chatbot */}
+        <NewDifferentiationSection />
+
+        {/* Section 8: Fonctionnalités orientées conversion */}
         <NewFeaturesSection />
 
         {/* Section 7: Études de cas avec preuves chiffrées - MASQUÉ: Faux contenu, en attente du vrai */}
