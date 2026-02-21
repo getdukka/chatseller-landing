@@ -52,17 +52,17 @@ const Index = () => {
         {/* Section 3: Problème/Solution - La révélation */}
         <NewProblemSolutionSection />
 
-        {/* Section 4: Démo visuelle - De la question à l'achat */}
-        <NewVisualDemoSection />
+        {/* Section 4: Démo visuelle - De la question à l'achat 
+        <NewVisualDemoSection />*/}
 
-        {/* Section 5: Preuve Business - KPIs mesurables */}
-        <NewBusinessProofSection />
+        {/* Section 5: Preuve Business - KPIs mesurables 
+        <NewBusinessProofSection />*/}
 
         {/* Section 6: Comment ça marche - 3 étapes simples */}
         <NewHowItWorksSection />
 
-        {/* Section 7: Différenciation - Pas un chatbot */}
-        <NewDifferentiationSection />
+        {/* Section 7: Différenciation - Pas un chatbot 
+        <NewDifferentiationSection />*/}
 
         {/* Section 8: Fonctionnalités orientées conversion */}
         <NewFeaturesSection />

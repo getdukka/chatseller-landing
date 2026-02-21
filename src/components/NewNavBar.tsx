@@ -52,7 +52,7 @@ const NewNavbar = () => {
       label: language === 'fr' ? 'Solution' : 'Solution',
       sectionId: 'problem-solution',
       icon: <Sparkles className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? 'Comment ChatSeller vous aide' : 'How ChatSeller helps you'
+      description: language === 'fr' ? 'Comment votre Vendeuse IA vous aide' : 'How your AI Seller helps you'
     },
     {
       label: language === 'fr' ? 'Comment ça marche' : 'How it works',
@@ -64,13 +64,13 @@ const NewNavbar = () => {
       label: language === 'fr' ? 'Fonctionnalités' : 'Features',
       sectionId: 'features',
       icon: <Gift className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? 'Fonctionnalités spécialisées beauté' : 'Specialized beauty features'
+      description: language === 'fr' ? 'Ce que votre Vendeuse IA sait faire' : 'What your AI Seller can do'
     },
     {
       label: language === 'fr' ? 'Tarifs' : 'Pricing',
       sectionId: 'pricing',
       icon: <CreditCard className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? 'Plans adaptés aux marques beauté' : 'Plans for beauty brands'
+      description: language === 'fr' ? '3 plans adaptés à vos besoins' : '3 plans tailored to your needs'
     }
   ];
 
@@ -287,7 +287,7 @@ const NewNavbar = () => {
                 </span>
                 <span className="flex items-center">
                   <Star className="w-3 h-3 mr-1 text-yellow-500" />
-                  {language === 'fr' ? '+10 marques bêta' : '+10 beta brands'}
+                  {language === 'fr' ? 'Déjà adopté par +10 marques' : 'Already adopted by 10+ brands'}
                 </span>
               </div>
             </div>
