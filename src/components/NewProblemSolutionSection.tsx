@@ -55,13 +55,13 @@ const NewProblemSolutionSection = () => {
         <div className="text-center max-w-4xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
             {language === 'fr' ?
-              'Et si votre meilleure vendeuse était déjà sur votre boutique ?' :
-              'What if your best salesperson was already on your store?'}
+              'Mia est la Vendeuse qui manque à votre boutique en ligne' :
+              'Mia is the Salesperson your online store has been missing'}
           </h2>
           <p className="text-xl text-gray-600">
             {language === 'fr' ?
-              'ChatSeller accompagne vos clientes exactement là où la décision se prend : sur la page produit.' :
-              'ChatSeller guides your customers exactly where the decision happens: on the product page.'}
+              'Lorsque vos clients ont une question, un doute, une inquiétude, Mia est là pour y répondre et les guider jusqu\'à l\'achat.' :
+              'When your customers have a question, a doubt, a concern, Mia is there to answer and guide them through to purchase.'}
           </p>
         </div>
 
@@ -96,13 +96,13 @@ const BeforeCard = () => {
       <div className="text-center mb-8">
         <div className="inline-flex items-center px-4 py-2 bg-red-100 border border-red-200 rounded-full text-sm font-semibold text-red-700 mb-4">
           <X className="w-4 h-4 mr-2" />
-          {language === 'fr' ? 'Avant ChatSeller' : 'Before ChatSeller'}
+          {language === 'fr' ? 'Votre boutique sans Mia' : 'Your store without Mia'}
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">
-          {language === 'fr' ? 'Votre boutique en ligne actuelle' : 'Your current online store'}
+          {language === 'fr' ? 'Vos clientes sont seules' : 'Your customers are alone'}
         </h3>
         <p className="text-gray-600">
-          {language === 'fr' ? 'Vos clients sont seuls face à leurs questions et doutes' : 'Your customers are alone with their questions and doubts'}
+          {language === 'fr' ? 'Pas de réponse. Pas de conseil. Elles partent.' : 'No answer. No advice. They leave.'}
         </p>
       </div>
 
@@ -211,13 +211,13 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
       <div className="text-center mb-8">
         <div className="inline-flex items-center px-4 py-2 bg-emerald-100 border border-emerald-200 rounded-full text-sm font-semibold text-emerald-700 mb-4">
           <Check className="w-4 h-4 mr-2" />
-          {language === 'fr' ? 'Avec ChatSeller' : 'With ChatSeller'}
+          {language === 'fr' ? 'Votre boutique avec Mia' : 'Your store with Mia'}
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">
-          {language === 'fr' ? 'Votre boutique en ligne améliorée' : 'Your enhanced online store'}
+          {language === 'fr' ? 'Chaque cliente accueillie et guidée' : 'Every customer welcomed and guided'}
         </h3>
         <p className="text-gray-600">
-          {language === 'fr' ? 'Votre Vendeuse IA répond, guide et rassure vos clients' : 'Your AI Salesperson answers, guides and reassures your customers'}
+          {language === 'fr' ? 'Mia répond, conseille et guide vos clientes vers l\'achat' : 'Mia answers, advises and guides your customers to purchase'}
         </p>
       </div>
 
@@ -272,7 +272,7 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
                 }}
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
-                {language === 'fr' ? 'Parler à notre conseillère' : 'Chat with our advisor'}
+                {language === 'fr' ? 'Parler à Mia' : 'Talk to Mia'}
                 {/* Glow effect */}
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-rose-400 to-pink-400 blur-md opacity-50 animate-pulse -z-10"></div>
               </button>
@@ -309,15 +309,15 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
       <div className="mt-6 space-y-3">
         <BenefitPoint
           icon="💬"
-          text={language === 'fr' ? 'Chaque cliente accueillie et guidée' : 'Every customer welcomed and guided'}
+          text={language === 'fr' ? 'Mia accueille chaque cliente comme en boutique physique' : 'Mia welcomes every customer like in a physical store'}
         />
         <BenefitPoint
           icon="🎯"
-          text={language === 'fr' ? 'Taux de conversion boosté par l\'IA' : 'Conversion rate boosted by AI'}
+          text={language === 'fr' ? 'Plus d\'hésitation : Mia lève les doutes au bon moment' : 'No more hesitation: Mia removes doubts at the right moment'}
         />
         <BenefitPoint
           icon="✨"
-          text={language === 'fr' ? 'Clients rassurés et paniers validés' : 'Confident customers and completed checkouts'}
+          text={language === 'fr' ? 'Paniers validés, commandes confirmées — sans votre intervention' : 'Carts completed, orders confirmed — without your involvement'}
         />
       </div>
     </div>

@@ -156,10 +156,12 @@ const NewVisualDemoSection = () => {
             <div className="order-1 md:order-2">
               <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden max-w-sm mx-auto">
                 <div className="bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 px-5 py-4 flex items-center gap-3">
-                  <div className="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center font-bold text-white text-sm">A</div>
+                  <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/30">
+                    <img src="/images/mia-avatar.png" alt="Mia" className="w-full h-full object-cover" />
+                  </div>
                   <div>
                     <div className="font-semibold text-white text-sm">
-                      {language === 'fr' ? 'Aïcha · Conseillère IA' : 'Aïcha · AI Advisor'}
+                      {language === 'fr' ? 'Mia · Conseillère Capillaire' : 'Mia · Hair Advisor'}
                     </div>
                     <div className="flex items-center gap-1.5 text-xs text-rose-100">
                       <span className="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
@@ -172,7 +174,9 @@ const NewVisualDemoSection = () => {
                   {active.bubble && (
                     <div className={`flex ${active.bubble.side === 'user' ? 'justify-end' : 'justify-start'}`}>
                       {active.bubble.side === 'ai' && (
-                        <div className="w-7 h-7 bg-gradient-to-br from-rose-500 to-pink-600 rounded-full flex items-center justify-center text-white text-xs font-bold mr-2 mt-1 flex-shrink-0">A</div>
+                        <div className="w-7 h-7 rounded-full overflow-hidden mr-2 mt-1 flex-shrink-0 border border-rose-100">
+                          <img src="/images/mia-avatar.png" alt="Mia" className="w-full h-full object-cover" />
+                        </div>
                       )}
                       <div className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
                         active.bubble.side === 'user'

@@ -37,20 +37,20 @@ const About = () => {
           <div className="container px-4 sm:px-6 md:px-12 mx-auto">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 border border-rose-200 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 text-sm font-semibold text-rose-700 animate-fade-in">
-                <Heart className="w-4 h-4 mr-2" />
-                {language === 'fr' ? "La Vendeuse IA des Marques Beauté" : "The AI Salesperson for Beauty Brands"}
-                <Sparkles className="w-4 h-4 ml-2" />
+                <Sparkles className="w-4 h-4 mr-2" />
+                {language === 'fr' ? "Qui est Mia ?" : "Who is Mia?"}
+                <Heart className="w-4 h-4 ml-2" />
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 animate-fade-in [animation-delay:200ms] leading-tight">
-                {language === 'fr' ? "À Propos de" : "About"}
-                <span className="bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 bg-clip-text text-transparent"> ChatSeller</span>
+                {language === 'fr' ? "Nous avons créé" : "We created"}
+                <span className="bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 bg-clip-text text-transparent"> Mia</span>
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-700 mb-8 animate-fade-in [animation-delay:400ms] leading-relaxed max-w-3xl mx-auto">
                 {language === 'fr' ?
-                  "Les clientes des marques beauté veulent être conseillées, guidées, accompagnées. Sur une boutique en ligne, elles sont seules face aux produits et à leurs doutes. ChatSeller transforme cette expérience statique en une conversation experte et personnalisée, comme en boutique physique." :
-                  "Beauty brand customers want to be advised, guided, and supported. On an online store, they're left alone with products and their doubts. ChatSeller transforms this static experience into an expert, personalized conversation, just like in a physical store."
+                  "Les marques beauté perdent des ventes chaque jour faute de conseils disponibles en ligne. Mia est née pour changer ça : une Vendeuse IA spécialisée beauté, disponible 24h/24, qui connaît vos produits sur le bout des doigts et convertit vos visiteurs en acheteurs." :
+                  "Beauty brands lose sales every day due to lack of online advice. Mia was created to change that: a specialized beauty AI Salesperson, available 24/7, who knows your products inside out and converts your visitors into buyers."
                 }
               </p>
 
@@ -85,7 +85,7 @@ const About = () => {
             <div className="max-w-5xl mx-auto">
               <div className="mb-16">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-gray-900">
-                  {language === 'fr' ? "Comment ChatSeller s'est spécialisé dans la beauté" : "How ChatSeller specialized in beauty"}
+                  {language === 'fr' ? "Comment Mia est née" : "How Mia was born"}
                 </h2>
 
                 <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-rose-100">
@@ -95,12 +95,12 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="font-bold text-lg sm:text-xl mb-3 text-gray-900">
-                        {language === 'fr' ? "L'histoire de notre pivot beauté" : "The story of our beauty pivot"}
+                        {language === 'fr' ? "L'idée derrière Mia" : "The idea behind Mia"}
                       </h3>
                       <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                         {language === 'fr' ?
-                          "ChatSeller a été initialement développé par Dukka comme une solution d'IA conversationnelle généraliste pour l'e-commerce. Mais en échangeant avec nos premiers utilisateurs, nous avons découvert quelque chose de fascinant..." :
-                          "ChatSeller was initially developed by Dukka as a generalist conversational AI solution for e-commerce. But by talking with our first users, we discovered something fascinating..."
+                          "ChatSeller a été développé par Dukka pour aider les marques beauté à vendre en ligne. En travaillant avec nos premières marques partenaires, nous avons vite compris qu'une IA généraliste ne suffisait pas — il fallait une vraie experte beauté. Mia est née de ce constat." :
+                          "ChatSeller was developed by Dukka to help beauty brands sell online. Working with our first partner brands, we quickly understood that a generalist AI wasn't enough — a real beauty expert was needed. Mia was born from this realization."
                         }
                       </p>
                     </div>
@@ -111,12 +111,12 @@ const About = () => {
                       <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8 text-rose-600 flex-shrink-0 mt-1" />
                       <div>
                         <h4 className="font-bold text-rose-900 mb-3 text-base sm:text-lg">
-                          {language === 'fr' ? "La révélation beauté" : "The beauty revelation"}
+                          {language === 'fr' ? "Le déclic" : "The turning point"}
                         </h4>
                         <blockquote className="text-rose-800 italic text-sm sm:text-base leading-relaxed">
                           {language === 'fr' ?
-                            "\"Les marques beauté étaient celles qui obtenaient les MEILLEURS résultats avec ChatSeller. Elles avaient des questions très spécifiques sur les ingrédients, les types de peau, les routines... Et notre IA généraliste ne pouvait pas rivaliser avec l'expertise d'une vraie conseillère beauté.\"" :
-                            "\"Beauty brands were the ones getting the BEST results with ChatSeller. They had very specific questions about ingredients, skin types, routines... And our generalist AI couldn't compete with the expertise of a real beauty advisor.\""
+                            "\"Les marques beauté posaient des questions très pointues : sur les ingrédients, les types de peau, les routines... Une IA généraliste ne pouvait pas répondre avec l'expertise d'une vraie vendeuse beauté. Il fallait créer Mia.\"" :
+                            "\"Beauty brands were asking very specific questions about ingredients, skin types, routines... A generalist AI couldn't respond with the expertise of a real beauty salesperson. We had to create Mia.\""
                           }
                         </blockquote>
                       </div>
@@ -134,8 +134,8 @@ const About = () => {
                       <p className="text-purple-700 text-sm leading-relaxed">
                         <em>
                           {language === 'fr' ?
-                            "\"Nos clientes ont des questions très pointues : 'Ce sérum convient-il aux peaux sensibles avec de la rosacée ?' 'Puis-je l'associer à mes soins à la vitamine C ?' Une IA généraliste ne peut pas répondre avec cette expertise.\"" :
-                            "\"Our customers have very specific questions: 'Is this serum suitable for sensitive skin with rosacea?' 'Can I combine it with my vitamin C treatments?' A generalist AI can't respond with this expertise.\""
+                            "\"Les clients posent des questions très pointues : 'Ce sérum convient-il aux peaux sensibles avec de la rosacée ?' 'Puis-je l'associer à mes soins à la vitamine C ?' Mia répond avec l'expertise d'une vraie vendeuse beauté.\"" :
+                            "\"Customers ask very specific questions: 'Is this serum suitable for sensitive skin with rosacea?' 'Can I combine it with my vitamin C treatments?' Mia responds with the expertise of a real beauty salesperson.\""
                           }
                         </em>
                       </p>
@@ -151,8 +151,8 @@ const About = () => {
                       <p className="text-emerald-700 text-sm leading-relaxed">
                         <em>
                           {language === 'fr' ?
-                            "\"Si on créait une IA qui maîtrise VRAIMENT la beauté - tous les ingrédients, tous les types de peau, toutes les routines - on pourrait révolutionner l'expérience d'achat beauté en ligne !\"" :
-                            "\"If we created an AI that REALLY masters beauty - all ingredients, all skin types, all routines - we could revolutionize the online beauty shopping experience!\""
+                            "\"Si on créait une Vendeuse IA qui maîtrise VRAIMENT la beauté — tous les ingrédients, tous les types de peau, toutes les routines — chaque marque pourrait vendre comme une boutique physique, 24h/24 !\"" :
+                            "\"If we created an AI Salesperson who REALLY masters beauty — all ingredients, all skin types, all routines — every brand could sell like a physical store, 24/7!\""
                           }
                         </em>
                       </p>
@@ -163,17 +163,17 @@ const About = () => {
                     <div className="flex items-center justify-center mb-3">
                       <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-rose-600 mr-3" />
                       <h4 className="text-lg sm:text-xl font-bold text-gray-900">
-                        {language === 'fr' ? "Naissance de ChatSeller Beauté" : "Birth of ChatSeller Beauty"}
+                        {language === 'fr' ? "La naissance de Mia" : "The birth of Mia"}
                       </h4>
                     </div>
                     <p className="text-gray-800 font-medium text-sm sm:text-base leading-relaxed">
                       {language === 'fr' ?
-                        "C'est ainsi qu'est née notre spécialisation : une Vendeuse IA qui comprend les différents types de peau et cheveux, et sait créer des routines beauté personnalisées adaptées aux besoins spécifiques de chaque cliente. " :
-                        "This is how our specialization was born: an AI Salesperson who understands different skin and hair types, and knows how to create personalized beauty routines adapted to each customer's specific needs. "}
+                        "Nous avons créé Mia : une Vendeuse IA qui comprend les différents types de peau et cheveux, maîtrise les ingrédients, connaît les routines et sait conseiller chaque client avec précision. " :
+                        "We created Mia: an AI Salesperson who understands different skin and hair types, masters ingredients, knows routines and advises each customer with precision. "}
                       <span className="text-rose-600 font-bold">
                         {language === 'fr' ?
-                          "Pour que chaque marque beauté puisse offrir l'expertise d'une conseillère qualifiée, 24h/24." :
-                          "So every beauty brand can offer the expertise of a qualified advisor, 24/7."
+                          "Pour que chaque marque beauté puisse recruter sa propre experte, disponible 24h/24." :
+                          "So every beauty brand can recruit their own expert, available 24/7."
                         }
                       </span>
                     </p>
@@ -190,12 +190,12 @@ const About = () => {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12 sm:mb-16">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
-                  {language === 'fr' ? "Notre mission" : "Our mission"}
+                  {language === 'fr' ? "Pourquoi nous avons créé Mia" : "Why we created Mia"}
                 </h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                   {language === 'fr' ?
-                    "Transformer l'expérience d'achat beauté en ligne grâce à l'expertise IA" :
-                    "Transform the online beauty shopping experience through AI expertise"
+                    "La raison d'être de Mia et ce qu'elle représente pour les marques beauté" :
+                    "Mia's purpose and what she means for beauty brands"
                   }
                 </p>
               </div>
@@ -211,14 +211,14 @@ const About = () => {
                   </h3>
                   <p className="text-rose-800 font-medium mb-4 text-sm sm:text-base">
                     {language === 'fr' ?
-                      "\"Démocratiser l'expertise beauté pour toutes les marques.\"" :
-                      "\"Democratize beauty expertise for all brands.\""
+                      "\"Donner à chaque marque beauté sa propre Vendeuse IA experte.\"" :
+                      "\"Give every beauty brand their own expert AI Salesperson.\""
                     }
                   </p>
                   <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                     {language === 'fr' ?
-                      "Permettre à chaque marque beauté, des startups aux grandes enseignes, d'offrir à leurs clientes le niveau de conseil d'une esthéticienne experte diplômée. Parce que chaque femme mérite des conseils beauté personnalisés." :
-                      "Enable every beauty brand, from startups to major retailers, to offer their customers the level of advice of an expert certified beautician. Because every woman deserves personalized beauty advice."
+                      "Permettre à chaque marque beauté, des startups aux grandes enseignes, de recruter Mia : une Vendeuse IA qui maîtrise leurs produits, conseille leurs clients et vend pour eux 24h/24. Parce que chaque client mérite des conseils beauté personnalisés." :
+                      "Enable every beauty brand, from startups to major retailers, to recruit Mia: an AI Salesperson who masters their products, advises their customers and sells for them 24/7. Because every customer deserves personalized beauty advice."
                     }
                   </p>
                 </div>
@@ -239,8 +239,8 @@ const About = () => {
                   </p>
                   <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                     {language === 'fr' ?
-                      "D'ici 2028, chaque site beauté aura sa Vendeuse IA spécialisée, exactement comme chaque institut a ses esthéticiennes. Nous serons le leader africain de cette transformation." :
-                      "By 2028, every beauty site will have its specialized AI Salesperson, just like every salon has its beauticians. We will be the African leader of this transformation."
+                      "D'ici 2028, chaque site beauté aura sa Mia — sa Vendeuse IA spécialisée — exactement comme chaque boutique physique a ses vendeuses. Nous construisons cette infrastructure pour les marques beauté du monde entier." :
+                      "By 2028, every beauty site will have its Mia — its specialized AI Salesperson — just like every physical store has its salespeople. We're building this infrastructure for beauty brands worldwide."
                     }
                   </p>
                 </div>
@@ -296,7 +296,7 @@ const About = () => {
           <div className="container px-4 sm:px-6 md:px-12 mx-auto">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">
-                {language === 'fr' ? "L'équipe derrière ChatSeller" : "The team behind ChatSeller"}
+                {language === 'fr' ? "L'équipe qui a créé Mia" : "The team that created Mia"}
               </h2>
 
               <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
@@ -313,8 +313,8 @@ const About = () => {
                   </p>
                   <p className="text-gray-700 leading-relaxed text-sm mb-4">
                     {language === 'fr' ?
-                      "Entrepreneur passionné basé au Sénégal, Ibuka a fondé Dukka avec la vision de révolutionner l'e-commerce grâce à l'IA. Il pilote la stratégie et le développement de ChatSeller pour les marques beauté africaines." :
-                      "Passionate entrepreneur based in Senegal, Ibuka founded Dukka with the vision of revolutionizing e-commerce through AI. He leads the strategy and development of ChatSeller for African beauty brands."
+                      "Entrepreneur passionné basé au Sénégal, Ibuka a fondé Dukka avec la vision de révolutionner la vente en ligne grâce à l'IA. Il a eu l'idée de Mia et pilote la stratégie de ChatSeller pour les marques beauté." :
+                      "Passionate entrepreneur based in Senegal, Ibuka founded Dukka with the vision of revolutionizing online sales through AI. He conceived Mia and leads ChatSeller's strategy for beauty brands."
                     }
                   </p>
                 </div>
@@ -332,8 +332,8 @@ const About = () => {
                   </p>
                   <p className="text-gray-700 leading-relaxed text-sm mb-4">
                     {language === 'fr' ?
-                      "Expert en IA et développement logiciel, Jeremie conçoit et maintient l'architecture technique de ChatSeller. Il s'assure que notre Vendeuse IA offre des performances optimales et une expérience fluide à chaque interaction." :
-                      "Expert in AI and software development, Jeremie designs and maintains ChatSeller's technical architecture. He ensures our AI Salesperson delivers optimal performance and a smooth experience with every interaction."
+                      "Expert en IA et développement logiciel, Jeremie a conçu et construit Mia de A à Z. Il s'assure qu'elle soit toujours plus performante, plus précise, et qu'elle offre une expérience fluide à chaque client." :
+                      "Expert in AI and software development, Jeremie designed and built Mia from scratch. He ensures she's always more performant, more precise, and delivers a smooth experience to every customer."
                     }
                   </p>
                 </div>
@@ -351,8 +351,8 @@ const About = () => {
                   </p>
                   <p className="text-gray-700 leading-relaxed text-sm mb-4">
                     {language === 'fr' ?
-                      "Spécialiste du marketing digital et de la beauté, Yacine comprend les enjeux des marques africaines. Elle accompagne nos clients dans leur croissance et développe notre présence auprès des marques beauté sur le continent." :
-                      "Digital marketing and beauty specialist, Yacine understands the challenges of African brands. She supports our clients' growth and develops our presence among beauty brands across the continent."
+                      "Spécialiste du marketing digital et de la beauté, Yacine a façonné la personnalité et l'expertise beauté de Mia. Elle accompagne nos marques partenaires dans leur croissance et les aide à tirer le meilleur de leur Vendeuse IA." :
+                      "Digital marketing and beauty specialist, Yacine shaped Mia's personality and beauty expertise. She supports our partner brands in their growth and helps them get the most out of their AI Salesperson."
                     }
                   </p>
                 </div>
@@ -362,8 +362,8 @@ const About = () => {
               <div className="mt-12 bg-gradient-to-r from-rose-50 to-pink-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-rose-200 max-w-3xl mx-auto">
                 <p className="text-rose-700 font-medium text-center text-sm sm:text-base italic">
                   {language === 'fr' ?
-                    "\"Nous avons choisi de nous spécialiser dans la beauté car c'est un secteur où l'expertise et le conseil personnalisé font toute la différence. Chaque femme est unique, ses besoins beauté aussi.\"" :
-                    "\"We chose to specialize in beauty because it's a sector where expertise and personalized advice make all the difference. Every woman is unique, so are her beauty needs.\""
+                    "\"Nous avons créé Mia parce que la beauté est un secteur où l'expertise et le conseil personnalisé font toute la différence. Chaque client est unique, ses besoins beauté aussi. Mia s'en souvient à chaque conversation.\"" :
+                    "\"We created Mia because beauty is a sector where expertise and personalized advice make all the difference. Every customer is unique, and so are their beauty needs. Mia remembers that in every conversation.\""
                   }
                 </p>
                 <p className="text-rose-600 font-semibold text-center mt-3 text-sm">
@@ -381,7 +381,7 @@ const About = () => {
 
               <div className="mb-12 sm:mb-16">
                 <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-gray-900">
-                  {language === 'fr' ? "L'avenir de ChatSeller" : "The future of ChatSeller"}
+                  {language === 'fr' ? "Ce que Mia va devenir" : "What Mia is becoming"}
                 </h3>
 
                 <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
@@ -389,13 +389,13 @@ const About = () => {
                     <div className="flex items-center mb-4">
                       <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-rose-600 mr-3" />
                       <h4 className="text-lg sm:text-xl font-bold text-gray-900">
-                        {language === 'fr' ? "Expansion africaine" : "African expansion"}
+                        {language === 'fr' ? "Mia parle plus de langues" : "Mia speaks more languages"}
                       </h4>
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
                       {language === 'fr' ?
-                        "Après notre lancement au Sénégal et en Côte d'Ivoire, nous étendons ChatSeller dans toute l'Afrique francophone puis anglophone, en nous adaptant aux spécificités locales de chaque marché beauté." :
-                        "After our launch in Senegal and Ivory Coast, we're expanding ChatSeller across French-speaking then English-speaking Africa, adapting to the local specificities of each beauty market."
+                        "Mia parle déjà français et anglais. Demain, elle parlera wolof, arabe, swahili et d'autres langues africaines — pour que chaque marque puisse recruter une Vendeuse IA qui parle la langue de ses clients." :
+                        "Mia already speaks French and English. Tomorrow, she'll speak Wolof, Arabic, Swahili and more — so every brand can recruit an AI Salesperson who speaks their customers' language."
                       }
                     </p>
                   </div>
@@ -404,13 +404,13 @@ const About = () => {
                     <div className="flex items-center mb-4">
                       <Brain className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600 mr-3" />
                       <h4 className="text-lg sm:text-xl font-bold text-gray-900">
-                        {language === 'fr' ? "IA beauté avancée" : "Advanced beauty AI"}
+                        {language === 'fr' ? "Mia devient encore plus experte" : "Mia becomes even more expert"}
                       </h4>
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
                       {language === 'fr' ?
-                        "Analyse visuelle des problèmes de peau, recommandations de routines personnalisées, expertise approfondie sur les ingrédients locaux africains (karité, baobab, touloucouna...)." :
-                        "Visual analysis of skin problems, personalized routine recommendations, deep expertise on local African ingredients (shea butter, baobab, touloucouna...)."
+                        "Mia apprend en continu : analyse visuelle des problèmes de peau, routines ultra-personnalisées, maîtrise approfondie des ingrédients locaux africains (karité, baobab, touloucouna...). Plus vous la recrutez tôt, plus elle sera experte pour votre marque." :
+                        "Mia learns continuously: visual skin analysis, ultra-personalized routines, deep mastery of local African ingredients (shea, baobab, touloucouna...). The earlier you recruit her, the more expert she becomes for your brand."
                       }
                     </p>
                   </div>
@@ -424,12 +424,12 @@ const About = () => {
                     <ShoppingCart className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">
-                    {language === 'fr' ? "Prêt à laisser votre vendeuse experte vendre pour vous ?" : "Ready to let your expert salesperson sell for you?"}
+                    {language === 'fr' ? "Prêt à recruter Mia ?" : "Ready to hire Mia?"}
                   </h3>
                   <p className="text-gray-700 mb-6 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
                     {language === 'fr' ?
-                      "Elle répondra aux questions, rassurera vos clientes et collectera les ventes 24h/24." :
-                      "She will answer questions, reassure your customers and collect sales 24/7."
+                      "Elle apprend vos produits, conseille vos clients et vend pour vous 24h/24 — sans congés, sans charges, sans mauvaises surprises." :
+                      "She learns your products, advises your customers and sells for you 24/7 — no vacation, no overhead, no surprises."
                     }
                   </p>
                 </div>
@@ -438,7 +438,7 @@ const About = () => {
                   <Button size="lg" className="group bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300" asChild>
                     <a href="https://dashboard.chatseller.app/register" className="flex items-center">
                       <Sparkles className="w-5 h-5 mr-2" />
-                      {language === 'fr' ? "Créer ma Vendeuse IA" : "Create my AI Salesperson"}
+                      {language === 'fr' ? "Recruter Mia — 14 jours gratuits" : "Hire Mia — 14 days free"}
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </a>
                   </Button>
@@ -455,8 +455,8 @@ const About = () => {
                   <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
                   <span className="font-medium">
                     {language === 'fr' ?
-                      "+10 marques beauté africaines déjà convaincues" :
-                      "10+ African beauty brands already convinced"
+                      "+10 marques beauté ont déjà recruté Mia" :
+                      "10+ beauty brands have already hired Mia"
                     }
                   </span>
                 </div>

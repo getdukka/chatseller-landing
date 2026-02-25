@@ -23,22 +23,22 @@ const NewFinalCTASection = () => {
           <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 mb-8 animate-fade-in">
             <Sparkles className="w-4 h-4 text-white" />
             <span className="text-sm font-semibold text-white">
-              {language === 'fr' ? 'Prête en 5 minutes, sans compétence technique' : 'Ready in 5 minutes, no technical skills'}
+              {language === 'fr' ? 'Mia est disponible. Votre boutique l\'est-elle ?' : 'Mia is available. Is your store ready for her?'}
             </span>
           </div>
 
           {/* Main Headline */}
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight animate-fade-in [animation-delay:200ms]">
             {language === 'fr' ?
-              'Prêt à laisser votre vendeuse experte vendre pour vous ?' :
-              'Ready to let your expert salesperson sell for you?'}
+              'Recrutez Mia aujourd\'hui. Elle commence demain.' :
+              'Hire Mia today. She starts tomorrow.'}
           </h2>
 
-          {/* Subheadline with key benefits */}
+          {/* Subheadline */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed animate-fade-in [animation-delay:400ms]">
             {language === 'fr' ?
-              'Elle répondra aux questions, rassurera vos clientes et collectera les ventes 24h/24.' :
-              'She will answer questions, reassure your customers and collect sales 24/7.'}
+              'Pendant que vous vous concentrez sur votre marque, Mia accueille vos clients, répond à leurs questions et finalise leurs commandes. Tous les jours. À toute heure.' :
+              'While you focus on your brand, Mia welcomes your customers, answers their questions and finalizes their orders. Every day. At any hour.'}
           </p>
 
           {/* Main CTA Buttons */}
@@ -49,7 +49,7 @@ const NewFinalCTASection = () => {
               asChild
             >
               <a href="https://dashboard.chatseller.app/register">
-                {language === 'fr' ? 'Créer ma Vendeuse IA' : 'Create my AI Salesperson'}
+                {language === 'fr' ? 'Recruter Mia — 14 jours gratuits' : 'Hire Mia — 14 days free'}
                 <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -61,29 +61,29 @@ const NewFinalCTASection = () => {
               asChild
             >
               <a href="https://cal.com/chatseller/demo-beaute">
-                {language === 'fr' ? 'Voir une démo' : 'See a demo'}
+                {language === 'fr' ? 'Voir Mia en action' : 'See Mia in action'}
               </a>
             </Button>
           </div>
 
-          {/* Trust indicators - Éléments de réassurance */}
+          {/* Trust indicators */}
           <div className="flex flex-wrap justify-center items-center gap-8 text-white/90 text-sm animate-fade-in [animation-delay:800ms]">
             <div className="flex items-center">
               <CheckCircle className="w-5 h-5 mr-2 text-green-300" />
               <span className="font-medium">
-                {language === 'fr' ? '14 jours gratuits sans engagement' : '14 days free without commitment'}
+                {language === 'fr' ? '14 jours d\'essai gratuits' : '14-day free trial'}
               </span>
             </div>
             <div className="flex items-center">
               <Zap className="w-5 h-5 mr-2 text-yellow-300" />
               <span className="font-medium">
-                {language === 'fr' ? 'Installation en 2 minutes' : '2-minute installation'}
+                {language === 'fr' ? 'Mia est opérationnelle en 5 minutes' : 'Mia live in 5 minutes'}
               </span>
             </div>
             <div className="flex items-center">
               <Shield className="w-5 h-5 mr-2 text-blue-300" />
               <span className="font-medium">
-                {language === 'fr' ? 'Annulation en 1 clic' : 'Cancel in 1 click'}
+                {language === 'fr' ? 'Licenciez-la à tout moment' : 'Dismiss her at any time'}
               </span>
             </div>
           </div>

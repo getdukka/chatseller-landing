@@ -26,14 +26,14 @@ const NewHowItWorksSection = () => {
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-900 leading-tight animate-fade-in [animation-delay:200ms]">
             {language === 'fr' ?
-              'Connecter. Créer. Vendre. En 5 minutes.' :
-              'Connect. Create. Sell. In 5 minutes.'}
+              'Recruter. Former. Vendre. En 5 minutes.' :
+              'Hire. Train. Sell. In 5 minutes.'}
           </h2>
 
           <p className="text-lg sm:text-xl text-gray-600 animate-fade-in [animation-delay:400ms]">
             {language === 'fr' ?
-              'Votre Vendeuse IA sera prête à vendre pour vous avant même que vous ayez fini votre café.' :
-              'Your AI advisor will be ready to sell for you before you even finish your coffee.'}
+              'Mia rejoint votre boutique en 3 étapes simples. Pas de compétences techniques requises. Juste une nouvelle collègue qui commence immédiatement.' :
+              'Mia joins your store in 3 simple steps. No technical skills required. Just a new colleague who starts right away.'}
           </p>
         </div>
 
@@ -84,9 +84,9 @@ const NewHowItWorksSection = () => {
                   'Total setup time'}
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
-                {language === 'fr' ? 
-                  'Votre conseillère beauté IA sera active et pourra accompagner vos clients' :
-                  'Your AI beauty advisor will be active and ready to assist your customers'}
+                {language === 'fr' ?
+                  'Mia sera disponible sur votre boutique, prête à accompagner vos clients' :
+                  'Mia will be available on your store, ready to assist your customers'}
               </p>
             </div>
             
@@ -95,7 +95,7 @@ const NewHowItWorksSection = () => {
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-rose-600 mb-1 sm:mb-2">2min</div>
                 <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                  {language === 'fr' ? 'Connecter' : 'Connect'}
+                  {language === 'fr' ? 'Recruter' : 'Hire'}
                 </div>
               </div>
 
@@ -104,7 +104,7 @@ const NewHowItWorksSection = () => {
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-purple-600 mb-1 sm:mb-2">2min</div>
                 <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                  {language === 'fr' ? 'Créer' : 'Create'}
+                  {language === 'fr' ? 'Former' : 'Train'}
                 </div>
               </div>
 
@@ -138,7 +138,7 @@ const NewHowItWorksSection = () => {
               <div className="flex items-center justify-center space-x-2 text-xs sm:text-sm text-blue-600">
                 <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
                 <span className="font-medium">
-                  {language === 'fr' ? 'Formation automatique' : 'Automatic training'}
+                  {language === 'fr' ? 'Mia se forme toute seule' : 'Mia trains herself'}
                 </span>
               </div>
               <div className="flex items-center justify-center space-x-2 text-xs sm:text-sm text-purple-600 sm:col-span-2 md:col-span-1">
@@ -239,11 +239,11 @@ const BeautyStepContent = ({
 // Données des étapes avec traductions complètes
 const getStepsData = (language: 'fr' | 'en') => [
   {
-    shortTitle: language === 'fr' ? 'Connecter' : 'Connect',
-    title: language === 'fr' ? 'Connectez votre boutique' : 'Connect your store',
+    shortTitle: language === 'fr' ? 'Recruter' : 'Hire',
+    title: language === 'fr' ? 'Recrutez Mia' : 'Hire Mia',
     description: language === 'fr' ?
-      'Reliez ChatSeller à votre boutique Shopify ou WooCommerce. Vos produits sont automatiquement importés et votre conseillère les connaîtra instantanément.' :
-      'Link ChatSeller to your Shopify or WooCommerce store. Your products are automatically imported and your advisor will know them instantly.',
+      'Créez votre espace en 2 minutes. Mia est immédiatement affectée à votre boutique.' :
+      'Set up your account in 2 minutes. Mia is immediately assigned to your store.',
     icon: <Settings className="h-6 w-6 sm:h-8 sm:w-8" />,
     colorClasses: {
       text: 'text-blue-600',
@@ -251,20 +251,20 @@ const getStepsData = (language: 'fr' | 'en') => [
       bgDark: 'bg-blue-500'
     },
     features: [
-      language === 'fr' ? 'Connexion en un clic à Shopify/WooCommerce' : 'One-click Shopify/WooCommerce connection',
-      language === 'fr' ? 'Import automatique de tous vos produits' : 'Automatic import of all your products',
-      language === 'fr' ? 'Synchronisation des prix et stocks' : 'Price and stock synchronization',
-      language === 'fr' ? 'Aucune compétence technique requise' : 'No technical skills required'
+      language === 'fr' ? 'Mia récupère les informations sur votre marque' : 'Mia retrieves information about your brand',
+      language === 'fr' ? 'Elle importe automatiquement tous vos produits' : 'She automatically imports all your products',
+      language === 'fr' ? 'Elle apprend à connaître vos clients et leurs besoins' : 'She gets to know your customers and their needs',
+      language === 'fr' ? 'Vous lui donnez un nom, un titre, et un ton de voix' : 'You give her a name, a title, and a tone of voice'
     ],
     timeEstimate: language === 'fr' ? '2 minutes' : '2 minutes',
     difficulty: language === 'fr' ? 'Très facile' : 'Very easy'
   },
   {
-    shortTitle: language === 'fr' ? 'Créer' : 'Create',
-    title: language === 'fr' ? 'Créez votre conseillère experte' : 'Create your expert advisor',
+    shortTitle: language === 'fr' ? 'Former' : 'Train',
+    title: language === 'fr' ? 'Formez-la à vos produits' : 'Train her on your products',
     description: language === 'fr' ?
-      'Donnez une personnalité à votre conseillère et formez-la sur vos produits. Elle apprend automatiquement tout ce qu\'elle doit savoir pour conseiller vos clientes comme vous le feriez.' :
-      'Give your advisor a personality and train her on your products. She automatically learns everything she needs to advise your customers just like you would.',
+      'Mia apprend tout ce qui fait votre marque. Transmettez-lui tout ce qu\'elle doit savoir, et elle devient l\'experte de vos produits en quelques minutes.' :
+      'Mia learns everything that makes your brand. Share everything she needs to know, and she becomes the expert on your products in minutes.',
     icon: <Brain className="h-6 w-6 sm:h-8 sm:w-8" />,
     colorClasses: {
       text: 'text-purple-600',
@@ -272,20 +272,20 @@ const getStepsData = (language: 'fr' | 'en') => [
       bgDark: 'bg-purple-500'
     },
     features: [
-      language === 'fr' ? 'Personnalisez son nom et sa personnalité' : 'Customize her name and personality',
-      language === 'fr' ? 'Formation automatique sur vos produits' : 'Automatic training on your products',
-      language === 'fr' ? 'Ajoutez vos connaissances métier' : 'Add your business knowledge',
-      language === 'fr' ? 'Elle maîtrise votre catalogue en minutes' : 'She masters your catalog in minutes'
+      language === 'fr' ? 'Partagez vos fiches produits, votre kit de marque, vos guides' : 'Share your product sheets, brand kit, and guides',
+      language === 'fr' ? 'Mia lit et mémorise tout ce que vous lui transmettez' : 'Mia reads and memorizes everything you share with her',
+      language === 'fr' ? 'Elle apprend votre philosophie, vos valeurs, votre vision' : 'She learns your philosophy, values, and vision',
+      language === 'fr' ? 'Plus elle en sait, mieux elle représente votre marque' : 'The more she knows, the better she represents your brand'
     ],
     timeEstimate: language === 'fr' ? '2 minutes' : '2 minutes',
     difficulty: language === 'fr' ? 'Simple' : 'Simple'
   },
   {
     shortTitle: language === 'fr' ? 'Vendre' : 'Sell',
-    title: language === 'fr' ? 'Laissez-la vendre pour vous' : 'Let her sell for you',
+    title: language === 'fr' ? 'Mia commence à vendre' : 'Mia starts selling',
     description: language === 'fr' ?
-      'Activez votre conseillère et regardez-la transformer vos visiteurs en clientes. Elle répond aux questions, recommande les bons produits et collecte les commandes pendant que vous dormez.' :
-      'Activate your advisor and watch her turn visitors into customers. She answers questions, recommends the right products, and collects orders while you sleep.',
+      'Activez Mia sur votre boutique. Elle accueille vos premiers clients et vous suivez ses performances depuis votre tableau de bord.' :
+      'Activate Mia on your store. She welcomes your first customers and you track her performance from your dashboard.',
     icon: <Zap className="h-6 w-6 sm:h-8 sm:w-8" />,
     colorClasses: {
       text: 'text-green-600',
@@ -293,10 +293,10 @@ const getStepsData = (language: 'fr' | 'en') => [
       bgDark: 'bg-green-500'
     },
     features: [
-      language === 'fr' ? 'Disponible 24h/24, 7j/7' : 'Available 24/7',
-      language === 'fr' ? 'Répond instantanément à chaque cliente' : 'Responds instantly to every customer',
-      language === 'fr' ? 'Recommande les produits adaptés' : 'Recommends the right products',
-      language === 'fr' ? 'Collecte les commandes automatiquement' : 'Collects orders automatically'
+      language === 'fr' ? 'Mia est disponible 24h/24, 7j/7, sans interruption' : 'Mia is available 24/7, without interruption',
+      language === 'fr' ? 'Elle répond instantanément à chaque client' : 'She responds instantly to every customer',
+      language === 'fr' ? 'Elle recommande les produits adaptés à chaque profil' : 'She recommends products tailored to each profile',
+      language === 'fr' ? 'Elle conseille, guide et crée les commandes directement' : 'She advises, guides and creates orders directly'
     ],
     timeEstimate: language === 'fr' ? '1 minute' : '1 minute',
     difficulty: language === 'fr' ? 'Instantané' : 'Instant'
@@ -399,8 +399,8 @@ const TrainingVisual = ({ language }: { language: string }) => (
       
       {/* Header formation */}
       <div className="text-center">
-        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-sm sm:text-base md:text-lg font-bold mx-auto mb-3 sm:mb-4">
-          IA
+        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full overflow-hidden mx-auto mb-3 sm:mb-4 border-2 border-purple-200 shadow-md">
+          <img src="/images/mia-avatar.png" alt="Mia" className="w-full h-full object-cover" />
         </div>
         <div className="text-base sm:text-lg font-bold text-purple-700">
           {language === 'fr' ? 'Formation en cours...' : 'Training in progress...'}
@@ -413,9 +413,9 @@ const TrainingVisual = ({ language }: { language: string }) => (
           <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 flex-shrink-0" />
           <div className="flex-1 min-w-0">
             <div className="text-xs sm:text-sm font-medium truncate">
-              {language === 'fr' ? 'Site web indexé' : 'Website indexed'}
+              {language === 'fr' ? 'Site web analysé' : 'Website analyzed'}
             </div>
-            <div className="text-xs text-gray-500 truncate">naya-beauty.com</div>
+            <div className="text-xs text-gray-500 truncate">nywele-cosmetics.com</div>
           </div>
           <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full flex-shrink-0"></div>
         </div>
@@ -424,9 +424,9 @@ const TrainingVisual = ({ language }: { language: string }) => (
           <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-purple-500 flex-shrink-0" />
           <div className="flex-1 min-w-0">
             <div className="text-xs sm:text-sm font-medium truncate">
-              {language === 'fr' ? 'Catalogue PDF traité' : 'PDF catalog processed'}
+              {language === 'fr' ? 'Kit de marque mémorisé' : 'Brand kit memorized'}
             </div>
-            <div className="text-xs text-gray-500 truncate">catalogue-produits.pdf</div>
+            <div className="text-xs text-gray-500 truncate">kit-de-marque.pdf</div>
           </div>
           <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full flex-shrink-0"></div>
         </div>
@@ -448,16 +448,16 @@ const TrainingVisual = ({ language }: { language: string }) => (
       {/* Progression formation */}
       <div className="space-y-2 sm:space-y-3">
         <div className="flex justify-between text-xs sm:text-sm font-medium text-purple-700">
-          <span>{language === 'fr' ? 'Formation de la Vendeuse IA' : 'AI Salesperson Training'}</span>
+          <span>{language === 'fr' ? 'Formation de Mia' : 'Mia\'s Training'}</span>
           <span>87%</span>
         </div>
         <div className="w-full bg-purple-200 rounded-full h-2 sm:h-3">
           <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 sm:h-3 rounded-full animate-pulse" style={{width: '87%'}}></div>
         </div>
         <div className="text-xs text-gray-600 text-center">
-          {language === 'fr' ? 
-            'Apprentissage des spécificités de votre marque en cours...' :
-            'Learning your brand specifics in progress...'}
+          {language === 'fr' ?
+            'Mia ajoute les connaissances fournies à sa mémoire' :
+            'Mia is adding the provided knowledge to her memory'}
         </div>
       </div>
       
@@ -549,8 +549,8 @@ const ActivationVisual = ({ language }: { language: string }) => (
           
           {/* Widget ChatSeller */}
           <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6">
-            <div className="bg-gradient-to-r from-rose-500 to-pink-500 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full shadow-lg flex items-center justify-center animate-bounce">
-              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full overflow-hidden shadow-lg animate-bounce border-2 border-rose-300">
+              <img src="/images/mia-avatar.png" alt="Mia" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -top-1 -left-1 w-3 h-3 sm:w-4 sm:h-4 bg-red-500 rounded-full flex items-center justify-center">
               <span className="text-xs text-white font-bold">1</span>

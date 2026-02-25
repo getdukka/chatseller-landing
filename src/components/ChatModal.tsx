@@ -80,15 +80,15 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
     });
   };
 
-  const getAntaResponse = (userInput: string): { response: string, products?: BeautyProduct[], suggestions?: string[] } => {
+  const getMiaResponse = (userInput: string): { response: string, products?: BeautyProduct[], suggestions?: string[] } => {
     const input = userInput.toLowerCase();
 
     // Étape 1: Message d'accueil
     if (input.includes('bonjour') || input.includes('salut') || input.includes('hello') || input.includes('hi') || input.includes('coucou')) {
       return {
         response: language === 'fr' ?
-          'Bonjour ! Je suis **Anta**, votre conseillère capillaire. Je vais prendre le temps de comprendre vos besoins pour vous orienter vers les meilleurs soins naturels pour vos cheveux. Que puis-je faire pour vous aujourd\'hui ?' :
-          'Hello! I\'m **Anta**, your hair care advisor. I\'ll take the time to understand your needs to guide you to the best natural hair care. What can I do for you today?',
+          'Bonjour ! Je suis **Mia**, votre conseillère capillaire. Je vais prendre le temps de comprendre vos besoins pour vous orienter vers les meilleurs soins naturels pour vos cheveux. Que puis-je faire pour vous aujourd\'hui ?' :
+          'Hello! I\'m **Mia**, your hair care advisor. I\'ll take the time to understand your needs to guide you to the best natural hair care. What can I do for you today?',
         suggestions: language === 'fr' ? [
           'J\'ai une perte de cheveux aux tempes 😟'
         ] : [
@@ -225,7 +225,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
     if (input.includes('commander') || input.includes('prend') || input.includes('duo') || input.includes('order') || input.includes('take') || input.includes('buy')) {
       return {
         response: language === 'fr' ?
-          'Parfait ! 🎉 J\'ai ajouté les 2 produits à votre commande :\n\n✅ **Masque Fortifiant Ricin & Hibiscus** - 23€\n✅ **Huile Activatrice de Pousse** - 15€\n\n**Total : 38€**\n\nCliquez sur le bouton ci-dessous pour finaliser votre achat. Vous pourrez ajuster les quantités si besoin avant de payer. Livraison sous 48h en France' :
+          'Parfait ! 🎉 J\'ai ajouté les 2 produits à votre commande :\n\n✅ **Masque Fortifiant Ricin & Hibiscus** - 23€\n✅ **Huile Activatrice de Pousse** - 15€\n\n**Total : 38€**\n\nJ\'aurais besoin de quelques informations pour créer votre commande. A quel nom dois-je établir la commande ?' :
           'Perfect! 🎉 I\'ve added the 2 products to your order:\n\n✅ **Castor & Hibiscus Strengthening Mask** - 23€\n✅ **Growth Activating Oil** - 15€\n\n**Total: 38€**\n\nClick the button below to complete your purchase. You can adjust quantities if needed before payment. Delivery within 48h in France'
       };
     }
@@ -378,8 +378,8 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
 
     // Réponse par défaut pour les questions non prévues (texte libre)
     const defaultResponse = language === 'fr' ?
-      'Merci pour votre message ! 😊\n\nJe dois vous préciser que ceci est une **démo guidée** pour vous donner un aperçu de l\'expérience ChatSeller. Dans cette démo, je peux vous guider sur le cas d\'usage \"perte de cheveux aux tempes\".\n\n✨ **Sur votre vraie boutique**, l\'IA ChatSeller répond à TOUTES les questions de vos clients :\n• Connaissance complète de vos produits\n• Expertise personnalisée\n• Réponses à n\'importe quelle question capillaire\n• Recommandations sur-mesure\n\n🚀 **Découvrez la puissance complète de ChatSeller** en réservant votre essai gratuit :\n👉 **https://cal.com/chatseller/demo**\n\nPour tester cette démo, cliquez sur la suggestion ci-dessous ! 👇' :
-      'Thank you for your message! 😊\n\nI must clarify that this is a **guided demo** to give you a glimpse of the ChatSeller experience. In this demo, I can guide you on the use case \"temple hair loss\".\n\n✨ **On your real store**, ChatSeller AI answers ALL your customers\' questions:\n• Complete knowledge of your products\n• Personalized expertise\n• Answers to any hair care question\n• Tailored recommendations\n\n🚀 **Discover the full power of ChatSeller** by booking your free trial:\n👉 **https://cal.com/chatseller/demo**\n\nTo test this demo, click on the suggestion below! 👇';
+      'Merci pour votre message 😊\n\nJe dois vous préciser que ceci est une **démo guidée** pour vous donner un aperçu de la façon dont je travaille avec les visiteurs et clients de votre boutique en ligne. Dans cette démo, je suis configurée pour vous montrer un cas précis : la perte de cheveux aux tempes.\n\nSur votre vraie boutique, c\'est différent. Je connais l\'intégralité de vos produits, je réponds à toutes les questions de vos clients — capillaires, skincare, maquillage, parfums — et je les accompagne jusqu\'à l\'achat.\n\nPour voir tout ce que je peux faire pour votre boutique, prenez-moi en essai pendant 14 jours 👉 [Je veux faire l\'essai](https://dashboard.chatseller.app/register)\n\nPour continuer cette démo, cliquez sur la suggestion ci-dessous 👇' :
+      'Thank you for your message 😊\n\nI should mention that this is a **guided demo** to give you a glimpse of how I work with your online store\'s visitors and customers. In this demo, I\'m configured to show you one specific use case: temple hair loss.\n\nOn your real store, it\'s different. I know all your products, I answer all your customers\' questions — hair care, skincare, makeup, fragrances — and I guide them all the way to purchase.\n\nTo see everything I can do for your store, try me free for 14 days 👉 [Start my free trial](https://dashboard.chatseller.app/register)\n\nTo continue this demo, click the suggestion below 👇';
 
     return {
       response: defaultResponse,
@@ -401,7 +401,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
 
     setTimeout(() => {
       setIsTyping(false);
-      const { response, products, suggestions } = getAntaResponse(currentInput);
+      const { response, products, suggestions } = getMiaResponse(currentInput);
       addMessage(response, 'bot', products, suggestions);
     }, 1200 + Math.random() * 800);
   };
@@ -412,7 +412,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
 
     setTimeout(() => {
       setIsTyping(false);
-      const { response, products, suggestions } = getAntaResponse(suggestion);
+      const { response, products, suggestions } = getMiaResponse(suggestion);
       addMessage(response, 'bot', products, suggestions);
     }, 1200 + Math.random() * 800);
   };
@@ -449,15 +449,15 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
         {/* Header mobile style capture */}
         <div className="bg-gradient-to-r from-rose-500 via-pink-500 to-purple-500 text-white p-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-              <span className="text-lg font-bold">A</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/30">
+              <img src="/images/mia-avatar.png" alt="Mia" className="w-full h-full object-cover" />
             </div>
             <div>
               <div className="font-bold text-lg">
-                {language === 'fr' ? 'Anta' : 'Anta'}
+                {language === 'fr' ? 'Mia' : 'Mia'}
               </div>
               <div className="text-sm opacity-90">
-                {language === 'fr' ? 'Conseillère Capillaire IA' : 'AI Hair Care Advisor'}
+                {language === 'fr' ? 'Conseillère Capillaire' : 'Hair Care Advisor'}
               </div>
             </div>
           </div>
@@ -485,7 +485,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
               {language === 'fr' ? '💡 Démo Guidée' : '💡 Guided Demo'}
             </span>
             <span className="text-purple-600 text-xs">
-              {language === 'fr' ? '- Sur votre site, l\'IA répond à TOUTES les questions' : '- On your site, AI answers ALL questions'}
+              {language === 'fr' ? '- Sur votre site, Mia répond à TOUTES les questions' : '- On your site, AI answers ALL questions'}
             </span>
           </div>
         </div>
@@ -507,7 +507,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder={language === 'fr' ? 'Posez votre question capillaire...' : 'Ask your hair care question...'}
+                placeholder={language === 'fr' ? 'Posez votre question ici...' : 'Ask your hair care question...'}
                 className="rounded-full border-gray-300 pr-4 pl-4 py-3 focus:border-rose-400 focus:ring-rose-400"
               />
             </div>
@@ -531,15 +531,15 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
         {/* Header desktop style capture */}
         <div className="bg-gradient-to-r from-rose-500 via-pink-500 to-purple-500 text-white p-6 flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-              <span className="text-lg font-bold">A</span>
+            <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/30">
+              <img src="/images/mia-avatar.png" alt="Mia" className="w-full h-full object-cover" />
             </div>
             <div>
               <div className="font-bold text-lg">
-                {language === 'fr' ? 'Anta' : 'Anta'}
+                {language === 'fr' ? 'Mia' : 'Mia'}
               </div>
               <div className="text-sm opacity-90">
-                {language === 'fr' ? 'Conseillère Capillaire IA' : 'AI Hair Care Advisor'}
+                {language === 'fr' ? 'Conseillère Capillaire' : 'Hair Care Advisor'}
               </div>
             </div>
           </div>
@@ -567,7 +567,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
               {language === 'fr' ? '💡 Démo Guidée' : '💡 Guided Demo'}
             </span>
             <span className="text-purple-600 text-xs">
-              {language === 'fr' ? '- Sur votre site, l\'IA répond à TOUTES les questions' : '- On your site, AI answers ALL questions'}
+              {language === 'fr' ? '- Sur votre site, Mia répond à TOUTES les questions' : '- On your site, AI answers ALL questions'}
             </span>
           </div>
         </div>
@@ -589,7 +589,7 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder={language === 'fr' ? 'Posez votre question capillaire...' : 'Ask your hair care question...'}
+                placeholder={language === 'fr' ? 'Posez votre question ici...' : 'Ask your hair care question...'}
                 className="rounded-full border-gray-300 px-4 py-3 focus:border-rose-400 focus:ring-rose-400"
               />
             </div>
@@ -610,10 +610,14 @@ const ChatModal: React.FC<ChatModalProps> = ({ isOpen, onClose }) => {
 // Composant message beauté modernisé
 const BeautyMessageBubble: React.FC<Message & { language: string; onQuickReply: (suggestion: string) => void }> = ({ type, content, timestamp, products, suggestions, language, onQuickReply }) => {
   const formatText = (text: string): React.ReactNode => {
-    const parts = text.split(/(\*\*[^*]+\*\*)/g);
+    const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
     return parts.map((part, index) => {
       if (part.startsWith('**') && part.endsWith('**')) {
         return <strong key={index} className="font-semibold text-rose-700">{part.slice(2, -2)}</strong>;
+      }
+      const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+      if (linkMatch) {
+        return <a key={index} href={linkMatch[2]} target="_blank" rel="noopener noreferrer" className="text-rose-600 font-semibold underline hover:text-rose-700">{linkMatch[1]}</a>;
       }
       return part;
     });
@@ -623,8 +627,8 @@ const BeautyMessageBubble: React.FC<Message & { language: string; onQuickReply: 
     <div className={`flex ${type === 'user' ? 'justify-end' : 'justify-start'} mb-4`}>
       <div className="flex max-w-[85%] items-start space-x-3">
         {type === 'bot' && (
-          <div className="w-10 h-10 bg-gradient-to-br from-rose-500 to-pink-500 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0 mt-1">
-            A
+          <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 mt-1 border-2 border-rose-200">
+            <img src="/images/mia-avatar.png" alt="Mia" className="w-full h-full object-cover" />
           </div>
         )}
         <div className="flex-1">
@@ -715,13 +719,13 @@ const BeautyTypingIndicator = ({ language }: { language: string }) => {
   return (
     <div className="flex justify-start mb-4">
       <div className="flex items-start space-x-3">
-        <div className="w-10 h-10 bg-gradient-to-br from-rose-500 to-pink-500 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
-          A
+        <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 border-2 border-rose-200">
+          <img src="/images/mia-avatar.png" alt="Mia" className="w-full h-full object-cover" />
         </div>
         <div className="bg-white border border-gray-200 px-4 py-3 rounded-2xl rounded-bl-md shadow-sm">
           <div className="flex space-x-1 items-center">
             <div className="text-xs text-gray-500 mr-2">
-              {language === 'fr' ? 'Anta écrit' : 'Anta is typing'}
+              {language === 'fr' ? 'Mia écrit' : 'Mia is typing'}
             </div>
             <div className="w-2 h-2 bg-rose-400 rounded-full animate-bounce"></div>
             <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
@@ -736,8 +740,8 @@ const BeautyTypingIndicator = ({ language }: { language: string }) => {
 // Messages de bienvenue améliorés
 const getWelcomeMessage = (language: string) => {
   return language === 'fr' ?
-    'Bonjour ! Je suis **Anta**, votre conseillère capillaire chez Nywele. Comment puis-je vous aider avec vos cheveux aujourd\'hui ? ✨' :
-    'Hello! I\'m **Anta**, your hair care advisor at Nywele. How can I help you with your hair today? ✨';
+    'Bonjour ! Je suis **Mia**, votre conseillère capillaire chez Nywele. Comment puis-je vous aider avec vos cheveux aujourd\'hui ? ✨' :
+    'Hello! I\'m **Mia**, your hair care advisor at Nywele. How can I help you with your hair today? ✨';
 };
 
 export default ChatModal;

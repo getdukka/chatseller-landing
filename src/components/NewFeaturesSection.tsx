@@ -173,20 +173,20 @@ const HeaderContent = ({ language }: { language: string }) => (
   <>
     <div className="inline-flex items-center px-6 py-3 mb-4 border border-rose-200 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 text-sm font-semibold text-rose-700 animate-fade-in">
       <Sparkles className="w-4 h-4 mr-2" />
-      {language === 'fr' ? 'Ce que votre Vendeuse IA sait faire' : 'What your AI Salesperson can do'}
+      {language === 'fr' ? 'Les compétences de Mia' : 'What your AI Salesperson can do'}
       <Heart className="w-4 h-4 ml-2" />
     </div>
 
     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 leading-tight animate-fade-in [animation-delay:200ms]">
       {language === 'fr' ?
-        'Elle conseille, rassure et vend. Exactement comme vous le feriez.' :
-        'She advises, reassures and sells. Exactly like you would.'}
+        'Mia est une Vendeuse spécialisée en beauté' :
+        'Mia is a specialized beauty salesperson'}
     </h2>
 
     <p className="text-lg text-gray-600 animate-fade-in [animation-delay:400ms]">
       {language === 'fr' ?
-        'Votre Vendeuse IA maîtrise vos produits, comprend les besoins de vos clientes et les guide vers l\'achat, 24h/24.' :
-        'Your AI Salesperson masters your products, understands your customers\' needs and guides them to purchase, 24/7.'}
+        'Une bonne vendeuse ne se contente pas de répondre aux questions. Elle guide, elle rassure, elle vend. Mia fait tout ça — et plus encore.' :
+        "A good salesperson doesn't just answer questions. She guides, reassures, and sells. Mia does all of that — and more."}
     </p>
   </>
 );
@@ -302,9 +302,9 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
   {
     icon: <Brain className="h-7 w-7" />,
     title: language === 'fr' ? 'Expertise Beauté Complète' : 'Complete Beauty Expertise',
-    description: language === 'fr' ? 
-      'Votre Vendeuse IA maîtrise ingrédients, types de peau, routines et tendances beauté pour conseiller comme une experte certifiée' :
-      'Your AI Advisor masters ingredients, skin types, routines and beauty trends to advise like a certified expert',
+    description: language === 'fr' ?
+      'Mia maîtrise ingrédients, types de peau, routines et tendances beauté — elle conseille comme une experte certifiée' :
+      'Mia masters ingredients, skin types, routines and beauty trends — she advises like a certified expert',
     colorClasses: {
       gradient: 'from-purple-500 via-pink-500 to-purple-600',
       bg: 'from-purple-50/80 via-pink-50/50 to-purple-50/80',
@@ -330,9 +330,9 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
   {
     icon: <Heart className="h-7 w-7" />,
     title: language === 'fr' ? 'Conseils Ultra-Personnalisés' : 'Ultra-Personalized Advice',
-    description: language === 'fr' ? 
-      'Diagnostic instantané avec conseils et recommandations adaptés au profil unique de chaque cliente' :
-      'Instant diagnosis with tailored advice and recommendations for each customer\'s unique profile',
+    description: language === 'fr' ?
+      'Mia pose les bonnes questions et adapte ses recommandations au profil unique de chaque client' :
+      "Mia asks the right questions and adapts her recommendations to each customer's unique profile",
     colorClasses: {
       gradient: 'from-rose-500 via-pink-500 to-rose-600',
       bg: 'from-rose-50/80 via-pink-50/50 to-rose-50/80',
@@ -341,7 +341,7 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
       badge: 'bg-gradient-to-r from-rose-600 to-pink-600'
     },
     features: [
-      language === 'fr' ? 'Questionnaire beauté intelligent' : 'Smart beauty questionnaire',
+      language === 'fr' ? 'Elle pose les bonnes questions avant de conseiller' : 'She asks the right questions before advising',
       language === 'fr' ? 'Analyse comportement d\'achat' : 'Purchase behavior analysis',
       language === 'fr' ? 'Routines beauté sur-mesure' : 'Custom beauty routines',
       language === 'fr' ? 'Suivi évolution des besoins' : 'Needs evolution tracking'
@@ -358,9 +358,9 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
   {
     icon: <ShoppingCart className="h-7 w-7" />,
     title: language === 'fr' ? 'Vente Intelligente' : 'Smart Sales',
-    description: language === 'fr' ? 
-      'Recommandations produits contextuelles qui augmentent le panier avec subtilité et pertinence' :
-      'Contextual product recommendations that increase cart value with subtlety and relevance',
+    description: language === 'fr' ?
+      'Mia guide chaque visiteur vers l\'achat et augmente naturellement le panier, sans pression' :
+      'Mia guides every visitor toward purchase and naturally grows the cart, without pressure',
     colorClasses: {
       gradient: 'from-emerald-500 via-green-500 to-emerald-600',
       bg: 'from-emerald-50/80 via-green-50/50 to-emerald-50/80',
@@ -369,7 +369,7 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
       badge: 'bg-gradient-to-r from-emerald-600 to-green-600'
     },
     features: [
-      language === 'fr' ? 'Upsell naturel dans la conversation' : 'Natural upsell in conversation',
+      language === 'fr' ? 'Produits complémentaires suggérés naturellement' : 'Complementary products suggested naturally',
       language === 'fr' ? 'Alternatives selon le budget' : 'Budget alternatives',
       language === 'fr' ? 'Compléments de routine suggérés' : 'Suggested routine complements',
       language === 'fr' ? 'Offres promotionnelles ciblées' : 'Targeted promotional offers'
@@ -385,10 +385,10 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
   },
   {
     icon: <BarChart3 className="h-7 w-7" />,
-    title: language === 'fr' ? 'Analytics Avancés' : 'Advanced Analytics',
-    description: language === 'fr' ? 
-      'Insights précieux sur vos clients : préférences, tendances et opportunités de croissance' :
-      'Valuable insights on your customers: preferences, trends and growth opportunities',
+    title: language === 'fr' ? 'Suivi des performances' : 'Performance Tracking',
+    description: language === 'fr' ?
+      'Mia vous donne des données précieuses sur vos clients : préférences, tendances et opportunités de croissance' :
+      'Mia gives you valuable insights on your customers: preferences, trends and growth opportunities',
     colorClasses: {
       gradient: 'from-blue-500 via-cyan-500 to-blue-600',
       bg: 'from-blue-50/80 via-cyan-50/50 to-blue-50/80',
@@ -399,14 +399,14 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
     features: [
       language === 'fr' ? 'Tendances produits en temps réel' : 'Real-time product trends',
       language === 'fr' ? 'Profils clients détaillés' : 'Detailed customer profiles',
-      language === 'fr' ? 'ROI par catégorie beauté' : 'ROI by beauty category',
+      language === 'fr' ? 'Revenus par catégorie beauté' : 'Revenue by beauty category',
       language === 'fr' ? 'Prédictions de demande' : 'Demand predictions'
     ],
-    metric: language === 'fr' ? 'ROI +340%' : 'ROI +340%',
+    metric: language === 'fr' ? '+150% de revenus' : '+150% revenue',
     visual: <BeautyAnalyticsVisual language={language} />,
     stats: {
-      primary: '340%',
-      primaryLabel: language === 'fr' ? 'ROI moyen' : 'Average ROI',
+      primary: '150%',
+      primaryLabel: language === 'fr' ? 'Revenus générés' : 'Revenue generated',
       secondary: '24/7',
       secondaryLabel: language === 'fr' ? 'Monitoring' : 'Monitoring'
     }

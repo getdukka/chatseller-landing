@@ -50,9 +50,9 @@ const Terms = () => {
               </h1>
               
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                {language === 'fr' ? 
-                  "Les conditions qui régissent l'utilisation de ChatSeller, votre Vendeuse IA spécialisée pour marques beauté." :
-                  "The terms that govern the use of ChatSeller, your specialized AI advisor for beauty brands."
+                {language === 'fr' ?
+                  "Les conditions qui régissent l'utilisation de ChatSeller et de Mia, votre Vendeuse IA conversationnelle pour boutiques en ligne." :
+                  "The terms that govern the use of ChatSeller and Mia, your conversational AI Salesperson for online stores."
                 }
               </p>
               
@@ -88,7 +88,7 @@ const Terms = () => {
                       </span>
                     </div>
                     <span className="text-gray-800 font-semibold">
-                      {language === 'fr' ? "Marques beauté" : "Beauty brands"}
+                      {language === 'fr' ? "E-commerce" : "E-commerce"}
                     </span>
                   </div>
                 </div>
@@ -117,9 +117,9 @@ const Terms = () => {
                           {language === 'fr' ? "Service spécialisé" : "Specialized service"}
                         </h3>
                         <p className="text-gray-700">
-                          {language === 'fr' ? 
-                            "ChatSeller - Vendeuse IA beauté experte pour marques cosmétiques, parfums, soins et maquillage" :
-                            "ChatSeller - Expert beauty AI advisor for cosmetics, fragrance, skincare and makeup brands"
+                          {language === 'fr' ?
+                            "ChatSeller — Mia, votre Vendeuse IA conversationnelle pour boutiques en ligne" :
+                            "ChatSeller — Mia, your conversational AI Salesperson for online stores"
                           }
                         </p>
                         <p className="text-gray-600 text-sm mt-2">
@@ -135,15 +135,15 @@ const Terms = () => {
                         <div className="space-y-2 text-gray-700">
                           <div className="flex items-center">
                             <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-                            <span>{language === 'fr' ? "Marques beauté en Afrique" : "Beauty brands in Africa"}</span>
+                            <span>{language === 'fr' ? "Boutiques e-commerce en Afrique et en Europe" : "E-commerce stores in Africa and Europe"}</span>
                           </div>
                           <div className="flex items-center">
                             <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-                            <span>{language === 'fr' ? "E-commerces Shopify et WooCommerce" : "Shopify and WooCommerce e-commerce"}</span>
+                            <span>{language === 'fr' ? "Plateformes Shopify et WooCommerce" : "Shopify and WooCommerce platforms"}</span>
                           </div>
                           <div className="flex items-center">
                             <CheckCircle2 className="w-4 h-4 text-green-500 mr-2" />
-                            <span>{language === 'fr' ? "Secteurs : skincare, maquillage, parfums, soins capillaires" : "Sectors: skincare, makeup, fragrances, hair care"}</span>
+                            <span>{language === 'fr' ? "Marques qui veulent vendre plus grâce à Mia" : "Brands that want to sell more with Mia"}</span>
                           </div>
                         </div>
                       </div>
@@ -184,13 +184,13 @@ const Terms = () => {
               {/* 2. Description du service - Spécialisée beauté */}
               <div className="mb-12">
                 <h2 className="text-3xl font-bold mb-8 text-gray-900">
-                  {language === 'fr' ? "2. Service ChatSeller pour marques beauté" : "2. ChatSeller service for beauty brands"}
+                  {language === 'fr' ? "2. Service ChatSeller — Mia, votre Vendeuse IA" : "2. ChatSeller Service — Mia, your AI Salesperson"}
                 </h2>
                 <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
                   <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                    {language === 'fr' ? 
-                      "ChatSeller est une solution SaaS spécialement conçue pour les marques beauté qui souhaitent offrir une expérience conseil premium à leurs clientes en ligne, similaire à celle des meilleures boutiques physiques." :
-                      "ChatSeller is a SaaS solution specifically designed for beauty brands that want to offer a premium advisory experience to their customers online, similar to that of the best physical stores."
+                    {language === 'fr' ?
+                      "ChatSeller est une infrastructure de vente conversationnelle qui permet aux boutiques en ligne de recruter Mia, une Vendeuse IA disponible 24h/24, pour conseiller leurs visiteurs, recommander leurs produits et convertir davantage en ventes." :
+                      "ChatSeller is a conversational sales infrastructure that allows online stores to recruit Mia, an AI Salesperson available 24/7, to advise their visitors, recommend their products, and convert more into sales."
                     }
                   </p>
                   
@@ -198,31 +198,31 @@ const Terms = () => {
                     <div>
                       <h3 className="font-bold text-gray-900 mb-4 flex items-center">
                         <Sparkles className="w-5 h-5 text-purple-500 mr-2" />
-                        {language === 'fr' ? "Expertise beauté avancée" : "Advanced beauty expertise"}
+                        {language === 'fr' ? "Mia vend pour vous" : "Mia sells for you"}
                       </h3>
                       <div className="space-y-2">
                         <div className="flex items-start">
                           <CheckCircle2 className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700 text-sm">
-                            {language === 'fr' ? "Expertise beauté africaine et ingrédients locaux" : "African beauty expertise and local ingredients"}
+                            {language === 'fr' ? "Conseils personnalisés 24h/24, 7j/7" : "Personalized advice 24/7"}
                           </span>
                         </div>
                         <div className="flex items-start">
                           <CheckCircle2 className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700 text-sm">
-                            {language === 'fr' ? "Diagnostic précis des types de peau et cheveux" : "Accurate skin and hair type diagnosis"}
+                            {language === 'fr' ? "Recommandations produits intelligentes" : "Smart product recommendations"}
                           </span>
                         </div>
                         <div className="flex items-start">
                           <CheckCircle2 className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700 text-sm">
-                            {language === 'fr' ? "Recommandations routines personnalisées" : "Personalized routine recommendations"}
+                            {language === 'fr' ? "Collecte de commandes via le chat" : "Order collection via chat"}
                           </span>
                         </div>
                         <div className="flex items-start">
                           <CheckCircle2 className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700 text-sm">
-                            {language === 'fr' ? "Connaissance des contre-indications" : "Knowledge of contraindications"}
+                            {language === 'fr' ? "Upsell et cross-sell automatiques" : "Automatic upsell and cross-sell"}
                           </span>
                         </div>
                       </div>
@@ -294,14 +294,14 @@ const Terms = () => {
               {/* 3. Conditions d'accès - Spécifiques beauté */}
               <div className="mb-12">
                 <h2 className="text-3xl font-bold mb-8 text-gray-900">
-                  {language === 'fr' ? "3. Conditions d'accès pour marques beauté" : "3. Access conditions for beauty brands"}
+                  {language === 'fr' ? "3. Conditions d'accès" : "3. Access Conditions"}
                 </h2>
                 
                 <div className="space-y-8">
                   <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-200">
                     <h3 className="text-2xl font-bold mb-6 text-blue-900 flex items-center">
                       <Shield className="w-6 h-6 mr-3" />
-                      {language === 'fr' ? "Essai gratuit spécial beauté" : "Special beauty free trial"}
+                      {language === 'fr' ? "Essai gratuit 14 jours — Recruter Mia sans risque" : "14-day free trial — Recruit Mia risk-free"}
                     </h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-4">
@@ -328,7 +328,7 @@ const Terms = () => {
                         <div className="flex items-center space-x-3">
                           <CheckCircle2 className="w-5 h-5 text-green-500" />
                           <span className="text-blue-800">
-                            <strong>{language === 'fr' ? "Fonctionnalités :" : "Features:"}</strong> {language === 'fr' ? "Accès complet expertise beauté" : "Full access to beauty expertise"}
+                            <strong>{language === 'fr' ? "Fonctionnalités :" : "Features:"}</strong> {language === 'fr' ? "Accès complet à toutes les fonctionnalités de Mia" : "Full access to all Mia features"}
                           </span>
                         </div>
                         <div className="flex items-center space-x-3">
@@ -340,7 +340,7 @@ const Terms = () => {
                         <div className="flex items-center space-x-3">
                           <CheckCircle2 className="w-5 h-5 text-green-500" />
                           <span className="text-blue-800">
-                            <strong>{language === 'fr' ? "Analytics :" : "Analytics:"}</strong> {language === 'fr' ? "Métriques beautés temps réel" : "Real-time beauty metrics"}
+                            <strong>{language === 'fr' ? "Analytics :" : "Analytics:"}</strong> {language === 'fr' ? "Métriques de vente temps réel" : "Real-time sales metrics"}
                           </span>
                         </div>
                       </div>
@@ -349,7 +349,7 @@ const Terms = () => {
                   
                   <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
                     <h3 className="text-xl font-bold mb-6 text-gray-900">
-                      {language === 'fr' ? "Conditions d'éligibilité pour marques beauté" : "Eligibility conditions for beauty brands"}
+                      {language === 'fr' ? "Conditions d'éligibilité" : "Eligibility conditions"}
                     </h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-3">
@@ -369,9 +369,9 @@ const Terms = () => {
                           <div className="flex items-start">
                             <CheckCircle2 className="w-4 h-4 text-green-600 mr-2 mt-0.5" />
                             <span className="text-gray-700 text-sm">
-                              {language === 'fr' ? 
-                                "Catalogue produits beauté actif" :
-                                "Active beauty product catalog"
+                              {language === 'fr' ?
+                                "Catalogue produits actif" :
+                                "Active product catalog"
                               }
                             </span>
                           </div>
@@ -428,7 +428,7 @@ const Terms = () => {
               {/* 4. Tarification - Adaptée beauté */}
               <div className="mb-12">
                 <h2 className="text-3xl font-bold mb-8 text-gray-900">
-                  {language === 'fr' ? "4. Tarification pour marques beauté" : "4. Pricing for beauty brands"}
+                  {language === 'fr' ? "4. Tarification" : "4. Pricing"}
                 </h2>
                 
                 <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -436,18 +436,18 @@ const Terms = () => {
                     <div className="flex items-center mb-6">
                       <CreditCard className="w-8 h-8 text-rose-600 mr-4" />
                       <h3 className="text-2xl font-bold text-rose-900">
-                        {language === 'fr' ? "Plan Beauté Standard" : "Standard Beauty Plan"}
+                        {language === 'fr' ? "Mia Découverte" : "Mia Starter"}
                       </h3>
                     </div>
                     <div className="space-y-4">
                       <div className="text-center py-4">
-                        <div className="text-4xl font-bold text-rose-600">29€</div>
+                        <div className="text-4xl font-bold text-rose-600">45€</div>
                         <div className="text-rose-700">{language === 'fr' ? "par mois" : "per month"}</div>
                       </div>
                       <div className="space-y-3 text-rose-800">
                         <div className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 mr-2 text-green-500" />
-                          <span className="text-sm"><strong>{language === 'fr' ? "Expertise beauté complète" : "Complete beauty expertise"}</strong></span>
+                          <span className="text-sm"><strong>{language === 'fr' ? "Mia opérationnelle sur votre boutique" : "Mia operational on your store"}</strong></span>
                         </div>
                         <div className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 mr-2 text-green-500" />
@@ -455,7 +455,7 @@ const Terms = () => {
                         </div>
                         <div className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 mr-2 text-green-500" />
-                          <span className="text-sm"><strong>{language === 'fr' ? "Analytics beauté avancés" : "Advanced beauty analytics"}</strong></span>
+                          <span className="text-sm"><strong>{language === 'fr' ? "Analytics de vente avancés" : "Advanced sales analytics"}</strong></span>
                         </div>
                         <div className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 mr-2 text-green-500" />
@@ -511,7 +511,7 @@ const Terms = () => {
                     <AlertCircle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold text-amber-900 mb-3">
-                        {language === 'fr' ? "Modalités de paiement pour marques beauté" : "Payment terms for beauty brands"}
+                        {language === 'fr' ? "Modalités de paiement" : "Payment terms"}
                       </h3>
                       <div className="grid md:grid-cols-2 gap-4">
                         <ul className="space-y-2 text-amber-800 text-sm">
@@ -574,7 +574,7 @@ const Terms = () => {
                       <div className="flex items-center mb-6">
                         <Shield className="w-6 h-6 text-blue-600 mr-3" />
                         <h3 className="text-xl font-bold text-gray-900">
-                          {language === 'fr' ? "Protection des données beauté" : "Beauty data protection"}
+                          {language === 'fr' ? "Protection des données" : "Data protection"}
                         </h3>
                       </div>
                       <div className="space-y-4">
@@ -589,7 +589,7 @@ const Terms = () => {
                           <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                           <div>
                             <span className="font-semibold text-gray-900">{language === 'fr' ? "Confidentialité garantie" : "Guaranteed confidentiality"}</span>
-                            <p className="text-gray-600 text-sm">{language === 'fr' ? "Vos formulations et secrets beauté restent privés" : "Your formulations and beauty secrets remain private"}</p>
+                            <p className="text-gray-600 text-sm">{language === 'fr' ? "Vos données de boutique et de catalogue restent privées" : "Your store data and catalog data remain private"}</p>
                           </div>
                         </div>
                         <div className="flex items-start space-x-3">
@@ -608,7 +608,7 @@ const Terms = () => {
               {/* Contact et support spécialisé beauté */}
               <div className="mb-12">
                 <h2 className="text-3xl font-bold mb-8 text-gray-900">
-                  {language === 'fr' ? "6. Support spécialisé marques beauté" : "6. Specialized support for beauty brands"}
+                  {language === 'fr' ? "6. Support ChatSeller" : "6. ChatSeller Support"}
                 </h2>
                 
                 <div className="grid md:grid-cols-2 gap-8">
@@ -616,14 +616,14 @@ const Terms = () => {
                     <div className="flex items-center mb-6">
                       <Mail className="w-8 h-8 text-rose-600 mr-4" />
                       <h3 className="text-xl font-bold text-rose-900">
-                        {language === 'fr' ? "Équipe beauté dédiée" : "Dedicated beauty team"}
+                        {language === 'fr' ? "Équipe ChatSeller dédiée" : "Dedicated ChatSeller team"}
                       </h3>
                     </div>
                     <div className="space-y-4 text-rose-800">
                       <div className="flex items-start space-x-3">
                         <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5" />
                         <div>
-                          <span className="font-semibold">Email :</span> <a href="mailto:beauty@chatseller.app" className="text-rose-600 hover:underline">beauty@chatseller.app</a>
+                          <span className="font-semibold">Email :</span> <a href="mailto:support@chatseller.app" className="text-rose-600 hover:underline">support@chatseller.app</a>
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
@@ -635,7 +635,7 @@ const Terms = () => {
                       <div className="flex items-start space-x-3">
                         <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5" />
                         <div>
-                          <span className="font-semibold">{language === 'fr' ? "Expertise :" : "Expertise:"}</span> {language === 'fr' ? "Consultants formés secteur beauté" : "Beauty sector trained consultants"}
+                          <span className="font-semibold">{language === 'fr' ? "Expertise :" : "Expertise:"}</span> {language === 'fr' ? "Consultants formés sur Mia et la vente conversationnelle" : "Consultants trained on Mia and conversational selling"}
                         </div>
                       </div>
                       <div className="flex items-start space-x-3">
@@ -676,7 +676,7 @@ const Terms = () => {
                       <div className="flex items-start space-x-3">
                         <CheckCircle2 className="w-4 h-4 text-green-500 mt-0.5" />
                         <div>
-                          <span className="font-semibold">{language === 'fr' ? "Protection :" : "Protection:"}</span> {language === 'fr' ? "Conformité RGPD beauté" : "GDPR beauty compliance"}
+                          <span className="font-semibold">{language === 'fr' ? "Protection :" : "Protection:"}</span> {language === 'fr' ? "Conformité RGPD" : "GDPR compliance"}
                         </div>
                       </div>
                     </div>
@@ -694,30 +694,30 @@ const Terms = () => {
                   </div>
                   
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    {language === 'fr' ? 
-                      "Rejoignez les marques beauté qui transforment leur e-commerce" :
-                      "Join the beauty brands transforming their e-commerce"
+                    {language === 'fr' ?
+                      "Rejoignez les boutiques qui vendent plus grâce à Mia" :
+                      "Join the stores selling more with Mia"
                     }
                   </h3>
                   
                   <p className="text-gray-700 mb-4">
-                    {language === 'fr' ? 
-                      "En utilisant ChatSeller, vous acceptez ces conditions spécialement conçues pour les marques beauté et bénéficiez d'une expertise secteur unique." :
-                      "By using ChatSeller, you accept these terms specially designed for beauty brands and benefit from unique sector expertise."
+                    {language === 'fr' ?
+                      "En utilisant ChatSeller, vous recrutez Mia comme Vendeuse IA de votre boutique et acceptez ces conditions. Mia vend pour vous 24h/24." :
+                      "By using ChatSeller, you recruit Mia as your store's AI Salesperson and accept these terms. Mia sells for you 24/7."
                     }
                   </p>
                   
                   <div className="bg-white/60 rounded-xl p-4 space-y-2">
                     <p className="text-sm text-gray-600">
                       <strong>
-                        {language === 'fr' ? "Version beauté 2.0 •" : "Beauty version 2.0 •"}
+                        {language === 'fr' ? "Version 2.0 •" : "Version 2.0 •"}
                       </strong>{' '}
                       {language === 'fr' ? "Dernière mise à jour : 1er septembre 2025" : "Last updated: September 1st, 2025"}
                     </p>
                     <p className="text-sm text-gray-600">
-                      {language === 'fr' ? "Support beauté dédié :" : "Dedicated beauty support:"}{' '}
-                      <a href="mailto:beauty@chatseller.app" className="text-rose-600 hover:underline font-medium">
-                        beauty@chatseller.app
+                      {language === 'fr' ? "Support ChatSeller :" : "ChatSeller support:"}{' '}
+                      <a href="mailto:support@chatseller.app" className="text-rose-600 hover:underline font-medium">
+                        support@chatseller.app
                       </a>
                     </p>
                   </div>

@@ -1,7 +1,7 @@
 // src/components/NewNavbar.tsx 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronRight, Sparkles, Star, Zap, Gift, CreditCard } from 'lucide-react';
+import { Menu, X, ChevronRight, Sparkles, Star, Zap, Gift, CreditCard, FileText } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from './LanguageToggle';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -25,8 +25,15 @@ const NewNavbar = () => {
 
   // Fonction de scroll fluide vers les sections - CORRIGÉE
   const scrollToSection = (sectionId: string) => {
+    // Cas spécial : ouvrir le CV PDF dans un nouvel onglet
+    if (sectionId === '_cv') {
+      window.open('/mia-cv.pdf', '_blank');
+      setMobileMenuOpen(false);
+      return;
+    }
+
     const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
-    
+
     if (isHomePage) {
       // Si on est déjà sur la page d'accueil, scroller vers la section
       const element = document.getElementById(sectionId);
@@ -49,28 +56,34 @@ const NewNavbar = () => {
 
   const navigationItems = [
     {
-      label: language === 'fr' ? 'Solution' : 'Solution',
+      label: language === 'fr' ? 'Découvrir Mia' : 'Discover Mia',
       sectionId: 'problem-solution',
       icon: <Sparkles className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? 'Comment votre Vendeuse IA vous aide' : 'How your AI Seller helps you'
+      description: language === 'fr' ? 'Comment Mia booste vos ventes' : 'How Mia boosts your sales'
     },
     {
-      label: language === 'fr' ? 'Comment ça marche' : 'How it works',
+      label: language === 'fr' ? 'Comment la recruter' : 'How to hire her',
       sectionId: 'how-it-works',
       icon: <Zap className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
       description: language === 'fr' ? '3 étapes simples en 5 minutes' : '3 simple steps in 5 minutes'
     },
     {
-      label: language === 'fr' ? 'Fonctionnalités' : 'Features',
+      label: language === 'fr' ? 'Ses compétences' : 'Her skills',
       sectionId: 'features',
       icon: <Gift className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? 'Ce que votre Vendeuse IA sait faire' : 'What your AI Seller can do'
+      description: language === 'fr' ? 'Ce que Mia sait faire pour vous' : 'What Mia can do for you'
     },
     {
-      label: language === 'fr' ? 'Tarifs' : 'Pricing',
+      label: language === 'fr' ? 'Voir son CV' : 'View her CV',
+      sectionId: '_cv',
+      icon: <FileText className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
+      description: language === 'fr' ? 'Le CV complet de Mia en PDF' : 'Mia\'s full CV in PDF'
+    },
+    {
+      label: language === 'fr' ? 'Son salaire' : 'Her salary',
       sectionId: 'pricing',
       icon: <CreditCard className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />,
-      description: language === 'fr' ? '3 plans adaptés à vos besoins' : '3 plans tailored to your needs'
+      description: language === 'fr' ? '3 offres adaptés à vos besoins' : '3 offers tailored to your needs'
     }
   ];
 
@@ -147,10 +160,10 @@ const NewNavbar = () => {
             >
               <a href="https://dashboard.chatseller.app/register">
                 <span className="hidden 2xl:inline">
-                  {language === 'fr' ? 'Essayer gratuitement' : 'Try it now for Free'}
+                  {language === 'fr' ? 'Recruter Mia' : 'Hire Mia'}
                 </span>
                 <span className="inline 2xl:hidden">
-                  {language === 'fr' ? 'Créer IA' : 'Create AI'}
+                  {language === 'fr' ? 'Recruter Mia' : 'Hire Mia'}
                 </span>
                 <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transform translate-x-full group-hover:translate-x-0 transition-all duration-1000"></span>
@@ -166,7 +179,7 @@ const NewNavbar = () => {
             onClick={() => scrollToSection('problem-solution')}
             className="text-sm font-medium text-gray-700 hover:text-rose-600 transition-colors duration-200 flex items-center group"
           >
-            {language === 'fr' ? 'Solution' : 'Solution'}
+            {language === 'fr' ? 'Découvrir Mia' : 'Discover Mia'}
             <Sparkles className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
 
@@ -174,7 +187,7 @@ const NewNavbar = () => {
             onClick={() => scrollToSection('how-it-works')}
             className="text-sm font-medium text-gray-700 hover:text-rose-600 transition-colors duration-200 flex items-center group"
           >
-            {language === 'fr' ? 'Comment ça marche' : 'How it works'}
+            {language === 'fr' ? 'Comment la recruter' : 'How to hire her'}
             <Zap className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
 
@@ -182,7 +195,7 @@ const NewNavbar = () => {
             onClick={() => scrollToSection('pricing')}
             className="text-sm font-medium text-gray-700 hover:text-rose-600 transition-colors duration-200 flex items-center group"
           >
-            {language === 'fr' ? 'Tarifs' : 'Pricing'}
+            {language === 'fr' ? 'Son salaire' : 'Her salary'}
             <CreditCard className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
 
@@ -196,7 +209,7 @@ const NewNavbar = () => {
             asChild
           >
             <a href="https://dashboard.chatseller.app/register">
-              {language === 'fr' ? 'Essai gratuit' : 'Free trial'}
+              {language === 'fr' ? 'Recruter Mia' : 'Hire Mia'}
               <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
@@ -258,7 +271,7 @@ const NewNavbar = () => {
                 asChild
               >
                 <a href="https://dashboard.chatseller.app/login">
-                  {language === 'fr' ? 'Se connecter' : 'Login'}
+                  {language === 'fr' ? 'Rejoindre Mia' : 'Join Mia'}
                 </a>
               </Button>
 
@@ -268,11 +281,11 @@ const NewNavbar = () => {
                 asChild
               >
                 <a href="https://dashboard.chatseller.app/register">
-                  {language === 'fr' ? 'Essayer gratuitement' : 'Try it now for Free'}
+                  {language === 'fr' ? 'Recruter Mia — 14 jours d\'essai' : 'Hire Mia — 14 days free'}
                 </a>
               </Button>
             </div>
-            
+
             {/* Info mobile */}
             <div className="mt-6 pt-4 border-t border-rose-100 text-center">
               <div className="text-xs text-gray-500 mb-2">
@@ -283,11 +296,11 @@ const NewNavbar = () => {
               <div className="flex justify-center items-center space-x-4 text-xs text-gray-400">
                 <span className="flex items-center">
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-1 animate-pulse"></div>
-                  {language === 'fr' ? '14 jours gratuits' : '14 days free'}
+                  {language === 'fr' ? '14 jours d\'essai gratuit' : '14 days free trial'}
                 </span>
                 <span className="flex items-center">
                   <Star className="w-3 h-3 mr-1 text-yellow-500" />
-                  {language === 'fr' ? 'Déjà adopté par +10 marques' : 'Already adopted by 10+ brands'}
+                  {language === 'fr' ? 'Déjà recrutée par +10 marques' : 'Already hired by 10+ brands'}
                 </span>
               </div>
             </div>

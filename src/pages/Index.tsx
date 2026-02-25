@@ -7,6 +7,7 @@ import NewProblemSolutionSection from '@/components/NewProblemSolutionSection';
 import NewVisualDemoSection from '@/components/NewVisualDemoSection';
 import NewBusinessProofSection from '@/components/NewBusinessProofSection';
 import NewHowItWorksSection from '../components/NewHowItWorksSection';
+import MeetMiaSection from '@/components/MeetMiaSection';
 import NewDifferentiationSection from '@/components/NewDifferentiationSection';
 import NewFeaturesSection from '../components/NewFeaturesSection';
 // import NewCaseStudiesSection from '../components/NewCaseStudiesSection'; // MASQUÉ: Faux contenu
@@ -52,10 +53,13 @@ const Index = () => {
         {/* Section 3: Problème/Solution - La révélation */}
         <NewProblemSolutionSection />
 
-        {/* Section 4: Démo visuelle - De la question à l'achat 
+        {/* Section Rencontrez Mia — pont entre le problème et la solution */}
+        <MeetMiaSection />
+
+        {/* Section 4: Démo visuelle - De la question à l'achat
         <NewVisualDemoSection />*/}
 
-        {/* Section 5: Preuve Business - KPIs mesurables 
+        {/* Section 5: Preuve Business - KPIs mesurables
         <NewBusinessProofSection />*/}
 
         {/* Section 6: Comment ça marche - 3 étapes simples */}

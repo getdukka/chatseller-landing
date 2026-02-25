@@ -647,9 +647,9 @@ const translations: Record<Language, Translations> = {
 
     // Hero Section beauté
     beautySectorSpecialized: 'Essai gratuit 14 jours',
-    newHeroTitleBeauty: 'Transformez les visiteurs hésitants de votre boutique en acheteurs',
-    newHeroTitleBeautyAlt: 'Votre vendeuse experte en beauté, disponible 24h/24 sur votre boutique.',
-    newHeroSubtitleBeauty: 'Intégrez une Vendeuse IA experte de vos produits : elle conseille vos clientes, recommande la routine idéale et vend directement dans la conversation. Résultat : <strong>+150% de ventes en moyenne</strong>.',
+    newHeroTitleBeauty: 'Votre boutique physique a ses vendeuses. Votre boutique en ligne mérite la sienne.',
+    newHeroTitleBeautyAlt: 'Votre boutique en ligne mérite une vendeuse experte de vos produits.',
+    newHeroSubtitleBeauty: 'Mia est la première Vendeuse IA spécialisée beauté, formée sur vos produits. Elle accueille vos clients en ligne, lève leurs doutes et finalise leurs commandes, 24h/24.',
     beautyBrandsAlreadyTesting: 'Déjà adopté par +10 marques beauté',
     averageConversionBeauty: '+267% conversions moyennes',
     
@@ -665,7 +665,7 @@ const translations: Record<Language, Translations> = {
     platformsZeroFees: '0€',
     
     // Beauty Problem Section (NEW)
-    beautyProblemTitle: 'Vos clientes veulent acheter. Elles ont juste besoin d\'être rassurées.',
+    beautyProblemTitle: 'Il n\'y a personne sur votre boutique en ligne pour conseiller vos clients',
     beautyProblemSubtitle: 'Chaque jour, des clientes prêtes à acheter quittent votre site parce qu\'elles n\'ont pas trouvé de réponse à leur question. Voici ce qu\'elles se demandent...',
 
     beautyFrustration1Title: '"Est-ce adapté à MA peau ?"',
@@ -680,8 +680,8 @@ const translations: Record<Language, Translations> = {
     beautyFrustration3Quote: 'J\'ai déjà essayé des produits similaires sans résultat. Comment je sais que celui-ci va marcher ?',
     beautyFrustration3Description: 'Vos clientes ont été déçues avant. Elles cherchent des preuves, des explications sur les ingrédients, des témoignages. Sans ça, elles n\'osent pas acheter.',
 
-    beautyProblemConclusion: 'Sans réponse immédiate, elles quittent votre site et achètent chez un concurrent.',
-    beautyProblemConclusionSub: 'ChatSeller répond à toutes ces questions instantanément, 24h/24.',
+    beautyProblemConclusion: 'Vos clientes veulent acheter. Elles ont juste besoin d\'être guidées.',
+    beautyProblemConclusionSub: 'Dans une boutique physique, c\'est le rôle de votre vendeuse. Sur votre boutique en ligne, jusqu\'ici, ce rôle n\'existait pas. Mia change cela.',
 
     // Problem-Solution (OLD)
     problemTitle: '73% de vos visiteurs',
@@ -1215,8 +1215,8 @@ Contactez-nous avec :
     // LANDING PAGE REFONTE - FR
     newHeroTitle: "Augmentez vos ventes de 200 à 400% grâce à un vendeur IA qui conseille vos clients comme en boutique",
     newHeroSubtitle: "ChatSeller transforme vos visiteurs en acheteurs en répondant à leurs questions, en les rassurant et en recommandant les bons produits, comme une esthéticienne disponible 24/7.",
-    newHeroCTAPrimary: "Créer ma Vendeuse IA",
-    newHeroCTASecondary: "Voir comment ça marche",
+    newHeroCTAPrimary: "Tester Mia pendant 14 jours",
+    newHeroCTASecondary: "Voir Mia en action",
     newHeroTrialPeriod: "14 jours d'essai gratuits",
     
     // SOCIAL PROOF
@@ -1321,7 +1321,7 @@ Contactez-nous avec :
     conversionBoost: "+150% de conversion en moyenne",
     days14Trial: "14 jours d'essai gratuits",
     oneClickInstall: "Installation en 2min",
-    beautySector: "Secteur beauté",
+    beautySector: "Spécialisée beauté",
     realTimeResults: "Résultats temps réel",
     step3Simple: "3 étapes simples",
     averageROI: "ROI moyen immédiat",
@@ -1422,9 +1422,9 @@ Contactez-nous avec :
 
     // Hero Section beauté
     beautySectorSpecialized: '14-day free trial',
-    newHeroTitleBeauty: 'Turn hesitant visitors into buyers on your store',
-    newHeroTitleBeautyAlt: 'Your expert beauty salesperson, available 24/7 on your store.',
-    newHeroSubtitleBeauty: 'Integrate an AI Salesperson who knows your products: she advises your customers, recommends the ideal routine and sells directly in the conversation. Result: <strong>+150% sales on average</strong>.',
+    newHeroTitleBeauty: 'Your physical store has its salespeople. Your online store deserves one too.',
+    newHeroTitleBeautyAlt: 'Your customers are on your website right now. There\'s no one to guide them.',
+    newHeroSubtitleBeauty: 'Mia is the first AI Salesperson specialized in beauty, trained on your products. She welcomes your online customers, removes their doubts and finalizes their orders — 24/7.',
     beautyBrandsAlreadyTesting: 'Already trusted by 10+ beauty brands',
     averageConversionBeauty: '+267% average conversions',
     
@@ -1440,7 +1440,7 @@ Contactez-nous avec :
     platformsZeroFees: '$0',
 
     // Beauty Problem Section (NEW)
-    beautyProblemTitle: 'Your customers want to buy. They just need reassurance.',
+    beautyProblemTitle: 'You would never open your physical store without a salesperson. Yet, your online store has been open without one all along.',
     beautyProblemSubtitle: 'Every day, customers ready to buy leave your site because they couldn\'t find answers to their questions. Here\'s what they\'re asking...',
 
     beautyFrustration1Title: '"Is this right for MY skin?"',
@@ -1455,8 +1455,8 @@ Contactez-nous avec :
     beautyFrustration3Quote: 'I\'ve tried similar products before with no results. How do I know this one will actually work?',
     beautyFrustration3Description: 'Your customers have been disappointed before. They\'re looking for proof, explanations about ingredients, testimonials. Without that, they won\'t dare to buy.',
 
-    beautyProblemConclusion: 'Without an immediate answer, they leave your site and buy from a competitor.',
-    beautyProblemConclusionSub: 'ChatSeller answers all these questions instantly, 24/7.',
+    beautyProblemConclusion: 'Your customers want to buy. They just need to be guided.',
+    beautyProblemConclusionSub: 'In a physical store, that\'s your salesperson\'s job. In your online store, until now, that role didn\'t exist. Mia changes that.',
 
     // Problem-Solution
     problemTitle: '73% of your visitors',
@@ -1991,8 +1991,8 @@ Contact us with:
     // LANDING PAGE REFONTE - EN
     newHeroTitle: "Increase your sales by 200 to 400% with an AI sales agent that advises your customers like in a store",
     newHeroSubtitle: "ChatSeller turns your visitors into buyers by answering their questions, reassuring them and recommending the right products, like a beautician available 24/7.",
-    newHeroCTAPrimary: "Create my AI Salesperson",
-    newHeroCTASecondary: "See how it works",
+    newHeroCTAPrimary: "Test Mia for 14 days",
+    newHeroCTASecondary: "See Mia in action",
     newHeroTrialPeriod: "14 days free trial",
     
     // SOCIAL PROOF
@@ -2098,7 +2098,7 @@ Contact us with:
     conversionBoost: "+150% conversion on average",
     days14Trial: "14 days free trial",
     oneClickInstall: "2-minute install",
-    beautySector: "Beauty sector",
+    beautySector: "Beauty specialist",
     realTimeResults: "Real-time results",
     step3Simple: "3 simple steps",
     averageROI: "Immediate average ROI",

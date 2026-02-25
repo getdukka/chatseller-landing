@@ -145,7 +145,7 @@ const NewBeautyProblemSection = () => {
               {/* Icon badge */}
               <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
                 <AlertCircle className="w-5 h-5 text-white" />
-                <span className="text-sm font-bold text-white">{language === 'fr' ? 'Conséquence' : 'Consequence'}</span>
+                <span className="text-sm font-bold text-white">{language === 'fr' ? 'La réalité' : 'The reality'}</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 sm:mb-6 leading-tight group-hover:scale-105 transition-transform duration-300 origin-left">

@@ -21,20 +21,20 @@ const NewPricingSection = () => {
         <div className="text-center max-w-4xl mx-auto mb-20">
           <div className="inline-flex items-center px-6 py-3 mb-8 border border-emerald-200 rounded-full bg-gradient-to-r from-emerald-50 to-green-50 text-sm font-semibold text-emerald-700 animate-fade-in">
             <TrendingUp className="w-4 h-4 mr-2" />
-            {language === 'fr' ? 'ROI garanti dès la première vente' : 'ROI guaranteed from first sale'}
+            {language === 'fr' ? 'Rentable dès la première vente' : 'Profitable from first sale'}
             <Sparkles className="w-4 h-4 ml-2" />
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight animate-fade-in [animation-delay:200ms]">
-            {language === 'fr' ? 
-              'Un investissement qui se rembourse dès la première vente' :
-              'An investment that pays for itself from the first sale'}
+            {language === 'fr' ?
+              'Quel est le salaire de Mia ?' :
+              "What is Mia's salary?"}
           </h2>
-          
+
           <p className="text-xl text-gray-600 mb-8 animate-fade-in [animation-delay:400ms]">
-            {language === 'fr' ? 
-              'Une seule vente supplémentaire par mois suffit à rentabiliser ChatSeller.' :
-              'Just one additional sale per month is enough to make ChatSeller profitable.'}
+            {language === 'fr' ?
+              'Une vendeuse en boutique physique coûte 1 800€/mois — congés, charges et imprévus inclus. Mia commence à 45€. Sans congés, sans charges, sans mauvaises surprises.' :
+              'A salesperson in a physical store costs €1,800/month — vacation, taxes and surprises included. Mia starts at €45. No vacation, no overhead, no surprises.'}
           </p>
 
           {/* Toggle mensuel/annuel */}
@@ -68,52 +68,52 @@ const NewPricingSection = () => {
         {/* Grille des plans beauté */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16 max-w-7xl mx-auto animate-fade-in [animation-delay:600ms]">
           
-          {/* Plan Conseiller (ex-Starter) */}
+          {/* Plan Mia Découverte (ex-Conseiller) */}
           <BeautyPricingCard
-            name={language === 'fr' ? 'Conseiller' : 'Advisor'}
+            name={language === 'fr' ? 'Mia Découverte' : 'Mia Starter'}
             monthlyPrice={45}
             yearlyPrice={Math.round(45 * 12 * 0.85 / 12)}
             billingPeriod={billingPeriod}
-            subtitle={language === 'fr' ? 'Commencez à vendre' : 'Start selling'}
-            tag={language === 'fr' ? 'Votre Vendeuse IA répond à toutes les questions et guide vers l\'achat, 24h/24.' : 'Your AI Salesperson answers all questions and guides to purchase, 24/7.'}
+            subtitle={language === 'fr' ? 'Testez Mia sans engagement' : 'Try Mia risk-free'}
+            tag={language === 'fr' ? 'Mia rejoint votre boutique et commence à conseiller vos clients. Idéal pour découvrir son impact sur vos ventes.' : 'Mia joins your store and starts advising your customers. Perfect for discovering her impact on your sales.'}
             roiBadge={language === 'fr' ? '1 vente = abonnement remboursé' : '1 sale = subscription paid'}
             fcfaPrice="29 500"
             features={getStarterFeatures(language)}
-            cta={language === 'fr' ? 'Essayer gratuitement 14 jours' : 'Try free for 14 days'}
+            cta={language === 'fr' ? 'Tester Mia pendant 14 jours' : 'Try Mia for 14 days'}
             ctaLink="https://dashboard.chatseller.app/register?plan=starter"
             language={language}
           />
 
-          {/* Plan Vendre (ex-Growth) - Le plus populaire */}
+          {/* Plan Mia Pro (ex-Vendre) - Le plus populaire */}
           <BeautyPricingCard
-            name={language === 'fr' ? 'Vendre' : 'Sell'}
+            name={language === 'fr' ? 'Mia Pro' : 'Mia Pro'}
             monthlyPrice={145}
             yearlyPrice={Math.round(145 * 12 * 0.85 / 12)}
             billingPeriod={billingPeriod}
-            subtitle={language === 'fr' ? 'Boostez votre panier moyen' : 'Boost your AOV'}
-            tag={language === 'fr' ? 'En plus : Upsell intelligent, ajout au panier automatique et analytics avancées.' : 'Plus: Smart upsells, auto add-to-cart and advanced analytics.'}
+            subtitle={language === 'fr' ? 'Mia à pleine puissance' : 'Mia at full power'}
+            tag={language === 'fr' ? 'Mia vend à pleine puissance. Recommandations avancées, suggestions de produits complémentaires, analytics de performance.' : 'Mia sells at full power. Advanced recommendations, complementary product suggestions, performance analytics.'}
             roiBadge={language === 'fr' ? '~3 ventes = abonnement remboursé' : '~3 sales = subscription paid'}
             fcfaPrice="95 000"
             features={getGrowthFeatures(language)}
-            cta={language === 'fr' ? 'Booster mes ventes' : 'Boost my sales'}
+            cta={language === 'fr' ? 'Recruter Mia' : 'Hire Mia'}
             ctaLink="https://dashboard.chatseller.app/register?plan=growth"
             featured={true}
             language={language}
           />
 
-          {/* Plan Optimiser (ex-Performance) */}
+          {/* Plan Mia Premium (ex-Optimiser) */}
           <BeautyPricingCard
-            name={language === 'fr' ? 'Optimiser' : 'Optimize'}
+            name={language === 'fr' ? 'Mia Premium' : 'Mia Premium'}
             monthlyPrice={299}
             yearlyPrice={Math.round(299 * 12 * 0.85 / 12)}
             billingPeriod={billingPeriod}
-            subtitle={language === 'fr' ? 'Scalez votre business' : 'Scale your business'}
-            tag={language === 'fr' ? 'En plus : CRM intégré, Success Manager dédié et personnalisation complète.' : 'Plus: Integrated CRM, dedicated Success Manager and full customization.'}
-            roiBadge={language === 'fr' ? 'ROI configuré selon vos objectifs' : 'ROI configured to your goals'}
+            subtitle={language === 'fr' ? 'Pour les boutiques ambitieuses' : 'For ambitious stores'}
+            tag={language === 'fr' ? 'Mia dans sa meilleure version. Intelligence conversationnelle complète, données clients précieuses, accompagnement dédié.' : 'Mia at her best. Full conversational intelligence, valuable customer data, dedicated support.'}
+            roiBadge={language === 'fr' ? 'Résultats définis selon vos objectifs' : 'Results defined by your goals'}
             fcfaPrice="196 000"
             features={getPerformanceFeatures(language)}
-            cta={language === 'fr' ? 'Parler à un expert' : 'Talk to an expert'}
-            ctaLink="mailto:enterprise@chatseller.app"
+            cta={language === 'fr' ? 'Recruter Mia' : 'Hire Mia'}
+            ctaLink="https://dashboard.chatseller.app/register?plan=performance"
             language={language}
             isEnterprise={true}
           />
@@ -125,19 +125,19 @@ const NewPricingSection = () => {
             <div className="flex items-center">
               <Check className="w-4 h-4 text-green-500 mr-2" />
               <span className="font-medium">
-                {language === 'fr' ? '14 jours d\'essai sans CB' : '14-day trial without credit card'}
+                {language === 'fr' ? '14 jours d\'essai sans engagement' : '14-day trial, no commitment'}
               </span>
             </div>
             <div className="flex items-center">
               <Zap className="w-4 h-4 text-blue-500 mr-2" />
               <span className="font-medium">
-                {language === 'fr' ? 'Installation en 5 min' : '5-min installation'}
+                {language === 'fr' ? 'Mia est opérationnelle en 5 minutes' : 'Mia is live in 5 minutes'}
               </span>
             </div>
             <div className="flex items-center">
               <CreditCard className="w-4 h-4 text-purple-500 mr-2" />
               <span className="font-medium">
-                {language === 'fr' ? 'Annulation à tout moment' : 'Cancel anytime'}
+                {language === 'fr' ? 'Licenciez-la à tout moment' : 'Let her go anytime'}
               </span>
             </div>
           </div>
@@ -187,7 +187,7 @@ const NewPricingSection = () => {
                     {language === 'fr' ? '/ mois' : '/ month'}
                   </div>
                   <div className="text-xs text-gray-500 mt-1">
-                    {language === 'fr' ? '(ChatSeller Conseiller)' : '(ChatSeller Advisor)'}
+                    {language === 'fr' ? '(Salaire Mia)' : "(Mia's salary)"}
                   </div>
                 </div>
               </div>
@@ -195,8 +195,8 @@ const NewPricingSection = () => {
               <div className="bg-white/80 backdrop-blur rounded-xl p-6 mt-6 border border-rose-100">
                 <p className="text-base md:text-lg text-gray-800 font-medium leading-relaxed">
                   {language === 'fr' ?
-                    'ChatSeller, c\'est cette vendeuse d\'exception pour votre boutique en ligne. Elle maîtrise vos produits, ne se fatigue jamais, et répond instantanément à toutes vos clientes, 24h/24.' :
-                    'ChatSeller is that exceptional salesperson for your online store. She masters your products, never gets tired, and instantly responds to all your customers, 24/7.'}
+                    'Mia est cette vendeuse d\'exception pour votre boutique en ligne. Elle maîtrise vos produits, ne se fatigue jamais, et répond instantanément à tous vos clients, 24h/24.' :
+                    'Mia is that exceptional salesperson for your online store. She masters your products, never gets tired, and instantly responds to all your customers, 24/7.'}
                 </p>
               </div>
 
@@ -321,7 +321,7 @@ const BeautyPricingCard: React.FC<BeautyPricingCardProps> = ({
           : 'bg-emerald-50 border border-emerald-200'
       }`}>
         <div className="text-sm font-semibold text-emerald-700 mb-1">
-          {language === 'fr' ? 'ROI typique :' : 'Typical ROI:'}
+          {language === 'fr' ? 'Ce qu\'elle vous rapporte :' : 'What she earns you:'}
         </div>
         <div className="text-lg font-bold text-emerald-600">{roiBadge}</div>
       </div>
@@ -380,14 +380,14 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
     <div className="bg-gradient-to-br from-purple-50 via-rose-50 to-pink-50 rounded-3xl p-8 md:p-12 shadow-xl border border-purple-200 max-w-6xl mx-auto">
       <div className="text-center mb-10">
         <h3 className="text-3xl font-bold text-gray-900 mb-4">
-          {language === 'fr' ? 
-            'Simulez vos ventes avec ChatSeller' :
-            'Simulate your sales with ChatSeller'}
+          {language === 'fr' ?
+            'Simulez vos ventes avec Mia' :
+            'Simulate your sales with Mia'}
         </h3>
         <p className="text-gray-600 text-lg">
-          {language === 'fr' ? 
-            'Estimez les revenus supplémentaires générés par votre Vendeuse IA' :
-            'Estimate additional revenue generated by your AI Salesperson'}
+          {language === 'fr' ?
+            'Estimez les revenus supplémentaires générés par Mia' :
+            'Estimate the additional revenue Mia would generate for you'}
         </p>
       </div>
       
@@ -449,7 +449,7 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
                 <span className="font-bold text-green-600 text-xl">{Math.round(newRevenue).toLocaleString()}€</span>
               </div>
               <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
-                <span className="text-green-700 font-semibold">Boost Conversion:</span>
+                <span className="text-green-700 font-semibold">Taux de conversion :</span>
                 <span className="font-bold text-green-600">{conversion.toFixed(1)}% → {newConversion.toFixed(1)}%</span>
               </div>
             </div>
@@ -465,11 +465,11 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center bg-rose-600 text-white rounded-2xl p-6 shadow-md">
                 <div className="text-3xl font-bold mb-1">{roiPercent}%</div>
-                <div className="text-rose-100 text-xs font-medium uppercase">ROI Mensuel</div>
+                <div className="text-rose-100 text-xs font-medium uppercase">Revenus générés</div>
               </div>
               <div className="text-center bg-purple-600 text-white rounded-2xl p-6 shadow-md">
                 <div className="text-3xl font-bold mb-1">{paybackDays}</div>
-                <div className="text-purple-100 text-xs font-medium uppercase">Jours pour se rembourser</div>
+                <div className="text-purple-100 text-xs font-medium uppercase">Jours pour être rentable</div>
               </div>
             </div>
           </div>
@@ -481,32 +481,32 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
 
 // Features par plan - Orientées VALEUR BUSINESS
 const getStarterFeatures = (language: string) => [
-  language === 'fr' ? 'Vendeuse IA experte de vos produits' : 'AI Salesperson expert on your products',
-  language === 'fr' ? 'Réponses instantanées 24h/24, 7j/7' : 'Instant responses 24/7',
-  language === 'fr' ? 'Cartes produits cliquables dans le chat' : 'Clickable product cards in chat',
-  language === 'fr' ? 'Reprise de conversation par un humain' : 'Human takeover anytime',
-  language === 'fr' ? 'Tableau de bord des conversations' : 'Conversations dashboard',
-  language === 'fr' ? '1 boutique Shopify ou WooCommerce' : '1 Shopify or WooCommerce store',
+  language === 'fr' ? 'Apprend et maîtrise tous vos produits' : 'Learns and masters all your products',
+  language === 'fr' ? 'Répond instantanément, 24h/24, 7j/7' : 'Responds instantly, 24/7',
+  language === 'fr' ? 'Affiche vos produits directement dans la conversation' : 'Shows your products directly in the conversation',
+  language === 'fr' ? 'Passe la main à un humain si nécessaire' : 'Hands over to a human when needed',
+  language === 'fr' ? 'Vous voyez tout ce qu\'elle fait et dit' : 'You see everything she does and says',
+  language === 'fr' ? 'Vend sur 1 boutique Shopify ou WooCommerce' : 'Sells on 1 Shopify or WooCommerce store',
   language === 'fr' ? 'Support en français' : 'French support'
 ];
 
 const getGrowthFeatures = (language: string) => [
-  language === 'fr' ? 'Tout ce qui est inclus dans Conseiller' : 'Everything in Advisor plan',
-  language === 'fr' ? 'Upsell intelligent (ventes additionnelles)' : 'Smart upsells (additional sales)',
-  language === 'fr' ? 'Ajout au panier automatique par l\'IA' : 'Automatic add-to-cart by AI',
-  language === 'fr' ? 'Analytics avancées & insights clients' : 'Advanced analytics & customer insights',
-  language === 'fr' ? 'Multi-langue (FR, EN, et plus)' : 'Multi-language (FR, EN, and more)',
-  language === 'fr' ? 'Jusqu\'à 3 boutiques connectées' : 'Up to 3 connected stores',
+  language === 'fr' ? 'Tout ce qui est inclus dans Mia Découverte' : 'Everything in Mia Starter plan',
+  language === 'fr' ? 'Propose naturellement des produits complémentaires' : 'Naturally suggests complementary products',
+  language === 'fr' ? 'Ajoute les produits au panier pour le client' : 'Adds products to cart for the customer',
+  language === 'fr' ? 'Vous donne des rapports sur ses ventes et vos clients' : 'Gives you reports on her sales and your customers',
+  language === 'fr' ? 'Parle plusieurs langues (FR, EN, et plus)' : 'Speaks multiple languages (FR, EN, and more)',
+  language === 'fr' ? 'Vend sur jusqu\'à 3 boutiques simultanément' : 'Sells on up to 3 stores simultaneously',
   language === 'fr' ? 'Support prioritaire 7j/7' : 'Priority support 7/7'
 ];
 
 const getPerformanceFeatures = (language: string) => [
-  language === 'fr' ? 'Tout ce qui est inclus dans Vendre' : 'Everything in Sell plan',
-  language === 'fr' ? 'Success Manager dédié (optimisation ROI)' : 'Dedicated Success Manager (ROI optimization)',
-  language === 'fr' ? 'Intégrations CRM & Marketing sur mesure' : 'Custom CRM & Marketing integrations',
-  language === 'fr' ? 'Personnalisation complète du widget' : 'Full widget customization',
+  language === 'fr' ? 'Tout ce qui est inclus dans Mia Pro' : 'Everything in Mia Pro plan',
+  language === 'fr' ? 'Un expert dédié suit ses performances avec vous' : 'A dedicated expert tracks her performance with you',
+  language === 'fr' ? 'Se connecte à vos outils marketing et CRM' : 'Connects to your marketing tools and CRM',
+  language === 'fr' ? 'Personnalisation complète de son interface' : 'Full customization of her interface',
   language === 'fr' ? 'Accès API & Webhooks' : 'API & Webhooks access',
-  language === 'fr' ? 'Boutiques & fichiers illimités' : 'Unlimited stores & files',
+  language === 'fr' ? 'Vend sur un nombre illimité de boutiques' : 'Sells on unlimited stores',
   language === 'fr' ? 'Support VIP 24/7' : '24/7 VIP Support'
 ];
 

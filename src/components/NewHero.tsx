@@ -100,10 +100,6 @@ const NewHero = () => {
                 <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-2" />
                 <span className="font-medium">{t('days14Trial')}</span>
               </div>
-              <div className="flex items-center text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-3 rounded-full border border-rose-200/50 shadow-sm">
-                <Star className="w-3 h-3 sm:w-4 sm:h-4 text-purple-500 mr-2" />
-                <span className="font-medium">{t('beautySector')}</span>
-              </div>
             </div>
           </div>
           
@@ -233,7 +229,7 @@ const SocialProofBadge = () => {
           ))}
         </div>
         <span className="text-xs sm:text-sm text-gray-700 font-semibold">
-          {language === 'fr' ? 'Déjà utilisé par +10 marques beauté | +150% de conversion en moyenne' : 'Already used by 10+ beauty brands | +150% conversion on average'}
+          {language === 'fr' ? 'Déjà recrutée par +10 marques beauté' : 'Already hired by 10+ beauty brands'}
         </span>
       </div>
     </div>
@@ -248,207 +244,181 @@ const BeautyHeroChatInterface = ({ onDemoClick }: { onDemoClick: () => void }) =
 
   // Messages de conversation beauté en français et anglais
   const beautyChatMessages = {
-    fr: [
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'Conseillère Beauté IA',
-        message: 'Bonjour ! Je suis Aïcha, votre conseillère beauté. Comment puis-je vous aider aujourd\'hui ?',
-        timestamp: '10:15'
-      },
-      {
-        type: 'user' as const,
-        message: 'Bonjour Aïcha ! J\'ai les genoux et les coudes très foncés, ça me complexe beaucoup. Vous avez quelque chose pour ça ?',
-        timestamp: '10:16'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'Conseillère Beauté IA',
-        message: 'Je comprends tout à fait, c\'est une préoccupation très courante et vous n\'êtes pas seule ! Avant de vous conseiller, j\'aimerais mieux comprendre votre situation. Depuis combien de temps avez-vous remarqué cet assombrissement ?',
-        timestamp: '10:17'
-      },
-      {
-        type: 'user' as const,
-        message: 'Ça fait des années en fait. J\'ai essayé plusieurs produits mais rien ne marche vraiment',
-        timestamp: '10:18'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'Conseillère Beauté IA',
-        message: 'D\'accord, je vois. Et est-ce que votre peau est plutôt sensible, ou vous n\'avez jamais eu de réactions particulières aux soins ?',
-        timestamp: '10:19'
-      },
-      {
-        type: 'user' as const,
-        message: 'Ma peau est un peu sensible oui. Les produits trop agressifs me donnent des irritations',
-        timestamp: '10:20'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'Conseillère Beauté IA',
-        message: 'Merci pour ces précisions, c\'est important ! Pour votre cas, je vous recommande notre **Lait Unifiant au Curcuma & Karité**. Il est 100% naturel et formulé spécialement pour les peaux sensibles. Le curcuma est reconnu pour son action éclaircissante douce, et le beurre de karité nourrit en profondeur sans irriter.',
-        timestamp: '10:21',
-        products: [
-          { name: 'Lait Unifiant Curcuma & Karité', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' }
-        ]
-      },
-      {
-        type: 'user' as const,
-        message: 'Le curcuma, ça ne tache pas la peau en jaune ?',
-        timestamp: '10:22'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'Conseillère Beauté IA',
-        message: 'Contente que vous posiez la question 😊 Non, notre formule est conçue pour éviter ce problème. Le curcuma est infusé dans le karité, pas appliqué pur. Il pénètre dans la peau sans laisser de traces. Beaucoup de nos clientes avaient la même inquiétude et sont aujourd\'hui ravies du résultat !',
-        timestamp: '10:23'
-      },
-      {
-        type: 'user' as const,
-        message: 'Ok ça me rassure. Je l\'utilise comment exactement ?',
-        timestamp: '10:24'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'Conseillère Beauté IA',
-        message: 'C\'est très simple : appliquez le lait chaque soir après la douche sur les zones concernées (genoux, coudes, et vous pouvez aussi l\'utiliser sur les aisselles ou les entre-cuisses si besoin). Massez jusqu\'à absorption complète. Les premiers résultats apparaissent généralement après 2-3 semaines d\'utilisation régulière.',
-        timestamp: '10:25'
-      },
-      {
-        type: 'user' as const,
-        message: 'D\'accord parfait ! Je vais le prendre',
-        timestamp: '10:26'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'Conseillère Beauté IA',
-        message: 'Excellent choix ! Pour maximiser les résultats, je vous conseille d\'ajouter notre **Gommage Doux à la Papaye**. Utilisé une fois par semaine avant le lait, il élimine les cellules mortes et permet au lait de mieux pénétrer. Ensemble, ils forment un duo très efficace pour unifier le teint.',
-        timestamp: '10:27',
-        products: [
-          { name: 'Lait Unifiant Curcuma & Karité', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' },
-          { name: 'Gommage Doux à la Papaye', price: '13€', image: '/images/products/gommage-papaye.png', shade: '' }
-        ]
-      },
-      {
-        type: 'user' as const,
-        message: 'Ah oui bonne idée ! Je prends les deux alors',
-        timestamp: '10:28'
-      }
-    ],
-    en: [
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'AI Beauty Advisor',
-        message: 'Hello! I\'m Aïcha, your beauty advisor. How can I help you today?',
-        timestamp: '10:15'
-      },
-      {
-        type: 'user' as const,
-        message: 'Hi Aïcha! My knees and elbows are very dark, it makes me self-conscious. Do you have something for that?',
-        timestamp: '10:16'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'AI Beauty Advisor',
-        message: 'I completely understand, it\'s a very common concern and you\'re not alone! Before recommending anything, I\'d like to better understand your situation. How long have you noticed this darkening?',
-        timestamp: '10:17'
-      },
-      {
-        type: 'user' as const,
-        message: 'It\'s been years actually. I\'ve tried several products but nothing really works',
-        timestamp: '10:18'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'AI Beauty Advisor',
-        message: 'Okay, I see. And is your skin rather sensitive, or have you never had any particular reactions to skincare products?',
-        timestamp: '10:19'
-      },
-      {
-        type: 'user' as const,
-        message: 'My skin is a bit sensitive yes. Products that are too harsh give me irritation',
-        timestamp: '10:20'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'AI Beauty Advisor',
-        message: 'Thank you for those details, that\'s important! For your case, I recommend our **Turmeric & Shea Brightening Lotion**. It\'s 100% natural and specially formulated for sensitive skin. Turmeric is known for its gentle brightening action, and shea butter deeply nourishes without irritation.',
-        timestamp: '10:21',
-        products: [
-          { name: 'Turmeric & Shea Brightening Lotion', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' }
-        ]
-      },
-      {
-        type: 'user' as const,
-        message: 'Doesn\'t turmeric stain the skin yellow?',
-        timestamp: '10:22'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'AI Beauty Advisor',
-        message: 'Glad you asked 😊 No, our formula is designed to avoid that problem. The turmeric is infused in shea butter, not applied pure. It penetrates the skin without leaving traces. Many of our customers had the same concern and are now delighted with the results!',
-        timestamp: '10:23'
-      },
-      {
-        type: 'user' as const,
-        message: 'Ok that\'s reassuring. How exactly do I use it?',
-        timestamp: '10:24'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'AI Beauty Advisor',
-        message: 'It\'s very simple: apply the lotion every evening after showering on the affected areas (knees, elbows, and you can also use it on underarms or inner thighs if needed). Massage until completely absorbed. The first results generally appear after 2-3 weeks of regular use.',
-        timestamp: '10:25'
-      },
-      {
-        type: 'user' as const,
-        message: 'Alright perfect! I\'ll take it',
-        timestamp: '10:26'
-      },
-      {
-        type: 'ai' as const,
-        avatar: 'A',
-        name: 'Aïcha',
-        role: 'AI Beauty Advisor',
-        message: 'Excellent choice! To maximize results, I recommend adding our **Papaya Gentle Scrub**. Used once a week before the lotion, it removes dead cells and allows the lotion to penetrate better. Together, they form a very effective duo for evening out your skin tone.',
-        timestamp: '10:27',
-        products: [
-          { name: 'Turmeric & Shea Brightening Lotion', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' },
-          { name: 'Papaya Gentle Scrub', price: '13€', image: '/images/products/gommage-papaye.png', shade: '' }
-        ]
-      },
-      {
-        type: 'user' as const,
-        message: 'Ah yes good idea! I\'ll take both then',
-        timestamp: '10:28'
-      }
-    ]
-  };
+  fr: [
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Conseillère beauté',
+      message: 'Bonjour ! Je suis Mia. Vous cherchez quelque chose de précis, ou je peux vous aider à trouver ce qu\'il vous faut ?',
+      timestamp: '10:15'
+    },
+    {
+      type: 'user' as const,
+      message: 'Bonjour Mia ! J\'ai des taches sur le visage qui ne partent pas, surtout sur les joues et le front. Vous avez quelque chose pour ça ?',
+      timestamp: '10:16'
+    },
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Conseillère beauté',
+      message: 'Je comprends, c\'est une préoccupation très fréquente. Deux questions rapides : vous avez la peau plutôt claire, mate ou foncée ? Et est-ce qu\'elle est sensible aux soins ?',
+      timestamp: '10:17'
+    },
+    {
+      type: 'user' as const,
+      message: 'J\'ai la peau foncée. Et oui, elle est un peu sensible — les produits trop forts me donnent des rougeurs.',
+      timestamp: '10:18'
+    },
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Conseillère beauté',
+      message: 'C\'est exactement ce qu\'il me fallait savoir. Sur les peaux foncées, ce type de taches est souvent du mélasma ou de l\'hyperpigmentation — et les produits trop agressifs peuvent aggraver la situation. Pour votre cas, je vous recommande notre **Lait Unifiant au Curcuma & Karité**. 100% naturel, formulé pour les peaux sensibles. Le curcuma agit en douceur sur les taches, le karité nourrit sans irriter.',
+      timestamp: '10:19',
+      products: [
+        { name: 'Lait Unifiant Curcuma & Karité', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' }
+      ]
+    },
+    {
+      type: 'user' as const,
+      message: 'Le curcuma, ça ne tache pas la peau en jaune ?',
+      timestamp: '10:20'
+    },
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Conseillère beauté',
+      message: 'Contente que vous posiez la question 😊 Non, notre formule est conçue pour éviter ça. Le curcuma est infusé dans le karité, pas appliqué pur — il pénètre dans la peau sans laisser de traces. Beaucoup de nos clientes avaient la même inquiétude et sont aujourd\'hui ravies du résultat.',
+      timestamp: '10:21'
+    },
+    {
+      type: 'user' as const,
+      message: 'Ok ça me rassure. Je l\'utilise comment ?',
+      timestamp: '10:22'
+    },
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Conseillère beauté',
+      message: 'Chaque soir, après le nettoyage du visage, appliquez-le sur les zones à traiter et massez doucement jusqu\'à absorption complète. Les premières améliorations sont visibles généralement après 2 à 3 semaines d\'utilisation régulière.',
+      timestamp: '10:23'
+    },
+    {
+      type: 'user' as const,
+      message: 'Parfait, je vais le prendre !',
+      timestamp: '10:24'
+    },
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Conseillère beauté',
+      message: 'Excellent choix ! Pour des résultats encore plus rapides, associez-le à notre **Gommage Doux à la Papaye**. Utilisé une fois par semaine avant le lait, il élimine les cellules mortes et permet aux actifs unifiants de mieux pénétrer. Les deux ensemble forment un protocole très efficace contre les taches.',
+      timestamp: '10:25',
+      products: [
+        { name: 'Lait Unifiant Curcuma & Karité', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' },
+        { name: 'Gommage Doux à la Papaye', price: '13€', image: '/images/products/gommage-papaye.png', shade: '' }
+      ]
+    },
+    {
+      type: 'user' as const,
+      message: 'Bonne idée ! Je prends les deux alors.',
+      timestamp: '10:26'
+    }
+  ],
+  en: [
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Beauty Advisor',
+      message: 'Hello! I\'m Mia. Are you looking for something specific, or can I help you find what you need?',
+      timestamp: '10:15'
+    },
+    {
+      type: 'user' as const,
+      message: 'Hi Mia! I have dark spots on my face that won\'t go away, especially on my cheeks and forehead. Do you have something for that?',
+      timestamp: '10:16'
+    },
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Beauty Advisor',
+      message: 'I understand — it\'s a very common concern. Two quick questions: is your skin tone light, medium or dark? And is it sensitive to skincare products?',
+      timestamp: '10:17'
+    },
+    {
+      type: 'user' as const,
+      message: 'I have dark skin. And yes, it\'s a bit sensitive — products that are too strong give me redness.',
+      timestamp: '10:18'
+    },
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Beauty Advisor',
+      message: 'That\'s exactly what I needed to know. On darker skin tones, this type of spotting is often melasma or hyperpigmentation — and aggressive products can make it worse. For your case, I recommend our **Turmeric & Shea Brightening Lotion**. 100% natural, formulated for sensitive skin. Turmeric gently works on dark spots, shea butter nourishes without irritation.',
+      timestamp: '10:19',
+      products: [
+        { name: 'Turmeric & Shea Brightening Lotion', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' }
+      ]
+    },
+    {
+      type: 'user' as const,
+      message: 'Doesn\'t turmeric stain the skin yellow?',
+      timestamp: '10:20'
+    },
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Beauty Advisor',
+      message: 'Glad you asked 😊 No, our formula is designed to prevent that. The turmeric is infused in shea butter, not applied pure — it absorbs into the skin without leaving any trace. Many of our customers had the same concern and are now thrilled with their results.',
+      timestamp: '10:21'
+    },
+    {
+      type: 'user' as const,
+      message: 'Ok that\'s reassuring. How do I use it?',
+      timestamp: '10:22'
+    },
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Beauty Advisor',
+      message: 'Every evening, after cleansing your face, apply it to the areas you want to treat and gently massage until fully absorbed. First improvements are generally visible after 2 to 3 weeks of regular use.',
+      timestamp: '10:23'
+    },
+    {
+      type: 'user' as const,
+      message: 'Perfect, I\'ll take it!',
+      timestamp: '10:24'
+    },
+    {
+      type: 'ai' as const,
+      avatar: 'M',
+      name: 'Mia',
+      role: 'Beauty Advisor',
+      message: 'Excellent choice! For even faster results, pair it with our **Papaya Gentle Scrub**. Used once a week before the lotion, it removes dead skin cells and allows the brightening actives to penetrate better. Together they form a very effective protocol against dark spots.',
+      timestamp: '10:25',
+      products: [
+        { name: 'Turmeric & Shea Brightening Lotion', price: '19€', image: '/images/products/lait-unifiant.png', shade: '' },
+        { name: 'Papaya Gentle Scrub', price: '13€', image: '/images/products/gommage-papaye.png', shade: '' }
+      ]
+    },
+    {
+      type: 'user' as const,
+      message: 'Great idea! I\'ll take both then.',
+      timestamp: '10:26'
+    }
+  ]
+};
 
   const messages = beautyChatMessages[language];
 
@@ -493,8 +463,8 @@ const BeautyHeroChatInterface = ({ onDemoClick }: { onDemoClick: () => void }) =
         {/* Chat Header Premium - Responsive */}
         <div className="bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 px-4 sm:px-6 py-3 sm:py-4 text-white flex items-center justify-between">
           <div className="flex items-center space-x-3 sm:space-x-4">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm backdrop-blur-sm">
-              {messages[0].avatar}
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-white/30 flex-shrink-0">
+              <img src="/images/mia-avatar.png" alt="Mia" className="w-full h-full object-cover" />
             </div>
             <div>
               <div className="font-semibold text-sm sm:text-base">{messages[0].name}</div>
@@ -518,8 +488,8 @@ const BeautyHeroChatInterface = ({ onDemoClick }: { onDemoClick: () => void }) =
             <div key={index} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}>
               
               {msg.type === 'ai' && (
-                <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-rose-500 via-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold mr-2 sm:mr-3 mt-1 shadow-sm">
-                  {msg.avatar}
+                <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 rounded-full overflow-hidden mr-2 sm:mr-3 mt-1 shadow-sm border border-rose-100">
+                  <img src="/images/mia-avatar.png" alt="Mia" className="w-full h-full object-cover" />
                 </div>
               )}
 
@@ -585,8 +555,8 @@ const BeautyHeroChatInterface = ({ onDemoClick }: { onDemoClick: () => void }) =
           {/* Typing indicator premium - Responsive */}
           {currentMessageIndex < messages.length - 1 && (
             <div className="flex justify-start animate-fade-in">
-              <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-rose-500 via-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold mr-2 sm:mr-3 mt-1 shadow-sm">
-                {messages[0].avatar}
+              <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 rounded-full overflow-hidden mr-2 sm:mr-3 mt-1 shadow-sm border border-rose-100">
+                <img src="/images/mia-avatar.png" alt="Mia" className="w-full h-full object-cover" />
               </div>
               <div className="bg-white border border-rose-100 rounded-xl sm:rounded-2xl px-3 sm:px-5 py-3 sm:py-4 shadow-sm">
                 <div className="flex space-x-1">
@@ -604,7 +574,7 @@ const BeautyHeroChatInterface = ({ onDemoClick }: { onDemoClick: () => void }) =
           <div className="flex items-center space-x-2 sm:space-x-3">
             <input 
               type="text" 
-              placeholder={language === 'fr' ? 'Posez votre question beauté...' : 'Ask your beauty question...'}
+              placeholder={language === 'fr' ? 'Écrivez votre message ici...' : 'Write your message here...'}
               className="flex-1 px-3 sm:px-4 py-2 sm:py-3 border border-rose-200 rounded-full text-xs sm:text-sm focus:outline-none focus:border-rose-400 focus:ring-2 focus:ring-rose-100 transition-all duration-200"
               onKeyPress={(e) => {
                 if (e.key === 'Enter') {

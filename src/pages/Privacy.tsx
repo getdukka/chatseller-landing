@@ -32,9 +32,9 @@ const Privacy = () => {
               </h1>
               
               <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-                {language === 'fr' ? 
-                  "Nous respectons la confidentialité de vos données et celles de vos clientes beauté. Découvrez comment ChatSeller protège vos informations." :
-                  "We respect the confidentiality of your data and that of your beauty customers. Discover how ChatSeller protects your information."
+                {language === 'fr' ?
+                  "Nous respectons la confidentialité de vos données et celles de vos clients. Découvrez comment ChatSeller protège vos informations." :
+                  "We respect the confidentiality of your data and that of your customers. Discover how ChatSeller protects your information."
                 }
               </p>
               
@@ -50,7 +50,7 @@ const Privacy = () => {
                   </div>
                   <div className="flex items-center">
                     <Heart className="w-4 h-4 mr-2 text-pink-600" />
-                    {language === 'fr' ? "Spécialisé Beauté" : "Beauty Specialized"}
+                    {language === 'fr' ? "Vendeuse IA" : "AI Salesperson"}
                   </div>
                 </div>
               </div>
@@ -77,15 +77,15 @@ const Privacy = () => {
                     <div>
                       <h3 className="font-bold text-gray-900 mb-4 flex items-center">
                         <Heart className="w-5 h-5 mr-2 text-rose-600" />
-                        {language === 'fr' ? "ChatSeller - Solution Beauté" : "ChatSeller - Beauty Solution"}
+                        {language === 'fr' ? "ChatSeller — Mia, votre Vendeuse IA" : "ChatSeller — Mia, your AI Salesperson"}
                       </h3>
                       <div className="space-y-2 text-gray-700">
                         <p><strong>{language === 'fr' ? "Entreprise :" : "Company:"}</strong> DUKKA</p>
                         <p><strong>{language === 'fr' ? "Produit :" : "Product:"}</strong> ChatSeller</p>
                         <p className="text-sm text-rose-600 font-medium">
                           {language === 'fr' ?
-                            "🎯 Spécialisé pour marques beauté en Afrique" :
-                            "🎯 Specialized for beauty brands in Africa"
+                            "🎯 Vendeuse IA pour boutiques e-commerce en Afrique" :
+                            "🎯 AI Salesperson for e-commerce stores in Africa"
                           }
                         </p>
                       </div>
@@ -136,7 +136,7 @@ const Privacy = () => {
                   <div className="bg-white rounded-2xl p-8 border border-purple-200 shadow-lg">
                     <h3 className="text-xl font-bold mb-6 text-purple-700 flex items-center">
                       <Heart className="w-5 h-5 mr-2" />
-                      {language === 'fr' ? "Informations marques beauté" : "Beauty brand information"}
+                      {language === 'fr' ? "Informations sur votre boutique" : "Your store information"}
                     </h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <ul className="space-y-3">
@@ -154,7 +154,7 @@ const Privacy = () => {
                         </li>
                         <li className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-3" />
-                          {language === 'fr' ? "Secteur beauté (skincare, maquillage, etc.)" : "Beauty sector (skincare, makeup, etc.)"}
+                          {language === 'fr' ? "Secteur et type de boutique" : "Store sector and type"}
                         </li>
                       </ul>
                       <ul className="space-y-3">
@@ -164,15 +164,15 @@ const Privacy = () => {
                         </li>
                         <li className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-3" />
-                          {language === 'fr' ? "Catalogue produits beauté" : "Beauty product catalog"}
+                          {language === 'fr' ? "Catalogue produits" : "Product catalog"}
                         </li>
                         <li className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-3" />
-                          {language === 'fr' ? "Préférences de configuration IA" : "AI configuration preferences"}
+                          {language === 'fr' ? "Préférences de configuration de Mia" : "Mia configuration preferences"}
                         </li>
                         <li className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-3" />
-                          {language === 'fr' ? "Base de connaissances beauté" : "Beauty knowledge base"}
+                          {language === 'fr' ? "Base de connaissances de votre marque" : "Your brand knowledge base"}
                         </li>
                       </ul>
                     </div>
@@ -182,21 +182,21 @@ const Privacy = () => {
                   <div className="bg-white rounded-2xl p-8 border border-rose-200 shadow-lg">
                     <h3 className="text-xl font-bold mb-6 text-rose-700 flex items-center">
                       <Sparkles className="w-5 h-5 mr-2" />
-                      {language === 'fr' ? "Données conversations beauté (clients finaux)" : "Beauty conversation data (end customers)"}
+                      {language === 'fr' ? "Données des conversations Mia (clients finaux)" : "Mia conversation data (end customers)"}
                     </h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <ul className="space-y-3">
                         <li className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-3" />
-                          {language === 'fr' ? "Questions sur types de peau" : "Skin type questions"}
+                          {language === 'fr' ? "Questions et besoins exprimés" : "Questions and expressed needs"}
                         </li>
                         <li className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-3" />
-                          {language === 'fr' ? "Préférences ingrédients" : "Ingredient preferences"}
+                          {language === 'fr' ? "Préférences produits" : "Product preferences"}
                         </li>
                         <li className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-3" />
-                          {language === 'fr' ? "Routines beauté recherchées" : "Beauty routines sought"}
+                          {language === 'fr' ? "Historique des conversations avec Mia" : "Conversation history with Mia"}
                         </li>
                         <li className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-3" />
@@ -210,7 +210,7 @@ const Privacy = () => {
                         </li>
                         <li className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-3" />
-                          {language === 'fr' ? "Sessions de diagnostic beauté" : "Beauty diagnostic sessions"}
+                          {language === 'fr' ? "Informations de commande (si achat via chat)" : "Order information (if purchased via chat)"}
                         </li>
                         <li className="flex items-center">
                           <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-3" />
@@ -252,7 +252,7 @@ const Privacy = () => {
                       </div>
                       <div className="flex items-center">
                         <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-3" />
-                        {language === 'fr' ? "Analytics beauté" : "Beauty analytics"}
+                        {language === 'fr' ? "Analytics de vente" : "Sales analytics"}
                       </div>
                     </div>
                   </div>
@@ -273,13 +273,13 @@ const Privacy = () => {
                     <div className="bg-white rounded-xl p-6 border border-rose-200 shadow-sm">
                       <h4 className="font-bold text-rose-700 mb-3 flex items-center">
                         <Heart className="w-5 h-5 mr-2" />
-                        {language === 'fr' ? "Services beauté" : "Beauty services"}
+                        {language === 'fr' ? "Services Mia" : "Mia services"}
                       </h4>
                       <ul className="space-y-2 text-gray-700">
-                        <li>• {language === 'fr' ? "Conseil beauté IA personnalisé" : "Personalized AI beauty advice"}</li>
-                        <li>• {language === 'fr' ? "Diagnostic type de peau/cheveux" : "Skin/hair type diagnosis"}</li>
-                        <li>• {language === 'fr' ? "Recommandations produits" : "Product recommendations"}</li>
-                        <li>• {language === 'fr' ? "Optimisation conversions beauté" : "Beauty conversion optimization"}</li>
+                        <li>• {language === 'fr' ? "Vente conversationnelle IA (Mia)" : "AI conversational selling (Mia)"}</li>
+                        <li>• {language === 'fr' ? "Recommandations produits personnalisées" : "Personalized product recommendations"}</li>
+                        <li>• {language === 'fr' ? "Collecte de commandes via le chat" : "Order collection via chat"}</li>
+                        <li>• {language === 'fr' ? "Optimisation des conversions" : "Conversion optimization"}</li>
                       </ul>
                     </div>
                     
@@ -290,7 +290,7 @@ const Privacy = () => {
                       </h4>
                       <ul className="space-y-2 text-gray-700">
                         <li>• {language === 'fr' ? "Authentification et accès" : "Authentication and access"}</li>
-                        <li>• {language === 'fr' ? "Configuration IA beauté" : "Beauty AI configuration"}</li>
+                        <li>• {language === 'fr' ? "Configuration de Mia" : "Mia configuration"}</li>
                         <li>• {language === 'fr' ? "Gestion catalogue produits" : "Product catalog management"}</li>
                         <li>• {language === 'fr' ? "Support client dédié" : "Dedicated customer support"}</li>
                       </ul>
@@ -304,9 +304,9 @@ const Privacy = () => {
                         {language === 'fr' ? "Analytics et optimisation" : "Analytics and optimization"}
                       </h4>
                       <ul className="space-y-2 text-gray-700">
-                        <li>• {language === 'fr' ? "Mesure ROI conversions beauté" : "Beauty conversion ROI measurement"}</li>
-                        <li>• {language === 'fr' ? "Analyse tendances produits" : "Product trend analysis"}</li>
-                        <li>• {language === 'fr' ? "Amélioration algorithme beauté" : "Beauty algorithm improvement"}</li>
+                        <li>• {language === 'fr' ? "Mesure ROI des conversions" : "Conversion ROI measurement"}</li>
+                        <li>• {language === 'fr' ? "Analyse des tendances produits" : "Product trend analysis"}</li>
+                        <li>• {language === 'fr' ? "Amélioration de Mia" : "Mia improvement"}</li>
                         <li>• {language === 'fr' ? "Rapports de performance" : "Performance reports"}</li>
                       </ul>
                     </div>
@@ -352,9 +352,9 @@ const Privacy = () => {
                           {language === 'fr' ? "🤝 Exécution du contrat" : "🤝 Contract execution"}
                         </h4>
                         <p className="text-yellow-800 text-sm">
-                          {language === 'fr' ? 
-                            "Fourniture des services ChatSeller aux marques beauté" :
-                            "Provision of ChatSeller services to beauty brands"}
+                          {language === 'fr' ?
+                            "Fourniture des services ChatSeller (Mia) aux boutiques" :
+                            "Provision of ChatSeller (Mia) services to stores"}
                         </p>
                       </div>
                       
@@ -363,9 +363,9 @@ const Privacy = () => {
                           {language === 'fr' ? "✅ Consentement" : "✅ Consent"}
                         </h4>
                         <p className="text-yellow-800 text-sm">
-                          {language === 'fr' ? 
-                            "Communications marketing beauté (optionnel)" :
-                            "Beauty marketing communications (optional)"}
+                          {language === 'fr' ?
+                            "Communications marketing (optionnel)" :
+                            "Marketing communications (optional)"}
                         </p>
                       </div>
                     </div>
@@ -376,9 +376,9 @@ const Privacy = () => {
                           {language === 'fr' ? "⚖️ Intérêt légitime" : "⚖️ Legitimate interest"}
                         </h4>
                         <p className="text-yellow-800 text-sm">
-                          {language === 'fr' ? 
-                            "Amélioration IA beauté, sécurité, analytics" :
-                            "Beauty AI improvement, security, analytics"}
+                          {language === 'fr' ?
+                            "Amélioration de Mia, sécurité, analytics" :
+                            "Mia improvement, security, analytics"}
                         </p>
                       </div>
                       
@@ -513,9 +513,9 @@ const Privacy = () => {
                         {language === 'fr' ? "Questions sur cette politique ?" : "Questions about this policy?"}
                       </h3>
                       <p className="text-gray-700 mb-6">
-                        {language === 'fr' ? 
-                          "Notre équipe spécialisée beauté est là pour répondre à toutes vos questions concernant cette politique de confidentialité ou l'exercice de vos droits." :
-                          "Our specialized beauty team is here to answer all your questions regarding this privacy policy or exercising your rights."
+                        {language === 'fr' ?
+                          "Notre équipe est là pour répondre à toutes vos questions concernant cette politique de confidentialité ou l'exercice de vos droits." :
+                          "Our team is here to answer all your questions regarding this privacy policy or exercising your rights."
                         }
                       </p>
                       
@@ -539,9 +539,9 @@ const Privacy = () => {
                             {language === 'fr' ? "🎯 Support spécialisé" : "🎯 Specialized support"}
                           </h4>
                           <p className="text-sm text-gray-700">
-                            {language === 'fr' ? 
-                              "Équipe experte en protection des données pour marques beauté" :
-                              "Expert data protection team for beauty brands"}
+                            {language === 'fr' ?
+                              "Équipe experte en protection des données" :
+                              "Expert data protection team"}
                           </p>
                         </div>
                       </div>

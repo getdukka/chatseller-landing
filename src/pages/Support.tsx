@@ -51,10 +51,10 @@ const SupportPage = () => {
       name: language === 'fr' ? 'Installation & Intégration' : 'Installation & Integration', 
       icon: <Zap className="w-4 h-4" /> 
     },
-    { 
-      id: 'configuration', 
-      name: language === 'fr' ? 'Configuration Beauté' : 'Beauty Configuration', 
-      icon: <Heart className="w-4 h-4" /> 
+    {
+      id: 'configuration',
+      name: language === 'fr' ? 'Configuration de Mia' : 'Configure Mia',
+      icon: <Heart className="w-4 h-4" />
     },
     { 
       id: 'products', 
@@ -76,75 +76,75 @@ const SupportPage = () => {
   const beautyFAQData = [
     {
       category: 'installation',
-      question: language === 'fr' ? 
-        'Comment installer ChatSeller sur ma boutique Shopify beauté ?' :
-        'How do I install ChatSeller on my Shopify beauty store?',
-      answer: language === 'fr' ? 
-        `**Installation en 2 minutes :**\n\n1. Connectez-vous à votre **Dashboard ChatSeller**\n2. Allez dans "Intégrations" > "Shopify"\n3. Cliquez sur "Connecter ma boutique Shopify"\n4. Autorisez ChatSeller à accéder à votre boutique\n5. Votre Vendeuse IA est **automatiquement installée** !\n\n*Votre widget apparaîtra immédiatement sur toutes les pages produits beauté.*` :
-        `**2-minute installation:**\n\n1. Log into your **ChatSeller Dashboard**\n2. Go to "Integrations" > "Shopify"\n3. Click "Connect my Shopify store"\n4. Authorize ChatSeller to access your store\n5. Your AI Salesperson is **automatically installed**!\n\n*Your widget will immediately appear on all beauty product pages.*`,
-      tags: language === 'fr' ? 
-        ['shopify', 'installation', 'beauté', 'automatique'] :
-        ['shopify', 'installation', 'beauty', 'automatic']
+      question: language === 'fr' ?
+        'Comment recruter Mia sur ma boutique Shopify ?' :
+        'How do I recruit Mia on my Shopify store?',
+      answer: language === 'fr' ?
+        `**Mia opérationnelle en 2 minutes :**\n\n1. Connectez-vous à votre **Dashboard ChatSeller**\n2. Allez dans "Intégrations" > "Shopify"\n3. Cliquez sur "Connecter ma boutique Shopify"\n4. Autorisez ChatSeller à accéder à votre boutique\n5. Mia est **automatiquement recrutée** et prête à vendre !\n\n*Le widget de Mia apparaîtra immédiatement sur toutes les pages de votre boutique.*` :
+        `**Mia up and running in 2 minutes:**\n\n1. Log into your **ChatSeller Dashboard**\n2. Go to "Integrations" > "Shopify"\n3. Click "Connect my Shopify store"\n4. Authorize ChatSeller to access your store\n5. Mia is **automatically recruited** and ready to sell!\n\n*Mia's widget will immediately appear on all pages of your store.*`,
+      tags: language === 'fr' ?
+        ['shopify', 'installation', 'mia', 'automatique'] :
+        ['shopify', 'installation', 'mia', 'automatic']
     },
     {
       category: 'installation',
-      question: language === 'fr' ? 
-        'ChatSeller fonctionne-t-il avec WooCommerce pour les marques beauté ?' :
-        'Does ChatSeller work with WooCommerce for beauty brands?',
-      answer: language === 'fr' ? 
-        `**Parfaitement compatible avec WooCommerce :**\n\n1. Téléchargez notre **plugin WooCommerce** depuis le dashboard\n2. Installez le plugin dans votre admin WordPress\n3. Entrez votre **clé API ChatSeller**\n4. Configurez les pages où afficher la Vendeuse IA\n5. Votre Vendeuse IA est opérationnelle !\n\n*Compatible avec tous les thèmes beauté et cosmétiques WooCommerce.*` :
-        `**Perfectly compatible with WooCommerce:**\n\n1. Download our **WooCommerce plugin** from the dashboard\n2. Install the plugin in your WordPress admin\n3. Enter your **ChatSeller API key**\n4. Configure which pages to display the AI Salesperson\n5. Your AI Salesperson is operational!\n\n*Compatible with all WooCommerce beauty and cosmetics themes.*`,
-      tags: language === 'fr' ? 
-        ['woocommerce', 'plugin', 'wordpress', 'beauté'] :
-        ['woocommerce', 'plugin', 'wordpress', 'beauty']
+      question: language === 'fr' ?
+        'Mia fonctionne-t-elle avec WooCommerce ?' :
+        'Does Mia work with WooCommerce?',
+      answer: language === 'fr' ?
+        `**Parfaitement compatible avec WooCommerce :**\n\n1. Téléchargez notre **plugin WooCommerce** depuis le dashboard\n2. Installez le plugin dans votre admin WordPress\n3. Entrez votre **clé API ChatSeller**\n4. Configurez les pages où afficher Mia\n5. Mia est opérationnelle et prête à vendre !\n\n*Compatible avec tous les thèmes WooCommerce.*` :
+        `**Perfectly compatible with WooCommerce:**\n\n1. Download our **WooCommerce plugin** from the dashboard\n2. Install the plugin in your WordPress admin\n3. Enter your **ChatSeller API key**\n4. Configure which pages to display Mia\n5. Mia is operational and ready to sell!\n\n*Compatible with all WooCommerce themes.*`,
+      tags: language === 'fr' ?
+        ['woocommerce', 'plugin', 'wordpress', 'mia'] :
+        ['woocommerce', 'plugin', 'wordpress', 'mia']
     },
     {
       category: 'configuration',
-      question: language === 'fr' ? 
-        'Comment configurer ma Vendeuse IA pour qu\'elle connaisse mes produits beauté ?' :
-        'How do I configure my AI Salesperson to know my beauty products?',
-      answer: language === 'fr' ? 
-        `**Configuration automatique + personnalisation :**\n\n**Automatique :**\n• ChatSeller **importe automatiquement** tous vos produits\n• Analyse les descriptions, ingrédients, bénéfices\n• Reconnaît les catégories (skincare, maquillage, parfums...)\n\n**Personnalisation avancée :**\n• Ajoutez des **conseils d'utilisation** spécifiques\n• Définissez les **types de peau** compatibles\n• Configurez les **routines beauté** recommandées\n• Ajoutez des **contre-indications** si nécessaire` :
-        `**Automatic configuration + customization:**\n\n**Automatic:**\n• ChatSeller **automatically imports** all your products\n• Analyzes descriptions, ingredients, benefits\n• Recognizes categories (skincare, makeup, fragrances...)\n\n**Advanced customization:**\n• Add specific **usage advice**\n• Define compatible **skin types**\n• Configure recommended **beauty routines**\n• Add **contraindications** if necessary`,
-      tags: language === 'fr' ? 
-        ['configuration', 'produits', 'ingrédients', 'beauté'] :
-        ['configuration', 'products', 'ingredients', 'beauty']
+      question: language === 'fr' ?
+        'Comment former Mia sur mes produits et ma marque ?' :
+        'How do I train Mia on my products and brand?',
+      answer: language === 'fr' ?
+        `**Mia apprend votre catalogue automatiquement :**\n\n**Import automatique :**\n• Mia **importe automatiquement** tous vos produits Shopify/WooCommerce\n• Elle analyse les descriptions, bénéfices et caractéristiques\n• Elle reconnaît les catégories produits et recommande intelligemment\n\n**Formation avancée (Base de connaissances) :**\n• Ajoutez des **pages de votre site** (Mia les lit toutes)\n• Téléversez des **fiches produits, guides ou PDF**\n• Rédigez des **instructions spécifiques** pour Mia\n• Plus Mia sait, mieux elle vend !` :
+        `**Mia learns your catalog automatically:**\n\n**Automatic import:**\n• Mia **automatically imports** all your Shopify/WooCommerce products\n• She analyzes descriptions, benefits, and features\n• She recognizes product categories and makes smart recommendations\n\n**Advanced training (Knowledge base):**\n• Add **pages from your site** (Mia reads them all)\n• Upload **product sheets, guides, or PDFs**\n• Write **specific instructions** for Mia\n• The more Mia knows, the better she sells!`,
+      tags: language === 'fr' ?
+        ['formation', 'produits', 'mia', 'configuration'] :
+        ['training', 'products', 'mia', 'configuration']
     },
     {
       category: 'configuration',
-      question: language === 'fr' ? 
-        'Comment personnaliser le ton de ma Vendeuse IA ?' :
-        'How do I customize the tone of my AI Salesperson?',
-      answer: language === 'fr' ? 
-        `**Personnalisation complète du ton :**\n\n**Dans "Configuration" > "Personnalité" :**\n• **Style de conseil :** Professionnel, Amical, Expert, Tendance\n• **Niveau d'expertise :** Débutant, Intermédiaire, Expert\n• **Approche vente :** Subtile, Directe, Consultative\n• **Vocabulaire :** Technique, Accessible, Luxe, Naturel\n\n**Exemples pré-configurés pour beauté :**\n• "Esthéticienne experte et bienveillante"\n• "Conseillère beauté branchée et moderne"\n• "Experte cosmétiques naturels et bio"` :
-        `**Complete tone customization:**\n\n**In "Configuration" > "Personality":**\n• **Advice style:** Professional, Friendly, Expert, Trendy\n• **Expertise level:** Beginner, Intermediate, Expert\n• **Sales approach:** Subtle, Direct, Consultative\n• **Vocabulary:** Technical, Accessible, Luxury, Natural\n\n**Pre-configured examples for beauty:**\n• "Expert and caring beautician"\n• "Trendy and modern beauty advisor"\n• "Natural and organic cosmetics expert"`,
-      tags: language === 'fr' ? 
-        ['personnalisation', 'ton', 'conseillère', 'beauté'] :
-        ['customization', 'tone', 'advisor', 'beauty']
+      question: language === 'fr' ?
+        'Comment personnaliser la personnalité de Mia ?' :
+        'How do I customize Mia\'s personality?',
+      answer: language === 'fr' ?
+        `**Mia s'adapte à votre image de marque :**\n\n**Dans "Vendeuse IA" > "Personnalité" :**\n• **Nom :** Donnez à Mia le nom que vous voulez (Mia, Léa, Aïcha...)\n• **Style :** Professionnel, Amical, Expert, Décontracté\n• **Message de bienvenue :** Personnalisez comment Mia accueille vos visiteurs\n• **Couleur du widget :** Assorti à votre charte graphique\n\n**Exemples de Mia selon votre marque :**\n• "Mia, votre styliste personnelle disponible 24/7"\n• "Léa, experte produits de la maison"\n• "Aïcha, conseillère de confiance de votre marque"` :
+        `**Mia adapts to your brand image:**\n\n**In "AI Salesperson" > "Personality":**\n• **Name:** Give Mia the name you want (Mia, Léa, Aïcha...)\n• **Style:** Professional, Friendly, Expert, Casual\n• **Welcome message:** Customize how Mia greets your visitors\n• **Widget color:** Matching your brand colors\n\n**Examples of Mia for your brand:**\n• "Mia, your personal stylist available 24/7"\n• "Léa, product expert of the house"\n• "Aïcha, trusted advisor of your brand"`,
+      tags: language === 'fr' ?
+        ['personnalisation', 'mia', 'personnalité', 'configuration'] :
+        ['customization', 'mia', 'personality', 'configuration']
     },
     {
       category: 'products',
-      question: language === 'fr' ? 
-        'ChatSeller peut-il recommander des routines beauté complètes ?' :
-        'Can ChatSeller recommend complete beauty routines?',
-      answer: language === 'fr' ? 
-        `**Oui, ChatSeller crée des routines personnalisées :**\n\n**Analyse du profil client :**\n• Type de peau (grasse, sèche, mixte, sensible...)\n• Âge et préoccupations (anti-âge, acné, hydratation...)\n• Budget et préférences (bio, naturel, luxe...)\n• Routine actuelle et objectifs\n\n**Recommandations intelligentes :**\n• **Routine matin/soir** adaptée\n• **Ordre d'application** des produits\n• **Fréquence d'utilisation** optimale\n• **Produits complémentaires** de votre catalogue\n• **Alternatives selon le budget**` :
-        `**Yes, ChatSeller creates personalized routines:**\n\n**Client profile analysis:**\n• Skin type (oily, dry, combination, sensitive...)\n• Age and concerns (anti-aging, acne, hydration...)\n• Budget and preferences (organic, natural, luxury...)\n• Current routine and goals\n\n**Smart recommendations:**\n• Adapted **morning/evening routine**\n• **Application order** of products\n• **Optimal usage frequency**\n• **Complementary products** from your catalog\n• **Budget alternatives**`,
-      tags: language === 'fr' ? 
-        ['routines', 'recommandations', 'skincare', 'personnalisé'] :
-        ['routines', 'recommendations', 'skincare', 'personalized']
+      question: language === 'fr' ?
+        'Mia peut-elle recommander des produits et générer des ventes ?' :
+        'Can Mia recommend products and generate sales?',
+      answer: language === 'fr' ?
+        `**Oui, c'est le cœur du métier de Mia :**\n\n**Analyse du besoin client :**\n• Mia pose les **bonnes questions** pour comprendre le besoin\n• Elle analyse les réponses et identifie les produits adaptés\n• Elle présente les produits avec leurs **photos, prix et bénéfices**\n\n**Vente conversationnelle :**\n• **Recommandations personnalisées** depuis votre catalogue\n• **Upsell et cross-sell** naturels dans la conversation\n• Collecte les **commandes directement dans le chat**\n• **Rassure et lève les objections** avant l'achat\n\n*En moyenne, les boutiques utilisant Mia voient +150% de conversions.*` :
+        `**Yes, that's Mia's core job:**\n\n**Customer need analysis:**\n• Mia asks the **right questions** to understand the need\n• She analyzes responses and identifies suitable products\n• She presents products with their **photos, prices, and benefits**\n\n**Conversational selling:**\n• **Personalized recommendations** from your catalog\n• Natural **upsell and cross-sell** within conversation\n• Collects **orders directly in the chat**\n• **Reassures and handles objections** before purchase\n\n*On average, stores using Mia see +150% conversions.*`,
+      tags: language === 'fr' ?
+        ['recommandations', 'ventes', 'mia', 'conversions'] :
+        ['recommendations', 'sales', 'mia', 'conversions']
     },
     {
       category: 'products',
-      question: language === 'fr' ? 
-        'Comment ChatSeller gère-t-il les teintes et nuances en maquillage ?' :
-        'How does ChatSeller handle shades and nuances in makeup?',
-      answer: language === 'fr' ? 
-        `**Gestion avancée des teintes :**\n\n**Import automatique :**\n• Détecte toutes les **variantes de couleurs**\n• Analyse les descriptions de teintes\n• Reconnaît les **carnations compatibles**\n\n**Conseil personnalisé :**\n• Questions sur la **carnation du client**\n• Recommandations de **teintes adaptées**\n• Suggestions d'**alternatives proches**\n• Conseils d'**application et association**\n\n**Support visuel :**\n• Affichage des **nuanciers disponibles**\n• **Comparaison de teintes**\n• Recommandations **saison/occasion**` :
-        `**Advanced shade management:**\n\n**Automatic import:**\n• Detects all **color variants**\n• Analyzes shade descriptions\n• Recognizes **compatible skin tones**\n\n**Personalized advice:**\n• Questions about **client's skin tone**\n• **Adapted shade** recommendations\n• Suggestions for **close alternatives**\n• **Application and pairing** advice\n\n**Visual support:**\n• Display of **available color charts**\n• **Shade comparison**\n• **Season/occasion** recommendations`,
-      tags: language === 'fr' ? 
-        ['maquillage', 'teintes', 'carnation', 'couleurs'] :
-        ['makeup', 'shades', 'skin-tone', 'colors']
+      question: language === 'fr' ?
+        'Mia gère-t-elle les variantes produits (couleurs, tailles, formats) ?' :
+        'Does Mia handle product variants (colors, sizes, formats)?',
+      answer: language === 'fr' ?
+        `**Oui, Mia maîtrise toutes vos variantes :**\n\n**Import automatique des variantes :**\n• Détecte toutes les **variantes Shopify/WooCommerce**\n• Analyse les descriptions et caractéristiques de chaque variante\n• Identifie les compatibilités entre variantes et profils clients\n\n**Recommandation intelligente :**\n• Mia pose les **bonnes questions** pour trouver la variante parfaite\n• Elle propose des **alternatives proches** si une variante est épuisée\n• Elle affiche la **fiche produit complète** avec le bon variant sélectionné` :
+        `**Yes, Mia masters all your variants:**\n\n**Automatic variant import:**\n• Detects all **Shopify/WooCommerce variants**\n• Analyzes descriptions and characteristics of each variant\n• Identifies compatibility between variants and client profiles\n\n**Smart recommendation:**\n• Mia asks the **right questions** to find the perfect variant\n• She suggests **close alternatives** if a variant is out of stock\n• She displays the **complete product card** with the right variant selected`,
+      tags: language === 'fr' ?
+        ['variantes', 'produits', 'mia', 'stock'] :
+        ['variants', 'products', 'mia', 'stock']
     },
     {
       category: 'technical',
@@ -160,24 +160,24 @@ const SupportPage = () => {
     },
     {
       category: 'technical',
-      question: language === 'fr' ? 
-        'Que faire si ma Vendeuse IA ne répond pas correctement aux questions beauté ?' :
-        'What if my AI Salesperson doesn\'t respond correctly to beauty questions?',
-      answer: language === 'fr' ? 
-        `**Amélioration continue de l'IA :**\n\n**Diagnostic automatique :**\n• Analysez les **conversations** dans votre dashboard\n• Identifiez les **questions mal comprises**\n• Consultez les **métriques de satisfaction**\n\n**Amélioration rapide :**\n• Ajoutez des **réponses personnalisées** dans "Base de connaissances"\n• Enrichissez les **descriptions produits**\n• Contactez notre équipe pour un **fine-tuning** gratuit\n• Formation IA mise à jour **chaque semaine**\n\n**Support expert :**\n• **Chat en direct** avec nos experts IA beauté\n• **Audit gratuit** de votre configuration` :
-        `**Continuous AI improvement:**\n\n**Automatic diagnosis:**\n• Analyze **conversations** in your dashboard\n• Identify **misunderstood questions**\n• Check **satisfaction metrics**\n\n**Quick improvement:**\n• Add **custom answers** in "Knowledge base"\n• Enrich **product descriptions**\n• Contact our team for free **fine-tuning**\n• AI training updated **every week**\n\n**Expert support:**\n• **Live chat** with our beauty AI experts\n• **Free audit** of your configuration`,
-      tags: language === 'fr' ? 
-        ['dépannage', 'amélioration', 'ia', 'formation'] :
-        ['troubleshooting', 'improvement', 'ai', 'training']
+      question: language === 'fr' ?
+        'Que faire si Mia ne répond pas bien à une question ?' :
+        'What if Mia doesn\'t respond well to a question?',
+      answer: language === 'fr' ?
+        `**Former Mia pour qu'elle s'améliore :**\n\n**Diagnostic rapide :**\n• Relisez les **conversations** dans votre dashboard\n• Identifiez les **questions mal comprises**\n• Vérifiez que les **descriptions produits** sont complètes\n\n**Former Mia rapidement :**\n• Ajoutez des **informations** dans "Base de connaissances" → Mia les apprend immédiatement\n• Enrichissez les **fiches produits** avec l'IA intégrée\n• Contactez notre équipe pour un **audit gratuit** de la configuration\n\n**Support expert :**\n• **Chat en direct** avec nos experts ChatSeller\n• Réponse sous **2h** pendant les heures ouvrées` :
+        `**Train Mia to improve:**\n\n**Quick diagnosis:**\n• Review **conversations** in your dashboard\n• Identify **misunderstood questions**\n• Check that **product descriptions** are complete\n\n**Train Mia quickly:**\n• Add **information** in "Knowledge base" → Mia learns immediately\n• Enrich **product sheets** with the built-in AI\n• Contact our team for a **free configuration audit**\n\n**Expert support:**\n• **Live chat** with our ChatSeller experts\n• Response within **2h** during business hours`,
+      tags: language === 'fr' ?
+        ['dépannage', 'formation', 'mia', 'amélioration'] :
+        ['troubleshooting', 'training', 'mia', 'improvement']
     },
     {
       category: 'billing',
-      question: language === 'fr' ? 
-        'Quels sont les prix ChatSeller pour une marque beauté ?' :
-        'What are ChatSeller prices for a beauty brand?',
+      question: language === 'fr' ?
+        'Quels sont les tarifs pour recruter Mia ?' :
+        'What are the pricing plans to recruit Mia?',
       answer: language === 'fr' ? 
-        `**Plans adaptés aux marques beauté :**\n\n**Conseiller (45€/mois) :**\n• Jusqu'à **1 000 conversations/mois**\n• Intégration Shopify/WooCommerce\n• Base de connaissances beauté\n\n**Vendre (145€/mois) :**\n• Jusqu'à **10 000 conversations/mois**\n• Analytics avancés\n• Personnalisation complète\n• Support prioritaire\n\n**Optimiser (299€/mois) :**\n• **Conversations illimitées**\n• Multi-boutiques\n• API personnalisée\n• Success manager dédié\n\n**✨ 14 jours gratuits pour toutes les marques beauté**` :
-        `**Plans adapted for beauty brands:**\n\n**Advisor (€45/month):**\n• Up to **1,000 conversations/month**\n• Shopify/WooCommerce integration\n• Beauty knowledge base\n\n**Sell (€145/month):**\n• Up to **10,000 conversations/month**\n• Advanced analytics\n• Complete customization\n• Priority support\n\n**Optimize (€299/month):**\n• **Unlimited conversations**\n• Multi-store\n• Custom API\n• Dedicated success manager\n\n**✨ 14 days free for all beauty brands**`,
+        `**3 plans pour recruter Mia :**\n\n**Mia Découverte (45€/mois) :**\n• Jusqu'à **1 000 conversations/mois**\n• Intégration Shopify/WooCommerce\n• Base de connaissances + enrichissement IA\n\n**Mia Pro (145€/mois) :**\n• Jusqu'à **10 000 conversations/mois**\n• Analytics avancés\n• Personnalisation complète\n• Support prioritaire\n\n**Mia Premium (299€/mois) :**\n• **Conversations illimitées**\n• Multi-boutiques\n• API personnalisée\n• Success manager dédié\n\n**✨ 14 jours d'essai gratuits — sans carte bancaire**` :
+        `**3 plans to recruit Mia:**\n\n**Mia Starter (€45/month):**\n• Up to **1,000 conversations/month**\n• Shopify/WooCommerce integration\n• Knowledge base + AI enrichment\n\n**Mia Pro (€145/month):**\n• Up to **10,000 conversations/month**\n• Advanced analytics\n• Complete customization\n• Priority support\n\n**Mia Premium (€299/month):**\n• **Unlimited conversations**\n• Multi-store\n• Custom API\n• Dedicated success manager\n\n**✨ 14-day free trial — no credit card required**`,
       tags: language === 'fr' ? 
         ['prix', 'plans', 'facturation', 'beauté'] :
         ['pricing', 'plans', 'billing', 'beauty']
@@ -219,7 +219,7 @@ const SupportPage = () => {
         },
         body: JSON.stringify({
           ...contactForm,
-          type: 'beauty_brand_support'
+          type: 'brand_support'
         }),
       });
 
@@ -275,19 +275,19 @@ const SupportPage = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center px-4 py-2 mb-6 border border-rose-200 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 text-sm font-semibold text-rose-700">
               <Heart className="w-4 h-4 mr-2" />
-              {language === 'fr' ? 'Support Marques Beauté' : 'Beauty Brands Support'}
+              {language === 'fr' ? 'Centre d\'aide ChatSeller' : 'ChatSeller Help Center'}
               <Sparkles className="w-4 h-4 ml-2" />
             </div>
-            
+
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              {language === 'fr' ? 
-                'Centre d\'aide de ChatSeller pour les marques beauté' : 
-                'ChatSeller Help Center for Beauty Brands'}
+              {language === 'fr' ?
+                'Recruter et configurer Mia pour votre boutique' :
+                'Recruit and configure Mia for your store'}
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              {language === 'fr' ? 
-                'Assistance experte pour optimiser votre Vendeuse IA et maximiser vos conversions' :
-                'Expert assistance to optimize your AI Salesperson and maximize your conversions'}
+              {language === 'fr' ?
+                'Tout ce qu\'il faut savoir pour intégrer Mia, votre Vendeuse IA, et maximiser vos ventes conversationnelles' :
+                'Everything you need to integrate Mia, your AI Salesperson, and maximize your conversational sales'}
             </p>
             
             {/* Search Bar */}
@@ -295,9 +295,9 @@ const SupportPage = () => {
               <Search className="absolute left-4 top-2 w-5 h-5 text-gray-400" />
               <Input
                 type="text"
-                placeholder={language === 'fr' ? 
-                  'Rechercher dans la documentation (ex: "installation Shopify", "Formation Vendeuse IA"...)' :
-                  'Search the docs (e.g. "Shopify installation", "AI Salesperson training"...)'}
+                placeholder={language === 'fr' ?
+                  'Rechercher (ex: "installer Mia", "configurer la personnalité", "commandes"...)' :
+                  'Search (e.g. "install Mia", "configure personality", "orders"...)'}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-12 pr-4 py-4 text-lg rounded-2xl border-rose-200 focus:border-rose-400 focus:ring-rose-100"
@@ -317,7 +317,7 @@ const SupportPage = () => {
                 {language === 'fr' ? '< 2h' : '< 2h'}
               </div>
               <div className="text-sm text-gray-600">
-                {language === 'fr' ? 'Temps de réponse moyen pour marques beauté' : 'Average response time for beauty brands'}
+                {language === 'fr' ? 'Temps de réponse moyen' : 'Average response time'}
               </div>
             </div>
             
@@ -325,7 +325,7 @@ const SupportPage = () => {
               <Users className="w-10 h-10 text-emerald-500 mx-auto mb-3" />
               <div className="font-bold text-lg text-gray-900 mb-1">24/7</div>
               <div className="text-sm text-gray-600">
-                {language === 'fr' ? 'Support disponible pour l\'Europe' : 'Support available for Europe'}
+                {language === 'fr' ? 'Support disponible' : 'Support available'}
               </div>
             </div>
             
@@ -349,9 +349,9 @@ const SupportPage = () => {
               {language === 'fr' ? 'Questions fréquentes' : 'Frequently asked questions'}
             </h2>
             <p className="text-gray-600 mb-8">
-              {language === 'fr' ? 
-                'Réponses aux questions les plus posées par les marques beauté' : 
-                'Answers to the most asked questions by beauty brands'}
+              {language === 'fr' ?
+                'Tout ce qu\'il faut savoir pour recruter et tirer le meilleur de Mia' :
+                'Everything you need to know to recruit and get the most out of Mia'}
             </p>
             
             {/* Filtres Catégories */}
@@ -415,8 +415,8 @@ const SupportPage = () => {
                 </h3>
                 <p className="text-gray-600 text-sm">
                   {language === 'fr' ?
-                    'Support dédié aux marques beauté en Afrique' :
-                    'Dedicated support for beauty brands in Africa'}
+                    'Notre équipe répond à toutes vos questions sur Mia' :
+                    'Our team answers all your questions about Mia'}
                 </p>
               </div>
               
@@ -427,9 +427,9 @@ const SupportPage = () => {
                     {language === 'fr' ? 'Message envoyé !' : 'Message sent!'}
                   </h4>
                   <p className="text-emerald-700 text-sm mb-6">
-                    {language === 'fr' ? 
-                      'Notre équipe beauté vous répondra sous 2h pendant les heures ouvrées.' : 
-                      'Our beauty team will respond within 2h during business hours.'}
+                    {language === 'fr' ?
+                      'Notre équipe vous répondra sous 2h pendant les heures ouvrées.' :
+                      'Our team will respond within 2h during business hours.'}
                   </p>
                   <Button 
                     className="mt-4 bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700" 
@@ -475,14 +475,14 @@ const SupportPage = () => {
                     
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        {language === 'fr' ? 'Nom de votre marque beauté' : 'Your beauty brand name'}
+                        {language === 'fr' ? 'Nom de votre boutique' : 'Your store name'}
                       </label>
                       <Input
                         type="text"
                         value={contactForm.brandName}
                         onChange={(e) => setContactForm({...contactForm, brandName: e.target.value})}
                         className="rounded-xl border-gray-200 focus:border-rose-400 focus:ring-rose-100"
-                        placeholder={language === 'fr' ? 'Ex: Belle Étoile Cosmétiques' : 'Ex: Étoile Beauty'}
+                        placeholder={language === 'fr' ? 'Ex: Ahovi Cosmetics' : 'Ex: Étoile Store'}
                       />
                     </div>
                     
@@ -524,7 +524,7 @@ const SupportPage = () => {
                           {language === 'fr' ? 'Installation & Intégration' : 'Installation & Integration'}
                         </option>
                         <option value="configuration">
-                          {language === 'fr' ? 'Configuration Beauté' : 'Beauty Configuration'}
+                          {language === 'fr' ? 'Configuration de Mia' : 'Configure Mia'}
                         </option>
                         <option value="technical">
                           {language === 'fr' ? 'Problème technique' : 'Technical issue'}
@@ -547,9 +547,9 @@ const SupportPage = () => {
                         value={contactForm.subject}
                         onChange={(e) => setContactForm({...contactForm, subject: e.target.value})}
                         className="rounded-xl border-gray-200 focus:border-rose-400 focus:ring-rose-100"
-                        placeholder={language === 'fr' ? 
-                          'Ex: Installation sur Shopify pour cosmétiques' : 
-                          'Ex: Shopify installation for cosmetics'}
+                        placeholder={language === 'fr' ?
+                          'Ex: Recruter Mia sur Shopify' :
+                          'Ex: Recruit Mia on Shopify'}
                         required
                       />
                     </div>

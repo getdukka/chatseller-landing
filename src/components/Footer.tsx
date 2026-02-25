@@ -61,8 +61,8 @@ const Footer = () => {
 
             <p className="text-gray-600 text-sm mb-6 leading-relaxed">
               {language === 'fr' ?
-                "La première Vendeuse IA pour les marques beauté. Transformez les visiteurs de votre boutique en ligne en clients fidèles, 24h/24." :
-                "The first AI Salesperson for beauty brands. Turn your online store visitors into loyal customers, 24/7."
+                "Mia est la première Vendeuse IA spécialisée beauté. Recrutée par les meilleures marques du secteur de la beauté pour vendre en ligne 24h/24, sans jamais faiblir." :
+                "Mia is the first AI Salesperson specialized in beauty. Hired by leading beauty brands to sell online 24/7, without ever slowing down."
               }
             </p>
 
@@ -110,7 +110,7 @@ const Footer = () => {
           {/* BLOC 2 - Produit */}
           <div>
             <h3 className="font-bold mb-6 text-gray-900 text-lg">
-              {language === 'fr' ? 'Produit' : 'Product'}
+              {language === 'fr' ? 'A Propos de Mia' : 'About Mia'}
             </h3>
             <ul className="space-y-4">
               <li>
@@ -119,7 +119,7 @@ const Footer = () => {
                   className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group cursor-pointer"
                 >
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
-                  {language === 'fr' ? 'Comment ça marche' : 'How it works'}
+                  {language === 'fr' ? 'Comment elle travaille' : 'How she works'}
                 </button>
               </li>
               <li>
@@ -128,7 +128,7 @@ const Footer = () => {
                   className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group cursor-pointer"
                 >
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
-                  {language === 'fr' ? 'Tarifs' : 'Pricing'}
+                  {language === 'fr' ? 'Son salaire' : 'Her salary'}
                 </button>
               </li>
               <li>
@@ -139,16 +139,16 @@ const Footer = () => {
                   rel="noopener noreferrer"
                 >
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
-                  {language === 'fr' ? 'Réserver une démo' : 'Book a demo'}
+                  {language === 'fr' ? 'La voir en Action' : 'See her in Action'}
                 </a>
               </li>
               <li>
                 <a
-                  href="https://dashboard.chatseller.app/login"
+                  href="https://dashboard.chatseller.app/register"
                   className="text-sm text-gray-600 hover:text-rose-600 transition-colors duration-300 flex items-center group"
                 >
                   <div className="w-2 h-2 bg-rose-300 rounded-full mr-3 group-hover:bg-rose-500 transition-colors"></div>
-                  {language === 'fr' ? 'Se connecter' : 'Log in'}
+                  {language === 'fr' ? 'Recruter Mia' : 'Hire Mia'}
                 </a>
               </li>
             </ul>
