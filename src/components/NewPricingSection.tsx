@@ -459,7 +459,7 @@ const BeautyROICalculator = ({ language }: { language: string }) => {
                 <span className="text-emerald-700 font-bold text-lg">Profit net mensuel:</span>
                 <span className="text-2xl font-bold text-emerald-600">+{Math.round(monthlyProfit).toLocaleString()}€</span>
               </div>
-              <div className="text-emerald-600 text-sm">Après déduction du coût de ChatSeller</div>
+              <div className="text-emerald-600 text-sm">{language === 'fr' ? 'Après déduction du salaire de Mia' : "After deduction of Mia's salary"}</div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
