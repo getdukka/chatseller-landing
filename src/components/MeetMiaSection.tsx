@@ -29,7 +29,7 @@ const MeetMiaSection = () => {
       icon: <TrendingUp className="w-5 h-5 text-rose-500" />,
       label: language === 'fr' ? 'Résultats' : 'Results',
       value: language === 'fr'
-        ? '+150% de ventes en moyenne chez ses employeuses'
+        ? '+150% de ventes en moyenne chez ses employeurs'
         : '+150% average sales increase for her employers'
     }
   ];

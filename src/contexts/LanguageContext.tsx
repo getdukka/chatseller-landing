@@ -666,21 +666,21 @@ const translations: Record<Language, Translations> = {
     
     // Beauty Problem Section (NEW)
     beautyProblemTitle: 'Il n\'y a personne sur votre boutique en ligne pour conseiller vos clients',
-    beautyProblemSubtitle: 'Chaque jour, des clientes prêtes à acheter quittent votre site parce qu\'elles n\'ont pas trouvé de réponse à leur question. Voici ce qu\'elles se demandent...',
+    beautyProblemSubtitle: 'Chaque jour, des clients prêts à acheter quittent votre site parce qu\'ils n\'ont pas trouvé de réponse à leur question. Voici ce qu\'ils se demandent...',
 
     beautyFrustration1Title: '"Est-ce adapté à MA peau ?"',
     beautyFrustration1Quote: 'J\'ai la peau mixte avec des taches. Est-ce que ce sérum va marcher pour moi ou aggraver mes problèmes ?',
-    beautyFrustration1Description: 'Vos clientes ont des peaux uniques : grasses, sèches, sensibles, sujettes à l\'hyperpigmentation... Elles veulent être sûres que votre produit est fait pour ELLES avant d\'acheter.',
+    beautyFrustration1Description: 'Vos clients ont des peaux uniques : grasses, sèches, sensibles, sujettes à l\'hyperpigmentation... Ils veulent être sûrs que votre produit est fait pour EUX avant d\'acheter.',
 
     beautyFrustration2Title: '"Quelle routine choisir ?"',
     beautyFrustration2Quote: 'Je vois plein de produits mais je ne sais pas par où commencer. Dans quel ordre les appliquer ?',
-    beautyFrustration2Description: 'Face à votre catalogue, vos clientes sont perdues. Elles ont besoin d\'un guide qui leur dit exactement quoi prendre et comment l\'utiliser pour leurs besoins.',
+    beautyFrustration2Description: 'Face à votre catalogue, vos clients sont perdus. Ils ont besoin d\'un guide qui leur dit exactement quoi prendre et comment l\'utiliser pour leurs besoins.',
 
     beautyFrustration3Title: '"C\'est vraiment efficace ?"',
     beautyFrustration3Quote: 'J\'ai déjà essayé des produits similaires sans résultat. Comment je sais que celui-ci va marcher ?',
-    beautyFrustration3Description: 'Vos clientes ont été déçues avant. Elles cherchent des preuves, des explications sur les ingrédients, des témoignages. Sans ça, elles n\'osent pas acheter.',
+    beautyFrustration3Description: 'Vos clients ont été déçus avant. Ils cherchent des preuves, des explications sur les ingrédients, des témoignages. Sans ça, ils n\'osent pas acheter.',
 
-    beautyProblemConclusion: 'Vos clientes veulent acheter. Elles ont juste besoin d\'être guidées.',
+    beautyProblemConclusion: 'Vos clients veulent acheter. Ils ont juste besoin d\'être guidés.',
     beautyProblemConclusionSub: 'Dans une boutique physique, c\'est le rôle de votre vendeuse. Sur votre boutique en ligne, jusqu\'ici, ce rôle n\'existait pas. Mia change cela.',
 
     // Problem-Solution (OLD)
@@ -1344,15 +1344,15 @@ Contactez-nous avec :
 
     // VISUAL DEMO SECTION
     visualDemoTitle: 'De la question à l\'achat en quelques messages',
-    visualDemoSubtitle: 'Votre Vendeuse IA guide chaque cliente depuis sa première question jusqu\'à la confirmation de commande.',
-    visualDemoStep1Title: 'La cliente pose une question',
-    visualDemoStep1Desc: 'Sur une fiche produit, la cliente hésite et pose une question sur son type de peau. La Vendeuse IA répond immédiatement, 24h/24.',
+    visualDemoSubtitle: 'Votre Vendeuse IA guide chaque client depuis sa première question jusqu\'à la confirmation de commande.',
+    visualDemoStep1Title: 'Le client pose une question',
+    visualDemoStep1Desc: 'Sur une fiche produit, le client hésite et pose une question sur son type de peau. La Vendeuse IA répond immédiatement, 24h/24.',
     visualDemoStep2Title: 'L\'IA recommande le bon produit',
     visualDemoStep2Desc: 'En analysant le profil et les besoins, votre Vendeuse IA recommande le produit le plus adapté avec une explication claire et rassurante.',
     visualDemoStep3Title: 'La carte produit apparaît',
     visualDemoStep3Desc: 'Le produit recommandé s\'affiche directement dans le chat avec son prix, sa photo et un bouton d\'achat — sans quitter la conversation.',
     visualDemoStep4Title: 'La vente est confirmée',
-    visualDemoStep4Desc: 'La cliente achète en confiance. La Vendeuse IA confirme la commande et peut proposer des produits complémentaires pour augmenter le panier.',
+    visualDemoStep4Desc: 'Le client achète en confiance. La Vendeuse IA confirme la commande et peut proposer des produits complémentaires pour augmenter le panier.',
     visualDemoCTA: 'Essayer gratuitement',
 
     // BUSINESS PROOF SECTION
@@ -1377,7 +1377,7 @@ Contactez-nous avec :
     differentiationCol1Header: 'Chatbot classique',
     differentiationCol2Header: 'ChatSeller',
     differentiationRow1Classic: 'Répond aux questions basiques',
-    differentiationRow1ChatSeller: 'Guide la cliente jusqu\'à l\'achat',
+    differentiationRow1ChatSeller: 'Guide le client jusqu\'à l\'achat',
     differentiationRow2Classic: 'Outil de support client',
     differentiationRow2ChatSeller: 'Canal de vente conversationnel',
     differentiationRow3Classic: 'Scripts prédéfinis et rigides',

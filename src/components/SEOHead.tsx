@@ -33,7 +33,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "ChatSeller - AI Salesperson for beauty brands | +150% sales increase on average";
 
   const defaultDescription = language === 'fr' ?
-    "Intégrez une Vendeuse IA experte de vos produits sur votre boutique Shopify ou WooCommerce. Elle conseille vos clientes, recommande les bons produits et vend 24h/24. +150% de ventes en moyenne. Essai gratuit 14 jours." :
+    "Intégrez une Vendeuse IA experte de vos produits sur votre boutique Shopify ou WooCommerce. Elle conseille vos clients, recommande les bons produits et vend 24h/24. +150% de ventes en moyenne. Essai gratuit 14 jours." :
     "Integrate an AI Salesperson who knows your products on your Shopify or WooCommerce store. She advises your customers, recommends the right products and sells 24/7. +150% sales on average. 14-day free trial.";
 
   const siteUrl = "https://chatseller.app";
@@ -167,7 +167,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           "@type": "Product",
           "name": "ChatSeller",
           "description": language === 'fr' ?
-            "Vendeuse IA pour marques beauté. Elle conseille vos clientes, recommande les bons produits et vend 24h/24. +150% de ventes en moyenne." :
+            "Vendeuse IA pour marques beauté. Elle conseille vos clients, recommande les bons produits et vend 24h/24. +150% de ventes en moyenne." :
             "AI Salesperson for beauty brands. She advises your customers, recommends the right products and sells 24/7. +150% sales on average.",
           "brand": {
             "@type": "Brand",

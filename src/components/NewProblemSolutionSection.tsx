@@ -99,10 +99,10 @@ const BeforeCard = () => {
           {language === 'fr' ? 'Votre boutique sans Mia' : 'Your store without Mia'}
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">
-          {language === 'fr' ? 'Vos clientes sont seules' : 'Your customers are alone'}
+          {language === 'fr' ? 'Vos clients sont seuls' : 'Your customers are alone'}
         </h3>
         <p className="text-gray-600">
-          {language === 'fr' ? 'Pas de réponse. Pas de conseil. Elles partent.' : 'No answer. No advice. They leave.'}
+          {language === 'fr' ? 'Pas de réponse. Pas de conseil. Ils partent.' : 'No answer. No advice. They leave.'}
         </p>
       </div>
 
@@ -214,10 +214,10 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
           {language === 'fr' ? 'Votre boutique avec Mia' : 'Your store with Mia'}
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">
-          {language === 'fr' ? 'Chaque cliente accueillie et guidée' : 'Every customer welcomed and guided'}
+          {language === 'fr' ? 'Chaque client accueilli et guidé' : 'Every customer welcomed and guided'}
         </h3>
         <p className="text-gray-600">
-          {language === 'fr' ? 'Mia répond, conseille et guide vos clientes vers l\'achat' : 'Mia answers, advises and guides your customers to purchase'}
+          {language === 'fr' ? 'Mia répond, conseille et guide vos clients vers l\'achat' : 'Mia answers, advises and guides your customers to purchase'}
         </p>
       </div>
 
@@ -265,7 +265,7 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
               </button>
 
               <button
-                className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 rounded-lg font-medium text-sm flex items-center justify-center hover:from-rose-600 hover:to-pink-600 transition-all duration-200 shadow-md relative animate-pulse hover:animate-none"
+                className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-3 rounded-lg font-medium text-sm flex items-center justify-center hover:from-rose-600 hover:to-pink-600 transition-all duration-200 shadow-md relative animate-pulse hover:animate-none"
                 onClick={() => setIsChatOpen(true)}
                 style={{
                   animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite, seller-shake 3s ease-in-out infinite'
@@ -298,10 +298,10 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
           <div className="flex items-center justify-center text-emerald-700 font-semibold">
             <Sparkles className="w-5 h-5 mr-2" />
             <span>
-              {language === 'fr' ? 'Conseil instantané 24h/24' : 'Instant advice 24/7'}
+              {language === 'fr' ? 'Réponse instantanée 24h/24' : 'Instant response 24/7'}
             </span>
           </div>
-          <p className="text-xs text-emerald-600 mt-1">{language === 'fr' ? 'Vos clientes ne sont plus jamais seules' : 'Your customers are never alone'}</p>
+          <p className="text-xs text-emerald-600 mt-1">{language === 'fr' ? 'Vos clients ne sont plus jamais seuls' : 'Your customers are never alone'}</p>
         </div>
       </div>
 
@@ -309,7 +309,7 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
       <div className="mt-6 space-y-3">
         <BenefitPoint
           icon="💬"
-          text={language === 'fr' ? 'Mia accueille chaque cliente comme en boutique physique' : 'Mia welcomes every customer like in a physical store'}
+          text={language === 'fr' ? 'Mia accueille chaque client comme en boutique physique' : 'Mia welcomes every customer like in a physical store'}
         />
         <BenefitPoint
           icon="🎯"
