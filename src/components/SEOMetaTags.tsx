@@ -11,19 +11,19 @@ const SEOMetaTags = () => {
 
   const seoData = {
     fr: {
-      title: "ChatSeller - Vendeuse IA pour marques beauté | +150% de ventes en moyenne",
-      description: "Intégrez une Vendeuse IA experte de vos produits sur votre boutique Shopify ou WooCommerce. Elle conseille vos clients, recommande les bons produits et vend 24h/24. +150% de ventes en moyenne. Essai gratuit 14 jours.",
-      keywords: "Vendeuse IA, vendeuse IA beauté, chatbot e-commerce beauté, IA conversationnelle vente, Shopify IA, WooCommerce chatbot, augmenter ventes boutique, conseillère beauté IA, ChatSeller",
-      ogTitle: "ChatSeller - Votre Vendeuse IA experte beauté, disponible 24h/24",
-      ogDescription: "Intégrez une Vendeuse IA sur votre boutique en ligne. Elle conseille vos clients, recommande les bons produits et vend 24h/24. +150% de ventes en moyenne.",
+      title: "Recrutez Mia — La première Vendeuse IA pour votre boutique en ligne | ChatSeller",
+      description: "Recrutez Mia, la première Vendeuse IA formée sur vos produits beauté. Elle accueille vos clients, lève leurs doutes et finalise leurs commandes 24h/24 — sur Shopify ou WooCommerce. +150% de ventes en moyenne. Essai gratuit 14 jours.",
+      keywords: "Mia Vendeuse IA, recruter vendeuse IA, première vendeuse IA beauté, vendeuse IA boutique en ligne, ChatSeller, Shopify IA, WooCommerce chatbot, augmenter ventes beauté, vente automatique 24h/24, marques beauté Afrique",
+      ogTitle: "Mia — La première Vendeuse IA pour votre boutique en ligne",
+      ogDescription: "Votre boutique physique a ses vendeuses. Votre boutique en ligne mérite la sienne. Recrutez Mia : elle connaît vos produits, conseille vos clients et vend 24h/24.",
       author: "ChatSeller by Dukka"
     },
     en: {
-      title: "ChatSeller - AI Salesperson for beauty brands | +150% sales increase on average",
-      description: "Integrate an AI Salesperson who knows your products on your Shopify or WooCommerce store. She advises your customers, recommends the right products and sells 24/7. +150% sales on average. 14-day free trial.",
-      keywords: "AI Salesperson, AI beauty salesperson, beauty e-commerce chatbot, conversational AI sales, Shopify AI, WooCommerce chatbot, increase store sales, AI beauty advisor, ChatSeller",
-      ogTitle: "ChatSeller - Your expert AI beauty Salesperson, available 24/7",
-      ogDescription: "Integrate an AI Salesperson on your online store. She advises your customers, recommends the right products and sells 24/7. +150% sales on average.",
+      title: "Hire Mia — The first AI Salesperson for your online store | ChatSeller",
+      description: "Hire Mia, the first AI Salesperson trained on your beauty products. She welcomes your customers, removes their doubts and closes their orders 24/7 — on Shopify or WooCommerce. +150% sales on average. 14-day free trial.",
+      keywords: "Mia AI Salesperson, hire AI salesperson, first AI salesperson beauty, AI salesperson online store, ChatSeller, Shopify AI, WooCommerce chatbot, increase beauty sales, automatic selling 24/7, beauty brands Africa",
+      ogTitle: "Mia — The first AI Salesperson for your online store",
+      ogDescription: "Your physical store has its salespeople. Your online store deserves one too. Hire Mia: she knows your products, advises your customers and sells 24/7.",
       author: "ChatSeller by Dukka"
     }
   };
@@ -35,6 +35,9 @@ const SEOMetaTags = () => {
     "@type": "Organization",
     "name": "ChatSeller",
     "alternateName": "ChatSeller by Dukka",
+    "description": language === 'fr'
+      ? "ChatSeller est l'agence qui recrute Mia pour votre boutique en ligne. Nous formons et déployons des Vendeuses IA spécialisées beauté pour les marques e-commerce."
+      : "ChatSeller is the agency that recruits Mia for your online store. We train and deploy AI Salespeople specialized in beauty for e-commerce brands.",
     "url": baseUrl,
     "logo": `${baseUrl}/logo-chatseller.png`,
     "sameAs": [
@@ -59,13 +62,16 @@ const SEOMetaTags = () => {
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "ChatSeller",
-    "description": currentSEO.description,
+    "name": "Mia by ChatSeller",
+    "description": language === 'fr'
+      ? "Mia est la première Vendeuse IA pour boutiques en ligne, spécialisée beauté. Formée sur vos produits, elle accueille vos clients, lève leurs doutes et finalise leurs commandes 24h/24."
+      : "Mia is the first AI Salesperson for online stores, specialized in beauty. Trained on your products, she welcomes your customers, removes their doubts and closes their orders 24/7.",
     "url": baseUrl,
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
     "offers": {
       "@type": "Offer",
+      "name": language === 'fr' ? "Mia Découverte" : "Mia Discovery",
       "price": "45",
       "priceCurrency": "EUR",
       "priceSpecification": {
@@ -81,15 +87,25 @@ const SEOMetaTags = () => {
       "reviewCount": "47",
       "bestRating": "5"
     },
-    "featureList": [
-      "AI Salesperson",
-      "Beauty Product Expertise",
-      "Shopify Integration",
-      "WooCommerce Integration",
-      "24/7 Automated Sales",
-      "Conversion Analytics",
-      "Multi-language Support"
-    ]
+    "featureList": language === 'fr'
+      ? [
+          "Vendeuse IA formée sur vos produits",
+          "Accueil et conseil client 24h/24",
+          "Recommandations produits personnalisées",
+          "Intégration Shopify native",
+          "Intégration WooCommerce native",
+          "Suivi des conversions en temps réel",
+          "Support multilingue FR/EN"
+        ]
+      : [
+          "AI Salesperson trained on your products",
+          "Customer welcome and advice 24/7",
+          "Personalized product recommendations",
+          "Native Shopify integration",
+          "Native WooCommerce integration",
+          "Real-time conversion tracking",
+          "Multilingual support FR/EN"
+        ]
   };
 
   const faqSchema = {
@@ -98,26 +114,38 @@ const SEOMetaTags = () => {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": language === 'fr' ? "Est-ce compliqué d'installer ChatSeller ?" : "Is ChatSeller complicated to install?",
+        "name": language === 'fr'
+          ? "Comment Mia apprend-elle à connaître mes produits ?"
+          : "How does Mia learn about my products?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": language === 'fr' ? "Non, l'installation prend seulement 2 minutes avec nos plugins natifs pour Shopify et WooCommerce." : "No, installation takes only 2 minutes with our native plugins for Shopify and WooCommerce."
+          "text": language === 'fr'
+            ? "Mia est formée directement sur votre catalogue Shopify ou WooCommerce, votre base de connaissances et vos fiches produits. Elle maîtrise vos produits, vos prix et vos argumentaires en quelques minutes."
+            : "Mia is trained directly on your Shopify or WooCommerce catalog, your knowledge base and your product pages. She masters your products, prices and selling points in just a few minutes."
         }
       },
       {
         "@type": "Question",
-        "name": language === 'fr' ? "Combien coûte ChatSeller ?" : "How much does ChatSeller cost?",
+        "name": language === 'fr'
+          ? "Quelle est la différence entre Mia et un chatbot classique ?"
+          : "What is the difference between Mia and a classic chatbot?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": language === 'fr' ? "À partir de 45€/mois avec 14 jours d'essai gratuit. Aucun engagement, annulation en 1 clic." : "Starting from €45/month with 14 days free trial. No commitment, cancel in 1 click."
+          "text": language === 'fr'
+            ? "Mia n'est pas un chatbot de support : c'est une Vendeuse. Elle ne se contente pas de répondre aux questions — elle conseille, rassure, recommande des produits et guide le client jusqu'à l'achat, exactement comme une vendeuse en boutique physique."
+            : "Mia is not a support chatbot: she is a Salesperson. She doesn't just answer questions — she advises, reassures, recommends products and guides the customer through to purchase, exactly like a salesperson in a physical store."
         }
       },
       {
         "@type": "Question",
-        "name": language === 'fr' ? "Quels résultats puis-je espérer ?" : "What results can I expect?",
+        "name": language === 'fr'
+          ? "Combien coûte le recrutement de Mia ?"
+          : "How much does hiring Mia cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": language === 'fr' ? "Nos clients observent en moyenne +150% de ventes supplémentaires grâce à leur Vendeuse IA." : "Our clients observe on average +150% additional sales thanks to their AI Salesperson."
+          "text": language === 'fr'
+            ? "Mia est disponible dès 45€/mois avec 14 jours d'essai gratuit. Aucun engagement, annulation en 1 clic. Pour les marques à fort volume, les plans Mia Pro (145€) et Mia Premium (299€) offrent plus de capacités."
+            : "Mia is available from €45/month with a 14-day free trial. No commitment, cancel in 1 click. For high-volume brands, Mia Pro (€145) and Mia Premium (€299) plans offer more capacity."
         }
       }
     ]
