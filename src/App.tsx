@@ -19,6 +19,7 @@ import Support from "./pages/Support";
 import About from "./pages/About";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
+import Legal from "./pages/Legal";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -76,6 +77,13 @@ const AppRoutes = () => {
           description: "Centre d'aide ChatSeller. FAQ, guides d'installation, support technique. Réponses à toutes vos questions sur votre Vendeuse IA.",
           keywords: "support ChatSeller, FAQ, aide, installation"
         };
+      case '/legal':
+        return {
+          title: "Mentions Légales - ChatSeller | Dukka SARL",
+          description: "Mentions légales du site chatseller.app. Éditeur, hébergement, propriété intellectuelle et données personnelles.",
+          keywords: "mentions légales ChatSeller, Dukka SARL",
+          noindex: true
+        };
       default:
         return {};
     }
@@ -91,6 +99,7 @@ const AppRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/legal" element={<Legal />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {/*<ExitIntentPopup isEnabled={location.pathname === '/'} />*/}

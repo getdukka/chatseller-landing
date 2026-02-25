@@ -342,9 +342,9 @@ const getBeautyFeaturesData = (language: 'fr' | 'en') => [
     },
     features: [
       language === 'fr' ? 'Elle pose les bonnes questions avant de conseiller' : 'She asks the right questions before advising',
-      language === 'fr' ? 'Analyse comportement d\'achat' : 'Purchase behavior analysis',
-      language === 'fr' ? 'Routines beauté sur-mesure' : 'Custom beauty routines',
-      language === 'fr' ? 'Suivi évolution des besoins' : 'Needs evolution tracking'
+      language === 'fr' ? 'Analyse le comportement d\'achat' : 'Analyzes purchase behavior',
+      language === 'fr' ? 'Propose des routines sur-mesure' : 'Suggests tailor-made routines',
+      language === 'fr' ? 'Suit l\'évolution des besoins' : 'Follows evolving needs'
     ],
     metric: language === 'fr' ? '+73% satisfaction client' : '+73% customer satisfaction',
     visual: <PersonalizedAdviceVisual language={language} />,

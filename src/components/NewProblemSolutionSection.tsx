@@ -214,10 +214,10 @@ const AfterCard = ({ isChatOpen, setIsChatOpen }: { isChatOpen: boolean; setIsCh
           {language === 'fr' ? 'Votre boutique avec Mia' : 'Your store with Mia'}
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">
-          {language === 'fr' ? 'Chaque client accueilli et guidé' : 'Every customer welcomed and guided'}
+          {language === 'fr' ? 'Chaque client est accueilli et guidé' : 'Every customer is welcomed and guided'}
         </h3>
         <p className="text-gray-600">
-          {language === 'fr' ? 'Mia répond, conseille et guide vos clients vers l\'achat' : 'Mia answers, advises and guides your customers to purchase'}
+          {language === 'fr' ? 'Mia répond, conseille et guide vos clients jusqu\'à l\'achat' : 'Mia answers, advises and guides your customers to purchase'}
         </p>
       </div>
 

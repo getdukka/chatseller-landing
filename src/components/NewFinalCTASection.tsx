@@ -37,8 +37,8 @@ const NewFinalCTASection = () => {
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed animate-fade-in [animation-delay:400ms]">
             {language === 'fr' ?
-              'Pendant que vous vous concentrez sur votre marque, Mia accueille vos clients, répond à leurs questions et finalise leurs commandes. Tous les jours. À toute heure.' :
-              'While you focus on your brand, Mia welcomes your customers, answers their questions and finalizes their orders. Every day. At any hour.'}
+              'Pendant que vous vous concentrez sur votre marque, Mia accueillera vos clients en ligne, répondra à leurs questions et finalisera leurs commandes. Tous les jours. À toute heure.' :
+              'While you focus on your brand, Mia will welcome your online customers, answer their questions, and close their orders. Every day. At any hour.'}
           </p>
 
           {/* Main CTA Buttons */}
@@ -49,7 +49,7 @@ const NewFinalCTASection = () => {
               asChild
             >
               <a href="https://dashboard.chatseller.app/register">
-                {language === 'fr' ? 'Recruter Mia — 14 jours gratuits' : 'Hire Mia — 14 days free'}
+                {language === 'fr' ? 'Tester Mia pendant 14 jours' : 'Try Mia free for 14 days'}
                 <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>

@@ -47,7 +47,7 @@ const NewFAQSection = () => {
         <div className="text-center max-w-4xl mx-auto mb-20">
           <div className="inline-flex items-center px-6 py-3 mb-8 border border-rose-200 rounded-full bg-gradient-to-r from-rose-50 to-pink-50 text-sm font-semibold text-rose-700 animate-fade-in">
             <HelpCircle className="w-4 h-4 mr-2" />
-            {language === 'fr' ? 'Questions des marques beauté' : 'Beauty brands questions'}
+            {language === 'fr' ? 'Questions fréquentes des marques' : 'Frequently Asked Questions from Brands'}
             <Heart className="w-4 h-4 ml-2" />
           </div>
           
@@ -59,8 +59,8 @@ const NewFAQSection = () => {
 
           <p className="text-xl text-gray-600 animate-fade-in [animation-delay:400ms]">
             {language === 'fr' ?
-              'Découvrez comment Mia accompagne vos clients et ce qu\'elle peut faire pour votre boutique en ligne.' :
-              'Discover how Mia supports your customers and what she can do for your online store.'}
+              'Découvrez les questions que les marques comme la vôtre posent le plus souvent sur Mia.' :
+              'Discover the questions brands like yours most often ask about Mia.'}
           </p>
         </div>
 
@@ -212,7 +212,7 @@ const BeautyContactCTA = ({ language }: { language: string }) => {
           
           <p className="text-gray-700 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
             {language === 'fr' ? 
-              'Notre équipe est là pour vous accompagner. Nous connaissons les spécificités de votre secteur et vous aidons à tirer le meilleur de Mia.' :
+              'Notre équipe est là pour y répondre. Nous connaissons les spécificités de votre secteur et vous aidons à tirer le meilleur de Mia.' :
               'Our team is here to support you. We know the specifics of your industry and help you get the best out of Mia.'}
           </p>
           
@@ -399,8 +399,8 @@ const getBeautyFAQData = (language: 'fr' | 'en') => [
   },
   {
     question: language === 'fr' ?
-      'Est-ce que ça fonctionne sur WhatsApp ?' :
-      'Does it work on WhatsApp?',
+      'Mia peut-elle aussi vendre sur WhatsApp ?' :
+      'Can Mia also sell on WhatsApp?',
     answer: language === 'fr' ?
       '<strong>Pas encore, mais c\'est notre priorité !</strong> Mia sera bientôt disponible sur WhatsApp. En la recrutant aujourd\'hui, vous serez parmi les premiers à y avoir accès dès le lancement. Pour l\'instant, Mia accueille vos clients directement sur votre boutique en ligne, accessible 24h/24.' :
       '<strong>Not yet, but it\'s our priority!</strong> Mia will soon be available on WhatsApp. By hiring her today, you will be among the first to have access when it launches. For now, Mia welcomes your customers directly on your online store, accessible 24/7.',
@@ -424,7 +424,7 @@ const getBeautyFAQData = (language: 'fr' | 'en') => [
       'Comment je vous contacte si j\'ai besoin d\'aide ?' :
       'How do I contact you if I need help?',
     answer: language === 'fr' ?
-      'Notre équipe est disponible par <strong>email</strong> (<a href="mailto:support@chatseller.app" class="text-rose-600 font-semibold hover:underline">support@chatseller.app</a>) et par <strong>WhatsApp</strong> (<a href="https://wa.me/221767826804" class="text-rose-600 font-semibold hover:underline">+221 76 782 68 04</a>). Nous répondons en français et en anglais, généralement sous 24h. Les marques avec un plan Pro ou Premium bénéficient d\'un support prioritaire avec des temps de réponse encore plus rapides.' :
+      'Notre équipe est disponible par <strong>email</strong> (<a href="mailto:support@chatseller.app" class="text-rose-600 font-semibold hover:underline">support@chatseller.app</a>) et par <strong>WhatsApp</strong> (<a href="https://wa.me/221767826804" class="text-rose-600 font-semibold hover:underline">+221 76 782 68 04</a>). Nous répondons en français et en anglais, généralement sous 24h. Les marques qui ont recruté <strong>Mia Pro</strong> ou <strong>Mia Premium</strong> bénéficient d\'un support prioritaire avec des temps de réponse encore plus rapides.' :
       'Our team is available by <strong>email</strong> (<a href="mailto:support@chatseller.app" class="text-rose-600 font-semibold hover:underline">support@chatseller.app</a>) and by <strong>WhatsApp</strong> (<a href="https://wa.me/221767826804" class="text-rose-600 font-semibold hover:underline">+221 76 782 68 04</a>). We respond in French and English, generally within 24h. Brands with a Pro or Premium plan benefit from priority support with even faster response times.',
     icon: <Phone className="w-5 h-5" />,
     category: language === 'fr' ? 'Support' : 'Support',

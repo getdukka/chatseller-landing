@@ -476,13 +476,13 @@ const Terms = () => {
                     <div className="flex items-center mb-6">
                       <Shield className="w-8 h-8 text-purple-600 mr-4" />
                       <h3 className="text-2xl font-bold text-purple-900">
-                        {language === 'fr' ? "Garantie Beauté" : "Beauty Guarantee"}
+                        {language === 'fr' ? "Garantie" : "Guarantee"}
                       </h3>
                     </div>
                     <div className="space-y-4 text-purple-800">
                       <div className="text-center py-4">
                         <div className="text-4xl font-bold text-purple-600">30</div>
-                        <div className="text-purple-700">{language === 'fr' ? "jours pour annuler, sans engagement" : "days to cancel, no commitment"}</div>
+                        <div className="text-purple-700">{language === 'fr' ? "jours pour licencier Mia, sans engagement" : "days to fire Mia, no commitment"}</div>
                       </div>
                       <div className="space-y-3">
                         <div className="flex items-center">
