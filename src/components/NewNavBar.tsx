@@ -91,8 +91,8 @@ const NewNavbar = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
         isScrolled 
-          ? 'py-2 sm:py-3 bg-white/95 backdrop-blur-md shadow-lg border-b border-rose-100/50' 
-          : 'py-4 sm:py-6 bg-gradient-to-r from-rose-50/80 via-pink-50/80 to-purple-50/80 backdrop-blur-sm'
+          ? 'py-2 sm:py-3 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100'
+          : 'py-4 sm:py-6 bg-white/80 backdrop-blur-sm border-b border-gray-100/50'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex items-center justify-between">
@@ -142,7 +142,7 @@ const NewNavbar = () => {
           <div className="flex items-center space-x-2 2xl:space-x-3">
             <Button
               variant="ghost"
-              className={`rounded-full hover:bg-rose-50 text-gray-700 hover:text-rose-600 transition-all duration-200 whitespace-nowrap ${
+              className={`rounded-full text-gray-700 transition-all duration-200 whitespace-nowrap ${
                 isScrolled ? 'text-xs px-2 py-1.5' : 'text-sm px-3 py-2 2xl:px-4 2xl:py-2'
               }`}
               asChild
@@ -153,7 +153,7 @@ const NewNavbar = () => {
             </Button>
 
             <Button
-              className={`group relative overflow-hidden rounded-full bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap ${
+              style={{background: 'linear-gradient(135deg, #ea4242, #8c3dda)'}} className={`group relative overflow-hidden rounded-full shadow-md hover:shadow-lg transition-all duration-300 whitespace-nowrap ${
                 isScrolled ? 'text-xs px-3 py-2' : 'text-sm px-4 py-2 2xl:px-6 2xl:py-3'
               }`}
               asChild
@@ -203,7 +203,8 @@ const NewNavbar = () => {
 
           {/* CTAs pour tablette */}
           <Button
-            className={`group relative overflow-hidden rounded-full bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300 ${
+            style={{background: 'linear-gradient(135deg, #ea4242, #8c3dda)'}}
+            className={`group relative overflow-hidden rounded-full shadow-md hover:shadow-lg transition-all duration-300 ${
               isScrolled ? 'text-xs px-3 py-2' : 'text-sm px-4 py-2'
             }`}
             asChild
@@ -219,7 +220,7 @@ const NewNavbar = () => {
         <div className="flex items-center lg:hidden">
           <LanguageToggle />
           <button
-            className="ml-2 p-2 rounded-lg hover:bg-rose-50 transition-colors duration-200"
+            className="ml-2 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -238,7 +239,7 @@ const NewNavbar = () => {
           ? 'opacity-100 translate-y-0 pointer-events-auto' 
           : 'opacity-0 -translate-y-4 pointer-events-none'
       }`}>
-        <div className="bg-white/95 backdrop-blur-md shadow-xl border-t border-rose-100">
+        <div className="bg-white/95 backdrop-blur-md shadow-xl border-t border-gray-100">
           <nav className="container mx-auto px-4 py-6 flex flex-col space-y-4">
             
             {/* Navigation mobile */}
@@ -246,7 +247,7 @@ const NewNavbar = () => {
               <button
                 key={index}
                 onClick={() => scrollToSection(item.sectionId)}
-                className="text-base font-medium text-gray-700 py-3 border-b border-rose-100 transition-colors hover:text-rose-600 flex items-center justify-between group"
+                className="text-base font-medium text-gray-700 py-3 border-b border-gray-100 transition-colors flex items-center justify-between group"
               >
                 <div className="flex items-center">
                   <span>{item.label}</span>
@@ -266,7 +267,7 @@ const NewNavbar = () => {
             <div className="flex flex-col space-y-3 mt-4">
               <Button
                 variant="ghost"
-                className="justify-start text-base py-3 hover:bg-rose-50 rounded-xl"
+                className="justify-start text-base py-3 hover:bg-gray-50 rounded-xl"
                 onClick={() => setMobileMenuOpen(false)}
                 asChild
               >
@@ -276,7 +277,7 @@ const NewNavbar = () => {
               </Button>
 
               <Button
-                className="w-full text-base py-4 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 shadow-lg"
+                className="w-full text-base py-4 rounded-2xl shadow-lg" style={{background: 'linear-gradient(135deg, #ea4242, #8c3dda)'}}
                 onClick={() => setMobileMenuOpen(false)}
                 asChild
               >
@@ -287,7 +288,7 @@ const NewNavbar = () => {
             </div>
 
             {/* Info mobile */}
-            <div className="mt-6 pt-4 border-t border-rose-100 text-center">
+            <div className="mt-6 pt-4 border-t border-gray-100 text-center">
               <div className="text-xs text-gray-500 mb-2">
                 {language === 'fr' ?
                   'Spécialisé pour les marques beauté' :
@@ -300,7 +301,7 @@ const NewNavbar = () => {
                 </span>
                 <span className="flex items-center">
                   <Star className="w-3 h-3 mr-1 text-yellow-500" />
-                  {language === 'fr' ? 'Déjà recrutée par +10 marques' : 'Already hired by 10+ brands'}
+                  {language === 'fr' ? 'Déjà recrutée par +60 marques' : 'Already hired by 60+ brands'}
                 </span>
               </div>
             </div>

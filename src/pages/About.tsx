@@ -455,8 +455,8 @@ const About = () => {
                   <CheckCircle className="w-4 h-4 text-emerald-500 mr-2" />
                   <span className="font-medium">
                     {language === 'fr' ?
-                      "+10 marques beauté ont déjà recruté Mia" :
-                      "10+ beauty brands have already hired Mia"
+                      "+60 marques beauté ont déjà recruté Mia" :
+                      "60+ beauty brands have already hired Mia"
                     }
                   </span>
                 </div>

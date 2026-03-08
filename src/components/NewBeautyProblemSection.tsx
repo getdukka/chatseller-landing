@@ -1,165 +1,191 @@
 // src/components/NewBeautyProblemSection.tsx
-import { useState } from 'react';
-import { HelpCircle, List, ShieldQuestion, MessageCircle, AlertCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+
+const problems = [
+  {
+    num: '01',
+    accentFrom: '#ea4242',
+    accentTo: '#f97316',
+    emoji: '🤔',
+    titleFr: 'Vos clients ont des questions auxquelles personne ne répond',
+    titleEn: 'Your customers have questions no one answers',
+    quoteFr: '"Ce sérum convient aux peaux sensibles ?"',
+    quoteEn: '"Is this serum suitable for sensitive skin?"',
+    descFr: 'Chaque question sans réponse est une vente perdue. En boutique physique, une vendeuse rassure. En ligne, le client quitte la page.',
+    descEn: 'Every unanswered question is a lost sale. In a physical store, a salesperson reassures. Online, the customer leaves the page.',
+  },
+  {
+    num: '02',
+    accentFrom: '#8c3dda',
+    accentTo: '#ea4242',
+    emoji: '📋',
+    titleFr: 'Vos produits ne peuvent pas parler d\'eux-mêmes',
+    titleEn: 'Your products can\'t speak for themselves',
+    quoteFr: '"Ça marche vraiment pour les cheveux crépus 4C ?"',
+    quoteEn: '"Does this actually work for 4C natural hair?"',
+    descFr: 'Une fiche produit ne peut pas adapter son discours à chaque cliente. Résultat : les doutes persistent et l\'achat n\'a pas lieu.',
+    descEn: 'A product page can\'t tailor its pitch to each customer. Result: doubts persist and no purchase happens.',
+  },
+  {
+    num: '03',
+    accentFrom: '#f59e0b',
+    accentTo: '#ea4242',
+    emoji: '🧐',
+    titleFr: 'Vous ne pouvez pas être disponible 24h/24',
+    titleEn: 'You can\'t be available 24/7',
+    quoteFr: '"Mon teint est mixte, vous me conseillez quoi ?"',
+    quoteEn: '"I have combination skin, what do you recommend?"',
+    descFr: 'WhatsApp ne scale pas. Embaucher une conseillère coûte cher. Et la nuit, les paniers sont abandonnés sans jamais être récupérés.',
+    descEn: 'WhatsApp doesn\'t scale. Hiring an advisor is expensive. And at night, carts are abandoned and never recovered.',
+  },
+];
 
 const NewBeautyProblemSection = () => {
   const { t, language } = useLanguage();
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
-  const customerQuestions = [
-    {
-      icon: HelpCircle,
-      iconColor: 'text-rose-400',
-      iconBg: 'bg-gradient-to-br from-rose-500/20 to-pink-500/10',
-      accentColor: 'from-rose-500 to-pink-500',
-      glowColor: 'shadow-rose-500/50',
-      title: t('beautyFrustration1Title'),
-      quote: t('beautyFrustration1Quote'),
-      description: t('beautyFrustration1Description'),
-      emoji: '🤔'
-    },
-    {
-      icon: List,
-      iconColor: 'text-purple-400',
-      iconBg: 'bg-gradient-to-br from-purple-500/20 to-violet-500/10',
-      accentColor: 'from-purple-500 to-violet-500',
-      glowColor: 'shadow-purple-500/50',
-      title: t('beautyFrustration2Title'),
-      quote: t('beautyFrustration2Quote'),
-      description: t('beautyFrustration2Description'),
-      emoji: '📋'
-    },
-    {
-      icon: ShieldQuestion,
-      iconColor: 'text-amber-400',
-      iconBg: 'bg-gradient-to-br from-amber-500/20 to-orange-500/10',
-      accentColor: 'from-amber-500 to-orange-500',
-      glowColor: 'shadow-amber-500/50',
-      title: t('beautyFrustration3Title'),
-      quote: t('beautyFrustration3Quote'),
-      description: t('beautyFrustration3Description'),
-      emoji: '🧐'
-    }
-  ];
 
   return (
-    <section id="problem" className="relative py-20 md:py-24 lg:py-32 overflow-hidden bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+    <section
+      id="problem"
+      className="relative py-20 md:py-28 overflow-hidden"
+      style={{ background: 'linear-gradient(160deg, #0e0e14 0%, #15101e 50%, #0e0e14 100%)' }}
+    >
+      {/* Subtle background grain */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.035]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '128px 128px',
+        }}
+      />
 
-      {/* Background effects - Premium dark theme */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-rose-900/20 via-transparent to-transparent" />
-      <div className="absolute top-20 left-10 w-96 h-96 bg-rose-500/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-pink-500/5 to-purple-500/5 rounded-full blur-3xl" />
+      {/* Accent glow top-left */}
+      <div
+        className="pointer-events-none absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full"
+        style={{ background: 'radial-gradient(circle, rgba(234,66,66,0.12) 0%, transparent 70%)' }}
+      />
+      {/* Accent glow bottom-right */}
+      <div
+        className="pointer-events-none absolute -bottom-32 -right-32 w-[480px] h-[480px] rounded-full"
+        style={{ background: 'radial-gradient(circle, rgba(140,61,218,0.12) 0%, transparent 70%)' }}
+      />
 
-      <div className="container px-6 md:px-12 mx-auto relative z-10">
+      <div className="relative z-10 container px-5 md:px-12 mx-auto">
 
-        {/* En-tête de section avec badge */}
-        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14 md:mb-20">
+          <span
+            className="inline-block text-xs font-bold uppercase tracking-widest mb-4 px-4 py-1.5 rounded-full"
+            style={{
+              background: 'rgba(234,66,66,0.12)',
+              color: '#ea4242',
+              border: '1px solid rgba(234,66,66,0.25)',
+            }}
+          >
+            {language === 'fr' ? 'Le problème' : 'The problem'}
+          </span>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in [animation-delay:200ms]">
-            {t('beautyProblemTitle')}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
+            {language === 'fr'
+              ? <>{t('beautyProblemTitle')}</>
+              : <>{t('beautyProblemTitle')}</>
+            }
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed animate-fade-in [animation-delay:400ms]">
+
+          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
             {t('beautyProblemSubtitle')}
           </p>
         </div>
 
-        {/* Les 3 questions clients - 3 colonnes sur desktop, empilées sur mobile */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16 md:mb-20 max-w-7xl mx-auto">
-          {customerQuestions.map((question, index) => (
+        {/* Problems grid */}
+        <div className="grid md:grid-cols-3 gap-5 lg:gap-6 max-w-6xl mx-auto mb-14 md:mb-16">
+          {problems.map((p) => (
             <div
-              key={index}
-              className="group relative bg-white/5 backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:bg-white/10 animate-fade-in"
-              style={{animationDelay: `${600 + index * 200}ms`}}
-              onMouseEnter={() => setHoveredCard(index)}
-              onMouseLeave={() => setHoveredCard(null)}
+              key={p.num}
+              className="relative flex flex-col rounded-2xl overflow-hidden"
+              style={{
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.08)',
+              }}
             >
-              {/* Glow effect on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-r ${question.accentColor} opacity-0 group-hover:opacity-10 rounded-2xl sm:rounded-3xl transition-opacity duration-500 blur-xl`}></div>
+              {/* Top accent bar */}
+              <div
+                className="h-[3px] w-full flex-shrink-0"
+                style={{ background: `linear-gradient(90deg, ${p.accentFrom}, ${p.accentTo})` }}
+              />
 
-              {/* Content wrapper */}
-              <div className="relative z-10">
-                {/* Header avec icône et emoji */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 ${question.iconBg} rounded-2xl backdrop-blur-sm border border-white/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 ${hoveredCard === index ? `shadow-2xl ${question.glowColor}` : 'shadow-lg'}`}>
-                    <question.icon className={`w-7 h-7 sm:w-8 sm:h-8 ${question.iconColor}`} />
-                  </div>
-                  <span className="text-3xl sm:text-4xl group-hover:scale-125 transition-transform duration-300">
-                    {question.emoji}
+              <div className="flex flex-col flex-1 p-6 sm:p-7">
+                {/* Number + emoji */}
+                <div className="flex items-start justify-between mb-5">
+                  <span
+                    className="text-4xl font-black leading-none"
+                    style={{
+                      background: `linear-gradient(135deg, ${p.accentFrom}, ${p.accentTo})`,
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}
+                  >
+                    {p.num}
                   </span>
+                  <span className="text-3xl">{p.emoji}</span>
                 </div>
 
-                {/* Titre avec gradient */}
-                <h3 className={`text-xl sm:text-2xl font-bold mb-4 bg-gradient-to-r ${question.accentColor} bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 origin-left`}>
-                  {question.title}
+                {/* Title */}
+                <h3 className="text-base sm:text-lg font-bold text-white mb-4 leading-snug">
+                  {language === 'fr' ? p.titleFr : p.titleEn}
                 </h3>
 
-                {/* Citation avec style chat bubble */}
-                <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border-l-4 border-gradient rounded-2xl p-4 sm:p-5 mb-5 group-hover:bg-white/15 transition-all duration-300" style={{borderImageSlice: 1, borderImageSource: `linear-gradient(to bottom, var(--tw-gradient-stops))`}}>
-                  <div className={`absolute -left-1 top-0 bottom-0 w-1 bg-gradient-to-b ${question.accentColor} rounded-full`}></div>
-                  <div className="flex items-start space-x-3">
-                    <MessageCircle className={`w-5 h-5 ${question.iconColor} flex-shrink-0 mt-0.5`} />
-                    <p className="text-sm sm:text-base font-semibold text-white italic leading-relaxed">
-                      "{question.quote}"
-                    </p>
-                  </div>
+                {/* Customer quote */}
+                <div
+                  className="rounded-xl p-4 mb-4 flex-shrink-0"
+                  style={{
+                    background: 'rgba(255,255,255,0.05)',
+                    borderLeft: `3px solid ${p.accentFrom}`,
+                  }}
+                >
+                  <p className="text-sm text-slate-300 italic leading-relaxed">
+                    {language === 'fr' ? p.quoteFr : p.quoteEn}
+                  </p>
                 </div>
 
                 {/* Description */}
-                <p className="text-sm sm:text-base text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                  {question.description}
+                <p className="text-sm text-slate-400 leading-relaxed flex-1">
+                  {language === 'fr' ? p.descFr : p.descEn}
                 </p>
-
-                {/* Ligne décorative animée */}
-                <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${question.accentColor} rounded-full transition-all duration-500 ${hoveredCard === index ? 'w-full' : 'w-0'}`}></div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Conclusion du problème - Design premium */}
-        <div className="max-w-5xl mx-auto animate-fade-in [animation-delay:1400ms]">
-          <div className="relative bg-gradient-to-br from-rose-600 via-pink-600 to-purple-700 rounded-3xl p-8 sm:p-10 md:p-14 shadow-2xl text-white overflow-hidden group hover:shadow-rose-500/50 transition-all duration-500">
+        {/* Conclusion block */}
+        <div className="max-w-4xl mx-auto">
+          <div
+            className="rounded-2xl p-8 sm:p-10 md:p-12 relative overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, #ea4242 0%, #8c3dda 100%)',
+            }}
+          >
+            {/* Decorative circle */}
+            <div
+              className="pointer-events-none absolute -top-16 -right-16 w-64 h-64 rounded-full"
+              style={{ background: 'rgba(255,255,255,0.06)' }}
+            />
+            <div
+              className="pointer-events-none absolute -bottom-10 -left-10 w-40 h-40 rounded-full"
+              style={{ background: 'rgba(255,255,255,0.06)' }}
+            />
 
-            {/* Animated background patterns */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
-              <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-purple-400/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-            </div>
-
-            {/* Icônes flottantes décoratives */}
-            <div className="absolute top-6 right-6 sm:top-8 sm:right-8 w-20 h-20 sm:w-24 sm:h-24 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-              <MessageCircle className="w-10 h-10 sm:w-12 sm:h-12 text-white/80" />
-            </div>
-
-            {/* Petites icônes décoratives */}
-            <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 flex space-x-2">
-              <div className="w-3 h-3 bg-white/40 rounded-full animate-bounce"></div>
-              <div className="w-3 h-3 bg-white/40 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-              <div className="w-3 h-3 bg-white/40 rounded-full animate-bounce" style={{animationDelay: '0.4s'}}></div>
-            </div>
-
-            <div className="relative z-10 max-w-3xl">
-              {/* Icon badge */}
-              <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-                <AlertCircle className="w-5 h-5 text-white" />
-                <span className="text-sm font-bold text-white">{language === 'fr' ? 'La réalité' : 'The reality'}</span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-5 sm:mb-6 leading-tight group-hover:scale-105 transition-transform duration-300 origin-left">
+            <div className="relative z-10 text-center sm:text-left max-w-2xl">
+              <p className="text-xs font-bold uppercase tracking-widest text-white/60 mb-3">
+                {language === 'fr' ? 'La réalité' : 'The reality'}
+              </p>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
                 {t('beautyProblemConclusion')}
               </h3>
-
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-relaxed opacity-95 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-base sm:text-lg text-white/85 leading-relaxed">
                 {t('beautyProblemConclusionSub')}
               </p>
-
-              {/* Ligne décorative animée */}
-              <div className="mt-8 h-1.5 bg-white/30 rounded-full overflow-hidden">
-                <div className="h-full bg-white rounded-full animate-pulse w-3/4"></div>
-              </div>
             </div>
           </div>
         </div>

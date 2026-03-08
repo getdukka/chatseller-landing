@@ -318,11 +318,11 @@ const InstallationVisual = ({ language }: { language: string }) => (
       {/* Plateformes avec vrais logos */}
       <div className="grid grid-cols-2 gap-3 sm:gap-4">
         <div className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 border border-blue-200 hover:shadow-md transition-shadow cursor-pointer">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-            <img 
-              src="/images/logos/shopify.svg" 
-              alt="Shopify Logo" 
-              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
+          <div className="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center mb-2 sm:mb-3 mx-auto">
+            <img
+              src="/images/logos/shopify.svg"
+              alt="Shopify Logo"
+              className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 object-contain"
             />
           </div>
           <div className="text-center">
@@ -334,11 +334,11 @@ const InstallationVisual = ({ language }: { language: string }) => (
         </div>
         
         <div className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 border border-blue-200 hover:shadow-md transition-shadow cursor-pointer">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center mb-2 sm:mb-3 mx-auto">
-            <img 
-              src="/images/logos/woocommerce.svg" 
-              alt="WooCommerce Logo" 
-              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
+          <div className="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center mb-2 sm:mb-3 mx-auto">
+            <img
+              src="/images/logos/woocommerce.svg"
+              alt="WooCommerce Logo"
+              className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 object-contain"
             />
           </div>
           <div className="text-center">

@@ -650,7 +650,7 @@ const translations: Record<Language, Translations> = {
     newHeroTitleBeauty: 'Votre boutique physique a ses vendeuses. Votre boutique en ligne mérite la sienne.',
     newHeroTitleBeautyAlt: 'Votre boutique en ligne mérite une vendeuse experte de vos produits.',
     newHeroSubtitleBeauty: 'Mia est la première Vendeuse IA spécialisée beauté, formée sur vos produits. Elle accueille vos clients en ligne, lève leurs doutes et finalise leurs commandes, 24h/24.',
-    beautyBrandsAlreadyTesting: 'Déjà adopté par +10 marques beauté',
+    beautyBrandsAlreadyTesting: 'Déjà adopté par +60 marques beauté',
     averageConversionBeauty: '+267% conversions moyennes',
     
     // Platforms Section

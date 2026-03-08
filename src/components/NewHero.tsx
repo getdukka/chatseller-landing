@@ -31,14 +31,14 @@ const NewHero = () => {
 
   return (
     <section className="relative pt-24 pb-8 sm:pt-28 sm:pb-10 md:pt-32 md:pb-12 lg:pt-40 lg:pb-16 overflow-hidden">
-      {/* Background premium beauté avec gradients sophistiqués */}
-      <div className="absolute inset-0 bg-gradient-to-br from-rose-50 via-pink-50 to-purple-50 -z-20" />
-      <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-rose-50/30 -z-10" />
-      
-      {/* Éléments décoratifs premium beauté - Responsive */}
-      <div className="absolute top-16 sm:top-20 left-4 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 bg-gradient-to-br from-rose-300/30 to-pink-300/20 rounded-full blur-3xl -z-10 animate-pulse" />
-      <div className="absolute bottom-10 sm:bottom-20 right-4 sm:right-10 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-br from-purple-300/30 to-rose-300/20 rounded-full blur-3xl -z-10 animate-pulse" style={{animationDelay: '1s'}} />
-      <div className="absolute top-1/3 right-1/4 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-gradient-to-br from-pink-400/20 to-rose-400/10 rounded-full blur-2xl -z-10 animate-bounce" style={{animationDelay: '2s'}} />
+      {/* Background élégant avec gradients sobres */}
+      <div className="absolute inset-0 bg-gradient-to-br from-rose-50/60 via-white to-purple-50/40 -z-20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-transparent to-transparent -z-10" />
+
+      {/* Éléments décoratifs discrets - Responsive */}
+      <div className="absolute top-16 sm:top-20 left-4 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 bg-gradient-to-br from-rose-200/20 to-pink-200/10 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-10 sm:bottom-20 right-4 sm:right-10 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-br from-purple-200/20 to-rose-200/10 rounded-full blur-3xl -z-10" style={{animationDelay: '1s'}} />
+      <div className="absolute top-1/3 right-1/4 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-gradient-to-br from-pink-200/15 to-rose-200/8 rounded-full blur-2xl -z-10" style={{animationDelay: '2s'}} />
       
       <div className="container px-4 sm:px-6 md:px-8 lg:px-12 mx-auto relative z-10">
         {/* CORRECTION: Grid avec alignement amélioré pour tablette */}
@@ -64,7 +64,7 @@ const NewHero = () => {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto mb-8 sm:mb-12 animate-fade-in [animation-delay:600ms]">
               <Button 
                 size="lg" 
-                className="group rounded-full px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 hover:from-rose-700 hover:via-pink-700 hover:to-purple-700 transform hover:scale-105" 
+                className="group rounded-full px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" style={{background: 'linear-gradient(135deg, #ea4242, #8c3dda)'}}
                 onClick={() => handleCTAClick('primary')}
                 asChild
               >
@@ -78,27 +78,26 @@ const NewHero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="group rounded-full px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold border-2 border-rose-300 hover:border-rose-400 hover:bg-rose-50 transition-all duration-300 transform hover:scale-105"
+                className="group rounded-full px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105" style={{border: '2px solid #ea4242', color: '#ea4242', backgroundColor: 'transparent'}} onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#fdf0f0')} onMouseOut={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
                 onClick={() => {
                   handleCTAClick('secondary');
                   document.getElementById('problem-solution')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5 text-rose-600" />
+                <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" style={{color: '#ea4242'}} />
                 <span className="text-sm sm:text-base md:text-lg">{t('newHeroCTASecondary')}</span>
               </Button>
             </div>
             
-            {/* Social Proof Premium Beauté - Responsive */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-6 md:gap-8 mb-8 sm:mb-10 animate-fade-in [animation-delay:500ms]">
-              {/* Badge aucun paiement requis */}
-              <div className="flex items-center text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-3 rounded-full border border-rose-200/50 shadow-sm">
-                <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-rose-500 mr-2" />
-                <span className="font-medium">{language === 'fr' ? 'Aucun paiement requis' : 'No payment required'}</span>
+            {/* Reassurance badges - discrets, pas des boutons */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-x-5 gap-y-2 mt-3 mb-8 sm:mb-10 animate-fade-in [animation-delay:500ms]">
+              <div className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-500">
+                <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" />
+                <span>{language === 'fr' ? 'Pas de carte bancaire requise' : 'No credit card required'}</span>
               </div>
-              <div className="flex items-center text-xs sm:text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-3 sm:px-5 py-2 sm:py-3 rounded-full border border-rose-200/50 shadow-sm">
-                <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 mr-2" />
-                <span className="font-medium">{t('days14Trial')}</span>
+              <div className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-500">
+                <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-400 flex-shrink-0" />
+                <span>{t('days14Trial')}</span>
               </div>
             </div>
           </div>
@@ -162,7 +161,7 @@ const BeautyABTestHeadline = () => {
   const variantB = t('newHeroTitleBeautyAlt');
 
   return (
-    <h1 className="text-4xl sm:text-4xl md:text-7xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 sm:mb-8 animate-fade-in [animation-delay:200ms] bg-gradient-to-r from-gray-900 via-rose-800 to-purple-900 bg-clip-text text-transparent leading-tight">
+    <h1 className="text-4xl sm:text-4xl md:text-7xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 sm:mb-8 animate-fade-in [animation-delay:200ms] leading-tight" style={{background: 'linear-gradient(135deg, #0d0d0d 0%, #c41f1f 40%, #6d28a8 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
       {variant === 'A' ? variantA : variantB}
     </h1>
   );
@@ -217,7 +216,7 @@ const SocialProofBadge = () => {
           );
         })}
         <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white bg-gradient-to-br from-purple-500 to-rose-600 flex items-center justify-center text-white text-xs sm:text-sm font-bold shadow-md" style={{ zIndex: 0 }}>
-          +10
+          +56
         </div>
       </div>
 
@@ -229,7 +228,7 @@ const SocialProofBadge = () => {
           ))}
         </div>
         <span className="text-xs sm:text-sm text-gray-700 font-semibold">
-          {language === 'fr' ? 'Déjà recrutée par +10 marques beauté' : 'Already hired by 10+ beauty brands'}
+          {language === 'fr' ? 'Déjà recrutée par +60 marques beauté' : 'Already hired by 60+ beauty brands'}
         </span>
       </div>
     </div>

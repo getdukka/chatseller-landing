@@ -69,11 +69,11 @@ const Footer = () => {
             {/* Compatibility badges */}
             <div className="flex items-center space-x-4 mb-6">
               <div className="flex items-center space-x-2 bg-white/80 border border-gray-200 rounded-lg px-3 py-1.5">
-                <img src="/images/logos/shopify.svg" alt="Shopify" className="h-4 w-auto" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling!.textContent = 'Shopify'; }} />
+                <img src="/images/logos/shopify.svg" alt="Shopify" className="h-3.5 sm:h-4 w-auto max-w-[60px]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling!.textContent = 'Shopify'; }} />
                 <span className="text-xs font-medium text-gray-700">Shopify</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/80 border border-gray-200 rounded-lg px-3 py-1.5">
-                <img src="/images/logos/woocommerce.svg" alt="WooCommerce" className="h-4 w-auto" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling!.textContent = 'WooCommerce'; }} />
+                <img src="/images/logos/woocommerce.svg" alt="WooCommerce" className="h-3.5 sm:h-4 w-auto max-w-[80px]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling!.textContent = 'WooCommerce'; }} />
                 <span className="text-xs font-medium text-gray-700">WooCommerce</span>
               </div>
             </div>
