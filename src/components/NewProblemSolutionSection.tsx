@@ -120,7 +120,7 @@ const NewProblemSolutionSection = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   return (
-    <section id="solution" className="py-20 md:py-28 bg-white relative overflow-hidden">
+    <section id="problem-solution" className="py-20 md:py-28 bg-white relative overflow-hidden">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-rose-50/30 via-white to-purple-50/20" />
 

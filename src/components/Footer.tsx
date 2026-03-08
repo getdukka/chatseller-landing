@@ -67,13 +67,17 @@ const Footer = () => {
             </p>
 
             {/* Compatibility badges */}
-            <div className="flex items-center space-x-4 mb-6">
+            <div className="flex items-center space-x-3 mb-6">
               <div className="flex items-center space-x-2 bg-white/80 border border-gray-200 rounded-lg px-3 py-1.5">
-                <img src="/images/logos/shopify.svg" alt="Shopify" className="h-3.5 sm:h-4 w-auto max-w-[60px]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling!.textContent = 'Shopify'; }} />
+                <div style={{ width: 16, height: 16, flexShrink: 0, overflow: 'hidden' }}>
+                  <img src="/images/logos/shopify.svg" alt="Shopify" style={{ width: 16, height: 16, objectFit: 'contain', display: 'block' }} onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                </div>
                 <span className="text-xs font-medium text-gray-700">Shopify</span>
               </div>
               <div className="flex items-center space-x-2 bg-white/80 border border-gray-200 rounded-lg px-3 py-1.5">
-                <img src="/images/logos/woocommerce.svg" alt="WooCommerce" className="h-3.5 sm:h-4 w-auto max-w-[80px]" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling!.textContent = 'WooCommerce'; }} />
+                <div style={{ width: 16, height: 16, flexShrink: 0, overflow: 'hidden' }}>
+                  <img src="/images/logos/woocommerce.svg" alt="WooCommerce" style={{ width: 16, height: 16, objectFit: 'contain', display: 'block' }} onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                </div>
                 <span className="text-xs font-medium text-gray-700">WooCommerce</span>
               </div>
             </div>
