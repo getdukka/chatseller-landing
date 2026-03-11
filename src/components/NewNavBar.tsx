@@ -4,11 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronRight, Sparkles, Star, Zap, Gift, CreditCard, FileText } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from './LanguageToggle';
-import { useIsMobile } from '@/hooks/use-mobile';
-
 const NewNavbar = () => {
   const { language } = useLanguage();
-  const isMobile = useIsMobile();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -123,27 +120,27 @@ const NewNavbar = () => {
           </span>
         </button>
 
-        {/* Navigation Desktop - RESPONSIVE AVEC BREAKPOINTS OPTIMISÉS */}
-        <nav className="hidden xl:flex items-center space-x-6 2xl:space-x-8">
+        {/* Navigation Desktop - visible uniquement sur grands écrans */}
+        <nav className="hidden xl:flex items-center space-x-4 2xl:space-x-7">
           {navigationItems.map((item, index) => (
             <button
               key={index}
               onClick={() => scrollToSection(item.sectionId)}
-              className="text-sm font-medium text-gray-700 hover:text-rose-600 transition-colors duration-200 flex items-center group relative whitespace-nowrap"
+              className="text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-rose-600 transition-colors duration-200 flex items-center group relative whitespace-nowrap"
             >
               {item.label}
               {item.icon}
             </button>
           ))}
-          
+
           <LanguageToggle />
 
-          {/* CTAs BEAUTÉ OPTIMISÉS - Responsive */}
-          <div className="flex items-center space-x-2 2xl:space-x-3">
+          {/* CTAs */}
+          <div className="flex items-center space-x-2">
             <Button
               variant="ghost"
               className={`rounded-full text-gray-700 transition-all duration-200 whitespace-nowrap ${
-                isScrolled ? 'text-xs px-2 py-1.5' : 'text-sm px-3 py-2 2xl:px-4 2xl:py-2'
+                isScrolled ? 'text-xs px-2 py-1.5' : 'text-[13px] 2xl:text-sm px-3 py-2'
               }`}
               asChild
             >
@@ -154,17 +151,12 @@ const NewNavbar = () => {
 
             <Button
               style={{background: 'linear-gradient(135deg, #ea4242, #8c3dda)'}} className={`group relative overflow-hidden rounded-full shadow-md hover:shadow-lg transition-all duration-300 whitespace-nowrap ${
-                isScrolled ? 'text-xs px-3 py-2' : 'text-sm px-4 py-2 2xl:px-6 2xl:py-3'
+                isScrolled ? 'text-xs px-3 py-2' : 'text-[13px] 2xl:text-sm px-4 py-2 2xl:px-6 2xl:py-3'
               }`}
               asChild
             >
               <a href="https://dashboard.chatseller.app/register">
-                <span className="hidden 2xl:inline">
-                  {language === 'fr' ? 'Recruter Mia' : 'Hire Mia'}
-                </span>
-                <span className="inline 2xl:hidden">
-                  {language === 'fr' ? 'Recruter Mia' : 'Hire Mia'}
-                </span>
+                {language === 'fr' ? 'Recruter Mia' : 'Hire Mia'}
                 <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transform translate-x-full group-hover:translate-x-0 transition-all duration-1000"></span>
               </a>
@@ -172,52 +164,8 @@ const NewNavbar = () => {
           </div>
         </nav>
 
-        {/* Navigation Tablette - NOUVEAU MENU SIMPLIFIÉ POUR TABLETTES */}
-        <nav className="hidden lg:flex xl:hidden items-center space-x-4">
-          {/* Navigation réduite pour tablette */}
-          <button
-            onClick={() => scrollToSection('problem-solution')}
-            className="text-sm font-medium text-gray-700 hover:text-rose-600 transition-colors duration-200 flex items-center group"
-          >
-            {language === 'fr' ? 'Découvrir Mia' : 'Discover Mia'}
-            <Sparkles className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </button>
-
-          <button
-            onClick={() => scrollToSection('how-it-works')}
-            className="text-sm font-medium text-gray-700 hover:text-rose-600 transition-colors duration-200 flex items-center group"
-          >
-            {language === 'fr' ? 'Comment la recruter' : 'How to hire her'}
-            <Zap className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </button>
-
-          <button
-            onClick={() => scrollToSection('pricing')}
-            className="text-sm font-medium text-gray-700 hover:text-rose-600 transition-colors duration-200 flex items-center group"
-          >
-            {language === 'fr' ? 'Son salaire' : 'Her salary'}
-            <CreditCard className="ml-1 h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </button>
-
-          <LanguageToggle />
-
-          {/* CTAs pour tablette */}
-          <Button
-            style={{background: 'linear-gradient(135deg, #ea4242, #8c3dda)'}}
-            className={`group relative overflow-hidden rounded-full shadow-md hover:shadow-lg transition-all duration-300 ${
-              isScrolled ? 'text-xs px-3 py-2' : 'text-sm px-4 py-2'
-            }`}
-            asChild
-          >
-            <a href="https://dashboard.chatseller.app/register">
-              {language === 'fr' ? 'Recruter Mia' : 'Hire Mia'}
-              <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-          </Button>
-        </nav>
-
-        {/* Mobile menu button - NOUVEAU BREAKPOINT */}
-        <div className="flex items-center lg:hidden">
+        {/* Hamburger menu - visible sur tout écran < xl (1280px) */}
+        <div className="flex items-center xl:hidden">
           <LanguageToggle />
           <button
             className="ml-2 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
@@ -233,8 +181,8 @@ const NewNavbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu avec animations beauté */}
-      <div className={`lg:hidden absolute bg-white top-full left-0 right-0 transition-all duration-300 ease-in-out ${
+      {/* Menu hamburger avec animations beauté */}
+      <div className={`xl:hidden absolute bg-white top-full left-0 right-0 transition-all duration-300 ease-in-out ${
         mobileMenuOpen 
           ? 'opacity-100 translate-y-0 pointer-events-auto' 
           : 'opacity-0 -translate-y-4 pointer-events-none'
@@ -272,7 +220,7 @@ const NewNavbar = () => {
                 asChild
               >
                 <a href="https://dashboard.chatseller.app/login">
-                  {language === 'fr' ? 'Rejoindre Mia' : 'Join Mia'}
+                  {language === 'fr' ? 'Connexion' : 'Log in'}
                 </a>
               </Button>
 

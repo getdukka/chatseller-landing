@@ -42,7 +42,7 @@ const NewHero = () => {
       
       <div className="container px-4 sm:px-6 md:px-8 lg:px-12 mx-auto relative z-10">
         {/* CORRECTION: Grid avec alignement amélioré pour tablette */}
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start lg:items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-10 xl:gap-14 2xl:gap-16 items-start lg:items-center">
           
           {/* Left Column - Contenu Premium */}
           <div className="text-center lg:text-left">
@@ -56,21 +56,21 @@ const NewHero = () => {
             <BeautyABTestHeadline />
             
             {/* Sous-titre premium - Responsive */}
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-3xl animate-fade-in [animation-delay:400ms] leading-relaxed"
+            <p className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-3xl animate-fade-in [animation-delay:400ms] leading-relaxed"
                dangerouslySetInnerHTML={{ __html: t('newHeroSubtitleBeauty') }}
             />
 
             {/* CTAs Premium - Responsive */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto mb-8 sm:mb-12 animate-fade-in [animation-delay:600ms]">
-              <Button 
-                size="lg" 
-                className="group rounded-full px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" style={{background: 'linear-gradient(135deg, #ea4242, #8c3dda)'}}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto mb-8 sm:mb-12 animate-fade-in [animation-delay:600ms]">
+              <Button
+                size="lg"
+                className="group rounded-full px-5 sm:px-6 lg:px-7 xl:px-8 py-3 sm:py-4 lg:py-4 text-sm sm:text-base lg:text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" style={{background: 'linear-gradient(135deg, #ea4242, #8c3dda)'}}
                 onClick={() => handleCTAClick('primary')}
                 asChild
               >
                 <a href="https://dashboard.chatseller.app/register">
                   <Sparkles className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  <span className="text-sm sm:text-base md:text-lg">{t('newHeroCTAPrimary')}</span>
+                  <span className="text-sm sm:text-base">{t('newHeroCTAPrimary')}</span>
                   <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
@@ -78,14 +78,14 @@ const NewHero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="group rounded-full px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105" style={{border: '2px solid #ea4242', color: '#ea4242', backgroundColor: 'transparent'}} onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#fdf0f0')} onMouseOut={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+                className="group rounded-full px-5 sm:px-6 lg:px-7 xl:px-8 py-3 sm:py-4 lg:py-4 text-sm sm:text-base lg:text-base font-semibold transition-all duration-300 transform hover:scale-105" style={{border: '2px solid #ea4242', color: '#ea4242', backgroundColor: 'transparent'}} onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#fdf0f0')} onMouseOut={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
                 onClick={() => {
                   handleCTAClick('secondary');
                   document.getElementById('problem-solution')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" style={{color: '#ea4242'}} />
-                <span className="text-sm sm:text-base md:text-lg">{t('newHeroCTASecondary')}</span>
+                <span className="text-sm sm:text-base">{t('newHeroCTASecondary')}</span>
               </Button>
             </div>
             
@@ -161,7 +161,7 @@ const BeautyABTestHeadline = () => {
   const variantB = t('newHeroTitleBeautyAlt');
 
   return (
-    <h1 className="text-4xl sm:text-4xl md:text-7xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 sm:mb-8 animate-fade-in [animation-delay:200ms] leading-tight" style={{background: 'linear-gradient(135deg, #0d0d0d 0%, #c41f1f 40%, #6d28a8 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+    <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold tracking-tight mb-6 sm:mb-8 animate-fade-in [animation-delay:200ms] leading-tight" style={{background: 'linear-gradient(135deg, #0d0d0d 0%, #c41f1f 40%, #6d28a8 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
       {variant === 'A' ? variantA : variantB}
     </h1>
   );
