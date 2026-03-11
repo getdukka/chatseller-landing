@@ -41,14 +41,14 @@ const NewHero = () => {
       <div className="absolute top-1/3 right-1/4 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-gradient-to-br from-pink-200/15 to-rose-200/8 rounded-full blur-2xl -z-10" style={{animationDelay: '2s'}} />
       
       <div className="container px-4 sm:px-6 md:px-8 lg:px-12 mx-auto relative z-10">
-        {/* CORRECTION: Grid avec alignement amélioré pour tablette */}
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-10 xl:gap-14 2xl:gap-16 items-start lg:items-center">
-          
+        {/* Grid 2 colonnes uniquement au-dessus de 1350px */}
+        <div className="grid min-[1350px]:grid-cols-2 gap-8 md:gap-10 min-[1350px]:gap-12 xl:gap-14 2xl:gap-16 items-start min-[1350px]:items-center">
+
           {/* Left Column - Contenu Premium */}
-          <div className="text-center lg:text-left">
-            
+          <div className="text-center min-[1350px]:text-left">
+
             {/* Social Proof Badge avec photos des testeurs - Responsive */}
-            <div className="mb-6 sm:mb-8 animate-fade-in flex justify-center lg:justify-start">
+            <div className="mb-6 sm:mb-8 animate-fade-in flex justify-center min-[1350px]:justify-start">
               <SocialProofBadge />
             </div>
             
@@ -56,12 +56,12 @@ const NewHero = () => {
             <BeautyABTestHeadline />
             
             {/* Sous-titre premium - Responsive */}
-            <p className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-3xl animate-fade-in [animation-delay:400ms] leading-relaxed"
+            <p className="text-base sm:text-lg md:text-xl min-[1350px]:text-lg xl:text-xl 2xl:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-2xl min-[1350px]:max-w-3xl mx-auto min-[1350px]:mx-0 animate-fade-in [animation-delay:400ms] leading-relaxed"
                dangerouslySetInnerHTML={{ __html: t('newHeroSubtitleBeauty') }}
             />
 
             {/* CTAs Premium - Responsive */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto mb-8 sm:mb-12 animate-fade-in [animation-delay:600ms]">
+            <div className="flex flex-col sm:flex-row sm:justify-center min-[1350px]:justify-start gap-3 sm:gap-4 w-full sm:w-auto mb-8 sm:mb-12 animate-fade-in [animation-delay:600ms]">
               <Button
                 size="lg"
                 className="group rounded-full px-5 sm:px-6 lg:px-7 xl:px-8 py-3 sm:py-4 lg:py-4 text-sm sm:text-base lg:text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" style={{background: 'linear-gradient(135deg, #ea4242, #8c3dda)'}}
@@ -90,7 +90,7 @@ const NewHero = () => {
             </div>
             
             {/* Reassurance badges - discrets, pas des boutons */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-x-5 gap-y-2 mt-3 mb-8 sm:mb-10 animate-fade-in [animation-delay:500ms]">
+            <div className="flex flex-wrap justify-center min-[1350px]:justify-start gap-x-5 gap-y-2 mt-3 mb-8 sm:mb-10 animate-fade-in [animation-delay:500ms]">
               <div className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-500">
                 <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" />
                 <span>{language === 'fr' ? 'Pas de carte bancaire requise' : 'No credit card required'}</span>
@@ -103,7 +103,7 @@ const NewHero = () => {
           </div>
           
           {/* Right Column - Chat Interface Beauté Premium - CORRECTION POSITION */}
-          <div className="animate-fade-in [animation-delay:800ms] mt-8 lg:mt-0 2xl:-mt-12">
+          <div className="animate-fade-in [animation-delay:800ms] mt-8 min-[1350px]:mt-0 2xl:-mt-12">
             <BeautyHeroChatInterface onDemoClick={() => setIsChatModalOpen(true)} />
           </div>
         </div>
